@@ -1,0 +1,854 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: AdvancedTopics/objecttricks.xml:10
+msgid "Time-Saving Tricks For Object Definitions"
+msgstr ""
+
+# type: Content of: <chapter><abstract><para>
+#: AdvancedTopics/objecttricks.xml:13
+msgid "or...\"How To Preserve Your Sanity\""
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objecttricks.xml:17
+msgid ""
+"This documentation attempts to explain how you can exploit the (somewhat) "
+"hidden features of <link linkend=\"configuringnagios-objectdefinitions"
+"\">template-based object definitions</link> to save your sanity. How so, you "
+"ask? Several types of objects allow you to specify multiple host names and/"
+"or hostgroup names in definitions, allowing you to \"copy\" the object "
+"defintion to multiple hosts or services. I'll cover each type of object that "
+"supports these features seperately. For starters, the object types which "
+"support this time-saving feature are as follows:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/objecttricks.xml:26
+msgid "<link linkend=\"advancedtopics-objecttricks-service\">Services</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/objecttricks.xml:31
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-serviceescalation\">Service "
+"escalations</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/objecttricks.xml:36
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-servicedependency\">Service "
+"dependencies</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/objecttricks.xml:41
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-hostescalation\">Host "
+"escalations</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/objecttricks.xml:46
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-hostdependency\">Host "
+"dependencies</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/objecttricks.xml:51
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-hostgroup\">Hostgroups</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objecttricks.xml:55
+msgid ""
+"Object types that are not listed above (i.e. timeperiods, commands, etc.) do "
+"not support the features I'm about to describe."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objecttricks.xml:59
+msgid "Regular Expression Matching"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objecttricks.xml:60
+msgid ""
+"The examples I give below use <quote>standard</quote> matching of object "
+"names. If you wish, you can enable regular expression matching for object "
+"names by using the <link linkend=\"configuringnagios-configmain-"
+"use_regexp_matching\">use_regexp_matching</link> config option. By default, "
+"regular expression matching will only be used in object names that contain "
+"*, ?, +, or \\.. If you want regular expression matching to be used on all "
+"object names, enable the <link linkend=\"configuringnagios-configmain-"
+"use_true_regexp_matching\">use_true_regexp_matching</link> config option.  "
+"Regular expressions can be used in any of the fields used in the examples "
+"below (host names, hostgroup names, service names, and servicegroup names)."
+msgstr ""
+
+# type: Content of: <chapter><section><note><para>
+#: AdvancedTopics/objecttricks.xml:71
+msgid ""
+"Be careful when enabling regular expression matching - you may have to "
+"change your config file, since some directives that you might not want to be "
+"interpreted as a regular expression just might be ! Any problems should "
+"become evident once you verify your configuration."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objecttricks.xml:80
+msgid "<anchor id=\"advancedtopics-objecttricks-service\"/>Service Definitions"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:82 AdvancedTopics/objecttricks.xml:149
+#: AdvancedTopics/objecttricks.xml:270 AdvancedTopics/objecttricks.xml:382
+#: AdvancedTopics/objecttricks.xml:443
+msgid "Multiple Hosts:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:83
+msgid ""
+"If you want to create identical <link linkend=\"configuringnagios-"
+"objectdefinitions-service\">services</link> that are assigned to multiple "
+"hosts, you can specify multiple hosts in the <varname>host_name</varname> "
+"directive.  The definition below would create a service called SOMESERVICE "
+"on hosts HOST1 through HOSTN.  All the instances of the SOMESERVICE service "
+"would be identical (i.e. have the same check command, max check attempts, "
+"notification period, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:89
+#, no-wrap
+msgid ""
+"\n"
+"define service{\n"
+"    host_name                HOST1,HOST2,HOST3,...,HOSTN\n"
+"    service_description      SOMESERVICE\n"
+"    other service directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:98 AdvancedTopics/objecttricks.xml:166
+#: AdvancedTopics/objecttricks.xml:290 AdvancedTopics/objecttricks.xml:397
+#: AdvancedTopics/objecttricks.xml:461
+msgid "All Hosts In Multiple Hostgroups:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:99
+msgid ""
+"If you want to create identical services that are assigned to all hosts in "
+"one or more hostgroups, you can do so by creating a single service "
+"definition. How ? The <varname>hostgroup_name</varname> directive allows you "
+"to specify the name of one or more hostgroups that the service should be "
+"created for. The definition below would create a service called SOMESERVICE "
+"on all hosts that are members of hostgroups HOSTGROUP1 through HOSTGROUPN. "
+"All the instances of the SOMESERVICE service would be identical (i.e. have "
+"the same check command, max check attempts, notification period, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:106
+#, no-wrap
+msgid ""
+"\n"
+"define service{\n"
+"    hostgroup_name          HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN\n"
+"    service_description     SOMESERVICE\n"
+"    other service directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:115 AdvancedTopics/objecttricks.xml:182
+#: AdvancedTopics/objecttricks.xml:412 AdvancedTopics/objecttricks.xml:481
+msgid "All Hosts:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:116
+msgid ""
+"If you want to create identical services that are assigned to all hosts that "
+"are defined in your configuration files, you can use a wildcard in the "
+"<varname>host_name</varname> directive. The definition below would create a "
+"service called SOMESERVICE on all hosts that are defined in your "
+"configuration files. All the instances of the SOMESERVICE service would be "
+"identical (i.e. have the same check command, max check attempts, "
+"notification period, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:122
+#, no-wrap
+msgid ""
+"\n"
+"define service{\n"
+"    host_name               *\n"
+"    service_description     SOMESERVICE\n"
+"    other service directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:131 AdvancedTopics/objecttricks.xml:199
+#: AdvancedTopics/objecttricks.xml:426
+msgid "Excluding Hosts:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:132
+msgid ""
+"If you want to create identical services on numerous hosts or hostgroups, "
+"but would like to exclude some hosts from the definition, this can be "
+"accomplished by preceding the host or hostgroup with a ! symbol."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:135
+#, no-wrap
+msgid ""
+"\n"
+"define service{\n"
+"    host_name             HOST1,HOST2,!HOST3,!HOST4,...,HOSTN\n"
+"    hostgroup_name        HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN\n"
+"    service_description   SOMESERVICE\n"
+"    other service directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objecttricks.xml:147
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-serviceescalation\"/>Service "
+"Escalation Definitions"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:150
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">service escalations</link> for services of the same name/"
+"description that are assigned to multiple hosts, you can specify multiple "
+"hosts in the <varname>host_name</varname> directive. The definition below "
+"would create a service escalation for services called SOMESERVICE on hosts "
+"HOST1 through HOSTN. All the instances of the service escalation would be "
+"identical (i.e. have the same contact groups, notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:157
+#, no-wrap
+msgid ""
+"\n"
+"define serviceescalation{\n"
+"    host_name               HOST1,HOST2,HOST3,...,HOSTN\n"
+"    service_description     SOMESERVICE\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:167
+msgid ""
+"If you want to create service escalations for services of the same name/"
+"description that are assigned to all hosts in in one or more hostgroups, you "
+"can do use the <varname>hostgroup_name</varname> directive. The definition "
+"below would create a service escalation for services called SOMESERVICE on "
+"all hosts that are members of hostgroups HOSTGROUP1 through HOSTGROUPN. All "
+"the instances of the service escalation would be identical (i.e. have the "
+"same contact groups, notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:173
+#, no-wrap
+msgid ""
+"\n"
+"define serviceescalation{\n"
+"    hostgroup_name          HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN\n"
+"    service_description     SOMESERVICE\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:183
+msgid ""
+"If you want to create identical service escalations for services of the same "
+"name/description that are assigned to all hosts that are defined in your "
+"configuration files, you can use a wildcard in the <varname>host_name</"
+"varname> directive.  The definition below would create a service escalation "
+"for all services called SOMESERVICE on all hosts that are defined in your "
+"configuration files. All the instances of the service escalation would be "
+"identical (i.e. have the same contact groups, notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:190
+#, no-wrap
+msgid ""
+"\n"
+"define serviceescalation{\n"
+"    host_name               *\n"
+"    service_description     SOMESERVICE\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:200
+msgid ""
+"If you want to create identical services escalations for services on "
+"numerous hosts or hostgroups, but would like to exclude some hosts from the "
+"definition, this can be accomplished by preceding the host or hostgroup with "
+"a ! symbol."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:203
+#, no-wrap
+msgid ""
+"\n"
+"define serviceescalation{\n"
+"    host_name             HOST1,HOST2,!HOST3,!HOST4,...,HOSTN\n"
+"    hostgroup_name        HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN\n"
+"    service_description   SOMESERVICE\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:213
+msgid "All Services On Same Host:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:214
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">service escalations</link> for all services assigned to "
+"a particular host, you can use a wildcard in the "
+"<varname>service_description</varname> directive. The definition below would "
+"create a service escalation for all services on host HOST1. All the "
+"instances of the service escalation would be identical (i.e. have the same "
+"contact groups, notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:221
+msgid ""
+"If you feel like being particularly adventurous, you can specify a wildcard "
+"in both the <varname>host_name</varname> and <varname>service_description</"
+"varname> directives.  Doing so would create a service escalation for all "
+"services that you've defined in your configuration files."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:225
+#, no-wrap
+msgid ""
+"\n"
+"define serviceescalation{\n"
+"    host_name               HOST1\n"
+"    service_description     *\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:234
+msgid "Multiple Services On Same Host:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:235
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">service escalations</link> for all multiple services "
+"assigned to a particular host, you can use a specify more than one service "
+"description in the <varname>service_description</varname> directive.  The "
+"definition below would create a service escalation for services SERVICE1 "
+"through SERVICEN on host HOST1. All the instances of the service escalation "
+"would be identical (i.e. have the same contact groups, notification "
+"interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:242
+#, no-wrap
+msgid ""
+"\n"
+"define serviceescalation{\n"
+"    host_name               HOST1\n"
+"    service_description     SERVICE1,SERVICE2,...,SERVICEN\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:251 AdvancedTopics/objecttricks.xml:345
+msgid "All Services In Multiple Servicegroups:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:252
+msgid ""
+"If you want to create service escalations for all services that belong in "
+"one or more servicegroups, you can do use the <varname>servicegroup_name</"
+"varname> directive.  The definition below would create service escalations "
+"for all services that are members of servicegroups SERVICEGROUP1 through "
+"SERVICEGROUPN.  All the instances of the service escalation would be "
+"identical (i.e. have the same contact groups, notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:258
+#, no-wrap
+msgid ""
+"\n"
+"define serviceescalation{\n"
+"    servicegroup_name          SERVICEGROUP1,SERVICEGROUP2,...,SERVICEGROUPN\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objecttricks.xml:268
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-servicedependency\"/>Service "
+"Dependency Definitions"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:271
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"servicedependency\">service dependencies</link> for services of the same "
+"name/description that are assigned to multiple hosts, you can specify "
+"multiple hosts in the <varname>host_name</varname> and or "
+"<varname>dependent_host_name</varname> directives. In the example below, "
+"service SERVICE2 on hosts HOST3 and HOST4 would be dependent on service "
+"SERVICE1 on hosts HOST1 and HOST2. All the instances of the service "
+"dependencies would be identical except for the host names (i.e. have the "
+"same notification failure criteria, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:279
+#, no-wrap
+msgid ""
+"\n"
+"define servicedependency{\n"
+"    host_name                       HOST1,HOST2\n"
+"    service_description             SERVICE1\n"
+"    dependent_host_name             HOST3,HOST4\n"
+"    dependent_service_description   SERVICE2\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:291
+msgid ""
+"If you want to create service dependencies for services of the same name/"
+"description that are assigned to all hosts in in one or more hostgroups, you "
+"can do use the <varname>hostgroup_name</varname> and/or "
+"<varname>dependent_hostgroup_name</varname> directives. In the example "
+"below, service SERVICE2 on all hosts in hostgroups HOSTGROUP3 and HOSTGROUP4 "
+"would be dependent on service SERVICE1 on all hosts in hostgroups HOSTGROUP1 "
+"and HOSTGROUP2. Assuming there were five hosts in each of the hostgroups, "
+"this definition would be equivalent to creating 100 single service "
+"dependency definitions ! All the instances of the service dependency would "
+"be identical except for the host names (i.e. have the same notification "
+"failure criteria, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:300
+#, no-wrap
+msgid ""
+"\n"
+"define servicedependency{\n"
+"    hostgroup_name                  HOSTGROUP1,HOSTGROUP2\n"
+"    service_description             SERVICE1\n"
+"    dependent_hostgroup_name        HOSTGROUP3,HOSTGROUP4\n"
+"    dependent_service_description   SERVICE2\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:311
+msgid "All Services On A Host:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:312
+msgid ""
+"If you want to create service dependencies for all services assigned to a "
+"particular host, you can use a wildcard in the <varname>service_description</"
+"varname> and/or <varname>dependent_service_description</varname> directives. "
+"In the example below, all services on host HOST2 would be dependent on all "
+"services on host HOST1. All the instances of the service dependencies would "
+"be identical (i.e. have the same notification failure criteria, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:318
+#, no-wrap
+msgid ""
+"\n"
+"define servicedependency{\n"
+"    host_name                       HOST1\n"
+"    service_description             *\n"
+"    dependent_host_name             HOST2\n"
+"    dependent_service_description   *\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:329
+msgid "Multiple Services On A Host:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:330
+msgid ""
+"If you want to create service dependencies for multiple services assigned to "
+"a particular host, you can specify more than one service description in the "
+"<varname>service_description</varname> and/or "
+"<varname>dependent_service_description</varname> directives as follows:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:334
+#, no-wrap
+msgid ""
+"\n"
+"define servicedependency{\n"
+"    host_name                       HOST1\n"
+"    service_description             SERVICE1,SERVICE2,...,SERVICEN\n"
+"    dependent_host_name             HOST2\n"
+"    dependent_service_description   SERVICE1,SERVICE2,...,SERVICEN\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:346
+msgid ""
+"If you want to create service dependencies for all services that belong in "
+"one or more servicegroups, you can do use the <varname>servicegroup_name</"
+"varname> and/or <varname>dependent_servicegroup_name</varname> directive as "
+"follows:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:349
+#, no-wrap
+msgid ""
+"\n"
+"define servicedependency{\n"
+"    servicegroup_name               SERVICEGROUP1,SERVICEGROUP2,...,SERVICEGROUPN\n"
+"    dependent_servicegroup_name     SERVICEGROUP3,SERVICEGROUP4,...SERVICEGROUPN\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: AdvancedTopics/objecttricks.xml:359
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-same_host_dependency\"/>Same Host "
+"Dependencies:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:360
+msgid ""
+"If you want to create service dependencies for multiple services that are "
+"dependent on services on the same host, leave the "
+"<varname>dependent_host_name</varname> and "
+"<varname>dependent_hostgroup_name</varname> directives empty.  The example "
+"below assumes that hosts HOST1 and HOST2 have at least the following four "
+"services associated with them: SERVICE1, SERVICE2, SERVICE3, and SERVICE4.  "
+"In this example, SERVICE3 and SERVICE4 on HOST1 will be dependent on both "
+"SERVICE1 and SERVICE2 on HOST1. Similiarly, SERVICE3 and SERVICE4 on HOST2 "
+"will be dependent on both SERVICE1 and SERVICE2 on HOST2."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:368
+#, no-wrap
+msgid ""
+"\n"
+"define servicedependency{\n"
+"    host_name                       HOST1,HOST2\n"
+"    service_description             SERVICE1,SERVICE2\n"
+"    dependent_service_description   SERVICE3,SERVICE4\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objecttricks.xml:380
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-hostescalation\"/>Host Escalation "
+"Definitions"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:383
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"hostescalation\">host escalations</link> for multiple hosts, you can specify "
+"multiple hosts in the <varname>host_name</varname> directive.  The "
+"definition below would create a host escalation for hosts HOST1 through "
+"HOSTN. All the instances of the host escalation would be identical (i.e. "
+"have the same contact groups, notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:389
+#, no-wrap
+msgid ""
+"\n"
+"define hostescalation{\n"
+"    host_name              HOST1,HOST2,HOST3,...,HOSTN\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:398
+msgid ""
+"If you want to create host escalations for all hosts in in one or more "
+"hostgroups, you can do use the <varname>hostgroup_name</varname> directive.  "
+"The definition below would create a host escalation on all hosts that are "
+"members of hostgroups HOSTGROUP1 through HOSTGROUPN. All the instances of "
+"the host escalation would be identical (i.e. have the same contact groups, "
+"notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:404
+#, no-wrap
+msgid ""
+"\n"
+"define hostescalation{\n"
+"    hostgroup_name            HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:413
+msgid ""
+"If you want to create identical host escalations for all hosts that are "
+"defined in your configuration files, you can use a wildcard in the "
+"<varname>host_name</varname> directive.  The definition below would create a "
+"hosts escalation for all hosts that are defined in your configuration files. "
+"All the instances of the host escalation would be identical (i.e. have the "
+"same contact groups, notification interval, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:418
+#, no-wrap
+msgid ""
+"\n"
+"define hostescalation{\n"
+"    host_name               *\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:427
+msgid ""
+"If you want to create identical host escalations on numerous hosts or "
+"hostgroups, but would like to exclude some hosts from the definition, this "
+"can be accomplished by preceding the host or hostgroup with a ! symbol."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:430
+#, no-wrap
+msgid ""
+"\n"
+"define hostescalation{\n"
+"    host_name             HOST1,HOST2,!HOST3,!HOST4,...,HOSTN\n"
+"    hostgroup_name        HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN\n"
+"    other escalation directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objecttricks.xml:441
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-hostdependency\"/>Host Dependency "
+"Definitions"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:444
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"hostdependency\">host dependencies</link> for multiple hosts, you can "
+"specify multiple hosts in the <varname>host_name</varname> and/or "
+"<varname>dependent_host_name</varname> directives. The definition below "
+"would be equivalent to creating six seperate host dependencies. In the "
+"example above, hosts HOST3, HOST4 and HOST5 would be dependent upon both "
+"HOST1 and HOST2. All the instances of the host dependencies would be "
+"identical except for the host names (i.e. have the same notification failure "
+"criteria, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:452
+#, no-wrap
+msgid ""
+"\n"
+"define hostdependency{\n"
+"    host_name               HOST1,HOST2\n"
+"    dependent_host_name     HOST3,HOST4,HOST5\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:462
+msgid ""
+"If you want to create host escalations for all hosts in in one or more "
+"hostgroups, you can do use the <varname>hostgroup_name</varname> and /or "
+"<varname>dependent_hostgroup_name</varname> directives. In the example "
+"below, all hosts in hostgroups HOSTGROUP3 and HOSTGROUP4 would be dependent "
+"on all hosts in hostgroups HOSTGROUP1 and HOSTGROUP2. All the instances of "
+"the host dependencies would be identical except for host names (i.e. have "
+"the same notification failure criteria, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:468
+#, no-wrap
+msgid ""
+"\n"
+"define hostdependency{\n"
+"    hostgroup_name                  HOSTGROUP1,HOSTGROUP2\n"
+"    dependent_hostgroup_name        HOSTGROUP3,HOSTGROUP4\n"
+"    other dependency directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objecttricks.xml:479
+msgid "<anchor id=\"advancedtopics-objecttricks-hostgroup\"/>Hostgroups"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: AdvancedTopics/objecttricks.xml:482
+msgid ""
+"If you want to create a hostgroup that has all hosts that are defined in "
+"your configuration files as members, you can use a wildcard in the "
+"<varname>members</varname> directive. The definition below would create a "
+"hostgroup called HOSTGROUP1 that has all all hosts that are defined in your "
+"configuration files as members."
+msgstr ""
+
+# type: Content of: <chapter><section><section><programlisting>
+#: AdvancedTopics/objecttricks.xml:486
+#, no-wrap
+msgid ""
+"\n"
+"define hostgroup{\n"
+"    hostgroup_name          HOSTGROUP1\n"
+"    members                 *\n"
+"    other hostgroup directives ...\n"
+"}\n"
+"\t\t\t"
+msgstr ""

@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/hostchecks.xml:113 TheBasics/servicechecks.xml:71
+#: TheBasics/statetypes.xml:200 TheBasics/statetypes.xml:293
+#: TheBasics/statetypes.xml:308 TheBasics/statetypes.xml:337
+#: TheBasics/statetypes.xml:354 AdvancedTopics/stalking.xml:57
+#: AdvancedTopics/stalking.xml:69 Development/pluginapi.xml:68
+msgid "OK"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/hostchecks.xml:121 TheBasics/servicechecks.xml:74
+#: TheBasics/statetypes.xml:229 TheBasics/statetypes.xml:261
+#: TheBasics/statetypes.xml:277 AdvancedTopics/stalking.xml:81
+#: Development/pluginapi.xml:79
+msgid "WARNING"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/hostchecks.xml:137 TheBasics/servicechecks.xml:80
+#: TheBasics/statetypes.xml:214 TheBasics/statetypes.xml:244
+#: AdvancedTopics/stalking.xml:102 AdvancedTopics/stalking.xml:123
+#: AdvancedTopics/stalking.xml:140 AdvancedTopics/stalking.xml:156
+#: AdvancedTopics/stalking.xml:168 Development/pluginapi.xml:90
+msgid "CRITICAL"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: AdvancedTopics/stalking.xml:10
+msgid "State Stalking"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:15
+msgid ""
+"State \"stalking\" is a feature which is probably not going to used by most "
+"users. When enabled, it allows you to log changes in the output service and "
+"host checks even if the state of the host or service does not change. When "
+"stalking is enabled for a particular host or service, Nagios will watch that "
+"host or service very carefully and log any changes it sees in the output of "
+"check results. As you'll see, it can be very helpful to you in later "
+"analysis of the log files."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/stalking.xml:25 AdvancedTopics/cgiincludes.xml:28
+msgid "How Does It Work?"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:27
+msgid ""
+"Under normal circumstances, the result of a host or service check is only "
+"logged if the host or service has changed state since it was last checked. "
+"There are a few exceptions to this, but for the most part, that's the rule."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:32
+msgid ""
+"If you enable stalking for one or more states of a particular host or "
+"service, Nagios will log the results of the host or service check if the "
+"output from the check differs from the output from the previous check.  Take "
+"the following example of eight consecutive checks of a service:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: AdvancedTopics/stalking.xml:42
+msgid "Service Check #:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: AdvancedTopics/stalking.xml:44
+msgid "Service State:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: AdvancedTopics/stalking.xml:46
+msgid "Service Check Output:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: AdvancedTopics/stalking.xml:48
+msgid "Logged Normally"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: AdvancedTopics/stalking.xml:50
+msgid "Logged With Stalking"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:55
+msgid "x"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:59 AdvancedTopics/stalking.xml:71
+msgid "RAID array optimal"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:61 AdvancedTopics/stalking.xml:63
+#: AdvancedTopics/stalking.xml:73 AdvancedTopics/stalking.xml:75
+#: AdvancedTopics/stalking.xml:128 AdvancedTopics/stalking.xml:144
+#: AdvancedTopics/stalking.xml:160 AdvancedTopics/stalking.xml:162
+#: AdvancedTopics/stalking.xml:172 AdvancedTopics/stalking.xml:174
+msgid "-"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:67
+msgid "x+1"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:79
+msgid "x+2"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:83
+msgid "RAID array degraded (1 drive bad, 1 hot spare rebuilding)"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:86 AdvancedTopics/stalking.xml:92
+#: AdvancedTopics/stalking.xml:107 AdvancedTopics/stalking.xml:113
+#: AdvancedTopics/stalking.xml:130 AdvancedTopics/stalking.xml:146
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/checkmark.png"
+"\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:100
+msgid "x+3"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:104
+msgid ""
+"RAID array degraded (2 drives bad, 1 host spare online, 1 hot spare "
+"rebuilding)"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:121
+msgid "x+4"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:125
+msgid "RAID array degraded (3 drives bad, 2 hot spares online)"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:138
+msgid "x+5"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:142 AdvancedTopics/stalking.xml:158
+#: AdvancedTopics/stalking.xml:170
+msgid "RAID array failed"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:154
+msgid "x+6"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/stalking.xml:166
+msgid "x+7"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:180
+msgid ""
+"Given this sequence of checks, you would normally only see two log entries "
+"for this catastrophe. The first one would occur at service check x+2 when "
+"the service changed from an OK state to a WARNING state. The second log "
+"entry would occur at service check x+3 when the service changed from a "
+"WARNING state to a CRITICAL state."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:186
+msgid ""
+"For whatever reason, you may like to have the complete history of this "
+"catastrophe in your log files. Perhaps to help explain to your manager how "
+"quickly the situation got out of control, perhaps just to laugh at it over a "
+"couple of drinks at the local pub..."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:191
+msgid ""
+"Well, if you had enabled stalking of this service for CRITICAL states, you "
+"would have events at x+4 and x+5 logged in addition to the events at x+2 and "
+"x+3. Why is this? With state stalking enabled, Nagios would have examined "
+"the output from each service check to see if it differed from the output of "
+"the previous check. If the output differed and the state of the service "
+"didn't change between the two checks, the result of the newer service check "
+"would get logged."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:199
+msgid ""
+"A similiar example of stalking might be on a service that checks your web "
+"server. If the &plugin-http; plugin first returns a WARNING state because of "
+"a 404 error and on subsequent checks returns a WARNING state because of a "
+"particular pattern not being found, you might want to know that. If you "
+"didn't enable state stalking for WARNING states of the service, only the "
+"first WARNING state event (the 404 error) would be logged and you wouldn't "
+"have any idea (looking back in the archived logs)  that future WARNING "
+"states were not due to a 404, but rather some text pattern that could not be "
+"found in the returned web page."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/stalking.xml:211
+msgid "Should I Enable Stalking?"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:213
+msgid ""
+"First, you must decide if you have a real need to analyze archived log data "
+"to find the exact cause of a problem. You may decide you need this feature "
+"for some hosts or services, but not for all. You may also find that you only "
+"have a need to enable stalking for some host or service states, rather than "
+"all of them. For example, you may decide to enable stalking for WARNING and "
+"CRITICAL states of a service, but not for OK and UNKNOWN states."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:221
+msgid ""
+"The decision to to enable state stalking for a particular host or service "
+"will also depend on the plugin that you use to check that host or service. "
+"If the plugin always returns the same text output for a particular state, "
+"there is no reason to enable stalking for that state."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/stalking.xml:229
+msgid "How Do I Enable Stalking?"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:231
+msgid ""
+"You can enable state stalking for hosts and services by using the "
+"stalking_options directive in <link linkend=\"configuringnagios-configobject"
+"\">host and service definitions</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/stalking.xml:238
+msgid "How Does Stalking Differ From Volatile Services?"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:240
+msgid ""
+"<link linkend=\"advancedtopics-volatileservices\">Volatile services</link> "
+"are similar, but will cause notifications and event handlers to run. "
+"Stalking is purely for logging purposes."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/stalking.xml:246
+msgid "Caveats"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:248
+msgid ""
+"You should be aware that there are some potential pitfalls with enabling "
+"stalking. These all relate to the reporting functions found in various <link "
+"linkend=\"thebasics-cgis\">CGIs</link> (histogram, alert summary, etc.). "
+"Because state stalking will cause additional alert entries to be logged, the "
+"data produced by the reports will show evidence of inflated numbers of "
+"alerts."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/stalking.xml:255
+msgid ""
+"As a general rule, I would suggest that you <emphasis>not</emphasis> enable "
+"stalking for hosts and services without thinking things through. Still, it's "
+"there if you need and want it."
+msgstr ""

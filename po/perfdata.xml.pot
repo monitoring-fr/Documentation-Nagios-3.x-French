@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: ConfiguringNagios/configmain.xml:3557 AdvancedTopics/perfdata.xml:186
+#, no-wrap
+msgid "service_perfdata_file_template=[SERVICEPERFDATA]\\t$TIMET$\\t$HOSTNAME$\\t$SERVICEDESC$\\t$SERVICEEXECUTIONTIME$\\t$SERVICELATENCY$\\t$SERVICEOUTPUT$\\t$SERVICEPERFDATA$"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: AdvancedTopics/perfdata.xml:10
+msgid "Performance Data"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:15
+msgid ""
+"Nagios is designed to allow <link linkend=\"thebasics-plugins\">plugins</"
+"link> to return optional performance data in addition to normal status data, "
+"as well as allow you to pass that performance data to external applications "
+"for processing. A description of the different types of performance data, as "
+"well as information on how to go about processing that data is described "
+"below..."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/perfdata.xml:23
+msgid "Types of Performance Data"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:25
+msgid ""
+"There are two basic categories of performance data that can be obtained from "
+"Nagios:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/perfdata.xml:30
+msgid "Check performance data"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/perfdata.xml:34
+msgid "Plugin performance data"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:38
+msgid ""
+"Check performance data is internal data that relates to the actual execution "
+"of a host or service check. This might include things like service check "
+"latency (i.e. how \"late\" was the service check from its scheduled "
+"execution time) and the number of seconds a host or service check took to "
+"execute. This type of performance data is available for all checks that are "
+"performed.  The <link linkend=\"thebasics-macrolist-hostexecutiontime\">"
+"$HOSTEXECUTIONTIME$</link> and <link linkend=\"thebasics-macrolist-"
+"serviceexecutiontime\">$SERVICEEXECUTIONTIME$</link> <link linkend="
+"\"thebasics-macros\">macros</link> can be used to determine the number of "
+"seconds a host or service check was running and the <link linkend="
+"\"thebasics-macrolist-hostlatency\">$HOSTLATENCY$</link> and <link linkend="
+"\"thebasics-macrolist-servicelatency\">$SERVICELATENCY$</link> macros can be "
+"used to determine how \"late\" a regularly-scheduled host or service check "
+"was."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:49
+msgid ""
+"Plugin performance data is external data specific to the plugin used to "
+"perform the host or service check. Plugin-specific data can include things "
+"like percent packet loss, free disk space, processor load, number of current "
+"users, etc. - basically any type of metric that the plugin is measuring when "
+"it executes. Plugin-specific performance data is optional and may not be "
+"supported by all plugins. Plugin-specific performance data (if available) "
+"can be obtained by using the <link linkend=\"thebasics-macrolist-hostperfdata"
+"\">$HOSTPERFDATA$</link> and <link linkend=\"thebasics-macrolist-"
+"serviceperfdata\">$SERVICEPERFDATA$</link> <link linkend=\"thebasics-macros"
+"\">macros</link>. Read on for more information on how plugins can return "
+"performance data to Nagios for inclusion in the $HOSTPERFDATA$ and "
+"$SERVICEPERFDATA$ macros."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/perfdata.xml:61
+msgid "Plugin Performance Data"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:63
+msgid ""
+"At a minimum, Nagios plugins must return a single line of human-readable "
+"text that indicates the status of some type of measurable data. For example, "
+"the &plugin-ping; plugin might return a line of text like the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/perfdata.xml:68
+#, no-wrap
+msgid "PING ok - Packet loss = 0%, RTA = 0.80 ms "
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:70
+msgid ""
+"With this simple type of output, the entire line of text is available in the "
+"$HOSTOUTPUT$ or $SERVICEOUTPUT$ <link linkend=\"thebasics-macros\">macros</"
+"link> (depending on whether this plugin was used as a host check or service "
+"check)."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:74
+msgid ""
+"Plugins can return optional performance data in their output by sending the "
+"normal, human-readable text string that they usually would, followed by a "
+"pipe character (|), and then a string containing one or more performance "
+"data metrics. Let's take the &plugin-ping; plugin as an example and assume "
+"that it has been enhanced to return percent packet loss and average round "
+"trip time as performance data metrics. Sample output from the plugin might "
+"look like this:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/perfdata.xml:82
+#, no-wrap
+msgid "PING ok - Packet loss = 0%, RTA = 0.80 ms | percent_packet_loss=0, rta=0.80"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:84
+msgid ""
+"When Nagios sees this plugin output format it will split the output into two "
+"parts:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/perfdata.xml:89
+msgid ""
+"Everything before the pipe character is considered to be the <quote>normal</"
+"quote> plugin output and will be stored in either the $HOSTOUTPUT$ or "
+"$SERVICEOUTPUT$ macro"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/perfdata.xml:95
+msgid ""
+"Everything after the pipe character is considered to be the plugin-specific "
+"performance data and will be stored in the $HOSTPERFDATA$ or $SERVICEPERFDATA"
+"$ macro"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:101
+msgid ""
+"In the example above, the $HOSTOUTPUT$ or $SERVICEOUTPUT$ macro would "
+"contain <emphasis>\"PING ok - Packet loss = 0%, RTA = 0.80 ms\"</emphasis> "
+"(without quotes)  and the $HOSTPERFDATA$ or $SERVICEPERFDATA$ macro would "
+"contain <emphasis>\"percent_packet_loss=0, rta=0.80\"</emphasis> (without "
+"quotes)."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:106
+msgid ""
+"Multiple lines of performace data (as well as normal text output)  can be "
+"obtained from plugins, as described in the <link linkend=\"development-"
+"pluginapi\">plugin API documentation</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><note><para>
+#: AdvancedTopics/perfdata.xml:110
+msgid ""
+"The Nagios daemon doesn't directly process plugin performance data, so it "
+"doesn't really care what the performance data looks like.  There aren't "
+"really any inherent limitations on the format or content of the performance "
+"data. However, if you are using an external addon to process the performance "
+"data (i.e. PerfParse), the addon may be expecting that the plugin returns "
+"performance data in a specific format.  Check the documentation that comes "
+"with the addon for more information."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/perfdata.xml:122
+msgid "Processing Performance Data"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:124
+msgid ""
+"If you want to process the performance data that is available from Nagios "
+"and the plugins, you'll need to do the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/perfdata.xml:129
+msgid ""
+"Enable the <link linkend=\"configuringnagios-configmain-"
+"process_performance_data\">process_performance_data</link> option."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/perfdata.xml:135
+msgid ""
+"Configure Nagios so that performance data is either written to files and/or "
+"processed by executing commands."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:140
+msgid ""
+"Read on for information on how to process performance data by writing to "
+"files or executing commands."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/perfdata.xml:145
+msgid "Processing Performance Data Using Commands"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:147
+msgid ""
+"The most flexible way to process performance data is by having Nagios "
+"execute commands (that you specify) to process or redirect the data for "
+"later processing by external applications. The commands that Nagios executes "
+"to process host and service performance data are determined by the <link "
+"linkend=\"configuringnagios-configmain-host_perfdata_command"
+"\">host_perfdata_command</link> and <link linkend=\"configuringnagios-"
+"configmain-service_perfdata_command\">service_perfdata_command</link> "
+"options, respectively."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:155
+msgid ""
+"An example command definition that redirects service check performance data "
+"to a text file for later processing by another application is shown below:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/perfdata.xml:159
+#, no-wrap
+msgid ""
+"define command{\n"
+"\t\t        command_name    store-service-perfdata\n"
+"\t\t        command_line    /bin/echo -e \"$LASTSERVICECHECK$\\t$HOSTNAME$\\t$SERVICEDESC$\\t$SERVICESTATE$\\t$SERVICEATTEMPT$\\t$SERVICESTATETYPE$\\t$SERVICEEXECUTIONTIME$\\t$SERVICELATENCY$\\t$SERVICEOUTPUT$\\t$SERVICEPERFDATA$\" &gt;&gt; /usr/local/nagios/var/service-perfdata.dat\n"
+"\t\t        }"
+msgstr ""
+
+# type: Content of: <chapter><section><tip><para>
+#: AdvancedTopics/perfdata.xml:165
+msgid ""
+"This method, while flexible, comes with a relatively high CPU overhead. If "
+"you're processing performance data for a large number of hosts and services, "
+"you'll probably want Nagios to write performance data to files instead. This "
+"method is described in the next section."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/perfdata.xml:174
+msgid "Writing Performance Data To Files"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:176
+msgid ""
+"You can have Nagios write all host and service performance data directly to "
+"text files using the <link linkend=\"configuringnagios-configmain-"
+"host_perfdata_file\">host_perfdata_file</link> and <link linkend="
+"\"configuringnagios-configmain-service_perfdata_file"
+"\">service_perfdata_file</link> options.  The format in which host and "
+"service performance data is written to those files is determined by the "
+"<link linkend=\"configuringnagios-configmain-host_perfdata_file_template"
+"\">host_perfdata_file_template</link> and <link linkend=\"configuringnagios-"
+"configmain-service_perfdata_file_template\">service_perfdata_file_template</"
+"link> options."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:183
+msgid ""
+"An example file format template for service performance data might look like "
+"this:"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:188
+msgid ""
+"By default, the text files will be opened in \"append\" mode. If you need to "
+"change the modes to \"write\" or \"non-blocking read/write\" (useful when "
+"writing to pipes), you can use the <link linkend=\"configuringnagios-"
+"configmain-host_perfdata_file_mode\">host_perfdata_file_mode</link> and "
+"<link linkend=\"configuringnagios-configmain-service_perfdata_file_mode"
+"\">service_perfdata_file_mode</link> options."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/perfdata.xml:194
+msgid ""
+"Additionally, you can have Nagios periodically execute commands to "
+"periocially process the performance data files (e.g. rotate them) using the "
+"<link linkend=\"configuringnagios-configmain-"
+"host_perfdata_file_processing_command"
+"\">host_perfdata_file_processing_command</link> and <link linkend="
+"\"configuringnagios-configmain-service_perfdata_file_processing_command"
+"\">service_perfdata_file_processing_command</link> options. The interval at "
+"which these commands are executed are governed by the <link linkend="
+"\"configuringnagios-configmain-host_perfdata_file_processing_interval"
+"\">host_perfdata_file_processing_interval</link> and <link linkend="
+"\"configuringnagios-configmain-service_perfdata_file_processing_interval"
+"\">service_perfdata_file_processing_interval</link> options, respectively."
+msgstr ""

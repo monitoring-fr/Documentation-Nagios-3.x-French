@@ -1,0 +1,171 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:288 AdvancedTopics/adaptive.xml:10
+msgid "Adaptive Monitoring"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/adaptive.xml:15
+msgid ""
+"Nagios allows you to change certain commands and host and service check "
+"attributes during runtime. I'll refer to this feature as <quote>adaptive "
+"monitoring</quote>. Please note that the adaptive monitoring features found "
+"in Nagios will probably not be of much use to 99% of users, but they do "
+"allow you to do some neat things."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/adaptive.xml:23
+msgid "What Can Be Changed?"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/adaptive.xml:25
+msgid "The following service check attributes can be changed during runtime:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:30 AdvancedTopics/adaptive.xml:55
+msgid "Check command (and command arguments)"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:34 AdvancedTopics/adaptive.xml:59
+msgid "Check interval"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:38 AdvancedTopics/adaptive.xml:63
+msgid "Max check attempts"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:42 AdvancedTopics/adaptive.xml:67
+msgid "Check timeperiod"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:46 AdvancedTopics/adaptive.xml:71
+msgid "Event handler command (and command arguments)"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/adaptive.xml:50
+msgid "The following host check attributes can be changed during runtime:"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/adaptive.xml:75
+msgid "The following global attributes can be changed during runtime:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:80
+msgid "Global host event handler command (and command arguments)"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:84
+msgid "Global service event handler command (and command arguments)"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/adaptive.xml:91
+msgid "External Commands For Adaptive Monitoring"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/adaptive.xml:93
+msgid ""
+"In order to change global or host- or service-specific attributes during "
+"runtime, you must submit the appropriate <link linkend=\"advancedtopics-"
+"extcommands\">external command</link> to Nagios via the <link linkend="
+"\"advancedtopics-extcommands\">external command file</link>. The table below "
+"lists the different attributes that may be changed during runtime, along "
+"with the external command to accomplish the job."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/adaptive.xml:101
+msgid ""
+"A full listing of external commands that can be used for adaptive monitoring "
+"(along with examples of how to use them) can be found online at the "
+"following URL: <ulink url=\"&url-nagios;developerinfo/externalcommands/"
+"\">&url-nagios;developerinfo/externalcommands/</ulink>"
+msgstr ""
+
+# type: Content of: <chapter><section><note><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:109
+msgid ""
+"When changing check commands, check timeperiods, or event handler commands, "
+"it is important to note that the new values for these options must have been "
+"defined before Nagios was started. Any request to change a command or "
+"timeperiod to one which had not been defined when Nagios was started is "
+"ignored."
+msgstr ""
+
+# type: Content of: <chapter><section><note><itemizedlist><listitem><para>
+#: AdvancedTopics/adaptive.xml:117
+msgid ""
+"You can specify command arguments along with the actual command name - just "
+"seperate individual arguments from the command name (and from each other) "
+"using bang (!) characters. More information on how arguments in command "
+"definitions are processed during runtime can be found in the documentation "
+"on <link linkend=\"thebasics-macros\">macros</link>."
+msgstr ""

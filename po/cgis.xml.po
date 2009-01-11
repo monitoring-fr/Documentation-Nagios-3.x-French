@@ -1,0 +1,775 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para><acronym>
+#: ConfiguringNagios/configcgi.xml:885 TheBasics/cgis.xml:181
+#: TheBasics/cgis.xml:214 TheBasics/cgis.xml:215
+msgid "WAP"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: TheBasics/cgis.xml:10
+msgid "Information On The CGIs"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: TheBasics/cgis.xml:15
+msgid ""
+"The various CGIs distributed with Nagios are described here, along with the "
+"authorization requirements for accessing and using each CGI. By default the "
+"CGIs require that you have authenticated to the web server and are "
+"authorized to view any information you are requesting. More information on "
+"configuring authorization can be found <link linkend=\"configuringnagios-"
+"cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:24
+msgid "<anchor id=\"thebasics-cgis-status_cgi\" />Status CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:70 TheBasics/cgis.xml:134 TheBasics/cgis.xml:202
+#: TheBasics/cgis.xml:278 TheBasics/cgis.xml:348 TheBasics/cgis.xml:416
+#: TheBasics/cgis.xml:473 TheBasics/cgis.xml:525 TheBasics/cgis.xml:636
+#: TheBasics/cgis.xml:714 TheBasics/cgis.xml:768 TheBasics/cgis.xml:841
+#: TheBasics/cgis.xml:913 TheBasics/cgis.xml:990 TheBasics/cgis.xml:1060
+#: TheBasics/cgis.xml:1131
+msgid "File Name:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:72
+msgid "status.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:82
+msgid ""
+"Description:This is the most important CGI included with Nagios. It allows "
+"you to view the current status of all hosts and services that are being "
+"monitored. The status CGI can produce two main types of output - a status "
+"overview of all host groups (or a particular host group) and a detailed view "
+"of all services (or those associated with a particular host)."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:88 TheBasics/cgis.xml:157 TheBasics/cgis.xml:222
+#: TheBasics/cgis.xml:304 TheBasics/cgis.xml:368 TheBasics/cgis.xml:433
+#: TheBasics/cgis.xml:489 TheBasics/cgis.xml:543 TheBasics/cgis.xml:659
+#: TheBasics/cgis.xml:732 TheBasics/cgis.xml:791 TheBasics/cgis.xml:864
+#: TheBasics/cgis.xml:934 TheBasics/cgis.xml:1010 TheBasics/cgis.xml:1083
+#: TheBasics/cgis.xml:1145
+msgid "Authorization Requirements:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:90 TheBasics/cgis.xml:371
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view all "
+"hosts and all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:97 TheBasics/cgis.xml:378
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:103 TheBasics/cgis.xml:384
+msgid ""
+"If you are an authenticated contact you can view all hosts and services for "
+"which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:114
+msgid "<anchor id=\"thebasics-cgis-statusmap_cgi\" />Status Map CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry>
+#: TheBasics/cgis.xml:136
+msgid "<filename>statusmap.cgi</filename>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:146
+msgid ""
+"Description:This CGI creates a map of all hosts that you have defined on "
+"your network. The CGI uses Thomas Boutell's <ulink url=\"&url-gd;\">gd</"
+"ulink> library (version 1.6.3 or higher) to create a PNG image of your "
+"network layout. The coordinates used when drawing each host (along with the "
+"optional pretty icons) are taken from <link linkend=\"configuringnagios-"
+"objectdefinitions-host\">host</link> definitions. If you'd prefer to let the "
+"CGI automatically generate drawing coordinates for you, use the <link "
+"linkend=\"configuringnagios-configcgi-default_statusmap_layout"
+"\">default_statusmap_layout</link> directive to specify a layout algorithm "
+"that should be used."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:160 TheBasics/cgis.xml:307 TheBasics/cgis.xml:436
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view all "
+"hosts."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:166 TheBasics/cgis.xml:313 TheBasics/cgis.xml:442
+msgid ""
+"If you are an authenticated contact you can view hosts for which you are a "
+"contact."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><note><para>
+#: TheBasics/cgis.xml:169 TheBasics/cgis.xml:316
+msgid ""
+"Users who are not authorized to view specific hosts will see unknown nodes "
+"in those positions. I realize that they really shouldn't see anything there, "
+"but it doesn't make sense to even generate the map if you can't see all the "
+"host dependencies..."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:181
+msgid "<anchor id=\"thebasics-cgis-statuswml_cgi\" />"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:181
+msgid "Interface CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry>
+#: TheBasics/cgis.xml:204
+msgid "<filename>statuswml.cgi</filename>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:214
+msgid "Description:This CGI serves as a"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:214
+msgid "interface to network status information. If you have a"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:215
+msgid ""
+"-enable device (i.e.  an Internet-ready cellphone), you can view status "
+"information while you're on the go. Different status views include hostgroup "
+"summary, hostgroup overview, host detail, service detail, all problems, and "
+"unhandled problems. In addition to viewing status information, you can also "
+"disable notifications and checks and acknowledge problems from your "
+"cellphone. Pretty cool, huh?"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:224
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_system_information\">authorized for system information</link> "
+"you can view Nagios process information."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:231
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"status data for all hosts and services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:238
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view status data for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:245
+msgid ""
+"If you are an authenticated contact you can view status data for all hosts "
+"and services for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:257
+msgid "<anchor id=\"thebasics-cgis-statuswrl_cgi\" />Status World CGI (VRML)"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:280
+msgid "statuswrl.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:290
+msgid ""
+"Description:This CGI creates a 3-D VRML model of all hosts that you have "
+"defined on your network. Coordinates used when drawing the hosts (as well as "
+"pretty texture maps) are taken from <link linkend=\"configuringnagios-"
+"objectdefinitions-host\">host</link> definitions. If you'd prefer to let the "
+"CGI automatically generate drawing coordinates for you, use the <link "
+"linkend=\"configuringnagios-configcgi-default_statuswrl_layout"
+"\">default_statuswrl_layout</link> directive to specify a layout algorithm "
+"that should be used.  You'll need a VRML browser (like <ulink url=\"http://"
+"www.parallelgraphics.com/cortona/\">Cortona</ulink>, <ulink url=\"http://www."
+"cosmosoftware.com/\">Cosmo Player</ulink> or <ulink url=\"http://www."
+"intervista.com/\">WorldView</ulink>)  installed on your system before you "
+"can actually view the generated model."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:328
+msgid "<anchor id=\"thebasics-cgis-tac_cgi\" />Tactical Overview CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:350
+msgid "tac.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:360
+msgid ""
+"Description:This CGI is designed to server as a \"birds-eye view\" of all "
+"network monitoring activity. It allows you to quickly see network outages, "
+"host status, and service status.  It distinguishes between problems that "
+"have been \"handled\" in some way (i.e. been acknowledged, had notifications "
+"disabled, etc.) and those which have not been handled, and thus need "
+"attention. Very useful if you've got a lot of hosts/services you're "
+"monitoring and you need to keep a single screen up to alert you of problems."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:395
+msgid "<anchor id=\"thebasics-cgis-outages_cgi\" />Network Outages CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:418
+msgid "outages.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:428
+msgid ""
+"Description:This CGI will produce a listing of \"problem\" hosts on your "
+"network that are causing network outages.  This can be particularly useful "
+"if you have a large network and want to quickly identify the source of the "
+"problem. Hosts are sorted based on the severity of the outage they are "
+"causing."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:453
+msgid "<anchor id=\"thebasics-cgis-config_cgi\" />Configuration CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:475
+msgid "config.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:485
+msgid ""
+"Description:This CGI allows you to view objects (i.e.  hosts, host groups, "
+"contacts, contact groups, time periods, services, etc.) that you have "
+"defined in your <link linkend=\"configuringnagios-configobject\">object "
+"configuration file(s)</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:492
+msgid ""
+"You must be <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_configuration_information\">authorized for configuration "
+"information</link> in order to any kind of configuration information."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:505
+msgid "<anchor id=\"thebasics-cgis-cmd_cgi\" />Command CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:527
+msgid "cmd.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:537
+msgid ""
+"Description:This CGI allows you to send commands to the Nagios process. "
+"Although this CGI has several arguments, you would be better to leave them "
+"alone. Most will change between different revisions of Nagios. Use the <link "
+"linkend=\"thebasics-cgis-extinfo_cgi\">extended information CGI</link> as a "
+"starting point for issuing commands."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:545
+msgid ""
+"You must be <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_system_commands\">authorized for system commands</link> in "
+"order to issue commands that affect the Nagios process (restarts, shutdowns, "
+"mode changes, etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:553
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_host_commands\">authorized for all host commands</link> "
+"you can issue commands for all hosts and services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:560
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_service_commands\">authorized for all service commands</"
+"link> you can issue commands for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:567
+msgid ""
+"If you are an authenticated contact you can issue commands for all hosts and "
+"services for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:571
+msgid "Notes:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:573
+msgid ""
+"If you have chosen not to <link linkend=\"configuringnagios-configcgi-"
+"use_authentication\">use authentication</link> with the CGIs, this CGI will "
+"not allow anyone to issue commands to Nagios. This is done for your own "
+"protection. I would suggest removing this CGI altogether if you decide not "
+"to use authentication with the CGIs."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:589
+msgid "<anchor id=\"thebasics-cgis-extinfo_cgi\" />Extended Information CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:638
+msgid "extinfo.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:648
+msgid ""
+"Description:This CGI allows you to view Nagios process information, host and "
+"service state statistics, host and service comments, and more. It also "
+"serves as a launching point for sending commands to Nagios via the <link "
+"linkend=\"thebasics-cgis-cmd_cgi\">command CGI</link>. Although this CGI has "
+"several arguments, you would be better to leave them alone - they are likely "
+"to change between different releases of Nagios.  You can access this CGI by "
+"clicking on the 'Network Health' and 'Process Information' links on the side "
+"navigation bar, or by clicking on a host or service link in the output of "
+"the <link linkend=\"thebasics-cgis-status_cgi\">status CGI</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:661
+msgid ""
+"You must be <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_system_information\">authorized for system information</link> "
+"in order to view Nagios process information."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:668
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"extended information for all hosts and services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:675
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view extended information for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:682
+msgid ""
+"If you are an authenticated contact you can view extended information for "
+"all hosts and services for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:694
+msgid "<anchor id=\"thebasics-cgis-showlog_cgi\" />Event Log CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:716
+msgid "showlog.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:726
+msgid ""
+"Description:This CGI will display the <link linkend=\"configuringnagios-"
+"configmain-log_file\">log file</link>.  If you have <link linkend="
+"\"configuringnagios-configmain-log_rotation_method\">log rotation</link> "
+"enabled, you can browse notifications present in archived log files by using "
+"the navigational links near the top of the page."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:735
+msgid ""
+"You must be <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_system_information\">authorized for system information</link> "
+"in order to view the log file."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:748
+msgid "<anchor id=\"thebasics-cgis-history_cgi\" />Alert History CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:770
+msgid "history.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:780
+msgid ""
+"Description:This CGI is used to display the history of problems with either "
+"a particular host or all hosts. The output is basically a subset of the "
+"information that is displayed by the <link linkend=\"thebasics-cgis-"
+"showlog_cgi\">log file CGI</link>.  You have the ability to filter the "
+"output to display only the specific types of problems you wish to see (i.e. "
+"hard and/or soft alerts, various types of service and host alerts, all types "
+"of alerts, etc.). If you have <link linkend=\"configuringnagios-configmain-"
+"log_rotation_method\">log rotation</link> enabled, you can browse history "
+"information present in archived log files by using the navigational links "
+"near the top of the page."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:794
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"history information for all hosts and all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:801
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view history information for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:808
+msgid ""
+"If you are an authenticated contact you can view history information for all "
+"services and hosts for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:820
+msgid "<anchor id=\"thebasics-cgis-notifications_cgi\" />Notifications CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:843
+msgid "notifications.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:853
+msgid ""
+"Description:This CGI is used to display host and service notifications that "
+"have been sent to various contacts. The output is basically a subset of the "
+"information that is displayed by the <link linkend=\"thebasics-cgis-"
+"showlog_cgi\">log file CGI</link>. You have the ability to filter the output "
+"to display only the specific types of notifications you wish to see (i.e.  "
+"service notifications, host notifications, notifications sent to specific "
+"contacts, etc). If you have <link linkend=\"configuringnagios-configmain-"
+"log_rotation_method\">log rotation</link> enabled, you can browse "
+"notifications present in archived log files by using the navigational links "
+"near the top of the page."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:867
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"notifications for all hosts and all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:874
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view notifications for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:881
+msgid ""
+"If you are an authenticated contact you can view notifications for all "
+"services and hosts for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:893
+msgid "<anchor id=\"thebasics-cgis-trends_cgi\" />Trends CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:915
+msgid "trends.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:925
+msgid ""
+"Description:This CGI is used to create a graph of host or service states "
+"over an arbitrary period of time. In order for this CGI to be of much use, "
+"you should enable <link linkend=\"configuringnagios-configmain-"
+"log_rotation_method\">log rotation</link> and keep archived logs in the path "
+"specified by the <link linkend=\"configuringnagios-configmain-"
+"log_archive_path\">log_archive_path</link> directive. The CGI uses Thomas "
+"Boutell's <ulink url=\"&url-gd;\">gd</ulink> library (version 1.6.3 or "
+"higher) to create the trends image."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:937
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"trends for all hosts and all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:944
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view trends for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:951
+msgid ""
+"If you are an authenticated contact you can view trends for all services and "
+"hosts for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:963
+msgid "<anchor id=\"thebasics-cgis-avail_cgi\" />Availability Reporting CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:992
+msgid "avail.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:1002
+msgid ""
+"Description:This CGI is used to report on the availability of hosts and "
+"services over a user-specified period of time. In order for this CGI to be "
+"of much use, you should enable <link linkend=\"configuringnagios-configmain-"
+"log_rotation_method\">log rotation</link> and keep archived logs in the path "
+"specified by the <link linkend=\"configuringnagios-configmain-"
+"log_archive_path\">log_archive_path</link> directive."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1013
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"availability data for all hosts and all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1020
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view availability data for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1027
+msgid ""
+"If you are an authenticated contact you can view availability data for all "
+"services and hosts for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:1039
+msgid "<anchor id=\"thebasics-cgis-histogram_cgi\" />Alert Histogram CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:1062
+msgid "histogram.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:1072
+msgid ""
+"Description:This CGI is used to report on the availability of hosts and "
+"services over a user-specified period of time. In order for this CGI to be "
+"of much use, you should enable <link linkend=\"configuringnagios-configmain-"
+"log_rotation_method\">log rotation</link> and keep archived logs in the path "
+"specified by the <link linkend=\"configuringnagios-configmain-"
+"log_archive_path\">log_archive_path</link> directive. The CGI uses Thomas "
+"Boutell's <ulink url=\"&url-gd;\">gd</ulink> library (version 1.6.3 or "
+"higher) to create the histogram image."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1085
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"histograms for all hosts and all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1092
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view histograms for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1099
+msgid ""
+"If you are an authenticated contact you can view histograms for all services "
+"and hosts for which you are a contact."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: TheBasics/cgis.xml:1111
+msgid "<anchor id=\"thebasics-cgis-summary_cgi\" />Alert Summary CGI"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:1133
+msgid "summary.cgi"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: TheBasics/cgis.xml:1143
+msgid ""
+"Description:This CGI provides some generic reports about host and service "
+"alert data, including alert totals, top alert producers, etc."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1148
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_hosts\">authorized for all hosts</link> you can view "
+"summary information for all hosts and all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1155
+msgid ""
+"If you are <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_services\">authorized for all services</link> you can "
+"view summary information for all services."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: TheBasics/cgis.xml:1162
+msgid ""
+"If you are an authenticated contact you can view summary information for all "
+"services and hosts for which you are a contact."
+msgstr ""

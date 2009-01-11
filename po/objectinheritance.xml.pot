@@ -1,0 +1,899 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:422 AdvancedTopics/objectinheritance.xml:10
+msgid "Object Inheritance"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/objectdefinitions.xml:258
+#: ConfiguringNagios/objectdefinitions.xml:1414
+#: AdvancedTopics/objectinheritance.xml:397
+#: AdvancedTopics/objectinheritance.xml:428
+#: AdvancedTopics/objectinheritance.xml:459
+msgid "<emphasis>contact_groups</emphasis>"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: ConfiguringNagios/customobjectvars.xml:10
+#: AdvancedTopics/objectinheritance.xml:250
+msgid "Custom Object Variables"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: ConfiguringNagios/customobjectvars.xml:101 AdvancedTopics/flapping.xml:211
+#: AdvancedTopics/objectinheritance.xml:383
+msgid "Object Type"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:15
+msgid ""
+"This documentation attempts to explain object inheritance and how it can be "
+"used in your <link linkend=\"configuringnagios-objectdefinitions\">object "
+"definitions</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:19
+msgid ""
+"If you are confused about how recursion and inheritance work after reading "
+"this, take a look at the sample object config files provided in the Nagios "
+"distribution. If that still doesn't help, drop an email message with a "
+"<emphasis>detailed</emphasis> description of your problem to the "
+"<emphasis>nagios-users</emphasis> mailing list."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:27
+msgid "Basics"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:29
+msgid ""
+"There are three variables affecting recursion and inheritance that are "
+"present in all object definitions. They are indicated in red as follows..."
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:33
+#, no-wrap
+msgid ""
+"        define someobjecttype{\n"
+"\t\t                object-specific variables ...\n"
+"\t\t                name            template_name\n"
+"\t\t                use             name_of_template_to_use\n"
+"\t\t                register        [0/1]\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:40
+msgid ""
+"The first variable is <varname>name</varname>. Its just a \"template\" name "
+"that can be referenced in other object definitions so they can inherit the "
+"objects properties/variables. Template names must be unique amongst objects "
+"of the same type, so you can't have two or more host definitions that have "
+"\"hosttemplate\" as their template name."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:46
+msgid ""
+"The second variable is <varname>use</varname>. This is where you specify the "
+"name of the template object that you want to inherit properties/variables "
+"from. The name you specify for this variable must be defined as another "
+"object's template named (using the name variable)."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:52
+msgid ""
+"The third variable is <varname>register</varname>. This variable is used to "
+"indicate whether or not the object definition should be \"registered\" with "
+"Nagios. By default, all object definitions are registered. If you are using "
+"a partial object definition as a template, you would want to prevent it from "
+"being registered (an example of this is provided later). Values are as "
+"follows: 0 = do NOT register object definition, 1 = register object "
+"definition (this is the default). This variable is NOT inherited; every "
+"(partial) object definition used as a template must explicitly set the "
+"<varname>register</varname> directive to be 0. This prevents the need to "
+"override an inherited <varname>register</varname> directive with a value of "
+"1 for every object that should be registered."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:67
+msgid "Local Variables vs. Inherited Variables"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:69
+msgid ""
+"One important thing to understand with inheritance is that <quote>local</"
+"quote> object variables always take precedence over variables defined in the "
+"template object. Take a look at the following example of two host "
+"definitions (not all required variables have been supplied):"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:74
+#, no-wrap
+msgid ""
+"       define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      5\n"
+"\t\t                name                    hosttemplate1\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost2\n"
+"\t\t                max_check_attempts      3\n"
+"\t\t                use                     hosttemplate1\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:88
+msgid ""
+"You'll note that the definition for host <emphasis>bighost1</emphasis> has "
+"been defined as having <emphasis>hosttemplate1</emphasis> as its template "
+"name. The definition for host <emphasis>bighost2</emphasis> is using the "
+"definition of <emphasis>bighost1</emphasis> as its template object. Once "
+"Nagios processes this data, the resulting definition of host "
+"<emphasis>bighost2</emphasis> would be equivalent to this definition:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:97
+#, no-wrap
+msgid ""
+"        define host{\n"
+"\t\t                host_name               bighost2\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      3\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:104
+msgid ""
+"You can see that the <varname>check_command</varname> and "
+"<varname>notification_options</varname> variables were inherited from the "
+"template object (where host <emphasis>bighost1</emphasis> was defined).  "
+"However, the <emphasis>host_name</emphasis> and "
+"<emphasis>max_check_attempts</emphasis> variables were not inherited from "
+"the template object because they were defined locally. Remember, locally "
+"defined variables override variables that would normally be inherited from a "
+"template object. That should be a fairly easy concept to understand."
+msgstr ""
+
+# type: Content of: <chapter><section><tip><para>
+#: AdvancedTopics/objectinheritance.xml:115
+msgid ""
+"If you would like local string variables to be appended to inherited string "
+"values, you can do so. Read more about how to accomplish this <link linkend="
+"\"advancedtopics-objectinheritance-add_string\">below</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:122
+msgid "Inheritance Chaining"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:124
+msgid ""
+"Objects can inherit properties/variables from multiple levels of template "
+"objects. Take the following example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:127
+#, no-wrap
+msgid ""
+"        define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      5\n"
+"\t\t                name                    hosttemplate1\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost2\n"
+"\t\t                max_check_attempts      3\n"
+"\t\t                use                     hosttemplate1\n"
+"\t\t                name                    hosttemplate2\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost3\n"
+"\t\t                use                     hosttemplate2\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:147
+msgid ""
+"You'll notice that the definition of host <emphasis>bighost3</emphasis> "
+"inherits variables from the definition of host <emphasis>bighost2</"
+"emphasis>, which in turn inherits variables from the definition of host "
+"<emphasis>bighost1</emphasis>. Once Nagios processes this configuration "
+"data, the resulting host definitions are equivalent to the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:154
+#, no-wrap
+msgid ""
+"        define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      5\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost2\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      3\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost3\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      3\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:175
+msgid ""
+"There is no inherent limit on how <quote>deep</quote> inheritance can go, "
+"but you'll probably want to limit yourself to at most a few levels in order "
+"to maintain sanity."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:181
+msgid "Using Incomplete Object Definitions as Templates"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:183
+msgid ""
+"It is possible to use imcomplete object definitions as templates for use by "
+"other object definitions. By \"incomplete\" definition, I mean that all "
+"required variables in the object have not been supplied in the object "
+"definition. It may sound odd to use incomplete definitions as templates, but "
+"it is in fact recommended that you use them. Why? Well, they can serve as a "
+"set of defaults for use in all other object definitions. Take the following "
+"example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:191
+#, no-wrap
+msgid ""
+"        define host{\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      5\n"
+"\t\t                name                    generichosttemplate\n"
+"\t\t                register                        0\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                address                 192.168.1.3\n"
+"\t\t                use                     generichosthosttemplate\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost2\n"
+"\t\t                address                 192.168.1.4\n"
+"\t\t                use                     generichosthosttemplate\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:211
+msgid ""
+"Notice that the first host definition is incomplete because it is missing "
+"the required <varname>host_name</varname> variable. We don't need to supply "
+"a host name because we just want to use this definition as a generic host "
+"template. In order to prevent this definition from being registered with "
+"Nagios as a normal host, we set the <varname>register</varname> variable to "
+"0."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:218
+msgid ""
+"The definitions of hosts <emphasis>bighost1</emphasis> and "
+"<emphasis>bighost2</emphasis> inherit their values from the generic host "
+"definition. The only variable we've chosed to override is the "
+"<varname>address</varname> variable. This means that both hosts will have "
+"the exact same properties, except for their <varname>host_name</varname> and "
+"<varname>address</varname> variables. Once Nagios processes the config data "
+"in the example, the resulting host definitions would be equivalent to "
+"specifying the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:227
+#, no-wrap
+msgid ""
+"        define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                address                 192.168.1.3\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      5\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost2\n"
+"\t\t                address                 192.168.1.4\n"
+"\t\t                check_command           check-host-alive\n"
+"\t\t                notification_options    d,u,r\n"
+"\t\t                max_check_attempts      5\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:243
+msgid ""
+"At the very least, using a template definition for default variables will "
+"save you a lot of typing. It'll also save you a lot of headaches later if "
+"you want to change the default values of variables for a large number of "
+"hosts."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:252
+msgid ""
+"Any <link linkend=\"configuringnagios-customobjectvars\">custom object "
+"variables</link> that you define in your host, service, or contact "
+"definition templates will be inherited just like other standard variables.  "
+"Take the following example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:257
+#, no-wrap
+msgid ""
+"       define host{\n"
+"\t\t                _customvar1             somevalue  ; &lt;-- Custom host variable\n"
+"\t\t                _snmp_community         public  ; &lt;-- Custom host variable\n"
+"\t\t                name                    generichosttemplate\n"
+"\t\t                register                        0\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                address                 192.168.1.3\n"
+"\t\t                use                     generichosthosttemplate\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:270
+msgid ""
+"The host <emphasis>bighost1</emphasis> will inherit the custom host "
+"variables <varname>_customvar1</varname> and <varname>_snmp_community</"
+"varname>, as well as their respective values, from the "
+"<emphasis>generichosttemplate</emphasis> definition. The effective result is "
+"a definition for <emphasis>bighost1</emphasis> that looks like this:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:277
+#, no-wrap
+msgid ""
+"         define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                address                 192.168.1.3\n"
+"\t\t                _customvar1             somevalue\n"
+"\t\t                _snmp_community         public\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:286
+msgid ""
+"<anchor id=\"advancedtopics-objectinheritance-cancel_string\" />Cancelling "
+"Inheritance of String Values"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:289
+msgid ""
+"In some cases you may not want your host, service, or contact definitions to "
+"inherit values of string variables from the templates they reference. If "
+"this is the case, you can specify <emphasis role=\"bold\"><quote>null</"
+"quote></emphasis> (without quotes) as the value of the variable that you do "
+"not want to inherit. Take the following example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:296
+#, no-wrap
+msgid ""
+"        define host{\n"
+"\t\t                event_handler           my-event-handler-command\n"
+"\t\t                name                    generichosttemplate\n"
+"\t\t                register                        0\n"
+"\t\t                }\n"
+"\n"
+"\t\t        define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                address                 192.168.1.3\n"
+"\t\t                event_handler   null\n"
+"\t\t                use                     generichosthosttemplate\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:309
+msgid ""
+"In this case, the host <emphasis>bighost1</emphasis> will not inherit the "
+"value of the <varname>event_handler</varname> variable that is defined in "
+"the <emphasis>generichosttemplate</emphasis>. The resulting effective "
+"definition of <emphasis>bighost1</emphasis> is the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:315
+#, no-wrap
+msgid ""
+"        define host{\n"
+"\t\t                host_name               bighost1\n"
+"\t\t                address                 192.168.1.3\n"
+"\t\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:322
+msgid ""
+"<anchor id=\"advancedtopics-objectinheritance-add_string\" />Additive "
+"Inheritance of String Values"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:325
+msgid ""
+"Nagios gives preference to local variables instead of values inherited from "
+"templates. In most cases local variable values override those that are "
+"defined in templates. In some cases it makes sense to allow Nagios to use "
+"the values of inherited and local variables together."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:330
+msgid ""
+"This \"additive inheritance\" can be accomplished by prepending the local "
+"variable value with a plus sign (+). This features is only available for "
+"standard (non-custom) variables that contain string values. Take the "
+"following example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:335
+#, no-wrap
+msgid ""
+"define host{\n"
+"\t                hostgroups              all-servers\n"
+"\t                name                    generichosttemplate\n"
+"\t                register                        0\n"
+"\t                }\n"
+"\n"
+"\t        define host{\n"
+"\t                host_name                       linuxserver1\n"
+"\t                hostgroups            +linux-servers,web-servers\n"
+"\t                use                    generichosthosttemplate\n"
+"\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:347
+msgid ""
+"In this case, the host <emphasis>linuxserver1</emphasis> will append the "
+"value of its local <varname>hostgroups</varname> variable to that from "
+"generichosttemplate. The resulting effective definition of "
+"<emphasis>linuxserver1</emphasis> is the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:352
+#, no-wrap
+msgid ""
+"define host{\n"
+"\t                host_name                       linuxserver1\n"
+"\t                hostgroups        all-servers,linux-servers,web-servers\n"
+"\t                }"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:359
+msgid ""
+"<anchor id=\"advancedtopics-objectinheritance-implied_inheritance\" /"
+">Implied Inheritance"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:361
+msgid ""
+"Normally you have to either explicitly specify the value of a required "
+"variable in an object definition or inherit it from a template.  There are a "
+"few exceptions to this rule, where Nagios will assume that you want to use a "
+"value that instead comes from a related object. For example, the values of "
+"some service variables will be copied from the host the service is "
+"associated with if you don't otherwise specify them."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:368
+msgid ""
+"The following table lists the object variables that will be implicitly "
+"inherited from related objects if you don't explicitly specify their value "
+"in your object definition or inherit them from a template."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:385
+msgid "Object Variable"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:387
+msgid "Implied Source"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:393
+msgid "<emphasis role=\"bold\">Services</emphasis>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:400
+#: AdvancedTopics/objectinheritance.xml:431
+msgid "<emphasis>contact_groups</emphasis> in the associated host definition"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:406
+#: AdvancedTopics/objectinheritance.xml:437
+#: AdvancedTopics/objectinheritance.xml:468
+msgid "<emphasis>notification_interval</emphasis>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:409
+#: AdvancedTopics/objectinheritance.xml:440
+msgid ""
+"<emphasis>notification_interval</emphasis> in the associated host definition"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:415
+msgid "<emphasis>notification_period</emphasis>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:418
+#: AdvancedTopics/objectinheritance.xml:449
+msgid ""
+"<emphasis>notification_period</emphasis> in the associated host definition"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:424
+msgid "<emphasis role=\"bold\">Host Escalations</emphasis>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:446
+#: AdvancedTopics/objectinheritance.xml:477
+msgid "<emphasis>escalation_period</emphasis>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:455
+msgid "<emphasis role=\"bold\">Service Escalations</emphasis>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:462
+msgid ""
+"<emphasis>contact_groups</emphasis> in the associated service definition"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:471
+msgid ""
+"<emphasis>notification_interval</emphasis> in the associated service "
+"definition"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:480
+msgid ""
+"<emphasis>notification_period</emphasis> in the associated service definition"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:489
+msgid ""
+"<anchor id=\"advancedtopics-objectinheritance-impliedescalations\" />Implied/"
+"Additive Inheritance in Escalations"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:492
+msgid ""
+"Service and host escalation definitions can make use of a special rule that "
+"combines the features of implied and additive inheritance. If escalations 1) "
+"do not inherit the values of their <varname>contact_groups</varname> or "
+"<varname>contacts</varname> directives from another escalation template and "
+"2) their <varname>contact_groups</varname> or <varname>contacts</varname> "
+"directives begin with a plus sign (+), then the values of their "
+"corresponding host or service definition's <varname>contact_groups</varname> "
+"or <varname>contacts</varname> directives will be used in the additive "
+"inheritance logic."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:503
+msgid "Confused? Here's an example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:505
+#, no-wrap
+msgid ""
+"define host{\n"
+"\t        name            linux-server\n"
+"\t        contact_groups  linux-admins\n"
+"\t        ...\n"
+"\t        }\n"
+"\n"
+"\tdefine hostescalation{\n"
+"\t        host_name               linux-server\n"
+"\t        contact_groups  +management\n"
+"\t        ...\n"
+"\t        }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:517
+msgid "This is a much simpler equivalent to:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:519
+#, no-wrap
+msgid ""
+"define hostescalation{\n"
+"\t        host_name               linux-server\n"
+"\t        contact_groups  linux-admins,management\n"
+"\t        ...\n"
+"\t        }"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:527
+msgid ""
+"<anchor id=\"advancedtopics-objectinheritance-multiple_templates\" /"
+">Multiple Inheritance Sources"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:530
+msgid ""
+"Thus far, all examples of inheritance have shown object definitions "
+"inheriting variables/values from just a single source. You are also able to "
+"inherit variables/values from multiple sources for more complex "
+"configurations, as shown below."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:539
+msgid "# Generic host template"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><programlisting>
+#: AdvancedTopics/objectinheritance.xml:539
+#, no-wrap
+msgid ""
+"define host{\n"
+"\t        name                  \tgeneric-host\n"
+"\t        active_checks_enabled \t1\n"
+"\t        check_interval          10 \n"
+"                ...\n"
+"        \tregister                0\n"
+"        \t}"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:545
+msgid "# Development web server template"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><programlisting>
+#: AdvancedTopics/objectinheritance.xml:546
+#, no-wrap
+msgid ""
+"define host{       \n"
+"            name                    development-server       \n"
+"            check_interval          15  \n"
+"            notification_options    d,u,r\n"
+"        \t...\n"
+"            register                        0    \n"
+"              }"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:552
+#: AdvancedTopics/objectinheritance.xml:577
+#: AdvancedTopics/objectinheritance.xml:603
+msgid "# Development web server"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><programlisting>
+#: AdvancedTopics/objectinheritance.xml:553
+#, no-wrap
+msgid ""
+"define host{\n"
+"\t        use                    generic-host,development-server\n"
+"\t        host_name              devweb1\n"
+"\t       ...     \n"
+"            }"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:559
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/multiple-"
+"templates1.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:569
+msgid ""
+"In the example above, devweb1 is inheriting variables/values from two "
+"sources: generic-host and development-server. You'll notice that a "
+"check_interval variable is defined in both sources. Since generic-host was "
+"the first template specified in devweb1's use directive, its value for the "
+"<varname>check_interval</varname> variable is inherited by the devweb1 host. "
+"After inheritance, the effective definition of devweb1 would be as follows:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/objectinheritance.xml:579
+#, no-wrap
+msgid ""
+"define host{\n"
+"\t        host_name               devweb1\n"
+"\t        active_checks_enabled   1\n"
+"\t        check_interval          10\n"
+"\t        notification_options    d,u,r\n"
+"\t        ...\n"
+"\t        }"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/objectinheritance.xml:589
+msgid "Precedence With Multiple Inheritance Sources"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/objectinheritance.xml:591
+msgid ""
+"When you use multiple inheritance sources, it is important to know how "
+"Nagios handles variables that are defined in multiple sources. In these "
+"cases Nagios will use the variable/value from the first source that is "
+"specified in the use directive. Since inheritance sources can themselves "
+"inherit variables/values from one or more other sources, it can get tricky "
+"to figure out what variable/value pairs take precedence."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:602
+msgid "Consider the following host definition that references three templates:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
+#: AdvancedTopics/objectinheritance.xml:604
+#, no-wrap
+msgid ""
+"define host{\n"
+"        use        1, 4, 8\n"
+"        host_name  devweb1\n"
+"\t\t...\t\n"
+"\t\t        }"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:608
+msgid ""
+"If some of those referenced templates themselves inherit variables/values "
+"from one or more other templates, the precendence rules are shown to the "
+"right."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:611
+msgid ""
+"Testing, trial, and error will help you better understand exactly how things "
+"work in complex inheritance situations like this. :-)"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: AdvancedTopics/objectinheritance.xml:615
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/multiple-"
+"templates2.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""

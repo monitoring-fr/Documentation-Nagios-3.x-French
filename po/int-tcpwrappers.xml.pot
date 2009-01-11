@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:11
+msgid "TCP Wrappers Integration"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:20
+msgid ""
+"This document explains how to easily generate alerts in Nagios for "
+"connection attempts that are rejected by TCP wrappers. For example, if an "
+"unauthorized host attempts to connect to your &protocol-ssh; server, you can "
+"receive an alert in Nagios that contains the name of the host that was "
+"rejected. If you implement this on your Linux/Unix boxes, you'll be "
+"surprised how many port scans you can detect across your network."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:27
+msgid "These directions assume:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:31
+msgid ""
+"You are already familiar with <xref linkend=\"thebasics-passivechecks\" /> "
+"and how they work."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:36
+msgid ""
+"You are already familiar with <xref linkend=\"advancedtopics-volatileservices"
+"\" /> and how they work."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:41
+msgid ""
+"The host which you are generating alerts for (i.e. the host you are using "
+"TCP wrappers on) is a remote host (called firestorm in this example). If you "
+"want to generate alerts on the same host that Nagios is running you will "
+"need to make a few modifications to the examples I provide."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:49
+msgid ""
+"You have installed the <xref linkend=\"nagiosaddons-addons-nsca\" /> on your "
+"monitoring server and the &name-nsca; client (<command>send_nsca</command>) "
+"on the remote machine that you are generating TCP wrapper alerts from."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:57
+msgid "Defining A Service"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:59
+msgid ""
+"If you haven't done so already, create a <link linkend=\"configuringnagios-"
+"objectdefinitions-host\">host definition</link> for the remote host "
+"(firestorm)."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:62
+msgid ""
+"Next, define a service in one of your <link linkend=\"configuringnagios-"
+"configobject\">object configuration files</link> for the TCP wrapper alerts "
+"on host firestorm. The service definition might look something like this:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:66
+#, no-wrap
+msgid ""
+"define service{\n"
+"            host_name                       firestorm\n"
+"            service_description             TCP Wrappers\n"
+"            is_volatile                     1\n"
+"            active_checks_enabled           0\n"
+"            passive_checks_enabled          1\n"
+"            max_check_attempts              1\n"
+"            check_command                   check_none\n"
+"            ...\n"
+"            }"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:78
+msgid ""
+"There are some important things to note about the above service definition:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:83
+msgid ""
+"The volatile option enabled. We want this option enabled because we want a "
+"notification to be generated for every alert that comes in."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:89
+msgid ""
+"Active checks of the service as disabled, while passive checks are enabled. "
+"This means that the service will never be actively checked by Nagios - all "
+"alert information will have to be received passively from an external source."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:96
+msgid ""
+"The <varname>max_check_attempts</varname> value is set to <computeroutput>1</"
+"computeroutput>. This guarantees you will get a notification when the first "
+"alert is generated."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:103
+msgid "Configuring TCP Wrappers"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:105
+msgid ""
+"Now you're going to have to modify the /etc/hosts.deny file on firestorm. In "
+"order to have the TCP wrappers send an alert to the monitoring host whenever "
+"a connection attempt is denied, you'll have to add a line similiar to the "
+"following:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:110
+#, no-wrap
+msgid "ALL: ALL: RFC931: twist (/usr/local/nagios/libexec/eventhandlers/handle_tcp_wrapper %h %d)&amp;"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:112
+msgid ""
+"This line assumes that there is a script called handle_tcp_wrapper in the "
+"<filename class=\"directory\">/usr/local/nagios/libexec/eventhandlers/</"
+"filename> directory on firestorm.  We'll write that script next."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:118
+msgid "Writing The Script"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:120
+msgid ""
+"The last thing you need to do is write the handle_tcp_wrapper script on "
+"firestorm that will send the alert back to the Nagios server. It might look "
+"something like this:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:124
+#, no-wrap
+msgid ""
+"\n"
+"    \t#!/bin/sh\n"
+"\t/usr/local/nagios/libexec/eventhandlers/submit_check_result firestorm \"TCP Wrappers\" 2 \"Denied $2-$1\" &gt; /dev/null 2&gt; /dev/null\n"
+"\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:128
+msgid ""
+"Notice that the <command>handle_tcp_wrapper</command> script calls the "
+"<command>submit_check_result</command> script to actually send the alert "
+"back to the monitoring host. Assuming your Nagios server is called monitor, "
+"the <command>submit_check_result</command> script might look like this:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:133
+#, no-wrap
+msgid ""
+"\n"
+"#!/bin/sh\n"
+"# Arguments\n"
+"#\t$1 = name of host in service definition\n"
+"#\t$2 = name/description of service in service definition\n"
+"#\t$3 = return code\n"
+"#\t$4 = outputs\n"
+"\n"
+"/bin/echo -e \"$1\\t$2\\t$3\\t$4\\n\" | /usr/local/nagios/bin/send_nsca monitor -c /usr/local/nagios/etc/send_nsca.cfg\n"
+"\t"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:146
+msgid "Finishing Up"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:148
+msgid ""
+"You've now configured everything you need to, so all you have to do is "
+"restart the inetd process on firestorm and restart Nagios on your monitoring "
+"server. That's it! When the TCP wrappers on firestorm deny a connection "
+"attempt, you should be getting alerts in Nagios. The plugin output for the "
+"alert will look something like the following: <computeroutput>Denied sshd2-"
+"sdn-ar-002mnminnP321.dialsprint.net</computeroutput>"
+msgstr ""

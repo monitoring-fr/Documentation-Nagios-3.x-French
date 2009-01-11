@@ -1,0 +1,1102 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:10
+msgid "What's New in Nagios 3"
+msgstr ""
+
+# type: Content of: <chapter><important><para>
+#: About/whatsnew.xml:13
+msgid "Make sure you read through the documentation and the"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para><emphasis><acronym>
+#: About/whatsnew.xml:13 AdvancedTopics/redundancy.xml:167
+msgid "FAQ"
+msgstr ""
+
+# type: Content of: <chapter><important><para>
+#: About/whatsnew.xml:13
+msgid ""
+"s at <ulink url=\"&url-nagios;\">nagios.org</ulink> before sending a "
+"question to the mailing lists."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: About/whatsnew.xml:19
+msgid "Change Log"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: About/whatsnew.xml:21
+msgid ""
+"The change log for Nagios can be found online at <ulink url=\"&url-nagios;"
+"development/changelog.php\">&url-nagios;development/changelog.php</ulink> or "
+"in the <emphasis role=\"strong\">Changelog</emphasis> file in the root "
+"directory of the source code distribution."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: About/whatsnew.xml:29
+msgid "Changes and New Features"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:32
+msgid "Documentation"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:36
+msgid ""
+"<emphasis role=\"bold\">Doc updates</emphasis> - I'm slowly making my way "
+"through rewriting most all portions of the documentation. This is going to "
+"take a while, as (1) there's a lot of documentation and (2) writing "
+"documentation is not my favorite thing in the world. Expect some portions of "
+"the docs to be different than others for a while. I hope the changes I'm "
+"making will make things clearer/easier for new and seasoned Nagios users "
+"alike."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: About/whatsnew.xml:49 TheBasics/macros.xml:12
+msgid "Macros"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:53
+msgid ""
+"<emphasis role=\"bold\">New macros</emphasis> - New macros have been added, "
+"including: <varname>$TEMPPATH$</varname>, <varname>$LONGHOSTOUTPUT$</"
+"varname>, <varname>$LONGSERVICEOUTPUT$</varname>, <varname>"
+"$HOSTNOTIFICATIONID$</varname>, <varname>$SERVICENOTIFICATIONID$</varname>, "
+"<varname>$HOSTEVENTID$</varname>, <varname>$SERVICEEVENTID$</varname>, "
+"<varname>$SERVICEISVOLATILE$</varname>, <varname>$LASTHOSTEVENTID$</"
+"varname>, <varname>$LASTSERVICEEVENTID$</varname>, <varname>$HOSTDISPLAYNAME"
+"$</varname>, <varname>$SERVICEDISPLAYNAME$</varname>, <varname>"
+"$MAXHOSTATTEMPTS$</varname>, <varname>$MAXSERVICEATTEMPTS$</varname>, "
+"<varname>$TOTALHOSTSERVICES$</varname>, <varname>$TOTALHOSTSERVICESOK$</"
+"varname>, <varname>$TOTALHOSTSERVICESWARNING$</varname>, <varname>"
+"$TOTALHOSTSERVICESUNKNOWN$</varname>, <varname>$TOTALHOSTSERVICESCRITICAL$</"
+"varname>, <varname>$CONTACTGROUPNAME$</varname>, <varname>$CONTACTGROUPNAMES"
+"$</varname>, <varname>$CONTACTGROUPALIAS$</varname>, <varname>"
+"$CONTACTGROUPMEMBERS$</varname>, <varname>$NOTIFICATIONRECIPIENTS$</"
+"varname>, <varname>$NOTIFICATIONISESCALATED$</varname>, <varname>"
+"$NOTIFICATIONAUTHOR$</varname>, <varname>$NOTIFICATIONAUTHORNAME$</varname>, "
+"<varname>$NOTIFICATIONAUTHORALIAS$</varname>, <varname>$NOTIFICATIONCOMMENT"
+"$</varname>, <varname>$EVENTSTARTTIME$</varname>, <varname>$HOSTPROBLEMID$</"
+"varname>, <varname>$LASTHOSTPROBLEMID$</varname>, <varname>$SERVICEPROBLEMID"
+"$</varname>, <varname>$LASTSERVICEPROBLEMID$</varname>, <varname>"
+"$LASTHOSSTATE$</varname>, <varname>$LASTHOSTSTATEID$</varname>, <varname>"
+"$LASTSERVICESTATE$</varname>, <varname>$LASTSERVICESTATEID$</varname>. Two "
+"special on-demand time macros have also been added: <varname>$ISVALIDTIME:$</"
+"varname> and <varname>$NEXTVALIDTIME:$</varname>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:74
+msgid ""
+"<emphasis role=\"bold\">Removed macros</emphasis> - The old <varname>"
+"$NOTIFICATIONNUMBER$</varname> macro has been deprecated in favor of new "
+"<varname>$HOSTNOTIFICATIONNUMBER$</varname> and <varname>"
+"$SERVICENOTIFICATIONNUMBER$</varname> macros."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:81
+msgid ""
+"<emphasis role=\"bold\">Changes</emphasis> - The <varname>$HOSTNOTES$</"
+"varname> and <varname>$SERVICENOTES$</varname> macros may now contain macros "
+"themselves, just like the <varname>$HOSTNOTESURL$</varname>, <varname>"
+"$HOSTACTIONURL$</varname>, <varname>$SERVICENOTESURL$</varname> and <varname>"
+"$SERVICEACTIONURL$</varname> macros."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:88
+msgid ""
+"Macros are normally available as environment variables when check, event "
+"handler, notification, and other commands are run. This can be rather CPU "
+"intensive in large Nagios installations, so you can disable this behavior "
+"with the <link linkend=\"configuringnagios-configmain-"
+"enable_environment_macros\">enable_environment_macros</link> option."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:97
+msgid ""
+"Macro information can be found <link linkend=\"thebasics-macros\">here</"
+"link>."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:103 AdvancedTopics/downtime.xml:10
+msgid "Scheduled Downtime"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:107
+msgid ""
+"<link linkend=\"advancedtopics-downtime\">Scheduled downtime</link> entries "
+"are no longer stored in their own file (previously specified with a "
+"<varname>downtime_file</varname> directive in the main configuration file). "
+"Current and retained scheduled downtime entries are now stored in the <link "
+"linkend=\"configuringnagios-configmain-status_file\">status file</link> and "
+"<link linkend=\"configuringnagios-configmain-state_retention_file"
+"\">retention file</link>, respectively."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:120
+msgid "Comments"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:124
+msgid ""
+"Host and service comments are no longer stored in their own file (previously "
+"specified with a <varname>comment_file</varname> directive in the main "
+"configuration file). Current and retained comments are now stored in the "
+"<link linkend=\"configuringnagios-configmain-status_file\">status file</"
+"link> and <link linkend=\"configuringnagios-configmain-state_retention_file"
+"\">retention file</link>, respectively."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:133
+msgid ""
+"Acknowledgement comments that are marked as non-persistent are now only "
+"deleted when the acknowledgement is removed. They were previously "
+"automatically deleted when Nagios restarted, which was not ideal."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:142
+msgid "State Retention Data"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:146
+msgid ""
+"Status information for individual contacts is now retained across program "
+"restarts."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:151
+msgid ""
+"Comment and downtime IDs are now retained across program restarts and should "
+"be unique unless the retention data is deleted or ignored."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:157
+msgid ""
+"Added <link linkend=\"configuringnagios-configmain-"
+"retained_host_attribute_mask\">retained_host_attribute_mask</link> and <link "
+"linkend=\"configuringnagios-configmain-retained_service_attribute_mask"
+"\">retained_service_attribute_mask</link> variables to control what host/"
+"service attributes are retained globally across program restarts."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:166
+msgid ""
+"Added <link linkend=\"configuringnagios-configmain-"
+"retained_process_host_attribute_mask\">retained_process_host_attribute_mask</"
+"link> and <link linkend=\"configuringnagios-configmain-"
+"retained_process_service_attribute_mask"
+"\">retained_process_service_attribute_mask</link> variables to control what "
+"process attributes are retained across program restarts."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:175
+msgid ""
+"Added <link linkend=\"configuringnagios-configmain-"
+"retained_contact_host_attribute_mask\">retained_contact_host_attribute_mask</"
+"link> and <link linkend=\"configuringnagios-configmain-"
+"retained_contact_service_attribute_mask"
+"\">retained_contact_service_attribute_mask</link> variables to control what "
+"contact attributes are retained globally across program restarts."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:186
+msgid "Flap Detection"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:190
+msgid ""
+"Added <varname>flap_detection_options</varname> directive to host and "
+"service definitions to allow you to specify what host/service states should "
+"be used by the flap detection logic (by default all states are used)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:197
+msgid ""
+"Percent state change and state history are now retained and recorded even "
+"when flap detection is disabled."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:202
+msgid ""
+"Hosts and services are immediately checked for flapping when flap detection "
+"is enabled program-wide."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:207
+msgid ""
+"Hosts and services that are flapping when flap detection is disabled program-"
+"wide are now logged."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:212
+msgid ""
+"More information on flap detection can be found <link linkend="
+"\"advancedtopics-flapping\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:219 AdvancedTopics/extcommands.xml:10
+msgid "External Commands"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:223
+msgid ""
+"Added a new <command>PROCESS_FILE</command> external command to allow "
+"processing of external commands found in an external (regular) file.  Useful "
+"for processing large amounts of passive checks with long output, or for "
+"scripting regular commands. More information can be found <ulink url=\"&url-"
+"nagios;developerinfo/externalcommands/commandinfo.php?command_id=131\">here</"
+"ulink>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:232
+msgid ""
+"Custom commands may now be submitted to Nagios. Custom command names are "
+"prefixed with an underscore and are not processed internally by the Nagios "
+"daemon. They may, however, be processed by a loaded"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para><acronym>
+#: About/whatsnew.xml:235 About/whatsnew.xml:681
+msgid "NEB"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:235
+msgid "module."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:240
+msgid ""
+"The <link linkend=\"configuringnagios-configmain-check_external_commands"
+"\">check_external_commands</link> option is now enabled by default, which "
+"means Nagios is configured to check for external commands \"out of the box"
+"\". All 2.x and earlier versions of Nagios had this option disabled by "
+"default."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:249
+msgid "Status Data"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:253
+msgid ""
+"Contact status information (last notification times, notifications enabled/"
+"disabled, etc.) is now saved in the <link linkend=\"configuringnagios-"
+"configmain-status_file\">status</link> and <link linkend=\"configuringnagios-"
+"configmain-state_retention_file\">retention</link> files, although it is not "
+"processed by the CGIs."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:263
+msgid "Embedded Perl"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:267
+msgid ""
+"Added new <link linkend=\"configuringnagios-configmain-enable_embedded_perl"
+"\">enable_embedded_perl</link> and <link linkend=\"configuringnagios-"
+"configmain-use_embedded_perl_implicitly\">use_embedded_perl_implicitly</"
+"link> variables to control use of the embedded Perl interpreter."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:274
+msgid ""
+"Perl scripts/plugins can now explicitly tell Nagios whether or not they "
+"should be run under the embedded Perl interpreter. This is useful if you "
+"have troublesome scripts that don't function well under the ePN."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:281
+msgid ""
+"More information about these new options can be found <link linkend="
+"\"advancedtopics-embeddedperl\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:288 AdvancedTopics/adaptive.xml:10
+msgid "Adaptive Monitoring"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:292
+msgid ""
+"The check timeperiod for hosts and services can now be modified on-the-fly "
+"with the appropriate external command "
+"(<command>CHANGE_HOST_CHECK_TIMEPERIOD</command> or "
+"<command>CHANGE_SVC_CHECK_TIMEPERIOD</command>).  Look <ulink url=\"&url-"
+"nagios;developerinfo/externalcommands/commandlist.php?category_id=13\">here</"
+"ulink> for available adaptive monitoring commands."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:302 ConfiguringNagios/configobject.xml:261
+#: TheBasics/notifications.xml:10
+msgid "Notifications"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:306
+msgid ""
+"A <varname>first_notification_delay</varname> option has been added to host "
+"and service definitions to (what else) introduce a delay between when a host/"
+"service problem first occurs and when the first problem notification goes "
+"out. In previous versions you had to use some mighty config-fu with "
+"escalations to accomplish this. Now this feature is available to normal "
+"mortals."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:315
+msgid ""
+"Notifications are now sent out for hosts/services that are flapping when "
+"flap detection is disabled on a host- or service-specific basis or on a "
+"program-wide basis. The <varname>$NOTIFICATIONTYPE$</varname> macro will be "
+"set to <quote>FLAPPINGDISABLED</quote> in this situation."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:323
+msgid ""
+"Notifications can now be sent out when scheduled downtime start, ends, and "
+"is cancelled for hosts and services. The <varname>$NOTIFICATIONTYPE$</"
+"varname> macro will be set to <quote>DOWNTIMESTART</quote>, "
+"<quote>DOWNTIMEEND</quote>, or <quote>DOWNTIMECANCELLED</quote>, "
+"respectively. In order to receive notifications on scheduled downtime "
+"events, specify <quote>s</quote> or <quote>downtime</quote> in your contact, "
+"host, and/or service notification options."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:334
+msgid ""
+"More information on notifications can be found <link linkend=\"thebasics-"
+"notifications\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:341 ConfiguringNagios/objectdefinitions.xml:10
+msgid "Object Definitions"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:345
+msgid ""
+"Service dependencies can now be created to easily define \"same host\" "
+"dependencies for different services on one or more hosts.  (<link linkend="
+"\"advancedtopics-objecttricks-same_host_dependency\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:352
+msgid ""
+"Extended host and service definitions (hostextinfo and serviceextinfo, "
+"respectively) have been deprecated. All values that from extended "
+"definitions have been merged with host or service definitions, as "
+"appropriate. Nagios 3 will continue to read and process older extended "
+"information definitions, but will log a warning. Future versions of Nagios "
+"(4.x and later) will not support separate extended info definitions."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:362
+msgid ""
+"New <varname>hostgroup_members</varname>, <varname>servicegroup_members</"
+"varname>, and <varname>contactgroup_members</varname> directives have been "
+"added to hostgroup, servicegroup, and contactgroups definitions, "
+"respectively. This allows you to include hosts, services, or contacts from "
+"sub-groups in your group definitions."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:371
+msgid ""
+"New <emphasis>notes</emphasis>, <varname>notes_url</varname>, and "
+"<varname>action_url</varname> have been added to hostgroup and servicegroup "
+"definition."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:377
+msgid ""
+"Contact definitions have the new <varname>host_notifications_enabled</"
+"varname>, <varname>service_notifications_enabled</varname>, and "
+"<varname>can_submit_commands</varname> directives to better control "
+"notifications and determine whether or not they can submit commands through "
+"the web interface."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:386
+msgid ""
+"Host and service dependencies now support an optional "
+"<varname>dependency_period</varname> directive. This allows you to limit the "
+"times during which dependencies are valid."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:392
+msgid ""
+"The <varname>parallelize</varname> directive in service definitions is now "
+"deprecated and no longer used. All service checks are run in parallel in "
+"Nagios 3."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:398
+msgid ""
+"There are no longer any inherent limitations on the length of host names or "
+"service descriptions."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:403
+msgid ""
+"Extended regular expressions are now used if you enable the <link linkend="
+"\"configuringnagios-configmain-use_regexp_matching\">use_regexp_matching</"
+"link> config option. Regular expression matching is only used in certain "
+"object definition directives that contain <emphasis role=\"strong\">*</"
+"emphasis>, <emphasis role=\"strong\">?</emphasis>, <emphasis role=\"strong\">"
+"+</emphasis>, or <emphasis role=\"strong\">\\.</emphasis>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:413
+msgid ""
+"A new <varname>initial_state</varname> directive has been added to host and "
+"service definitions, so you can tell Nagios that a host/service should "
+"default to a specific state when Nagios starts, rather than UP or OK (which "
+"is still the default)."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:422 AdvancedTopics/objectinheritance.xml:10
+msgid "Object Inheritance"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:426
+msgid ""
+"You can now inherit object variables/values from multiple templates by "
+"specifying more than one template name in the <emphasis>use</emphasis> "
+"directive of object definitions. This can allow for some very powerful (and "
+"complex) inheritance setups.  (<link linkend=\"advancedtopics-"
+"objectinheritance-multiple_templates\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:435
+msgid ""
+"Services now inherit contact groups, notification interval, and notification "
+"period from their associated host if not otherwise specified. (<link linkend="
+"\"advancedtopics-objectinheritance-implied_inheritance\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:442
+msgid ""
+"Host and service escalations now inherit contact groups, notification "
+"interval, and escalation timeperiod from their associated host or service if "
+"not otherwise specified.  (<link linkend=\"advancedtopics-objectinheritance-"
+"implied_inheritance\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:450
+msgid ""
+"String variables in host, service, and contact definitions can now be "
+"prevented from being inherited by specifying a value of <quote>null</quote> "
+"(without quotes) for the value of the variable. (<link linkend="
+"\"advancedtopics-objectinheritance-cancel_string\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:457
+msgid ""
+"Most string variables in local object definitions can now be appended to the "
+"string values that are inherited. This is quite handy in large "
+"configurations.  (<link linkend=\"advancedtopics-objectinheritance-add_string"
+"\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:467
+msgid "Performance Improvements"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:471
+msgid ""
+"Add ability to precache object config files and exclude circular path "
+"detection checks from verification process. This can speed up Nagios start "
+"time immensely in large environments! Read more <link linkend="
+"\"securityandperformancetuning-faststartup\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:479
+msgid ""
+"A new <link linkend=\"configuringnagios-configmain-"
+"use_large_installation_tweaks\">use_large_installation_tweaks</link> option "
+"has been added that should improve performance in large Nagios "
+"installations.  Read more about this <link linkend="
+"\"securityandperformancetuning-largeinstalltweaks\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:486
+msgid ""
+"A number of internal improvements have been made with regards to how Nagios "
+"deals with internal data structures and object (e.g.  host and service) "
+"relationships. These improvements should result in a speedup for larger "
+"installations."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:493
+msgid ""
+"New <link linkend=\"configuringnagios-configmain-"
+"external_command_buffer_slots\">external_command_buffer_slots</link> option "
+"has been added to allow you to more easily scale Nagios in large "
+"environments. For best results you should consider using <link linkend="
+"\"securityandperformancetuning-mrtggraphs\">MRTG to graph</link> Nagios' "
+"usage of buffer slots over time."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:502
+msgid "Plugin Output"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:506
+msgid ""
+"Multiline plugin output is now supported for host and service checks. "
+"Hooray! The plugin"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para><acronym>
+#: About/whatsnew.xml:507 About/whatsnew.xml:681
+msgid "API"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:507
+msgid ""
+"has been updated to support multiple lines of output in a manner that "
+"retains backward compatability with older plugins. Additional lines of "
+"output (aside from the first line) are now stored in new <varname>"
+"$LONGHOSTOUTPUT$</varname> and <varname>$LONGSERVICEOUTPUT$</varname> macros."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:515
+msgid ""
+"The maximum length of plugin output has been increased to 4K (from around "
+"350 bytes in previous versions). This 4K limit has been arbitrarily chosen "
+"to protect again runaway plugins that dump back too much data to Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:522
+msgid ""
+"More information on the plugins, multiline output, and max plugin output "
+"length can be found <link linkend=\"development-pluginapi\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:530 TheBasics/macrolist.xml:107
+#: TheBasics/macrolist.xml:1526 TheBasics/macrolist.xml:1727
+#: TheBasics/macrolist.xml:2987 TheBasics/macrolist.xml:3188
+#: TheBasics/macrolist.xml:3384 TheBasics/macrolist.xml:3489
+#: TheBasics/macrolist.xml:4053 TheBasics/macrolist.xml:4433
+#: TheBasics/macrolist.xml:4691 TheBasics/macrolist.xml:5133
+#: TheBasics/servicechecks.xml:10
+msgid "Service Checks"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:534
+msgid "Nagios now checks for orphaned service checks by default."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:538
+msgid ""
+"Added a new <link linkend=\"configuringnagios-configmain-"
+"enable_predictive_service_dependency_checks"
+"\">enable_predictive_service_dependency_checks</link> option to control "
+"whether or not Nagios will initiate predictive check of service that are "
+"being depended upon (in dependency definitions). Predictive checks help "
+"ensure that the dependency logic is as accurate as possible.  (<link linkend="
+"\"advancedtopics-dependencychecks\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:546
+msgid ""
+"A new cached service check feature has been implemented that can "
+"significantly improve performance for many people Instead of executing a "
+"plugin to check the status of a service, Nagios can often use a cached "
+"service check result instead. More information on this can be found <link "
+"linkend=\"advancedtopics-cachedchecks\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:556 TheBasics/macrolist.xml:113
+#: TheBasics/macrolist.xml:1532 TheBasics/macrolist.xml:1733
+#: TheBasics/macrolist.xml:2993 TheBasics/macrolist.xml:3194
+#: TheBasics/macrolist.xml:3390 TheBasics/macrolist.xml:3495
+#: TheBasics/macrolist.xml:4059 TheBasics/macrolist.xml:4439
+#: TheBasics/macrolist.xml:4697 TheBasics/macrolist.xml:5139
+#: TheBasics/hostchecks.xml:10
+msgid "Host Checks"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:560
+msgid ""
+"Host checks are now run in parallel! Host checks used to be run in a serial "
+"fashion, which meant they were a major holdup in terms of performance. No "
+"longer! (<link linkend=\"thebasics-hostchecks\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:567
+msgid ""
+"Host check retries are now performed like service check retries. That is to "
+"say, host definitions now have a new <varname>retry_interval</varname> that "
+"specifies how much time to wait before trying the host check again. :-)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:574
+msgid ""
+"Regularly scheduled host checks now longer hinder performance.  In fact, "
+"they can help to increase performance with the new cached check logic (see "
+"below)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:580
+msgid ""
+"Added a new <link linkend=\"configuringnagios-configmain-"
+"check_for_orphaned_hosts\">check_for_orphaned_hosts</link> option to enable "
+"checks of orphaned host checks. This is need now that host checks are run in "
+"parallel."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:587
+msgid ""
+"Added a new <link linkend=\"configuringnagios-configmain-"
+"enable_predictive_host_dependency_checks"
+"\">enable_predictive_host_dependency_checks</link> option to control whether "
+"or not Nagios will initiate predictive check of hosts that are being "
+"depended upon (in dependency definitions). Predictive checks help ensure "
+"that the dependency logic is as accurate as possible.  (<link linkend="
+"\"advancedtopics-dependencychecks\">Read more</link>)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:595
+msgid ""
+"A new cached host check feature has been implemented that can significantly "
+"improve performance for many people Instead of executing a plugin to check "
+"the status of a host, Nagios can often use a cached host check result "
+"instead. More information on this can be found <link linkend="
+"\"advancedtopics-cachedchecks\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:603
+msgid ""
+"Passive host checks that have a DOWN or UNREACHABLE result can now be "
+"automatically translated to their proper state from the point of view of the "
+"Nagios instance that receives them. This is very useful in failover and "
+"distributed monitoring setups. More information on passive host check state "
+"translation can be found <link linkend=\"advancedtopics-"
+"passivestatetranslation\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:612
+msgid ""
+"Passive host checks normally put a host into a HARD state.  This can now be "
+"changed by enabling the <link linkend=\"configuringnagios-configmain-"
+"passive_host_checks_are_soft\">passive_host_checks_are_soft</link> option."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:621
+msgid "Freshness checks"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:625
+msgid ""
+"A new <link linkend=\"configuringnagios-configmain-"
+"additional_freshness_latency\">additional_freshness_latency</link> option "
+"has been added to allow to you specify the number of seconds that should be "
+"added to any host or service freshness threshold that is automatically "
+"calculated by Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:635
+msgid "IPC"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:639
+msgid ""
+"The IPC mechanism that is used to transfer host/service check results back "
+"to the Nagios daemon from (grand)child processes has changed! This should "
+"help to reduce load/latency issues related to processing large numbers of "
+"passive checks in distributed monitoring environments."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:647
+msgid ""
+"Check results are now transferred by writing check results to files in "
+"directory specified by the <link linkend=\"configuringnagios-configmain-"
+"check_result_path\">check_result_path</link> option. Files that are older "
+"that the <link linkend=\"configuringnagios-configmain-"
+"max_check_result_file_age\">max_check_result_file_age</link> option will be "
+"mercilessly deleted without further processing."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:658 ConfiguringNagios/configobject.xml:223
+msgid "Timeperiods"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:662
+msgid ""
+"Timeperiods were overdue for a major overhaul and have finally been extended "
+"to allow for date exceptions, skip dates (every 3 days), etc! This should "
+"help you out when defining notification timeperiods for pager rotations."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:669
+msgid ""
+"More information on the new timeperiod directives can be found <link linkend="
+"\"configuringnagios-objectdefinitions-timeperiod\">here</link> and <link "
+"linkend=\"thebasics-timeperiods\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:677
+msgid "Event Broker"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:681
+msgid "Updated"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:681
+msgid "version"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:685
+msgid "Modified callback for adaptive program status data"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:689
+msgid "Added callback for adaptive contact status data"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:693
+msgid ""
+"Added precheck callbacks for hosts and services to allow modules to cancel/"
+"override internal host/service checks."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:700
+msgid "Web Interface"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:704
+msgid ""
+"Hostgroup and servicegroup summaries now show important/unimportant problem "
+"breakdowns liek the TAC CGI."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:709
+msgid "Minor layout changes to host and service detail views in extinfo CGI."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:714
+msgid ""
+"New check statistics and have been added to the <quote>Performance Info</"
+"quote> screen."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:719
+msgid ""
+"Added <ulink url=\"&url-splunk;\">Splunk</ulink> integration options to "
+"various CGIs. Integration is controlled by the <link linkend="
+"\"configuringnagios-configcgi-enable_splunk_integration"
+"\">enable_splunk_integration</link> and <link linkend=\"configuringnagios-"
+"configcgi-splunk_url\">splunk_url</link> options in the CGI config file."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:728
+msgid ""
+"Added new <link linkend=\"configuringnagios-configcgi-notes_url_target"
+"\">notes_url_target</link> and <link linkend=\"configuringnagios-configcgi-"
+"action_url_target\">action_url_target</link> options to control what frame "
+"notes and action URLs are opened in."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:735
+msgid ""
+"Added new <link linkend=\"configuringnagios-configcgi-lock_author_names"
+"\">lock_author_names</link> option to prevent alteration of author names "
+"when users submit comments, acknowledgements, and scheduled downtime."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:744
+msgid "Debugging Info"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:748
+msgid ""
+"The <varname>DEBUGx</varname> compile options available in the configure "
+"script have been removed."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:753
+msgid ""
+"Debugging information can now be written to a separate debug file, which is "
+"automatically rotated when it reaches a user-defined size. This should make "
+"debugging problems much easier, as you don't need to recompiled Nagios. Full "
+"support for writing debugging information to file is being added during the "
+"alpha development phase, so it may not be complete when you try it."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:762
+msgid ""
+"Variables that affect the debug log in <link linkend=\"configuringnagios-"
+"configmain-debug_file\">debug_file</link>, <link linkend=\"configuringnagios-"
+"configmain-debug_level\">debug_level</link>, <link linkend="
+"\"configuringnagios-configmain-debug_verbosity\">debug_verbosity</link>, and "
+"<link linkend=\"configuringnagios-configmain-max_debug_file_size"
+"\">max_debug_file_size</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: About/whatsnew.xml:772
+msgid "Misc"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:776
+msgid ""
+"<emphasis role=\"bold\">Temp path variable</emphasis> - A new <link linkend="
+"\"configuringnagios-configmain-temp_path\">temp_path</link> variable has "
+"been added to specify a scratch directory that Nagios can use for temporary "
+"scratch space."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:783
+msgid ""
+"<emphasis role=\"bold\">Unique notification and event ID numbers</emphasis> "
+"- A unique ID number is now assigned to each host and service notification. "
+"Another unique ID is now assigned to all host and service state changes as "
+"well.  The unique IDs can be accessed using the following respective macros: "
+"<varname>$HOSTNOTIFICATIONID$</varname>, <varname>$SERVICENOTIFICATIONID$</"
+"varname>, <varname>$HOSTEVENTID$</varname>, <varname>$SERVICEEVENTID$</"
+"varname>, <varname>$LASTHOSTEVENTID$</varname>, <varname>$LASTSERVICEEVENTID"
+"$</varname>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:793
+msgid ""
+"<emphasis role=\"bold\">New macros</emphasis> - A few new macros (other than "
+"those already mentioned elsewhere above) have been added.  They include "
+"<varname>$HOSTGROUPNAMES$</varname>, <varname>$SERVICEGROUPNAMES$</varname>, "
+"<varname>$HOSTACKAUTHORNAME$</varname>, <varname>$HOSTACKAUTHORALIAS$</"
+"varname>, <varname>$SERVICEACKAUTHORNAME$</varname>, and <varname>"
+"$SERVICEACKAUTHORALIAS$</varname>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:802
+msgid ""
+"<emphasis role=\"strong\">Reaper frequency</emphasis> - The old "
+"<varname>service_reaper_frequency</varname> variable has been renamed to "
+"<link linkend=\"configuringnagios-configmain-check_result_reaper_frequency"
+"\">check_result_reaper_frequency</link>, as it is now also used to process "
+"host check results."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:809
+msgid ""
+"<emphasis role=\"bold\">Max reaper time</emphasis> - A new <link linkend="
+"\"configuringnagios-configmain-max_check_result_reaper_time"
+"\">max_check_result_reaper_time</link> variable has been added to limit the "
+"amount of time a single reaper event is allowed to run."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:816
+msgid ""
+"<emphasis role=\"bold\">Fractional intervals</emphasis>- Fractional "
+"notification and check intervals (e.g. <quote>3.5</quote> minutes) are now "
+"supported in host, service, host escalation, and service escalation "
+"definitions."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:823
+msgid ""
+"<emphasis role=\"bold\">Escaped command arguments</emphasis> - You can now "
+"pass bang (!) characters in your command arguments by escaping them with a "
+"backslash (\\). If you need to include backslashes in your command "
+"arguments, they should also be escaped with a backslash."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:831
+msgid ""
+"<emphasis role=\"bold\">Multiline system command output</emphasis> - Nagios "
+"will now read multiple lines out output from system commands it runs "
+"(notification scripts, etc.), up to 4K. This matches the limits on plugin "
+"output mentioned earliar. Output from system commands is not directly "
+"processed by Nagios, but support for it is there nonetheless."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:839
+msgid ""
+"<emphasis role=\"bold\">Better scheduling information</emphasis> - More "
+"detailed information is given when Nagios is executed with the"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para><option>
+#: About/whatsnew.xml:840 GettingStarted/monitoring-windows.xml:433
+#: SecurityAndPerformanceTuning/faststartup.xml:183
+msgid "-s"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:841
+msgid ""
+"command line option. This information can be used to help <link linkend="
+"\"securityandperformancetuning-faststartup\">reduce</link> the time it takes "
+"to start/restart Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:847
+msgid ""
+"<emphasis role=\"bold\">Aggregated status file updates</emphasis> - The old "
+"<varname>aggregate_status_updates</varname> option has been removed. All "
+"status file updates are now aggregated at a minimum interval of 1 second."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para><quote>
+#: About/whatsnew.xml:854
+msgid ""
+"<emphasis role=\"bold\">New performance data file mode</emphasis> - A new "
+"<quote>"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para><quote><option>
+#: About/whatsnew.xml:855
+msgid "p"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:855
+msgid ""
+"</quote> option has been added to the <link linkend=\"configuringnagios-"
+"configmain-host_perfdata_file_mode\">host_perfdata_file_mode</link> and "
+"<link linkend=\"configuringnagios-configmain-service_perfdata_file_mode"
+"\">service_perfdata_file_mode</link> options. This new mode will open the "
+"file in non-blocking read/write mode, which is useful for pipes."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: About/whatsnew.xml:863
+msgid ""
+"<emphasis role=\"bold\">Timezone offset</emphasis> - A new <link linkend="
+"\"configuringnagios-configmain-use_timezone\">use_timezone</link> option has "
+"been added to allow you to run different instances of Nagios in timezones "
+"different from the local zone."
+msgstr ""

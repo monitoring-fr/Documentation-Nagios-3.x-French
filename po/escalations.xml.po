@@ -1,0 +1,471 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: ConfiguringNagios/configobject.xml:35
+#: ConfiguringNagios/configobject.xml:206 AdvancedTopics/escalations.xml:74
+msgid "Contact Groups"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: ConfiguringNagios/configobject.xml:44 AdvancedTopics/escalations.xml:10
+msgid "Notification Escalations"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:15
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-"
+"contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>Nagios "
+"supports optional escalation of contact notifications for hosts and "
+"services. Escalation of host and service notifications is accomplished by "
+"defining <link linkend=\"configuringnagios-objectdefinitions-hostescalation"
+"\">host escalations</link> and <link linkend=\"configuringnagios-"
+"objectdefinitions-serviceescalation\">service escalations</link> in your "
+"<xref linkend=\"configuringnagios-configobject\"/>."
+msgstr ""
+
+# type: Content of: <chapter><section><note><para>
+#: AdvancedTopics/escalations.xml:26
+msgid ""
+"The examples I provide below all make use of service escalation definitions, "
+"but host escalations work the same way. Except, of course, that they're for "
+"hosts instead of services. :-)"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/escalations.xml:33
+msgid "When Are Notifications Escalated?"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:35
+msgid ""
+"Notifications are escalated if and only if one or more escalation "
+"definitions matches the current notification that is being sent out. If a "
+"host or service notification does not have any valid escalation definitions "
+"that applies to it, the contact group(s) specified in either the host group "
+"or service definition will be used for the notification.  Look at the "
+"example below:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:42 AdvancedTopics/escalations.xml:83
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t        host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      3\n"
+"\t\t        last_notification       5\n"
+"\t\t        notification_interval   90\n"
+"\t\t        contact_groups          nt-admins,managers\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:53
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t        host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      6\n"
+"\t\t        last_notification       10\n"
+"\t\t        notification_interval   60\n"
+"\t\t        contact_groups          nt-admins,managers,everyone\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:64
+msgid ""
+"Notice that there are \"holes\" in the notification escalation definitions. "
+"In particular, notifications 1 and 2 are not handled by the escalations, nor "
+"are any notifications beyond 10. For the first and second notification, as "
+"well as all notifications beyond the tenth one, the default contact groups "
+"specified in the service definition are used. For all the examples I'll be "
+"using, I'll be assuming that the default contact groups for the service "
+"definition is called nt-admins."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:76
+msgid ""
+"When defining notification escalations, it is important to keep in mind that "
+"any contact groups that were members of \"lower\" escalations (i.e. those "
+"with lower notification number ranges) should also be included in \"higher\" "
+"escalation definitions. This should be done to ensure that anyone who gets "
+"notified of a problem continues to get notified as the problem is escalated. "
+"Example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:94 AdvancedTopics/escalations.xml:220
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t        host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      6\n"
+"\t\t        last_notification       0\n"
+"\t\t        notification_interval   60\n"
+"\t\t        contact_groups          nt-admins,managers,everyone\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:105
+msgid ""
+"The first (or \"lowest\") escalation level includes both the nt-admins and "
+"managers contact groups. The last (or \"highest\") escalation level includes "
+"the nt-admins, managers, and everyone contact groups. Notice that the nt-"
+"admins contact group is included in both escalation definitions.  This is "
+"done so that they continue to get paged if there are still problems after "
+"the first two service notifications are sent out. The managers contact group "
+"first appears in the \"lower\" escalation definition - they are first "
+"notified when the third problem notification gets sent out. We want the "
+"managers group to continue to be notified if the problem continues past five "
+"notifications, so they are also included in the \"higher\" escalation "
+"definition."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/escalations.xml:119
+msgid "Overlapping Escalation Ranges"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:121
+msgid ""
+"Notification escalation definitions can have notification ranges that "
+"overlap. Take the following example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:124 AdvancedTopics/escalations.xml:170
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t        host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      3\n"
+"\t\t        last_notification       5\n"
+"\t\t        notification_interval   20\n"
+"\t\t        contact_groups          nt-admins,managers\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:135 AdvancedTopics/escalations.xml:181
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t        host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      4\n"
+"\t\t        last_notification       0\n"
+"\t\t        notification_interval   30\n"
+"\t\t        contact_groups          on-call-support\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:146
+msgid "In the example above:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/escalations.xml:150
+msgid ""
+"The nt-admins and managers contact groups get notified on the third "
+"notification"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/escalations.xml:154
+msgid ""
+"All three contact groups get notified on the fourth and fifth notifications"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/escalations.xml:158
+msgid ""
+"Only the on-call-support contact group gets notified on the sixth (or "
+"higher) notification"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/escalations.xml:164
+msgid "Recovery Notifications"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:166
+msgid ""
+"Recovery notifications are slightly different than problem notifications "
+"when it comes to escalations. Take the following example:"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:192
+msgid ""
+"If, after three problem notifications, a recovery notification is sent out "
+"for the service, who gets notified? The recovery is actually the fourth "
+"notification that gets sent out. However, the escalation code is smart "
+"enough to realize that only those people who were notified about the problem "
+"on the third notification should be notified about the recovery.  In this "
+"case, the nt-admins and managers contact groups would be notified of the "
+"recovery."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/escalations.xml:202
+msgid "Notification Intervals"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:204
+msgid ""
+"You can change the frequency at which escalated notifications are sent out "
+"for a particular host or service by using the notification_interval option "
+"of the hostgroup or service escalation definition. Example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:209 AdvancedTopics/escalations.xml:247
+#: AdvancedTopics/escalations.xml:291
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t        host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      3\n"
+"\t\t        last_notification       5\n"
+"\t\t        notification_interval   45\n"
+"\t\t        contact_groups          nt-admins,managers\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:231
+msgid ""
+"In this example we see that the default notification interval for the "
+"services is 240 minutes (this is the value in the service definition).  When "
+"the service notification is escalated on the 3rd, 4th, and 5th "
+"notifications, an interval of 45 minutes will be used between notifications. "
+"On the 6th and subsequent notifications, the notification interval will be "
+"60 minutes, as specified in the second escalation definition."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:239
+msgid ""
+"Since it is possible to have overlapping escalation definitions for a "
+"particular hostgroup or service, and the fact that a host can be a member of "
+"multiple hostgroups, Nagios has to make a decision on what to do as far as "
+"the notification interval is concerned when escalation definitions overlap. "
+"In any case where there are multiple valid escalation definitions for a "
+"particular notification, Nagios will choose the smallest notification "
+"interval. Take the following example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:258
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t        host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      4\n"
+"\t\t        last_notification       0\n"
+"\t\t        notification_interval   60\n"
+"\t\t        contact_groups          nt-admins,managers,everyone\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:269
+msgid ""
+"We see that the two escalation definitions overlap on the 4th and 5th "
+"notifications. For these notifications, Nagios will use a notification "
+"interval of 45 minutes, since it is the smallest interval present in any "
+"valid escalation definitions for those notifications."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:274
+msgid ""
+"One last note about notification intervals deals with intervals of 0. An "
+"interval of 0 means that Nagios should only sent a notification out for the "
+"first valid notification during that escalation definition. All subsequent "
+"notifications for the hostgroup or service will be suppressed.  Take this "
+"example:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:280
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t       host_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      3\n"
+"\t\t        last_notification       5\n"
+"\t\t        notification_interval   45\n"
+"\t\t        contact_groups          nt-admins,managers\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/escalations.xml:302
+#, no-wrap
+msgid ""
+"\n"
+"\t\tdefine serviceescalation{\n"
+"\t\t\thost_name               webserver\n"
+"\t\t        service_description     HTTP\n"
+"\t\t        first_notification      7\n"
+"\t\t        last_notification       0\n"
+"\t\t        notification_interval   30\n"
+"\t\t        contact_groups          nt-admins,managers\n"
+"\t        }\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:313
+msgid ""
+"In the example above, the maximum number of problem notifications that could "
+"be sent out about the service would be four. This is because the "
+"notification interval of 0 in the second escalation definition indicates "
+"that only one notification should be sent out (starting with and including "
+"the 4th notification) and all subsequent notifications should be repressed. "
+"Because of this, the third service escalation definition has no effect "
+"whatsoever, as there will never be more than four notifications."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/escalations.xml:324
+msgid "Time Period Restrictions"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:326
+msgid ""
+"Under normal circumstances, escalations can be used at any time that a "
+"notification could normally be sent out for the host or service. This "
+"\"notification time window\" is determined by the "
+"<varname>notification_period</varname> directive in the <link linkend="
+"\"configuringnagios-objectdefinitions-host\">host</link> or <link linkend="
+"\"configuringnagios-objectdefinitions-service\">service</link> definition."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:332
+msgid ""
+"You can optionally restrict escalations so that they are only used during "
+"specific time periods by using the <varname>escalation_period</varname> "
+"directive in the host or service escalation definition. If you use the "
+"<varname>escalation_period</varname> directive to specify a <xref linkend="
+"\"configuringnagios-objectdefinitions-timeperiod\"/> during which the "
+"escalation can be used, the escalation will only be used during that time. "
+"If you do not specify any <varname>escalation_period</varname> directive, "
+"the escalation can be used at any time within the \"notification time window"
+"\" for the host or service."
+msgstr ""
+
+# type: Content of: <chapter><section><note><para>
+#: AdvancedTopics/escalations.xml:343
+msgid ""
+"Escalated notifications are still subject to the normal time restrictions "
+"imposed by the <varname>notification_period</varname> directive in a host or "
+"service definition, so the timeperiod you specify in an escalation "
+"definition should be a subset of that larger \"notification time window\"."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/escalations.xml:352
+msgid "State Restrictions"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/escalations.xml:354
+msgid ""
+"If you would like to restrict the escalation definition so that it is only "
+"used when the host or service is in a particular state, you can use the "
+"<varname>escalation_options</varname> directive in the host or service "
+"escalation definition. If you do not use the <varname>escalation_options</"
+"varname> directive, the escalation can be used when the host or service is "
+"in any state."
+msgstr ""

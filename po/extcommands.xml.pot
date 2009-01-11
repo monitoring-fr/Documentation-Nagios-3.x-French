@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><title>
+#: About/whatsnew.xml:219 AdvancedTopics/extcommands.xml:10
+msgid "External Commands"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: TheBasics/macros.xml:103 TheBasics/servicechecks.xml:21
+#: TheBasics/activechecks.xml:62 AdvancedTopics/extcommands.xml:74
+#: SecurityAndPerformanceTuning/nagiostats.xml:104
+msgid "and"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:13
+msgid ""
+"Nagios can process commands from external applications (including the CGIs)  "
+"and alter various aspects of its monitoring functions based on the commands "
+"it receives.  External applications can submit commands by writing to the "
+"<link linkend=\"configuringnagios-configmain-command_file\">command file</"
+"link>, which is periodically processed by the Nagios daemon."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/extcommands.xml:20
+msgid "Enabling External Commands"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:25
+msgid ""
+"In order to have Nagios process external commands, make sure you do the "
+"following:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/extcommands.xml:29
+msgid ""
+"Enable external command checking with the <link linkend=\"configuringnagios-"
+"configmain-check_external_commands\">check_external_commands</link> option."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/extcommands.xml:33
+msgid ""
+"Set the frequency of command checks with the <link linkend="
+"\"configuringnagios-configmain-command_check_interval"
+"\">command_check_interval</link> option."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/extcommands.xml:37
+msgid ""
+"Specify the location of the command file with the <link linkend="
+"\"configuringnagios-configmain-command_file\">command_file</link> option."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/extcommands.xml:41
+msgid ""
+"Setup proper permissions on the directory containing the external command "
+"file, as described in the <link linkend=\"gettingstarted-quickstart"
+"\">quickstart guide</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/extcommands.xml:47
+msgid "When Does Nagios Check For External Commands?"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/extcommands.xml:50
+msgid ""
+"At regular intervals specified by the <link linkend=\"configuringnagios-"
+"configmain-command_check_interval\">command_check_interval</link> option in "
+"the main configuration file"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/extcommands.xml:55
+msgid ""
+"Immediately after <link linkend=\"advancedtopics-eventhandlers\">event "
+"handlers</link> are executed. This is in addtion to the regular cycle of "
+"external command checks and is done to provide immediate action if an event "
+"handler submits commands to Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/extcommands.xml:62
+msgid "Using External Commands"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:63
+msgid ""
+"External commands can be used to accomplish a variety of things while Nagios "
+"is running.  Example of what can be done include temporarily disabling "
+"notifications for services and hosts, temporarily disabling service checks, "
+"forcing immediate service checks, adding comments to hosts and services, etc."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/extcommands.xml:68
+msgid "Command Format"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:69
+msgid ""
+"External commands that are written to the <link linkend=\"configuringnagios-"
+"configmain-command_file\">command file</link> have the following format..."
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/extcommands.xml:71
+#, no-wrap
+msgid "[time] command_id;command_arguments"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:72
+msgid "...where time is the time (in"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: AdvancedTopics/extcommands.xml:72
+msgid "time_t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:72
+msgid ""
+"format) that the external application submitted the external command to the "
+"command file. The values for the"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: AdvancedTopics/extcommands.xml:73
+msgid "command_id"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: AdvancedTopics/extcommands.xml:74
+msgid "command_arguments"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:74
+msgid "arguments will depend on what command is being submitted to Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:75
+msgid ""
+"A full listing of external commands that can be used (along with examples of "
+"how to use them)  can be found online at the following URL:"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/extcommands.xml:78
+msgid ""
+"<ulink url=\"&url-nagios;developerinfo/externalcommands/\">&url-nagios;"
+"developerinfo/externalcommands/</ulink>"
+msgstr ""

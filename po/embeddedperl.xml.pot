@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/embeddedperl.xml:10 AdvancedTopics/embeddedperl.xml:97
+msgid "Using The Embedded Perl Interpreter"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:21
+msgid ""
+"Nagios can be compiled with support for an embedded Perl interpreter. This "
+"allows Nagios to execute Perl plugins much more efficiently that it "
+"otherwise would, so it may be of interest to you if you rely heavily on "
+"plugins written in Perl."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:25
+msgid ""
+"Without the embedded Perl interpreter, Nagios executes Perl (and non-Perl) "
+"plugins by forking and executing the plugins as an external command. When "
+"the embedded Perl interpreter is used, Nagios can execute Perl plugins by "
+"simply making a library call."
+msgstr ""
+
+# type: Content of: <chapter><section><tip><para>
+#: AdvancedTopics/embeddedperl.xml:28
+msgid ""
+"The embedded Perl interpreter works with all Perl scripts that Nagios "
+"executes - not just plugins. This documentation discusses the embedded Perl "
+"interpreter in relation to plugins used for host and service checks, but it "
+"applies just the same to other types of Perl scripts you may be using for "
+"other types of commands (e.g. notification scripts, event handler scripts, "
+"etc.)."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:32
+msgid ""
+"Stephen Davies contributed the original embedded Perl interpreter code "
+"several years back.  Stanley Hopcroft has been the primary person helping to "
+"improve the embedded Perl interpreter code quite a bit and has commented on "
+"the advantages/disadvanges of using it. He has also given several helpful "
+"hints on creating Perl plugins that work properly with the embedded "
+"interpreter."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:36
+msgid ""
+"It should be noted that \"ePN\", as used in this documentation, refers to "
+"embedded Perl Nagios, or if you prefer, Nagios compiled with an embedded "
+"Perl interpreter."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/embeddedperl.xml:40
+msgid "Advantages"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:41
+msgid "Some advantages of ePN (embedded Perl Nagios) include:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:44
+msgid ""
+"Nagios will spend much less time running your Perl plugins because it no "
+"longer forks to execute the plugin (each time loading the Perl interpreter). "
+"Instead, it executes your plugin by making a library call."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:49
+msgid ""
+"It greatly reduces the system impact of Perl plugins and/or allows you to "
+"run more checks with Perl plugin than you otherwise would be able to. In "
+"other words, you have less incentive to write plugins in other languages "
+"such as C/C++, or Expect/TCL, that are generally recognised to have "
+"development times at least an order of magnitude slower than Perl (although "
+"they do run about ten times faster also - TCL being an exception)."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:56
+msgid ""
+"If you are not a C programmer, then you can still get a huge amount of "
+"mileage out of Nagios by letting Perl do all the heavy lifting without "
+"having Nagios slow right down.  Note however, that the ePN will not speed up "
+"your plugin (apart from eliminating the interpreter load time). If you want "
+"fast plugins then consider Perl XSUBs (XS), or C after you are sure that "
+"your Perl is tuned and that you have a suitable algorithm (Benchmark.pm is "
+"invaluable for comparing the performance of Perl language elements)."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:64
+msgid "Using the ePN is an excellent opportunity to learn more about Perl."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/embeddedperl.xml:69
+msgid "Disadvantages"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:70
+msgid ""
+"The disadvantages of ePN (embedded Perl Nagios) are much the same as Apache "
+"mod_perl (i.e. Apache with an embedded interpreter) compared to a plain "
+"Apache:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:74
+msgid ""
+"A Perl program that works fine with plain Nagios may not work with the ePN. "
+"You may have to modify your plugins to get them to work."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:78
+msgid ""
+"Perl plugins are harder to debug under an ePN than under a plain Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:81
+msgid ""
+"Your ePN will have a larger SIZE (memory footprint) than a plain Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:84
+msgid ""
+"Some Perl constructs cannot be used or may behave differently than what you "
+"would expect."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:87
+msgid ""
+"You may have to be aware of 'more than one way to do it' and choose a way "
+"that seems less attractive or obvious."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:91
+msgid ""
+"You will need greater Perl knowledge (but nothing very esoteric or stuff "
+"about Perl internals - unless your plugin uses XSUBS)."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:98
+msgid ""
+"If you want to use the embedded Perl interpreter to run your Perl plugins "
+"and scripts, here's what you'll need to do:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:102
+msgid ""
+"Compile Nagios with support for the embedded Perl interpreter (see "
+"instructions below)."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:105
+msgid ""
+"Enable the <link linkend=\"configuringnagios-configmain-enable_embedded_perl"
+"\">enable_embedded_perl</link> option in the main configuration file."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:108
+msgid ""
+"Set the <link linkend=\"configuringnagios-configmain-"
+"use_embedded_perl_implicitly\">use_embedded_perl_implicitly</link> option to "
+"fit your needs. This option determines whether or not the Perl interpreter "
+"should be used by default for individual Perl plugins and scripts."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: AdvancedTopics/embeddedperl.xml:113
+msgid ""
+"Optionally enable or disable certain Perl plugins and scripts from being run "
+"using the embedded Perl interpreter. This can be useful if certain Perl "
+"scripts have problems being running under the Perl interpreter. See "
+"instructions below for more information on doing this."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/embeddedperl.xml:120
+msgid "Compiling Nagios With Embedded Perl"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:121
+msgid ""
+"If you want to use the embedded Perl interpreter, you'll first need to "
+"compile Nagios with support for it.  To do this, simply run the configure "
+"script with the addition of the"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: AdvancedTopics/embeddedperl.xml:122
+msgid "--enable-embedded-perl"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:122
+msgid ""
+"option.  If you want the embedded interpreter to cache internally compiled "
+"scripts, add the"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: AdvancedTopics/embeddedperl.xml:123
+msgid "--with-perlcache"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:124
+msgid "option as well. Example:"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: AdvancedTopics/embeddedperl.xml:125
+#, no-wrap
+msgid ""
+"\n"
+"\t\t<prompt>linux:~ # </prompt><userinput>./configure --enable-embedded-perl --with-perlcache otheroptions...</userinput>\n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:128
+msgid ""
+"Once you've rerun the configure script with the new options, make sure to "
+"recompile Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/embeddedperl.xml:131
+msgid "Plugin-Specific Use of the Perl Interpreter"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:132
+msgid ""
+"Beginning with Nagios 3, you can specify which Perl plugins or scripts "
+"should or should not be run under the embedded Perl interpreter. This is "
+"particularly useful if you have troublesome Perl scripts which do not work "
+"well with the Perl interpreter."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:135
+msgid ""
+"To explicitly tell Nagios whether or not to use the embedded Perl "
+"interpreter for a particular perl script, add one of the following entries "
+"to your Perl script/plugin..."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:137
+msgid ""
+"To tell Nagios to use the Perl interpreter for a particular script, add this "
+"line to the Perl script:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/embeddedperl.xml:138
+#, no-wrap
+msgid "# nagios: +epn"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:139
+msgid ""
+"To tell Nagios to NOT use the embedded Perl interpreter for a particular "
+"script, add this line to the Perl script:"
+msgstr ""
+
+# type: Content of: <chapter><section><programlisting>
+#: AdvancedTopics/embeddedperl.xml:140
+#, no-wrap
+msgid "# nagios: -epn"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:141
+msgid ""
+"Either line must be located within the first 10 lines of a script for Nagios "
+"to detect it."
+msgstr ""
+
+# type: Content of: <chapter><section><tip><para>
+#: AdvancedTopics/embeddedperl.xml:142
+msgid ""
+"If you do not explicitly use the method above to tell Nagios whether an "
+"individual plugin can be run under the Perl interpreter, Nagios will make "
+"will a decision for you. This decision process is controlled by the <link "
+"linkend=\"configuringnagios-configmain-use_embedded_perl_implicitly"
+"\">use_embedded_perl_implicitly</link> variable. If the value is set to 1, "
+"all Perl plugins/scripts (that do not explicitly enable/disable the ePN) "
+"will be run under the Perl interpreter.  If the value is 0, they will NOT be "
+"run under the Perl interpreter."
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: AdvancedTopics/embeddedperl.xml:149 Development/epnplugins.xml:11
+msgid "Developing Plugins For Use With Embedded Perl"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/embeddedperl.xml:150
+msgid ""
+"Information on developing plugins for use with the embedded Perl interpreter "
+"can be found <link linkend=\"development-epnplugins\">here</link>."
+msgstr ""

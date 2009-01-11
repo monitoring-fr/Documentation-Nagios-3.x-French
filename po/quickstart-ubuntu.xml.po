@@ -1,0 +1,708 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:28
+#: GettingStarted/quickstart-ubuntu.xml:26
+msgid "What You'll End Up With"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:31
+#: GettingStarted/quickstart-ubuntu.xml:28
+msgid "If you follow these instructions, here's what you'll end up with:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/quickstart-fedora.xml:37
+#: GettingStarted/quickstart-ubuntu.xml:33
+msgid ""
+"Nagios and the plugins will be installed underneath <filename class="
+"\"directory\">/usr/local/nagios</filename>"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/quickstart-fedora.xml:44
+#: GettingStarted/quickstart-ubuntu.xml:38
+msgid ""
+"Nagios will be configured to monitor a few aspects of your local system (CPU "
+"load, disk usage, etc.)"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:97
+#: GettingStarted/quickstart-opensuse.xml:42
+#: GettingStarted/quickstart-ubuntu.xml:92
+msgid "Create Account Information"
+msgstr "Créez un compte utilisateur"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:99
+#: GettingStarted/quickstart-opensuse.xml:44
+#: GettingStarted/quickstart-ubuntu.xml:94
+msgid "Become the root user."
+msgstr "Passez sur le compte root."
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:105
+#: GettingStarted/quickstart-opensuse.xml:50
+#: GettingStarted/quickstart-ubuntu.xml:100
+msgid "Create a new nagios user account and give it a password."
+msgstr "Créez un utilisateur nagios et attribuez lui un mot de passe."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:107
+#: GettingStarted/quickstart-opensuse.xml:52
+#: GettingStarted/quickstart-ubuntu.xml:102
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/useradd -m nagios</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>passwd nagios</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/useradd -m nagios</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>passwd nagios</userinput>\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:112
+#: GettingStarted/quickstart-opensuse.xml:64
+#: GettingStarted/quickstart-ubuntu.xml:116
+msgid ""
+"Create a new nagcmd group for allowing external commands to be submitted "
+"through the web interface. Add both the nagios user and the apache user to "
+"the group."
+msgstr ""
+"Créez un groupe nagcmd pour autoriser la soumission de commandes externes "
+"depuis l'interface web. Ajoutez à la fois l'utilisateur nagios et "
+"l'utilisateur apache à ce groupe."
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:124
+#: GettingStarted/quickstart-opensuse.xml:76
+#: GettingStarted/quickstart-ubuntu.xml:128
+msgid "Download Nagios and the Plugins"
+msgstr "Téléchargez Nagios et les Plugins."
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:126
+#: GettingStarted/quickstart-opensuse.xml:78
+#: GettingStarted/quickstart-ubuntu.xml:130
+msgid "Create a directory for storing the downloads."
+msgstr "Créez un répertoire pour stocker les téléchargements."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:128
+#: GettingStarted/quickstart-opensuse.xml:80
+#: GettingStarted/quickstart-ubuntu.xml:132
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>mkdir ~/downloads</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>mkdir ~/downloads</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:134
+#: GettingStarted/quickstart-opensuse.xml:85
+#: GettingStarted/quickstart-ubuntu.xml:137
+msgid ""
+"Download the source code tarballs of both Nagios and the Nagios plugins "
+"(visit <ulink url=\"&url-nagios;download/\">&url-nagios;download/</ulink> "
+"for links to the latest versions). At the time of writing, the latest "
+"versions of Nagios and the Nagios plugins were 3.0.3 and 1.4.11, "
+"respectively."
+msgstr ""
+"Téléchargez à la fois l'archive du code source de Nagios et des plugins "
+"Nagios (visitez <ulink url=\"&url-nagios;download/\">&url-nagios;download/</"
+"ulink> pour les liens vers les dernières versions). Au moment de la "
+"rédaction, les dernières versions de Nagios et des plugins Nagios étaient "
+"respectivement  la 3.0.3 et la 1.4.11."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:141
+#: GettingStarted/quickstart-opensuse.xml:91
+#: GettingStarted/quickstart-ubuntu.xml:144
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.0.2.tar.gz</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.0.2.tar.gz</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz</userinput>\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:148
+#: GettingStarted/quickstart-opensuse.xml:98
+#: GettingStarted/quickstart-ubuntu.xml:151
+msgid "Compile and Install Nagios"
+msgstr "Compilez et installez Nagios"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:150
+#: GettingStarted/quickstart-opensuse.xml:100
+#: GettingStarted/quickstart-ubuntu.xml:153 GettingStarted/upgrading.xml:46
+msgid "Extract the Nagios source code tarball."
+msgstr "Extraire le code source de Nagios de l'archive."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:152
+#: GettingStarted/quickstart-opensuse.xml:102
+#: GettingStarted/quickstart-ubuntu.xml:155
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>tar xzf nagios-3.0.2.tar.gz</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>cd nagios-3.0.2</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>tar xzf nagios-3.0.2.tar.gz</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>cd nagios-3.0.2</userinput>\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:158
+#: GettingStarted/quickstart-opensuse.xml:108
+#: GettingStarted/quickstart-ubuntu.xml:161
+msgid ""
+"Run the Nagios configure script, passing the name of the group you created "
+"earlier like so:"
+msgstr ""
+"Exécutez le script de configuration de Nagios en lui passant le nom du "
+"groupe que vous venez juste de créer comme suit:"
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:161
+#: GettingStarted/quickstart-opensuse.xml:110
+#: GettingStarted/quickstart-ubuntu.xml:164
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>./configure --with-command-group=nagcmd</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>./configure --with-command-group=nagcmd</userinput>\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:165
+#: GettingStarted/quickstart-opensuse.xml:114
+#: GettingStarted/quickstart-ubuntu.xml:168 GettingStarted/upgrading.xml:60
+msgid "Compile the Nagios source code."
+msgstr "Compilez le code source de Nagios."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:167
+#: GettingStarted/quickstart-opensuse.xml:115
+#: GettingStarted/quickstart-ubuntu.xml:170
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>make all</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>make all</userinput>\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:171
+#: GettingStarted/quickstart-opensuse.xml:118
+#: GettingStarted/quickstart-ubuntu.xml:174
+msgid ""
+"Install binaries, init script, sample config files and set permissions on "
+"the external command directory."
+msgstr ""
+"Installez les binaires, les scripts de démarrage, les fichiers de "
+"configuration fournis en exemple et réglez les permissions sur le dossier "
+"des commandes externes."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:174
+#: GettingStarted/quickstart-opensuse.xml:121
+#: GettingStarted/quickstart-ubuntu.xml:177
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>make install</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install-init</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install-config</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install-commandmode</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>make install</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install-init</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install-config</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install-commandmode</userinput>\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:186
+#: GettingStarted/quickstart-opensuse.xml:133
+#: GettingStarted/quickstart-ubuntu.xml:189
+msgid "Customize Configuration"
+msgstr "Customisez la configuration"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:188
+#: GettingStarted/quickstart-opensuse.xml:135
+#: GettingStarted/quickstart-ubuntu.xml:191
+msgid ""
+"Sample <link linkend=\"configuringnagios-config\">configuration files</link> "
+"have now been installed in the <filename class=\"directory\">/usr/local/"
+"nagios/etc</filename> directory. These sample files should work fine for "
+"getting started with Nagios. You'll need to make just one change before you "
+"proceed..."
+msgstr ""
+"Les exemples de <link linkend=\"configuringnagios-config\">fichiers de "
+"configuration</link> ont été installé dans le répertoire <filename class="
+"\"directory\">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple "
+"devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à "
+"modifier avant de pouvoir commencer..."
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:193
+#: GettingStarted/quickstart-opensuse.xml:140
+#: GettingStarted/quickstart-ubuntu.xml:196
+msgid ""
+"Edit the <filename>/usr/local/nagios/etc/objects/contacts.cfg</filename> "
+"config file with your favorite editor and change the email address "
+"associated with the nagiosadmin contact definition to the address you'd like "
+"to use for receiving alerts."
+msgstr ""
+"Éditez le fichier de configuration <filename>/usr/local/nagios/etc/objects/"
+"contacts.cfg</filename> avec votre éditeur de texte préféré et changez "
+"l'adresse de courrier électronique associée avec la définition de contact "
+"nagiosadmin par celle que vous souhaitez utiliser pour recevoir les alertes."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:199
+#: GettingStarted/quickstart-opensuse.xml:144
+#: GettingStarted/quickstart-ubuntu.xml:202
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/contacts.cfg</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/contacts.cfg</userinput>\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:205
+#: GettingStarted/quickstart-opensuse.xml:150
+#: GettingStarted/quickstart-ubuntu.xml:208
+msgid "Configure the Web Interface"
+msgstr "Condfiguration de l'interface Web"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:207
+#: GettingStarted/quickstart-ubuntu.xml:210
+msgid ""
+"Install the Nagios web config file in the Apache <filename class=\"directory"
+"\">conf.d</filename> directory."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:210
+#: GettingStarted/quickstart-opensuse.xml:155
+#: GettingStarted/quickstart-ubuntu.xml:213
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>make install-webconf</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>make install-webconf</userinput>\n"
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:218
+#: GettingStarted/quickstart-ubuntu.xml:221
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:222
+#: GettingStarted/quickstart-opensuse.xml:166
+#: GettingStarted/quickstart-ubuntu.xml:225
+msgid "Restart Apache to make the new settings take effect."
+msgstr "Redémmarez Apache pour que les nouveaux réglages prennent effet."
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:230
+#: GettingStarted/quickstart-opensuse.xml:174
+#: GettingStarted/quickstart-ubuntu.xml:233
+msgid "Compile and Install the Nagios Plugins"
+msgstr "Compilation et installation des Plugins Nagios"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:232
+#: GettingStarted/quickstart-opensuse.xml:176
+#: GettingStarted/quickstart-ubuntu.xml:235
+msgid "Extract the Nagios plugins source code tarball."
+msgstr "Extraire le code source des plugins Nagios de l'archive."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:234
+#: GettingStarted/quickstart-opensuse.xml:178
+#: GettingStarted/quickstart-ubuntu.xml:237
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>tar xzf nagios-plugins-1.4.11.tar.gz</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>cd nagios-plugins-1.4.11</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>tar xzf nagios-plugins-1.4.11.tar.gz</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>cd nagios-plugins-1.4.11</userinput>\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:240
+#: GettingStarted/quickstart-opensuse.xml:184
+#: GettingStarted/quickstart-ubuntu.xml:243
+msgid "Compile and install the plugins."
+msgstr "Compilation et installation des plugins."
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:242
+#: GettingStarted/quickstart-opensuse.xml:186
+#: GettingStarted/quickstart-ubuntu.xml:245
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>./configure --with-nagios-user=nagios --with-nagios-group=nagios</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>./configure --with-nagios-user=nagios --with-nagios-group=nagios</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>make install</userinput>\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:250
+#: GettingStarted/quickstart-opensuse.xml:194
+#: GettingStarted/quickstart-ubuntu.xml:253
+msgid "Start Nagios"
+msgstr "Démarrage de Nagios"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:260
+#: GettingStarted/quickstart-opensuse.xml:204
+#: GettingStarted/quickstart-ubuntu.xml:262
+msgid "Verify the sample Nagios configuration files."
+msgstr "Vérifier les exemples de fichiers de configuration de Nagios. "
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:262
+#: GettingStarted/quickstart-ubuntu.xml:264 RunningNagios/verifyconfig.xml:17
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:266
+#: GettingStarted/quickstart-opensuse.xml:210
+#: GettingStarted/quickstart-ubuntu.xml:268
+msgid "If there are no errors, start Nagios."
+msgstr "S'il n'y a pas d'erreur, démarrer Nagios."
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:311
+#: GettingStarted/quickstart-opensuse.xml:218
+#: GettingStarted/quickstart-ubuntu.xml:276
+msgid "Login to the Web Interface"
+msgstr "Connexion à l'interface Web"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:313
+#: GettingStarted/quickstart-opensuse.xml:220
+#: GettingStarted/quickstart-ubuntu.xml:278
+msgid ""
+"You should now be able to access the Nagios web interface at the URL below. "
+"You'll be prompted for the username (nagiosadmin) and password you specified "
+"earlier."
+msgstr ""
+"Vous devriez maintenant pouvoir vous connecter à l'interface web de Nagios à "
+"l'adresse ci-dessous.Il vous sera demandé un nom d'utilisateur (nagiosadmin) "
+"et le mot de passe que vous avez spécifié plus tôt."
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:317
+#: GettingStarted/quickstart-opensuse.xml:224
+#: GettingStarted/quickstart-ubuntu.xml:282
+msgid "http://localhost/nagios/"
+msgstr "http://localhost/nagios/"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:319
+#: GettingStarted/quickstart-opensuse.xml:226
+#: GettingStarted/quickstart-ubuntu.xml:284
+msgid ""
+"Click on the <guimenuitem>Service Detail</guimenuitem> navbar link to see "
+"details of what's being monitored on your local machine. It will take a few "
+"minutes for Nagios to check all the services associated with your machine, "
+"as the checks are spread out over time."
+msgstr ""
+"Cliquez sur le lien <guimenuitem>Service Detail</guimenuitem> de la barre de "
+"navigation pour voir les détails de ce que vous supervisez sur votre machine "
+"locale. Nagios va prendre quelques minutes pour contrôler l'ensemble des "
+"services de votre machine du fait que les contrôles sont répartis dans le "
+"temps."
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-fedora.xml:326
+#: GettingStarted/quickstart-opensuse.xml:233
+#: GettingStarted/quickstart-ubuntu.xml:291
+msgid "Other Modifications"
+msgstr "Autres Modifications"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/quickstart-opensuse.xml:24
+#: GettingStarted/quickstart-ubuntu.xml:50
+msgid "Required Packages"
+msgstr "Paquetages requis"
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-opensuse.xml:59
+#: GettingStarted/quickstart-ubuntu.xml:111
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/groupadd nagios</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/usermod -G nagios nagios</userinput>\n"
+msgstr ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/groupadd nagios</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/usermod -G nagios nagios</userinput>\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-opensuse.xml:128
+#: GettingStarted/quickstart-ubuntu.xml:184
+msgid "Don't start Nagios yet - there's still more that needs to be done..."
+msgstr ""
+"Ne démarrez pas Nagios maintenant - Il y a encore beaucoup à faire avant..."
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-opensuse.xml:158
+#: GettingStarted/quickstart-ubuntu.xml:217
+msgid ""
+"Create a nagiosadmin account for logging into the Nagios web interface. "
+"Remember the password you assign to this account - you'll need it later."
+msgstr ""
+"Créez un compte nagiosadmin pour la connexion à l'interface web de Nagios. "
+"Retenez le mot de passe que vous attribuez à ce compte - vous en aurez "
+"besoin plus tard."
+
+# type: Content of: <chapter><title>
+#: GettingStarted/quickstart-ubuntu.xml:10
+msgid "&name-ubuntu; Quickstart"
+msgstr ""
+
+# type: Content of: <chapter><abstract><para>
+#: GettingStarted/quickstart-ubuntu.xml:15
+msgid ""
+"This guide is intended to provide you with simple instructions on how to "
+"install Nagios from source (code) on &name-ubuntu; and have it monitoring "
+"your local machine inside of 20 minutes. No advanced installation options "
+"are discussed here - just the basics that will work for 95% of users who "
+"want to get started."
+msgstr ""
+
+# type: Content of: <chapter><abstract><para>
+#: GettingStarted/quickstart-ubuntu.xml:21
+msgid ""
+"These instructions were written based on an &name-ubuntu; 6.10 (desktop)  "
+"installation. They should work for an &name-ubuntu; 7.10 install as well."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/quickstart-ubuntu.xml:43
+msgid "The Nagios web interface will be accessible at http://localhost/nagios/"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:52
+msgid ""
+"Make sure you've installed the following packages on your &name-ubuntu; "
+"installation before continuing."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/quickstart-ubuntu.xml:57
+msgid "Apache 2"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/quickstart-ubuntu.xml:61
+msgid "GCC compiler and development libraries"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/quickstart-ubuntu.xml:65
+msgid "GD development libraries"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:69
+msgid ""
+"You can use <command>apt-get</command> to install these packages by running "
+"the following commands:"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:72
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>sudo apt-get install apache2</userinput>\n"
+"<prompt>linux:~ $ </prompt><userinput>sudo apt-get install build-essential</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:77
+msgid "With &name-ubuntu; 6.10, install the gd2 library with this command:"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:79
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>sudo apt-get install libgd2-dev</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:83
+msgid ""
+"With &name-ubuntu; 7.10, the gd2 library name has changed, so you'll need to "
+"use the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:86
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>sudo apt-get install libgd2-xpm-dev</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:96
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>sudo -s</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:107
+msgid ""
+"On &name-ubuntu; server edition (6.01 and possible newer versions), you will "
+"need to also add a nagios group (it's not created by default). You should be "
+"able to skip this step on desktop editions of &name-ubuntu;."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:120
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/groupadd nagcmd</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/usermod -G nagcmd nagios</userinput>\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/sbin/usermod -G nagcmd www-data</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:227
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/etc/init.d/apache2 reload</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:255
+msgid "Configure Nagios to automatically start when the system boots."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:258
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:270
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/etc/init.d/nagios start</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:293
+msgid ""
+"If you want to receive email notifications for Nagios alerts, you need to "
+"install the mailx (Postfix) package."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:296
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>sudo apt-get install mailx</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:300
+msgid ""
+"You'll have to edit the Nagios email notification commands found in "
+"<filename>/usr/local/nagios/etc/objects/commands.cfg</filename> and change "
+"any <command>/bin/mail</command> references to <command>/usr/bin/mail</"
+"command>. Once you do that you'll need to restart Nagios to make the "
+"configuration changes live."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-ubuntu.xml:305
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>sudo /etc/init.d/nagios restart</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-ubuntu.xml:309
+msgid ""
+"Configuring email notifications is outside the scope of this documentation. "
+"Refer to your system documentation, search the web, or look to the <ulink "
+"url=\"&url-nagios-community;\">NagiosCommunity.org wiki</ulink> for specific "
+"instructions on configuring your &name-ubuntu; system to send email messages "
+"to external addresses."
+msgstr ""

@@ -1,0 +1,338 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:150
+#: GettingStarted/quickstart-opensuse.xml:100
+#: GettingStarted/quickstart-ubuntu.xml:153 GettingStarted/upgrading.xml:46
+msgid "Extract the Nagios source code tarball."
+msgstr "Extraire le code source de Nagios de l'archive."
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/quickstart-fedora.xml:165
+#: GettingStarted/quickstart-opensuse.xml:114
+#: GettingStarted/quickstart-ubuntu.xml:168 GettingStarted/upgrading.xml:60
+msgid "Compile the Nagios source code."
+msgstr "Compilez le code source de Nagios."
+
+# type: Content of: <chapter><title>
+#: GettingStarted/upgrading.xml:10
+msgid "Upgrading Nagios"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/upgrading.xml:12
+msgid "Upgrading From Previous Nagios 3.x Releases"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:14
+msgid ""
+"As newer alpha, beta, and stable releases of Nagios 3.x are released, you "
+"should strongly consider upgrading as soon as possible. Newer releases "
+"usually contain critical bug fixes, so its important to stay up to date. "
+"Assuming you've already installed Nagios from source code as described in "
+"the <link linkend=\"gettingstarted-quickstart\">quickstart guide</link>, you "
+"can install newer versions of Nagios 3.x easily. You don't even need root "
+"access to do it, as everything that needed to be done as root was done "
+"during the initial install. Here's the upgrade process..."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:25
+msgid ""
+"Make sure you have a good backup of your existing Nagios installation and "
+"configuration files. If anything goes wrong or doesn't work, this will allow "
+"you to rollback to your old version."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:30
+msgid ""
+"Become the nagios user. Debian/&name-ubuntu; users should use "
+"<userinput>sudo -s nagios</userinput>."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/upgrading.xml:33
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>su -l nagios</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:37
+msgid ""
+"Download the source code tarball of the latest version of Nagios (visit "
+"<ulink url=\"&url-nagios;download/\">&url-nagios;download/</ulink> for the "
+"link to the latest version)."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/upgrading.xml:42
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.x.tar.gz</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/upgrading.xml:48
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>tar xzf nagios-3.x.tar.gz</userinput>\n"
+"<prompt>linux:~ $ </prompt><userinput>cd nagios-3.x</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:53
+msgid ""
+"Run the Nagios configure script, passing the name of the group used to "
+"control external command file permissions like so:"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/upgrading.xml:56
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>./configure --with-command-group=nagcmd</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/upgrading.xml:62
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>make all</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:66
+msgid ""
+"Install updated binaries, documentation, and web web interface.  Your "
+"existing configuration files will not be overwritten by this step."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/upgrading.xml:70
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>make install</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:74
+msgid "Verify your configuration files and restart Nagios."
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/upgrading.xml:76
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ $ </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>\n"
+"<prompt>linux:~ $ </prompt><userinput>/sbin/service nagios restart</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:81
+msgid "That's it - you're done!"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/upgrading.xml:85
+msgid "Upgrading From Nagios 2.x"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:87
+msgid ""
+"It shouldn't be too difficult to upgrade from Nagios 2.x to Nagios 3. The "
+"upgrade is essentially the same as what is described above for upgrading to "
+"newer 3.x releases. You will, however, have to change your configuration "
+"files a bit so they work with Nagios 3:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:95
+msgid ""
+"The old <varname>service_reaper_frequency</varname> variable in the main "
+"config file has been renamed to <link linkend=\"configuringnagios-configmain-"
+"check_result_reaper_frequency\"><varname>check_result_reaper_frequency</"
+"varname></link>."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:102
+msgid ""
+"The old <varname>$NOTIFICATIONNUMBER$</varname> macro has been deprecated in "
+"favor of new <link linkend=\"thebasics-macrolist-hostnotificationnumber\">"
+"$HOSTNOTIFICATIONNUMBER$</link> and <link linkend=\"thebasics-macrolist-"
+"servicenotificationnumber\">$SERVICENOTIFICATIONNUMBER$</link> macros."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:112
+msgid ""
+"The old <varname>parallelize</varname> directive in service definitions is "
+"now deprecated and no longer used, as all service checks are run in parallel."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:119
+msgid ""
+"The old <varname>aggregate_status_updates</varname> option has been removed. "
+"All status file updates are now aggregated at a minimum interval of 1 second."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:126
+msgid ""
+"Extended host and extended service definitions have been deprecated. They "
+"are still read and processed by Nagios, but it is recommended that you move "
+"the directives found in these definitions to your host and service "
+"definitions, respectively."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:134
+msgid ""
+"The old <varname>downtime_file</varname> file variable in the main config "
+"file is no longer supported, as scheduled downtime entries are now saved in "
+"the <link linkend=\"configuringnagios-configmain-state_retention_file"
+"\">retention file</link>.  To preserve existing downtime entries, stop "
+"Nagios 2.x and append the contents of your old downtime file to the "
+"retention file."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:144
+msgid ""
+"The old <varname>comment_file</varname> file variable in the main config "
+"file is no longer supported, as comments are now saved in the <link linkend="
+"\"configuringnagios-configmain-state_retention_file\">retention file</"
+"link>.  To preserve existing comments, stop Nagios 2.x and append the "
+"contents of your old comment file to the retention file."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:154
+msgid ""
+"Also make sure to read the <quote><link linkend=\"about-whatsnew\">What's "
+"New</link></quote> section of the documentation. It describes all the "
+"changes that were made to the Nagios 3 code since the latest stable release "
+"of Nagios 2.x.  Quite a bit has changed, so make sure you read it over."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/upgrading.xml:162
+msgid "Upgrading From an RPM Installation"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: GettingStarted/upgrading.xml:164
+msgid ""
+"If you currently have an RPM- or Debian/&name-ubuntu; APT package-based "
+"installation of Nagios and you would like to transition to installing Nagios "
+"from the official source code distribution, here's the basic process you "
+"should follow:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/upgrading.xml:172
+msgid "Backup your existing Nagios installation"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:176
+msgid "Configuration files"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:180
+msgid "Main config file (usually <filename>nagios.cfg</filename>)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:185
+msgid "Resource config file (usually <filename>resource.cfg</filename>)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:190
+msgid "CGI config file (usually <filename>cgi.cfg</filename>)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:195
+msgid "All your object definition files"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:201
+msgid "Retention file (usually <filename>retention.dat</filename>)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:206
+msgid "Current Nagios log file (usually <filename>nagios.log</filename>)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: GettingStarted/upgrading.xml:211
+msgid "Archived Nagios log files"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/upgrading.xml:217
+msgid "Uninstall the original RPM or APT package"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/upgrading.xml:221
+msgid ""
+"Install Nagios from source by following the <link linkend=\"gettingstarted-"
+"quickstart\">quickstart guide</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/upgrading.xml:227
+msgid ""
+"Restore your original Nagios configuration files, retention file, and log "
+"files"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: GettingStarted/upgrading.xml:232
+msgid ""
+"<link linkend=\"runningnagios-verifyconfig\">Verify</link> your "
+"configuration and <link linkend=\"runningnagios-startstop\">start</link> "
+"Nagios"
+msgstr ""
+
+# type: Content of: <chapter><section><note><para>
+#: GettingStarted/upgrading.xml:237
+msgid ""
+"Different RPMs or APT packages may install Nagios in different ways and in "
+"different locations. Make sure you've backed up all your critical Nagios "
+"files before removing the original RPM or APT package, so you can revert "
+"back if you encounter problems."
+msgstr ""

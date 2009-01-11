@@ -1,0 +1,420 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:11
+msgid "Graphing Performance Info With MRTG"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:16
+msgid ""
+"The <xref linkend=\"securityandperformancetuning-nagiostats\" />nagiostats "
+"utility allows you to graph various Nagios performance statistics over time "
+"using <ulink url=\"http://oss.oetiker.ch/mrtg/\">MRTG</ulink>. This is "
+"important because it can help you:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:24
+msgid "Ensure Nagios is operating efficiently"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:28
+msgid "Locate problem areas in the monitoring process"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:32
+msgid "Observe the performance impacts of changes in your Nagios configuration"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:39
+msgid "Sample MRTG Configuration"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:41
+msgid ""
+"Sample MRTG configuration file snippets for graphing various Nagios "
+"performance statistics can be found in the <filename>mrtg.cfg</filename> "
+"file located in the <filename class=\"directory\">sample-config/</filename> "
+"subdirectory of the Nagios distribution. You can create graphs of other "
+"performance information if you'd like - the samples just provide you with a "
+"good starting point."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:48
+msgid ""
+"Once you copy these sample entries into your MRTG config file (<filename>/"
+"etc/mrtg/mrtg.cfg</filename>) you should have some new graphs the next time "
+"MRTG runs."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:54
+msgid "Example Graphs"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:56
+msgid ""
+"I'll describe what a few of the sample MRTG graphs mean and what they can be "
+"used for..."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:63
+msgid ""
+"Active Host Checks - This graph shows how may active host checks (regularly "
+"scheduled and on-demand) have occurred over time. Useful for understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:67
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:258
+msgid "<xref linkend=\"thebasics-hostchecks\" />Host checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:72
+msgid ""
+"<xref linkend=\"advancedtopics-dependencychecks\" />Predictive host "
+"dependency checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:78
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:106
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:123
+msgid "<xref linkend=\"advancedtopics-cachedchecks\" />Cached checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:83
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"activehostchecks.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:91
+msgid ""
+"Active Service Checks - This graph shows how may active service checks "
+"(regularly scheduled and on-demand) have occurred over time. Useful for "
+"understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:95
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:199
+msgid "<xref linkend=\"thebasics-servicechecks\" />Service checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:100
+msgid ""
+"<xref linkend=\"advancedtopics-dependencychecks\" />Predictive service "
+"dependency checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:111
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"activeservicechecks.png\" format=\"PNG\"/> </imageobject> </"
+"inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:119
+msgid ""
+"Cached Host and Service Checks - This graph shows how may cached host and "
+"service checks have occurred over time. Useful for understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:128
+msgid ""
+"<xref linkend=\"advancedtopics-dependencychecks\" />Predictive host and "
+"service dependency checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:134
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"cachedchecks.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:142
+msgid ""
+"Passive Host and Service Checks - This graph shows how may passive host and "
+"service checks have occurred over time.  Useful for understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:146
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:182
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:320
+msgid "<xref linkend=\"thebasics-passivechecks\" />Passive checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:151
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"passivechecks.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:159
+msgid ""
+"Hosts/Services Actively Checked - This graph shows how many (of the total "
+"number of) hosts and services were last checked actively over time. Useful "
+"for understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:164
+msgid "<xref linkend=\"thebasics-activechecks\" />Active checks"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:169
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"activelychecked.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:177
+msgid ""
+"Hosts/Services Passively Checked - This graph shows how many (of the total "
+"number of) hosts and services were last checked passively over time. Useful "
+"for understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:187
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"passivelychecked.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:195
+msgid ""
+"Average Service Check Latency and Execution Time - This graph shows average "
+"service check latency and execution times over time. Useful for "
+"understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:204
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:263
+msgid ""
+"<xref linkend=\"securityandperformancetuning-tuning\" />Performance tuning"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:208
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:267
+msgid ""
+"Consistently high latencies can be an indication that one of more of the "
+"following variables need tweaking:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:212
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:271
+msgid ""
+"<link linkend=\"configuringnagios-configmain-max_concurrent_checks"
+"\">max_concurrent_checks</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:217
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:276
+msgid ""
+"<link linkend=\"configuringnagios-configmain-check_result_reaper_frequency"
+"\">check_result_reaper_frequency</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:222
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:281
+msgid ""
+"<link linkend=\"configuringnagios-configmain-max_check_result_reaper_time"
+"\">max_check_result_reaper_time</link>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:227
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"serviceperfstats.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:235
+msgid ""
+"Average Service State Change - This graph shows the average percent state "
+"change (a measure of volatility) for services over time, broken down by "
+"services that were last checked either actively or passively. Useful for "
+"understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:241
+msgid "<xref linkend=\"advancedtopics-flapping\" />Flap detection"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:246
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"servicestatechange.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:254
+msgid ""
+"Average Host Check Latency and Execution Time - This graph shows average "
+"host check latency and execution times over time. Useful for understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:286
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"hostperfstats.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:294
+msgid ""
+"Average Host State Change - This graph shows the average percent state "
+"change (a measure of volatility) for hosts over time, broken down by hosts "
+"that were last checked either actively or passively. Useful for "
+"understanding:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:300
+msgid "<xref linkend=\"advancedtopics-flapping\" />Flap detection&gt;"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:305
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"hoststatechange.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:313
+msgid ""
+"External Commands - This graph shows how may external commands have been "
+"processed by the Nagios daemon over time.  Unless you're processing a large "
+"number of external commands (as in the case with distributed monitoring "
+"setups), this graph may appear mostly empty. Monitoring external commands "
+"can be useful for understanding the impacts of:"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:325
+msgid "<xref linkend=\"advancedtopics-distributed\" />Distributed monitoring"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><itemizedlist><listitem><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:331
+msgid ""
+"<xref linkend=\"advancedtopics-redundancy\" />Redundant/failover monitoring"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:337
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"externalcommands.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:345
+msgid ""
+"External Command Buffers - This graph shows how may external command buffer "
+"slots are in use over time. If the number of used buffers is near the number "
+"of available buffers on a regular basis, it is likely you need to increase "
+"the available <link linkend=\"configuringnagios-configmain-"
+"external_command_buffer_slots\">external command buffer slots</link>. Each "
+"buffer slot can hold one external command. Buffers are used for temporarily "
+"holding external commands from the time they are read from the <link linkend="
+"\"configuringnagios-configmain-command_file\">external command file</link> "
+"to the time they are processed by the Nagios daemon."
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:358
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/mrtg-"
+"commandbuffers.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""

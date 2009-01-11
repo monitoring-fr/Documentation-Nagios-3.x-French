@@ -1,0 +1,851 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><note><para>
+#: ConfiguringNagios/configmain.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:26
+#: ConfiguringNagios/configcgi.xml:12
+msgid ""
+"When creating and/or editing configuration files, keep the following in mind:"
+msgstr ""
+
+# type: Content of: <chapter><note><itemizedlist><listitem><para>
+#: ConfiguringNagios/configmain.xml:23 ConfiguringNagios/configcgi.xml:19
+msgid ""
+"Variables names must begin at the start of the line - no white space is "
+"allowed before the name"
+msgstr ""
+
+# type: Content of: <chapter><note><itemizedlist><listitem><para>
+#: ConfiguringNagios/configmain.xml:29 ConfiguringNagios/configcgi.xml:23
+msgid "Variable names are case-sensitive"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: ConfiguringNagios/configmain.xml:46 ConfiguringNagios/configcgi.xml:34
+msgid "Config File Location"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: ConfiguringNagios/configmain.xml:54 ConfiguringNagios/configcgi.xml:43
+msgid "Configuration File Variables"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: ConfiguringNagios/configmain.xml:56 ConfiguringNagios/configcgi.xml:44
+msgid ""
+"Below you will find descriptions of each main Nagios configuration file "
+"option..."
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configmain.xml:127 ConfiguringNagios/configmain.xml:163
+#: ConfiguringNagios/configmain.xml:195 ConfiguringNagios/configmain.xml:226
+#: ConfiguringNagios/configmain.xml:264 ConfiguringNagios/configmain.xml:292
+#: ConfiguringNagios/configmain.xml:322 ConfiguringNagios/configmain.xml:353
+#: ConfiguringNagios/configmain.xml:381 ConfiguringNagios/configmain.xml:410
+#: ConfiguringNagios/configmain.xml:439 ConfiguringNagios/configmain.xml:490
+#: ConfiguringNagios/configmain.xml:547 ConfiguringNagios/configmain.xml:600
+#: ConfiguringNagios/configmain.xml:658 ConfiguringNagios/configmain.xml:710
+#: ConfiguringNagios/configmain.xml:761 ConfiguringNagios/configmain.xml:811
+#: ConfiguringNagios/configmain.xml:839 ConfiguringNagios/configmain.xml:880
+#: ConfiguringNagios/configmain.xml:921 ConfiguringNagios/configmain.xml:954
+#: ConfiguringNagios/configmain.xml:994 ConfiguringNagios/configmain.xml:1023
+#: ConfiguringNagios/configmain.xml:1065 ConfiguringNagios/configmain.xml:1097
+#: ConfiguringNagios/configmain.xml:1130 ConfiguringNagios/configmain.xml:1176
+#: ConfiguringNagios/configmain.xml:1217 ConfiguringNagios/configmain.xml:1254
+#: ConfiguringNagios/configmain.xml:1294 ConfiguringNagios/configmain.xml:1333
+#: ConfiguringNagios/configmain.xml:1370 ConfiguringNagios/configmain.xml:1409
+#: ConfiguringNagios/configmain.xml:1451 ConfiguringNagios/configmain.xml:1490
+#: ConfiguringNagios/configmain.xml:1530 ConfiguringNagios/configmain.xml:1571
+#: ConfiguringNagios/configmain.xml:1615 ConfiguringNagios/configmain.xml:1658
+#: ConfiguringNagios/configmain.xml:1693 ConfiguringNagios/configmain.xml:1728
+#: ConfiguringNagios/configmain.xml:1757 ConfiguringNagios/configmain.xml:1815
+#: ConfiguringNagios/configmain.xml:1849 ConfiguringNagios/configmain.xml:1899
+#: ConfiguringNagios/configmain.xml:1934 ConfiguringNagios/configmain.xml:1963
+#: ConfiguringNagios/configmain.xml:1997 ConfiguringNagios/configmain.xml:2034
+#: ConfiguringNagios/configmain.xml:2066 ConfiguringNagios/configmain.xml:2122
+#: ConfiguringNagios/configmain.xml:2156 ConfiguringNagios/configmain.xml:2190
+#: ConfiguringNagios/configmain.xml:2225 ConfiguringNagios/configmain.xml:2258
+#: ConfiguringNagios/configmain.xml:2293 ConfiguringNagios/configmain.xml:2335
+#: ConfiguringNagios/configmain.xml:2376 ConfiguringNagios/configmain.xml:2416
+#: ConfiguringNagios/configmain.xml:2458 ConfiguringNagios/configmain.xml:2500
+#: ConfiguringNagios/configmain.xml:2534 ConfiguringNagios/configmain.xml:2568
+#: ConfiguringNagios/configmain.xml:2609 ConfiguringNagios/configmain.xml:2650
+#: ConfiguringNagios/configmain.xml:2692 ConfiguringNagios/configmain.xml:2735
+#: ConfiguringNagios/configmain.xml:2789 ConfiguringNagios/configmain.xml:2818
+#: ConfiguringNagios/configmain.xml:2847 ConfiguringNagios/configmain.xml:2876
+#: ConfiguringNagios/configmain.xml:2905 ConfiguringNagios/configmain.xml:2947
+#: ConfiguringNagios/configmain.xml:2984 ConfiguringNagios/configmain.xml:3021
+#: ConfiguringNagios/configmain.xml:3058 ConfiguringNagios/configmain.xml:3094
+#: ConfiguringNagios/configmain.xml:3123 ConfiguringNagios/configmain.xml:3152
+#: ConfiguringNagios/configmain.xml:3182 ConfiguringNagios/configmain.xml:3224
+#: ConfiguringNagios/configmain.xml:3264 ConfiguringNagios/configmain.xml:3306
+#: ConfiguringNagios/configmain.xml:3346 ConfiguringNagios/configmain.xml:3384
+#: ConfiguringNagios/configmain.xml:3418 ConfiguringNagios/configmain.xml:3452
+#: ConfiguringNagios/configmain.xml:3485 ConfiguringNagios/configmain.xml:3517
+#: ConfiguringNagios/configmain.xml:3549 ConfiguringNagios/configmain.xml:3581
+#: ConfiguringNagios/configmain.xml:3624 ConfiguringNagios/configmain.xml:3667
+#: ConfiguringNagios/configmain.xml:3697 ConfiguringNagios/configmain.xml:3727
+#: ConfiguringNagios/configmain.xml:3760 ConfiguringNagios/configmain.xml:3792
+#: ConfiguringNagios/configmain.xml:3841 ConfiguringNagios/configmain.xml:3890
+#: ConfiguringNagios/configmain.xml:3931 ConfiguringNagios/configmain.xml:3962
+#: ConfiguringNagios/configmain.xml:4003 ConfiguringNagios/configmain.xml:4034
+#: ConfiguringNagios/configmain.xml:4064 ConfiguringNagios/configmain.xml:4094
+#: ConfiguringNagios/configmain.xml:4125 ConfiguringNagios/configmain.xml:4203
+#: ConfiguringNagios/configmain.xml:4249 ConfiguringNagios/configmain.xml:4280
+#: ConfiguringNagios/configmain.xml:4323 ConfiguringNagios/configmain.xml:4363
+#: ConfiguringNagios/configmain.xml:4408 ConfiguringNagios/configmain.xml:4437
+#: ConfiguringNagios/configmain.xml:4467 ConfiguringNagios/configmain.xml:4512
+#: ConfiguringNagios/configmain.xml:4563 ConfiguringNagios/configmain.xml:4594
+#: ConfiguringNagios/configmain.xml:4660 ConfiguringNagios/configmain.xml:4701
+#: ConfiguringNagios/configcgi.xml:55 ConfiguringNagios/configcgi.xml:87
+#: ConfiguringNagios/configcgi.xml:119 ConfiguringNagios/configcgi.xml:151
+#: ConfiguringNagios/configcgi.xml:197 ConfiguringNagios/configcgi.xml:235
+#: ConfiguringNagios/configcgi.xml:271 ConfiguringNagios/configcgi.xml:307
+#: ConfiguringNagios/configcgi.xml:342 ConfiguringNagios/configcgi.xml:379
+#: ConfiguringNagios/configcgi.xml:417 ConfiguringNagios/configcgi.xml:454
+#: ConfiguringNagios/configcgi.xml:491 ConfiguringNagios/configcgi.xml:531
+#: ConfiguringNagios/configcgi.xml:571 ConfiguringNagios/configcgi.xml:675
+#: ConfiguringNagios/configcgi.xml:708 ConfiguringNagios/configcgi.xml:787
+#: ConfiguringNagios/configcgi.xml:867 ConfiguringNagios/configcgi.xml:900
+#: ConfiguringNagios/configcgi.xml:932 ConfiguringNagios/configcgi.xml:964
+#: ConfiguringNagios/configcgi.xml:996 ConfiguringNagios/configcgi.xml:1030
+msgid "Format:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configmain.xml:133 ConfiguringNagios/configmain.xml:169
+#: ConfiguringNagios/configmain.xml:201 ConfiguringNagios/configmain.xml:232
+#: ConfiguringNagios/configmain.xml:270 ConfiguringNagios/configmain.xml:298
+#: ConfiguringNagios/configmain.xml:328 ConfiguringNagios/configmain.xml:359
+#: ConfiguringNagios/configmain.xml:387 ConfiguringNagios/configmain.xml:416
+#: ConfiguringNagios/configmain.xml:445 ConfiguringNagios/configmain.xml:496
+#: ConfiguringNagios/configmain.xml:553 ConfiguringNagios/configmain.xml:606
+#: ConfiguringNagios/configmain.xml:664 ConfiguringNagios/configmain.xml:716
+#: ConfiguringNagios/configmain.xml:767 ConfiguringNagios/configmain.xml:817
+#: ConfiguringNagios/configmain.xml:845 ConfiguringNagios/configmain.xml:886
+#: ConfiguringNagios/configmain.xml:927 ConfiguringNagios/configmain.xml:960
+#: ConfiguringNagios/configmain.xml:1000 ConfiguringNagios/configmain.xml:1029
+#: ConfiguringNagios/configmain.xml:1071 ConfiguringNagios/configmain.xml:1103
+#: ConfiguringNagios/configmain.xml:1136 ConfiguringNagios/configmain.xml:1182
+#: ConfiguringNagios/configmain.xml:1224 ConfiguringNagios/configmain.xml:1261
+#: ConfiguringNagios/configmain.xml:1301 ConfiguringNagios/configmain.xml:1339
+#: ConfiguringNagios/configmain.xml:1376 ConfiguringNagios/configmain.xml:1415
+#: ConfiguringNagios/configmain.xml:1457 ConfiguringNagios/configmain.xml:1496
+#: ConfiguringNagios/configmain.xml:1536 ConfiguringNagios/configmain.xml:1577
+#: ConfiguringNagios/configmain.xml:1621 ConfiguringNagios/configmain.xml:1664
+#: ConfiguringNagios/configmain.xml:1699 ConfiguringNagios/configmain.xml:1734
+#: ConfiguringNagios/configmain.xml:1763 ConfiguringNagios/configmain.xml:1821
+#: ConfiguringNagios/configmain.xml:1855 ConfiguringNagios/configmain.xml:1905
+#: ConfiguringNagios/configmain.xml:1940 ConfiguringNagios/configmain.xml:1969
+#: ConfiguringNagios/configmain.xml:2003 ConfiguringNagios/configmain.xml:2040
+#: ConfiguringNagios/configmain.xml:2072 ConfiguringNagios/configmain.xml:2128
+#: ConfiguringNagios/configmain.xml:2162 ConfiguringNagios/configmain.xml:2196
+#: ConfiguringNagios/configmain.xml:2231 ConfiguringNagios/configmain.xml:2264
+#: ConfiguringNagios/configmain.xml:2299 ConfiguringNagios/configmain.xml:2341
+#: ConfiguringNagios/configmain.xml:2382 ConfiguringNagios/configmain.xml:2422
+#: ConfiguringNagios/configmain.xml:2464 ConfiguringNagios/configmain.xml:2506
+#: ConfiguringNagios/configmain.xml:2540 ConfiguringNagios/configmain.xml:2574
+#: ConfiguringNagios/configmain.xml:2615 ConfiguringNagios/configmain.xml:2656
+#: ConfiguringNagios/configmain.xml:2698 ConfiguringNagios/configmain.xml:2741
+#: ConfiguringNagios/configmain.xml:2795 ConfiguringNagios/configmain.xml:2824
+#: ConfiguringNagios/configmain.xml:2853 ConfiguringNagios/configmain.xml:2882
+#: ConfiguringNagios/configmain.xml:2911 ConfiguringNagios/configmain.xml:2953
+#: ConfiguringNagios/configmain.xml:2990 ConfiguringNagios/configmain.xml:3027
+#: ConfiguringNagios/configmain.xml:3064 ConfiguringNagios/configmain.xml:3100
+#: ConfiguringNagios/configmain.xml:3129 ConfiguringNagios/configmain.xml:3158
+#: ConfiguringNagios/configmain.xml:3188 ConfiguringNagios/configmain.xml:3230
+#: ConfiguringNagios/configmain.xml:3270 ConfiguringNagios/configmain.xml:3312
+#: ConfiguringNagios/configmain.xml:3352 ConfiguringNagios/configmain.xml:3390
+#: ConfiguringNagios/configmain.xml:3424 ConfiguringNagios/configmain.xml:3458
+#: ConfiguringNagios/configmain.xml:3491 ConfiguringNagios/configmain.xml:3523
+#: ConfiguringNagios/configmain.xml:3555 ConfiguringNagios/configmain.xml:3587
+#: ConfiguringNagios/configmain.xml:3630 ConfiguringNagios/configmain.xml:3673
+#: ConfiguringNagios/configmain.xml:3703 ConfiguringNagios/configmain.xml:3733
+#: ConfiguringNagios/configmain.xml:3766 ConfiguringNagios/configmain.xml:3798
+#: ConfiguringNagios/configmain.xml:3847 ConfiguringNagios/configmain.xml:3896
+#: ConfiguringNagios/configmain.xml:3937 ConfiguringNagios/configmain.xml:3968
+#: ConfiguringNagios/configmain.xml:4009 ConfiguringNagios/configmain.xml:4040
+#: ConfiguringNagios/configmain.xml:4070 ConfiguringNagios/configmain.xml:4100
+#: ConfiguringNagios/configmain.xml:4131 ConfiguringNagios/configmain.xml:4209
+#: ConfiguringNagios/configmain.xml:4255 ConfiguringNagios/configmain.xml:4286
+#: ConfiguringNagios/configmain.xml:4329 ConfiguringNagios/configmain.xml:4369
+#: ConfiguringNagios/configmain.xml:4414 ConfiguringNagios/configmain.xml:4443
+#: ConfiguringNagios/configmain.xml:4473 ConfiguringNagios/configmain.xml:4518
+#: ConfiguringNagios/configmain.xml:4569 ConfiguringNagios/configmain.xml:4600
+#: ConfiguringNagios/configmain.xml:4666 ConfiguringNagios/configmain.xml:4707
+#: ConfiguringNagios/configcgi.xml:63 ConfiguringNagios/configcgi.xml:95
+#: ConfiguringNagios/configcgi.xml:127 ConfiguringNagios/configcgi.xml:159
+#: ConfiguringNagios/configcgi.xml:205 ConfiguringNagios/configcgi.xml:243
+#: ConfiguringNagios/configcgi.xml:279 ConfiguringNagios/configcgi.xml:315
+#: ConfiguringNagios/configcgi.xml:350 ConfiguringNagios/configcgi.xml:387
+#: ConfiguringNagios/configcgi.xml:425 ConfiguringNagios/configcgi.xml:462
+#: ConfiguringNagios/configcgi.xml:499 ConfiguringNagios/configcgi.xml:539
+#: ConfiguringNagios/configcgi.xml:579 ConfiguringNagios/configcgi.xml:683
+#: ConfiguringNagios/configcgi.xml:716 ConfiguringNagios/configcgi.xml:795
+#: ConfiguringNagios/configcgi.xml:875 ConfiguringNagios/configcgi.xml:908
+#: ConfiguringNagios/configcgi.xml:940 ConfiguringNagios/configcgi.xml:972
+#: ConfiguringNagios/configcgi.xml:1004 ConfiguringNagios/configcgi.xml:1038
+msgid "Example:"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: ConfiguringNagios/configcgi.xml:10
+msgid "CGI Configuration File Options"
+msgstr ""
+
+# type: Content of: <chapter><note><itemizedlist><listitem><para>
+#: ConfiguringNagios/configcgi.xml:15
+msgid ""
+"Lines that start with a '#' character are taken to be comments and are not "
+"processed"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: ConfiguringNagios/configcgi.xml:28
+msgid "Sample Configuration"
+msgstr ""
+
+# type: Content of: <chapter><section><tip><para>
+#: ConfiguringNagios/configcgi.xml:29
+msgid ""
+"A sample CGI configuration file (<filename>/usr/local/nagios/etc/cgi.cfg</"
+"filename>) is installed for you when you follow the <link linkend="
+"\"gettingstarted-quickstart\">quickstart installation guide</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: ConfiguringNagios/configcgi.xml:35
+msgid ""
+"By default, Nagios expects the CGI configuration file to be named "
+"<filename>cgi.cfg</filename> and located in the config file directory along "
+"with the <link linkend=\"configuringnagios-configmain\">main config file</"
+"link>. If you need to change the name of the file or its location, you can "
+"configure Apache to pass an environment variable named "
+"<varname>NAGIOS_CGI_CONFIG</varname> (which points to the correct location) "
+"to the CGIs. See the Apache documentation for information on how to do this."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:47
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-main_cfg_file\"/>Main Configuration "
+"File Location"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:72
+msgid ""
+"This specifies the location of your <link linkend=\"configuringnagios-"
+"configmain\">main configuration file</link>.  The CGIs need to know where to "
+"find this file in order to get information about configuration information, "
+"current host and service status, etc."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:78
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-physical_html_path\"/>Physical HTML "
+"Path"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:104
+msgid ""
+"This is the physical path where the HTML files for Nagios are kept on your "
+"workstation or server.  Nagios assumes that the documentation and images "
+"files (used by the CGIs) are stored in subdirectories called <filename class="
+"\"directory\">docs/</filename> and <filename class=\"directory\">images/</"
+"filename>, respectively."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:110
+msgid "<anchor id=\"configuringnagios-configcgi-url_html_path\"/>URL HTML Path"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:136
+msgid "If, when accessing Nagios via a web browser, you point to an URL like"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:137
+msgid ""
+", this value should be /nagios. Basically, its the path portion of the URL "
+"that is used to access the Nagios HTML pages."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:142
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-use_authentication\"/"
+">Authentication Usage"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:168
+msgid ""
+"This option controls whether or not the CGIs will use the authentication and "
+"authorization functionality when determining what information and commands "
+"users have access to. I would strongly suggest that you use the "
+"authentication functionality for the CGIs. If you decide not to use "
+"authentication, make sure to remove the <link linkend=\"thebasics-cgis-"
+"cmd_cgi\">command CGI</link> to prevent unauthorized users from issuing "
+"commands to Nagios. The CGI will not issue commands to Nagios if "
+"authentication is disabled, but I would suggest removing it altogether just "
+"to be on the safe side.  More information on how to setup authentication and "
+"configure authorization for the CGIs can be found <link linkend="
+"\"configuringnagios-cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: ConfiguringNagios/configcgi.xml:179
+msgid "0 = Don't use authentication functionality"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: ConfiguringNagios/configcgi.xml:182
+msgid "1 = Use authentication and authorization functionality (default)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:188
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-default_user_name\"/>Default User "
+"Name"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:214
+msgid ""
+"Setting this variable will define a default username that can access the "
+"CGIs. This allows people within a secure domain (i.e., behind a firewall) to "
+"access the CGIs without necessarily having to authenticate to the web "
+"server. You may want to use this to avoid having to use basic authentication "
+"if you are not using a secure server, as basic authentication transmits "
+"passwords in clear text over the Internet."
+msgstr ""
+
+# type: Content of: <chapter><section><section><important><para>
+#: ConfiguringNagios/configcgi.xml:219
+msgid ""
+"Do not define a default username unless you are running a secure web server "
+"and are sure that everyone who has access to the CGIs has been authenticated "
+"in some manner! If you define this variable, anyone who has not "
+"authenticated to the web server will inherit all rights you assign to this "
+"user!"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:226
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-authorized_for_system_information\"/"
+">System/Process Information Access"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:252
+msgid ""
+"This is a comma-delimited list of names of authenticated users who can view "
+"system/process information in the <link linkend=\"thebasics-cgis-extinfo_cgi"
+"\">extended information CGI</link>.  Users in this list are not "
+"automatically authorized to issue system/process commands. If you want users "
+"to be able to issue system/process commands as well, you must add them to "
+"the <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_system_commands\">authorized_for_system_commands</link> "
+"variable. More information on how to setup authentication and configure "
+"authorization for the CGIs can be found <link linkend=\"configuringnagios-"
+"cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:262
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-authorized_for_system_commands\"/"
+">System/Process Command Access"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:288
+msgid ""
+"This is a comma-delimited list of names of authenticated users who can issue "
+"system/process commands via the <link linkend=\"thebasics-cgis-cmd_cgi"
+"\">command CGI</link>. Users in this list are not automatically authorized "
+"to view system/process information. If you want users to be able to view "
+"system/process information as well, you must add them to the <link linkend="
+"\"configuringnagios-configcgi-authorized_for_system_information"
+"\">authorized_for_system_information</link> variable. More information on "
+"how to setup authentication and configure authorization for the CGIs can be "
+"found <link linkend=\"configuringnagios-cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:298
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-"
+"authorized_for_configuration_information\"/>Configuration Information Access"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:324
+msgid ""
+"This is a comma-delimited list of names of authenticated users who can view "
+"configuration information in the <link linkend=\"thebasics-cgis-config_cgi"
+"\">configuration CGI</link>.  Users in this list can view information on all "
+"configured hosts, host groups, services, contacts, contact groups, time "
+"periods, and commands. More information on how to setup authentication and "
+"configure authorization for the CGIs can be found <link linkend="
+"\"configuringnagios-cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:333
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-authorized_for_all_hosts\"/>Global "
+"Host Information Access"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:359
+msgid ""
+"This is a comma-delimited list of names of authenticated users who can view "
+"status and configuration information for all hosts. Users in this list are "
+"also automatically authorized to view information for all services. Users in "
+"this list are not automatically authorized to issue commands for all hosts "
+"or services. If you want users able to issue commands for all hosts and "
+"services as well, you must add them to the <link linkend=\"configuringnagios-"
+"configcgi-authorized_for_all_host_commands"
+"\">authorized_for_all_host_commands</link> variable. More information on how "
+"to setup authentication and configure authorization for the CGIs can be "
+"found <link linkend=\"configuringnagios-cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:370
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-authorized_for_all_host_commands\"/"
+">Global Host Command Access"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:396
+msgid ""
+"This is a comma-delimited list of names of authenticated users who can issue "
+"commands for all hosts via the <link linkend=\"thebasics-cgis-cmd_cgi"
+"\">command CGI</link>. Users in this list are also automatically authorized "
+"to issue commands for all services. Users in this list are not automatically "
+"authorized to view status or configuration information for all hosts or "
+"services. If you want users able to view status and configuration "
+"information for all hosts and services as well, you must add them to the "
+"<link linkend=\"configuringnagios-configcgi-authorized_for_all_hosts"
+"\">authorized_for_all_hosts</link> variable. More information on how to "
+"setup authentication and configure authorization for the CGIs can be found "
+"<link linkend=\"configuringnagios-cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:408
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-authorized_for_all_services\"/"
+">Global Service Information Access"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:434
+msgid ""
+"This is a comma-delimited list of names of authenticated users who can view "
+"status and configuration information for all services. Users in this list "
+"are not automatically authorized to view information for all hosts. Users in "
+"this list are not automatically authorized to issue commands for all "
+"services. If you want users able to issue commands for all services as well, "
+"you must add them to the <link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_service_commands\">authorized_for_all_service_commands</"
+"link> variable. More information on how to setup authentication and "
+"configure authorization for the CGIs can be found <link linkend="
+"\"configuringnagios-cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:445
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-authorized_for_all_service_commands"
+"\"/>Global Service Command Access"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:471
+msgid ""
+"This is a comma-delimited list of names of authenticated users who can issue "
+"commands for all services via the <link linkend=\"thebasics-cgis-cmd_cgi"
+"\">command CGI</link>. Users in this list are not automatically authorized "
+"to issue commands for all hosts. Users in this list are not automatically "
+"authorized to view status or configuration information for all hosts. If you "
+"want users able to view status and configuration information for all "
+"services as well, you must add them to the <link linkend=\"configuringnagios-"
+"configcgi-authorized_for_all_services\">authorized_for_all_services</link> "
+"variable. More information on how to setup authentication and configure "
+"authorization for the CGIs can be found <link linkend=\"configuringnagios-"
+"cgiauth\">here</link>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:482
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-lock_author_names\"/>Lock Author "
+"Names"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:508
+msgid ""
+"This option allows you to restrict users from changing the author name when "
+"submitting comments, acknowledgements, and scheduled downtime from the web "
+"interface. If this option is enabled, users will be unable to change the "
+"author name associated with the command request."
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: ConfiguringNagios/configcgi.xml:513
+msgid "0 = Allow users to change author names when submitting commands"
+msgstr ""
+
+# type: Content of: <chapter><section><section><itemizedlist><listitem><para>
+#: ConfiguringNagios/configcgi.xml:516
+msgid "1 = Prevent users from changing author names (default)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:522
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-statusmap_background_image\"/"
+">Statusmap CGI Background Image"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:548
+msgid ""
+"This option allows you to specify an image to be used as a background in the "
+"<link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap CGI</link> if you "
+"use the user-supplied coordinates layout method. The background image is not "
+"be available in any other layout methods. It is assumed that the image "
+"resides in the HTML images path (i.e. <filename class=\"directory\">/usr/"
+"local/nagios/share/images</filename>).  This path is automatically "
+"determined by appending <quote>/images</quote> to the path specified by the "
+"<link linkend=\"configuringnagios-configcgi-physical_html_path"
+"\">physical_html_path</link> directive."
+msgstr ""
+
+# type: Content of: <chapter><section><section><note><para>
+#: ConfiguringNagios/configcgi.xml:556
+msgid ""
+"The image file can be in GIF, JPEG, PNG, or GD2 format. However, GD2 format "
+"(preferably in uncompressed format) is recommended, as it will reduce the "
+"CPU load when the CGI generates the map image."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:562
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-default_statusmap_layout\"/>Default "
+"Statusmap Layout Method"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:588
+msgid ""
+"This option allows you to specify the default layout method used by the "
+"<link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap CGI</link>. Valid "
+"options are:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><thead><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:596 ConfiguringNagios/configcgi.xml:732
+msgid "&lt;layout_number&gt; Value"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><thead><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:599 ConfiguringNagios/configcgi.xml:735
+msgid "Layout Method"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:606 ConfiguringNagios/configcgi.xml:740
+#: TheBasics/statetypes.xml:196 Development/pluginapi.xml:65
+msgid "0"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><thead><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:609 ConfiguringNagios/configcgi.xml:743
+msgid "User-defined coordinates"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:614 TheBasics/statetypes.xml:198
+#: TheBasics/statetypes.xml:210 TheBasics/statetypes.xml:212
+#: TheBasics/statetypes.xml:259 TheBasics/statetypes.xml:275
+#: TheBasics/statetypes.xml:291 TheBasics/statetypes.xml:306
+#: TheBasics/statetypes.xml:320 TheBasics/statetypes.xml:352
+#: Development/pluginapi.xml:76
+msgid "1"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:617
+msgid "Depth layers"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:622 ConfiguringNagios/configcgi.xml:750
+#: TheBasics/statetypes.xml:225 TheBasics/statetypes.xml:227
+#: TheBasics/statetypes.xml:335 Development/pluginapi.xml:87
+msgid "2"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:625 ConfiguringNagios/configcgi.xml:753
+msgid "Collapsed tree"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:630 ConfiguringNagios/configcgi.xml:758
+#: TheBasics/statetypes.xml:240 TheBasics/statetypes.xml:242
+#: Development/pluginapi.xml:98
+msgid "3"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:633 ConfiguringNagios/configcgi.xml:761
+msgid "Balanced tree"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:638 ConfiguringNagios/configcgi.xml:766
+#: TheBasics/statetypes.xml:257
+msgid "4"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:641 ConfiguringNagios/configcgi.xml:769
+msgid "Circular"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:646 TheBasics/statetypes.xml:273
+msgid "5"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:649
+msgid "Circular (Marked Up)"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:654 TheBasics/statetypes.xml:289
+msgid "6"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:657
+msgid "Circular (Balloon)"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:666
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-statuswrl_include\"/>Statuswrl CGI "
+"Include World"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:692
+msgid ""
+"This option allows you to include your own objects in the generated VRML "
+"world. It is assumed that the file resides in the path specified by the "
+"<link linkend=\"configuringnagios-configcgi-physical_html_path"
+"\">physical_html_path</link> directive."
+msgstr ""
+
+# type: Content of: <chapter><section><section><note><para>
+#: ConfiguringNagios/configcgi.xml:695
+msgid ""
+"This file must be a fully qualified VRML world (i.e. you can view it by "
+"itself in a VRML browser)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:699
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-default_statuswrl_layout\"/>Default "
+"Statuswrl Layout Method"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:725
+msgid ""
+"This option allows you to specify the default layout method used by the "
+"<link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl CGI</link>. Valid "
+"options are:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:778
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-refresh_rate\"/>CGI Refresh Rate"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:804
+msgid ""
+"This option allows you to specify the number of seconds between page "
+"refreshes for the <link linkend=\"thebasics-cgis-status_cgi\">status</link>, "
+"<link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link>, and <link "
+"linkend=\"thebasics-cgis-extinfo_cgi\">extinfo</link> CGIs."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:811
+msgid "<anchor id=\"configuringnagios-configcgi-audio_alerts\"/>Audio Alerts"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:820
+msgid "Formats:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para>
+#: ConfiguringNagios/configcgi.xml:832
+msgid "Examples:"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:847
+msgid ""
+"These options allow you to specify an audio file that should be played in "
+"your browser if there are problems when you are viewing the <link linkend="
+"\"thebasics-cgis-status_cgi\">status CGI</link>. If there are problems, the "
+"audio file for the most critical type of problem will be played. The most "
+"critical type of problem is on or more unreachable hosts, while the least "
+"critical is one or more services in an unknown state (see the order in the "
+"example above). Audio files are assumed to be in the media/ subdirectory in "
+"your HTML directory (i.e. <filename class=\"directory\">/usr/local/nagios/"
+"share/media</filename>)."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:858
+msgid "<anchor id=\"configuringnagios-configcgi-ping_syntax\"/>Ping Syntax"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:884
+msgid ""
+"This option determines what syntax should be used when attempting to ping a "
+"host from the"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para><acronym>
+#: ConfiguringNagios/configcgi.xml:885 TheBasics/cgis.xml:181
+#: TheBasics/cgis.xml:214 TheBasics/cgis.xml:215
+msgid "WAP"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:885
+msgid ""
+"interface (using the <link linkend=\"thebasics-cgis-statuswml_cgi"
+"\">statuswml CGI</link>.  You must include the full path to the ping binary, "
+"along with all required options.  The <varname>$HOSTADDRESS$</varname> macro "
+"is substituted with the address of the host before the command is executed."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:891
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-escape_html_tags\"/>Escape HTML "
+"Tags Option"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:917
+msgid ""
+"This option determines whether or not HTML tags in host and service (plugin) "
+"output is escaped in the CGIs. If you enable this option, your plugin output "
+"will not be able to contain clickable hyperlinks."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:923
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-notes_url_target\"/>Notes URL Target"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:949
+msgid ""
+"This option determines the name of the frame target that notes URLs should "
+"be displayed in. Valid options include _blank, _self, _top, _parent, or any "
+"other valid target name."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:955
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-action_url_target\"/>Action URL "
+"Target"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:981
+msgid ""
+"This option determines the name of the frame target that action URLs should "
+"be displayed in. Valid options include _blank, _self, _top, _parent, or any "
+"other valid target name."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:987
+msgid ""
+"<anchor id=\"configuringnagios-configcgi-enable_splunk_integration\"/>Splunk "
+"Integration Option"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:1013
+msgid ""
+"This option determines whether integration functionality with Splunk is "
+"enabled in the web interface. If enabled, you'll be presented with "
+"<quote>Splunk It</quote> links in various places in the CGIs (log file, "
+"alert history, host/service detail, etc).  Useful if you're trying to "
+"research why a particular problem occurred. For more information on Splunk, "
+"visit <ulink url=\"http://www.splunk.com/\">http://www.splunk.com/</ulink>."
+msgstr ""
+
+# type: Content of: <chapter><section><section><title>
+#: ConfiguringNagios/configcgi.xml:1021
+msgid "<anchor id=\"configuringnagios-configcgi-splunk_url\"/>Splunk URL"
+msgstr ""
+
+# type: Content of: <chapter><section><section><para>
+#: ConfiguringNagios/configcgi.xml:1047
+msgid ""
+"This option is used to define the base URL to your Splunk interface. This "
+"URL is used by the CGIs when creating links if the <link linkend="
+"\"configuringnagios-configcgi-enable_splunk_integration"
+"\">enable_splunk_integration</link> option is enabled."
+msgstr ""

@@ -1,0 +1,190 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: AdvancedTopics/dependencychecks.xml:10
+msgid "Predictive Dependency Checks"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:13
+msgid ""
+"Host and service <link linkend=\"advancedtopics-dependencies\">dependencies</"
+"link> can be defined to allow you greater control over when checks are "
+"executed and when notifications are sent out. As dependencies are used to "
+"control basic aspects of the monitoring process, it is crucial to ensure "
+"that status information used in the dependency logic is as up to date as "
+"possible."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:17
+msgid ""
+"Nagios allows you to enable predictive dependency checks for hosts and "
+"services to ensure that the dependency logic will have the most up-to-date "
+"status information when it comes to making decisions about whether to send "
+"out notifications or allow active checks of a host or service."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/dependencychecks.xml:22
+msgid "How Do Predictive Checks Work?"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:23
+msgid ""
+"The image below shows a basic diagram of hosts that are being monitored by "
+"Nagios, along with their parent/child relationships and dependencies."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:25
+msgid ""
+"The <emphasis>Switch2</emphasis> host in this example has just changed state "
+"from an UP state to a problem state. Nagios needs to determine whether the "
+"host is DOWN or UNREACHABLE, so it will launch parallel checks of "
+"<emphasis>Switch2</emphasis>'s immediate parents (<emphasis>Firewall1</"
+"emphasis>) and children (<emphasis>Comp1</emphasis>, <emphasis>Comp2</"
+"emphasis>, and <emphasis>Switch3</emphasis>). This is a normal function of "
+"the <link linkend=\"thebasics-networkreachability\">host reachability</link> "
+"logic."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:29
+msgid ""
+"You will also notice that <emphasis>Switch2</emphasis> is depending on "
+"<emphasis>Monitor1</emphasis> and <emphasis>File1</emphasis> for either "
+"notifications or check execution (which one is unimportant in this example). "
+"If predictive host dependency checks are enabled, Nagios will launch "
+"parallel checks of Monitor1 and File1 at the same time it launches checks of "
+"<emphasis>Switch2</emphasis>'s immediate parents and children. Nagios does "
+"this because it knows that it will have to test the dependency logic in the "
+"near future (e.g. for purposes of notification) and it wants to make sure it "
+"has the most current status information for the hosts that take part in the "
+"dependency."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:44
+msgid "That's how predictive dependency checks work. Simple, eh?"
+msgstr ""
+
+# type: Content of: <chapter><section><note><para>
+#: AdvancedTopics/dependencychecks.xml:45
+msgid ""
+"Predictive service dependency checks work in a similiar manner to what is "
+"described above.  Except, of course, they deal with services instead of "
+"hosts."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: AdvancedTopics/dependencychecks.xml:49
+msgid "Enabling Predictive Checks"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:50
+msgid ""
+"Predictive dependency checks involve rather little overhead, so I would "
+"recommend that you enable them. In most cases, the benefits of having "
+"accurate information for the dependency logic outweighs the extra overhead "
+"imposed by these checks."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:53
+msgid "Enabling predictive dependency checks is easy:"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para><link>
+#: AdvancedTopics/dependencychecks.xml:56
+msgid ""
+"Predictive host dependency checks are controlled by the <link linkend="
+"\"configuringnagios-configmain-enable_predictive_host_dependency_checks\">"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: AdvancedTopics/dependencychecks.xml:57
+#: AdvancedTopics/dependencychecks.xml:61
+msgid "</link> option."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para><link>
+#: AdvancedTopics/dependencychecks.xml:60
+msgid ""
+"Predictive service dependency checks are controlled by the <link linkend="
+"\"configuringnagios-configmain-enable_predictive_service_dependency_checks\">"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: AdvancedTopics/dependencychecks.xml:66 AdvancedTopics/cachedchecks.xml:10
+msgid "Cached Checks"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: AdvancedTopics/dependencychecks.xml:67
+msgid ""
+"Predictive dependency checks are on-demand checks and are therefore subject "
+"to the rules of <link linkend=\"advancedtopics-cachedchecks\">cached checks</"
+"link>. Cached checks can provide you with performance improvements by "
+"allowing Nagios to forgo running an actual host or service check if it can "
+"use a relatively recent check result instead. More information on cached "
+"checks can be found <link linkend=\"advancedtopics-cachedchecks\">here</"
+"link>."
+msgstr ""

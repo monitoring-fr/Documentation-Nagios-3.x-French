@@ -1,0 +1,78 @@
+# French translations for docnagios package
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the docnagios package.
+# Automatically generated, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: docnagios 3\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: 2009-01-06 15:00+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: Content of: <chapter><section><screen>
+#: GettingStarted/quickstart-fedora.xml:262
+#: GettingStarted/quickstart-ubuntu.xml:264 RunningNagios/verifyconfig.xml:17
+#, no-wrap
+msgid ""
+"\n"
+"<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>\n"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: RunningNagios/verifyconfig.xml:10 RunningNagios/verifyconfig.xml:12
+msgid "Verifying Your Configuration"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: RunningNagios/verifyconfig.xml:13
+msgid ""
+"Every time you modify your <xref linkend=\"configuringnagios-config\"/>, you "
+"should run a sanity check on them. It is important to do this before you (re)"
+"start Nagios, as Nagios will shut down if your configuration contains errors."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: RunningNagios/verifyconfig.xml:15
+msgid "In order to verify your configuration, run Nagios with the"
+msgstr ""
+
+# type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para><option>
+#: RunningNagios/verifyconfig.xml:15
+#: SecurityAndPerformanceTuning/faststartup.xml:182
+msgid "-v"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: RunningNagios/verifyconfig.xml:15 RunningNagios/startstop.xml:31
+msgid "command line option like so:"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: RunningNagios/verifyconfig.xml:20
+msgid ""
+"If you've forgotten to enter some critical data or misconfigured things, "
+"Nagios will spit out a warning or error message that should point you to the "
+"location of the problem.  Error messages generally print out the line in the "
+"configuration file that seems to be the source of the problem. On errors, "
+"Nagios will often exit the pre-flight check and return to the command prompt "
+"after printing only the first error that it has encountered.  This is done "
+"so that one error does not cascade into multiple errors as the remainder of "
+"the configuration data is verified. If you get any error messages you'll "
+"need to go and edit your configuration files to remedy the problem. Warning "
+"messages can generally be safely ignored, since they are only "
+"recommendations and not requirements."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: RunningNagios/verifyconfig.xml:29
+msgid ""
+"Once you've verified your configuration files and fixed any errors you can "
+"go ahead and <link linkend=\"runningnagios-startstop\">(re)start Nagios</"
+"link>."
+msgstr ""

@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: AdvancedTopics/embeddedperl.xml:149 Development/epnplugins.xml:11
+msgid "Developing Plugins For Use With Embedded Perl"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: Development/epnplugins.xml:16
+msgid ""
+"Stanley Hopcroft has worked with the embedded Perl interpreter quite a bit "
+"and has commented on the advantages/disadvanges of using it. He has also "
+"given several helpful hints on creating Perl plugins that work properly with "
+"the embedded interpreter. The majority of this documentation comes from his "
+"comments."
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: Development/epnplugins.xml:22
+msgid ""
+"It should be noted that <quote>ePN</quote>, as used in this documentation, "
+"refers to embedded Perl Nagios, or if you prefer, Nagios compiled with an "
+"embedded Perl interpreter."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: Development/epnplugins.xml:28
+msgid "Target Audience"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:32
+msgid ""
+"Average Perl developers; those with an appreciation of the languages "
+"powerful features without knowledge of internals or an in depth knowledge of "
+"those features."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:38
+msgid ""
+"Those with a utilitarian appreciation rather than a great depth of "
+"understanding."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:43
+msgid ""
+"If you are happy with Perl objects, name management, data structures, and "
+"the debugger, that's probably sufficient."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: Development/epnplugins.xml:50
+msgid "Things you should do when developing a Perl Plugin (ePN or not)"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:55
+msgid "Always always generate some output"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:59
+msgid ""
+"Use 'use utils' and import the stuff it exports ($TIMEOUT %ERRORS &amp;"
+"print_revision &amp;support)"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:64
+msgid "Have a look at how the standard Perl plugins do their stuff e.g."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:69
+msgid "Always exit with $ERRORS{CRITICAL}, $ERRORS{OK}, etc."
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:73
+msgid "Use getopt to read command line arguments"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:77
+msgid "Manage timeouts"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:81
+msgid ""
+"Call print_usage (supplied by you) when there are no command line arguments"
+msgstr ""
+
+# type: Content of: <chapter><section><itemizedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:86
+msgid "Use standard switch names (eg H 'host', V 'version')"
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: Development/epnplugins.xml:94
+msgid "Things you must do to develop a Perl plugin for ePN"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:98
+msgid "can not be used; use here documents instead e.g."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><programlisting>
+#: Development/epnplugins.xml:101
+#, no-wrap
+msgid ""
+"\n"
+"\t\t\t\tmy $data = &lt;&lt;DATA;\n"
+"\t\t\t\tportmapper 100000\n"
+"\t\t\t\tportmap 100000\n"
+"\t\t\t\tsunrpc 100000\n"
+"\t\t\t\trpcbind 100000\n"
+"\t\t\t\trstatd 100001\n"
+"\t\t\t\trstat 100001\n"
+"\t\t\t\trup 100001\n"
+"\t\t\t\t..\n"
+"\t\t\t\tDATA\n"
+"\n"
+"\t\t\t\t%prognum = map { my($a, $b) = split; ($a, $b) } split(/\\n/, $data) ;\n"
+"\t\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:118
+msgid "blocks will not work as you expect. May be best to avoid."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:122
+msgid "Ensure that it is squeaky clean at compile time i.e."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:124
+msgid "use strict"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:125
+msgid "use perl -w (other switches [T notably] may not help)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:126
+msgid "use perl -c"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:127
+msgid ""
+"Avoid lexical variables (my) with global scope as a means of passing "
+"<emphasis role='underline'>variable</emphasis> data into subroutines. In "
+"fact this is <emphasis role='underline'>fatal</emphasis> if the subroutine "
+"is called by the plugin more than once when the check is run.  Such "
+"subroutines act as 'closures' that lock the global lexicals first value into "
+"subsequent calls of the subroutine. If however, your global is read-only (a "
+"complicated structure for example) this is not a problem.  What Bekman "
+"<ulink url='http://perl.apache.org/docs/1.0/guide/'>recommends you do "
+"instead</ulink>, is any of the following:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:138
+msgid "make the subroutine anonymous and call it via a code ref e.g."
+msgstr ""
+
+# type: CDATA
+#: Development/epnplugins.xml:139
+#, no-wrap
+msgid ""
+"turn this                     into  \n"
+"\n"
+"\tmy $x = 1 ;                   my $x = 1 ;\n"
+"\tsub a { .. Process $x ... }   $a_cr = sub { ... Process $x ... } ;\n"
+"\t.                             .\n"
+"\t.                             .\n"
+"\ta ;                           &$a_cr ;\n"
+"\t$x = 2                        $x = 2 ;\n"
+"\ta ;                           &$a_cr ;\n"
+"\n"
+"\t# anon closures __always__ rebind the current lexical value\n"
+"\t]]"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:150
+msgid ""
+"put the global lexical and the subroutine using it in their own package (as "
+"an object or a module)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:152
+msgid "pass info to subs as references or aliases (\\$lex_var or $_[n])"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:153
+msgid ""
+"replace lexicals with package globals and exclude them from 'use strict' "
+"objections with 'use vars qw(global1 global2 ..)'"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:158
+msgid "Be aware of where you can get more information."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:160
+msgid ""
+"Useful information can be had from the usual suspects (the O'Reilly books, "
+"plus Damien Conways <quote>Object Oriented Perl</quote>) but for the really "
+"useful stuff in the right context start at Stas Bekman's mod_perl guide at "
+"<ulink url=\"http://perl.apache.org/guide/\">http://perl.apache.org/guide/</"
+"ulink>."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:166
+msgid ""
+"This wonderful book sized document has nothing whatsoever about Nagios, but "
+"all about writing Perl programs for the embedded Perl interpreter in Apache "
+"(ie Doug MacEacherns mod_perl)."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:170
+msgid "The perlembed manpage is essential for context and encouragement."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:173
+msgid ""
+"On the basis that Lincoln Stein and Doug MacEachern know a thing or two "
+"about Perl and embedding Perl, their book 'Writing Apache Modules with Perl "
+"and C' is almost certainly worth looking at."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:179
+msgid ""
+"Be aware that your plugin may return strange values with an ePN and that "
+"this is likely to be caused by the problem in item #4 above"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:184
+msgid "Be prepared to debug via:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:185
+msgid "having a test ePN and"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:186
+msgid ""
+"adding print statements to your plugin to display variable values to STDERR "
+"(can't use STDOUT)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:188
+msgid ""
+"adding print statements to p1.pl to display what ePN thinks your plugin is "
+"before it tries to run it (vi)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:190
+msgid ""
+"running the ePN in foreground mode (probably in conjunction with the former "
+"recommendations)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><para>
+#: Development/epnplugins.xml:192
+msgid ""
+"use the 'Deparse' module on your plugin to see how the parser has optimised "
+"it and what the interpreter will actually get. (see 'Constants in Perl' by "
+"Sean M. Burke, The Perl Journal, Fall 2001)"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><itemizedlist><listitem><screen>
+#: Development/epnplugins.xml:196
+#, no-wrap
+msgid "perl -MO::Deparse &lt;your_program&gt;"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:199
+msgid ""
+"Be aware of what ePN is transforming your plugin too, and if all else fails "
+"try and debug the transformed version."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:202
+msgid ""
+"As you can see below p1.pl rewrites your plugin as a subroutine called "
+"'hndlr' in the package named 'Embed::&lt;"
+"something_related_to_your_plugin_file_name&gt;'."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:206
+msgid ""
+"Your plugin may be expecting command line arguments in @ARGV so pl.pl also "
+"assigns @_ to @ARGV."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:209
+msgid ""
+"This in turn gets 'eval' ed and if the eval raises an error (any parse error "
+"and run error), the plugin gets chucked out."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:212
+msgid ""
+"The following output shows how a test ePN transformed the &plugin-rpc; "
+"plugin before attempting to execute it. Most of the code from the actual "
+"plugin is not shown, as we are interested in only the transformations that "
+"the ePN has made to the plugin). For clarity, transformations are shown in "
+"red:"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><programlisting>
+#: Development/epnplugins.xml:218
+#, no-wrap
+msgid ""
+"\n"
+"\t\t\t\t                package main;\n"
+"\t\t\t\t                use subs 'CORE::GLOBAL::exit';\n"
+"\t\t\t\t                sub CORE::GLOBAL::exit { die \"ExitTrap: $_[0] \n"
+"\t\t\t\t(Embed::check_5frpc)\"; }\n"
+"\t\t\t\t                package Embed::check_5frpc; sub hndlr { shift(@_);\n"
+"\t\t\t\t@ARGV=@_;\n"
+"\t\t\t\t#! /usr/bin/perl -w\n"
+"\t\t\t\t#\n"
+"\t\t\t\t# check_rpc plugin for Nagios\n"
+"\t\t\t\t#\n"
+"\t\t\t\t# usage:\n"
+"\t\t\t\t#    check_rpc host service\n"
+"\t\t\t\t#\n"
+"\t\t\t\t# Check if an rpc serice is registered and running\n"
+"\t\t\t\t# using rpcinfo - $proto $host $prognum 2&gt;&amp;1 |\";\n"
+"\t\t\t\t#\n"
+"\t\t\t\t# Use these hosts.cfg entries as examples\n"
+"\t\t\t\t#\n"
+"\t\t\t\t# command[check_nfs]=/some/path/libexec/check_rpc $HOSTADDRESS$ nfs\n"
+"\t\t\t\t# service[check_nfs]=NFS;24x7;3;5;5;unix-admin;60;24x7;1;1;1;;check_rpc\n"
+"\t\t\t\t#\n"
+"\t\t\t\t# initial version: 3 May 2000 by Truongchinh Nguyen and Karl DeBisschop\n"
+"\t\t\t\t# current status: $Revision: 1.19 $\n"
+"\t\t\t\t#\n"
+"\t\t\t\t# Copyright Notice: GPL\n"
+"\t\t\t\t#\n"
+"\t\t\t\t... rest of plugin code goes here (it was removed for brevity) ...\n"
+"\t\t\t\t}\n"
+"\t\t\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:251
+msgid ""
+"Don't use 'use diagnostics' in a plugin run by your production ePN. I think "
+"it causes__all__ the Perl plugins to return CRITICAL."
+msgstr ""
+
+# type: Content of: <chapter><section><orderedlist><listitem><para>
+#: Development/epnplugins.xml:257
+msgid ""
+"Consider using a mini embedded Perl C program to check your plugin. This is "
+"not sufficient to guarantee your plugin will perform Ok with an ePN but if "
+"the plugin fails this test it will certainly fail with your ePN. [ A sample "
+"mini ePN is included in the <filename class=\"directory\">contrib/</"
+"filename> directory of the Nagios distribution for use in testing Perl "
+"plugins. Change to the <filename class=\"directory\">contrib/</filename> "
+"directory and type <command>make mini_epn</command> to compile it. It must "
+"be executed from the same directory that the p1.pl file resides in (this "
+"file is distributed with Nagios). ]"
+msgstr ""

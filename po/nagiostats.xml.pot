@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-01-06 15:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING"
+
+# type: Content of: <chapter><section><title>
+#: GettingStarted/monitoring-windows.xml:45
+#: GettingStarted/monitoring-linux.xml:43
+#: GettingStarted/monitoring-netware.xml:12
+#: GettingStarted/monitoring-printers.xml:26
+#: GettingStarted/monitoring-routers.xml:23
+#: GettingStarted/monitoring-publicservices.xml:22
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: AdvancedTopics/passivestatetranslation.xml:14
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/objecttricks.xml:16
+#: SecurityAndPerformanceTuning/cgisecurity.xml:13
+#: SecurityAndPerformanceTuning/tuning.xml:14
+#: SecurityAndPerformanceTuning/faststartup.xml:14
+#: SecurityAndPerformanceTuning/largeinstalltweaks.xml:12
+#: SecurityAndPerformanceTuning/nagiostats.xml:12
+#: SecurityAndPerformanceTuning/mrtggraphs.xml:14
+#: IntegrationWithOtherSoftware/integration.xml:12
+#: IntegrationWithOtherSoftware/int-snmptrap.xml:14
+#: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+msgid "Introduction"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: GettingStarted/monitoring-publicservices.xml:172
+#: GettingStarted/monitoring-publicservices.xml:173 TheBasics/plugins.xml:130
+#: SecurityAndPerformanceTuning/nagiostats.xml:21
+#: SecurityAndPerformanceTuning/nagiostats.xml:107
+msgid "--help"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: TheBasics/macros.xml:103 TheBasics/servicechecks.xml:21
+#: TheBasics/activechecks.xml:62 AdvancedTopics/extcommands.xml:74
+#: SecurityAndPerformanceTuning/nagiostats.xml:104
+msgid "and"
+msgstr ""
+
+# type: Content of: <chapter><title>
+#: SecurityAndPerformanceTuning/nagiostats.xml:10
+msgid "Using The Nagiostats Utility"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:13
+msgid ""
+"A utility called <command>nagiostats</command> is included in the Nagios "
+"distribution.  It is compiled and installed along with the main Nagios "
+"daemon. The <command>nagiostats</command> utility allows you to obtain "
+"various information about a running Nagios process that can be very helpful "
+"in <xref linkend=\"securityandperformancetuning-tuning\"/>tuning performance "
+"You can obtain information either in human-readable or MRTG-compatible "
+"format."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: SecurityAndPerformanceTuning/nagiostats.xml:20
+msgid "Usage Information"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:21
+msgid "You can run the <command>nagiostats</command> utility with the"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:22
+msgid "option to get usage information."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: SecurityAndPerformanceTuning/nagiostats.xml:25
+msgid "Human-Readable Output"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:26
+msgid ""
+"To obtain human-readable information on the performance of a running Nagios "
+"process, run the <command>nagiostats</command> utility with the"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: SecurityAndPerformanceTuning/nagiostats.xml:27
+msgid "-c"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:27
+msgid ""
+"command line argument to specify your main configuration file location like "
+"such: <userinput>[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -c /usr/"
+"local/nagios/etc/nagios.cfg</userinput>"
+msgstr ""
+
+# type: Content of: <chapter><section><screen>
+#: SecurityAndPerformanceTuning/nagiostats.xml:32
+#, no-wrap
+msgid ""
+"\n"
+"\t\tNagios Stats 3.0prealpha-05202006\n"
+"\t\tCopyright (c) 2003-2007 Ethan Galstad (www.nagios.org)\n"
+"\t\tLast Modified: 05-20-2006\n"
+"\t\tLicense: GPL\n"
+"\n"
+"\t\tCURRENT STATUS DATA\n"
+"\t\t------------------------------------------------------\n"
+"\t\tStatus File:                            /usr/local/nagios/var/status.dat\n"
+"\t\tStatus File Age:                        0d 0h 0m 9s\n"
+"\t\tStatus File Version:                    3.0prealpha-05202006\n"
+"\n"
+"\t\tProgram Running Time:                   0d 5h 20m 39s\n"
+"\t\tNagios PID:                             10119\n"
+"\t\tUsed/High/Total Command Buffers:        0 / 0 / 64\n"
+"\t\tUsed/High/Total Check Result Buffers:   0 / 7 / 512\n"
+"\n"
+"\t\tTotal Services:                         95\n"
+"\t\tServices Checked:                       94\n"
+"\t\tServices Scheduled:                     91\n"
+"\t\tServices Actively Checked:              94\n"
+"\t\tServices Passively Checked:             1\n"
+"\t\tTotal Service State Change:             0.000 / 78.950 / 1.026 %\n"
+"\t\tActive Service Latency:                 0.000 / 4.272 / 0.561 sec\n"
+"\t\tActive Service Execution Time:          0.000 / 60.007 / 2.066 sec\n"
+"\t\tActive Service State Change:            0.000 / 78.950 / 1.037 %\n"
+"\t\tActive Services Last 1/5/15/60 min:     4 / 68 / 91 / 91\n"
+"\t\tPassive Service State Change:           0.000 / 0.000 / 0.000 %\n"
+"\t\tPassive Services Last 1/5/15/60 min:    0 / 0 / 0 / 0\n"
+"\t\tServices Ok/Warn/Unk/Crit:              58 / 16 / 0 / 21\n"
+"\t\tServices Flapping:                      1\n"
+"\t\tServices In Downtime:                   0\n"
+"\n"
+"\t\tTotal Hosts:                            24\n"
+"\t\tHosts Checked:                          24\n"
+"\t\tHosts Scheduled:                        24\n"
+"\t\tHosts Actively Checked:                 24\n"
+"\t\tHost Passively Checked:                 0\n"
+"\t\tTotal Host State Change:                0.000 / 9.210 / 0.384 %\n"
+"\t\tActive Host Latency:                    0.000 / 0.446 / 0.219 sec\n"
+"\t\tActive Host Execution Time:             1.019 / 10.034 / 2.764 sec\n"
+"\t\tActive Host State Change:               0.000 / 9.210 / 0.384 %\n"
+"\t\tActive Hosts Last 1/5/15/60 min:        5 / 22 / 24 / 24\n"
+"\t\tPassive Host State Change:              0.000 / 0.000 / 0.000 %\n"
+"\t\tPassive Hosts Last 1/5/15/60 min:       0 / 0 / 0 / 0\n"
+"\t\tHosts Up/Down/Unreach:                  18 / 4 / 2\n"
+"\t\tHosts Flapping:                         0\n"
+"\t\tHosts In Downtime:                      0\n"
+"\n"
+"\t\tActive Host Checks Last 1/5/15 min:     9 / 52 / 164\n"
+"\t\t   Scheduled:                           4 / 23 / 75\n"
+"\t\t   On-demand:                           3 / 23 / 69\n"
+"\t\t   Cached:                              2 / 6 / 20\n"
+"\t\tPassive Host Checks Last 1/5/15 min:    0 / 0 / 0\n"
+"\t\tActive Service Checks Last 1/5/15 min:  9 / 80 / 244\n"
+"\t\t   Scheduled:                           9 / 80 / 244\n"
+"\t\t   On-demand:                           0 / 0 / 0\n"
+"\t\t   Cached:                              0 / 0 / 0\n"
+"\t\tPassive Service Checks Last 1/5/15 min: 0 / 0 / 0\n"
+"\n"
+"\t\tExternal Commands Last 1/5/15 min:      0 / 0 / 0\n"
+"\n"
+"\t\t[nagios@lanman ~]# \n"
+"\t\t"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:96
+msgid ""
+"As you can see, the utility displays a number of different metrics "
+"pertaining to the Nagios process. Metrics which have multiple values are "
+"(unless otherwise specified) min, max and average values for that particular "
+"metric."
+msgstr ""
+
+# type: Content of: <chapter><section><title>
+#: SecurityAndPerformanceTuning/nagiostats.xml:101
+msgid "MRTG Integration"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:102
+msgid ""
+"You can use the nagiostats utility to display various Nagios metrics using "
+"MRTG (or other compatible program). To do so, run the <command>nagiostats</"
+"command> utility using the"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: SecurityAndPerformanceTuning/nagiostats.xml:104
+msgid "--mrtg"
+msgstr ""
+
+# type: Content of: <chapter><section><para><option>
+#: SecurityAndPerformanceTuning/nagiostats.xml:104
+#: SecurityAndPerformanceTuning/nagiostats.xml:105
+#: SecurityAndPerformanceTuning/nagiostats.xml:106
+msgid "--data"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:104
+msgid "arguments.  The"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:105
+msgid ""
+"argument is used to specify what statistics should be graphed. Possible "
+"values for the"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:106
+msgid ""
+"argument can be found by running the <command>nagiostats</command> utility "
+"with the"
+msgstr ""
+
+# type: Content of: <chapter><section><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:107
+msgid "option."
+msgstr ""
+
+# type: Content of: <chapter><section><note><para>
+#: SecurityAndPerformanceTuning/nagiostats.xml:108
+msgid ""
+"Information on using the <command>nagiostats</command> utility to generate "
+"MRTG graphs for Nagios performance statistics can be found <xref linkend="
+"\"securityandperformancetuning-mrtggraphs\"/> here."
+msgstr ""
