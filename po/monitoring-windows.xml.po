@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-01-21 09:28+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,53 +16,53 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para><option>
-#: About/whatsnew.xml:840 GettingStarted/monitoring-windows.xml:433
+#: About/whatsnew.xml:840
+#: GettingStarted/monitoring-windows.xml:433
 #: SecurityAndPerformanceTuning/faststartup.xml:183
 msgid "-s"
-msgstr ""
+msgstr "-s"
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/quickstart-fedora.xml:59
 #: GettingStarted/monitoring-windows.xml:148
 #: GettingStarted/monitoring-printers.xml:166
-#: GettingStarted/monitoring-routers.xml:143 AdvancedTopics/redundancy.xml:31
+#: GettingStarted/monitoring-routers.xml:143
+#: AdvancedTopics/redundancy.xml:31
 msgid "Prerequisites"
 msgstr "Pré-requis"
 
 # type: Content of: <chapter><title>
 #: GettingStarted/monitoring-windows.xml:11
 msgid "Monitoring Windows Machines"
-msgstr ""
+msgstr "Supervision des machines Windows"
 
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/monitoring-windows.xml:14
-msgid ""
-"This document describes how you can monitor \"private\" services and "
-"attributes of Windows machines, such as:"
+msgid "This document describes how you can monitor \"private\" services and attributes of Windows machines, such as:"
 msgstr ""
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:19
 #: GettingStarted/monitoring-linux.xml:22
 msgid "Memory usage"
-msgstr ""
+msgstr "Utilisation de la mémoire"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:23
 #: GettingStarted/monitoring-linux.xml:18
 msgid "CPU load"
-msgstr ""
+msgstr "Charge CPU"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:27
 #: GettingStarted/monitoring-linux.xml:26
 msgid "Disk usage"
-msgstr ""
+msgstr "Utilisation disque"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:31
 msgid "Service states"
-msgstr ""
+msgstr "État des services"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:35
@@ -72,7 +72,8 @@ msgstr ""
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:39
-#: GettingStarted/monitoring-linux.xml:38 TheBasics/plugins.xml:96
+#: GettingStarted/monitoring-linux.xml:38
+#: TheBasics/plugins.xml:96
 #: AdvancedTopics/eventhandlers.xml:37
 msgid "etc."
 msgstr ""
@@ -84,25 +85,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -113,29 +132,21 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:47
-msgid ""
-"Publicly available services that are provided by Windows machines (&protocol-"
-"http;, &protocol-ftp;, &protocol-pop3;, etc.) can be monitored easily by "
-"following the documentation on <xref linkend=\"gettingstarted-monitoring-"
-"publicservices\" />."
+msgid "Publicly available services that are provided by Windows machines (&protocol-http;, &protocol-ftp;, &protocol-pop3;, etc.) can be monitored easily by following the documentation on <xref linkend=\"gettingstarted-monitoring-publicservices\" />."
 msgstr ""
 
 # type: Content of: <chapter><section><note><para>
 #: GettingStarted/monitoring-windows.xml:53
 #: GettingStarted/monitoring-linux.xml:49
 #: GettingStarted/monitoring-printers.xml:79
-msgid ""
-"These instructions assume that you've installed Nagios according to the "
-"<link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The "
-"sample configuration entries below reference objects that are defined in the "
-"sample config files (<filename>commands.cfg</filename>, <filename>templates."
-"cfg</filename>, etc.) that are installed if you follow the quickstart."
+msgid "These instructions assume that you've installed Nagios according to the <link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The sample configuration entries below reference objects that are defined in the sample config files (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>, etc.) that are installed if you follow the quickstart."
 msgstr ""
 
 # type: Content of: <chapter><section><title>
@@ -148,32 +159,17 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:69
-msgid ""
-"Monitoring private services or attributes of a Windows machine requires that "
-"you install an agent on it. This agent acts as a proxy between the Nagios "
-"plugin that does the monitoring and the actual service or attribute of the "
-"Windows machine. Without installing an agent on the Windows box, Nagios "
-"would be unable to monitor private services or attributes of the Windows box."
+msgid "Monitoring private services or attributes of a Windows machine requires that you install an agent on it. This agent acts as a proxy between the Nagios plugin that does the monitoring and the actual service or attribute of the Windows machine. Without installing an agent on the Windows box, Nagios would be unable to monitor private services or attributes of the Windows box."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:76
-msgid ""
-"For this example, we will be installing the <ulink url=\"&url-sourceforge-"
-"projects;nscplus\">NSClient++</ulink> addon on the Windows machine and using "
-"the &plugin-nt; plugin to communicate with the NSClient++ addon. The &plugin-"
-"nt; plugin should already be installed on the Nagios server if you followed "
-"the quickstart guide."
+msgid "For this example, we will be installing the <ulink url=\"&url-sourceforge-projects;nscplus\">NSClient++</ulink> addon on the Windows machine and using the &plugin-nt; plugin to communicate with the NSClient++ addon. The &plugin-nt; plugin should already be installed on the Nagios server if you followed the quickstart guide."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:83
-msgid ""
-"Other Windows agents (like <ulink url=\"&url-sourceforge-projects;nc-net"
-"\">NC_Net</ulink>) could be used instead of NSClient++ if you wish - "
-"provided you change command and service definitions, etc. a bit. For the "
-"sake of simplicity I will only cover using the NSClient++ addon in these "
-"instructions."
+msgid "Other Windows agents (like <ulink url=\"&url-sourceforge-projects;nc-net\">NC_Net</ulink>) could be used instead of NSClient++ if you wish - provided you change command and service definitions, etc. a bit. For the sake of simplicity I will only cover using the NSClient++ addon in these instructions."
 msgstr ""
 
 # type: Content of: <chapter><section><title>
@@ -185,9 +181,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:93
-msgid ""
-"There are several steps you'll need to follow in order to monitor a new "
-"Windows machine. They are:"
+msgid "There are several steps you'll need to follow in order to monitor a new Windows machine. They are:"
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
@@ -204,8 +198,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:106
-msgid ""
-"Create new host and service definitions for monitoring the Windows machine"
+msgid "Create new host and service definitions for monitoring the Windows machine"
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
@@ -226,45 +219,27 @@ msgstr ""
 #: GettingStarted/monitoring-windows.xml:119
 #: GettingStarted/monitoring-printers.xml:137
 #: GettingStarted/monitoring-routers.xml:113
-msgid ""
-"To make your life a bit easier, a few configuration tasks have already been "
-"done for you:"
+msgid "To make your life a bit easier, a few configuration tasks have already been done for you:"
 msgstr ""
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:124
-msgid ""
-"A &plugin-nt; command definition has been added to the <filename>commands."
-"cfg</filename> file. This allows you to use the &plugin-nt; plugin to "
-"monitor Window services."
+msgid "A &plugin-nt; command definition has been added to the <filename>commands.cfg</filename> file. This allows you to use the &plugin-nt; plugin to monitor Window services."
 msgstr ""
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:131
-msgid ""
-"A Windows server host template (called <varname>windows-server</varname>) "
-"has already been created in the <filename>templates.cfg</filename> file. "
-"This allows you to add new Windows host definitions in a simple manner."
+msgid "A Windows server host template (called <varname>windows-server</varname>) has already been created in the <filename>templates.cfg</filename> file. This allows you to add new Windows host definitions in a simple manner."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:138
-msgid ""
-"The above-mentioned config files can be found in the <filename class="
-"\"directory\">/usr/local/nagios/etc/objects/</filename> directory. You can "
-"modify the definitions in these and other definitions to suit your needs "
-"better if you'd like. However, I'd recommend waiting until you're more "
-"familiar with configuring Nagios before doing so. For the time being, just "
-"follow the directions outlined below and you'll be monitoring your Windows "
-"boxes in no time."
+msgid "The above-mentioned config files can be found in the <filename class=\"directory\">/usr/local/nagios/etc/objects/</filename> directory. You can modify the definitions in these and other definitions to suit your needs better if you'd like. However, I'd recommend waiting until you're more familiar with configuring Nagios before doing so. For the time being, just follow the directions outlined below and you'll be monitoring your Windows boxes in no time."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:150
-msgid ""
-"The first time you configure Nagios to monitor a Windows machine, you'll "
-"need to do a bit of extra work. Remember, you only need to do this for the "
-"*first* Windows machine you monitor."
+msgid "The first time you configure Nagios to monitor a Windows machine, you'll need to do a bit of extra work. Remember, you only need to do this for the *first* Windows machine you monitor."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
@@ -286,9 +261,7 @@ msgstr ""
 #: GettingStarted/monitoring-windows.xml:158
 #: GettingStarted/monitoring-printers.xml:176
 #: GettingStarted/monitoring-routers.xml:153
-msgid ""
-"Remove the leading pound (#) sign from the following line in the main "
-"configuration file:"
+msgid "Remove the leading pound (#) sign from the following line in the main configuration file:"
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -306,14 +279,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:165
-msgid ""
-"What did you just do? You told Nagios to look to the <filename>/usr/local/"
-"nagios/etc/objects/windows.cfg</filename> to find additional object "
-"definitions. That's where you'll be adding Windows host and service "
-"definitions. That configuration file already contains some sample host, "
-"hostgroup, and service definitions. For the *first* Windows machine you "
-"monitor, you can simply modify the sample host and service definitions in "
-"that file, rather than creating new ones."
+msgid "What did you just do? You told Nagios to look to the <filename>/usr/local/nagios/etc/objects/windows.cfg</filename> to find additional object definitions. That's where you'll be adding Windows host and service definitions. That configuration file already contains some sample host, hostgroup, and service definitions. For the *first* Windows machine you monitor, you can simply modify the sample host and service definitions in that file, rather than creating new ones."
 msgstr ""
 
 # type: Content of: <chapter><section><title>
@@ -323,22 +289,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:177
-msgid ""
-"Before you can begin monitoring private services and attributes of Windows "
-"machines, you'll need to install an agent on those machines. I recommend "
-"using the NSClient++ addon, which can be found at <ulink url=\"&url-"
-"sourceforge-projects;nscplus\">&url-sourceforge-projects;nscplus</ulink>.  "
-"These instructions will take you through a basic installation of the NSClient"
-"++ addon, as well as the configuration of Nagios for monitoring the Windows "
-"machine."
+msgid "Before you can begin monitoring private services and attributes of Windows machines, you'll need to install an agent on those machines. I recommend using the NSClient++ addon, which can be found at <ulink url=\"&url-sourceforge-projects;nscplus\">&url-sourceforge-projects;nscplus</ulink>.  These instructions will take you through a basic installation of the NSClient++ addon, as well as the configuration of Nagios for monitoring the Windows machine."
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:187
-msgid ""
-"Download the latest stable version of the NSClient++ addon from <ulink url="
-"\"&url-sourceforge-projects;nscplus\">&url-sourceforge-projects;nscplus</"
-"ulink>"
+msgid "Download the latest stable version of the NSClient++ addon from <ulink url=\"&url-sourceforge-projects;nscplus\">&url-sourceforge-projects;nscplus</ulink>"
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
@@ -364,9 +320,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:210
-msgid ""
-"Install the NSClient++ systray with the following command ('SysTray' is case-"
-"sensitive):"
+msgid "Install the NSClient++ systray with the following command ('SysTray' is case-sensitive):"
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><screen>
@@ -379,49 +333,32 @@ msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:219
-msgid ""
-"Open the services manager and make sure the NSClientpp service is allowed to "
-"interact with the desktop (see the 'Log On' tab of the services manager). If "
-"it isn't already allowed to interact with the desktop, check the box to "
-"allow it to."
+msgid "Open the services manager and make sure the NSClientpp service is allowed to interact with the desktop (see the 'Log On' tab of the services manager). If it isn't already allowed to interact with the desktop, check the box to allow it to."
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:234
-msgid ""
-"Edit the <filename>NSC.INI file</filename> (located in the <filename class="
-"\"directory\">C:\\NSClient++</filename> directory) and make the following "
-"changes:"
+msgid "Edit the <filename>NSC.INI file</filename> (located in the <filename class=\"directory\">C:\\NSClient++</filename> directory) and make the following changes:"
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:240
-msgid ""
-"Uncomment all the modules listed in the [modules] section, except for "
-"<varname>CheckWMI.dll</varname> and <varname>RemoteConfiguration.dll</"
-"varname>"
+msgid "Uncomment all the modules listed in the [modules] section, except for <varname>CheckWMI.dll</varname> and <varname>RemoteConfiguration.dll</varname>"
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:246
-msgid ""
-"Optionally require a password for clients by changing the <varname>password</"
-"varname> option in the [Settings] section."
+msgid "Optionally require a password for clients by changing the <varname>password</varname> option in the [Settings] section."
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:252
-msgid ""
-"Uncomment the <varname>allowed_hosts</varname> option in the [Settings] "
-"section. Add the IP address of the Nagios server to this line, or leave it "
-"blank to allow all hosts to connect."
+msgid "Uncomment the <varname>allowed_hosts</varname> option in the [Settings] section. Add the IP address of the Nagios server to this line, or leave it blank to allow all hosts to connect."
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:258
-msgid ""
-"Make sure the <varname>port</varname> option in the [NSClient] section is "
-"uncommented and set to '12489' (the default port)."
+msgid "Make sure the <varname>port</varname> option in the [NSClient] section is uncommented and set to '12489' (the default port)."
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
@@ -437,16 +374,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:272
-msgid ""
-"If installed properly, a new icon should appear in your system tray. It will "
-"be a yellow circle with a black 'M' inside."
+msgid "If installed properly, a new icon should appear in your system tray. It will be a yellow circle with a black 'M' inside."
 msgstr ""
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:277
-msgid ""
-"Success! The Windows server can now be added to the Nagios monitoring "
-"configuration..."
+msgid "Success! The Windows server can now be added to the Nagios monitoring configuration..."
 msgstr ""
 
 # type: Content of: <chapter><section><title>
@@ -458,10 +391,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:286
-msgid ""
-"Now it's time to define some <link linkend=\"configuringnagios-"
-"objectdefinitions\">object definitions</link> in your Nagios configuration "
-"files in order to monitor the new Windows machine."
+msgid "Now it's time to define some <link linkend=\"configuringnagios-objectdefinitions\">object definitions</link> in your Nagios configuration files in order to monitor the new Windows machine."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
@@ -477,13 +407,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:295
-msgid ""
-"Add a new <link linkend=\"configuringnagios-objectdefinitions-host\">host</"
-"link> definition for the Windows machine that you're going to monitor. If "
-"this is the *first* Windows machine you're monitoring, you can simply modify "
-"the sample host definition in <filename>windows.cfg</filename>. Change the "
-"<varname>host_name</varname>, <varname>alias</varname>, and "
-"<varname>address</varname> fields to appropriate values for the Windows box."
+msgid "Add a new <link linkend=\"configuringnagios-objectdefinitions-host\">host</link> definition for the Windows machine that you're going to monitor. If this is the *first* Windows machine you're monitoring, you can simply modify the sample host definition in <filename>windows.cfg</filename>. Change the <varname>host_name</varname>, <varname>alias</varname>, and <varname>address</varname> fields to appropriate values for the Windows box."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -501,30 +425,17 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:313
-msgid ""
-"Good. Now you can add some service definitions (to the same configuration "
-"file) in order to tell Nagios to monitor different aspects of the Windows "
-"machine. If this is the *first* Windows machine you're monitoring, you can "
-"simply modify the sample service definitions in <filename>windows.cfg</"
-"filename>."
+msgid "Good. Now you can add some service definitions (to the same configuration file) in order to tell Nagios to monitor different aspects of the Windows machine. If this is the *first* Windows machine you're monitoring, you can simply modify the sample service definitions in <filename>windows.cfg</filename>."
 msgstr ""
 
 # type: Content of: <chapter><section><note><para>
 #: GettingStarted/monitoring-windows.xml:320
-msgid ""
-"Replace <quote><varname><replaceable>winserver</replaceable></varname></"
-"quote> in the example definitions below with the name you specified in the "
-"<varname>host_name</varname> directive of the host definition you just added."
+msgid "Replace <quote><varname><replaceable>winserver</replaceable></varname></quote> in the example definitions below with the name you specified in the <varname>host_name</varname> directive of the host definition you just added."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:325
-msgid ""
-"Add the following service definition to monitor the version of the NSClient+"
-"+ addon that is running on the Windows server. This is useful when it comes "
-"time to upgrade your Windows servers to a newer version of the addon, as "
-"you'll be able to tell which Windows machines still need to be upgraded to "
-"the latest version of NSClient++."
+msgid "Add the following service definition to monitor the version of the NSClient++ addon that is running on the Windows server. This is useful when it comes time to upgrade your Windows servers to a newer version of the addon, as you'll be able to tell which Windows machines still need to be upgraded to the latest version of NSClient++."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -542,9 +453,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:340
-msgid ""
-"Add the following service definition to monitor the uptime of the Windows "
-"server."
+msgid "Add the following service definition to monitor the uptime of the Windows server."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -562,10 +471,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:352
-msgid ""
-"Add the following service definition to monitor the CPU utilization on the "
-"Windows server and generate a CRITICAL alert if the 5-minute CPU load is 90% "
-"or more or a WARNING alert if the 5-minute load is 80% or greater."
+msgid "Add the following service definition to monitor the CPU utilization on the Windows server and generate a CRITICAL alert if the 5-minute CPU load is 90% or more or a WARNING alert if the 5-minute load is 80% or greater."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -583,10 +489,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:366
-msgid ""
-"Add the following service definition to monitor memory usage on the Windows "
-"server and generate a CRITICAL alert if memory usage is 90% or more or a "
-"WARNING alert if memory usage is 80% or greater."
+msgid "Add the following service definition to monitor memory usage on the Windows server and generate a CRITICAL alert if memory usage is 90% or more or a WARNING alert if memory usage is 80% or greater."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -604,10 +507,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:379
-msgid ""
-"Add the following service definition to monitor usage of the C:\\ drive on "
-"the Windows server and generate a CRITICAL alert if disk usage is 90% or "
-"more or a WARNING alert if disk usage is 80% or greater."
+msgid "Add the following service definition to monitor usage of the C:\\ drive on the Windows server and generate a CRITICAL alert if disk usage is 90% or more or a WARNING alert if disk usage is 80% or greater."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -625,9 +525,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:392
-msgid ""
-"Add the following service definition to monitor the W3SVC service state on "
-"the Windows machine and generate a CRITICAL alert if the service is stopped."
+msgid "Add the following service definition to monitor the W3SVC service state on the Windows machine and generate a CRITICAL alert if the service is stopped."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -645,10 +543,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:405
-msgid ""
-"Add the following service definition to monitor the Explorer.exe process on "
-"the Windows machine and generate a CRITICAL alert if the process is not "
-"running."
+msgid "Add the following service definition to monitor the Explorer.exe process on the Windows machine and generate a CRITICAL alert if the process is not running."
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -666,9 +561,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:418
-msgid ""
-"That's it for now. You've added some basic services that should be monitored "
-"on the Windows box. Save the configuration file."
+msgid "That's it for now. You've added some basic services that should be monitored on the Windows box. Save the configuration file."
 msgstr ""
 
 # type: Content of: <chapter><section><title>
@@ -678,11 +571,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:425
-msgid ""
-"If you specified a password in the NSClient++ configuration file on the "
-"Windows machine, you'll need to modify the &plugin-nt; command definition to "
-"include the password. Open the <filename>commands.cfg</filename> file for "
-"editing."
+msgid "If you specified a password in the NSClient++ configuration file on the Windows machine, you'll need to modify the &plugin-nt; command definition to include the password. Open the <filename>commands.cfg</filename> file for editing."
 msgstr ""
 
 # type: Content of: <chapter><section><screen>
@@ -698,9 +587,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:433
-msgid ""
-"&lt;PASSWORD&gt;\" argument (where PASSWORD is the password you specified on "
-"the Windows machine) like this:"
+msgid "&lt;PASSWORD&gt;\" argument (where PASSWORD is the password you specified on the Windows machine) like this:"
 msgstr ""
 
 # type: Content of: <chapter><section><programlisting>
@@ -732,10 +619,7 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:450
-msgid ""
-"You're done with modifying the Nagios configuration, so you'll need to <link "
-"linkend=\"runningnagios-verifyconfig\">verify your configuration files</"
-"link> and <link linkend=\"runningnagios-startstop\">restart Nagios</link>."
+msgid "You're done with modifying the Nagios configuration, so you'll need to <link linkend=\"runningnagios-verifyconfig\">verify your configuration files</link> and <link linkend=\"runningnagios-startstop\">restart Nagios</link>."
 msgstr ""
 
 # type: Content of: <chapter><section><para>
@@ -743,8 +627,6 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:283
 #: GettingStarted/monitoring-routers.xml:405
 #: GettingStarted/monitoring-publicservices.xml:429
-msgid ""
-"If the verification process produces any errors messages, fix your "
-"configuration file before continuing. Make sure that you don't (re)start "
-"Nagios until the verification process completes without any errors!"
+msgid "If the verification process produces any errors messages, fix your configuration file before continuing. Make sure that you don't (re)start Nagios until the verification process completes without any errors!"
 msgstr ""
+
