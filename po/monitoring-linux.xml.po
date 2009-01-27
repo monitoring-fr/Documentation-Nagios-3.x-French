@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-01-27 10:29+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,32 +19,33 @@ msgstr ""
 #: GettingStarted/monitoring-windows.xml:19
 #: GettingStarted/monitoring-linux.xml:22
 msgid "Memory usage"
-msgstr ""
+msgstr "Utilisation mémoire"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:23
 #: GettingStarted/monitoring-linux.xml:18
 msgid "CPU load"
-msgstr ""
+msgstr "Charge CPU"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:27
 #: GettingStarted/monitoring-linux.xml:26
 msgid "Disk usage"
-msgstr ""
+msgstr "Utilisation disque"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:35
 #: GettingStarted/monitoring-linux.xml:34
 msgid "Running processes"
-msgstr ""
+msgstr "Processus en cours d'exécution"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:39
-#: GettingStarted/monitoring-linux.xml:38 TheBasics/plugins.xml:96
+#: GettingStarted/monitoring-linux.xml:38
+#: TheBasics/plugins.xml:96
 #: AdvancedTopics/eventhandlers.xml:37
 msgid "etc."
-msgstr ""
+msgstr "etc."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:45
@@ -53,25 +54,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -82,21 +101,17 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><section><note><para>
 #: GettingStarted/monitoring-windows.xml:53
 #: GettingStarted/monitoring-linux.xml:49
 #: GettingStarted/monitoring-printers.xml:79
-msgid ""
-"These instructions assume that you've installed Nagios according to the "
-"<link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The "
-"sample configuration entries below reference objects that are defined in the "
-"sample config files (<filename>commands.cfg</filename>, <filename>templates."
-"cfg</filename>, etc.) that are installed if you follow the quickstart."
-msgstr ""
+msgid "These instructions assume that you've installed Nagios according to the <link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The sample configuration entries below reference objects that are defined in the sample config files (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>, etc.) that are installed if you follow the quickstart."
+msgstr "Ces instructions impliquent que vous ayez installé Nagios comme précisé dans le <link linkend=\"gettingstarted-quickstart\">guide rapide</link>. Les exemples de configuration ci-dessous font référence aux objets de configuration définis dans les fichiers d'exemples (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>, etc.) qui ont été installé si vous avez suivi le guide rapide."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:63
@@ -104,60 +119,40 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:89
 #: GettingStarted/monitoring-routers.xml:59
 msgid "Overview"
-msgstr ""
+msgstr "Vue globale"
 
 # type: Content of: <chapter><title>
 #: GettingStarted/monitoring-linux.xml:10
 msgid "Monitoring Linux/Unix Machines"
-msgstr ""
+msgstr "Supervision des machines Linux/Unix"
 
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/monitoring-linux.xml:13
-msgid ""
-"This document describes how you can monitor \"private\" services and "
-"attributes of Linux/UNIX servers, such as:"
-msgstr ""
+msgid "This document describes how you can monitor \"private\" services and attributes of Linux/UNIX servers, such as:"
+msgstr "Ce document décrit la façon dont vous pouvez superviser les attributs et services \"privés\" de serveurs Linux/UNIX comme:"
 
 # type: Content of: <chapter><abstract><para><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-linux.xml:30
 msgid "Logged in users"
-msgstr ""
+msgstr "Utilisateurs connectés"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-linux.xml:45
-msgid ""
-"Publicly available services that are provided by Linux servers (&protocol-"
-"http;, &protocol-ftp;, &protocol-ssh;, &protocol-smtp;, etc.) can be "
-"monitored easily by following the documentation on <link linkend="
-"\"gettingstarted-monitoring-publicservices\">Monitoring publicly available "
-"services</link>."
-msgstr ""
+msgid "Publicly available services that are provided by Linux servers (&protocol-http;, &protocol-ftp;, &protocol-ssh;, &protocol-smtp;, etc.) can be monitored easily by following the documentation on <link linkend=\"gettingstarted-monitoring-publicservices\">Monitoring publicly available services</link>."
+msgstr "Les services rendus publiques qui sont fournis par des serveurs Linux (&protocol-http;, &protocol-ftp;, &protocol-ssh;, &protocol-smtp;, etc.) peuvent être supervisés de façon simple en suivant la documentation sur <link linkend=\"gettingstarted-monitoring-publicservices\">la supervision des  services publiques disponibles.</link>."
 
 # type: Content of: <chapter><section><note><para>
 #: GettingStarted/monitoring-linux.xml:60
-msgid ""
-"[This document has not been completed. I would recommend you read the "
-"documentation on the <link linkend=\"nagiosaddons-addons-nrpe\">&name-nrpe; "
-"addon</link> for instructions on how to monitor a remote Linux/Unix server.]"
-msgstr ""
+msgid "[This document has not been completed. I would recommend you read the documentation on the <link linkend=\"nagiosaddons-addons-nrpe\">&name-nrpe; addon</link> for instructions on how to monitor a remote Linux/Unix server.]"
+msgstr "[Ce document n'a pas été terminé. Je vous recommande de lire la documentation sur le <link linkend=\"nagiosaddons-addons-nrpe\">addon &name-nrpe;</link> pour les instructions sur la façon de superviser des serveurs distants Linux/Unix.]"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-linux.xml:65
-msgid ""
-"There are several different ways to monitor attributes or remote Linux/Unix "
-"servers. One is by using shared &protocol-ssh; keys and the &plugin-byssh; "
-"plugin to execute plugins on remote servers. This method will not be covered "
-"here, but can result in high load on your monitoring server if you are "
-"monitoring hundreds or thousands of services. The overhead of setting up/"
-"destroying &protocol-ssh; connections is the cause of this."
-msgstr ""
+msgid "There are several different ways to monitor attributes or remote Linux/Unix servers. One is by using shared &protocol-ssh; keys and the &plugin-byssh; plugin to execute plugins on remote servers. This method will not be covered here, but can result in high load on your monitoring server if you are monitoring hundreds or thousands of services. The overhead of setting up/destroying &protocol-ssh; connections is the cause of this."
+msgstr "Il y a plusieurs façons de superviser les attributs ou des serveurs distants Linux/Unix. Une est d'utiliser des clés partagées &protocol-ssh; et le plugin &plugin-byssh; pour exécuter de splugins sur les serveurs distants. Cette méthode n'est pas abordée ici, mais peut amener une grande charge sur le serveur de supervision si vous superviser des centaines ou milliers de services. La charge de travail supplémentaire pour créer/détruire les connexions &protocol-ssh; est la cause de ceci."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-linux.xml:77
-msgid ""
-"Another common method of monitoring remote Linux/Unix hosts is to use the "
-"<link linkend=\"nagiosaddons-addons-nrpe\">&name-nrpe; addon</link>. &name-"
-"nrpe; allows you to execute plugins on remote Linux/Unix hosts. This is "
-"useful if you need to monitor local resources/attributes like disk usage, "
-"CPU load, memory usage, etc. on a remote host."
-msgstr ""
+msgid "Another common method of monitoring remote Linux/Unix hosts is to use the <link linkend=\"nagiosaddons-addons-nrpe\">&name-nrpe; addon</link>. &name-nrpe; allows you to execute plugins on remote Linux/Unix hosts. This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage, etc. on a remote host."
+msgstr "Una autre façon commune de superviser des hôtes distants Linux/Unix est d'utiliser l' <link linkend=\"nagiosaddons-addons-nrpe\">addon &name-nrpe;</link>. &name-nrpe; vous permet d'exécuter des plugins sur les hôtes distants Linux/Unix. C'est utile si vous devez superviser les attributs/ressources locaux comme l'utilisation disque, la charge CPU, l'utilisation mémoire, etc. sur une hôte distant."
+
