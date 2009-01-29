@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 17:54+0100\n"
-"Last-Translator: Olivier Jan <ojan@nagios-fr.Org>\n"
+"PO-Revision-Date: 2009-01-28 18:34+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,14 +65,8 @@ msgstr ""
 #: GettingStarted/quickstart-fedora.xml:112
 #: GettingStarted/quickstart-opensuse.xml:64
 #: GettingStarted/quickstart-ubuntu.xml:116
-msgid ""
-"Create a new nagcmd group for allowing external commands to be submitted "
-"through the web interface. Add both the nagios user and the apache user to "
-"the group."
-msgstr ""
-"Créez un groupe nagcmd pour autoriser la soumission de commandes externes "
-"depuis l'interface web. Ajoutez à la fois l'utilisateur nagios et "
-"l'utilisateur apache à ce groupe."
+msgid "Create a new nagcmd group for allowing external commands to be submitted through the web interface. Add both the nagios user and the apache user to the group."
+msgstr "Créez un groupe nagcmd pour autoriser la soumission de commandes externes depuis l'interface web. Ajoutez à la fois l'utilisateur nagios et l'utilisateur apache à ce groupe."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/quickstart-fedora.xml:124
@@ -106,18 +100,8 @@ msgstr ""
 #: GettingStarted/quickstart-fedora.xml:134
 #: GettingStarted/quickstart-opensuse.xml:85
 #: GettingStarted/quickstart-ubuntu.xml:137
-msgid ""
-"Download the source code tarballs of both Nagios and the Nagios plugins "
-"(visit <ulink url=\"&url-nagios;download/\">&url-nagios;download/</ulink> "
-"for links to the latest versions). At the time of writing, the latest "
-"versions of Nagios and the Nagios plugins were 3.0.3 and 1.4.11, "
-"respectively."
-msgstr ""
-"Téléchargez à la fois l'archive du code source de Nagios et des plugins "
-"Nagios (visitez <ulink url=\"&url-nagios;download/\">&url-nagios;download/</"
-"ulink> pour les liens vers les dernières versions). Au moment de la "
-"rédaction, les dernières versions de Nagios et des plugins Nagios étaient "
-"respectivement  la 3.0.3 et la 1.4.11."
+msgid "Download the source code tarballs of both Nagios and the Nagios plugins (visit <ulink url=\"&url-nagios;download/\">&url-nagios;download/</ulink> for links to the latest versions). At the time of writing, the latest versions of Nagios and the Nagios plugins were 3.0.3 and 1.4.11, respectively."
+msgstr "Téléchargez à la fois l'archive du code source de Nagios et des plugins Nagios (visitez <ulink url=\"&url-nagios;download/\">&url-nagios;download/</ulink> pour les liens vers les dernières versions). Au moment de la rédaction, les dernières versions de Nagios et des plugins Nagios étaient respectivement  la 3.0.3 et la 1.4.11."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-fedora.xml:141
@@ -143,7 +127,8 @@ msgstr "Compilez et installez Nagios"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-fedora.xml:150
 #: GettingStarted/quickstart-opensuse.xml:100
-#: GettingStarted/quickstart-ubuntu.xml:153 GettingStarted/upgrading.xml:46
+#: GettingStarted/quickstart-ubuntu.xml:153
+#: GettingStarted/upgrading.xml:46
 msgid "Extract the Nagios source code tarball."
 msgstr "Extraire le code source de Nagios de l'archive."
 
@@ -167,12 +152,8 @@ msgstr ""
 #: GettingStarted/quickstart-fedora.xml:158
 #: GettingStarted/quickstart-opensuse.xml:108
 #: GettingStarted/quickstart-ubuntu.xml:161
-msgid ""
-"Run the Nagios configure script, passing the name of the group you created "
-"earlier like so:"
-msgstr ""
-"Exécutez le script de configuration de Nagios en lui passant le nom du "
-"groupe que vous venez juste de créer comme suit:"
+msgid "Run the Nagios configure script, passing the name of the group you created earlier like so:"
+msgstr "Exécutez le script de configuration de Nagios en lui passant le nom du groupe que vous venez juste de créer comme suit:"
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-fedora.xml:161
@@ -189,7 +170,8 @@ msgstr ""
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-fedora.xml:165
 #: GettingStarted/quickstart-opensuse.xml:114
-#: GettingStarted/quickstart-ubuntu.xml:168 GettingStarted/upgrading.xml:60
+#: GettingStarted/quickstart-ubuntu.xml:168
+#: GettingStarted/upgrading.xml:60
 msgid "Compile the Nagios source code."
 msgstr "Compilez le code source de Nagios."
 
@@ -209,13 +191,8 @@ msgstr ""
 #: GettingStarted/quickstart-fedora.xml:171
 #: GettingStarted/quickstart-opensuse.xml:118
 #: GettingStarted/quickstart-ubuntu.xml:174
-msgid ""
-"Install binaries, init script, sample config files and set permissions on "
-"the external command directory."
-msgstr ""
-"Installez les binaires, les scripts de démarrage, les fichiers de "
-"configuration fournis en exemple et réglez les permissions sur le dossier "
-"des commandes externes."
+msgid "Install binaries, init script, sample config files and set permissions on the external command directory."
+msgstr "Installez les binaires, les scripts de démarrage, les fichiers de configuration fournis en exemple et réglez les permissions sur le dossier des commandes externes."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-fedora.xml:174
@@ -246,33 +223,15 @@ msgstr "Customisez la configuration"
 #: GettingStarted/quickstart-fedora.xml:188
 #: GettingStarted/quickstart-opensuse.xml:135
 #: GettingStarted/quickstart-ubuntu.xml:191
-msgid ""
-"Sample <link linkend=\"configuringnagios-config\">configuration files</link> "
-"have now been installed in the <filename class=\"directory\">/usr/local/"
-"nagios/etc</filename> directory. These sample files should work fine for "
-"getting started with Nagios. You'll need to make just one change before you "
-"proceed..."
-msgstr ""
-"Les exemples de <link linkend=\"configuringnagios-config\">fichiers de "
-"configuration</link> ont été installé dans le répertoire <filename class="
-"\"directory\">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple "
-"devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à "
-"modifier avant de pouvoir commencer..."
+msgid "Sample <link linkend=\"configuringnagios-config\">configuration files</link> have now been installed in the <filename class=\"directory\">/usr/local/nagios/etc</filename> directory. These sample files should work fine for getting started with Nagios. You'll need to make just one change before you proceed..."
+msgstr "Les exemples de <link linkend=\"configuringnagios-config\">fichiers de configuration</link> ont été installé dans le répertoire <filename class=\"directory\">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à modifier avant de pouvoir commencer..."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-fedora.xml:193
 #: GettingStarted/quickstart-opensuse.xml:140
 #: GettingStarted/quickstart-ubuntu.xml:196
-msgid ""
-"Edit the <filename>/usr/local/nagios/etc/objects/contacts.cfg</filename> "
-"config file with your favorite editor and change the email address "
-"associated with the nagiosadmin contact definition to the address you'd like "
-"to use for receiving alerts."
-msgstr ""
-"Éditez le fichier de configuration <filename>/usr/local/nagios/etc/objects/"
-"contacts.cfg</filename> avec votre éditeur de texte préféré et changez "
-"l'adresse de courrier électronique associée avec la définition de contact "
-"nagiosadmin par celle que vous souhaitez utiliser pour recevoir les alertes."
+msgid "Edit the <filename>/usr/local/nagios/etc/objects/contacts.cfg</filename> config file with your favorite editor and change the email address associated with the nagiosadmin contact definition to the address you'd like to use for receiving alerts."
+msgstr "Éditez le fichier de configuration <filename>/usr/local/nagios/etc/objects/contacts.cfg</filename> avec votre éditeur de texte préféré et changez l'adresse de courrier électronique associée avec la définition de contact nagiosadmin par celle que vous souhaitez utiliser pour recevoir les alertes."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-fedora.xml:199
@@ -291,7 +250,7 @@ msgstr ""
 #: GettingStarted/quickstart-opensuse.xml:150
 #: GettingStarted/quickstart-ubuntu.xml:208
 msgid "Configure the Web Interface"
-msgstr "Condfiguration de l'interface Web"
+msgstr "Configuration de l'interface Web"
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-fedora.xml:210
@@ -375,12 +334,8 @@ msgstr "Démarrage de Nagios"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-fedora.xml:252
 #: GettingStarted/quickstart-opensuse.xml:196
-msgid ""
-"Add Nagios to the list of system services and have it automatically start "
-"when the system boots."
-msgstr ""
-"Ajouter Nagios à la liste des services système et démarrer le "
-"automatiquement au démarrage du système."
+msgid "Add Nagios to the list of system services and have it automatically start when the system boots."
+msgstr "Ajouter Nagios à la liste des services système et démarrer le automatiquement au démarrage du système."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-fedora.xml:255
@@ -431,14 +386,8 @@ msgstr "Connexion à l'interface Web"
 #: GettingStarted/quickstart-fedora.xml:313
 #: GettingStarted/quickstart-opensuse.xml:220
 #: GettingStarted/quickstart-ubuntu.xml:278
-msgid ""
-"You should now be able to access the Nagios web interface at the URL below. "
-"You'll be prompted for the username (nagiosadmin) and password you specified "
-"earlier."
-msgstr ""
-"Vous devriez maintenant pouvoir vous connecter à l'interface web de Nagios à "
-"l'adresse ci-dessous.Il vous sera demandé un nom d'utilisateur (nagiosadmin) "
-"et le mot de passe que vous avez spécifié plus tôt."
+msgid "You should now be able to access the Nagios web interface at the URL below. You'll be prompted for the username (nagiosadmin) and password you specified earlier."
+msgstr "Vous devriez maintenant pouvoir vous connecter à l'interface web de Nagios à l'adresse ci-dessous.Il vous sera demandé un nom d'utilisateur (nagiosadmin) et le mot de passe que vous avez spécifié plus tôt."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-fedora.xml:317
@@ -451,17 +400,8 @@ msgstr "http://localhost/nagios/"
 #: GettingStarted/quickstart-fedora.xml:319
 #: GettingStarted/quickstart-opensuse.xml:226
 #: GettingStarted/quickstart-ubuntu.xml:284
-msgid ""
-"Click on the <guimenuitem>Service Detail</guimenuitem> navbar link to see "
-"details of what's being monitored on your local machine. It will take a few "
-"minutes for Nagios to check all the services associated with your machine, "
-"as the checks are spread out over time."
-msgstr ""
-"Cliquez sur le lien <guimenuitem>Service Detail</guimenuitem> de la barre de "
-"navigation pour voir les détails de ce que vous supervisez sur votre machine "
-"locale. Nagios va prendre quelques minutes pour contrôler l'ensemble des "
-"services de votre machine du fait que les contrôles sont répartis dans le "
-"temps."
+msgid "Click on the <guimenuitem>Service Detail</guimenuitem> navbar link to see details of what's being monitored on your local machine. It will take a few minutes for Nagios to check all the services associated with your machine, as the checks are spread out over time."
+msgstr "Cliquez sur le lien <guimenuitem>Service Detail</guimenuitem> de la barre de navigation pour voir les détails de ce que vous supervisez sur votre machine locale. Nagios va prendre quelques minutes pour contrôler l'ensemble des services de votre machine du fait que les contrôles sont répartis dans le temps."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/quickstart-fedora.xml:326
@@ -473,13 +413,8 @@ msgstr "Autres Modifications"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-fedora.xml:328
 #: GettingStarted/quickstart-opensuse.xml:235
-msgid ""
-"Make sure your machine's firewall rules are configured to allow access to "
-"the web server if you want to access the Nagios interface remotely."
-msgstr ""
-"Assurez-vous que les règles du pare-feu de la machine sont configurées pour "
-"autoriser l'accès au serveur web si vous souhaitez accéder à distance à "
-"l'interface de Nagios."
+msgid "Make sure your machine's firewall rules are configured to allow access to the web server if you want to access the Nagios interface remotely."
+msgstr "Assurez-vous que les règles du pare-feu de la machine sont configurées pour autoriser l'accès au serveur web si vous souhaitez accéder à distance à l'interface de Nagios."
 
 # type: Content of: <chapter><title>
 #: GettingStarted/quickstart-opensuse.xml:10
@@ -488,27 +423,13 @@ msgstr "Guide de démarrage rapide &name-opensuse;"
 
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/quickstart-opensuse.xml:13
-msgid ""
-"This guide is intended to provide you with simple instructions on how to "
-"install Nagios from source (code) on &name-opensuse; and have it monitoring "
-"your local machine inside of 20 minutes. No advanced installation options "
-"are discussed here - just the basics that will work for 95% of users who "
-"want to get started."
-msgstr ""
-"Ce guide est prévu pour vous fournir les instructions simples sur la façon "
-"d'installer Nagios depuis le code source sur &name-opensuse; et d'avoir la "
-"supervision de votre machine locale prête en moins de 20 minutes. Aucune "
-"option d'installation avancée n'est abordée ici - juste les notions basiques "
-"qui fonctionneront pour 95% des utilisateurs qui veulent démarrer."
+msgid "This guide is intended to provide you with simple instructions on how to install Nagios from source (code) on &name-opensuse; and have it monitoring your local machine inside of 20 minutes. No advanced installation options are discussed here - just the basics that will work for 95% of users who want to get started."
+msgstr "Ce guide est prévu pour vous fournir les instructions simples sur la façon d'installer Nagios depuis le code source sur &name-opensuse; et d'avoir la supervision de votre machine locale prête en moins de 20 minutes. Aucune option d'installation avancée n'est abordée ici - juste les notions basiques qui fonctionneront pour 95% des utilisateurs qui veulent démarrer."
 
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/quickstart-opensuse.xml:19
-msgid ""
-"These instructions were written based on an &name-opensuse; 10.2 "
-"installation."
-msgstr ""
-"Ces instructions ont été écrite en se basant sur une installation &name-"
-"opensuse; 10.2."
+msgid "These instructions were written based on an &name-opensuse; 10.2 installation."
+msgstr "Ces instructions ont été écrite en se basant sur une installation &name-opensuse; 10.2."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/quickstart-opensuse.xml:24
@@ -518,14 +439,8 @@ msgstr "Paquetages requis"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-opensuse.xml:26
-msgid ""
-"Make sure you've installed the following packages on your &name-opensuse; "
-"installation before continuing. You can use <command>yast</command> to "
-"install packages under &name-opensuse;."
-msgstr ""
-"Assurez-vous d'avoir installé les paquetages suivants sur votre installation "
-"&name-opensuse; avant de continuer. Vous pouvez utiliser la commande "
-"<command>yast</command> pour installer des paquetages sur &name-opensuse;."
+msgid "Make sure you've installed the following packages on your &name-opensuse; installation before continuing. You can use <command>yast</command> to install packages under &name-opensuse;."
+msgstr "Assurez-vous d'avoir installé les paquetages suivants sur votre installation &name-opensuse; avant de continuer. Vous pouvez utiliser la commande <command>yast</command> pour installer des paquetages sur &name-opensuse;."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: GettingStarted/quickstart-opensuse.xml:32
@@ -540,8 +455,7 @@ msgstr "librairies de développement C/C++"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-opensuse.xml:57
 msgid "Create a new nagios group. Add the nagios user to the group."
-msgstr ""
-"Créez un nouveau groupe nagios. Ajoutez l'utilisateur nagios au groupe."
+msgstr "Créez un nouveau groupe nagios. Ajoutez l'utilisateur nagios au groupe."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-opensuse.xml:59
@@ -574,26 +488,18 @@ msgstr ""
 #: GettingStarted/quickstart-opensuse.xml:128
 #: GettingStarted/quickstart-ubuntu.xml:184
 msgid "Don't start Nagios yet - there's still more that needs to be done..."
-msgstr ""
-"Ne démarrez pas Nagios maintenant - Il y a encore beaucoup à faire avant..."
+msgstr "Ne démarrez pas Nagios maintenant - Il y a encore beaucoup à faire avant..."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-opensuse.xml:152
 msgid "Install the Nagios web config file in the Apache conf.d directory."
-msgstr ""
-"Installez le fichier de configuration web de Nagios dans le répertoire conf."
-"d d'Apache."
+msgstr "Installez le fichier de configuration web de Nagios dans le répertoire conf.d d'Apache."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-opensuse.xml:158
 #: GettingStarted/quickstart-ubuntu.xml:217
-msgid ""
-"Create a nagiosadmin account for logging into the Nagios web interface. "
-"Remember the password you assign to this account - you'll need it later."
-msgstr ""
-"Créez un compte nagiosadmin pour la connexion à l'interface web de Nagios. "
-"Retenez le mot de passe que vous attribuez à ce compte - vous en aurez "
-"besoin plus tard."
+msgid "Create a nagiosadmin account for logging into the Nagios web interface. Remember the password you assign to this account - you'll need it later."
+msgstr "Créez un compte nagiosadmin pour la connexion à l'interface web de Nagios. Retenez le mot de passe que vous attribuez à ce compte - vous en aurez besoin plus tard."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/quickstart-opensuse.xml:162
@@ -639,61 +545,31 @@ msgstr "Ouvrir le centre de contrôle"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: GettingStarted/quickstart-opensuse.xml:247
-msgid ""
-"Select <guimenuitem>Open Administrator Settings</guimenuitem> to open the "
-"YaST administrator control center"
-msgstr ""
-"Sélectionnez le menu <guimenuitem>Ouvrir Réglages Administrateur</"
-"guimenuitem> pour ouvrir le centre de contrôle administrateur YaST"
+msgid "Select <guimenuitem>Open Administrator Settings</guimenuitem> to open the YaST administrator control center"
+msgstr "Sélectionnez le menu <guimenuitem>Ouvrir Réglages Administrateur</guimenuitem> pour ouvrir le centre de contrôle administrateur YaST"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: GettingStarted/quickstart-opensuse.xml:252
-msgid ""
-"Select <guimenuitem>Firewall</guimenuitem> from the <guimenu>Security and "
-"Users</guimenu> category"
-msgstr ""
-"Sélectionnez <guimenuitem>Pare-feu</guimenuitem> dans la catégorie "
-"<guimenu>Sécurité et Utilisateurs</guimenu>"
+msgid "Select <guimenuitem>Firewall</guimenuitem> from the <guimenu>Security and Users</guimenu> category"
+msgstr "Sélectionnez <guimenuitem>Pare-feu</guimenuitem> dans la catégorie <guimenu>Sécurité et Utilisateurs</guimenu>"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: GettingStarted/quickstart-opensuse.xml:256
-msgid ""
-"Click the <guimenuitem>Allowed Services</guimenuitem> option in the Firewall "
-"Configuration window"
-msgstr ""
-"Cliquez l'option <guimenuitem>Services Autorisés</guimenuitem> dans la "
-"fenêtre de configuration du pare-feu"
+msgid "Click the <guimenuitem>Allowed Services</guimenuitem> option in the Firewall Configuration window"
+msgstr "Cliquez l'option <guimenuitem>Services Autorisés</guimenuitem> dans la fenêtre de configuration du pare-feu"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: GettingStarted/quickstart-opensuse.xml:261
-msgid ""
-"Add <guimenuitem>HTTP Server</guimenuitem> to the allowed services list for "
-"the <guimenuitem>External Zone</guimenuitem>"
-msgstr ""
-"Ajoutez <guimenuitem>Serveur HTTP</guimenuitem> à la liste des services "
-"autorisés de la <guimenuitem>Zone Externe</guimenuitem>"
+msgid "Add <guimenuitem>HTTP Server</guimenuitem> to the allowed services list for the <guimenuitem>External Zone</guimenuitem>"
+msgstr "Ajoutez <guimenuitem>Serveur HTTP</guimenuitem> à la liste des services autorisés de la <guimenuitem>Zone Externe</guimenuitem>"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: GettingStarted/quickstart-opensuse.xml:266
-msgid ""
-"Click <guibutton>Next</guibutton> and <guibutton>Accept</guibutton> to "
-"activate the new firewall settings"
-msgstr ""
-"Cliquez <guibutton>Suivant</guibutton> et <guibutton>Accepter</guibutton> "
-"pour activer les nouveaux réglages du pare-feu"
+msgid "Click <guibutton>Next</guibutton> and <guibutton>Accept</guibutton> to activate the new firewall settings"
+msgstr "Cliquez <guibutton>Suivant</guibutton> et <guibutton>Accepter</guibutton> pour activer les nouveaux réglages du pare-feu"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/quickstart-opensuse.xml:271
-msgid ""
-"Configuring email notifications is outside the scope of this documentation. "
-"Refer to your system documentation, search the web, or look to the <ulink "
-"url=\"&url-nagios-community;\">NagiosCommunity.org wiki</ulink> for specific "
-"instructions on configuring your &name-opensuse; system to send email "
-"messages to external addresses."
-msgstr ""
-"La configuration des notifications par courrier électronique sort du cadre "
-"de cette documentation. Veuillez vous référer à votre documentation système, "
-"rechercher sur le web, ou consulter le  <ulink url=\"&url-nagios-community;"
-"\">NagiosCommunity.org wiki</ulink> pour les instructions spécifiques sur la "
-"configuration de votre système &name-opensuse; pour envoyer des messages "
-"électroniques vers des adresses externes."
+msgid "Configuring email notifications is outside the scope of this documentation. Refer to your system documentation, search the web, or look to the <ulink url=\"&url-nagios-community;\">NagiosCommunity.org wiki</ulink> for specific instructions on configuring your &name-opensuse; system to send email messages to external addresses."
+msgstr "La configuration des notifications par courrier électronique sort du cadre de cette documentation. Veuillez vous référer à votre documentation système, rechercher sur le web, ou consulter le  <ulink url=\"&url-nagios-community;\">NagiosCommunity.org wiki</ulink> pour les instructions spécifiques sur la configuration de votre système &name-opensuse; pour envoyer des messages électroniques vers des adresses externes."
+
