@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-02-09 14:28+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,37 +69,28 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><title>
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:11
 msgid "SNMP Trap Integration"
-msgstr ""
+msgstr "Intégration des interruptions SNMP"
 
 # type: Content of: <chapter><section><note><para>
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:17
-msgid ""
-"Nagios is not designed to be a replacement for a full-blown &protocol-snmp; "
-"management application like HP OpenView or <ulink url=\"http://www.opennms."
-"org/\">OpenNMS</ulink>. However, you can set things up so that &protocol-"
-"snmp; traps received by a host on your network can generate alerts in Nagios."
-msgstr ""
+msgid "Nagios is not designed to be a replacement for a full-blown &protocol-snmp; management application like HP OpenView or <ulink url=\"http://www.opennms.org/\">OpenNMS</ulink>. However, you can set things up so that &protocol-snmp; traps received by a host on your network can generate alerts in Nagios."
+msgstr "Nagios n'est pas prévu pour remplacer une application de gestion dédiée &protocol-snmp; comme HP OpenView ou <ulink url=\"http://www.opennms.org/\">OpenNMS</ulink>. Quoique qu'il en soit, vous pouvez régler les choses de façon à ce qu'une interruption &protocol-snmp; reçu par un des hôtes de votre réseau puisse générer une alerte dans Nagios."
 
 # type: Content of: <chapter><section><para>
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:24
-msgid ""
-"As if designed to make the Gods of Hypocrisy die of laughter, &protocol-"
-"snmp; is anything but simple. Translating &protocol-snmp; traps and getting "
-"them into Nagios (as passive check results) can be a bit tedious. To make "
-"this task easier, I suggest you check out Alex Burger's &protocol-snmp; Trap "
-"Translator project located at <ulink url=\"http://www.snmptt.org/\">http://"
-"www.snmptt.org</ulink>. When combined with Net-&protocol-snmp;, SNMPTT "
-"provides an enhanced trap handling system that can be integrated with Nagios."
-msgstr ""
+msgid "As if designed to make the Gods of Hypocrisy die of laughter, &protocol-snmp; is anything but simple. Translating &protocol-snmp; traps and getting them into Nagios (as passive check results) can be a bit tedious. To make this task easier, I suggest you check out Alex Burger's &protocol-snmp; Trap Translator project located at <ulink url=\"http://www.snmptt.org/\">http://www.snmptt.org</ulink>. When combined with Net-&protocol-snmp;, SNMPTT provides an enhanced trap handling system that can be integrated with Nagios."
+msgstr "Comme si il avait été prévu pour faire mourir de rire les Dieux de l'Hypocrisie, &protocol-snmp; est tout sauf simple. Traduire les interruptions &protocol-snmp; et les recevoir dans Nagios (comme résultat de contrôle passif) peu têtre assez pénible. Pour rendre les choses un peu plus facile, je vous propose de regarder du côté du projet de Alex Burger, &protocol-snmp; Trap Translator situé à <ulink url=\"http://www.snmptt.org/\">http://www.snmptt.org</ulink>. Combiné avec Net-&protocol-snmp;, SNMPTT fournit un système de gestion des interruptions amélioré qui peut être intégré à Nagios."
 
 # type: Content of: <chapter><section><para>
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:33
 msgid "Yep, that's all."
-msgstr ""
+msgstr "Oui, c'est tout."
+
