@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-02-27 15:44+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,141 +69,114 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><title>
 #: NagiosAddons/addons.xml:10
 msgid "Nagios Addons"
-msgstr ""
+msgstr "Addons Nagios"
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:15
-msgid ""
-"There are a lot of <quote>addon</quote> software packages that are available "
-"for Nagios. Addons can be used to extend Nagios' functionality or integrate "
-"Nagios with other applications."
-msgstr ""
+msgid "There are a lot of <quote>addon</quote> software packages that are available for Nagios. Addons can be used to extend Nagios' functionality or integrate Nagios with other applications."
+msgstr "Il existe beaucoup d'<quote>addons</quote> disponibles pour Nagios. Les addons peuvent être utilisés pour étendre les fonctionnalités de Nagios ou pour l'intégrer à d'autres applications."
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:19
 msgid "Addons are available for:"
-msgstr ""
+msgstr "Des addons sont disponibles pour:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:23
 msgid "Managing the config files through a web interface"
-msgstr ""
+msgstr "Gérer les fichiers de configuration au travers de l'interface web"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:27
 msgid "Monitoring remote hosts (*NIX, Windows, etc.)"
-msgstr ""
+msgstr "Superviser des hôtes distants (*NIX, Windows, etc.)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:31
 msgid "Submitting passive checks from remote hosts"
-msgstr ""
+msgstr "Soumettre des contrôles passifs depuis un hôte distant"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:35
 msgid "Simplifying/extending the notification logic"
-msgstr ""
+msgstr "Simplifier/étendre la logique de notification"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:39
 msgid "...and much more"
-msgstr ""
+msgstr "...et bien plus encore"
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:43
 msgid "You can find many addons for Nagios by visiting:"
-msgstr ""
+msgstr "Vous pouvez trouver beaucoup d'addons pour Nagios en visitant:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:47
 msgid "<ulink url=\"&url-nagios;\">Nagios.org</ulink>"
-msgstr ""
+msgstr "<ulink url=\"&url-nagios;\">Nagios.org</ulink>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:51
 msgid "<ulink url=\"http://www.sourceforge.net/\">SourceForge.net</ulink>"
-msgstr ""
+msgstr "<ulink url=\"http://www.sourceforge.net/\">SourceForge.net</ulink>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: NagiosAddons/addons.xml:56
 msgid "<ulink url=\"&url-nagiosexchange;/\">NagiosExchange.org</ulink>"
-msgstr ""
+msgstr "<ulink url=\"&url-nagiosexchange;/\">NagiosExchange.org</ulink>"
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:61
-msgid ""
-"I'll give a brief introduction to a few of the addons that I've developed "
-"for Nagios..."
-msgstr ""
+msgid "I'll give a brief introduction to a few of the addons that I've developed for Nagios..."
+msgstr "Je vous vous faire une brève introduction à quelques addons que j'ai développé pour Nagios..."
 
 # type: Content of: <chapter><section><title>
 #: NagiosAddons/addons.xml:66
-msgid ""
-"<anchor id=\"nagiosaddons-addons-nrpe\" xreflabel=\"NRPE daemon\" />&name-"
-"nrpe;"
-msgstr ""
+msgid "<anchor id=\"nagiosaddons-addons-nrpe\" xreflabel=\"NRPE daemon\" />&name-nrpe;"
+msgstr "<anchor id=\"nagiosaddons-addons-nrpe\" xreflabel=\"NRPE daemon\" />&name-nrpe;"
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:72
-msgid ""
-"&name-nrpe; is an addon that allows you to execute <xref linkend=\"thebasics-"
-"plugins\" /> on remote Linux/Unix hosts. This is useful if you need to "
-"monitor local resources/attributes like disk usage, CPU load, memory usage, "
-"etc. on a remote host. Similiar functionality can be accomplished by using "
-"the &plugin-byssh; plugin, although it can impose a higher CPU load on the "
-"monitoring machine - especially if you are monitoring hundreds or thousands "
-"of hosts."
-msgstr ""
+msgid "&name-nrpe; is an addon that allows you to execute <xref linkend=\"thebasics-plugins\" /> on remote Linux/Unix hosts. This is useful if you need to monitor local resources/attributes like disk usage, CPU load, memory usage, etc. on a remote host. Similiar functionality can be accomplished by using the &plugin-byssh; plugin, although it can impose a higher CPU load on the monitoring machine - especially if you are monitoring hundreds or thousands of hosts."
+msgstr "&name-nrpe; est un addon qui permet d'exécuter des <link linkend=\"thebasics-plugins\">plugins</link> sur des hôtes distants de type Linux/Unix. C'est utile quand vous avez besoin des ressources/attributs locaux comme l'utilisation disque, la charge CPU, l'utilisation mémoire, etc. sur un hôte distant. La même possibilité peut être obtenue avec le plugin &plugin-byssh; même si celui-ci impose une charge CPU plus importante sur le serveur de supervision, surtout si vous supervisez des centaines ou des milliers d'hôtes."
 
 # type: Content of: <chapter><section><para>
-#: NagiosAddons/addons.xml:80 NagiosAddons/addons.xml:97
-msgid ""
-"The &name-nrpe; addon and documentation can be found at <ulink url=\"&url-"
-"nagios;\">&url-nagios;</ulink>."
-msgstr ""
+#: NagiosAddons/addons.xml:80
+#: NagiosAddons/addons.xml:97
+msgid "The &name-nrpe; addon and documentation can be found at <ulink url=\"&url-nagios;\">&url-nagios;</ulink>."
+msgstr "L'addon &name-nrpe; et sa documentation peuvent trouvés sur <ulink url=\"&url-nagios;\">&url-nagios;</ulink>."
 
 # type: Content of: <chapter><section><title>
 #: NagiosAddons/addons.xml:85
-msgid ""
-"<anchor id=\"nagiosaddons-addons-nsca\" xreflabel=\"NSCA daemon\" />&name-"
-"nsca;"
-msgstr ""
+msgid "<anchor id=\"nagiosaddons-addons-nsca\" xreflabel=\"NSCA daemon\" />&name-nsca;"
+msgstr "<anchor id=\"nagiosaddons-addons-nsca\" xreflabel=\"NSCA daemon\" />&name-nsca;"
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:91
-msgid ""
-"&name-nsca; is an addon that allows you to send <xref linkend=\"thebasics-"
-"passivechecks\" /> results from remote Linux/Unix hosts to the Nagios daemon "
-"running on the monitoring server. This is very useful in <xref linkend="
-"\"advancedtopics-distributed\" /> and <xref linkend=\"advancedtopics-"
-"redundancy\" /> setups."
-msgstr ""
+msgid "&name-nsca; is an addon that allows you to send <xref linkend=\"thebasics-passivechecks\" /> results from remote Linux/Unix hosts to the Nagios daemon running on the monitoring server. This is very useful in <xref linkend=\"advancedtopics-distributed\" /> and <xref linkend=\"advancedtopics-redundancy\" /> setups."
+msgstr "&name-nsca; est un addon qui permet d'envoyer les résultats de <link linkend=\"thebasics-passivechecks\">contrôles passifs</link> provenant d'hôtes distants de type Linux/Unix au démon Nagios qui fonctionne sur le serveur de supervision. C'est très utile dans les <link linkend=\"advancedtopics-distributed\">environnements distribués</link> et les <link linkend=\"advancedtopics-redundancy\">environnements redondés</link>."
 
 # type: Content of: <chapter><section><title>
 #: NagiosAddons/addons.xml:103
 msgid "<anchor id=\"nagiosaddons-addons-ndoutils\" />NDOUtils"
-msgstr ""
+msgstr "<anchor id=\"nagiosaddons-addons-ndoutils\" />NDOUtils"
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:109
-msgid ""
-"NDOUtils is an addon that allows you to store all status information from "
-"Nagios in a MySQL database. Multiple instances of Nagios can all store their "
-"information in a central database for centralized reporting. This will "
-"likely serve as the basis for a new PHP-based web interface for Nagios in "
-"the future."
-msgstr ""
+msgid "NDOUtils is an addon that allows you to store all status information from Nagios in a MySQL database. Multiple instances of Nagios can all store their information in a central database for centralized reporting. This will likely serve as the basis for a new PHP-based web interface for Nagios in the future."
+msgstr "NDOUtils est un addon qui permet de stocker toutes les informations d'états de Nagios dans une base MySQL. Plusieurs instances de Nagios peuvent stocker leurs informlations dans une base centrale pour faire du reporting centralisé. Cela a de grandes chances d'être utilisé dans le futur pour la nouvelle interface web PHP de Nagios."
 
 # type: Content of: <chapter><section><para>
 #: NagiosAddons/addons.xml:115
-msgid ""
-"The NDOUtils addon and documentation can be found at <ulink url=\"&url-"
-"nagios;\">&url-nagios;</ulink>."
-msgstr ""
+msgid "The NDOUtils addon and documentation can be found at <ulink url=\"&url-nagios;\">&url-nagios;</ulink>."
+msgstr "NDOUtils et sa documentation peuvent être trouvés sur <ulink url=\"&url-nagios;\">&url-nagios;</ulink>."
+
