@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-03-03 13:50+0100\n"
+"PO-Revision-Date: 2009-03-06 16:24+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: ConfiguringNagios/objectdefinitions.xml:26
 #: ConfiguringNagios/configcgi.xml:12
 msgid "When creating and/or editing configuration files, keep the following in mind:"
-msgstr " Quand vous créez ou modifiez des fichiers de configuration, n'oubliez pas que:"
+msgstr "Quand vous créez ou modifiez des fichiers de configuration, n'oubliez pas que:"
 
 # type: Content of: <chapter><note><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:23
@@ -32,7 +32,7 @@ msgstr "Les noms des variables doivent commencer au début de la ligne - ne mett
 #: ConfiguringNagios/configmain.xml:29
 #: ConfiguringNagios/configcgi.xml:23
 msgid "Variable names are case-sensitive"
-msgstr "Les noms des variables respectent la casse (majuscule/minuscule) "
+msgstr "Les noms des variables respectent la casse (majuscule/minuscule)"
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/configmain.xml:46
@@ -356,7 +356,7 @@ msgstr "Options du fichier de configuration des CGI"
 # type: Content of: <chapter><note><itemizedlist><listitem><para>
 #: ConfiguringNagios/configcgi.xml:15
 msgid "Lines that start with a '#' character are taken to be comments and are not processed"
-msgstr "Les lignes commençant par le caractère '#' sont considérées comme des commentaires et ne sont donc pas traitées "
+msgstr "Les lignes commençant par le caractère '#' sont considérées comme des commentaires et ne sont donc pas traitées"
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/configcgi.xml:28
@@ -366,7 +366,7 @@ msgstr "Exemple de configuration"
 # type: Content of: <chapter><section><tip><para>
 #: ConfiguringNagios/configcgi.xml:29
 msgid "A sample CGI configuration file (<filename>/usr/local/nagios/etc/cgi.cfg</filename>) is installed for you when you follow the <link linkend=\"gettingstarted-quickstart\">quickstart installation guide</link>."
-msgstr "Un exemple de fichier de configuration pour les CGI (<filename>/usr/local/nagios/etc/cgi.cfg</filename>) est créé pour vous quand vous suivez le <link linkend=\"gettingstarted-quickstart\">guide rapide d'installation</link>. "
+msgstr "Un exemple de fichier de configuration pour les CGI (<filename>/usr/local/nagios/etc/cgi.cfg</filename>) est créé pour vous quand vous suivez le <link linkend=\"gettingstarted-quickstart\">guide rapide d'installation</link>."
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/configcgi.xml:35
@@ -391,7 +391,7 @@ msgstr "<anchor id=\"configuringnagios-configcgi-physical_html_path\"/>Chemin d'
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:104
 msgid "This is the physical path where the HTML files for Nagios are kept on your workstation or server.  Nagios assumes that the documentation and images files (used by the CGIs) are stored in subdirectories called <filename class=\"directory\">docs/</filename> and <filename class=\"directory\">images/</filename>, respectively."
-msgstr "C'est le chemin du répertoire physique de votre serveur où sont stockés les fichiers HTML de Nagios. Nagios suppose que la documentation et les images (utilisées par les CGI) sont stockées dans des sous-répertoires nommés respectivement <filename class=\"directory\">docs/</filename> et <filename class=\"directory\">images/</filename>. "
+msgstr "C'est le chemin du répertoire physique de votre serveur où sont stockés les fichiers HTML de Nagios. Nagios suppose que la documentation et les images (utilisées par les CGI) sont stockées dans des sous-répertoires nommés respectivement <filename class=\"directory\">docs/</filename> et <filename class=\"directory\">images/</filename>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:110
@@ -406,7 +406,7 @@ msgstr "Si, lors de l'accès à Nagios via un navigateur web, vous pointez sur u
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:137
 msgid ", this value should be /nagios. Basically, its the path portion of the URL that is used to access the Nagios HTML pages."
-msgstr ", cette variable doit avoir pour valeur /nagios. En fait, il s'agit de la partie contenant le chemin d'accès aux pages HTML de Nagios dans l'URL utilisée pour accéder aux pages HTML de Nagios. "
+msgstr ", cette variable doit avoir pour valeur /nagios. En fait, il s'agit de la partie contenant le chemin d'accès aux pages HTML de Nagios dans l'URL utilisée pour accéder aux pages HTML de Nagios."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:142
@@ -421,12 +421,12 @@ msgstr "Cette option détermine si les CGI utiliseront l'authentification et les
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configcgi.xml:179
 msgid "0 = Don't use authentication functionality"
-msgstr "0 = Ne pas utiliser l'authentification "
+msgstr "0 = Ne pas utiliser l'authentification"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configcgi.xml:182
 msgid "1 = Use authentication and authorization functionality (default)"
-msgstr "1 = Utiliser l'authentification et les autorisations (par défaut) "
+msgstr "1 = Utiliser l'authentification et les autorisations (par défaut)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:188
@@ -441,7 +441,7 @@ msgstr "Cette variable définit un nom d'utilisateur par défaut pour accéder a
 # type: Content of: <chapter><section><section><important><para>
 #: ConfiguringNagios/configcgi.xml:219
 msgid "Do not define a default username unless you are running a secure web server and are sure that everyone who has access to the CGIs has been authenticated in some manner! If you define this variable, anyone who has not authenticated to the web server will inherit all rights you assign to this user!"
-msgstr "Ne définissez pas un utilisateur par défaut à moins que vous n'utilisiez un serveur web sécurisé et que vous soyez sûr que tous ceux qui ont accès aux CGI ont été authentifiés d'une manière ou d'une autre ! Si vous définissez cette variable, ceux qui ne se sont pas authentifiés auprès du serveur web hériteront de tous les droits que vous donnez à cet utilisateur ! "
+msgstr "Ne définissez pas un utilisateur par défaut à moins que vous n'utilisiez un serveur web sécurisé et que vous soyez sûr que tous ceux qui ont accès aux CGI ont été authentifiés d'une manière ou d'une autre ! Si vous définissez cette variable, ceux qui ne se sont pas authentifiés auprès du serveur web hériteront de tous les droits que vous donnez à cet utilisateur !"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:226
@@ -451,7 +451,7 @@ msgstr "<anchor id=\"configuringnagios-configcgi-authorized_for_system_informati
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:252
 msgid "This is a comma-delimited list of names of authenticated users who can view system/process information in the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information CGI</link>.  Users in this list are not automatically authorized to issue system/process commands. If you want users to be able to issue system/process commands as well, you must add them to the <link linkend=\"configuringnagios-configcgi-authorized_for_system_commands\">authorized_for_system_commands</link> variable. More information on how to setup authentication and configure authorization for the CGIs can be found <link linkend=\"configuringnagios-cgiauth\">here</link>."
-msgstr "C'est une liste de noms d'utilisateurs authentifiés, séparés par des virgules, qui peuvent voir les informations sur le système et le processus dans les CGI d'informations complémentaires. Les utilisateurs de cette liste ne sont pas automatiquement autorisés à passer des commandes système/processus. Si vous voulez que des utilisateurs puissent aussi passer ces commandes, il faut les ajouter à la variable <link linkend=\"configuringnagios-configcgi-authorized_for_system_commands\">authorized_for_system_commands</link>. Vous trouverez plus d'informations sur la façon de configurer l'authentification et les autorisations des CGI <link linkend=\"configuringnagios-cgiauth\">ici</link>. "
+msgstr "C'est une liste de noms d'utilisateurs authentifiés, séparés par des virgules, qui peuvent voir les informations sur le système et le processus dans les CGI d'informations complémentaires. Les utilisateurs de cette liste ne sont pas automatiquement autorisés à passer des commandes système/processus. Si vous voulez que des utilisateurs puissent aussi passer ces commandes, il faut les ajouter à la variable <link linkend=\"configuringnagios-configcgi-authorized_for_system_commands\">authorized_for_system_commands</link>. Vous trouverez plus d'informations sur la façon de configurer l'authentification et les autorisations des CGI <link linkend=\"configuringnagios-cgiauth\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:262
@@ -461,7 +461,7 @@ msgstr "<anchor id=\"configuringnagios-configcgi-authorized_for_system_commands\
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:288
 msgid "This is a comma-delimited list of names of authenticated users who can issue system/process commands via the <link linkend=\"thebasics-cgis-cmd_cgi\">command CGI</link>. Users in this list are not automatically authorized to view system/process information. If you want users to be able to view system/process information as well, you must add them to the <link linkend=\"configuringnagios-configcgi-authorized_for_system_information\">authorized_for_system_information</link> variable. More information on how to setup authentication and configure authorization for the CGIs can be found <link linkend=\"configuringnagios-cgiauth\">here</link>."
-msgstr "C'est une liste de nom d'utilisateurs authentifiés, séparés par des virgules, qui peuvent passer des commandes système/processus via le <link linkend=\"thebasics-cgis-cmd_cgi\">CGI de commande</link>. Les utilisateurs de cette liste ne sont pas automatiquement autorisés à visualiser les informations sur le système et le processus. Si vous voulez que des utilisateurs puissent visualiser ces informations aussi, il faut les ajouter à la variable <link linkend=\"configuringnagios-configcgi-authorized_for_system_information\">authorized_for_system_information</link>. Vous trouverez plus d'informations sur la façon de configurer l'authentification et les autorisations des CGI <link linkend=\"configuringnagios-cgiauth\">ici</link>. "
+msgstr "C'est une liste de nom d'utilisateurs authentifiés, séparés par des virgules, qui peuvent passer des commandes système/processus via le <link linkend=\"thebasics-cgis-cmd_cgi\">CGI de commande</link>. Les utilisateurs de cette liste ne sont pas automatiquement autorisés à visualiser les informations sur le système et le processus. Si vous voulez que des utilisateurs puissent visualiser ces informations aussi, il faut les ajouter à la variable <link linkend=\"configuringnagios-configcgi-authorized_for_system_information\">authorized_for_system_information</link>. Vous trouverez plus d'informations sur la façon de configurer l'authentification et les autorisations des CGI <link linkend=\"configuringnagios-cgiauth\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:298
@@ -481,7 +481,7 @@ msgstr "<anchor id=\"configuringnagios-configcgi-authorized_for_all_hosts\"/>Acc
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:359
 msgid "This is a comma-delimited list of names of authenticated users who can view status and configuration information for all hosts. Users in this list are also automatically authorized to view information for all services. Users in this list are not automatically authorized to issue commands for all hosts or services. If you want users able to issue commands for all hosts and services as well, you must add them to the <link linkend=\"configuringnagios-configcgi-authorized_for_all_host_commands\">authorized_for_all_host_commands</link> variable. More information on how to setup authentication and configure authorization for the CGIs can be found <link linkend=\"configuringnagios-cgiauth\">here</link>."
-msgstr "C'est une liste de noms d'utilisateurs authentifiés, séparés par des virgules, qui peuvent voir l'état et la configuration de tous les hôtes. Les utilisateurs de cette liste sont également automatiquement autorisés à voir les informations de tous les services. Les utilisateurs de cette liste ne sont pas automatiquement autorisés à envoyer des commandes aux hôtes ou aux services. Si vous voulez que des utilisateurs puissent aussi envoyer des commandes, il faut les ajouter à la variable <link linkend=\"configuringnagios-configcgi-authorized_for_all_host_commands\">authorized_for_all_host_commands</link>. Vous trouverez plus d'informations sur la façon de configurer l'authentification et les autorisations des CGI <link linkend=\"configuringnagios-cgiauth\">ici</link>. "
+msgstr "C'est une liste de noms d'utilisateurs authentifiés, séparés par des virgules, qui peuvent voir l'état et la configuration de tous les hôtes. Les utilisateurs de cette liste sont également automatiquement autorisés à voir les informations de tous les services. Les utilisateurs de cette liste ne sont pas automatiquement autorisés à envoyer des commandes aux hôtes ou aux services. Si vous voulez que des utilisateurs puissent aussi envoyer des commandes, il faut les ajouter à la variable <link linkend=\"configuringnagios-configcgi-authorized_for_all_host_commands\">authorized_for_all_host_commands</link>. Vous trouverez plus d'informations sur la façon de configurer l'authentification et les autorisations des CGI <link linkend=\"configuringnagios-cgiauth\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:370
@@ -551,12 +551,12 @@ msgstr "Cette image peut être au format GIF, JPEG, PNG, ou GD2. Cependant, le f
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:562
 msgid "<anchor id=\"configuringnagios-configcgi-default_statusmap_layout\"/>Default Statusmap Layout Method"
-msgstr "<anchor id=\"configuringnagios-configcgi-default_statusmap_layout\"/>Dessin de la cartographie des états: valeur par défaut "
+msgstr "<anchor id=\"configuringnagios-configcgi-default_statusmap_layout\"/>Dessin de la cartographie des états: valeur par défaut"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:588
 msgid "This option allows you to specify the default layout method used by the <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap CGI</link>. Valid options are:"
-msgstr "Cette option définit la méthode de dessin utilisée par défaut par le <link linkend=\"thebasics-cgis-statusmap_cgi\">CGI de cartographie des états</link>. Les valeurs autorisées sont: "
+msgstr "Cette option définit la méthode de dessin utilisée par défaut par le <link linkend=\"thebasics-cgis-statusmap_cgi\">CGI de cartographie des états</link>. Les valeurs autorisées sont:"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><thead><row><entry><para>
 #: ConfiguringNagios/configcgi.xml:596
@@ -688,12 +688,12 @@ msgstr "Ce fichier doit être un monde VRML valide (c.a.d que vous devez pouvoir
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:699
 msgid "<anchor id=\"configuringnagios-configcgi-default_statuswrl_layout\"/>Default Statuswrl Layout Method"
-msgstr "<anchor id=\"configuringnagios-configcgi-default_statuswrl_layout\"/>Dessin du monde des états: valeur par défaut "
+msgstr "<anchor id=\"configuringnagios-configcgi-default_statuswrl_layout\"/>Dessin du monde des états: valeur par défaut"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:725
 msgid "This option allows you to specify the default layout method used by the <link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl CGI</link>. Valid options are:"
-msgstr "Cette option définit la méthode utilisée par défaut pour dessiner le monde VRML avec le  <link linkend=\"thebasics-cgis-statuswrl_cgi\">CGI concerné (Statusvrml)</link>. Les options autorisées sont: "
+msgstr "Cette option définit la méthode utilisée par défaut pour dessiner le monde VRML avec le  <link linkend=\"thebasics-cgis-statuswrl_cgi\">CGI concerné (Statusvrml)</link>. Les options autorisées sont:"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:778
@@ -703,7 +703,7 @@ msgstr "<anchor id=\"configuringnagios-configcgi-refresh_rate\"/>Fréquence de r
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:804
 msgid "This option allows you to specify the number of seconds between page refreshes for the <link linkend=\"thebasics-cgis-status_cgi\">status</link>, <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link>, and <link linkend=\"thebasics-cgis-extinfo_cgi\">extinfo</link> CGIs."
-msgstr "Cette option vous permet de spécifier le délai en secondes entre deux rafraîchissements de page dans les <link linkend=\"thebasics-cgis-status_cgi\">CGI d'état</link>, de <link linkend=\"thebasics-cgis-statusmap_cgi\">cartographie des états</link>, et <link linkend=\"thebasics-cgis-extinfo_cgi\">d'informations complémentaires</link>. "
+msgstr "Cette option vous permet de spécifier le délai en secondes entre deux rafraîchissements de page dans les <link linkend=\"thebasics-cgis-status_cgi\">CGI d'état</link>, de <link linkend=\"thebasics-cgis-statusmap_cgi\">cartographie des états</link>, et <link linkend=\"thebasics-cgis-extinfo_cgi\">d'informations complémentaires</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:811
@@ -733,7 +733,7 @@ msgstr "<anchor id=\"configuringnagios-configcgi-ping_syntax\"/>Syntaxe Ping"
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:884
 msgid "This option determines what syntax should be used when attempting to ping a host from the"
-msgstr "Cette option définit quelle syntaxe doit être utilisée quand on veut tester un hôte avec ping à travers l'interface "
+msgstr "Cette option définit quelle syntaxe doit être utilisée quand on veut tester un hôte avec ping à travers l'interface"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para><acronym>
 #: ConfiguringNagios/configcgi.xml:885
@@ -746,7 +746,7 @@ msgstr "WAP"
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configcgi.xml:885
 msgid "interface (using the <link linkend=\"thebasics-cgis-statuswml_cgi\">statuswml CGI</link>.  You must include the full path to the ping binary, along with all required options.  The <varname>$HOSTADDRESS$</varname> macro is substituted with the address of the host before the command is executed."
-msgstr "en utilisant le <link linkend=\"thebasics-cgis-statuswml_cgi\">CGI statuswml</link>. Vous devez inclure le chemin complet vers le fichier binaire exécutable de ping, ainsi que les paramètres passés à la commande. La macro <varname>$HOSTADDRESS$</varname> est remplacée par l'adresse de l'hôte avant que la commande ne soit exécutée. "
+msgstr "en utilisant le <link linkend=\"thebasics-cgis-statuswml_cgi\">CGI statuswml</link>. Vous devez inclure le chemin complet vers le fichier binaire exécutable de ping, ainsi que les paramètres passés à la commande. La macro <varname>$HOSTADDRESS$</varname> est remplacée par l'adresse de l'hôte avant que la commande ne soit exécutée."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configcgi.xml:891
