@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-03-13 16:37+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,280 +69,118 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><title>
 #: SecurityAndPerformanceTuning/tuning.xml:11
 msgid "Tuning Nagios For Maximum Performance"
-msgstr ""
+msgstr "Régler Nagios pour des performances maximales"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/tuning.xml:16
-msgid ""
-"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/tuning.png\" "
-"format=\"PNG\"/> </imageobject> </inlinemediaobject> So you've finally got "
-"Nagios up and running and you want to know how you can tweak it a bit. "
-"Tuning Nagios to increase performance can be necessary when you start "
-"monitoring a large number (&gt; 1,000) of hosts and services. Here are a few "
-"things to look at for optimizing Nagios..."
-msgstr ""
+msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/tuning.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> So you've finally got Nagios up and running and you want to know how you can tweak it a bit. Tuning Nagios to increase performance can be necessary when you start monitoring a large number (&gt; 1,000) of hosts and services. Here are a few things to look at for optimizing Nagios..."
+msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/tuning.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Vous avez finalement réussi à installer et lancer Nagios et souhaitez savoir comment le régler plus finement. Régler Nagios pour améliorer ses performances peut être nécessaire quand vous commencez à superviser un grand nombre (&gt; 1000) d'hôtes et services. Voici quelques trucs et astuces pour optimiser Nagios..."
 
 # type: Content of: <chapter><section><title>
 #: SecurityAndPerformanceTuning/tuning.xml:28
 msgid "Optimization Tips:"
-msgstr ""
+msgstr "Trucs et astuces d'optimisation:"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:32
-msgid ""
-"Graph performance statistics with <productname>MRTG</productname>. In order "
-"to keep track of how well your Nagios installation handles load over time "
-"and how your configuration changes affect it, you should be graphing several "
-"important statistics with <productname>MRTG</productname>. This is really, "
-"really, really useful when it comes to tuning the performance of a Nagios "
-"installation. Really. Information on how to do this can be found <xref "
-"linkend=\"securityandperformancetuning-mrtggraphs\" />here."
-msgstr ""
+msgid "Graph performance statistics with <productname>MRTG</productname>. In order to keep track of how well your Nagios installation handles load over time and how your configuration changes affect it, you should be graphing several important statistics with <productname>MRTG</productname>. This is really, really, really useful when it comes to tuning the performance of a Nagios installation. Really. Information on how to do this can be found <xref linkend=\"securityandperformancetuning-mrtggraphs\" />here."
+msgstr "Graphez les statistiques de performance collectées avec <productname>MRTG</productname>. Vous devriez en effet grapher les quelques statistiques importantes produites avec <productname>MRTG</productname> pour garder des traces de comment votre installation de Nagios se comporte dans le temps au niveau charge et de comment les changements de configuration l'affectent. Cela devient vraiment, vraiment, vraiment utile quand il s'agit d'optimiser les performances d'une installation Nagios. Les informations sur la façon de le faire se trouvent <link linkend=\"securityandperformancetuning-mrtggraphs\" >ici</linkend>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:44
-msgid ""
-"Use large installation tweaks. Enabling the <link linkend="
-"\"configuringnagios-configmain-use_large_installation_tweaks"
-"\">use_large_installation_tweaks</link> option may provide you with better "
-"performance. Read more about what this option does <xref linkend="
-"\"securityandperformancetuning-largeinstalltweaks\" />here."
-msgstr ""
+msgid "Use large installation tweaks. Enabling the <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link> option may provide you with better performance. Read more about what this option does <xref linkend=\"securityandperformancetuning-largeinstalltweaks\" />here."
+msgstr "Utilisez les trucs et astuces pour les installations de grande dimension. Activer l'option <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link> peut vous donner de meilleures performances. Lisez plus d'informations sur ce que fait cette option <link linkend=\"securityandperformancetuning-largeinstalltweaks\">ici</linkend>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:52
-msgid ""
-"Disable environment macros. Macros are normally made available to check, "
-"notification, event handler, etc. commands as environment variables. This "
-"can be a problem in a large Nagios installation, as it consumes some "
-"additional memory and (more importantly) more CPU. If your scripts don't "
-"need to access the macros as environment variables (e.g. you pass all "
-"necessary macros on the command line), you don't need this feature. You can "
-"prevent macros from being made available as environment variables by using "
-"the <link linkend=\"configuringnagios-configmain-enable_environment_macros"
-"\">enable_environment_macros</link> option."
-msgstr ""
+msgid "Disable environment macros. Macros are normally made available to check, notification, event handler, etc. commands as environment variables. This can be a problem in a large Nagios installation, as it consumes some additional memory and (more importantly) more CPU. If your scripts don't need to access the macros as environment variables (e.g. you pass all necessary macros on the command line), you don't need this feature. You can prevent macros from being made available as environment variables by using the <link linkend=\"configuringnagios-configmain-enable_environment_macros\">enable_environment_macros</link> option."
+msgstr "Désactivez les macros d'environnement. Les macros sont normalement mises à disposition des commandes, contrôles, notifications, etc comme variables d'environnement. Cela peut devenir un problème sur une installation Nagios de grande dimension parce que cela consomme plus de mémoire et (plus important) plus de CPU. Si vos scripts n'ont pas besoin d'avoir accès aux macros comme variables d'environnement (vous pouvez passer par exemple toutes les macros nécessaires en argument de la ligne de commande), vous n'avez alors pas besoin de cette fonctionnalité. Vous pouvez empêcher de rendre les macros disponibles comme variables d'environnement en utilisant l'option <link linkend=\"configuringnagios-configmain-enable_environment_macros\">enable_environment_macros</link>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:65
-msgid ""
-"Check Result Reaper Frequency. The <link linkend=\"configuringnagios-"
-"configmain-check_result_reaper_frequency\">check_result_reaper_frequency</"
-"link> variable determines how often Nagios should check for host and service "
-"check results that need to be processed. The maximum amount of time it can "
-"spend processing those results is determined by the max reaper time (see "
-"below). If your reaper frequency is too high (too infrequent), you might see "
-"high latencies for host and service checks."
-msgstr ""
+msgid "Check Result Reaper Frequency. The <link linkend=\"configuringnagios-configmain-check_result_reaper_frequency\">check_result_reaper_frequency</link> variable determines how often Nagios should check for host and service check results that need to be processed. The maximum amount of time it can spend processing those results is determined by the max reaper time (see below). If your reaper frequency is too high (too infrequent), you might see high latencies for host and service checks."
+msgstr "Fréquence de consolidation des résultats de contrôle. La variable <link linkend=\"configuringnagios-configmain-check_result_reaper_frequency\">check_result_reaper_frequency</link> détermine la fréquence à laquelle Nagios doit vérifier la présence de résultats de contrôles d'hôtes et de services qui doivent être traités. Le temps maximum qu'il doit passer à traiter ces résultats est déterminé par la variable temps maximum de consolidation (voir ci-dessous). Si votre fréquence de consolidation est trop élevée (pas assez fréquente), vous pourriez voir apparaître des latences importantes dans les contrôles d'hôtes et de services."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:76
-msgid ""
-"Max Reaper Time. The <link linkend=\"configuringnagios-configmain-"
-"max_check_result_reaper_time\">max_check_result_reaper_time</link> variables "
-"determines the maximum amount of time the Nagios daemon can spend processing "
-"the results of host and service checks before moving on to other things - "
-"like executing new host and service checks. Too high of a value can result "
-"in large latencies for your host and service checks. Too low of a value can "
-"have the same effect. If you're experiencing high latencies, adjust this "
-"variable and see what effect it has. Again, you should be <xref linkend="
-"\"securityandperformancetuning-mrtggraphs\" />graphing statistics in order "
-"to make this determination."
-msgstr ""
+msgid "Max Reaper Time. The <link linkend=\"configuringnagios-configmain-max_check_result_reaper_time\">max_check_result_reaper_time</link> variables determines the maximum amount of time the Nagios daemon can spend processing the results of host and service checks before moving on to other things - like executing new host and service checks. Too high of a value can result in large latencies for your host and service checks. Too low of a value can have the same effect. If you're experiencing high latencies, adjust this variable and see what effect it has. Again, you should be <xref linkend=\"securityandperformancetuning-mrtggraphs\" />graphing statistics in order to make this determination."
+msgstr "Temps maximum de consolidation. La variable <link linkend=\"configuringnagios-configmain-max_check_result_reaper_time\">max_check_result_reaper_time</link> détermine le temps maximum que le démon Nagios peut passer à traiter les résultats de contrôles d'hôtes et de services avant de pouvoir faire autre chose - comme exécuter de nouveaux contrôles d'hôtes et de services. Une valeur trop élevée peut donner des latences importantes pour les contrôles d'hôtes et de services. Si vous rencontrez des problèmes de latences élevées, ajustez cette variable et vérifiez le résultat de vos réglages. Une nouvelle fois, vous devriez grapher les <link linkend=\"securityandperformancetuning-mrtggraphs\">statistiques avec MRTG</linkend> pour pouvoir prendre cette décision."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:90
-msgid ""
-"Adjust buffer slots. You may need to adjust the value of the <link linkend="
-"\"configuringnagios-configmain-external_command_buffer_slots"
-"\">external_command_buffer_slots</link> option. Graphing buffer slot "
-"statistics with <xref linkend=\"securityandperformancetuning-mrtggraphs\" /"
-">MRTG (see above)  is critical in determining what values you should use for "
-"this option."
-msgstr ""
+msgid "Adjust buffer slots. You may need to adjust the value of the <link linkend=\"configuringnagios-configmain-external_command_buffer_slots\">external_command_buffer_slots</link> option. Graphing buffer slot statistics with <xref linkend=\"securityandperformancetuning-mrtggraphs\" />MRTG (see above)  is critical in determining what values you should use for this option."
+msgstr "Ajuster la taille du tampon. Vous pouvez avoir à régler la valeur de l'option <link linkend=\"configuringnagios-configmain-external_command_buffer_slots\">external_command_buffer_slots</link>. Grapher les statistiques liées au tampon avec <link linkend=\"securityandperformancetuning-mrtggraphs\">MRTG (voir au dessus) est critique pour pouvoir déterminer les valeurs à utiliser pour cette option."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:100
-msgid ""
-"Check service latencies to determine best value for maximum concurrent "
-"checks. Nagios can restrict the number of maximum concurrently executing "
-"service checks to the value you specify with the <link linkend="
-"\"configuringnagios-configmain-max_concurrent_checks"
-"\">max_concurrent_checks</link> option. This is good because it gives you "
-"some control over how much load Nagios will impose on your monitoring host, "
-"but it can also slow things down. If you are seeing high latency values "
-"(&gt; 10 or 15 seconds) for the majority of your service checks (via the "
-"<link linkend=\"thebasics-cgis-extinfo_cgi\">extinfo CGI</link>), you are "
-"probably starving Nagios of the checks it needs. That's not Nagios's fault - "
-"its yours. Under ideal conditions, all service checks would have a latency "
-"of 0, meaning they were executed at the exact time that they were scheduled "
-"to be executed. However, it is normal for some checks to have small latency "
-"values. I would recommend taking the minimum number of maximum concurrent "
-"checks reported when running Nagios with the -s command line argument and "
-"doubling it. Keep increasing it until the average check latency for your "
-"services is fairly low. More information on service check scheduling can be "
-"found <xref linkend=\"advancedtopics-checkscheduling\" />here."
-msgstr ""
+msgid "Check service latencies to determine best value for maximum concurrent checks. Nagios can restrict the number of maximum concurrently executing service checks to the value you specify with the <link linkend=\"configuringnagios-configmain-max_concurrent_checks\">max_concurrent_checks</link> option. This is good because it gives you some control over how much load Nagios will impose on your monitoring host, but it can also slow things down. If you are seeing high latency values (&gt; 10 or 15 seconds) for the majority of your service checks (via the <link linkend=\"thebasics-cgis-extinfo_cgi\">extinfo CGI</link>), you are probably starving Nagios of the checks it needs. That's not Nagios's fault - its yours. Under ideal conditions, all service checks would have a latency of 0, meaning they were executed at the exact time that they were scheduled to be executed. However, it is normal for some checks to have small latency values. I would recommend taking the minimum number of maximum concurrent checks reported when running Nagios with the -s command line argument and doubling it. Keep increasing it until the average check latency for your services is fairly low. More information on service check scheduling can be found <xref linkend=\"advancedtopics-checkscheduling\" />here."
+msgstr "Vérifiez la latence des services pour déterminer la meilleure valeur pour le nombre maximal de contrôles en parallèle. Nagios peut restreindre le nombre maximal de contrôles de service exécutés en parallèle à la valeur que vous spécifiez dans le paramètre <link linkend=\"configuringnagios-configmain-max_concurrent_checks\">max_concurrent_checks</link>. Cela vous permet de gérer la charge que Nagios impose à votre hôte de supervision, mais cela peut aussi ralentir le traitement. Si vous notez des latences importantes (> 10 ou 15 secondes) pour la majorité de vos contrôles de service (via le <link linkend=\"thebasics-cgis-extinfo_cgi\">CGI d'informations complémentaires</linkend>), vous privez sans doute Nagios des contrôles dont il a besoin. Ce n'est pas la faute de Nagios - c'est la vôtre. Dans des conditions idéales, tous les contrôles de service ont une latence de 0, ce qui signifie qu'ils sont exécutés au moment précis où ils ont été ordonnancés. Ceci dit, il est normal que certains contrôles aient de petites latences. Je recommanderais de doubler la valeur que propose Nagios pour le nombre minimal de contrôles en parallèle, fournie lorsque Nagios est lancé avec le paramètre -s. Continuez à augmenter cette valeur tant que la latence moyenne pour vos services reste assez basse. Vous trouverez plus d'informations sur l'ordonnancement des contrôles de service <link linkend=\"advancedtopics-checkscheduling\">ici</linkend>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:123
-msgid ""
-"Use passive checks when possible. The overhead needed to process the results "
-"of <xref linkend=\"thebasics-passivechecks\" />passive service checks is "
-"much lower than that of <quote>normal</quote> active checks, so make use of "
-"that piece of info if you're monitoring a slew of services. It should be "
-"noted that passive service checks are only really useful if you have some "
-"external application doing some type of monitoring or reporting, so if "
-"you're having Nagios do all the work, this won't help things."
-msgstr ""
+msgid "Use passive checks when possible. The overhead needed to process the results of <xref linkend=\"thebasics-passivechecks\" />passive service checks is much lower than that of <quote>normal</quote> active checks, so make use of that piece of info if you're monitoring a slew of services. It should be noted that passive service checks are only really useful if you have some external application doing some type of monitoring or reporting, so if you're having Nagios do all the work, this won't help things."
+msgstr "Utilisez des contrôles passifs à chaque fois que c'est possible. La surcharge induite par le traitement des résultats des <link linkend=\"thebasics-passivechecks\">contrôles passifs</linkend> de service est bien moindre que celle des contrôles actifs <quote>normaux</quote>, donc prenez cette information en compte si vous supervisez de nombreux services. Notez que les contrôles passifs de service ne sont réellement utiles que si une application externe réalise une partie de la supervision ou produit des rapports ; si c'est Nagios qui réalise tout le travail, ceci ne changera rien."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:134
-msgid ""
-"Avoid using interpreted plugins. One thing that will significantly reduce "
-"the load on your monitoring host is the use of compiled (C/C++, etc.) "
-"plugins rather than interpreted script (Perl, etc) plugins. While Perl "
-"scripts and such are easy to write and work well, the fact that they are "
-"compiled/interpreted at every execution instance can significantly increase "
-"the load on your monitoring host if you have a lot of service checks. If you "
-"want to use Perl plugins, consider compiling them into true executables "
-"using perlcc(1) (a utility which is part of the standard Perl distribution) "
-"or compiling Nagios with an embedded Perl interpreter (see below)."
-msgstr ""
+msgid "Avoid using interpreted plugins. One thing that will significantly reduce the load on your monitoring host is the use of compiled (C/C++, etc.) plugins rather than interpreted script (Perl, etc) plugins. While Perl scripts and such are easy to write and work well, the fact that they are compiled/interpreted at every execution instance can significantly increase the load on your monitoring host if you have a lot of service checks. If you want to use Perl plugins, consider compiling them into true executables using perlcc(1) (a utility which is part of the standard Perl distribution) or compiling Nagios with an embedded Perl interpreter (see below)."
+msgstr "Evitez l'utilisation des plugins interprétés. L'utilisation de plugins compilés (C/C++, etc.) réduira significativement la charge de votre hôte de supervision par rapport aux scripts interprétés (Perl, etc.). Si les scripts Perl ou autres sont faciles à écrire et fonctionnent bien, le fait qu'ils soient compilés/interprétés à chaque exécution peut augmenter considérablement la charge de votre hôte de supervision lorsque vous avez de nombreux contrôles de service. Si vous souhaitez utiliser des plugins Perl, essayez de les compiler en vrais exécutables grâce à perlcc(1) (un utilitaire qui fait partie de la distribution Perl standard) ou essayez de compiler Nagios avec un interpréteur Perl intégré (voir ci-dessous)."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:147
-msgid ""
-"Use the embedded Perl interpreter. If you're using a lot of Perl scripts for "
-"service checks, etc., you will probably find that compiling the <link "
-"linkend=\"advancedtopics-embeddedperl\">embedded Perl interpreter</link> "
-"into the Nagios binary will speed things up."
-msgstr ""
+msgid "Use the embedded Perl interpreter. If you're using a lot of Perl scripts for service checks, etc., you will probably find that compiling the <link linkend=\"advancedtopics-embeddedperl\">embedded Perl interpreter</link> into the Nagios binary will speed things up."
+msgstr "Utilisez l'interpréteur Perl intégré. Si vous utilisez de nombreux scripts Perl pour les contrôles de service, etc., vous vous apercevrez sans doute qu'en compilant Nagios avec un <link linkend=\"advancedtopics-embeddedperl\">interpréteur Perl intégré</linkend> vous accélérez les traitements."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:155
-msgid ""
-"Optimize host check commands. If you're checking host states using the "
-"&plugin-ping; plugin you'll find that host checks will be performed much "
-"faster if you break up the checks. Instead of specifying a max_attempts "
-"value of 1 in the host definition and having the &plugin-ping; plugin send "
-"10 &protocol-icmp; packets to the host, it would be much faster to set the "
-"max_attempts value to 10 and only send out 1 &protocol-icmp; packet each "
-"time. This is due to the fact that Nagios can often determine the status of "
-"a host after executing the plugin once, so you want to make the first check "
-"as fast as possible. This method does have its pitfalls in some situations "
-"(i.e. hosts that are slow to respond may be assumed to be down), but you'll "
-"see faster host checks if you use it. Another option would be to use a "
-"faster plugin (i.e.  &plugin-fping;) as the host_check_command instead of "
-"&plugin-ping;."
-msgstr ""
+msgid "Optimize host check commands. If you're checking host states using the &plugin-ping; plugin you'll find that host checks will be performed much faster if you break up the checks. Instead of specifying a max_attempts value of 1 in the host definition and having the &plugin-ping; plugin send 10 &protocol-icmp; packets to the host, it would be much faster to set the max_attempts value to 10 and only send out 1 &protocol-icmp; packet each time. This is due to the fact that Nagios can often determine the status of a host after executing the plugin once, so you want to make the first check as fast as possible. This method does have its pitfalls in some situations (i.e. hosts that are slow to respond may be assumed to be down), but you'll see faster host checks if you use it. Another option would be to use a faster plugin (i.e.  &plugin-fping;) as the host_check_command instead of &plugin-ping;."
+msgstr "Optimisez les commandes de contrôle d'hôte. Si vous contrôlez l'état des hôtes avec le plugin &plugin-ping;, vous vous apercevrez que ces contrôles se font bien plus vite en les éclatant. Plutôt que de spécifier une valeur de 1 pour le paramétre max_attempts dans la définition de l'hôte et de dire au plugin &plugin-ping; d'envoyer 10 paquets ICMP à l'hôte, il est bien plus rapide de passer max_attempts à 10 et de n'envoyer qu'un paquet &protocol-icmp; à chaque fois. Ceci est dû au fait que Nagios peut souvent déterminer l'état d'un hôte après n'avoir exécuté le plugin qu'une fois, il vaut donc mieux que le premier contrôle soit le plus rapide possible. Cette méthode présente des inconvénients dans certaines situations (c.-à-d. que les hôtes lents à répondre peuvent être considérés comme hors service), mais vous aurez des contrôles d'hôte plus rapides si vous l'utilisez. Vous pouvez aussi utiliser un plugin plus rapide (c.-à-d. &plugin-fping;) dans le paramètre host_check_command plutôt que &plugin-ping;."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:171
-msgid ""
-"Schedule regular host checks. Scheduling regular checks of hosts can "
-"actually help performance in Nagios. This is due to the way the <xref "
-"linkend=\"advancedtopics-cachedchecks\" />cached check logic works (see "
-"below). Prior to Nagios 3, regularly scheduled host checks used to result in "
-"a big performance hit. This is no longer the case, as host checks are run in "
-"parallel - just like service checks. To schedule regular checks of a host, "
-"set the check_interval directive in the <link linkend=\"configuringnagios-"
-"objectdefinitions-host\">host definition</link> to something greater than 0."
-msgstr ""
+msgid "Schedule regular host checks. Scheduling regular checks of hosts can actually help performance in Nagios. This is due to the way the <xref linkend=\"advancedtopics-cachedchecks\" />cached check logic works (see below). Prior to Nagios 3, regularly scheduled host checks used to result in a big performance hit. This is no longer the case, as host checks are run in parallel - just like service checks. To schedule regular checks of a host, set the check_interval directive in the <link linkend=\"configuringnagios-objectdefinitions-host\">host definition</link> to something greater than 0."
+msgstr "Planifiez une vérification régulière des hôtes. La planification régulière de contrôles d'hôtes peut donner un gain de performance à Nagios. Cela est dû à la façon dont la logique de cache des contrôles fonctionne (voir ci-dessous). Avant Nagios 3, la planification régulière des contrôles d'hôtes pouvait avoir un impact très négatif sur les performances. Ce n'est plus le cas puisque les contrôles d'hôtes sont exécutés en parallèle - tout comme les services. Pour planifier des contrôles réguliers pour un hôte, mettez la directive check_interval de la <link linkend=\"configuringnagios-objectdefinitions-host\">définition d'hôte</linkend> à une valeur supérieure à 0."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:183
-msgid ""
-"Enable cached host checks. Beginning in Nagios 3, on-demand host checks can "
-"benefit from caching. On-demand host checks are performed whenever Nagios "
-"detects a service state change. These on-demand checks are executed because "
-"Nagios wants to know if the host associated with the service changed state. "
-"By enabling cached host checks, you can optimize performance. In some cases, "
-"Nagios may be able to used the old/cached state of the host, rather than "
-"actually executing a host check command. This can speed things up and reduce "
-"load on monitoring server. In order for cached checks to be effective, you "
-"need to schedule regular checks of your hosts (see above). More information "
-"on cached checks can be found <xref linkend=\"advancedtopics-cachedchecks\" /"
-">here."
-msgstr ""
+msgid "Enable cached host checks. Beginning in Nagios 3, on-demand host checks can benefit from caching. On-demand host checks are performed whenever Nagios detects a service state change. These on-demand checks are executed because Nagios wants to know if the host associated with the service changed state. By enabling cached host checks, you can optimize performance. In some cases, Nagios may be able to used the old/cached state of the host, rather than actually executing a host check command. This can speed things up and reduce load on monitoring server. In order for cached checks to be effective, you need to schedule regular checks of your hosts (see above). More information on cached checks can be found <xref linkend=\"advancedtopics-cachedchecks\" />here."
+msgstr "Activer le cache pour les contrôles d'hôtes. À compter de Nagios 3, les contrôles d'hôtes à la demande peuvent bénéficier de cache. Les contrôles d'hôtes à la demande sont déclenchés quand Nagios détecte un changement d'état sur un service. Ces contrôles sont exécutés parce que Nagios veut savoir si l'hôtes associé au service a changé d'état. En activant le cache pour les contrôles d'hôtes, vous pouvez gagner en performance. Dans certains cas, Nagios peut être capable d'utiliser l'état mise en cache d'un hôte, plutôt que de réellement exécuter le contrôle. Cela peut accélérer les choses et réduire la charge du serveur de supervision. Pour mettre en place le cache des contrôles d'hôtes, vous devez ordonnancer des contrôles réguliers de vos hôtes (voir plus haut). Plus d'informations sur le cache pour les contrôles d'hôtes peut être trouvé <link linkend=\"advancedtopics-cachedchecks\">ici</linkend>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:198
-msgid ""
-"Don't use agressive host checking. Unless you're having problems with Nagios "
-"recognizing host recoveries, I would recommend not enabling the <link "
-"linkend=\"configuringnagios-configmain-use_aggressive_host_checking"
-"\">use_aggressive_host_checking</link> option. With this option turned off "
-"host checks will execute much faster, resulting in speedier processing of "
-"service check results.  However, host recoveries can be missed under certain "
-"circumstances when this it turned off. For example, if a host recovers and "
-"all of the services associated with that host stay in non-OK states (and "
-"don't \"wobble\" between different non-OK states), Nagios may miss the fact "
-"that the host has recovered. A few people may need to enable this option, "
-"but the majority don't and I would recommendnot using it unless you find it "
-"necessary..."
-msgstr ""
+msgid "Don't use agressive host checking. Unless you're having problems with Nagios recognizing host recoveries, I would recommend not enabling the <link linkend=\"configuringnagios-configmain-use_aggressive_host_checking\">use_aggressive_host_checking</link> option. With this option turned off host checks will execute much faster, resulting in speedier processing of service check results.  However, host recoveries can be missed under certain circumstances when this it turned off. For example, if a host recovers and all of the services associated with that host stay in non-OK states (and don't \"wobble\" between different non-OK states), Nagios may miss the fact that the host has recovered. A few people may need to enable this option, but the majority don't and I would recommendnot using it unless you find it necessary..."
+msgstr "N'utilisez pas le contrôle agressif des hôtes. Sauf si Nagios a du mal à identifier les rétablissements d'hôte, je recommanderais de ne pas activer le paramètre <link linkend=\"configuringnagios-configmain-use_aggressive_host_checking\">use_aggressive_host_checking</link>. Quand cette option est désactivée, les contrôles s'exécutent beaucoup plus vite, accélérant le traitement des résultats de contrôles de service. Cependant, les rétablissements d'hôtes peuvent être manqués en certaines circonstances lorsque l'option est désactivée. Par exemple, si un hôte se rétablit et que tous les services associés à cet hôte restent dans un état non-OK (et ne \"bagotent\" pas entre différents états non-OK), Nagios peut ne pas voir que l'hôte s'est rétabli. Certains utilisateurs peuvent avoir besoin d'activer cette option, mais ce n'est pas le cas pour la majorité, et je recommanderais de ne pas l'utiliser si vous n'en avez pas expressément besoin..."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:214
-msgid ""
-"External command optimizations. If you're processing a lot of external "
-"commands (i.e. passive checks in a <xref linkend=\"advancedtopics-distributed"
-"\" />distributed setup, you'll probably want to set the <link linkend="
-"\"configuringnagios-configmain-command_check_interval"
-"\">command_check_interval</link> variable to -1. This will cause Nagios to "
-"check for external commands as often as possible. You should also consider "
-"increasing the number of available <link linkend=\"configuringnagios-"
-"configmain-external_command_buffer_slots\">external command buffer slots</"
-"link>. Buffers slots are used to hold external commands that have been read "
-"from the <link linkend=\"configuringnagios-configmain-check_external_commands"
-"\">external command file</link> (by a separate thread) before they are "
-"processed by the Nagios daemon. If your Nagios daemon is receiving a lot of "
-"passive checks or external commands, you could end up in a situation where "
-"the buffers are always full. This results in child processes (external "
-"scripts, &name-nsca; daemon, etc.) blocking when they attempt to write to "
-"the external command file. I would highly recommend that you graph external "
-"command buffer slot usage using MRTG and the nagiostats utility as described "
-"<xref linkend=\"securityandperformancetuning-mrtggraphs\" />here, so you "
-"understand the typical external command buffer usage of your Nagios "
-"installation."
-msgstr ""
+msgid "External command optimizations. If you're processing a lot of external commands (i.e. passive checks in a <xref linkend=\"advancedtopics-distributed\" />distributed setup, you'll probably want to set the <link linkend=\"configuringnagios-configmain-command_check_interval\">command_check_interval</link> variable to -1. This will cause Nagios to check for external commands as often as possible. You should also consider increasing the number of available <link linkend=\"configuringnagios-configmain-external_command_buffer_slots\">external command buffer slots</link>. Buffers slots are used to hold external commands that have been read from the <link linkend=\"configuringnagios-configmain-check_external_commands\">external command file</link> (by a separate thread) before they are processed by the Nagios daemon. If your Nagios daemon is receiving a lot of passive checks or external commands, you could end up in a situation where the buffers are always full. This results in child processes (external scripts, &name-nsca; daemon, etc.) blocking when they attempt to write to the external command file. I would highly recommend that you graph external command buffer slot usage using MRTG and the nagiostats utility as described <xref linkend=\"securityandperformancetuning-mrtggraphs\" />here, so you understand the typical external command buffer usage of your Nagios installation."
+msgstr "Augmentez l'intervalle de vérification des commandes externes. Si vous gérez beaucoup de commandes externes (p. ex. des vérifications passives dans une <link linkend=\"advancedtopics-distributed\">supervision distribuée</linkend>), vous devrez probablement affecter -1 au paramètre <link linkend=\"configuringnagios-configmain-command_check_interval\">command_check_interval</link>. Cela forcera Nagios à vérifier les commandes externes aussi souvent que possible. C'est important parce que la plupart des systèmes ont une petite taille de  <link linkend=\"configuringnagios-configmain-external_command_buffer_slots\">tampon pour les tubes de redirections</linkend> [NdT : pipe] (c.-à-d. 4 Ko). Les tampons sont utilisés pour conserver les commandes externes lues depuis le <link linkend=\"configuringnagios-configmain-check_external_commands\">fichier de commandes externes</link> (par un thread séparé) avant d'être traitées par le démon Nagios. Si celui-ci reçoit beaucoup de remontées de contrôles passifs, vous pouvez aboutir à une situation où le tampon est toujours plein. Le résultat est que les processus enfant (scripts externes, démon &name-nsca;, etc.)sont bloqués quand ils essayent d'écrire dans le fichier de commandes externes. Je vous recommande fortement de grapher le tampon pour les tubes de redirections en utilisant MRTG et l'utilitaire nagiostats comme décrit <link linkend=\"securityandperformancetuning-mrtggraphs\">ici</linkend> de façon à voir la consommation moyenne du tampon pour les tubes de redirections de votre installation Nagios."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:240
 msgid "Optimize hardware for maximum performance."
-msgstr ""
+msgstr "Optimisez le matériel pour des performances maximales."
 
 # type: Content of: <chapter><section><orderedlist><listitem><note><para>
 #: SecurityAndPerformanceTuning/tuning.xml:240
 msgid "Hardware performance shouldn't be an issue unless:"
-msgstr ""
+msgstr "Les performances matériels ne devraient pas poser problème sauf si:"
 
 # type: Content of: <chapter><section><orderedlist><listitem><note><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:245
 msgid "you're monitoring thousands of services"
-msgstr ""
+msgstr "Vous supervisez des milliers de services"
 
 # type: Content of: <chapter><section><orderedlist><listitem><note><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/tuning.xml:249
-msgid ""
-"you're doing a lot of post-processing of performance data, etc. Your system "
-"configuration and your hardware setup are going to directly affect how your "
-"operating system performs, so they'll affect how Nagios performs. The most "
-"common hardware optimization you can make is with your hard drives. CPU and "
-"memory speed are obviously factors that affect performance, but disk access "
-"is going to be your biggest bottleneck. Don't store plugins, the status log, "
-"etc on slow drives (i.e. old IDE drives or NFS mounts). If you've got them, "
-"use UltraSCSI drives or fast IDE drives. An important note for IDE/Linux "
-"users is that many Linux installations do not attempt to optimize disk "
-"access. If you don't change the disk access parameters (by using a utility "
-"like <command>hdparm</command>), you'll loose out on a lot of the speedy "
-"features of the new IDE drives."
-msgstr ""
+msgid "you're doing a lot of post-processing of performance data, etc. Your system configuration and your hardware setup are going to directly affect how your operating system performs, so they'll affect how Nagios performs. The most common hardware optimization you can make is with your hard drives. CPU and memory speed are obviously factors that affect performance, but disk access is going to be your biggest bottleneck. Don't store plugins, the status log, etc on slow drives (i.e. old IDE drives or NFS mounts). If you've got them, use UltraSCSI drives or fast IDE drives. An important note for IDE/Linux users is that many Linux installations do not attempt to optimize disk access. If you don't change the disk access parameters (by using a utility like <command>hdparm</command>), you'll loose out on a lot of the speedy features of the new IDE drives."
+msgstr "Vous faîtes beaucoup de post traitement de données de performance, etc. La configuration matérielle va affecter directement les performances de votre système d'exploitation, et donc celles de Nagios. L'amélioration principale que vous puissiez réaliser concerne les disques durs. La vitesse du processeur et la mémoire affectent bien évidemment les performances, mais les accès disque seront votre goulet d'étranglement le plus fréquent. Ne stockez pas les plugins, le journal des états, etc. sur des disques lents (c.-à-d. des vieux disques IDE ou des montages NFS). Si vous en avez, utilisez des disques UltraSCSI ou des disques IDE rapides. Une remarque importante pour les utilisateurs de IDE/Linux : bien des installations de Linux n'essaient pas d'optimiser les accès au disque. Si vous ne changez pas les paramètres d'accès au disque (en utilisant un utilitaire comme <command>hdparm</command>), vous perdrez beaucoup des fonctionnalités améliorant la vitesse des nouveaux disques IDE. "
+
