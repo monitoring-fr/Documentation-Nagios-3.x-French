@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-03-31 17:10+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,10 +16,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: Content of: <chapter><title>
-#: About/whatsnew.xml:302 ConfiguringNagios/configobject.xml:261
+#: About/whatsnew.xml:302
+#: ConfiguringNagios/configobject.xml:261
 #: TheBasics/notifications.xml:10
 msgid "Notifications"
-msgstr ""
+msgstr "Notifications"
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:45
@@ -28,25 +29,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -57,9 +76,10 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:97
@@ -78,568 +98,376 @@ msgstr ""
 #: ConfiguringNagios/objectdefinitions.xml:4286
 #: TheBasics/notifications.xml:248
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:15
-msgid ""
-"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-"
-"contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> I've had "
-"a lot of questions as to exactly how notifications work. This will attempt "
-"to explain exactly when and how host and service notifications are sent out, "
-"as well as who receives them."
-msgstr ""
+msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> I've had a lot of questions as to exactly how notifications work. This will attempt to explain exactly when and how host and service notifications are sent out, as well as who receives them."
+msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> J'ai reçu de nombreuses questions sur le fonctionnement des notifications. Ce document essaiera d'expliquer exactement quand et comment les notifications pour les hôtes et les services sont émises, et qui les reçoit. "
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:24
-msgid ""
-"Notification escalations are explained <link linkend=\"advancedtopics-"
-"escalations\">here</link>."
-msgstr ""
+msgid "Notification escalations are explained <link linkend=\"advancedtopics-escalations\">here</link>."
+msgstr "Les escalades de notifications sont expliquées <link linkend=\"advancedtopics-escalations\">ici</link>."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:29
 msgid "When Do Notifications Occur?"
-msgstr ""
+msgstr "Quand y a-t'il notification ?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:31
-msgid ""
-"The decision to send out notifications is made in the service check and host "
-"check logic. Host and service notifications occur in the following "
-"instances..."
-msgstr ""
+msgid "The decision to send out notifications is made in the service check and host check logic. Host and service notifications occur in the following instances..."
+msgstr "La décision d'émettre des notifications est prise dans le cadre du contrôle de service et du contrôle d'hôte. Les notifications d'hôte et de service ont lieu dans les cas suivants ..."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:37
-msgid ""
-"When a hard state change occurs. More information on state types and hard "
-"state changes can be found <link linkend=\"thebasics-statetypes\">here</"
-"link>."
-msgstr ""
+msgid "When a hard state change occurs. More information on state types and hard state changes can be found <link linkend=\"thebasics-statetypes\">here</link>."
+msgstr "Lors d'un changement d'état HARD. Pour plus d'informations sur les états et les changement d'état HARD, lisez <link linkend=\"thebasics-statetypes\">ceci</link>."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:43
-msgid ""
-"When a host or service remains in a hard non-OK state and the time specified "
-"by the &lt;notification_interval&gt; option in the host or service "
-"definition has passed since the last notification was sent out (for that "
-"specified host or service)."
-msgstr ""
+msgid "When a host or service remains in a hard non-OK state and the time specified by the &lt;notification_interval&gt; option in the host or service definition has passed since the last notification was sent out (for that specified host or service)."
+msgstr "Lorsqu'un hôte ou un service demeure dans un état hard et non-OK, et que le délai défini dans le paramétre &lt;notification_interval&gt; de la définition de l'hôte ou du service est écoulé depuis que la dernière notification a été émise (pour ce même hôte ou service)."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:52
 msgid "Who Gets Notified?"
-msgstr ""
+msgstr "Qui est notifié ?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:54
 msgid "Each host and service definition has a &lt;"
-msgstr ""
+msgstr "Chaque définition de service comprend un paramétre &lt;contact_groups"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:55
-msgid ""
-"&gt; option that specifies what contact groups receive notifications for "
-"that particular host or service. Contact groups can contain one or more "
-"individual contacts."
-msgstr ""
+msgid "&gt; option that specifies what contact groups receive notifications for that particular host or service. Contact groups can contain one or more individual contacts."
+msgstr "&gt; qui définit quels groupes de contacts recevront les notifications de ce service. Chaque groupe de contacts peut contenir un ou plusieurs contacts individuels."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:59
-msgid ""
-"When Nagios sends out a host or service notification, it will notify each "
-"contact that is a member of any contact groups specified in the &lt;"
-msgstr ""
+msgid "When Nagios sends out a host or service notification, it will notify each contact that is a member of any contact groups specified in the &lt;"
+msgstr "Quand Nagios émet une notification de service, il notifie chaque contact membre d'un des groupes de contacts spécifiés dans le paramétre &lt;contactgroups"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:61
-msgid ""
-"&gt; option of the service definition.  Nagios realizes that a contact may "
-"be a member of more than one contact group, so it removes duplicate contact "
-"notifications before it does anything."
-msgstr ""
+msgid "&gt; option of the service definition.  Nagios realizes that a contact may be a member of more than one contact group, so it removes duplicate contact notifications before it does anything."
+msgstr "&gt; de la définition du service. Nagios est conscient qu'un contact peut être membre de plus d'un groupe, donc il commence par supprimer les doublons avant toute chose."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:68
 msgid "What Filters Must Be Passed In Order For Notifications To Be Sent?"
-msgstr ""
+msgstr "Quels sont les filtres à traverser avant qu'une notification ne soit émise ?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:71
-msgid ""
-"Just because there is a need to send out a host or service notification "
-"doesn't mean that any contacts are going to get notified.  There are several "
-"filters that potential notifications must pass before they are deemed worthy "
-"enough to be sent out. Even then, specific contacts may not be notified if "
-"their notification filters do not allow for the notification to be sent to "
-"them. Let's go into the filters that have to be passed in more detail..."
-msgstr ""
+msgid "Just because there is a need to send out a host or service notification doesn't mean that any contacts are going to get notified.  There are several filters that potential notifications must pass before they are deemed worthy enough to be sent out. Even then, specific contacts may not be notified if their notification filters do not allow for the notification to be sent to them. Let's go into the filters that have to be passed in more detail..."
+msgstr "Le simple fait qu'une notification d'hôte ou de service doive être émise ne signifie pas que des contacts vont la recevoir. Il y a plusieurs filtres qu'une notification doit traverser avant d'être jugée valable pour l'émission. Même alors, des contacts peuvent ne pas la recevoir si leurs filtres de notification ne le permettent pas. Voyons en détail les filtres à traverser... "
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:81
 msgid "Program-Wide Filter:"
-msgstr ""
+msgstr "Filtre global au programme :"
 
 # type: Content of: <chapter><section><para><link>
 #: TheBasics/notifications.xml:83
-msgid ""
-"The first filter that notifications must pass is a test of whether or not "
-"notifications are enabled on a program-wide basis. This is initially "
-"determined by the <link linkend=\"configuringnagios-configmain-"
-"enable_notifications\">"
-msgstr ""
+msgid "The first filter that notifications must pass is a test of whether or not notifications are enabled on a program-wide basis. This is initially determined by the <link linkend=\"configuringnagios-configmain-enable_notifications\">"
+msgstr "Le premier filtre que les notifications doivent traverser est un test pour savoir si les notifications sont activées au niveau global du programme ou non. Ceci est spécifié par le paramétre <link linkend=\"configuringnagios-configmain-enable_notifications\">enable_notifications"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:85
-msgid ""
-"</link> directive in the main config file, but may be changed during runtime "
-"from the web interface. If notifications are disabled on a program-wide "
-"basis, no host or service notifications can be sent out - period. If they "
-"are enabled on a program-wide basis, there are still other tests that must "
-"be passed..."
-msgstr ""
+msgid "</link> directive in the main config file, but may be changed during runtime from the web interface. If notifications are disabled on a program-wide basis, no host or service notifications can be sent out - period. If they are enabled on a program-wide basis, there are still other tests that must be passed..."
+msgstr "</link> du fichier de configuration principal, mais peut être modifié en cours d'exécution via l'interface web. Si les notifications sont désactivées de manière globale, aucune notification ne sera envoyée - point final. Si elles sont activées, il y a encore d'autres tests à réussir... "
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:94
 msgid "Service and Host Filters:"
-msgstr ""
+msgstr "Filtres d'hôte et de service :"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:96
-msgid ""
-"The first filter for host or service notifications is a check to see if the "
-"host or service is in a period of <link linkend=\"advancedtopics-downtime"
-"\">scheduled downtime</link>. It it is in a scheduled downtime, no one gets "
-"notified. If it isn't in a period of downtime, it gets passed on to the next "
-"filter. As a side note, notifications for services are suppressed if the "
-"host they're associated with is in a period of scheduled downtime."
-msgstr ""
+msgid "The first filter for host or service notifications is a check to see if the host or service is in a period of <link linkend=\"advancedtopics-downtime\">scheduled downtime</link>. It it is in a scheduled downtime, no one gets notified. If it isn't in a period of downtime, it gets passed on to the next filter. As a side note, notifications for services are suppressed if the host they're associated with is in a period of scheduled downtime."
+msgstr "Le premier filtre des notifications d'hôte et de service consiste à vérifier que l'hôte ou le service n'est pas dans une période d'arrêt planifié (<link linkend=\"advancedtopics-downtime\">scheduled downtime</link>). Si c'est le cas, personne n'est notifié. S'il n'est pas dans une période d'arrêt planifié, la notification est passée au filtre suivant. Notez également que les notifications de services sont supprimées si l'hôte auquel est associé le service est dans une période d'arrêt planifié."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:104
-msgid ""
-"The second filter for host or service notification is a check to see if the "
-"host or service is <link linkend=\"advancedtopics-flapping\">flapping</link> "
-"(if you enabled flap detection). If the service or host is currently "
-"flapping, no one gets notified. Otherwise it gets passed to the next filter."
-msgstr ""
+msgid "The second filter for host or service notification is a check to see if the host or service is <link linkend=\"advancedtopics-flapping\">flapping</link> (if you enabled flap detection). If the service or host is currently flapping, no one gets notified. Otherwise it gets passed to the next filter."
+msgstr "Le deuxième filtre des notifications d'hôte et de service consiste à vérifier si l'hôte ou le service <link linkend=\"advancedtopics-flapping\">oscille</link> (à condition que vous ayez activé la détection d'oscillation). Si le service ou l'hôte oscille, personne n'est notifié. Sinon, la notification est passée au filtre suivant. "
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:110
-msgid ""
-"The third host or service filter that must be passed is the host- or service-"
-"specific notification options. Each service definition contains options that "
-"determine whether or not notifications can be sent out for warning states, "
-"critical states, and recoveries. Similiarly, each host definition contains "
-"options that determine whether or not notifications can be sent out when the "
-"host goes down, becomes unreachable, or recovers.  If the host or service "
-"notification does not pass these options, no one gets notified. If it does "
-"pass these options, the notification gets passed to the next filter..."
-msgstr ""
+msgid "The third host or service filter that must be passed is the host- or service-specific notification options. Each service definition contains options that determine whether or not notifications can be sent out for warning states, critical states, and recoveries. Similiarly, each host definition contains options that determine whether or not notifications can be sent out when the host goes down, becomes unreachable, or recovers.  If the host or service notification does not pass these options, no one gets notified. If it does pass these options, the notification gets passed to the next filter..."
+msgstr "Le troisième filtre à traverser pour les notifications d'hôte et de service est formé par les paramétres de notification. Chaque définition de service contient des paramétres qui déterminent si les notifications doivent être envoyées pour les états WARNING, CRITICAL, et RECOVERY. De la même manière, chaque définition d'hôte contient des paramétres qui déterminent si les notifications doivent être envoyées quand l'hôte s'arrête [NdT: état DOWN], devient inaccessible [UNREACHABLE], ou se rétablit [RECOVERY]. Si la notification d'hôte ou de service est bloquée par ces paramétres, personne n'est notifié. Dans le cas contraire, la notification est passée au filtre suivant..."
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/notifications.xml:121
-msgid ""
-"Notifications about host or service recoveries are only sent out if a "
-"notification was sent out for the original problem. It doesn't make sense to "
-"get a recovery notification for something you never knew was a problem."
-msgstr ""
+msgid "Notifications about host or service recoveries are only sent out if a notification was sent out for the original problem. It doesn't make sense to get a recovery notification for something you never knew was a problem."
+msgstr "Les notifications concernant les rétablissement d'hôtes et de services ne sont émises que si une notification a été envoyée à l'apparition du problème. Cela n'a pas de sens de recevoir une notification de rétablissement pour un problème dont vous n'aviez pas connaissance... "
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:127
-msgid ""
-"The fourth host or service filter that must be passed is the time period "
-"test. Each host and service definition has a &lt;"
-msgstr ""
+msgid "The fourth host or service filter that must be passed is the time period test. Each host and service definition has a &lt;"
+msgstr "Le quatrième filtre des notifications d'hôte et de service à traverser concerne la période. Chaque définition d'hôte et de service comporte un paramétre &lt;"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:129
-msgid ""
-"&gt; option that specifies which time period contains valid notification "
-"times for the host or service. If the time that the notification is being "
-"made does not fall within a valid time range in the specified time period, "
-"no one gets contacted. If it falls within a valid time range, the "
-"notification gets passed to the next filter..."
-msgstr ""
+msgid "&gt; option that specifies which time period contains valid notification times for the host or service. If the time that the notification is being made does not fall within a valid time range in the specified time period, no one gets contacted. If it falls within a valid time range, the notification gets passed to the next filter..."
+msgstr "notification_period&gt; qui spécifie quelle période contient les heures de notification valides pour cet hôte ou service. Si le moment où la notification apparaît n'est pas dans une plage valide de la période spécifiée, personne n'est contacté. Dans le cas contraire, la notification est passée au filtre suivant..."
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/notifications.xml:137
-msgid ""
-"If the time period filter is not passed, Nagios will reschedule the next "
-"notification for the host or service (if its in a non-OK state)  for the "
-"next valid time present in the time period. This helps ensure that contacts "
-"are notified of problems as soon as possible when the next valid time in "
-"time period arrives."
-msgstr ""
+msgid "If the time period filter is not passed, Nagios will reschedule the next notification for the host or service (if its in a non-OK state)  for the next valid time present in the time period. This helps ensure that contacts are notified of problems as soon as possible when the next valid time in time period arrives."
+msgstr "Si le filtre de période n'est pas traversé, Nagios réordonnancera la prochaine notification pour l'hôte ou le service (s'il est dans un état non-OK) dans la prochaine plage de temps valide pour la période. Cela permet de s'assurer que les contacts sont notifiés des problèmes dès que possible quand arrive le prochain moment valide de la période. "
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:144
-msgid ""
-"The last set of host or service filters is conditional upon two things: (1) "
-"a notification was already sent out about a problem with the host or service "
-"at some point in the past and (2) the host or service has remained in the "
-"same non-OK state that it was when the last notification went out. If these "
-"two criteria are met, then Nagios will check and make sure the time that has "
-"passed since the last notification went out either meets or exceeds the "
-"value specified by the &lt;"
-msgstr ""
+msgid "The last set of host or service filters is conditional upon two things: (1) a notification was already sent out about a problem with the host or service at some point in the past and (2) the host or service has remained in the same non-OK state that it was when the last notification went out. If these two criteria are met, then Nagios will check and make sure the time that has passed since the last notification went out either meets or exceeds the value specified by the &lt;"
+msgstr "Le dernier jeu de filtres d'hôte et de service est conditionnée par deux éléments : (1) une notification a déjà été émise par le passé concernant un problème avec l'hôte ou le service, et (2) l'hôte ou le service est resté dans le même état non-OK depuis la dernière notification. Si ces deux conditions sont réunies, Nagios vérifie que le temps écoulé depuis l'émission de la dernière notification est supérieur ou égal à la valeur spécifiée par le paramétre &lt;"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:151
-msgid ""
-"&gt; option in the host or service definition. If not enough time has passed "
-"since the last notification, no one gets contacted. If either enough time "
-"has passed since the last notification or the two criteria for this filter "
-"were not met, the notification will be sent out! Whether or not it actually "
-"is sent to individual contacts is up to another set of filters..."
-msgstr ""
+msgid "&gt; option in the host or service definition. If not enough time has passed since the last notification, no one gets contacted. If either enough time has passed since the last notification or the two criteria for this filter were not met, the notification will be sent out! Whether or not it actually is sent to individual contacts is up to another set of filters..."
+msgstr "notification_interval&gt; de la définition de l'hôte ou du service. Si le temps écoulé depuis la dernière notification est insuffisant, personne n'est contacté. Si un temps suffisant s'est écoulé, ou si les deux conditions de ce filtre n'ont pas été réunies, la notification sera émise ! Le fait qu'elle parvienne ou non aux contacts individuels relève d'un autre jeu de filtres... "
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:160
 msgid "Contact Filters:"
-msgstr ""
+msgstr "Filtres de contact :"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:162
-msgid ""
-"At this point the notification has passed the program mode filter and all "
-"host or service filters and Nagios starts to notify <link linkend="
-"\"configuringnagios-objectdefinitions-contact\">all the people it should</"
-"link>.  Does this mean that each contact is going to receive the "
-"notification? No! Each contact has their own set of filters that the "
-"notification must pass before they receive it."
-msgstr ""
+msgid "At this point the notification has passed the program mode filter and all host or service filters and Nagios starts to notify <link linkend=\"configuringnagios-objectdefinitions-contact\">all the people it should</link>.  Does this mean that each contact is going to receive the notification? No! Each contact has their own set of filters that the notification must pass before they receive it."
+msgstr "A ce point la notification a traversé le filtre du mode de programme et tous les filtres d'hôte et de service, et Nagios commence à envoyer des notifications <link linkend=\"configuringnagios-objectdefinitions-contact\">à tous ceux qui doivent en recevoir</link>. Cela signifie-t-il que tous les contacts vont recevoir la notification ? Non ! Chaque contact possède son propre jeu de filtres que la notification doit traverser avant qu'ils ne la reçoivent."
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/notifications.xml:170
-msgid ""
-"Contact filters are specific to each contact and do not affect whether or "
-"not other contacts receive notifications."
-msgstr ""
+msgid "Contact filters are specific to each contact and do not affect whether or not other contacts receive notifications."
+msgstr "Les filtres de contact sont propres à chaque contact et n'affectent pas la façon dont les autres contacts reçoivent les notifications. "
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:174
-msgid ""
-"The first filter that must be passed for each contact are the notification "
-"options. Each contact definition contains options that determine whether or "
-"not service notifications can be sent out for warning states, critical "
-"states, and recoveries. Each contact definition also contains options that "
-"determine whether or not host notifications can be sent out when the host "
-"goes down, becomes unreachable, or recovers. If the host or service "
-"notification does not pass these options, the contact will not be notified. "
-"If it does pass these options, the notification gets passed to the next "
-"filter..."
-msgstr ""
+msgid "The first filter that must be passed for each contact are the notification options. Each contact definition contains options that determine whether or not service notifications can be sent out for warning states, critical states, and recoveries. Each contact definition also contains options that determine whether or not host notifications can be sent out when the host goes down, becomes unreachable, or recovers. If the host or service notification does not pass these options, the contact will not be notified. If it does pass these options, the notification gets passed to the next filter..."
+msgstr "Le premier filtre à passer pour chaque contact concerne les paramétres de notification. Chaque définition de contact comprend des paramètres qui déterminent si les notifications de service peuvent être émises pour les états WARNING, CRITICAL, et RECOVERY. Chaque définition de contact contient également des options qui déterminent si les notifications d'hôtes peuvent être émises lorsqu'un hôte passe dans les états DOWN, UNREACHABLE, ou RECOVERY. Si la notification d'hôte ou de service ne remplit pas ces conditions, les contacts ne recevront pas de notification. Dans le cas contraire, la notification est passée au prochain filtre..."
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/notifications.xml:185
-msgid ""
-"Notifications about host or service recoveries are only sent out if a "
-"notification was sent out for the original problem. It doesn't make sense to "
-"get a recovery notification for something you never knew was a problem..."
-msgstr ""
+msgid "Notifications about host or service recoveries are only sent out if a notification was sent out for the original problem. It doesn't make sense to get a recovery notification for something you never knew was a problem..."
+msgstr "Les notifications concernant les rétablissement d'hôtes et de services ne sont émises que si une notification a été envoyée à l'apparition du problème. Cela n'a pas de sens de recevoir une notification de rétablissement pour un problème dont vous n'aviez pas connaissance... "
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:191
-msgid ""
-"The last filter that must be passed for each contact is the time period "
-"test. Each contact definition has a &lt;"
-msgstr ""
+msgid "The last filter that must be passed for each contact is the time period test. Each contact definition has a &lt;"
+msgstr "Le dernier filtre à passer pour chaque contact concerne la période. Chaque définition de contact comprend un paramétre &lt;"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:193
-msgid ""
-"&gt; option that specifies which time period contains valid notification "
-"times for the contact. If the time that the notification is being made does "
-"not fall within a valid time range in the specified time period, the contact "
-"will not be notified. If it falls within a valid time range, the contact "
-"gets notified!"
-msgstr ""
+msgid "&gt; option that specifies which time period contains valid notification times for the contact. If the time that the notification is being made does not fall within a valid time range in the specified time period, the contact will not be notified. If it falls within a valid time range, the contact gets notified!"
+msgstr "notification_period&gt; qui spécifie la période durant laquelle on peut envoyer des notification à ce contact. Si l'heure à laquelle la notification est faite n'est pas comprise dans la plage de temps de la période spécifiée, le contact ne recevra pas la notification. Dans le cas contraire, le contact la reçoit ! "
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:201
 msgid "Notification Methods"
-msgstr ""
+msgstr "Moyens de notifications"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:203
-msgid ""
-"You can have Nagios notify you of problems and recoveries pretty much anyway "
-"you want: pager, cellphone, email, instant message, audio alert, electric "
-"shocker, etc. How notifications are sent depend on the <link linkend="
-"\"configuringnagios-objectdefinitions-command\">notification commands</link> "
-"that are defined in your <link linkend=\"configuringnagios-config\">object "
-"definition files</link>."
-msgstr ""
+msgid "You can have Nagios notify you of problems and recoveries pretty much anyway you want: pager, cellphone, email, instant message, audio alert, electric shocker, etc. How notifications are sent depend on the <link linkend=\"configuringnagios-objectdefinitions-command\">notification commands</link> that are defined in your <link linkend=\"configuringnagios-config\">object definition files</link>."
+msgstr "Nagios peut vous envoyer des notificaitons sur le sproblèmes et retours à la normale d'a peu près toute sles façons que vous voulez: email, pager, téléphone (SMS), messageries instantanées Yahoo, ICQ, ou MSN, alertes sonores, d&écharge électrique, etc. La façon dont est envoyée les notifications dépend des <link linkend=\"configuringnagios-objectdefinitions-command\">commandes de notifications</link> qui sont définies dans les <link linkend=\"configuringnagios-config\">fichiers de définitions d'objets</link>."
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/notifications.xml:211
-msgid ""
-"If you install Nagios according to the <link linkend=\"gettingstarted-"
-"quickstart\">quickstart guide</link>, it should be configured to send email "
-"notifications. You can see the email notification commands that are used by "
-"viewing the contents of the following file: <filename>/usr/local/nagios/etc/"
-"objects/commands.cfg</filename>."
-msgstr ""
+msgid "If you install Nagios according to the <link linkend=\"gettingstarted-quickstart\">quickstart guide</link>, it should be configured to send email notifications. You can see the email notification commands that are used by viewing the contents of the following file: <filename>/usr/local/nagios/etc/objects/commands.cfg</filename>."
+msgstr "Si vous installez Nagios en suivant le <link linkend=\"gettingstarted-quickstart\">guide de démarrage rapide</link>, celui-ci devrait être configuré pour envoyer des emails. Vous pouvez voir la commande utilisée pour la notification par email en visualisant le contenu du fichier suivant: <filename>/usr/local/nagios/etc/objects/commands.cfg</filename>."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:219
-msgid ""
-"Specific notification methods (paging, etc.) are not directly incorporated "
-"into the Nagios code as it just doesn't make much sense. The \"core\" of "
-"Nagios is not designed to be an all-in-one application. If service checks "
-"were embedded in Nagios' core it would be very difficult for users to add "
-"new check methods, modify existing checks, etc.  Notifications work in a "
-"similiar manner. There are a thousand different ways to do notifications and "
-"there are already a lot of packages out there that handle the dirty work, so "
-"why re-invent the wheel and limit yourself to a bike tire? Its much easier "
-"to let an external entity (i.e. a simple script or a full-blown messaging "
-"system) do the messy stuff. Some messaging packages that can handle "
-"notifications for pagers and cellphones are listed below in the resource "
-"section."
-msgstr ""
+msgid "Specific notification methods (paging, etc.) are not directly incorporated into the Nagios code as it just doesn't make much sense. The \"core\" of Nagios is not designed to be an all-in-one application. If service checks were embedded in Nagios' core it would be very difficult for users to add new check methods, modify existing checks, etc.  Notifications work in a similiar manner. There are a thousand different ways to do notifications and there are already a lot of packages out there that handle the dirty work, so why re-invent the wheel and limit yourself to a bike tire? Its much easier to let an external entity (i.e. a simple script or a full-blown messaging system) do the messy stuff. Some messaging packages that can handle notifications for pagers and cellphones are listed below in the resource section."
+msgstr "Les méthodes spécifiques de notification (pager, etc.) ne sont pas directement intégrées au code de Nagios parce que cela n'a pas de sens. Nagios n'est pas prévu pour être une application <quote>tout-en-un</quote>. Si les contrôles de service étaient intégrés dans le cœur de Nagios, il serait très difficile pour les utilisateurs d'ajouter de nouvelles méthodes de contrôle, de modifier celles qui existent, etc. Les notifications fonctionnent de la même manière. Il y a mille et une façons d'envoyer des notifications et de nombreux modules ont déjà été développés pour faire le sale boulot, alors pourquoi réinventer la roue, et vous contenter d'un pneu de vélo ? Il est bien plus facile de déléguer à une application externe (c.-à-d. un simple script ou un système de messagerie complet) ce travail complexe. Des modules de messagerie qui peuvent traiter les notifications pour les pagers ou les téléphones portables sont listés ci-dessous, dans la section des ressources. "
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:234
 msgid "Notification Type Macro"
-msgstr ""
+msgstr "Macro de type de notification"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:236
-msgid ""
-"When crafting your notification commands, you need to take into account what "
-"type of notification is occurring. The <link linkend=\"thebasics-macrolist-"
-"notificationtype\">$NOTIFICATIONTYPE$</link> macro contains a string that "
-"identifies exactly that. The table below lists the possible values for the "
-"macro and their respective descriptions:"
-msgstr ""
+msgid "When crafting your notification commands, you need to take into account what type of notification is occurring. The <link linkend=\"thebasics-macrolist-notificationtype\">$NOTIFICATIONTYPE$</link> macro contains a string that identifies exactly that. The table below lists the possible values for the macro and their respective descriptions:"
+msgstr "Lorsque vous bricolez vos commandes de notification, vous devez prendre en compte le type de notification qui se présente. La macro <link linkend=\"thebasics-macrolist-notificationtype\">$NOTIFICATIONTYPE$</link> contient une chaîne de caractéres qui identifie précisément cela. Le tableau ci-dessous liste les valeurs possibles de cette macro et leur description :"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
-#: TheBasics/notifications.xml:246 Development/pluginapi.xml:159
+#: TheBasics/notifications.xml:246
+#: Development/pluginapi.xml:159
 msgid "Value"
-msgstr ""
+msgstr "Valeur"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:253
 msgid "PROBLEM"
-msgstr ""
+msgstr "PROBLEM"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:255
-msgid ""
-"A service or host has just entered (or is still in) a problem state. If this "
-"is a service notification, it means the service is either in a WARNING, "
-"UNKNOWN or CRITICAL state. If this is a host notification, it means the host "
-"is in a DOWN or UNREACHABLE state."
-msgstr ""
+msgid "A service or host has just entered (or is still in) a problem state. If this is a service notification, it means the service is either in a WARNING, UNKNOWN or CRITICAL state. If this is a host notification, it means the host is in a DOWN or UNREACHABLE state."
+msgstr "Un service ou un hôte vient de passer (ou est encore) dans un état dénotant un problème. S'il s'agit d'une notification de service, cela signifie que le service est dans un état WARNING, UNKNOWN ou CRITICAL. Si c'est une notification d'hôte, cela signifie que l'hôte est dans l'état DOWN ou UNREACHABLE."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:263
 msgid "RECOVERY"
-msgstr ""
+msgstr "RECOVERY"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:265
-msgid ""
-"A service or host recovery has occurred. If this is a service notification, "
-"it means the service has just returned to an OK state. If it is a host "
-"notification, it means the host has just returned to an UP state."
-msgstr ""
+msgid "A service or host recovery has occurred. If this is a service notification, it means the service has just returned to an OK state. If it is a host notification, it means the host has just returned to an UP state."
+msgstr "Un service ou un hôte s'est rétabli. S'il s'agit d'une notification de service, cela signifie que le service vient de retourner dans l'état OK. Si c'est une notification d'hôte, cela signifie que l'hôte vient de reprendre l'état UP."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:272
 msgid "ACKNOWLEDGEMENT"
-msgstr ""
+msgstr "ACKNOWLEDGEMENT"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:274
-msgid ""
-"This notification is an acknowledgement notification for a host or service "
-"problem. Acknowledgement notifications are initiated via the web interface "
-"by contacts for the particular host or service."
-msgstr ""
+msgid "This notification is an acknowledgement notification for a host or service problem. Acknowledgement notifications are initiated via the web interface by contacts for the particular host or service."
+msgstr "Cette notification est liée à l'acquittement d'un problème d'hôte ou de service. Les notifications d'acquittement sont générées via l'interface web par les contacts de l'hôte ou du service concerné."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:281
 msgid "FLAPPINGSTART"
-msgstr ""
+msgstr "FLAPPINGSTART"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:283
-msgid ""
-"The host or service has just started <link linkend=\"advancedtopics-flapping"
-"\">flapping</link>."
-msgstr ""
+msgid "The host or service has just started <link linkend=\"advancedtopics-flapping\">flapping</link>."
+msgstr "L'hôte ou le service vient de commencer à <link linkend=\"advancedtopics-flapping\">osciller</link>."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:288
 msgid "FLAPPINGSTOP"
-msgstr ""
+msgstr "FLAPPINGSTOP"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:290
-msgid ""
-"The host or service has just stopped <link linkend=\"advancedtopics-flapping"
-"\">flapping</link>."
-msgstr ""
+msgid "The host or service has just stopped <link linkend=\"advancedtopics-flapping\">flapping</link>."
+msgstr "L'hôte ou le service vient de s'arrêter d'<link linkend=\"advancedtopics-flapping\">osciller</link>."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:295
 msgid "FLAPPINGDISABLED"
-msgstr ""
+msgstr "FLAPPINGDISABLED"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:297
-msgid ""
-"The host or service has just stopped <link linkend=\"advancedtopics-flapping"
-"\">flapping</link> because flap detection was disabled.."
-msgstr ""
+msgid "The host or service has just stopped <link linkend=\"advancedtopics-flapping\">flapping</link> because flap detection was disabled.."
+msgstr "L'hôte ou le service vient de s'arrêter d'<link linkend=\"advancedtopics-flapping\">osciller</link> parce que la détection d'oscillation a été désactivé."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:303
 msgid "DOWNTIMESTART"
-msgstr ""
+msgstr "DOWNTIMESTART"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:305
-msgid ""
-"The host or service has just entered a period of <link linkend="
-"\"advancedtopics-downtime\">scheduled downtime</link>.  Future notifications "
-"will be supressed."
-msgstr ""
+msgid "The host or service has just entered a period of <link linkend=\"advancedtopics-downtime\">scheduled downtime</link>.  Future notifications will be supressed."
+msgstr "L'hôte ou le service vient d'entrer dans une <link linkend=\"advancedtopics-downtime\">période de maintenance planifiée</link>. Les notifications suivantes seront supprimées."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:311
 msgid "DOWNTIMESTOP"
-msgstr ""
+msgstr "DOWNTIMESTOP"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:313
-msgid ""
-"The host or service has just exited from a period of <link linkend="
-"\"advancedtopics-downtime\">scheduled downtime</link>.  Notifications about "
-"problems can now resume."
-msgstr ""
+msgid "The host or service has just exited from a period of <link linkend=\"advancedtopics-downtime\">scheduled downtime</link>.  Notifications about problems can now resume."
+msgstr "L'hôte ou le service vient de sortir d'une <link linkend=\"advancedtopics-downtime\">période de maintenance planifiée</link>. Les notifications de problèmes peuvent donc reprendre."
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:319
 msgid "DOWNTIMECANCELLED"
-msgstr ""
+msgstr "DOWNTIMECANCELLED"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: TheBasics/notifications.xml:321
-msgid ""
-"The period of <link linkend=\"advancedtopics-downtime\">scheduled downtime</"
-"link> for the host or service was just cancelled. Notifications about "
-"problems can now resume."
-msgstr ""
+msgid "The period of <link linkend=\"advancedtopics-downtime\">scheduled downtime</link> for the host or service was just cancelled. Notifications about problems can now resume."
+msgstr "La <link linkend=\"advancedtopics-downtime\">période de maintenance planifiée</link> pour l'hôte ou le service vient d'être annulée. Les notifications de problèmes peuvent donc reprendre."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/notifications.xml:332
 msgid "Helpful Resources"
-msgstr ""
+msgstr "Ressources utiles"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:334
-msgid ""
-"There are many ways you could configure Nagios to send notifications out. "
-"Its up to you to decide which method(s) you want to use. Once you do that "
-"you'll have to install any necessary software and configure notification "
-"commands in your config files before you can use them. Here are just a few "
-"possible notification methods:"
-msgstr ""
+msgid "There are many ways you could configure Nagios to send notifications out. Its up to you to decide which method(s) you want to use. Once you do that you'll have to install any necessary software and configure notification commands in your config files before you can use them. Here are just a few possible notification methods:"
+msgstr "Il y a bien des moyens de configurer Nagios pour envoyer des notifications. C'et à vous de décider de la (des) méthode(s) que vous voulez utiliser. Une fois ce choix fait, vous devrez installer les logiciels nécessaires, et définir les commandes de notification dans vos fichiers de configuration avant de pouvoir les utiliser. Voici quelques méthodes de notification possibles :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:342
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:346
 msgid "Pager"
-msgstr ""
+msgstr "Pager"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:350
 msgid "Phone (SMS)"
-msgstr ""
+msgstr "Téléphone (SMS)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:354
 msgid "WinPopup message"
-msgstr ""
+msgstr "Message WinPopup"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:358
 msgid "Yahoo, ICQ, or MSN instant message"
-msgstr ""
+msgstr "Messageries instantanées Yahoo, ICQ, ou MSN "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:362
 msgid "Audio alerts"
-msgstr ""
+msgstr "Alertes sonores "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:366
 msgid "etc..."
-msgstr ""
+msgstr "etc..."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:370
-msgid ""
-"Basically anything you can do from a command line can be tailored for use as "
-"a notification command."
-msgstr ""
+msgid "Basically anything you can do from a command line can be tailored for use as a notification command."
+msgstr "En gros, tout ce que vous pouvez faire en ligne de commande peut être adapté sous forme de commande de notification."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:373
-msgid ""
-"If you're looking for an alternative to using email for sending messages to "
-"your pager or cellphone, check out these packages. They could be used in "
-"conjuction with Nagios to send out a notification via a modem when a problem "
-"arises. That way you don't have to rely on email to send notifications out "
-"(remember, email may *not* work if there are network problems). I haven't "
-"actually tried these packages myself, but others have reported success using "
-"them..."
-msgstr ""
+msgid "If you're looking for an alternative to using email for sending messages to your pager or cellphone, check out these packages. They could be used in conjuction with Nagios to send out a notification via a modem when a problem arises. That way you don't have to rely on email to send notifications out (remember, email may *not* work if there are network problems). I haven't actually tried these packages myself, but others have reported success using them..."
+msgstr "Si vous cherchez à envoyer des messages à votre pager ou à votre téléphone portable sans email, jetez un coup d'Å“il aux applications suivantes. Elles peuvent être utilisées en conjonction avec Nagios pour envoyer une notification via un modem quand un problème arrive. De cette façon, vous n'êtes pas dépendant de l'email pour émettre des notifications (gardez à l'esprit que l'email peut *ne pas* fonctionner s'il y a des problèmes réseau). Je n'ai pas personnellement essayé ces applications, mais certains m'ont dit l'avoir fait avec succès..."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:383
-msgid ""
-"<ulink url=\"http://www.gnokii.org/\">Gnokii</ulink> (SMS software for "
-"contacting Nokia phones via GSM network)"
-msgstr ""
+msgid "<ulink url=\"http://www.gnokii.org/\">Gnokii</ulink> (SMS software for contacting Nokia phones via GSM network)"
+msgstr "<ulink url=\"http://www.gnokii.org/\">Gnokii</ulink> (logiciel SMS pour contacter des téléphones Nokia via le réseau GSM)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:388
-msgid ""
-"<ulink url=\"http://www.qpage.org/\">QuickPage</ulink> (alphanumeric pager "
-"software)"
-msgstr ""
+msgid "<ulink url=\"http://www.qpage.org/\">QuickPage</ulink> (alphanumeric pager software)"
+msgstr "<ulink url=\"http://www.qpage.org/\">QuickPage</ulink> (logiciel de pager alphanumérique)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:393
-msgid ""
-"<ulink url=\"http://www.sendpage.org/\">Sendpage</ulink> (paging software)"
-msgstr ""
+msgid "<ulink url=\"http://www.sendpage.org/\">Sendpage</ulink> (paging software)"
+msgstr "<ulink url=\"http://www.sendpage.org/\">Sendpage</ulink> (logiciel de pager)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/notifications.xml:398
-msgid ""
-"<ulink url=\"http://www.smsclient.org/\">SMS Client</ulink> (command line "
-"utility for sending messages to pagers and mobile phones)"
-msgstr ""
+msgid "<ulink url=\"http://www.smsclient.org/\">SMS Client</ulink> (command line utility for sending messages to pagers and mobile phones)"
+msgstr "<ulink url=\"http://www.smsclient.org/\">SMS Client</ulink> (outil en ligne de commande pour envoyer des messages aux pagers et aux téléphones portables)"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/notifications.xml:404
-msgid ""
-"If you want to try out a non-traditional method of notification, you might "
-"want to mess around with audio alerts. If you want to have audio alerts "
-"played on the monitoring server (with synthesized speech), check out <ulink "
-"url=\"http://www.cstr.ed.ac.uk/projects/festival/\">Festival</ulink>. If "
-"you'd rather leave the monitoring box alone and have audio alerts played on "
-"another box, check out the <ulink url=\"http://radscan.com/nas.html"
-"\">Network Audio System (NAS)</ulink> and <ulink url=\"http://rplay.doit.org/"
-"\">rplay</ulink> projects."
-msgstr ""
+msgid "If you want to try out a non-traditional method of notification, you might want to mess around with audio alerts. If you want to have audio alerts played on the monitoring server (with synthesized speech), check out <ulink url=\"http://www.cstr.ed.ac.uk/projects/festival/\">Festival</ulink>. If you'd rather leave the monitoring box alone and have audio alerts played on another box, check out the <ulink url=\"http://radscan.com/nas.html\">Network Audio System (NAS)</ulink> and <ulink url=\"http://rplay.doit.org/\">rplay</ulink> projects."
+msgstr "Si vous désirez une méthode atypique, vous pouvez essayer de vous amuser avec les alertes sonores. Si vous voulez des alertes sonores sur le serveur de supervision (avec voix synthéthique), essayez <ulink url=\"http://www.cstr.ed.ac.uk/projects/festival/\">Festival</ulink> [Anglais]. Si vous voulez les recevoir sur une autre machine, testez le <ulink url=\"http://radscan.com/nas.html\">Network Audio System (NAS)</ulink> (NAS) [Anglais] et <ulink url=\"http://rplay.doit.org/\">rplay</ulink> [Anglais]. "
+
