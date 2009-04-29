@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-04-29 11:26+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,165 +69,100 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><title>
 #: AdvancedTopics/clusters.xml:10
 msgid "Monitoring Service and Host Clusters"
-msgstr ""
+msgstr "Supervision de clusters d'hôtes et de services"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:13
-msgid ""
-"Several people have asked how to go about monitoring clusters of hosts or "
-"services, so I decided to write up a little documentation on how to do this. "
-"Its fairly straightforward, so hopefully you find things easy to "
-"understand..."
-msgstr ""
+msgid "Several people have asked how to go about monitoring clusters of hosts or services, so I decided to write up a little documentation on how to do this. Its fairly straightforward, so hopefully you find things easy to understand..."
+msgstr "Plusieurs personnes ont demandé comment il est possible de superviser des clusters d'hôtes ou de services, aussi ai-je décidé d'écrire une petite documentation sur comment le faire. C'est plutôt simple aussi ne devriez-vous pas avoir de problème de compréhension..."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:16
-msgid ""
-"First off, we need to define what we mean by a \"cluster\". The simplest way "
-"to understand this is with an example. Let's say that your organization has "
-"five hosts which provide redundant &protocol-dns; services to your "
-"organization. If one of them fails, its not a major catastrophe because the "
-"remaining servers will continue to provide name resolution services.  If "
-"you're concerned with monitoring the availability of &protocol-dns; service "
-"to your organization, you will want to monitor five &protocol-dns; servers. "
-"This is what I consider to be a service cluster. The service cluster "
-"consists of five separate &protocol-dns; services that you are monitoring. "
-"Although you do want to monitor each individual service, your main concern "
-"is with the overall status of the &protocol-dns; service cluster, rather "
-"than the availability of any one particular service."
-msgstr ""
+msgid "First off, we need to define what we mean by a \"cluster\". The simplest way to understand this is with an example. Let's say that your organization has five hosts which provide redundant &protocol-dns; services to your organization. If one of them fails, its not a major catastrophe because the remaining servers will continue to provide name resolution services.  If you're concerned with monitoring the availability of &protocol-dns; service to your organization, you will want to monitor five &protocol-dns; servers. This is what I consider to be a service cluster. The service cluster consists of five separate &protocol-dns; services that you are monitoring. Although you do want to monitor each individual service, your main concern is with the overall status of the &protocol-dns; service cluster, rather than the availability of any one particular service."
+msgstr "Premièrement, nous devons définri ce que nous entendons par <quote>cluster</quote>. La façon la plus simple pour comprendre est de prendere un exemple. Disons que votre organisation possède cinq serveurs qui fournissent la redondance des services &protocol-dns;. Si l'un d'eux tombe, ce n'est pas un gros problème parce que les serveurs restants vont continuer à assurer le service de résolution de noms. Si vous êtes concerné par la supervision et la disponibilité des services &protocol-dns; de votre organisation, vous souhaiterez superviser les cinq serveurs &protocol-dns;. C'est ce que je considère être un cluster de services. Le service cluster consiste en cinq services &protocol-dns; séparés que vous supervisez. Même si vous souhaitez superviser chacun de ces services, votre principale préoccupation concerne le statut global du cluster de services &protocol-dns; plutôt que la disponibilité d'un service en particulier."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:26
-msgid ""
-"If your organization has a group of hosts that provide a high-availability "
-"(clustering) solution, I would consider those to be a host cluster. If one "
-"particular host fails, another will step in to take over all the duties of "
-"the failed server.  As a side note, check out the <ulink url=\"http://www."
-"linux-ha.org/\">High-Availability Linux Project</ulink> for information on "
-"providing host and service redundancy with Linux."
-msgstr ""
+msgid "If your organization has a group of hosts that provide a high-availability (clustering) solution, I would consider those to be a host cluster. If one particular host fails, another will step in to take over all the duties of the failed server.  As a side note, check out the <ulink url=\"http://www.linux-ha.org/\">High-Availability Linux Project</ulink> for information on providing host and service redundancy with Linux."
+msgstr "Si votre organisation possède un groupe d'hôtes assurant une solution de haute disponibilité (clustering), je considèrerais ceux-ci comme un cluster d'hôtes. Si l'un des ces hôtes tombe, un autre va prendre le relais pour assurer les tâches dévolus au serveur tombé. En apparté, vous pouvez consulter le <ulink url=\"http://www.linux-ha.org/\">High-Availability Linux Project</ulink> pour des informations sur la façon d'assurer la redondance avec Linux."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/clusters.xml:33
 msgid "Plan of Attack"
-msgstr ""
+msgstr "Plan d'attaque"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:34
-msgid ""
-"There are several ways you could potentially monitor service or host "
-"clusters. I'll describe the method that I believe to be the easiest. "
-"Monitoring service or host clusters involves two things:"
-msgstr ""
+msgid "There are several ways you could potentially monitor service or host clusters. I'll describe the method that I believe to be the easiest. Monitoring service or host clusters involves two things:"
+msgstr "Il y plusieurs potentiellement plusieurs méthodes pour superviser des clusters d'hôtes ou de services. Je vais décrire la méthode que je crois être la plus simple. La supervision de clusters d'hôtes ou de services impliquent deux choses:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/clusters.xml:38
 msgid "Monitoring individual cluster elements"
-msgstr ""
+msgstr "La supervision de chacun des éléments du cluster"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/clusters.xml:41
 msgid "Monitoring the cluster as a collective entity"
-msgstr ""
+msgstr "La supervision du cluster comme une entité globale"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:44
-msgid ""
-"Monitoring individual host or service cluster elements is easier than you "
-"think.  In fact, you're\tprobably already doing it. For service clusters, "
-"just make sure that you are monitoring each service element of the cluster. "
-"If you've got a cluster of five &protocol-dns; servers, make sure you have "
-"five separate service definitions (probably using the &plugin-dns; plugin).  "
-"For host clusters, make sure you have configured appropriate host "
-"definitions for each member of the cluster (you'll also have to define at "
-"least one service to be monitored for each of the hosts)."
-msgstr ""
+msgid "Monitoring individual host or service cluster elements is easier than you think.  In fact, you're\tprobably already doing it. For service clusters, just make sure that you are monitoring each service element of the cluster. If you've got a cluster of five &protocol-dns; servers, make sure you have five separate service definitions (probably using the &plugin-dns; plugin).  For host clusters, make sure you have configured appropriate host definitions for each member of the cluster (you'll also have to define at least one service to be monitored for each of the hosts)."
+msgstr "Superviser les éléments constituant un cluster d'hôtes ou de services est plus facile que ce que vous pensez. En fait, vous le faîtes déjà sûrement. Pour les clusters de services, assurez-vous simplement de superviser chacun des éléments constituant le service en cluster. Si vous avez un cluster de cinq serveurs &protocol-dns;, assurez-vous d'avoir cinq définitions de services séparées (probablement en utilisant le plugin &plugin-dns;). Pour un cluster d'hôtes, assurez-vous d'avoir configuré les définitions d'hôtes appropriées pour chacun des serveurs du cluster (vous aurez aussi à définir au minimum un service pour chacun de ces hôtes)."
 
 # type: Content of: <chapter><section><important><para>
 #: AdvancedTopics/clusters.xml:52
-msgid ""
-"You're going to want to disable notifications for the individual cluster "
-"elements (host or service definitions).  Even though no notifications will "
-"be sent about the individual elements, you'll still get a visual display of "
-"the individual host or service status in the <link linkend=\"thebasics-cgis-"
-"status_cgi\">status CGI</link>. This will be useful for pinpointing the "
-"source of problems within the cluster in the future."
-msgstr ""
+msgid "You're going to want to disable notifications for the individual cluster elements (host or service definitions).  Even though no notifications will be sent about the individual elements, you'll still get a visual display of the individual host or service status in the <link linkend=\"thebasics-cgis-status_cgi\">status CGI</link>. This will be useful for pinpointing the source of problems within the cluster in the future."
+msgstr "Vous souhaiterez certainement désactiver les notifications pour chacun des éléments formant le cluster (définitions d'hôtes et de services). Même si aucune notification n'est envoyée pour les éléments de façon individuelle, vous continuez à avoir une vue de chacun des hôtes et services dans le <link linkend=\"thebasics-cgis-status_cgi\">status CGI</link>. Cela sera utile pour détecter la source du problème à l'intérieur du cluster dans le futur."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:60
-msgid ""
-"Monitoring the overall cluster can be done by using the previously cached "
-"results of cluster elements. Although you could re-check all elements of the "
-"cluster to determine the cluster's status, why waste bandwidth and resources "
-"when you already have the results cached? Where are the results cached ? "
-"Cached results for cluster elements can be found in the <link linkend="
-"\"configuringnagios-configmain-status_file\">status file</link> (assuming "
-"you are monitoring each element). The &plugin-cluster; plugin is designed "
-"specifically for checking cached host and service states in the status file."
-msgstr ""
+msgid "Monitoring the overall cluster can be done by using the previously cached results of cluster elements. Although you could re-check all elements of the cluster to determine the cluster's status, why waste bandwidth and resources when you already have the results cached? Where are the results cached ? Cached results for cluster elements can be found in the <link linkend=\"configuringnagios-configmain-status_file\">status file</link> (assuming you are monitoring each element). The &plugin-cluster; plugin is designed specifically for checking cached host and service states in the status file."
+msgstr "La supervision globale du cluster peut être faite en utilisant les précédents résultats mis en cache pour chacun des éléments du cluster. Même si vous pourriez déterminer le statut du cluster en recontrôlant tous les éléments du cluster, pourquoi consommer de la bande passante et des ressources alors que vous avez déjà les résultats en cache? Où sont les résultats mis en cache ? Les résultats mis en cache pour chacun des éléments peuvent être trouvés dans le <link linkend=\"configuringnagios-configmain-status_file\">fichier de statut</link> (en partant du principe que vous supervisez chaque élément). Le &plugin-cluster; est spécialement prévu pour contrôler les états d'hôtes et de services mis en cache dans le fichier de statut. "
 
 # type: Content of: <chapter><section><important><para>
 #: AdvancedTopics/clusters.xml:67
-msgid ""
-"Although you didn't enable notifications for individual elements of the "
-"cluster, you will want them enabled for the overall cluster status check."
-msgstr ""
+msgid "Although you didn't enable notifications for individual elements of the cluster, you will want them enabled for the overall cluster status check."
+msgstr "Même si vous n'avez pas activé les notifications individuellement pour chacun des éléments du cluster, vous souhaiterez les activer pour le contrôle du statut global du cluster."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/clusters.xml:71
 msgid "Using the check_cluster Plugin"
-msgstr ""
+msgstr "Utilisation du plugin check_cluster"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:71
-msgid ""
-"The &plugin-cluster; plugin is designed to report the overall status of a "
-"host or service cluster by checking the status information of each "
-"individual host or service cluster elements."
-msgstr ""
+msgid "The &plugin-cluster; plugin is designed to report the overall status of a host or service cluster by checking the status information of each individual host or service cluster elements."
+msgstr "Le plugin &plugin-cluster; est étudié pour rapporter l'état général d'un cluster d'hôtes ou de services en contrôlant individuellement l'état de chacun des éléments composant le cluster. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:74
-msgid ""
-"More to come... The &plugin-cluster; plugin can be found in the <filename "
-"class=\"directory\">contrib</filename> directory of the Nagios Plugins "
-"release at <ulink url=\"&url-sourceforge-projects;nagiosplug/\">&url-"
-"sourceforge-projects;nagiosplug/</ulink>."
-msgstr ""
+msgid "More to come... The &plugin-cluster; plugin can be found in the <filename class=\"directory\">contrib</filename> directory of the Nagios Plugins release at <ulink url=\"&url-sourceforge-projects;nagiosplug/\">&url-sourceforge-projects;nagiosplug/</ulink>."
+msgstr "Plus à venir... Le plugin &plugin-cluster; peut être trouvé dans le répertoire <filename class=\"directory\">contrib</filename> de la distribution des Plugins Nagios à l'adresse <ulink url=\"&url-sourceforge-projects;nagiosplug/\">&url-sourceforge-projects;nagiosplug/</ulink>."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/clusters.xml:78
 msgid "Monitoring Service Clusters"
-msgstr ""
+msgstr "Supervision de clusters de services"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:79
-msgid ""
-"Let's say you have three &protocol-dns; servers that provide redundant "
-"services on your network. First off, you need to be monitoring each of these "
-"&protocol-dns; servers seperately before you can monitor them as a cluster. "
-"I'll assume that you already have three seperate services (all called "
-"\"&protocol-dns; Service\") associated with your &protocol-dns; hosts "
-"(called \"host1\", \"host2\" and \"host3\")."
-msgstr ""
+msgid "Let's say you have three &protocol-dns; servers that provide redundant services on your network. First off, you need to be monitoring each of these &protocol-dns; servers seperately before you can monitor them as a cluster. I'll assume that you already have three seperate services (all called \"&protocol-dns; Service\") associated with your &protocol-dns; hosts (called \"host1\", \"host2\" and \"host3\")."
+msgstr "Disons que vous avez trois serveurs  &protocol-dns; qui apportent une redondance de services sur votre réseau. Premièrement, vous avez besoin de superviser chacun des trois serveurs &protocol-dns; individuellement avant de pouvoir les superviser en tant que cluster. Je pars du principe que vous avez trois services séparés (tous appelés <quote>Service &protocol-dns;</quote>) associés à vos hôtes  &protocol-dns; (appelés <quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>)."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:84
-msgid ""
-"In order to monitor the services as a cluster, you'll need to create a new "
-"\"cluster\" service. However, before you do that, make sure you have a "
-"service cluster check command configured. Let's assume that you have a "
-"command called check_service_cluster defined as follows:"
-msgstr ""
+msgid "In order to monitor the services as a cluster, you'll need to create a new \"cluster\" service. However, before you do that, make sure you have a service cluster check command configured. Let's assume that you have a command called check_service_cluster defined as follows:"
+msgstr "Pour pouvoir superviser ces services en tant que cluster, vous devez créer un nouveau service <quote>cluster</quote>. Cependant, avant de faire ça, assurez-vous d'avoir une commande de contrôle de cluster configurée. Partons du principe que vous avez la définition de commande check_cluster suivante:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/clusters.xml:87
@@ -220,22 +173,20 @@ msgid ""
 "        command_line    /usr/local/nagios/libexec/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$\n"
 "        }"
 msgstr ""
+"define command{\n"
+"        command_name    check_service_cluster\n"
+"        command_line    /usr/local/nagios/libexec/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$\n"
+"        }"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:91
 msgid "Now you'll need to create the \"cluster\" service and use the"
-msgstr ""
+msgstr "Maintenant, vous avez besoin de créer le service <quote>cluster</quote> et d'utiliser la"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:91
-msgid ""
-"command you just created as the cluster's check command. The example below "
-"gives an example of how to do this. The example below will generate a "
-"CRITICAL alert if 2 or more services in the cluster are in a non-OK state, "
-"and a WARNING alert if only 1 of the services is in a non-OK state. If all "
-"the individual service members of the cluster are OK, the cluster check will "
-"return an OK state as well."
-msgstr ""
+msgid "command you just created as the cluster's check command. The example below gives an example of how to do this. The example below will generate a CRITICAL alert if 2 or more services in the cluster are in a non-OK state, and a WARNING alert if only 1 of the services is in a non-OK state. If all the individual service members of the cluster are OK, the cluster check will return an OK state as well."
+msgstr "commande que vous venez juste de créer comme commande de contrôle de cluster. L'exemple suivant montre une mainère de faire ça. Cet exemple va générer une alerte CRITICAL si deux services au moins du cluster sont dans un état non-OK et une alerte WARNING si un seul des services est dans un état non-OK. Si tous les services faisant parti du cluster sont OK, le contrôle du cluster renvoie également un état OK."
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/clusters.xml:96
@@ -247,52 +198,41 @@ msgid ""
 "\t...\n"
 "\t}"
 msgstr ""
+"define service{\n"
+"\t...\n"
+"\tcheck_command   check_service_cluster!\"DNS Cluster\"!1!2!$SERVICESTATEID:host1:DNS Service$,$SERVICESTATEID:host2:DNS Service$,$SERVICESTATEID:host3:DNS Service$\n"
+"\t...\n"
+"\t}"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:101
-msgid ""
-"It is important to notice that we are passing a comma-delimited list of on-"
-"demand service state <link linkend=\"thebasics-macros\">macros</link> to the"
-msgstr ""
+msgid "It is important to notice that we are passing a comma-delimited list of on-demand service state <link linkend=\"thebasics-macros\">macros</link> to the"
+msgstr "Il est important de noter que nous passons une liste séparée par des virgules de <link linkend=\"thebasics-macros\">macros</link> on-demand d'état de services <link linkend=\"thebasics-macros\">macros</link> à"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:102
-msgid ""
-"macro in the cluster check command.  That's important! Nagios will fill "
-"those on-demand macros in with the current service state IDs (numerical "
-"values, rather than text strings) of the individual members of the cluster."
-msgstr ""
+msgid "macro in the cluster check command.  That's important! Nagios will fill those on-demand macros in with the current service state IDs (numerical values, rather than text strings) of the individual members of the cluster."
+msgstr "la macro dans la commande de contrôle de cluster. C'est important! Nagios va compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des chaînes de caractères) l'état courant de chacun des membres du cluster."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/clusters.xml:107
 msgid "Monitoring Host Clusters"
-msgstr ""
+msgstr "Supervision de clusters d'hôtes"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:108
-msgid ""
-"Monitoring host clusters is very similiar to monitoring service clusters. "
-"Obviously, the main difference is that the cluster members are hosts and not "
-"services. In order to monitor the status of a host cluster, you must define "
-"a service that uses the &plugin-cluster; plugin. The service should not be "
-"associated with any of the hosts in the cluster, as this will cause problems "
-"with notifications for the cluster if that host goes down. A good idea might "
-"be to associate the service with the host that Nagios is running on. After "
-"all, if the host that Nagios is running on goes down, then Nagios isn't "
-"running anymore, so there isn't anything you can do as far as monitoring "
-"(unless you've setup <link linkend=\"advancedtopics-redundancy\">redundant "
-"monitoring hosts</link>)..."
-msgstr ""
+msgid "Monitoring host clusters is very similiar to monitoring service clusters. Obviously, the main difference is that the cluster members are hosts and not services. In order to monitor the status of a host cluster, you must define a service that uses the &plugin-cluster; plugin. The service should not be associated with any of the hosts in the cluster, as this will cause problems with notifications for the cluster if that host goes down. A good idea might be to associate the service with the host that Nagios is running on. After all, if the host that Nagios is running on goes down, then Nagios isn't running anymore, so there isn't anything you can do as far as monitoring (unless you've setup <link linkend=\"advancedtopics-redundancy\">redundant monitoring hosts</link>)..."
+msgstr "La supervision des clusters d'hôtes est très similaire à celle pour les clusters de services. La principale différence est que les membres du cluster sont des hôtes et non des services. Pour pouvoir contrôler l'état d'un cluster d'hôte, vous devez définir un service qui utilise le plugin &plugin-cluster;. Le service ne devrait être associé à aucun des hôtes du cluster car cela provoquerait des problèmes avec les notifications pour le cluster si cet hôte tombe. Une bonne idée peut être d'associer le service avec l'hôte sur lequel Nagios fonctionne. Après tout, si l'hôte sur lequel fonctionne Nagios tombe, Nagios ne fonctionne plus, il n'y a donc plus grand chose à faire (à moins d'avoir mis en place une <link linkend=\"advancedtopics-redundancy\">redondance de vos serveurs de supervision</link>)..."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:111
 msgid "Anyway, let's assume that you have a"
-msgstr ""
+msgstr "Qu'importe, partons du principe que vous avez une "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:111
 msgid "command defined as follows:"
-msgstr ""
+msgstr "commande définie comme suit:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/clusters.xml:112
@@ -303,16 +243,15 @@ msgid ""
 "\tcommand_line    /usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$\n"
 "\t}"
 msgstr ""
+"define command{\n"
+"\tcommand_name    check_host_cluster\n"
+"\tcommand_line    /usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$\n"
+"\t}"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:116
-msgid ""
-"Let's say you have three hosts (named \"host1\", \"host2\" and \"host3\") in "
-"the host cluster. If you want Nagios to generate a warning alert if one host "
-"in the cluster is not UP or a critical alert if two or more hosts are not "
-"UP, the the service you define to monitor the host cluster might look "
-"something like this:"
-msgstr ""
+msgid "Let's say you have three hosts (named \"host1\", \"host2\" and \"host3\") in the host cluster. If you want Nagios to generate a warning alert if one host in the cluster is not UP or a critical alert if two or more hosts are not UP, the the service you define to monitor the host cluster might look something like this:"
+msgstr "Disons que vous avez trois hôtes dans le cluster d'hôtes (appelés <quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>). Si vous voulez que Nagios génère une alerte warning si l'un des hôtes du cluster n'est pas UP et une alerte critical si deux sont non UP, la définition de servie à utiliser pour contrôler le cluster d'hôtes pourrait ressembler à celle-ci:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/clusters.xml:119
@@ -324,31 +263,24 @@ msgid ""
 "       ...\n"
 "        }"
 msgstr ""
+"define service{\n"
+"       ...\n"
+"       check_command   check_host_cluster!\"Super Host Cluster\"!1!2!$HOSTSTATEID:host1$,$HOSTSTATEID:host2$,$HOSTSTATEID:host3$\n"
+"       ...\n"
+"        }"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:124
-msgid ""
-"It is important to notice that we are passing a comma-delimited list of on-"
-"demand host state <link linkend=\"thebasics-macros\">macros</link> to the"
-msgstr ""
+msgid "It is important to notice that we are passing a comma-delimited list of on-demand host state <link linkend=\"thebasics-macros\">macros</link> to the"
+msgstr "Il est important de noter que nous passons une liste séparée par des virgules de <link linkend=\"thebasics-macros\">macros</link> on-demand d'état d'hôtes <link linkend=\"thebasics-macros\">macros</link> à"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:125
-msgid ""
-"macro in the cluster check command.  That's important! Nagios will fill "
-"those on-demand macros in with the current host state IDs (numerical values, "
-"rather than text strings) of the individual members of the cluster."
-msgstr ""
+msgid "macro in the cluster check command.  That's important! Nagios will fill those on-demand macros in with the current host state IDs (numerical values, rather than text strings) of the individual members of the cluster."
+msgstr "la macro dans la commande de contrôle de cluster. C'est important! Nagios va compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des chaînes de caractères) l'état courant de chacun des membres du cluster."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/clusters.xml:128
-msgid ""
-"That's it! Nagios will periodically check the status of the host cluster and "
-"send notifications to you when its status is degraded (assuming you've "
-"enabled notification for the service). Note that for thehost definitions of "
-"each cluster member, you will most likely want to disable notifications when "
-"the host goes down . Remeber that you don't care as much about the status of "
-"any individual host as you do the overall status of the cluster.  Depending "
-"on your network layout and what you're trying to accomplish, you may wish to "
-"leave notifications for unreachable states enabled for the host definitions."
-msgstr ""
+msgid "That's it! Nagios will periodically check the status of the host cluster and send notifications to you when its status is degraded (assuming you've enabled notification for the service). Note that for thehost definitions of each cluster member, you will most likely want to disable notifications when the host goes down . Remeber that you don't care as much about the status of any individual host as you do the overall status of the cluster.  Depending on your network layout and what you're trying to accomplish, you may wish to leave notifications for unreachable states enabled for the host definitions."
+msgstr "Voilà! Nagios va régulièrement contrôler l'état du cluster d'hôtes et vous envoyer des notifications quand l'état de celui-ci est dégradé (en partant du principe que vous avez activé la notification pour le service). Notez que pour chacune des définitions individuelles d'hôtes appartenant au cluster, vous souhaiterez désactiver les notifications quand l'hôte tombe. Souvenez-vous que vous ne tenez pas tant que ça à l'état individuel de chacun des hôtres composant le cluster mais plutôt à l'état général de cleui-ci. En fonction de la topologie de votre réseau et de ce que vous souhaitez accomplir, vous pourriez souhaiter conserver les notifications pour des hôtes inaccessibles dans les définitions d'hôtes."
+
