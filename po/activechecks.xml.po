@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-05-04 15:24+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,126 +69,103 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><section><para>
-#: TheBasics/macros.xml:103 TheBasics/servicechecks.xml:21
-#: TheBasics/activechecks.xml:62 AdvancedTopics/extcommands.xml:74
+#: TheBasics/macros.xml:103
+#: TheBasics/servicechecks.xml:21
+#: TheBasics/activechecks.xml:62
+#: AdvancedTopics/extcommands.xml:74
 #: SecurityAndPerformanceTuning/nagiostats.xml:104
 msgid "and"
-msgstr ""
+msgstr "et"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
-#: TheBasics/servicechecks.xml:20 TheBasics/activechecks.xml:61
+#: TheBasics/servicechecks.xml:20
+#: TheBasics/activechecks.xml:61
 msgid "At regular intervals, as defined by the"
-msgstr ""
+msgstr "à intervalles réguliers comme défini dans"
 
 # type: Content of: <chapter><title>
 #: TheBasics/activechecks.xml:10
 msgid "Active Checks"
-msgstr ""
+msgstr "les contrôles actifs"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:15
-msgid ""
-"Nagios is capable of monitoring hosts and services in two ways: actively and "
-"passively. Passive checks are described <link linkend=\"thebasics-"
-"passivechecks\">elsewhere</link>, so we'll focus on active checks here. "
-"Active checks are the most common method for monitoring hosts and services. "
-"The main features of actives checks as as follows:"
-msgstr ""
+msgid "Nagios is capable of monitoring hosts and services in two ways: actively and passively. Passive checks are described <link linkend=\"thebasics-passivechecks\">elsewhere</link>, so we'll focus on active checks here. Active checks are the most common method for monitoring hosts and services. The main features of actives checks as as follows:"
+msgstr "Nagios est capable de contrôler des hôtes et des services de deux façons; activement et passivement. Les contrôles passifs sont décrits <link linkend=\"thebasics-passivechecks\">ailleurs</link>, aussi allons-nous nous concentrer ici sur les contrôles actifs. Les contrôles actifs représentent la méthode la plus commune pour superviser des hôtes et services. Les principales fonctionnalités des contrôles actifs sont les suivantes :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/activechecks.xml:24
 msgid "Active checks are initiated by the Nagios process"
-msgstr ""
+msgstr "Les contrôles actifs sont inités par le processus Nagios."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/activechecks.xml:28
 msgid "Active checks are run on a regularly scheduled basis"
-msgstr ""
+msgstr "Les contrôles actifs sont exécutés à intervalles réguliers"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/activechecks.xml:34
 msgid "How Are Active Checks Performed?"
-msgstr ""
+msgstr "Comment sont faits les contrôles actifs ?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:41
-msgid ""
-"Active checks are initiated by the check logic in the Nagios daemon. When "
-"Nagios needs to check the status of a host or service it will execute a "
-"plugin and pass it information about what needs to be checked. The plugin "
-"will then check the operational state of the host or service and report the "
-"results back to the Nagios daemon. Nagios will process the results of the "
-"host or service check and take appropriate action as necessary (e.g. send "
-"notifications, run event handlers, etc)."
-msgstr ""
+msgid "Active checks are initiated by the check logic in the Nagios daemon. When Nagios needs to check the status of a host or service it will execute a plugin and pass it information about what needs to be checked. The plugin will then check the operational state of the host or service and report the results back to the Nagios daemon. Nagios will process the results of the host or service check and take appropriate action as necessary (e.g. send notifications, run event handlers, etc)."
+msgstr "Les contrôles actifs sont initiés par la logique de contrôle du démon Nagios. Quand Nagios a besoin de connaître l'état d'un hôte ou d'un service, il va exécuter un plugin et lui passer les informations sur ce qu'il a besoin de contrôler. Le plugin contrôle alors l'état opérationnel de l'hôte ou du service et renvoie les résultats en retour au démon Nagios. Nagios va traiter les résultats du contrôle d'hôte ou de service et conduire les actions appropriées (par exemple envoyer des notifications, lancer un gestionnaire d'événements, etc)."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:50
-msgid ""
-"More information on how plugins work can be found <link linkend=\"thebasics-"
-"plugins\">here</link>."
-msgstr ""
+msgid "More information on how plugins work can be found <link linkend=\"thebasics-plugins\">here</link>."
+msgstr "Plus d'informations sur le fonctionnement des plugins peut être trouvé <link linkend=\"thebasics-plugins\">ici</link>."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/activechecks.xml:55
 msgid "When Are Active Checks Executed?"
-msgstr ""
+msgstr "Quand sont exécutés les contrôles actifs ?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:57
 msgid "Active check are executed:"
-msgstr ""
+msgstr "Les contrôles actifs sont exécutés :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/activechecks.xml:62
 msgid "options in your host and service definitions"
-msgstr ""
+msgstr "options dans vos définitions d'hôtes et de services"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/activechecks.xml:67
 msgid "On-demand as needed"
-msgstr ""
+msgstr "à la demand quand nécessaire"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:71
 msgid "Regularly scheduled checks occur at intervals equaling either the"
-msgstr ""
+msgstr "Les contrôles réguliers sont faits à intervalles réguliers soit quand"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:72
 msgid "or the"
-msgstr ""
+msgstr "ou le"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:72
-msgid ""
-"in your host or service definitions, depending on what <link linkend="
-"\"thebasics-statetypes\">type of state</link> the host or service is in. If "
-"a host or service is in a HARD state, it will be actively checked at "
-"intervals equal to the"
-msgstr ""
+msgid "in your host or service definitions, depending on what <link linkend=\"thebasics-statetypes\">type of state</link> the host or service is in. If a host or service is in a HARD state, it will be actively checked at intervals equal to the"
+msgstr "dans vos défintions d'hôtes et de services, dépendant du <link linkend=\"thebasics-statetypes\">type d'état</link> dans lequel se trouve l'hôte ou le service. Si l'hôte ou le service se trouve dans un état HARD, il sera activement contrôlé à intervalles réguliers"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:76
-msgid ""
-"option. If it is in a SOFT state, it will be checked at intervals equal to "
-"the retry_interval option."
-msgstr ""
+msgid "option. If it is in a SOFT state, it will be checked at intervals equal to the retry_interval option."
+msgstr "option. Si il est dans un état SOFT, il sera contrôlé à intervalles égaux à l'option retry_interval."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/activechecks.xml:80
-msgid ""
-"On-demand checks are performed whenever Nagios sees a need to obtain the "
-"latest status information about a particular host or service. For example, "
-"when Nagios is determining the <link linkend=\"thebasics-networkreachability"
-"\">reachability</link> of a host, it will often perform on-demand checks of "
-"parent and child hosts to accurately determine the status of a particular "
-"network segment. On-demand checks also occur in the <link linkend="
-"\"advancedtopics-dependencychecks\">predictive dependency check</link> logic "
-"in order to ensure Nagios has the most accurate status information."
-msgstr ""
+msgid "On-demand checks are performed whenever Nagios sees a need to obtain the latest status information about a particular host or service. For example, when Nagios is determining the <link linkend=\"thebasics-networkreachability\">reachability</link> of a host, it will often perform on-demand checks of parent and child hosts to accurately determine the status of a particular network segment. On-demand checks also occur in the <link linkend=\"advancedtopics-dependencychecks\">predictive dependency check</link> logic in order to ensure Nagios has the most accurate status information."
+msgstr "Les contrôles à la demande sont faits quand Nagios estime avoir besoin de connaître le dernier état d'un hôte ou service particulier. Par exemple, quand Nagios détermine <link linkend=\"thebasics-networkreachability\">l'accesibilité</link> d'un hôte, il va souvent faire un contrôle à la demande des hôtes parents et enfants pour avoir un état exact de ce segment particulier de réseau. Les contrôles à la demande peuvent aussi être faits par la logique de <link linkend=\"advancedtopics-dependencychecks\">contrôle prédictif de dépendances</link> pour s'assurer que Nagios a bien les derniers états disponibles."
+
