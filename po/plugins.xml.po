@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-05-11 15:44+0100\n"
+"Last-Translator: Guillaume <guigui.boulot@gmail.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,10 +17,11 @@ msgstr ""
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:39
-#: GettingStarted/monitoring-linux.xml:38 TheBasics/plugins.xml:96
+#: GettingStarted/monitoring-linux.xml:38
+#: TheBasics/plugins.xml:96
 #: AdvancedTopics/eventhandlers.xml:37
 msgid "etc."
-msgstr ""
+msgstr "etc..."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:45
@@ -29,25 +30,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -58,204 +77,153 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><section><para><option>
 #: GettingStarted/monitoring-publicservices.xml:172
-#: GettingStarted/monitoring-publicservices.xml:173 TheBasics/plugins.xml:130
+#: GettingStarted/monitoring-publicservices.xml:173
+#: TheBasics/plugins.xml:130
 #: SecurityAndPerformanceTuning/nagiostats.xml:21
 #: SecurityAndPerformanceTuning/nagiostats.xml:107
 msgid "--help"
-msgstr ""
+msgstr "--help"
 
 # type: Content of: <chapter><title>
 #: TheBasics/plugins.xml:10
 msgid "Nagios Plugins"
-msgstr ""
+msgstr "Les Plugins Nagios"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:15
-msgid ""
-"Unlike many other monitoring tools, Nagios does not include any internal "
-"mechanisms for checking the status of hosts and services on your network. "
-"Instead, Nagios relies on external programs (called plugins) to do all the "
-"dirty work."
-msgstr ""
+msgid "Unlike many other monitoring tools, Nagios does not include any internal mechanisms for checking the status of hosts and services on your network. Instead, Nagios relies on external programs (called plugins) to do all the dirty work."
+msgstr "Comme pas mal d'autres outils de supervision, Nagios n'intègre aucun mécanisme pour contrôler l'état des hôtes et services sur votre réseau. Du coup, Nagios délègue à des programmes externes (appelés plugins) tout le sale boulot."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/plugins.xml:22
 msgid "What Are Plugins?"
-msgstr ""
+msgstr "Que Sont Les Plugins?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:24
-msgid ""
-"Plugins are compiled executables or scripts (Perl scripts, shell scripts, "
-"etc.) that can be run from a command line to check the status or a host or "
-"service. Nagios uses the results from plugins to determine the current "
-"status of hosts and services on your network."
-msgstr ""
+msgid "Plugins are compiled executables or scripts (Perl scripts, shell scripts, etc.) that can be run from a command line to check the status or a host or service. Nagios uses the results from plugins to determine the current status of hosts and services on your network."
+msgstr "Les plugins sont des programmes compilés ou des scripts (Perl, shell, etc..) qui peuvent être exécutés en ligne de commande pour contrôler l'état d'un hôte ou d'un service. Nagios utilise le résultat des plugins pour déterminer le statut actuel des hôtes ou services sur le réseau."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:29
-msgid ""
-"Nagios will execute a plugin whenever there is a need to check the status of "
-"a service or host. The plugin does something (notice the very general term) "
-"to perform the check and then simply returns the results to Nagios. Nagios "
-"will process the results that it receives from the plugin and take any "
-"necessary actions (running <link linkend=\"advancedtopics-eventhandlers"
-"\">event handlers</link>, sending out <link linkend=\"thebasics-notifications"
-"\">notifications</link>, etc)."
-msgstr ""
+msgid "Nagios will execute a plugin whenever there is a need to check the status of a service or host. The plugin does something (notice the very general term) to perform the check and then simply returns the results to Nagios. Nagios will process the results that it receives from the plugin and take any necessary actions (running <link linkend=\"advancedtopics-eventhandlers\">event handlers</link>, sending out <link linkend=\"thebasics-notifications\">notifications</link>, etc)."
+msgstr "Nagios exécutera un plugin seulement lorsqu'il sera nécessaire de vérifier le statut d'un service ou d'un hôte. Le plugin fait quelque chose (notez le sens très général du terme) pour effectuer le contrôle et renvoie simplement le résultat à Nagios. Nagios Traitera les résultats qu'il aura reçu du plugin et prendra les mesures nécessaires (en exécutant des <link linkend=\"advancedtopics-eventhandlers\">event handlers</link>, en envoyant des <link linkend=\"thebasics-notifications\">notifications</link>, etc)."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/plugins.xml:39
 msgid "Plugins As An Abstraction Layer"
-msgstr ""
+msgstr "Les Plugins Comme Une Couche Intermédiaire"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:46
-msgid ""
-"Plugins act as an abstraction layer between the monitoring logic present in "
-"the Nagios daemon and the actual services and hosts that are being monitored."
-msgstr ""
+msgid "Plugins act as an abstraction layer between the monitoring logic present in the Nagios daemon and the actual services and hosts that are being monitored."
+msgstr "Les plugins sont comme une couche intermédiaire entre le ordonnancement de contrôle présent dans le démon Nagios et les services ou hôtes à superviser."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:50
-msgid ""
-"The upside of this type of plugin architecture is that you can monitor just "
-"about anything you can think of. If you can automate the process of checking "
-"something, you can monitor it with Nagios. There are already a lot of "
-"plugins that have been created in order to monitor basic resources such as "
-"processor load, disk usage, ping rates, etc. If you want to monitor "
-"something else, take a look at the documentation on <link linkend="
-"\"development-pluginapi\">writing plugins</link> and roll your own.  Its "
-"simple!"
-msgstr ""
+msgid "The upside of this type of plugin architecture is that you can monitor just about anything you can think of. If you can automate the process of checking something, you can monitor it with Nagios. There are already a lot of plugins that have been created in order to monitor basic resources such as processor load, disk usage, ping rates, etc. If you want to monitor something else, take a look at the documentation on <link linkend=\"development-pluginapi\">writing plugins</link> and roll your own.  Its simple!"
+msgstr "L'avantage de ce type d'architecture de plugin est que vous pouvez superviser a peu près tout ce que vous voulez. Si vous pouvez automatiser le procédé de contrôle de quelque-chose, vous pouvez le superviser avec Nagios. Il existe déjà plein de plugins qui ont été créés pour superviser des ressources basiques comme la charge processeur, l'espace disque utilsé, les statistiques de la commade ping, etc... Si vous voulez superviser autre chose, reportez-vous à la documentation nommée <link linkend=\"development-pluginapi\">écrire ses plugins</link> et créez les vôtres.  C'est très simple!"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:59
-msgid ""
-"The downside to this type of plugin architecture is the fact that Nagios has "
-"absolutely no idea what it is that you're monitoring. You could be "
-"monitoring network traffic statistics, data error rates, room temperate, CPU "
-"voltage, fan speed, processor load, disk space, or the ability of your super-"
-"fantastic toaster to properly brown your bread in the morning... Nagios "
-"doesn't understand the specifics of what's being monitored - it just tracks "
-"changes in the state of those resources. Only the plugins themselves know "
-"exactly what they're monitoring and how to perform the actual checks."
-msgstr ""
+msgid "The downside to this type of plugin architecture is the fact that Nagios has absolutely no idea what it is that you're monitoring. You could be monitoring network traffic statistics, data error rates, room temperate, CPU voltage, fan speed, processor load, disk space, or the ability of your super-fantastic toaster to properly brown your bread in the morning... Nagios doesn't understand the specifics of what's being monitored - it just tracks changes in the state of those resources. Only the plugins themselves know exactly what they're monitoring and how to perform the actual checks."
+msgstr "L'inconvénient de ce type d'architecture de plugin est le fait que Nagios n'a absolument aucune idée de ce que vous supervisez. Vous pourriez superviser les statistiques du trafic réseau, les taux d'erreur de données, la température ambiante, la tension du CPU, la vitesse du ventilateur, la charge du processeur, l'espace disque, ou la capacité de votre super_fantastique grille-pain à griller parfaitement votre pain le matin... Nagios ne comprend pas les spécificités de ce qui est supervisé. Les plugins seulements savent exactement ce qu'ils contrôlent et comme effectuer ces contrôles."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/plugins.xml:71
 msgid "What Plugins Are Available?"
-msgstr ""
+msgstr "Quels Plugins Existe-Il?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:73
-msgid ""
-"There are plugins currently available to monitor many different kinds of "
-"devices and services, including:"
-msgstr ""
+msgid "There are plugins currently available to monitor many different kinds of devices and services, including:"
+msgstr "Il existe des plugins disponibles actuellement pour contrôler de nombreux types différents de matériels et de services, y compris:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/plugins.xml:78
-msgid ""
-"&protocol-http;, &protocol-pop3;, &protocol-imap;, &protocol-ftp;, &protocol-"
-"ssh;, &protocol-dhcp;"
-msgstr ""
+msgid "&protocol-http;, &protocol-pop3;, &protocol-imap;, &protocol-ftp;, &protocol-ssh;, &protocol-dhcp;"
+msgstr "&protocol-http;, &protocol-pop3;, &protocol-imap;, &protocol-ftp;, &protocol-ssh;, &protocol-dhcp;"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/plugins.xml:84
 msgid "CPU Load, Disk Usage, Memory Usage, Current Users"
-msgstr ""
+msgstr "Charge CPU, Espace disque utilisé, Mémoire utilisée, Utilisateurs connectés"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/plugins.xml:88
 msgid "Unix/Linux, Windows, and Netware Servers"
-msgstr ""
+msgstr "Unix/Linux, Windows, et serveurs Netware"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/plugins.xml:92
 msgid "Routers and Switches"
-msgstr ""
+msgstr "Routeurs et Switchs"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/plugins.xml:102
 msgid "Obtaining Plugins"
-msgstr ""
+msgstr "Obtenir Des Plugins"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:104
-msgid ""
-"Plugins are not distributed with Nagios, but you can download the official "
-"Nagios plugins and many additional plugins created and maintained by Nagios "
-"users from the following locations:"
-msgstr ""
+msgid "Plugins are not distributed with Nagios, but you can download the official Nagios plugins and many additional plugins created and maintained by Nagios users from the following locations:"
+msgstr "Les plugins ne sont pas distribués avec Nagios, mais vous pouvez télécharger les plugins officiels Nagios et d'autres plugins supplémentaires créés et soutenus par les utilisateurs Nagios aux adresses suivantes:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/plugins.xml:110
-msgid ""
-"Nagios Plugins Project: <ulink url=\"http://nagiosplug.sourceforge.net/"
-"\">http://nagiosplug.sourceforge.net/</ulink>"
-msgstr ""
+msgid "Nagios Plugins Project: <ulink url=\"http://nagiosplug.sourceforge.net/\">http://nagiosplug.sourceforge.net/</ulink>"
+msgstr "Projet Plugins Nagios: <ulink url=\"http://nagiosplug.sourceforge.net/\">http://nagiosplug.sourceforge.net/</ulink>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/plugins.xml:115
-msgid ""
-"Nagios Downloads Page: <ulink url=\"&url-nagios;download/\">&url-nagios;"
-"download/</ulink>"
-msgstr ""
+msgid "Nagios Downloads Page: <ulink url=\"&url-nagios;download/\">&url-nagios;download/</ulink>"
+msgstr "La page de téléchargement du site Nagios: <ulink url=\"&url-nagios;download/\">&url-nagios;download/</ulink>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/plugins.xml:120
-msgid ""
-"NagiosExchange.org: <ulink url=\"&url-nagiosexchange;/\">&url-"
-"nagiosexchange;/</ulink>"
-msgstr ""
+msgid "NagiosExchange.org: <ulink url=\"&url-nagiosexchange;/\">&url-nagiosexchange;/</ulink>"
+msgstr "NagiosExchange.org: <ulink url=\"&url-nagiosexchange;/\">&url-nagiosexchange;/</ulink>"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/plugins.xml:127
 msgid "How Do I Use Plugin X?"
-msgstr ""
+msgstr "Comment Utiliser Le Plugin X?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:129
-msgid ""
-"Most all plugins will display basic usage information when you execute them "
-"using"
-msgstr ""
+msgid "Most all plugins will display basic usage information when you execute them using"
+msgstr "La grosse majorité des plugins affichent des informations basiques d'usage quand vous les exécutez en utilisant"
 
 # type: Content of: <chapter><section><para><option>
 #: TheBasics/plugins.xml:130
 msgid "-h"
-msgstr ""
+msgstr "-h"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
-#: TheBasics/plugins.xml:130 SecurityAndPerformanceTuning/faststartup.xml:182
+#: TheBasics/plugins.xml:130
+#: SecurityAndPerformanceTuning/faststartup.xml:182
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:130
-msgid ""
-"on the command line. For example, if you want to know how the "
-"<command>check_http</command> plugin works or what options it accepts, you "
-"should try executing the following command: <command>./check_http --help</"
-"command>"
-msgstr ""
+msgid "on the command line. For example, if you want to know how the <command>check_http</command> plugin works or what options it accepts, you should try executing the following command: <command>./check_http --help</command>"
+msgstr "en ligne de commandes. Par exemple, si vous voulez savoir comment le plugin <command>check_http</command> fonctionne ou quelles options il accepte, vous pouvez essayer d'exécuter la commande suivante: <command>./check_http --help</command>"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/plugins.xml:139
 msgid "<anchor id=\"howto\" />Plugin API"
-msgstr ""
+msgstr "<anchor id=\"howto\" />Plugin API"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/plugins.xml:141
-msgid ""
-"You can find information on the technical aspects of plugins, as well as how "
-"to go about creating your own custom plugins <link linkend=\"development-"
-"pluginapi\">here</link>."
-msgstr ""
+msgid "You can find information on the technical aspects of plugins, as well as how to go about creating your own custom plugins <link linkend=\"development-pluginapi\">here</link>."
+msgstr "Vous pouvez trouver des informations sur les aspects techniques des plugins, ainsi que des informations sur comment développer vos propres plugins <link linkend=\"development-pluginapi\">ici</link>."
+
