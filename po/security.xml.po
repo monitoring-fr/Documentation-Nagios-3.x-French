@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-06-02 16:14+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,265 +16,139 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
-#: TheBasics/macros.xml:23 TheBasics/macros.xml:24 TheBasics/macros.xml:136
+#: TheBasics/macros.xml:23
+#: TheBasics/macros.xml:24
+#: TheBasics/macros.xml:136
 #: SecurityAndPerformanceTuning/security.xml:188
 #: SecurityAndPerformanceTuning/security.xml:193
 #: SecurityAndPerformanceTuning/security.xml:194
 msgid ","
-msgstr ""
+msgstr ","
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
-#: TheBasics/macros.xml:25 TheBasics/macros.xml:136
+#: TheBasics/macros.xml:25
+#: TheBasics/macros.xml:136
 #: SecurityAndPerformanceTuning/security.xml:189
 msgid ", and"
-msgstr ""
+msgstr ", et"
 
 # type: Content of: <chapter><title>
 #: SecurityAndPerformanceTuning/security.xml:11
 msgid "Security Considerations"
-msgstr ""
+msgstr "Considérations sur la sécurité"
 
 # type: Content of: <chapter><section><title>
 #: SecurityAndPerformanceTuning/security.xml:14
-msgid ""
-"<anchor id=\"securityandperformancetuning-security-intro\" />Introduction"
-msgstr ""
+msgid "<anchor id=\"securityandperformancetuning-security-intro\" />Introduction"
+msgstr "<anchor id=\"securityandperformancetuning-security-intro\" />Introduction"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/security.xml:17
-msgid ""
-"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/security.png\" "
-"format=\"PNG\"/> </imageobject> </inlinemediaobject> This is intended to be "
-"a brief overview of some things you should keep in mind when installing "
-"Nagios, so as set it up in a secure manner."
-msgstr ""
+msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/security.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> This is intended to be a brief overview of some things you should keep in mind when installing Nagios, so as set it up in a secure manner."
+msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/security.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Ce paragraphe est un rapide survol des éléments que vous devez conserver à l'esprit au moment d'installer Nagios, afin que l'installation soit sécurisée."
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/security.xml:25
-msgid ""
-"Your monitoring box should be viewed as a backdoor into your other systems. "
-"In many cases, the Nagios server might be allowed access through firewalls "
-"in order to monitor remote servers. In most all cases, it is allowed to "
-"query those remote servers for various information. Monitoring servers are "
-"always given a certain level of trust in order to query remote systems. This "
-"presents a potential attacker with an attractive backdoor to your systems. "
-"An attacker might have an easier time getting into your other systems if "
-"they compromise the monitoring server first. This is particularly true if "
-"you are making use of shared &protocol-ssh; keys in order to monitor remote "
-"systems."
-msgstr ""
+msgid "Your monitoring box should be viewed as a backdoor into your other systems. In many cases, the Nagios server might be allowed access through firewalls in order to monitor remote servers. In most all cases, it is allowed to query those remote servers for various information. Monitoring servers are always given a certain level of trust in order to query remote systems. This presents a potential attacker with an attractive backdoor to your systems. An attacker might have an easier time getting into your other systems if they compromise the monitoring server first. This is particularly true if you are making use of shared &protocol-ssh; keys in order to monitor remote systems."
+msgstr "Vous devriez considérer votre serveur de supervision comme un porte dérobée de vos autres systèmes. Dans certains cas, le serveur Nagios a besoin d'être autorisé à traverser des pares-feu pour pouvoir contrôler des serveurs distants. Dans la plupart des cas, il est autorisé à interroger ces serveurs distants pour diverses informations. Les serveurs de supervision ont toujours besoin d'un certain niveau de confiance pour pouvoir interroger des serveurs distants. Ceci représente un risque potentiel d'attaque avec un porte dérobée intéressante vers vos autres systèmes. Un ataquant peut se rendre la vie plus facile en attaquant d'abord votre système de supervision avant de rebondir sur les autres. Ceci est particulièrmeent vrai dans le cas où vous utilisez des clés partagées &protocol-ssh; pour superviser les systèmes distants."
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/security.xml:36
-msgid ""
-"If an intruder has the ability to submit check results or external commands "
-"to the Nagios daemon, they have the potential to submit bogus monitoring "
-"data, drive you nuts you with bogus notifications, or cause event handler "
-"scripts to be triggered. If you have event handler scripts that restart "
-"services, cycle power, etc. this could be particularly problematic."
-msgstr ""
+msgid "If an intruder has the ability to submit check results or external commands to the Nagios daemon, they have the potential to submit bogus monitoring data, drive you nuts you with bogus notifications, or cause event handler scripts to be triggered. If you have event handler scripts that restart services, cycle power, etc. this could be particularly problematic."
+msgstr "Si un intrus a la possibilité de soumettre des résultats de contrôles ou des commandes externes au démon Nagios, il a la possibilité de soumettre des données de supervision erronées, de vous rendre fou avec des notifications erronées, ou de faire en sorte que des gestionnaires d'événements soient déclenchés. Si vous avez des scripts de gestion d'événements qui redémarrent des services, allumage et extinction électrique, etc. cela peut devenir problématique."
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/security.xml:43
-msgid ""
-"Another area of concern is the ability for intruders to sniff monitoring "
-"data (status information) as it comes across the wire. If communication "
-"channels are not encrypted, attackers can gain valuable information by "
-"watching your monitoring information. Take as an example the following "
-"situation: An attacker captures monitoring data on the wire over a period of "
-"time and analyzes the typical CPU and disk load usage of your systems, along "
-"with the number of users that are typically logged into them. The attacker "
-"is then able to determine the best time to compromise a system and use its "
-"resources (CPU, etc.) without being noticed."
-msgstr ""
+msgid "Another area of concern is the ability for intruders to sniff monitoring data (status information) as it comes across the wire. If communication channels are not encrypted, attackers can gain valuable information by watching your monitoring information. Take as an example the following situation: An attacker captures monitoring data on the wire over a period of time and analyzes the typical CPU and disk load usage of your systems, along with the number of users that are typically logged into them. The attacker is then able to determine the best time to compromise a system and use its resources (CPU, etc.) without being noticed."
+msgstr "Un autre champ de possibilités pour les intrus est de sniffer les données de supervision (information d'état) au moment où elle transite sur le réseau. Si les canaux de communication ne sont pas chiffrés, les attaquants peuvent accéder à des informations importantes en regardant vos informations de supervision. Prenez la situation suivante en exemple : Un ataquant capture vos données de supervision sur le réseau pendant une période de temps et analyse la charge habituelle des CPUs et disques de vos systèmes en comparaison du nombre d'utilisateurs connectés dessus. L'attaquant est donc en mesure de déterminer le meilleur moment pour compromettre un système et utiliser ses ressources (CPU, etc.) sans être découvert."
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/security.xml:54
-msgid ""
-"Here are some tips to help ensure that you keep your systems secure when "
-"implementing a Nagios-based monitoring solution..."
-msgstr ""
+msgid "Here are some tips to help ensure that you keep your systems secure when implementing a Nagios-based monitoring solution..."
+msgstr "Voici quelques trucs pour vous aider à garder vos systèmes sécurisés quand vous implémentez une solution de supervision basée sur Nagios..."
 
 # type: Content of: <chapter><section><title>
 #: SecurityAndPerformanceTuning/security.xml:59
-msgid ""
-"<anchor id=\"securityandperformancetuning-security-bestpractices\" />Best "
-"Practices"
-msgstr ""
+msgid "<anchor id=\"securityandperformancetuning-security-bestpractices\" />Best Practices"
+msgstr "<anchor id=\"securityandperformancetuning-security-bestpractices\" />Meilleures pratiques"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:65
-msgid ""
-"<emphasis role=\"bold\">Use a Dedicated Monitoring Box</emphasis>.  I would "
-"recommend that you install Nagios on a server that is dedicated to "
-"monitoring (and possibly other admin tasks). Protect your monitoring server "
-"as if it were one of the most important servers on your network. Keep "
-"running services to a minimum and lock down access to it via TCP wrappers, "
-"firewalls, etc. Since the Nagios server is allowed to talk to your servers "
-"and may be able to poke through your firewalls, allowing users access to "
-"your monitoring server can be a security risk. Remember, its always easier "
-"to gain root access through a system security hole if you have a local "
-"account on a box."
-msgstr ""
+msgid "<emphasis role=\"bold\">Use a Dedicated Monitoring Box</emphasis>.  I would recommend that you install Nagios on a server that is dedicated to monitoring (and possibly other admin tasks). Protect your monitoring server as if it were one of the most important servers on your network. Keep running services to a minimum and lock down access to it via TCP wrappers, firewalls, etc. Since the Nagios server is allowed to talk to your servers and may be able to poke through your firewalls, allowing users access to your monitoring server can be a security risk. Remember, its always easier to gain root access through a system security hole if you have a local account on a box."
+msgstr "<emphasis role=\"bold\">Utilisez un serveur de supervision dédié</emphasis>. Je vous recommande d'installer Nagios sur un serveur dédié à la supervision (et à d'autres tâches d'administration éventuellement). Protégez votre serveur de supervision comme si c'était l'un des plus importants de votre réseau. Maintenez le nombre de services à tourner le plus bas possible et protégez leurs accès avec des wrappers TCP, des pares-feu, etc. Vu que le serveur Nagios est autorisé à discuter avec vos serveurs et peut traverser des pares-feu, autoriser des accès utilisateurs sur votre serveur de supervision peut représenter un risque de sécurité. Gardez à l'esprit qu'il est plus facile d'obtenir des privilèges root au travers d'un trou de sécurité quand vous avez un compte local est disponible sur une machine."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:86
-msgid ""
-"<emphasis role=\"bold\">Don't Run Nagios As Root</emphasis>.  Nagios doesn't "
-"need to run as root, so don't do it. You can tell Nagios to drop privileges "
-"after startup and run as another user/group by using the <link linkend="
-"\"configuringnagios-configmain-nagios_user\">nagios_user</link> and <link "
-"linkend=\"configuringnagios-configmain-nagios_group\">nagios_group</link> "
-"directives in the main config file. If you need to execute event handlers or "
-"plugins which require root access, you might want to try using <ulink url="
-"\"http://www.courtesan.com/sudo/sudo.html\">sudo</ulink>."
-msgstr ""
+msgid "<emphasis role=\"bold\">Don't Run Nagios As Root</emphasis>.  Nagios doesn't need to run as root, so don't do it. You can tell Nagios to drop privileges after startup and run as another user/group by using the <link linkend=\"configuringnagios-configmain-nagios_user\">nagios_user</link> and <link linkend=\"configuringnagios-configmain-nagios_group\">nagios_group</link> directives in the main config file. If you need to execute event handlers or plugins which require root access, you might want to try using <ulink url=\"http://www.courtesan.com/sudo/sudo.html\">sudo</ulink>."
+msgstr "<emphasis role=\"bold\">Ne pas faire fonctionner Nagios en tant que Root!</emphasis>. Il n'est pas nécessaire d'être root pour faire fonctionner Nagios, alors ne le faîtes pas. Vous pouvez obliger Nagios à abandonner des privilèges après le lancement et à fonctionner avec les droits d'un autre utilisateur/groupe en utilisant les directives <link linkend=\"configuringnagios-configmain-nagios_user\">nagios_user</link>et <link linkend=\"configuringnagios-configmain-nagios_group\">nagios_group</link> dans le fichier principal de configuration. Si vous avez besoin d'exécuter des gestionnaires d'événements ou des plugins qui requièrent des accès root, vous pouvez essayer d'utiliser <ulink url=\"http://www.courtesan.com/sudo/sudo.html\">sudo</ulink>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:100
-msgid ""
-"<emphasis role=\"bold\">Lock Down The Check Result Directory</emphasis>. "
-"Make sure that only the nagios user is able to read/write in the <link "
-"linkend=\"configuringnagios-configmain-check_result_path\">check result "
-"path</link>. If users other than nagios (or root) are able to write to this "
-"directory, they could send fake host/service check results to the Nagios "
-"daemon. This could result in annoyances (bogus notifications)  or security "
-"problems (event handlers being kicked off)."
-msgstr ""
+msgid "<emphasis role=\"bold\">Lock Down The Check Result Directory</emphasis>. Make sure that only the nagios user is able to read/write in the <link linkend=\"configuringnagios-configmain-check_result_path\">check result path</link>. If users other than nagios (or root) are able to write to this directory, they could send fake host/service check results to the Nagios daemon. This could result in annoyances (bogus notifications)  or security problems (event handlers being kicked off)."
+msgstr "<emphasis role=\"bold\">Vérouillez le répertoire des résultats de contrôle</emphasis>. Assurez-vous que seul l'utilisateur nagios à le doirt de lecture/écriture sur le <link linkend=\"configuringnagios-configmain-check_result_path\">répertoire des résultats de contrôle</link>. Si d'autres utilisateurs que nagios (ou root) sont capables d'écrire dans ce répertoire, ils peuvent potentiellement envoyer des résultats de contrôles erronées au démon Nagios. Cela pourrait vous valoir quelques désagréments comme des notifications erronées ou des problèmes de sécurité (gestionnaires d'événements déclenchés)."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:111
-msgid ""
-"<emphasis role=\"bold\">Lock Down The External Command File</emphasis>. If "
-"you enable <xref linkend=\"advancedtopics-extcommands\" />external commands, "
-"make sure you set proper permissions on the <filename class=\"directory\">/"
-"usr/local/nagios/var/rw directory</filename>. You only want the Nagios user "
-"(usually nagios) and the web server user (usually nobody, httpd, apache2, or "
-"www-data) to have permissions to write to the command file. If you've "
-"installed Nagios on a machine that is dedicated to monitoring and admin "
-"tasks and is not used for public accounts, that should be fine. If you've "
-"installed it on a public or multi-user machine (not recommended), allowing "
-"the web server user to have write access to the command file can be a "
-"security problem. After all, you don't want just any user on your system "
-"controlling Nagios through the external command file. In this case, I would "
-"suggest only granting write access on the command file to the nagios user "
-"and using something like <ulink url=\"http://cgiwrap.sourceforge.net/"
-"\">CGIWrap</ulink> to run the CGIs as the nagios user instead of nobody."
-msgstr ""
+msgid "<emphasis role=\"bold\">Lock Down The External Command File</emphasis>. If you enable <xref linkend=\"advancedtopics-extcommands\" />external commands, make sure you set proper permissions on the <filename class=\"directory\">/usr/local/nagios/var/rw directory</filename>. You only want the Nagios user (usually nagios) and the web server user (usually nobody, httpd, apache2, or www-data) to have permissions to write to the command file. If you've installed Nagios on a machine that is dedicated to monitoring and admin tasks and is not used for public accounts, that should be fine. If you've installed it on a public or multi-user machine (not recommended), allowing the web server user to have write access to the command file can be a security problem. After all, you don't want just any user on your system controlling Nagios through the external command file. In this case, I would suggest only granting write access on the command file to the nagios user and using something like <ulink url=\"http://cgiwrap.sourceforge.net/\">CGIWrap</ulink> to run the CGIs as the nagios user instead of nobody."
+msgstr "<emphasis role=\"bold\">Vérrouillez le fichier des commandes externes</emphasis>. Si vous activez les <link linkend=\"advancedtopics-extcommands\">commandes externes</link>, assurez-vous d'avoir les permissions appropriées sur le répertoire <filename class=\"directory\">/usr/local/nagios/var/rw</filename>. Vous voulez uniquement que les utilisateurs Nagios (habituellement nagios) et web (habituellement nobody, http, apache2 ou www-data) puissent écrire dans le fichier des commandes. Si vous avez installé Nagios sur une machine dédiée à la supervision et aux tâches d'administration qui n'a pas de comptes publics, cela devrait aller. Si vous l'avez installé sur une machine publique ou multi-utilisateurs (pas recommandé), autoriser l'utilisateur du serveur web peut être un problème de sécurité. Après tout, vous ne souhaitez pas que n'importe quel utilisateur du système  puisse contrôler Nagios à partir du fichier des commandes externes. Dans ce cas, je vous suggère de donner les droits uniquement à l'utilisateur nagios et d'utiliser quelque chose comme <ulink url=\"http://cgiwrap.sourceforge.net/\">CGIWrap</ulink> pour faire fonctionner les CGIs avec l'utilisateur nagios plutôt que nobody."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:132
-msgid ""
-"<emphasis role=\"bold\">Require Authentication In The CGIs</emphasis>. I "
-"would strongly suggest requiring authentication for accessing the CGIs. Once "
-"you do that, read the documentation on the default rights that authenticated "
-"contacts have, and only authorize specific contacts for additional rights as "
-"necessary. Instructions on setting up authentication and configuring "
-"authorization rights can be found <xref linkend=\"configuringnagios-cgiauth"
-"\" />here. If you disable the CGI authentication features using the <link "
-"linkend=\"configuringnagios-configcgi-use_authentication"
-"\">use_authentication</link> directive in the CGI config file, the <link "
-"linkend=\"thebasics-cgis-cmd_cgi\">command CGI</link> will refuse to write "
-"any commands to the <link linkend=\"configuringnagios-configmain-command_file"
-"\">external command file</link>. After all, you don't want the world to be "
-"able to control Nagios do you?"
-msgstr ""
+msgid "<emphasis role=\"bold\">Require Authentication In The CGIs</emphasis>. I would strongly suggest requiring authentication for accessing the CGIs. Once you do that, read the documentation on the default rights that authenticated contacts have, and only authorize specific contacts for additional rights as necessary. Instructions on setting up authentication and configuring authorization rights can be found <xref linkend=\"configuringnagios-cgiauth\" />here. If you disable the CGI authentication features using the <link linkend=\"configuringnagios-configcgi-use_authentication\">use_authentication</link> directive in the CGI config file, the <link linkend=\"thebasics-cgis-cmd_cgi\">command CGI</link> will refuse to write any commands to the <link linkend=\"configuringnagios-configmain-command_file\">external command file</link>. After all, you don't want the world to be able to control Nagios do you?"
+msgstr "<emphasis role=\"bold\">Authentification requise pour les CGIs</emphasis>. Je vous recommande fortement de protéger l'accès aux CGI par une authentification. Ceci fait, lisez la documentation sur les droits par défaut dont disposent les contacts autorisés et n'accordez qu'exceptionnellement une autorisation à des contacts spécifiques. Les instructions pour la configuration des droits se trouvent <link linkend=\"configuringnagios-cgiauth\">ici</link>. Si vous désactivez l'authentification préalable à l'accès aux CGI par la commande <link linkend=\"configuringnagios-configcgi-use_authentication\">use_authentication</link> dans le fichier de configuration des CGI, le <link linkend=\"thebasics-cgis-cmd_cgi\">CGI de commande</link> refusera d'écrire la moindre commande dans le <link linkend=\"configuringnagios-configmain-command_file\">fichier des commandes externes</link>. De toutes façons, vous ne souhaitez pas que tout le monde puisse contrôler vôtre Nagios ? "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:150
-msgid ""
-"<emphasis role=\"bold\">Implement Enhanced CGI Security Measures</emphasis>. "
-"I would strongly suggest that you consider implementing enhanced security "
-"measures for the CGIs as described <link linkend="
-"\"securityandperformancetuning-cgisecurity\">here</link>. These measures can "
-"help ensure that the username/password you use to access the Nagios web "
-"interface are not intercepted by third parties."
-msgstr ""
+msgid "<emphasis role=\"bold\">Implement Enhanced CGI Security Measures</emphasis>. I would strongly suggest that you consider implementing enhanced security measures for the CGIs as described <link linkend=\"securityandperformancetuning-cgisecurity\">here</link>. These measures can help ensure that the username/password you use to access the Nagios web interface are not intercepted by third parties."
+msgstr "<emphasis role=\"bold\">Implémentez les mesure renforcées de sécurité des GCIs</emphasis>. Je vous recommande chaudement de considérer l'implémentation des mesures de sécurité pour les CGIs comme indiqué <link linkend=\"securityandperformancetuning-cgisecurity\">ici</link>. Ces mesures peuvent aider à s'assurer que l'utilisateur/mot de passe que vous utilisez pour accéder à l'interface web de Nagios ne puissent intercepter par de tierces parties."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:159
-msgid ""
-"<emphasis role=\"bold\">Use Full Paths In Command Definitions</emphasis>. "
-"When you define commands, make sure you specify the full path (not a "
-"relative one) to any scripts or binaries you're executing."
-msgstr ""
+msgid "<emphasis role=\"bold\">Use Full Paths In Command Definitions</emphasis>. When you define commands, make sure you specify the full path (not a relative one) to any scripts or binaries you're executing."
+msgstr "<emphasis role=\"bold\">Utilisez les chemins complets dans la définition des commandes</emphasis>. Lorsque vous définissez des commandes, assurez-vous d'avoir bien précisé le chemin d'accès complet de tous les scripts ou binaires que vous exécutez."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:166
-msgid ""
-"<emphasis role=\"bold\">Hide Sensitive Information With <varname>$USERn$</"
-"varname> Macros</emphasis>. The CGIs read the <xref linkend="
-"\"configuringnagios-configmain\" />main config file and <xref linkend="
-"\"configuringnagios-configobject\" />Object config file(s), so you don't "
-"want to keep any sensitive information (usernames, passwords, etc) in there. "
-"If you need to specify a username and/or password in a command definition "
-"use a"
-msgstr ""
+msgid "<emphasis role=\"bold\">Hide Sensitive Information With <varname>$USERn$</varname> Macros</emphasis>. The CGIs read the <xref linkend=\"configuringnagios-configmain\" />main config file and <xref linkend=\"configuringnagios-configobject\" />Object config file(s), so you don't want to keep any sensitive information (usernames, passwords, etc) in there. If you need to specify a username and/or password in a command definition use a"
+msgstr "<emphasis role=\"bold\">Cachez les informations sensibles à l'aide des macros <varname>$USERn$</varname></emphasis>. Les CGI parcourent le <link linkend=\"configuringnagios-configmain\">fichier de configuration principal</link> et le(s) <link linkend=\"configuringnagios-configobject\">fichier(s) de configuration des objets</link>, n'y laissez donc pas d'informations sensibles (noms d'utilisateur, mots de passe, etc...). Si vous avez besoin de préciser un mot de passe ou un nom d'utilisateur dans une définition de commande, utilisez "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:172
 msgid "<xref linkend=\"thebasics-macros\" />macro to hide it."
-msgstr ""
+msgstr "<link linkend=\"thebasics-macros\">macro pour le cacher</link>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:174
-msgid ""
-"macros are defined in one or more <link linkend=\"configuringnagios-"
-"configmain-resource_file\">resource files</link>. The CGIs will not attempt "
-"to read the contents of resource files, so you can set more restrictive "
-"permissions (600 or 660) on them. See the sample <filename>resource.cfg</"
-"filename> file in the base of the Nagios distribution for an example of how "
-"to define $USERn$ macros."
-msgstr ""
+msgid "macros are defined in one or more <link linkend=\"configuringnagios-configmain-resource_file\">resource files</link>. The CGIs will not attempt to read the contents of resource files, so you can set more restrictive permissions (600 or 660) on them. See the sample <filename>resource.cfg</filename> file in the base of the Nagios distribution for an example of how to define $USERn$ macros."
+msgstr "Les macros $USERn$ sont définies dans un ou plusieurs <link linkend=\"configuringnagios-configmain-resource_file\">fichiers de ressources</linkend>. Les CGIs ne parcourant pas les fichiers de ressources, vous pouvez leur donner des permissions beaucoup plus restrictives (600 ou 660). Consultez le fichier <filename>resource.cfg</filename> dans la distribution de base de Nagios, il vous donnera un exemple de d?finition de la macro $USERn$. "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:184
-msgid ""
-"<emphasis role=\"bold\">Strip Dangerous Characters From Macros</emphasis>. "
-"Use the <link linkend=\"configuringnagios-configmain-"
-"illegal_macro_output_chars\">illegal_macro_output_chars</link> directive to "
-"strip dangerous characters from the"
-msgstr ""
+msgid "<emphasis role=\"bold\">Strip Dangerous Characters From Macros</emphasis>. Use the <link linkend=\"configuringnagios-configmain-illegal_macro_output_chars\">illegal_macro_output_chars</link> directive to strip dangerous characters from the"
+msgstr "<emphasis role=\"bold\">Éliminez les caractères dangereux des macros</emphasis>. Utilisez la directive <link linkend=\"configuringnagios-configmain-illegal_macro_output_chars\">illegal_macro_output_chars</link> pour filtrer les caractères dangereux "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:189
-msgid ""
-"macros before they're used in notifications, etc. Dangerous characters can "
-"be anything that might be interpreted by the shell, thereby opening a "
-"security hole. An example of this is the presence of backtick (`)  "
-"characters in the"
-msgstr ""
+msgid "macros before they're used in notifications, etc. Dangerous characters can be anything that might be interpreted by the shell, thereby opening a security hole. An example of this is the presence of backtick (`)  characters in the"
+msgstr "des chaînes issues des macros $OUTPUT$ et $PERFDATA$ avant qu'elles ne soient utilisées pour des notifications, etc. Des caractères dangereux peuvent être tout caractère qui peut être interprété par un shell, ouvrant ainsi un trou de sécurité. Un bon exemple est la présence de la quote inverse (`) dans $OUTPUT$ "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:194
 msgid ", and/or"
-msgstr ""
+msgstr ", et/ou"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:195
-msgid ""
-"macros, which could allow an attacker to execute an arbitrary command as the "
-"nagios user (one good reason not to run Nagios as the root user)."
-msgstr ""
+msgid "macros, which could allow an attacker to execute an arbitrary command as the nagios user (one good reason not to run Nagios as the root user)."
+msgstr "$PERFDATA$, qui pourrait permettre à un attaquant d'exécuter un commande arbitraire comme l'utilisateur nagios (une autre bonne raison pour ne pas exécuter Nagios comme l'utilisateur root). "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:201
-msgid ""
-"<emphasis role=\"bold\">Secure Access to Remote Agents</emphasis>.  Make "
-"sure you lock down access to agents (&name-nrpe;, NSClient, &protocol-snmp;, "
-"etc.)  on remote systems using firewalls, access lists, etc. You don't want "
-"everyone to be able to query your systems for status information. This "
-"information could be used by an attacker to execute remote event handler "
-"scripts or to determine the best times to go unnoticed."
-msgstr ""
+msgid "<emphasis role=\"bold\">Secure Access to Remote Agents</emphasis>.  Make sure you lock down access to agents (&name-nrpe;, NSClient, &protocol-snmp;, etc.)  on remote systems using firewalls, access lists, etc. You don't want everyone to be able to query your systems for status information. This information could be used by an attacker to execute remote event handler scripts or to determine the best times to go unnoticed."
+msgstr "<emphasis role=\"bold\">Sécurisez l'accès aux agents distants</emphasis>. Assurez-vous d'avoir verrouiller l'accès aux agents (&name-nrpe;, NSClient, &protocol-snmp;, etc.) sur les sytèmes distants en utilisant des pares-feu, des listes d'accès, etc. Vous ne voulez pas que n'importe qui soit capable d'interroger vos système sur leurs états. Cette information peut être utilisé par un attaquant pour exécuter des gestionnaires d'événements distants ou pour déterminer une fenêtre de temps pour une attaque discrète."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/security.xml:218
-msgid ""
-"<emphasis role=\"bold\">Secure Communication Channels</emphasis>.  Make sure "
-"you encrypt communication channels between different Nagios installations "
-"and between your Nagios servers and your monitoring agents whenever "
-"possible. You don't want someone to be able to sniff status information "
-"going across your network. This information could be used by an attacker to "
-"determine the best times to go unnoticed."
-msgstr ""
+msgid "<emphasis role=\"bold\">Secure Communication Channels</emphasis>.  Make sure you encrypt communication channels between different Nagios installations and between your Nagios servers and your monitoring agents whenever possible. You don't want someone to be able to sniff status information going across your network. This information could be used by an attacker to determine the best times to go unnoticed."
+msgstr "<emphasis role=\"bold\">Sécurisez vos canaux de communication</emphasis>. Assurez-vous d'avoir chiffré les canaux de communication entre vos différents serveurs Nagios et entre Nagios et les agents de supervision quand cela est possible. Vous ne voulez pas que quelqu'un puisse sniffer les informations d'états lorsqu'elle transite sur le réseau. Cette information peut être utilisé par un attaquant pour déterminer une fenêtre de temps pour une attaque discrète."
+
