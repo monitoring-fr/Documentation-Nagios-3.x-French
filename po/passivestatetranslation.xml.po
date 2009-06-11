@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-06-10 07:35+0100\n"
+"Last-Translator: Druelle <dimitri.druelle_poedit@m4x.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,134 +69,93 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><title>
 #: AdvancedTopics/passivestatetranslation.xml:11
 msgid "Passive Host State Translation"
-msgstr ""
+msgstr "Transition d'état passif d'hôte "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/passivestatetranslation.xml:16
-msgid ""
-"When Nagios receives passive host checks from remote sources (i.e other "
-"Nagios instances in distributed or failover setups), the host state reported "
-"by the remote source may not accurately reflect the state of the host from "
-"Nagios' view. As distributed and failover monitoring installations are "
-"fairly common, it is important to provide a mechanism for ensuring accurate "
-"host states between different instances of Nagios."
-msgstr ""
+msgid "When Nagios receives passive host checks from remote sources (i.e other Nagios instances in distributed or failover setups), the host state reported by the remote source may not accurately reflect the state of the host from Nagios' view. As distributed and failover monitoring installations are fairly common, it is important to provide a mechanism for ensuring accurate host states between different instances of Nagios."
+msgstr "Quand Nagios reçoit un checks passif d'un hôte d'une source distante (i.e. d'une autre instance Nagios dans une architecture distribuée ou en failover), l'état de l'hôte remonté par la source distantes peut ne pas refléter précisement l'état de l'hôte du point de vue de Nagios. Comme les installations de monitoring distribuées ou en failover sont assez courants, il est important d'avoir un mécanisme qui permet de s'assurer de l'exactitude des état des hôtes entre les différentes instances de Nagios."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/passivestatetranslation.xml:26
 msgid "Different World Views"
-msgstr ""
+msgstr "Différentes vues d'ensemble"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/passivestatetranslation.xml:28
 msgid "The image below shows a simplified view of a failover monitoring setup."
-msgstr ""
+msgstr "L'image ci-dessous montre une vue simplifiée d'une configuration de monitoring en failover. "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/passivestatetranslation.xml:33
-msgid ""
-"<emphasis>Nagios-A</emphasis> is the primary monitoring server, and is "
-"actively monitoring all switches and routers."
-msgstr ""
+msgid "<emphasis>Nagios-A</emphasis> is the primary monitoring server, and is actively monitoring all switches and routers."
+msgstr "<emphasis>Nagios-A</emphasis> est le serveur miroir primaire, et il surveille de façon active tous les switchs et routeurs. "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/passivestatetranslation.xml:38
-msgid ""
-"<emphasis>Nagios-B</emphasis> and <emphasis>Nagios-C</emphasis> are backup "
-"monitoring servers, and are receiving passive check results from "
-"<emphasis>Nagios-A</emphasis>"
-msgstr ""
+msgid "<emphasis>Nagios-B</emphasis> and <emphasis>Nagios-C</emphasis> are backup monitoring servers, and are receiving passive check results from <emphasis>Nagios-A</emphasis>"
+msgstr "<emphasis>Nagios-B</emphasis> et <emphasis>Nagios-C</emphasis> sont des serveurs de backup, et ils reçoivent les résultat des checks passifs depuis <emphasis>Nagios-A</emphasis>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/passivestatetranslation.xml:43
-msgid ""
-"Both <emphasis>Router-C</emphasis> and <emphasis>Router-D</emphasis> have "
-"suffered failures and are offline."
-msgstr ""
+msgid "Both <emphasis>Router-C</emphasis> and <emphasis>Router-D</emphasis> have suffered failures and are offline."
+msgstr "<emphasis>Router-C</emphasis> et <emphasis>Router-D</emphasis> ont eu tous les deux des problèmes et sont offline"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/passivestatetranslation.xml:54
-msgid ""
-"What states are <emphasis>Router-C</emphasis> and <emphasis>Router-D</"
-"emphasis> currently in? The answer depends on which Nagios instance you ask."
-msgstr ""
+msgid "What states are <emphasis>Router-C</emphasis> and <emphasis>Router-D</emphasis> currently in? The answer depends on which Nagios instance you ask."
+msgstr "Dans quel état <emphasis>Router-C</emphasis> and <emphasis>Router-D</emphasis>  sont-ils? La réponse dépend de quelle instance Nagios est interroger. "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/passivestatetranslation.xml:59
-msgid ""
-"<emphasis>Nagios-A</emphasis> sees <emphasis>Router-D</emphasis> as DOWN and "
-"<emphasis>Router-C</emphasis> as UNREACHABLE"
-msgstr ""
+msgid "<emphasis>Nagios-A</emphasis> sees <emphasis>Router-D</emphasis> as DOWN and <emphasis>Router-C</emphasis> as UNREACHABLE"
+msgstr "<emphasis>Nagios-A</emphasis> voit <emphasis>Router-D</emphasis> comme DOWN et <emphasis>Router-C</emphasis> comme UNREACHABLE"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/passivestatetranslation.xml:64
-msgid ""
-"<emphasis>Nagios-B</emphasis> should see <emphasis>Router-C</emphasis> as "
-"DOWN and <emphasis>Router-D</emphasis> as UNREACHABLE"
-msgstr ""
+msgid "<emphasis>Nagios-B</emphasis> should see <emphasis>Router-C</emphasis> as DOWN and <emphasis>Router-D</emphasis> as UNREACHABLE"
+msgstr "<emphasis>Nagios-B</emphasis> devrait voir <emphasis>Router-C</emphasis> comme DOWN et <emphasis>Router-D</emphasis> comme  UNREACHABLE"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/passivestatetranslation.xml:69
 msgid "<emphasis>Nagios-C</emphasis> should see both routers as being DOWN."
-msgstr ""
+msgstr "<emphasis>Nagios-C</emphasis> devrait voir les deux routeurs comme étant DOWN."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/passivestatetranslation.xml:73
-msgid ""
-"Each Nagios instance has a different view of the network. The backup "
-"monitoring servers should not blindly accept passive host states from the "
-"primary monitoring server, or they will have incorrect information on the "
-"current state of the network."
-msgstr ""
+msgid "Each Nagios instance has a different view of the network. The backup monitoring servers should not blindly accept passive host states from the primary monitoring server, or they will have incorrect information on the current state of the network."
+msgstr "Chaque instance Nagios a une vue différente du réseau. Les serveurs de monitoring de backup ne doivent pas accepter aveuglement les états passifs des hotes du serveur de monitoring primaire, ou ils auront des informations incorrectes sur l'état actuel du réseau. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/passivestatetranslation.xml:78
-msgid ""
-"Without translating passive host check results from the primary monitoring "
-"server (<emphasis>Nagios-A</emphasis>), <emphasis>Nagios-C</emphasis> would "
-"see <emphasis>Router-D</emphasis> as UNREACHABLE, when it is really DOWN "
-"based on its viewpoint. Similarly, the DOWN/UNREACHABLE states (from the "
-"viewpoint of <emphasis>Nagios-A</emphasis>) for <emphasis>Router-C</"
-"emphasis> and <emphasis>Router-D</emphasis> should be flipped from the "
-"viewpoint of <emphasis>Nagios-B</emphasis>."
-msgstr ""
+msgid "Without translating passive host check results from the primary monitoring server (<emphasis>Nagios-A</emphasis>), <emphasis>Nagios-C</emphasis> would see <emphasis>Router-D</emphasis> as UNREACHABLE, when it is really DOWN based on its viewpoint. Similarly, the DOWN/UNREACHABLE states (from the viewpoint of <emphasis>Nagios-A</emphasis>) for <emphasis>Router-C</emphasis> and <emphasis>Router-D</emphasis> should be flipped from the viewpoint of <emphasis>Nagios-B</emphasis>."
+msgstr "Sans la transition de checks passifs d'hôte depuis le serveur de monitoring primaire (<emphasis>Nagios-A</emphasis>), <emphasis>Nagios-C</emphasis> devrait voir <emphasis>Router-D</emphasis> comme UNREACHABLE , alors qu'il est en fait DOWN selon son point de vue. De la même manière les états DOWN/UNREACHABLE ( d'un point de vue de <emphasis>Nagios-A</emphasis>) de <emphasis>Router-C</emphasis> et <emphasis>Router-D</emphasis> devrait être inversés d'un point de vue de <emphasis>Nagios-B</emphasis>."
 
 # type: Content of: <chapter><section><note><para>
 #: AdvancedTopics/passivestatetranslation.xml:85
-msgid ""
-"There may be some situations where you do not want Nagios to translate DOWN/"
-"UNREACHABLE states from remote sources to their <quote>correct</quote> state "
-"from the viewpoint of the local Nagios instance. For example, in distributed "
-"monitoring environments you may want the central Nagios instance to know how "
-"distributed instances see their respective portions of the network."
-msgstr ""
+msgid "There may be some situations where you do not want Nagios to translate DOWN/UNREACHABLE states from remote sources to their <quote>correct</quote> state from the viewpoint of the local Nagios instance. For example, in distributed monitoring environments you may want the central Nagios instance to know how distributed instances see their respective portions of the network."
+msgstr "Il y a des situations où vous ne voulez pas que Nagios transite les états DOWN/UNREACHABLE depuis une source distante à leurs états <quote>corrects</quote> d'un point de vue de l'instant local de Nagios. Par exemple dans un environnment de monitoring distribué, vous pouvez vouloir que l'instance central de Nagios connaisse comment les instances distribuées voient leurs parties respectives du réseau"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/passivestatetranslation.xml:95
 msgid "Enabling State Translation"
-msgstr ""
+msgstr "Activé la transition d'états"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/passivestatetranslation.xml:97
-msgid ""
-"By default, Nagios will not automatically translate DOWN/UNREACHABLE states "
-"from passive check results. You will need to enable this feature if you need "
-"and want it."
-msgstr ""
+msgid "By default, Nagios will not automatically translate DOWN/UNREACHABLE states from passive check results. You will need to enable this feature if you need and want it."
+msgstr "Par défaut, Nagios ne transitera pas automatiquement les états DOWN/UNREACHABLE des résultats des checks passif. Vous devez activer cette fonctionnalité si vous en avez besoin. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/passivestatetranslation.xml:101
-msgid ""
-"The automatic translation of passive host check states is controlled by the "
-"<link linkend=\"configuringnagios-configmain-translate_passive_host_checks"
-"\">translate_passive_host_checks</link> variable. Enable it and Nagios will "
-"automatically translate DOWN and UNREACHABLE states from remote sources to "
-"their correct state for the local instance of Nagios."
-msgstr ""
+msgid "The automatic translation of passive host check states is controlled by the <link linkend=\"configuringnagios-configmain-translate_passive_host_checks\">translate_passive_host_checks</link> variable. Enable it and Nagios will automatically translate DOWN and UNREACHABLE states from remote sources to their correct state for the local instance of Nagios."
+msgstr "La transition automatique d'état de check passif d'hôte est contrôler par la variable <link linkend=\"configuringnagios-configmain-translate_passive_host_checks\">translate_passive_host_checks</link>. Activez-la et Nagios va automatiquement transiter les états DOWN et UNREACHABLE depuis une source distante  à leurs états corrects sur l'instance local de Nagios. "
+
