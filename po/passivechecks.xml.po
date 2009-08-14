@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-08-14 11:38+0100\n"
+"Last-Translator: Fronteau Romuald <rfronteau@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,386 +69,285 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><title>
 #: TheBasics/passivechecks.xml:11
 msgid "Passive Checks"
-msgstr ""
+msgstr "Les contrôles passifs"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:16
-msgid ""
-"In most cases you'll use Nagios to monitor your hosts and services using "
-"regularly scheduled <link linkend=\"thebasics-activechecks\">active checks</"
-"link>. Active checks can be used to \"poll\" a device or service for status "
-"information every so often. Nagios also supports a way to monitor hosts and "
-"services passively instead of actively. They key features of passive checks "
-"are as follows:"
-msgstr ""
+msgid "In most cases you'll use Nagios to monitor your hosts and services using regularly scheduled <link linkend=\"thebasics-activechecks\">active checks</link>. Active checks can be used to \"poll\" a device or service for status information every so often. Nagios also supports a way to monitor hosts and services passively instead of actively. They key features of passive checks are as follows:"
+msgstr "Dans la plus part des cas, vous utilisez nagios pour réaliser des <link linkend=\"thebasics-activechecks\">contrôles actifs</link>. Les contrôles actifs sont utilisés pour prélever les informations sur le statut d'une machine aussi souvent que possible. Nagios possède un autre moyen de contrôle, celui dit passif. Les atraits des contrôles passifs sont les suivants:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:25
-msgid ""
-"Passive checks are initiated and performed external applications/processes"
-msgstr ""
+msgid "Passive checks are initiated and performed external applications/processes"
+msgstr "Les contrôles passifs sont lançé et exécuté par des applications externes"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:30
 msgid "Passive check results are submitted to Nagios for processing"
-msgstr ""
+msgstr "Les résultats des contrôles passifs sont soumis à nagios pour traitement"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:35
-msgid ""
-"The major difference between active and passive checks is that active checks "
-"are initiated and performed by Nagios, while passive checks are performed by "
-"external applications."
-msgstr ""
+msgid "The major difference between active and passive checks is that active checks are initiated and performed by Nagios, while passive checks are performed by external applications."
+msgstr "La différence majeure entre les contrôles actifs et passifs; dans le cas des actifs, c'est Nagios qui lance et exécute les contrôles alors que dans le cas des passifs, cet acheminement est géré par une application externe."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/passivechecks.xml:41
 msgid "Uses For Passive Checks"
-msgstr ""
+msgstr "L'utilité du contrôle passif"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:43
 msgid "Passive checks are useful for monitoring services that are:"
-msgstr ""
+msgstr "Les contrôles passifs sont utiles pour superviser des services qui sont:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:47
-msgid ""
-"Asynchronous in nature and cannot be monitored effectively by polling their "
-"status on a regularly scheduled basis"
-msgstr ""
+msgid "Asynchronous in nature and cannot be monitored effectively by polling their status on a regularly scheduled basis"
+msgstr "asynchrones par nature et ne peuvent donc pas être contrôlés activement de manière fiable (p.ex. les traps SNMP, les alertes de sécurité, etc.)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:52
-msgid ""
-"Located behind a firewall and cannot be checked actively from the monitoring "
-"host"
-msgstr ""
+msgid "Located behind a firewall and cannot be checked actively from the monitoring host"
+msgstr "situés derrière un firewall, et ne peuvent donc pas être contrôlés depuis l'hôte supportant Nagios®"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:57
-msgid ""
-"Examples of asynchronous services that lend themselves to being monitored "
-"passively include &protocol-snmp; traps and security alerts. You never know "
-"how many (if any) traps or alerts you'll receive in a given time frame, so "
-"it's not feasible to just monitor their status every few minutes."
-msgstr ""
+msgid "Examples of asynchronous services that lend themselves to being monitored passively include &protocol-snmp; traps and security alerts. You never know how many (if any) traps or alerts you'll receive in a given time frame, so it's not feasible to just monitor their status every few minutes."
+msgstr "Les exemples de services asynchrones qui se prêtent à être contrôlés passivement incluent  les &protocol-snmp; traps et alertes de sécurité. Vous ne savez jamais à quels moments une faille de sécurité peut être franchit, donc il n'est pas réalisable de contrôler leur statut toutes les deux ou trois minutes."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:63
-msgid ""
-"Passive checks are also used when configuring <link linkend=\"advancedtopics-"
-"distributed\">distributed</link> or <link linkend=\"advancedtopics-redundancy"
-"\">redundant</link> monitoring installations."
-msgstr ""
+msgid "Passive checks are also used when configuring <link linkend=\"advancedtopics-distributed\">distributed</link> or <link linkend=\"advancedtopics-redundancy\">redundant</link> monitoring installations."
+msgstr "Les contrôles passifs sont aussi utilisés lors d'installation de supervision <link linkend=\"advancedtopics-distributed\">distribuée</link> ou <link linkend=\"advancedtopics-redundancy\">redondante</link>"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/passivechecks.xml:70
 msgid "How Passive Checks Work"
-msgstr ""
+msgstr "Comment les contrôles passifs fonctionnent-ils ?"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:78
 msgid "Here's how passive checks work in more detail..."
-msgstr ""
+msgstr "Ci-dessous, le fonctionnement des contrôles passifs en plus détaillé ..."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/passivechecks.xml:83
 msgid "An external application checks the status of a host or service."
-msgstr ""
+msgstr "Une application externe contrôle l'état d'un hôte ou un service."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/passivechecks.xml:88
-msgid ""
-"The external application writes the results of the check to the <link "
-"linkend=\"configuringnagios-configmain-command_file\">external command file</"
-"link>."
-msgstr ""
+msgid "The external application writes the results of the check to the <link linkend=\"configuringnagios-configmain-command_file\">external command file</link>."
+msgstr "L'application externe écrit le résultat du contrôle dans le <link linkend=\"configuringnagios-configmain-command_file\">fichier des commandes externes</link>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/passivechecks.xml:93
-msgid ""
-"The next time Nagios reads the external command file it will place the "
-"results of all passive checks into a queue for later processing. The same "
-"queue that is used for storing results from active checks is also used to "
-"store the results from passive checks."
-msgstr ""
+msgid "The next time Nagios reads the external command file it will place the results of all passive checks into a queue for later processing. The same queue that is used for storing results from active checks is also used to store the results from passive checks."
+msgstr "Ensuite, Nagios lit ce fichier et place les résultats dans une queue pour les traiter plus tard. Cette même queue est utilisé pour aussi bien stocker les résultats des contrôles actifs que passifs."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/passivechecks.xml:101
-msgid ""
-"Nagios will periodically execute a <link linkend=\"configuringnagios-"
-"configmain-check_result_reaper_frequency\">check result reaper event</link> "
-"and scan the check result queue. Each service check result that is found in "
-"the queue is processed in the same manner - regardless of whether the check "
-"was active or passive. Nagios may send out notifications, log alerts, etc. "
-"depending on the check result information."
-msgstr ""
+msgid "Nagios will periodically execute a <link linkend=\"configuringnagios-configmain-check_result_reaper_frequency\">check result reaper event</link> and scan the check result queue. Each service check result that is found in the queue is processed in the same manner - regardless of whether the check was active or passive. Nagios may send out notifications, log alerts, etc. depending on the check result information."
+msgstr "Nagios va exécuter périodiquement un <link linkend=\"configuringnagios-configmain-check_result_reaper_frequency\">évènement collecteur de résultat</link> et scanner la queue. Chaque résultats de services trouvés sont traités de la même manière qu'il soit actif ou passif. Nagios enverra les notifications, alertes de log, ect... en fonction du résultat des contrôles."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:110
-msgid ""
-"The processing of active and passive check results is essentially identical. "
-"This allows for seamless integration of status information from external "
-"applications with Nagios."
-msgstr ""
+msgid "The processing of active and passive check results is essentially identical. This allows for seamless integration of status information from external applications with Nagios."
+msgstr "Le principe des contrôles actifs et passifs sont similairement les mêmes. Cela tient en compte de l'intégration de l'information des états à partir d'applications externes avec Nagios."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/passivechecks.xml:116
 msgid "Enabling Passive Checks"
-msgstr ""
+msgstr "Autoriser les contrôles passifs"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:118
-msgid ""
-"In order to enable passive checks in Nagios, you'll need to do the following:"
-msgstr ""
+msgid "In order to enable passive checks in Nagios, you'll need to do the following:"
+msgstr "Dans l'odre, pour autoriser le contrôle passifs dans Nagios, Il faut procéder de la manière suivante:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para><link>
 #: TheBasics/passivechecks.xml:123
-msgid ""
-"Set <link linkend=\"configuringnagios-configmain-"
-"accept_passive_service_checks\">"
-msgstr ""
+msgid "Set <link linkend=\"configuringnagios-configmain-accept_passive_service_checks\">"
+msgstr "Passer la directive <link linkend=\"configuringnagios-configmain-accept_passive_service_checks\">"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:124
 msgid "</link> directive is set to 1."
-msgstr ""
+msgstr "</link> à 1."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:129
 msgid "Set the"
-msgstr ""
+msgstr "Passer dans la définition des hôtes et des services la"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:129
 msgid "directive in your host and service definitions is set to 1."
-msgstr ""
+msgstr "directive à 1"
 
 # type: Content of: <chapter><section><para><link>
 #: TheBasics/passivechecks.xml:134
-msgid ""
-"If you want to disable processing of passive checks on a global basis, set "
-"the <link linkend=\"configuringnagios-configmain-"
-"accept_passive_service_checks\">"
-msgstr ""
+msgid "If you want to disable processing of passive checks on a global basis, set the <link linkend=\"configuringnagios-configmain-accept_passive_service_checks\">"
+msgstr "Si vous voulez désactiver globalement le contrôle passifs, passer la directive  <link linkend=\"configuringnagios-configmain-accept_passive_service_checks\">"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:136
 msgid "</link> directive to 0."
-msgstr ""
+msgstr "</link> à 0."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:139
-msgid ""
-"If you would like to disable passive checks for just a few hosts or "
-"services, use the"
-msgstr ""
+msgid "If you would like to disable passive checks for just a few hosts or services, use the"
+msgstr "Si vous voulez désactiver le contrôle passifs pour quelques services ou hôtes, utilisez la directive"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:140
 msgid "directive in the host and/or service definitions to do so."
-msgstr ""
+msgstr " dans votre définition d'hôte et/ou service pour faire ça."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/passivechecks.xml:145
 msgid "Submitting Passive Service Check Results"
-msgstr ""
+msgstr "Soumission d'un résultat de contrôle passif"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:147
-msgid ""
-"External applications can submit passive service check results to Nagios by "
-"writing a PROCESS_SERVICE_CHECK_RESULT <link linkend=\"advancedtopics-"
-"extcommands\">external command</link> to the external command file."
-msgstr ""
+msgid "External applications can submit passive service check results to Nagios by writing a PROCESS_SERVICE_CHECK_RESULT <link linkend=\"advancedtopics-extcommands\">external command</link> to the external command file."
+msgstr "Les applications externes peuvent soumettre à Nagios des résultats de contrôles passifs en écrivant une <link linkend=\"advancedtopics-extcommands\">commande externe</link> PROCESS_SERVICE_CHECK_RESULT dans le fichier de commande externe."
 
 # type: Content of: <chapter><section><para>
-#: TheBasics/passivechecks.xml:152 TheBasics/passivechecks.xml:201
+#: TheBasics/passivechecks.xml:152
+#: TheBasics/passivechecks.xml:201
 msgid "The format of the command is as follows:"
-msgstr ""
+msgstr "Le format de la commande ressemble à ce qui suit:"
 
 # type: Content of: <chapter><section><para>
-#: TheBasics/passivechecks.xml:154 TheBasics/passivechecks.xml:203
+#: TheBasics/passivechecks.xml:154
+#: TheBasics/passivechecks.xml:203
 msgid "where..."
-msgstr ""
+msgstr "ou..."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:158
-msgid ""
-"timestamp is the time in time_t format (seconds since the UNIX epoch) that "
-"the service check was perfomed (or submitted). Please note the single space "
-"after the right bracket."
-msgstr ""
+msgid "timestamp is the time in time_t format (seconds since the UNIX epoch) that the service check was perfomed (or submitted). Please note the single space after the right bracket."
+msgstr "timestamp est le temps au format time_t (secondes écoulée depuis le commencement UNIX) que le contrôle de service génère (ou soumet). Notez bien le simple espace juste après la parenthèse."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:164
-msgid ""
-"host_name is the short name of the host associated with the service in the "
-"service definition"
-msgstr ""
+msgid "host_name is the short name of the host associated with the service in the service definition"
+msgstr "host_name est l'alias de l'hôte associé avec le service dans la définition de service"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:169
-msgid ""
-"svc_description is the description of the service as specified in the "
-"service definition"
-msgstr ""
+msgid "svc_description is the description of the service as specified in the service definition"
+msgstr "svc_description est la description de service spécifiée dans la définition de service"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:174
-msgid ""
-"return_code is the return code of the check (0=OK, 1=WARNING, 2=CRITICAL, "
-"3=UNKNOWN)"
-msgstr ""
+msgid "return_code is the return code of the check (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)"
+msgstr "return_code est le code de retour d'un contrôle (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:179
-msgid ""
-"plugin_output is the text output of the service check (i.e. the plugin "
-"output)"
-msgstr ""
+msgid "plugin_output is the text output of the service check (i.e. the plugin output)"
+msgstr "plugin_output est le texte de sortie d'un contrôle de service"
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/passivechecks.xml:184
-msgid ""
-"A service must be defined in Nagios before you can submit passive check "
-"results for it! Nagios will ignore all check results for services that had "
-"not been configured before it was last (re)started."
-msgstr ""
+msgid "A service must be defined in Nagios before you can submit passive check results for it! Nagios will ignore all check results for services that had not been configured before it was last (re)started."
+msgstr "Un service doit être définit dans Nagios avant de lui soumettre un contrôle passif! Nagios ignorera tous les résultats de contrôles pour les services qui n'ont pas été configuré avant son dernier (re)démarrage."
 
 # type: Content of: <chapter><section><tip><para>
 #: TheBasics/passivechecks.xml:189
-msgid ""
-"An example shell script of how to submit passive service check results to "
-"Nagios can be found in the documentation on <link linkend=\"advancedtopics-"
-"volatileservices\">volatile services</link>."
-msgstr ""
+msgid "An example shell script of how to submit passive service check results to Nagios can be found in the documentation on <link linkend=\"advancedtopics-volatileservices\">volatile services</link>."
+msgstr "Un exemple de script shell sur comment soumettre un contrôle passif de service à Nagios se trouve dans la documentation au <link linkend=\"advancedtopics-volatileservices\">volatile services</link>."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/passivechecks.xml:195
 msgid "Submitting Passive Host Check Results"
-msgstr ""
+msgstr "Soumission d'un résultat de contrôle passif d'un hôte"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:197
-msgid ""
-"External applications can submit passive host check results to Nagios by "
-"writing a PROCESS_HOST_CHECK_RESULT external command to the external command "
-"file."
-msgstr ""
+msgid "External applications can submit passive host check results to Nagios by writing a PROCESS_HOST_CHECK_RESULT external command to the external command file."
+msgstr "Les applications externes peuvent soumettre à Nagios des résultats de contrôles passifs en écrivant une <link linkend=\"advancedtopics-extcommands\">commande externe</link> PROCESS_HOST_CHECK_RESULT dans le fichier de commande externe."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:207
-msgid ""
-"timestamp is the time in time_t format (seconds since the UNIX epoch) that "
-"the host check was perfomed (or submitted). Please note the single space "
-"after the right bracket."
-msgstr ""
+msgid "timestamp is the time in time_t format (seconds since the UNIX epoch) that the host check was perfomed (or submitted). Please note the single space after the right bracket."
+msgstr "timestamp est le temps au format time_t (secondes écoulée depuis le commencement UNIX) que le contrôle de service génère (ou soumet). Notez bien le simple espace juste après la parenthèse."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:213
-msgid ""
-"host_name is the short name of the host (as defined in the host definition)"
-msgstr ""
+msgid "host_name is the short name of the host (as defined in the host definition)"
+msgstr "host_name est l'alias correspondant à l'hôte (défini dans la définition de l'hôte)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:218
 msgid "host_status is the status of the host (0=UP, 1=DOWN, 2=UNREACHABLE)"
-msgstr ""
+msgstr "host_status est l'état de l'hôte (0=UP, 1=DOWN, 2=UNREACHABLE)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: TheBasics/passivechecks.xml:223
 msgid "plugin_output is the text output of the host check"
-msgstr ""
+msgstr "plugin_output est le texte de sortie du contrôle de l'hôte"
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/passivechecks.xml:227
-msgid ""
-"A host must be defined in Nagios before you can submit passive check results "
-"for it! Nagios will ignore all check results for hosts that had not been "
-"configured before it was last (re)started."
-msgstr ""
+msgid "A host must be defined in Nagios before you can submit passive check results for it! Nagios will ignore all check results for hosts that had not been configured before it was last (re)started."
+msgstr "Un hôte doit être définit dans Nagios avant de lui soumettre un contrôle passif! Nagios ignorera tous les résultats de contrôles pour les hôtes qui n'ont pas été configuré avant son dernier (re)démarrage."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/passivechecks.xml:233
 msgid "Passive Checks and Host States"
-msgstr ""
+msgstr "Les contrôles passifs et les états d'hôtes"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:235
-msgid ""
-"Unlike with active host checks, Nagios does not (by default) attempt to "
-"determine whether or host is DOWN or UNREACHABLE with passive checks.  "
-"Rather, Nagios takes the passive check result to be the actual state the "
-"host is in and doesn't try to determine the host's actual state using the "
-"<link linkend=\"thebasics-networkreachability\">reachability logic</link>.  "
-"This can cause problems if you are submitting passive checks from a remote "
-"host or you have a <link linkend=\"advancedtopics-distributed\">distributed "
-"monitoring setup</link> where the parent/child host relationships are "
-"different."
-msgstr ""
+msgid "Unlike with active host checks, Nagios does not (by default) attempt to determine whether or host is DOWN or UNREACHABLE with passive checks.  Rather, Nagios takes the passive check result to be the actual state the host is in and doesn't try to determine the host's actual state using the <link linkend=\"thebasics-networkreachability\">reachability logic</link>.  This can cause problems if you are submitting passive checks from a remote host or you have a <link linkend=\"advancedtopics-distributed\">distributed monitoring setup</link> where the parent/child host relationships are different."
+msgstr "À la différence des  contrôles actifs d'hôte, Nagios n'essaie pas (par défaut) de déterminer si l'hôte est DOWN ou UNREACHABLE avec le contrôle passif. Plutôt, Nagios prend le résultat du contrôle passif comme l'état réel dans lequel l'hôte est et n'essaie pas de déterminer que l'état réel de l'hôte en utilisant la <link linkend=\"thebasics-networkreachability\">logique d'accessibilité</link>. Ceci peut causer des problèmes si vous soumettez un contrôle passif provenant d'un hôte distant ou vous avez une<link linkend=\"advancedtopics-distributed\"> supervision dite distribuée</link> dans laquelle vous avez des liens d'hôtes pères/fils complexes."
 
 # type: Content of: <chapter><section><para><link>
 #: TheBasics/passivechecks.xml:245
-msgid ""
-"You can tell Nagios to translate DOWN/UNREACHABLE passive check result "
-"states to their \"proper\" state by using the <link linkend="
-"\"configuringnagios-configmain-translate_passive_host_checks\">"
-msgstr ""
+msgid "You can tell Nagios to translate DOWN/UNREACHABLE passive check result states to their \"proper\" state by using the <link linkend=\"configuringnagios-configmain-translate_passive_host_checks\">"
+msgstr "Vous pouvez dire à nagios de traduire un résultat de contrôle passif DOWN/UNREACHABLE par votre \"propre\" état en utilisant la variable <link linkend=\"configuringnagios-configmain-translate_passive_host_checks\">"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:247
-msgid ""
-"</link> variable.  More information on how this works can be found <link "
-"linkend=\"advancedtopics-passivestatetranslation\">here</link>."
-msgstr ""
+msgid "</link> variable.  More information on how this works can be found <link linkend=\"advancedtopics-passivestatetranslation\">here</link>."
+msgstr "</link>. Vous trouverez plus d'information sur son fonctionnement <link linkend=\"advancedtopics-passivestatetranslation\">ici</link>."
 
 # type: Content of: <chapter><section><note><para><link>
 #: TheBasics/passivechecks.xml:251
-msgid ""
-"Passive host checks are normally treated as <link linkend=\"thebasics-"
-"statetypes\">HARD states</link>, unless the <link linkend="
-"\"configuringnagios-configmain-passive_host_checks_are_soft\">"
-msgstr ""
+msgid "Passive host checks are normally treated as <link linkend=\"thebasics-statetypes\">HARD states</link>, unless the <link linkend=\"configuringnagios-configmain-passive_host_checks_are_soft\">"
+msgstr "Les contrôles passifs des hôtes sont normalement traité en <link linkend=\"thebasics-statetypes\">états HARD</link>, à moins que l'option <link linkend=\"configuringnagios-configmain-passive_host_checks_are_soft\">"
 
 # type: Content of: <chapter><section><note><para>
 #: TheBasics/passivechecks.xml:253
 msgid "</link> option is enabled."
-msgstr ""
+msgstr "</link> soit activée."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/passivechecks.xml:258
 msgid "Submitting Passive Check Results From Remote Hosts"
-msgstr ""
+msgstr "Soumission des résultats de contrôles passifs provenant d'hôtes distants"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:265
-msgid ""
-"If an application that resides on the same host as Nagios is sending passive "
-"host or service check results, it can simply write the results directly to "
-"the external command file as outlined above.  However, applications on "
-"remote hosts can't do this so easily."
-msgstr ""
+msgid "If an application that resides on the same host as Nagios is sending passive host or service check results, it can simply write the results directly to the external command file as outlined above.  However, applications on remote hosts can't do this so easily."
+msgstr "Si une application demeurant sur le même serveur que Nagios veut envoyer un résultat de contrôle passif d'hôte ou de service, vous pouvez simplement écrire en mode \"append\" directement dans le fichier de commandes externes. Contrairement, une application sur un hôte distant ne peut pas le faire aussi simplement."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/passivechecks.xml:270
-msgid ""
-"In order to allow remote hosts to send passive check results to the "
-"monitoring host, I've developed the <link linkend=\"nagiosaddons-addons-nsca"
-"\">&name-nsca;</link> addon.  The &name-nsca; addon consists of a daemon "
-"that runs on the Nagios hosts and a client that is executed from remote "
-"hosts. The daemon will listen for connections from remote clients, perform "
-"some basic validation on the results being submitted, and then write the "
-"check results directly into the external command file (as described above). "
-"More information on the &name-nsca; addon can be found <link linkend="
-"\"nagiosaddons-addons-nsca\">here</link>."
-msgstr ""
+msgid "In order to allow remote hosts to send passive check results to the monitoring host, I've developed the <link linkend=\"nagiosaddons-addons-nsca\">&name-nsca;</link> addon.  The &name-nsca; addon consists of a daemon that runs on the Nagios hosts and a client that is executed from remote hosts. The daemon will listen for connections from remote clients, perform some basic validation on the results being submitted, and then write the check results directly into the external command file (as described above). More information on the &name-nsca; addon can be found <link linkend=\"nagiosaddons-addons-nsca\">here</link>."
+msgstr "Pour permettre aux hôtes distants d'envoyer leurs résultats de contrôles passifs au serveur de supervision, j'ai développé un agent du nom <link linkend=\"nagiosaddons-addons-nsca\">&name-nsca;</link>. L'agent &name-nsca; se compose d'un démon tournant sur le serveur Nagios et un client qui est exécuté des hôtes distants. Le démon écoutera toutes les connections des hôtes distants, exécutera quelques validations fondamentale sur les résultats lui étant soumis et écrira ensuite les résultats des contrôles  directement dans le fichier de commandes externes (comme décrit au-dessus). Plus de renseignements sur l'agent &name-nsca; peut être trouvé <link linkend=\"nagiosaddons-addons-nsca\">ici</link>."
+
