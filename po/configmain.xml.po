@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-03-13 17:13+0100\n"
-"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
+"PO-Revision-Date: 2009-08-14 14:41+0100\n"
+"Last-Translator: Fronteau Romuald <rfronteau@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -551,199 +551,200 @@ msgstr "Cette variable est utilisée pour indiquer l'emplacement d'un fichier qu
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:218
 msgid "<anchor id=\"configuringnagios-configmain-resource_file\" xreflabel=\"Resource File\"/>Resource File"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-resource_file\" xreflabel=\"Resource File\"/>Fichier de ressources"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:228
 #, no-wrap
 msgid "resource_file=&lt;file_name&gt;"
-msgstr ""
+msgstr "resource_file=&lt;file_name&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:234
 #, no-wrap
 msgid "resource_file=/usr/local/nagios/etc/resource.cfg"
-msgstr ""
+msgstr "resource_file=/usr/local/nagios/etc/resource.cfg"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:240
 msgid "This is used to specify an optional resource file that can contain"
-msgstr ""
+msgstr "Le fichier de ressources optionnel qui contient des définitions de macros du type $USERn$."
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:241
 msgid "<xref linkend=\"thebasics-macros\" /> definitions."
-msgstr ""
+msgstr "<xref linkend=\"thebasics-macros\" />."
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:242
 msgid "macros are useful for storing usernames, passwords, and items commonly used in command definitions (like directory paths). The CGIs will <emphasis>not</emphasis> attempt to read resource files, so you can set restrictive permissions (600 or 660) on them to protect sensitive information. You can include multiple resource files by adding multiple"
-msgstr ""
+msgstr "Les macros $USERn$ permettent de stocker des noms d'utilisateurs, des mots de passe, et les éléments couramment utilisés dans les commandes (comme les chemins d'accès). Les CGI ne lisent pas les fichiers de ressources, si bien que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de ressources en ajoutant des directives resource_file"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:248
 msgid "statements to the main config file - Nagios will process them all. See the sample <filename>resource.cfg</filename> file in the <filename class=\"directory\">sample-config/</filename> subdirectory of the Nagios distribution for an example of how to define"
-msgstr ""
+msgstr "au fichier de configuration principal - Nagios® les traitera tous. Référez-vous au fichier resource.cfg d'exemple situé à la racine de la distribution de Nagios®, pour voir comment utiliser les macros $USERn$."
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/configmain.xml:252
 #: TheBasics/macros.xml:25
 msgid "macros."
-msgstr ""
+msgstr "."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:256
 msgid "<anchor id=\"configuringnagios-configmain-temp_file\" xreflabel=\"Temp File\"/>Temp File"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-temp_file\" xreflabel=\"Temp File\"/>Fichier temporaire"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:266
 #, no-wrap
 msgid "temp_file=&lt;file_name&gt;"
-msgstr ""
+msgstr "temp_file=&lt;file_name&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:272
 #, no-wrap
 msgid "temp_file=/usr/local/nagios/var/nagios.tmp"
-msgstr ""
+msgstr "temp_file=/usr/local/nagios/var/nagios.tmp"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:278
 msgid "This is a temporary file that Nagios periodically creates to use when updating comment data, status data, etc. The file is deleted when it is no longer needed."
-msgstr ""
+msgstr "C'est un fichier que Nagios® crée périodiquement durant la mise à jour des commentaires de données, des données d'état etc… Il est supprimé quand il n'est plus nécessaire."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:284
 msgid "<anchor id=\"configuringnagios-configmain-temp_path\" xreflabel=\"Temp Path\"/>Temp Path"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-temp_path\" xreflabel=\"Temp Path\"/>Répertoire temporaire"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:294
 #, no-wrap
 msgid "temp_path=&lt;dir_name&gt;"
-msgstr ""
+msgstr "temp_path=&lt;dir_name&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:300
 #, no-wrap
 msgid "temp_path=/tmp"
-msgstr ""
+msgstr "temp_path=/tmp"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:306
+#, fuzzy
 msgid "This is a directory that Nagios can use as scratch space for creating temporary files used during the monitoring process. You should run <command>tmpwatch</command>, or a similiar utility, on this directory occassionally to delete files older than 24 hours."
-msgstr ""
+msgstr "C'est un répertoire que Nagios peut utiliser comme espace \"scratch\" pour créer des fichiers temporaires utilisés durant le processus de supervision."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:313
 msgid "<anchor id=\"configuringnagios-configmain-status_log\" /> <anchor id=\"configuringnagios-configmain-status_file\" xreflabel=\"Status File\" />Status File"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-status_log\" /> <anchor id=\"configuringnagios-configmain-status_file\" xreflabel=\"Status File\" />Fichier d'états (journal des états)"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:324
 #, no-wrap
 msgid "status_file=&lt;file_name&gt;"
-msgstr ""
+msgstr "status_file=&lt;file_name&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:330
 #, no-wrap
 msgid "status_file=/usr/local/nagios/var/status.dat"
-msgstr ""
+msgstr "status_file=/usr/local/nagios/var/status.dat"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:336
 msgid "This is the file that Nagios uses to store the current status, comment, and downtime information. This file is used by the CGIs so that current monitoring status can be reported via a web interface. The CGIs must have read access to this file in order to function properly. This file is deleted every time Nagios stops and recreated when it starts."
-msgstr ""
+msgstr "C'est le fichier utilisé par Nagios®, pour stocker l'état courant de tous les services supervisés. L'état de tous les hôtes associés avec ces services, est également enregistré dans ce fichier. Ce fichier est utilisé par le CGI d'état pour afficher l'état courant de la supervision dans l'interface web. Les CGI doivent avoir le droit d'accéder en lecture à ce fichier, pour fonctionner correctement. Ce fichier est supprimé à l'arrêt de Nagios®, et recréé au démarrage."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:345
 msgid "<anchor id=\"configuringnagios-configmain-status_update_interval\" xreflabel=\"Status File Update Interval\"/>Status File Update Interval"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-status_update_interval\" xreflabel=\"Status File Update Interval\"/>Intervalle de mise à jour des états agrégés"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:355
 #, no-wrap
 msgid "status_update_interval=&lt;seconds&gt;"
-msgstr ""
+msgstr "status_update_interval=&lt;seconds&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:361
 #, no-wrap
 msgid "status_update_interval=15"
-msgstr ""
+msgstr "status_update_interval=15"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:367
 msgid "This setting determines how often (in seconds) that Nagios will update status data in the <xref linkend=\"configuringnagios-configmain-status_file\" />. The minimum update interval is 1 second."
-msgstr ""
+msgstr "Cette variable, détermine la fréquence (en secondes), à laquelle Nagios® mettra à jour les données d'état dans le <xref linkend=\"configuringnagios-configmain-status_file\" />. L'intervalle minimal est de une secondes."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:373
 msgid "<anchor id=\"configuringnagios-configmain-nagios_user\" xreflabel=\"Nagios User\"/>Nagios User"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-nagios_user\" xreflabel=\"Nagios User\"/>Nagios®"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:383
 #, no-wrap
 msgid "nagios_user=&lt;username/UID&gt;"
-msgstr ""
+msgstr "nagios_user=&lt;username/UID&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:389
 #, no-wrap
 msgid "nagios_user=nagios"
-msgstr ""
+msgstr "nagios_user=nagios"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:395
 msgid "This is used to set the effective user that the Nagios process should run as. After initial program startup and before starting to monitor anything, Nagios will drop its effective privileges and run as this user. You may specify either a username or a UID."
-msgstr ""
+msgstr "Ceci détermine quel utilisateur doit être le propriétaire du processus de Nagios®. Après le démarrage du programme, et avant toute supervision, Nagios® abandonnera ses privilèges effectifs, et se lancera sous cet utilisateur. Vous pouvez donner un nom d'utilisateur ou un UID."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:402
 msgid "<anchor id=\"configuringnagios-configmain-nagios_group\" xreflabel=\"Nagios Group\" />Nagios Group"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-nagios_group\" xreflabel=\"Nagios Group\" />Groupe de Nagios®"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:412
 #, no-wrap
 msgid "nagios_group=&lt;groupname/GID&gt;"
-msgstr ""
+msgstr "nagios_group=&lt;groupname/GID&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:418
 #, no-wrap
 msgid "nagios_group=nagios"
-msgstr ""
+msgstr "nagios_group=nagios"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:424
 msgid "This is used to set the effective group that the Nagios process should run as. After initial program startup and before starting to monitor anything, Nagios will drop its effective privileges and run as this group. You may specify either a groupname or a GID."
-msgstr ""
+msgstr "Ceci détermine quel groupe doit être propriétaire du processus de Nagios®. Après le démarrage du programme, et avant toute supervision, Nagios® abandonnera ses privilèges effectifs et se lancera sous ce groupe. Vous pouvez donner un nom de groupe ou un GID."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:431
 msgid "<anchor id=\"configuringnagios-configmain-enable_notifications\" xreflabel=\"Notifications Option\" />Notifications Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-enable_notifications\" xreflabel=\"Notifications Option\" />Option des notifications"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:441
 #, no-wrap
 msgid "enable_notifications=&lt;0/1&gt;"
-msgstr ""
+msgstr "enable_notifications=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:447
 #, no-wrap
 msgid "enable_notifications=1"
-msgstr ""
+msgstr "enable_notifications=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:453
 msgid "This option determines whether or not Nagios will send out <link linkend=\"thebasics-notifications\">notifications</link> when it initially (re)starts. If this option is disabled, Nagios will not send out notifications for any host or service."
-msgstr ""
+msgstr "Cette option détermine si Nagios® envoie ou non une notification quand il (re)démarre. Si cette option est désactivée, Nagios® n'enverra aucune notification, quel que soit l'hôte ou le service."
 
 # type: Content of: <chapter><section><section><note><para>
 #: ConfiguringNagios/configmain.xml:459
@@ -753,305 +754,305 @@ msgstr ""
 #: ConfiguringNagios/configmain.xml:678
 #: ConfiguringNagios/configmain.xml:730
 msgid "If you have <xref linkend=\"configuringnagios-configmain-retain_state_information\" /> enabled, Nagios will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <xref linkend=\"configuringnagios-configmain-state_retention_file\" />), unless you disable the <xref linkend=\"configuringnagios-configmain-use_retained_program_state\" /> option. If you want to change this option when state retention is active (and the <xref linkend=\"configuringnagios-configmain-use_retained_program_state\" /> is enabled), you'll have to use the appropriate <link linkend=\"advancedtopics-extcommands\">external command</link> or change it via the web interface. Values are as follows:"
-msgstr ""
+msgstr "Note : si vous avez activé la <xref linkend=\"configuringnagios-configmain-retain_state_information\" />, Nagios® ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est stockée dans le <xref linkend=\"configuringnagios-configmain-state_retention_file\" />), à moins que vous ne désactiviez l'option <xref linkend=\"configuringnagios-configmain-use_retained_program_state\" />. Si vous voulez changer cette variable alors que la mémorisation d'état est activée, (ainsi que l'option <xref linkend=\"configuringnagios-configmain-use_retained_program_state\" />), vous devrez passer par la <link linkend=\"advancedtopics-extcommands\">commande externe</link> appropriée, ou la changer à travers l'interface web. Les valeurs possibles de cette variable sont :"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:472
 msgid "0 = Disable notifications"
-msgstr ""
+msgstr "0 = Disable notifications"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:476
 msgid "1 = Enable notifications (default)"
-msgstr ""
+msgstr "1 = Enable notifications (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:482
 msgid "<anchor id=\"configuringnagios-configmain-execute_service_checks\" xreflabel=\"Service Check Execution Option\" />Service Check Execution Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-execute_service_checks\" xreflabel=\"Service Check Execution Option\" />Option d'exécution des contrôles de service"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:492
 #, no-wrap
 msgid "execute_service_checks=&lt;0/1&gt;"
-msgstr ""
+msgstr "execute_service_checks=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:498
 #, no-wrap
 msgid "execute_service_checks=1"
-msgstr ""
+msgstr "execute_service_checks=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:504
 msgid "This option determines whether or not Nagios will execute service checks when it initially (re)starts. If this option is disabled, Nagios will not actively execute any service checks and will remain in a sort of <quote>sleep</quote> mode (it can still accept <link linkend=\"thebasics-passivechecks\">passive checks</link> unless you've <xref linkend=\"configuringnagios-configmain-accept_passive_service_checks\" />).  This option is most often used when configuring backup monitoring servers, as described in the documentation on <link linkend=\"advancedtopics-redundancy\">redundancy</link>, or when setting up a <link linkend=\"advancedtopics-distributed\">distributed</link> monitoring environment."
-msgstr ""
+msgstr "Cette option détermine, si Nagios® effectuera les contrôles des services lorsqu'il (re)démarrera. Si cette option est désactivée, Nagios® n'effectuera aucun contrôle de service, et restera dans un mode <quote>de sommeil</quote> (il peut quand même recevoir les <link linkend=\"thebasics-passivechecks\">contrôles passifs</link> à moins qu'ils ne soient désactivés). Cette option est surtout utile pour définir des serveurs de supervision de secours, comme l'explique la documentation sur la <link linkend=\"advancedtopics-redundancy\">redondance</link>, ou pour mettre en place un environnement de supervision <link linkend=\"advancedtopics-distributed\">répartie</link>. Note : si vous avez activé la mémorisation d'état, Nagios® ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est stockée dans le fichier de mémorisation d'état), à moins que vous ne désactiviez l'option use_retained_program_state. Si vous voulez changer cette variable, alors que la mémorisation d'état est activée (ainsi que l'option use_retained_program_state), vous devrez passer par la commande externe appropriée, ou la changer à travers l'interface web. Les valeurs possibles de cette variable sont :"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:527
 msgid "0 = Don't execute service checks"
-msgstr ""
+msgstr "0 = Don't execute service checks"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:531
 msgid "1 = Execute service checks (default)"
-msgstr ""
+msgstr "1 = Execute service checks (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:538
 msgid "<anchor id=\"configuringnagios-configmain-accept_passive_service_checks\" xreflabel=\"Passive Service Check Acceptance Option\" />Passive Service Check Acceptance Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-accept_passive_service_checks\" xreflabel=\"Passive Service Check Acceptance Option\" />Option d'acceptation des contrôles passifs de service"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:549
 #, no-wrap
 msgid "accept_passive_service_checks=&lt;0/1&gt;"
-msgstr ""
+msgstr "accept_passive_service_checks=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:555
 #, no-wrap
 msgid "accept_passive_service_checks=1"
-msgstr ""
+msgstr "accept_passive_service_checks=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:561
 msgid "This option determines whether or not Nagios will accept <link linkend=\"thebasics-passivechecks\">passive service checks</link> when it initially (re)starts. If this option is disabled, Nagios will not accept any passive service checks."
-msgstr ""
+msgstr "Cette option détermine si Nagios® accepte les <link linkend=\"thebasics-passivechecks\">contrôles passifs de service</link> quand il (re)démarrera. Si cette option est désactivée, Nagios® n'acceptera aucun contrôle passif de service. Note : si vous avez activé la mémorisation d'état, Nagios® ignorera ce paramètre au (re)démarrage et utilisera sa dernière valeur connue (telle qu'elle est stockée dans le fichier de mémorisation d'état), à moins que vous ne désactiviez l'option use_retained_program_state. Si vous voulez changer cette variable alors que la mémorisation d'état est activée (ainsi que l'option use_retained_program_state), vous devrez passer par la commande externe appropriée ou la changer à travers l'interface web. Les valeurs possibles de cette variable sont :"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:580
 msgid "0 = Don't accept passive service checks"
-msgstr ""
+msgstr "0 = Don't accept passive service checks"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:584
 msgid "1 = Accept passive service checks (default)"
-msgstr ""
+msgstr "1 = Accept passive service checks (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:591
 msgid "<anchor id=\"configuringnagios-configmain-execute_host_checks\" xreflabel=\"Host Check Execution Option\"/>Host Check Execution Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-execute_host_checks\" xreflabel=\"Host Check Execution Option\"/>Option d'exécution des contrôles d'hôtes"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:602
 #, no-wrap
 msgid "execute_host_checks=&lt;0/1&gt;"
-msgstr ""
+msgstr "execute_host_checks=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:608
 #, no-wrap
 msgid "execute_host_checks=1"
-msgstr ""
+msgstr "execute_host_checks=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:614
 msgid "This option determines whether or not Nagios will execute on-demand and regularly scheduled host checks when it initially (re)starts. If this option is disabled, Nagios will not actively execute any host checks, although it can still accept <link linkend=\"thebasics-passivechecks\">passive host checks</link> unless you've <xref linkend=\"configuringnagios-configmain-accept_passive_service_checks\" />). This option is most often used when configuring backup monitoring servers, as described in the documentation on <link linkend=\"advancedtopics-redundancy\">redundancy</link>, or when setting up a <link linkend=\"advancedtopics-distributed\">distributed</link> monitoring environment."
-msgstr ""
+msgstr "Cette option détermine si Nagios® effectuera les contrôles des hôtes - à la demande ou de manière régulière - lorsqu'il (re)démarrera. Si cette option est désactivée, Nagios® n'effectuera aucun contrôle sur les hôtes et restera dans un mode <link linkend=\"thebasics-passivechecks\">de sommeil</link> (il peut quand même recevoir les contrôles passifs d'hôtes à moins qu'ils ne soient désactivés). Cette option est surtout utile pour définir des serveurs de supervision de secours, comme l'explique la documentation sur la <link linkend=\"advancedtopics-redundancy\">redondance</link>, ou pour mettre en place un environnement de supervision <link linkend=\"advancedtopics-distributed\">répartie</link>. Note : si vous avez activé la mémorisation d'état, Nagios® ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est stockée dans le fichier de mémorisation d'état), à moins que vous ne désactiviez l'option use_retained_program_state. Si vous voulez changer cette variable alors que la mémorisation d'état est activée (ainsi que l'option use_retained_program_state), vous devrez passer par la commande externe appropriée, ou la changer à travers l'interface web. Les valeurs possibles de cette variable sont :"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:640
 msgid "0 = Don't execute host checks"
-msgstr ""
+msgstr "0 = Don't execute host checks"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:644
 msgid "1 = Execute host checks (default)"
-msgstr ""
+msgstr "1 = Execute host checks (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:650
 msgid "<anchor id=\"configuringnagios-configmain-accept_passive_host_checks\" xreflabel=\"Passive Host Check Acceptance Option\"/>Passive Host Check Acceptance Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-accept_passive_host_checks\" xreflabel=\"Passive Host Check Acceptance Option\"/>Option d'acceptation des contrôles passifs d'hôte"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:660
 #, no-wrap
 msgid "accept_passive_host_checks=&lt;0/1&gt;"
-msgstr ""
+msgstr "accept_passive_host_checks=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:666
 #, no-wrap
 msgid "accept_passive_host_checks=1"
-msgstr ""
+msgstr "accept_passive_host_checks=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:672
 msgid "This option determines whether or not Nagios will accept <link linkend=\"thebasics-passivechecks\">passive host checks</link> when it initially (re)starts. If this option is disabled, Nagios will not accept any passive host checks."
-msgstr ""
+msgstr "Cette option détermine si Nagios® accepte les <link linkend=\"thebasics-passivechecks\">contrôles passifs d'hôte</link> quand il (re)démarrera. Si cette option est désactivée, Nagios® n'acceptera aucun contrôle passif d'hôte. Note : si vous avez activé la mémorisation d'état, Nagios® ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est stockée dans le fichier de mémorisation d'état), à moins que vous ne désactiviez l'option use_retained_program_state. Si vous voulez changer cette variable alors que la mémorisation d'état est activée (ainsi que l'option use_retained_program_state), vous devrez passer par la commande externe appropriée, ou la changer à travers l'interface web. Les valeurs possibles de cette variable sont :"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:691
 msgid "0 = Don't accept passive host checks"
-msgstr ""
+msgstr "0 = Don't accept passive host checks"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:695
 msgid "1 = Accept passive host checks (default)"
-msgstr ""
+msgstr "1 = Accept passive host checks (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:702
 msgid "<anchor id=\"configuringnagios-configmain-enable_event_handlers\" xreflabel=\"Event Handler Option\" />Event Handler Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-enable_event_handlers\" xreflabel=\"Event Handler Option\" />Option de gestion d'événement"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:712
 #, no-wrap
 msgid "enable_event_handlers=&lt;0/1&gt;"
-msgstr ""
+msgstr "enable_event_handlers=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:718
 #, no-wrap
 msgid "enable_event_handlers=1"
-msgstr ""
+msgstr "enable_event_handlers=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:724
 msgid "This option determines whether or not Nagios will run <link linkend=\"advancedtopics-eventhandlers\">event handlers</link> when it initially (re)starts. If this option is disabled, Nagios will not run any host or service event handlers."
-msgstr ""
+msgstr "Cette option détermine si Nagios® activera les <link linkend=\"advancedtopics-eventhandlers\">gestionnaires d'événement</link> quand il (re)démarrera. Si cette option est désactivée, Nagios® ne lancera aucun gestionnaire d'événement lié aux hôtes ou aux services. Note : si vous avez activé la mémorisation d'état, Nagios® ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est stockée dans le fichier de mémorisation d'état), à moins que vous ne désactiviez l'option use_retained_program_state. Si vous voulez changer cette variable alors que la mémorisation d'état est activée (ainsi que l'option use_retained_program_state), vous devrez passer par la commande externe appropriée ou la changer à travers l'interface web. Les valeurs possibles de cette variable sont :"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:743
 msgid "0 = Disable event handlers"
-msgstr ""
+msgstr "0 = Disable event handlers"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:747
 msgid "1 = Enable event handlers (default)"
-msgstr ""
+msgstr "1 = Enable event handlers (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:753
 msgid "<anchor id=\"configuringnagios-configmain-log_rotation_method\" xreflabel=\"Log Rotation Method\" />Log Rotation Method"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-log_rotation_method\" xreflabel=\"Log Rotation Method\" />Méthode de rotation du journal"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:763
 #, no-wrap
 msgid "log_rotation_method=&lt;n/h/d/w/m&gt;"
-msgstr ""
+msgstr "log_rotation_method=&lt;n/h/d/w/m&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:769
 #, no-wrap
 msgid "log_rotation_method=d"
-msgstr ""
+msgstr "log_rotation_method=d"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:775
 msgid "This is the rotation method that you would like Nagios to use for your log file. Values are as follows:"
-msgstr ""
+msgstr "C'est la méthode de rotation que vous voulez que Nagios® utilise pour le fichier journal. Les valeurs possibles de cette variable sont :"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:780
 msgid "n = None (don't rotate the log - this is the default)"
-msgstr ""
+msgstr "n = Aucune [None] (ne pas effectuer de rotation sur le journal - par défaut)"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:784
 msgid "h = Hourly (rotate the log at the top of each hour)"
-msgstr ""
+msgstr "h = Toutes les heures [Hourly] (effectuer une rotation du journal au début de chaque heure)"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:788
 msgid "d = Daily (rotate the log at midnight each day)"
-msgstr ""
+msgstr "d = Tous les jours [Daily] (effectuer une rotation du journal à minuit chaque jour)"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:792
 msgid "w = Weekly (rotate the log at midnight on Saturday)"
-msgstr ""
+msgstr "w = Toutes les semaines [Weekly] (effectuer une rotation du journal à minuit le samedi)"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:796
 msgid "m = Monthly (rotate the log at midnight on the last day of the month)"
-msgstr ""
+msgstr "m = Tous les mois [Monthly] (effectuer une rotation du journal à minuit le dernier jour du mois)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:803
 msgid "<anchor id=\"configuringnagios-configmain-log_archive_path\" xreflabel=\"Log Archive Path\" />Log Archive Path"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-log_archive_path\" xreflabel=\"Log Archive Path\" />Chemin d'accès aux archives du journal"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:813
 #, no-wrap
 msgid "log_archive_path=&lt;path&gt;"
-msgstr ""
+msgstr "log_archive_path=&lt;path&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:819
 #, no-wrap
 msgid "log_archive_path=/usr/local/nagios/var/archives/"
-msgstr ""
+msgstr "log_archive_path=/usr/local/nagios/var/archives/"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:825
 msgid "This is the directory where Nagios should place log files that have been rotated. This option is ignored if you choose to not use the <xref linkend=\"configuringnagios-configmain-log_rotation_method\" /> functionality."
-msgstr ""
+msgstr "C'est le répertoire où Nagios® doit enregistrer les fichiers journaux ayant fait l'objet d'une rotation. Cette option est ignorée si vous n'avez pas activé la <xref linkend=\"configuringnagios-configmain-log_rotation_method\" />."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:831
 msgid "<anchor id=\"configuringnagios-configmain-check_external_commands\" xreflabel=\"External Command Check Option\"/>External Command Check Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-check_external_commands\" xreflabel=\"External Command Check Option\"/>Option de contrôle des commandes externes"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:841
 #, no-wrap
 msgid "check_external_commands=&lt;0/1&gt;"
-msgstr ""
+msgstr "check_external_commands=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:847
 #, no-wrap
 msgid "check_external_commands=1"
-msgstr ""
+msgstr "check_external_commands=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:853
 msgid "This option determines whether or not Nagios will check the <xref linkend=\"configuringnagios-configmain-command_file\" /> for commands that should be executed. This option must be enabled if you plan on using the <link linkend=\"thebasics-cgis\">command CGI</link> to issue commands via the web interface. More information on external commands can be found <link linkend=\"advancedtopics-extcommands\">here</link>."
-msgstr ""
+msgstr "Cette option détermine si Nagios® va vérifier le contenu du <xref linkend=\"configuringnagios-configmain-command_file\" /> à la recherche de commandes à exécuter. Cette option doit être activée si vous avez prévu d'utiliser le <link linkend=\"thebasics-cgis\">CGI de commande</link> pour envoyer des commandes via l'interface web. Des programmes tiers peuvent également envoyer des commandes à Nagios® en écrivant dans le fichier de commande, sous réserve que les droits nécessaires à l'accès au fichier ait été donnés, comme le souligne cette FAQ. Vous trouverez plus d'informations sur les commandes externes <link linkend=\"advancedtopics-extcommands\">ici</link>."
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:862
 msgid "0 = Don't check external commands"
-msgstr ""
+msgstr "0 = Don't check external commands"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:866
 msgid "1 = Check external commands (default)"
-msgstr ""
+msgstr "1 = Check external commands (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:872
 msgid "<anchor id=\"configuringnagios-configmain-command_check_interval\" xreflabel=\"External Command Check Interval\"/>External Command Check Interval"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-command_check_interval\" xreflabel=\"External Command Check Interval\"/>Intervalle entre les contrôles des commandes externes"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:882
 #, no-wrap
 msgid "command_check_interval=&lt;xxx&gt;[s]"
-msgstr ""
+msgstr "command_check_interval=&lt;xxx&gt;[s]"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:888
 #, no-wrap
 msgid "command_check_interval=1"
-msgstr ""
+msgstr "command_check_interval=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:894
 msgid "If you specify a number with an \"s\" appended to it (i.e. 30s), this is the number of seconds to wait between external command checks.  If you leave off the \"s\", this is the number of <quote>time units</quote> to wait between external command checks. Unless you've changed the <xref linkend=\"configuringnagios-configmain-interval_length\" /> value (as defined below) from the default value of 60, this number will mean minutes."
-msgstr ""
+msgstr "Si vous spécifiez un nombre suivi d'un \"s\" (par exemple 30s), c'est le nombre de secondes qui séparera deux contrôles de commandes externes. Si vous ne mettez pas de \"s\", c''est le nombre d'<quote>unités de temps</quote> à laisser entre deux contrôles de commandes externes. Si vous n'avez pas modifié la valeur de la<xref linkend=\"configuringnagios-configmain-interval_length\" />  qui est par défaut de 60, ce nombre représente des minutes."
 
 # type: Content of: <chapter><section><section><note><para>
 #: ConfiguringNagios/configmain.xml:902
 msgid "By setting this value to <emphasis role=\"bold\">-1</emphasis>, Nagios will check for external commands as often as possible. Each time Nagios checks for external commands it will read and process all commands present in the <xref linkend=\"configuringnagios-configmain-command_file\" /> before continuing on with its other duties. More information on external commands can be found <link linkend=\"advancedtopics-extcommands\">here</link>."
-msgstr ""
+msgstr "Note : en mettant cette valeur à <emphasis role=\"bold\">-1</emphasis>,  Nagios® contrôlera les commandes externes aussi souvent que possible. Chaque fois que Nagios® contrôle les commandes externes, il lit et traite toutes les commandes présentes dans le <xref linkend=\"configuringnagios-configmain-command_file\" /> avant de passer à d'autres tâches. Vous trouverez plus d'informations sur les commandes externes <link linkend=\"advancedtopics-extcommands\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:913
