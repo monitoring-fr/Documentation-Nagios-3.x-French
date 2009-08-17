@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-08-17 17:40+0100\n"
-"Last-Translator: Fronteau Romuald <rfronteau@nagios-fr.org>\n"
+"PO-Revision-Date: 2009-08-17 21:30+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1100,7 +1100,7 @@ msgstr "C'est une option avancée."
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:972
 msgid "This option determines how many buffer slots Nagios will reserve for caching external commands that have been read from the external command file by a worker thread, but have not yet been processed by the main thread of the Nagios deamon. Each slot can hold one external command, so this option essentially determines how many commands can be buffered. For installations where you process a large number of passive checks (e.g. <link linkend=\"advancedtopics-distributed\">distributed setups</link>), you may need to increase this number. You should consider using MRTG to graph Nagios' usage of external command buffers.  You can read more on how to configure graphing <link linkend=\"securityandperformancetuning-mrtggraphs\">here</link>."
-msgstr ""
+msgstr "Cette option détermine le nombre de slots tampon que Nagios va réserver pour cacher les commandes externes qui ont été lues depuis le fichier de commandes externes par un processus enfant (worker thread) mais qui n'ont pas encore été traité par le processus principal (main thread) du démon Nagios. Chaque slot peut gérer une commande externe, ce qui fait que cette option détermine le nombre de commandes externes qui peuvent être mis en tampon. Pour des installations où vous avez besoin de traiter un nombre important de contrôles passifs (comme dans les <link linkend=\"advancedtopics-distributed\">environnements distribués</link>), vous aurez peut-être besoin d'augmenter ce nombre. Vous devriez considérer l'utilisation de MRTG pour grapher l'usage que fait Nagios des tampons de commande externe. Vous pouvez en apprendre davantage sur la façon de configurer les graphes <link linkend=\"securityandperformancetuning-mrtggraphs\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:986
@@ -1288,75 +1288,75 @@ msgstr "1 = Use retained scheduling info (default)"
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1209
 msgid "<anchor id=\"configuringnagios-configmain-retained_service_attribute_mask\" /><anchor id=\"configuringnagios-configmain-retained_host_attribute_mask\" /> Retained Host and Service Attribute Masks"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-retained_service_attribute_mask\" /><anchor id=\"configuringnagios-configmain-retained_host_attribute_mask\" /> Masques d'attribut conservé pour hôte et service"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1219
 #, no-wrap
 msgid "retained_host_attribute_mask=&lt;number&gt;retained_service_attribute_mask=&lt;number&gt;"
-msgstr ""
+msgstr "retained_host_attribute_mask=&lt;number&gt;retained_service_attribute_mask=&lt;number&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1226
 #, no-wrap
 msgid "retained_host_attribute_mask=0retained_service_attribute_mask=0"
-msgstr ""
+msgstr "retained_host_attribute_mask=0retained_service_attribute_mask=0"
 
 # type: Content of: <chapter><section><section><warning><para>
 #: ConfiguringNagios/configmain.xml:1234
 #: ConfiguringNagios/configmain.xml:1271
 #: ConfiguringNagios/configmain.xml:1311
 msgid "This is an advanced feature. You'll need to read the Nagios source code to use this option effectively."
-msgstr ""
+msgstr "C'est une fonction avancée. Vous aurez besoin de lire le code source de Nagios pour utiliser cette option de façon efficace."
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:1238
 msgid "These options determine which host or service attributes are NOT retained across program restarts. The values for these options are a bitwise AND of values specified by the <quote>MODATTR_</quote> definitions in the <filename>include/common.h</filename> source code file. By default, all host and service attributes are retained."
-msgstr ""
+msgstr "Ces options détermine quels sont les attributs d'hôtes et services qui ne seront PAS conservés entre les redémarrages du programme. Les valeurs pour ces options sont au niveau du bit (bitwise) ET les valeurs spécifiées par les définitions de <quote>MODATTR_</quote> dans le fichier du code source <filename>include/common.h</filename>. Par défaut, tous les attributs d'hôtes et services sont conservés."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1246
 msgid "<anchor id=\"configuringnagios-configmain-retained_process_service_attribute_mask\" /><anchor id=\"configuringnagios-configmain-retained_process_host_attribute_mask\" />Retained Process Attribute Masks"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-retained_process_service_attribute_mask\" /><anchor id=\"configuringnagios-configmain-retained_process_host_attribute_mask\" />Masques d'attribut conservé du processus"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1256
 #, no-wrap
 msgid "retained_process_host_attribute_mask=&lt;number&gt;retained_process_service_attribute_mask=&lt;number&gt;"
-msgstr ""
+msgstr "retained_process_host_attribute_mask=&lt;number&gt;retained_process_service_attribute_mask=&lt;number&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1263
 #, no-wrap
 msgid "retained_process_host_attribute_mask=0retained_process_service_attribute_mask=0"
-msgstr ""
+msgstr "retained_process_host_attribute_mask=0retained_process_service_attribute_mask=0"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:1275
 msgid "These options determine which process attributes are NOT retained across program restarts. There are two masks because there are often separate host and service process attributes that can be changed. For example, host checks can be disabled at the program level, while service checks are still enabled. The values for these options are a bitwise AND of values specified by the <quote>MODATTR_</quote> definitions in the <filename>include/common.h</filename> source code file. By default, all process attributes are retained."
-msgstr ""
+msgstr "Ces options déterminent quels sont les attributs de processus qui ne seront PAS conservés entre les redémarrages du programme. Il y a deux masques parce qu'il y a souvent des attributs séparés qui peuvent être changés pour les hôtes et services. Par exemple, les contrôles d'hôtes peuvent être désactivés au niveau du programme, alors que les services restent eux activés. Les valeurs pour ces options sont au niveau du bit (bitwise) ET les valeurs spécifiées par les définitions de <quote>MODATTR_</quote> dans le fichier du code source <filename>include/common.h</filename>. Par défaut, tous les attributs de processus sont conservés."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1286
 msgid "<anchor id=\"configuringnagios-configmain-retained_contact_service_attribute_mask\" /><anchor id=\"configuringnagios-configmain-retained_contact_host_attribute_mask\" />Retained Contact Attribute Masks"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-retained_contact_service_attribute_mask\" /><anchor id=\"configuringnagios-configmain-retained_contact_host_attribute_mask\" />Masques d'attribut conservé de contact"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1296
 #, no-wrap
 msgid "retained_contact_host_attribute_mask=&lt;number&gt;retained_contact_service_attribute_mask=&lt;number&gt;"
-msgstr ""
+msgstr "retained_contact_host_attribute_mask=&lt;number&gt;retained_contact_service_attribute_mask=&lt;number&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1303
 #, no-wrap
 msgid "retained_contact_host_attribute_mask=0retained_contact_service_attribute_mask=0"
-msgstr ""
+msgstr "retained_contact_host_attribute_mask=0retained_contact_service_attribute_mask=0"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:1315
 msgid "These options determine which contact attributes are NOT retained across program restarts. There are two masks because there are often separate host and service contact attributes that can be changed. The values for these options are a bitwise AND of values specified by the <quote>MODATTR_</quote> definitions in the <filename>include/common.h</filename> source code file. By default, all process attributes are retained."
-msgstr ""
+msgstr "Ces options déterminent quels sont les attributs de contact qui ne seront PAS conservés entre les redémarrages du programme.  Il y a deux masques parce qu'il y a souvent des attributs séparés qui peuvent être changés pour les contacts d'hôtes et de services. Les valeurs pour ces options sont au niveau du bit (bitwise) ET les valeurs spécifiées par les définitions de <quote>MODATTR_</quote> dans le fichier du code source <filename>include/common.h</filename>. Par défaut, tous les attributs de contact sont conservés."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1325
@@ -1807,24 +1807,24 @@ msgstr "Cette option détermine le nombre maximal de contrôles de service pouva
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1926
 msgid "<anchor id=\"configuringnagios-configmain-check_result_reaper_frequency\" xreflabel=\"Check Result Reaper Frequency\"/>Check Result Reaper Frequency"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-check_result_reaper_frequency\" xreflabel=\"Check Result Reaper Frequency\"/>Fréquence de consolidation des résultats de contrôle"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1936
 #, no-wrap
 msgid "check_result_reaper_frequency=&lt;frequency_in_seconds&gt;"
-msgstr ""
+msgstr "check_result_reaper_frequency=&lt;fréquence_en_secondes&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1942
 #, no-wrap
 msgid "check_result_reaper_frequency=5"
-msgstr ""
+msgstr "check_result_reaper_frequency=5"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:1948
 msgid "This option allows you to control the frequency in seconds of check result \"reaper\" events. \"Reaper\" events process the results from host and service checks that have finished executing. These events consitute the core of the monitoring logic in Nagios."
-msgstr ""
+msgstr "Cette option vous permet de contrôler la fréquence en secondes des événements de <quote>consolidation</quote>. Les événements de <quote>consolidation</quote> traitent les résultats des contrôles d'hôtes et de services dont l'exécution est terminée. Ces événements consitue le cœur de la logique de supervision de Nagios."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1955
