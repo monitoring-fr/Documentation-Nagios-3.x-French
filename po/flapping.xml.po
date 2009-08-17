@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-01-06 15:00+0100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2009-08-17 19:28+0100\n"
+"Last-Translator: Fronteau Romuald <rfronteau@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,25 +22,43 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13
+#: ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12
+#: ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13
+#: TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12
+#: TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14
+#: TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15
+#: TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13
+#: TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12
+#: AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13
+#: AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12
+#: AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72
+#: AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14
+#: AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12
+#: AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12
+#: AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13
+#: AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12
+#: AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12
+#: AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12
+#: AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -51,470 +69,338 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13
+#: Development/epnplugins.xml:14
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 # type: Content of: <chapter><section><title>
-#: ConfiguringNagios/configmain.xml:68 ConfiguringNagios/configmain.xml:102
-#: TheBasics/statetypes.xml:170 AdvancedTopics/freshness.xml:95
+#: ConfiguringNagios/configmain.xml:68
+#: ConfiguringNagios/configmain.xml:102
+#: TheBasics/statetypes.xml:170
+#: AdvancedTopics/freshness.xml:95
 #: AdvancedTopics/flapping.xml:70
 msgid "Example"
-msgstr ""
+msgstr "Exemple"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
-#: ConfiguringNagios/customobjectvars.xml:101 AdvancedTopics/flapping.xml:211
+#: ConfiguringNagios/customobjectvars.xml:101
+#: AdvancedTopics/flapping.xml:211
 #: AdvancedTopics/objectinheritance.xml:383
 msgid "Object Type"
-msgstr ""
+msgstr "Type d'objet"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/customobjectvars.xml:117
-#: ConfiguringNagios/customobjectvars.xml:131 AdvancedTopics/flapping.xml:220
+#: ConfiguringNagios/customobjectvars.xml:131
+#: AdvancedTopics/flapping.xml:220
 msgid "Host"
-msgstr ""
+msgstr "Hôte"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/customobjectvars.xml:145
-#: ConfiguringNagios/customobjectvars.xml:159 AdvancedTopics/flapping.xml:236
+#: ConfiguringNagios/customobjectvars.xml:159
+#: AdvancedTopics/flapping.xml:236
 msgid "Service"
-msgstr ""
+msgstr "Service"
 
 # type: Content of: <chapter><title>
 #: AdvancedTopics/flapping.xml:11
 msgid "Detection and Handling of State Flapping"
-msgstr ""
+msgstr "Détection et gestion de l'oscillation d'état"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:16
-msgid ""
-"Nagios supports optional detection of hosts and services that are "
-"<quote>flapping</quote>. Flapping occurs when a service or host changes "
-"state too frequently, resulting in a storm of problem and recovery "
-"notifications.  Flapping can be indicative of configuration problems (i.e. "
-"thresholds set too low), troublesome services, or real network problems."
-msgstr ""
+msgid "Nagios supports optional detection of hosts and services that are <quote>flapping</quote>. Flapping occurs when a service or host changes state too frequently, resulting in a storm of problem and recovery notifications.  Flapping can be indicative of configuration problems (i.e. thresholds set too low), troublesome services, or real network problems."
+msgstr "Nagios® supporte la détection optionnelle des hôtes et des services qui \"oscillent\" [NdT: ou bagotent]. L'oscillation intervient quand un service ou un hôte change d'état trop fréquemment, provoquant une tempête de notifications de problèmes et de rétablissement. L'oscillation peut être l'indice de problèmes de configuration (i.e. des seuils positionnés trop bas) ou de vrais problèmes sur le réseau."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/flapping.xml:24
 msgid "How Flap Detection Works"
-msgstr ""
+msgstr "Comment la détection d'oscillation fonctionne-t-elle ?"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:26
-msgid ""
-"Before I get into this, let me say that flapping detection has been a little "
-"difficult to implement. How exactly does one determine what \"too frequently"
-"\" means in regards to state changes for a particular host or service? When "
-"I first started thinking about implementing flap detection I tried to find "
-"some information on how flapping could/should be detected. I couldn't find "
-"any information about what others were using (where they using any?), so I "
-"decided to settle with what seemed to me to be a reasonable solution..."
-msgstr ""
+msgid "Before I get into this, let me say that flapping detection has been a little difficult to implement. How exactly does one determine what \"too frequently\" means in regards to state changes for a particular host or service? When I first started thinking about implementing flap detection I tried to find some information on how flapping could/should be detected. I couldn't find any information about what others were using (where they using any?), so I decided to settle with what seemed to me to be a reasonable solution..."
+msgstr "Avant d'aller plus loin, permettez-moi de signaler qu'implémenter la détection de l'oscillation a été assez difficile. Comment déterminer ce que \"trop fréquemment\" veut dire concernant les changements d'état de tel hôte ou service ? La première fois que je me suis penché sur la détection de l'oscillation, j'ai cherché des informations sur la façon dont on peut ou doit procéder. Voyant que je n'en trouvais pas, j'ai décidé de définir ce qui pourrait être une solution raisonnable. Les méthodes utilisées par Nagios® pour détecter l'oscillation de l'état des hôtes et des services sont décrites ci-dessous…"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:35
-msgid ""
-"Whenever Nagios checks the status of a host or service, it will check to see "
-"if it has started or stopped flapping. It does this by."
-msgstr ""
+msgid "Whenever Nagios checks the status of a host or service, it will check to see if it has started or stopped flapping. It does this by."
+msgstr "Chaque fois d'un contrôle de service résulte dans un état hard ou un état de rétablissement soft, Nagios® contrôle si le service a commencé ou arrêté d'osciller."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:41
 msgid "Storing the results of the last 21 checks of the host or service"
-msgstr ""
+msgstr " Il le fait en stockant les 21 derniers résultats de contrôle de service dans un tableau. Les résultats les plus récents écrasent les anciens dans le tableau."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:46
-msgid ""
-"Analyzing the historical check results and determine where state changes/"
-"transitions occur"
-msgstr ""
+msgid "Analyzing the historical check results and determine where state changes/transitions occur"
+msgstr "Le contenu du tableau d'historique des états est parcouru (depuis le plus ancien résultat jusqu'au plus récent) pour déterminer le pourcentage total de changements d'état survenus durant les 21 derniers contrôles du service."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:51
-msgid ""
-"Using the state transitions to determine a percent state change value (a "
-"measure of change) for the host or service"
-msgstr ""
+msgid "Using the state transitions to determine a percent state change value (a measure of change) for the host or service"
+msgstr "En utilisant des pourcentages d'états de changements pour déterminer des changements états transitoires pour les hôtes et services "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:56
-msgid ""
-"Comparing the percent state change value against low and high flapping "
-"thresholds"
-msgstr ""
+msgid "Comparing the percent state change value against low and high flapping thresholds"
+msgstr "En comprant la valeur du pourcentage aux seuils d'oscillations inférieurs et supérieurs"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:61
-msgid ""
-"A host or service is determined to have started flapping when its percent "
-"state change first exceeds a high flapping threshold."
-msgstr ""
+msgid "A host or service is determined to have started flapping when its percent state change first exceeds a high flapping threshold."
+msgstr "Un hôte ou un service est déclaré comme oscillant lorsque son pourcentage dépasse la valeur du seuil supérieur d'oscillation."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:64
-msgid ""
-"A host or service is determined to have stopped flapping when its percent "
-"state goes below a low flapping threshold (assuming that is was previously "
-"flapping)."
-msgstr ""
+msgid "A host or service is determined to have stopped flapping when its percent state goes below a low flapping threshold (assuming that is was previously flapping)."
+msgstr "Un hôte ou un service est déclaré comme normal lorsque son pourcentage est descendu en dessous de la valeur du seuil inférieur d'oscillation."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:72
 msgid "Let's describe in more detail how flap detection works with services..."
-msgstr ""
+msgstr "Laissez vous décrire plus en détail le fonctionnement de la détection d'oscillation avec les services..."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:75
-msgid ""
-"The image below shows a chronological history of service states from the "
-"most recent 21 service checks. OK states are shown in green, WARNING states "
-"in yellow, CRITICAL states in red, and UNKNOWN states in orange."
-msgstr ""
+msgid "The image below shows a chronological history of service states from the most recent 21 service checks. OK states are shown in green, WARNING states in yellow, CRITICAL states in red, and UNKNOWN states in orange."
+msgstr "L'image suivante montre un tableau chronologique d'états de service. Les états OK sont en vert, les WARNING en jaune, les CRITICAL en rouge, et les UNKNOWN en orange. Des flèches bleues marquent les moments où des changements d'états sont survenus."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:86
-msgid ""
-"The historical service check results are examined to determine where state "
-"changes/transitions occur. State changes occur when an archived state is "
-"different from the archived state that immediately precedes it "
-"chronologically. Since we keep the results of the last 21 service checks in "
-"the array, there is a possibility of having at most 20 state changes.  In "
-"this example there are 7 state changes, indicated by blue arrows in the "
-"image above."
-msgstr ""
+msgid "The historical service check results are examined to determine where state changes/transitions occur. State changes occur when an archived state is different from the archived state that immediately precedes it chronologically. Since we keep the results of the last 21 service checks in the array, there is a possibility of having at most 20 state changes.  In this example there are 7 state changes, indicated by blue arrows in the image above."
+msgstr "Le contenu du tableau d'historique des états est parcouru (depuis le plus ancien résultat jusqu'au plus récent) pour déterminer le pourcentage total de changements d'état survenus durant les 21 derniers contrôles du service. Un changement d'état survient quand un état archivé est différent de l'état archivé qui le précède immédiatement dans le tableau. Comme nous conservons les résultats des 21 derniers contrôles de service dans le tableau, il y a 20 changements d'état possibles."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:94
-msgid ""
-"The flap detection logic uses the state changes to determine an overall "
-"percent state change for the service. This is a measure of volatility/change "
-"for the service. Services that never change state will have a 0% state "
-"change value, while services that change state each time they're checked "
-"will have 100% state change. Most services will have a percent state change "
-"somewhere in between."
-msgstr ""
+msgid "The flap detection logic uses the state changes to determine an overall percent state change for the service. This is a measure of volatility/change for the service. Services that never change state will have a 0% state change value, while services that change state each time they're checked will have 100% state change. Most services will have a percent state change somewhere in between."
+msgstr "La détection d'oscillation utilise une logique qui est basé sur un pourcentage de changement d'état pour le service. C'est une mesure de variation du service. Les services qui ne changent jamais d'état auront 0% de changement, quant aux services qui n'arrêteront pas de changer d'état, il approcheront du 100%. Bons nombres de services auront un pourcentage se situant entre ces 2 valeurs. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:101
-msgid ""
-"When calculating the percent state change for the service, the flap "
-"detection algorithm will give more weight to new state changes compare to "
-"older ones. Specfically, the flap detection routines are currently designed "
-"to make the newest possible state change carry 50% more weight than the "
-"oldest possible state change. The image below shows how recent state changes "
-"are given more weight than older state changes when calculating the overall "
-"or total percent state change for a particular service."
-msgstr ""
+msgid "When calculating the percent state change for the service, the flap detection algorithm will give more weight to new state changes compare to older ones. Specfically, the flap detection routines are currently designed to make the newest possible state change carry 50% more weight than the oldest possible state change. The image below shows how recent state changes are given more weight than older state changes when calculating the overall or total percent state change for a particular service."
+msgstr "Il paraît évident que les changements d'état les plus récent ont plus de poids que les anciens, si bien qu'il nous faut recalculer le pourcentage total de changements d'état du service selon une espèce de courbe… Pour simplifier, j'ai décidé d'utiliser un rapport linéaire entre le temps et la pondération pour le calcul de ce pourcentage. Les fonctions de détection de l'oscillation sont conçues actuellement pour que le changement d'état le plus récent possible pèse 50% plus lourd que le plus ancien. L'image suivante montre combien le poids des changements d'état récents est supérieur à celui des anciens lors du calcul du pourcentage total de changements d'état d'un service particulier. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:116
-msgid ""
-"Using the images above, lets do a calculation of percent state change for "
-"the service. You will notice that there are a total of 7 state changes (at "
-"t3, t4, t5, t9, t12, t16, and t19). Without any weighting of the state "
-"changes over time, this would give us a total state change of 35%:"
-msgstr ""
+msgid "Using the images above, lets do a calculation of percent state change for the service. You will notice that there are a total of 7 state changes (at t3, t4, t5, t9, t12, t16, and t19). Without any weighting of the state changes over time, this would give us a total state change of 35%:"
+msgstr "Prenons un rapide exemple de détection de l'oscillation. L'image ci-dessus montre le tableau d'historique des résultats de contrôle d'un service particulier. Les résultats les plus anciens sont à gauche et les plus récents à droite. Nous voyons dans cet exemple qu'il y a eu au total 7 changements d'état (en t3, t4, t5, t9, t12, t16, et t19). Sans pondération des changements d'état en fonction du temps, cela nous donnerait un total de 35% de changements d'état:"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:122
 msgid "(7 observed state changes / possible 20 state changes) * 100 = 35 %"
-msgstr ""
+msgstr "(7 changements d'état / un maximum possible de 20) * 100 = 35%"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:125
-msgid ""
-"Since the flap detection logic will give newer state changes a higher rate "
-"than older state changes, the actual calculated percent state change will be "
-"slightly less than 35% in this example. Let's say that the weighted percent "
-"of state change turned out to be 31%..."
-msgstr ""
+msgid "Since the flap detection logic will give newer state changes a higher rate than older state changes, the actual calculated percent state change will be slightly less than 35% in this example. Let's say that the weighted percent of state change turned out to be 31%..."
+msgstr " Quand on applique la pondération en fonction du moment d'apparition, le pourcentage est de moins de 35%. C'est logique dans la mesure où la plupart des changements d'états sont plutôt anciens. Disons que le pourcentage pondéré est finalement de 31%…"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:130
-msgid ""
-"The calculated percent state change for the service (31%) will then be "
-"compared against flapping thresholds to see what should happen:"
-msgstr ""
+msgid "The calculated percent state change for the service (31%) will then be compared against flapping thresholds to see what should happen:"
+msgstr "Ainsi donc, que signifient 31% de changements d'états ?"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:135
-msgid ""
-"If the service was not previously flapping and 31% is equal to or greater "
-"than the high flap threshold, Nagios considers the service to have just "
-"started flapping."
-msgstr ""
+msgid "If the service was not previously flapping and 31% is equal to or greater than the high flap threshold, Nagios considers the service to have just started flapping."
+msgstr " Hé bien, si le service n'oscillait pas auparavant et que 31% est supérieur ou égal à la valeur spécifiée par le paramètre high_service_flap_threshold  de la définition du service, Nagios® considère que le service vient de commencer à osciller."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:141
-msgid ""
-"If the service was previously flapping and 31% is less than the low flap "
-"threshold, Nagios considers the service to have just stopped flapping."
-msgstr ""
+msgid "If the service was previously flapping and 31% is less than the low flap threshold, Nagios considers the service to have just stopped flapping."
+msgstr "Si le service oscillait  auparavant et que 31% est inférieur ou égal à la valeur spécifiée par le paramètre low_service_flap_threshold  de la définition du service, Nagios® considère que le service vient de s'arrêter d'osciller."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:147
-msgid ""
-"If neither of those two conditions are met, the flap detection logic won't "
-"do anything else with the service, since it is either not currently flapping "
-"or it is still flapping."
-msgstr ""
+msgid "If neither of those two conditions are met, the flap detection logic won't do anything else with the service, since it is either not currently flapping or it is still flapping."
+msgstr "Si aucune de ces deux conditions n'est remplie, Nagios® ne fait rien de plus concernant le service, car soit il n'oscille pas, soit il oscille toujours…"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/flapping.xml:153
 msgid "Flap Detection for Services"
-msgstr ""
+msgstr "Détection de l'oscillation pour les services"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:155
-msgid ""
-"Nagios checks to see if a service is flapping whenever the service is "
-"checked (either actively or passively)."
-msgstr ""
+msgid "Nagios checks to see if a service is flapping whenever the service is checked (either actively or passively)."
+msgstr "Nagios regarde si le service est en état d'oscillation avant d'exécuter un côntrôle (actif comme passif)."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:158
-msgid ""
-"The flap detection logic for services works as described in the example "
-"above."
-msgstr ""
+msgid "The flap detection logic for services works as described in the example above."
+msgstr "Le principe pour la détection d'oscillation des services fonctionnent de la manière qu'expliqué ci-dessus."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/flapping.xml:163
 msgid "Flap Detection for Hosts"
-msgstr ""
+msgstr "Détection de l'oscillation d'hôte"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:165
-msgid ""
-"Host flap detection works in a similiar manner to service flap detection, "
-"with one important difference: Nagios will attempt to check to see if a host "
-"is flapping whenever:"
-msgstr ""
+msgid "Host flap detection works in a similiar manner to service flap detection, with one important difference: Nagios will attempt to check to see if a host is flapping whenever:"
+msgstr "La détection de l'oscillation d'hôte fonctionne de manière similaire à la détection d'oscillation de service, avec une différence importante : Nagios® essaiera de déterminer: si un hôte oscille à chaque contrôle de l'état de l'hôte et à chaque contrôle d'un service associé à cet hôte. "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:171
 msgid "The host is checked (actively or passively)"
-msgstr ""
+msgstr "Si un hôte est contrôlé (activement ou passivement)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:175
-msgid ""
-"Sometimes when a service associated with that host is checked.  More "
-"specifically, when at least x amount of time has passed since the flap "
-"detection was last performed, where x is equal to the average check interval "
-"of all services associated with the host."
-msgstr ""
+msgid "Sometimes when a service associated with that host is checked.  More specifically, when at least x amount of time has passed since the flap detection was last performed, where x is equal to the average check interval of all services associated with the host."
+msgstr "L'oscillation d'un hôte sera contrôlée si son état a changé depuis la dernière détection d'oscillation de cet hôte ou si son état n'a pas changé, mais qu'au moins x temps s'est écoulé depuis la dernière détection d'oscillation. Ce temps xest égal à la moyenne des intervalles de contrôles de tous les services associés avec l'hôte."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:182
-msgid ""
-"Why is this done? With services we know that the minimum amount of time "
-"between consecutive flap detection routines is going to be equal to the "
-"service check interval. However, you might not be monitoring hosts on a "
-"regular basis, so there might not be a host check interval that can be used "
-"in the flap detection logic. Also, it makes sense that checking a service "
-"should count towards the detection of host flapping. Services are attributes "
-"of or things associated with host after all... At any rate, that's the best "
-"method I could come up with for determining how often flap detection could "
-"be performed on a host, so there you have it."
-msgstr ""
+msgid "Why is this done? With services we know that the minimum amount of time between consecutive flap detection routines is going to be equal to the service check interval. However, you might not be monitoring hosts on a regular basis, so there might not be a host check interval that can be used in the flap detection logic. Also, it makes sense that checking a service should count towards the detection of host flapping. Services are attributes of or things associated with host after all... At any rate, that's the best method I could come up with for determining how often flap detection could be performed on a host, so there you have it."
+msgstr "Pourquoi cela ? Hé bien, parce qu'avec les services, nous savons que l'intervalle minimal de temps entre deux détections d'oscillation consécutives sera égal à l'intervalle de contrôle du service. Avec les hôtes, nous n'avons pas d'intervalle de contrôle, du fait que les hôtes ne sont pas supervisés de manière régulière. Ils ne sont contrôlés que lorsque c'est nécessaire. C'est la meilleure méthode que j'ai pu imaginer pour déterminer la fréquence de la détection d'oscillation d'un hôte…"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/flapping.xml:194
 msgid "Flap Detection Thresholds"
-msgstr ""
+msgstr "Seuils de détection de l'oscillation"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:196
-msgid ""
-"Nagios uses several variables to determine the percent state change "
-"thresholds is uses for flap detection. For both hosts and services, there "
-"are global high and low thresholds and host- or service-specific thresholds "
-"that you can configure. Nagios will use the global thresholds for flap "
-"detection if you to not specify host- or service- specific thresholds."
-msgstr ""
+msgid "Nagios uses several variables to determine the percent state change thresholds is uses for flap detection. For both hosts and services, there are global high and low thresholds and host- or service-specific thresholds that you can configure. Nagios will use the global thresholds for flap detection if you to not specify host- or service- specific thresholds."
+msgstr "Nagios utilise plusieurs variables pour déterminer le pourcentage de changement d'état fixer aux seuils de la détection d'oscillation. Tant pour les hôtes que pour les services, il y a des seuils supérieurs et inférieurs globaux et spécifiques que vous pouvez configurer. Nagios utilisera les seuils globaux par défaut si vous n'en spécifiez aucun."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:203
-msgid ""
-"The table below shows the global and host- or service-specific variables "
-"that control the various thresholds used in flap detection."
-msgstr ""
+msgid "The table below shows the global and host- or service-specific variables that control the various thresholds used in flap detection."
+msgstr "La tableau ci-dessous montre les variables globales et spécifiques pour les hôtes et services afin de gérer les seuils de détection. "
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: AdvancedTopics/flapping.xml:213
 msgid "Global Variables"
-msgstr ""
+msgstr "Variables Globales"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: AdvancedTopics/flapping.xml:215
 msgid "Object-Specific Variables"
-msgstr ""
+msgstr "Variables spécifiques aux objets"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: AdvancedTopics/flapping.xml:222
-msgid ""
-"<link linkend=\"configuringnagios-configmain-low_host_flap_threshold"
-"\">low_host_flap_threshold</link> <link linkend=\"configuringnagios-"
-"configmain-high_host_flap_threshold\">high_host_flap_threshold</link>"
-msgstr ""
+msgid "<link linkend=\"configuringnagios-configmain-low_host_flap_threshold\">low_host_flap_threshold</link> <link linkend=\"configuringnagios-configmain-high_host_flap_threshold\">high_host_flap_threshold</link>"
+msgstr "<link linkend=\"configuringnagios-configmain-low_host_flap_threshold\">low_host_flap_threshold</link> <link linkend=\"configuringnagios-configmain-high_host_flap_threshold\">high_host_flap_threshold</link>"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: AdvancedTopics/flapping.xml:228
-msgid ""
-"<link linkend=\"configuringnagios-objectdefinitions-host"
-"\">low_flap_threshold</link> <link linkend=\"configuringnagios-"
-"objectdefinitions-host\">high_flap_threshold</link>"
-msgstr ""
+msgid "<link linkend=\"configuringnagios-objectdefinitions-host\">low_flap_threshold</link> <link linkend=\"configuringnagios-objectdefinitions-host\">high_flap_threshold</link>"
+msgstr "<link linkend=\"configuringnagios-objectdefinitions-host\">low_flap_threshold</link> <link linkend=\"configuringnagios-objectdefinitions-host\">high_flap_threshold</link>"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: AdvancedTopics/flapping.xml:238
-msgid ""
-"<link linkend=\"configuringnagios-configmain-low_service_flap_threshold"
-"\">low_service_flap_threshold</link> <link linkend=\"configuringnagios-"
-"configmain-high_service_flap_threshold\">high_service_flap_threshold</link>"
-msgstr ""
+msgid "<link linkend=\"configuringnagios-configmain-low_service_flap_threshold\">low_service_flap_threshold</link> <link linkend=\"configuringnagios-configmain-high_service_flap_threshold\">high_service_flap_threshold</link>"
+msgstr "<link linkend=\"configuringnagios-configmain-low_service_flap_threshold\">low_service_flap_threshold</link> <link linkend=\"configuringnagios-configmain-high_service_flap_threshold\">high_service_flap_threshold</link>"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: AdvancedTopics/flapping.xml:244
-msgid ""
-"<link linkend=\"configuringnagios-objectdefinitions-service"
-"\">low_flap_threshold</link> <link linkend=\"configuringnagios-"
-"objectdefinitions-service\">high_flap_threshold</link>"
-msgstr ""
+msgid "<link linkend=\"configuringnagios-objectdefinitions-service\">low_flap_threshold</link> <link linkend=\"configuringnagios-objectdefinitions-service\">high_flap_threshold</link>"
+msgstr "<link linkend=\"configuringnagios-objectdefinitions-service\">low_flap_threshold</link> <link linkend=\"configuringnagios-objectdefinitions-service\">high_flap_threshold</link>"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/flapping.xml:256
 msgid "States Used For Flap Detection"
-msgstr ""
+msgstr "Les états utilisés pour la détection de l'oscillation"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:258
-msgid ""
-"Normally Nagios will track the results of the last 21 checks of a host or "
-"service, regardless of the check result (host/service state), for use in the "
-"flap detection logic."
-msgstr ""
+msgid "Normally Nagios will track the results of the last 21 checks of a host or service, regardless of the check result (host/service state), for use in the flap detection logic."
+msgstr "Normalement Nagios scrutera les résultats des 21 derniers contrôles d'un hôte ou d'un service, sans tenir compte du résultat de contrôle (état hôte / service), pour l'utilisation dans la logique de détection de l'oscillation."
 
 # type: Content of: <chapter><section><tip><para>
 #: AdvancedTopics/flapping.xml:263
-msgid ""
-"You can exclude certain host or service states from use in flap detection "
-"logic by using the <varname>flap_detection_options</varname> directive in "
-"your host or service definitions. This directive allows you to specify what "
-"host or service states (i.e. \"UP, \"DOWN\", \"OK, \"CRITICAL\") you want to "
-"use for flap detection. If you don't use this directive, all host or service "
-"states are used in flap detection."
-msgstr ""
+msgid "You can exclude certain host or service states from use in flap detection logic by using the <varname>flap_detection_options</varname> directive in your host or service definitions. This directive allows you to specify what host or service states (i.e. \"UP, \"DOWN\", \"OK, \"CRITICAL\") you want to use for flap detection. If you don't use this directive, all host or service states are used in flap detection."
+msgstr "Nous pouvons exclure certains hôtes ou services à l'algorithme de de l'oscillation en utilisant la directive <varname>flap_detection_options</varname> dans la définition de l'hôte ou du service. Cette option vous permet de préciser pour quel états d'hôte ou service (i.e. \"UP, \"DOWN\", \"OK, \"CRITICAL\") vous voulez utilisez la détection d'oscillation. Si vous n'utilisez pas cette directive, la règle par défaut sera appliquée pour tous."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/flapping.xml:273
 msgid "Flap Handling"
-msgstr ""
+msgstr "Gestion de l'oscillation"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:275
 msgid "When a service or host is first detected as flapping, Nagios will:"
-msgstr ""
+msgstr "Quand un service ou un hôte commence à osciller, Nagios® fait:"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:280
 msgid "Log a message indicating that the service or host is flapping."
-msgstr ""
+msgstr "Il journalise un message indiquant que le service ou l'hôte oscille."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:285
-msgid ""
-"Add a non-persistent comment to the host or service indicating that it is "
-"flapping."
-msgstr ""
+msgid "Add a non-persistent comment to the host or service indicating that it is flapping."
+msgstr "il ajoute un commentaire non persistant à l'hôte ou au service indiquant qu'il oscille."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:290
-msgid ""
-"Send a \"flapping start\" notification for the host or service to "
-"appropriate contacts."
-msgstr ""
+msgid "Send a \"flapping start\" notification for the host or service to appropriate contacts."
+msgstr "Il envoie une notification de démarrage de l'état d'oscillation aux contacts."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:295
-msgid ""
-"Suppress other notifications for the service or host (this is one of the "
-"filters in the <link linkend=\"thebasics-notifications\">notification logic</"
-"link>)."
-msgstr ""
+msgid "Suppress other notifications for the service or host (this is one of the filters in the <link linkend=\"thebasics-notifications\">notification logic</link>)."
+msgstr "Il supprime les notifications pour le service ou l'hôte concerné (c'est l'un des filtre de <link linkend=\"thebasics-notifications\">l'algorithme de notification</link>)"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:301
 msgid "When a service or host stops flapping, Nagios will:"
-msgstr ""
+msgstr "Quand un service ou un hôte s'arrête d'osciller, Nagios® fait les chose suivantes:"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:305
 msgid "Log a message indicating that the service or host has stopped flapping."
-msgstr ""
+msgstr "Il journalise un message indiquant que le service ou l'hôte n'oscille plus."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:310
-msgid ""
-"Delete the comment that was originally added to the service or host when it "
-"started flapping."
-msgstr ""
+msgid "Delete the comment that was originally added to the service or host when it started flapping."
+msgstr "Il supprime le commentaire qui avait été ajouté au service ou à l'hôte lorsqu'il avait commencé à osciller"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:315
-msgid ""
-"Send a \"flapping stop\" notification for the host or service to appropriate "
-"contacts."
-msgstr ""
+msgid "Send a \"flapping stop\" notification for the host or service to appropriate contacts."
+msgstr "Il envoie une notification de \"retour à l'état normal\" de l'hôte ou du service aux contacts."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:320
-msgid ""
-"Remove the block on notifications for the service or host (notifications "
-"will still be bound to the normal <link linkend=\"thebasics-notifications"
-"\">notification logic</link>)."
-msgstr ""
+msgid "Remove the block on notifications for the service or host (notifications will still be bound to the normal <link linkend=\"thebasics-notifications\">notification logic</link>)."
+msgstr "Il lève le blocage des notifications sur le service ou l'hôte concerné (les notifications restant assujetties à <link linkend=\"thebasics-notifications\">l'algorithme de notification</link>)"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/flapping.xml:328
 msgid "Enabling Flap Detection"
-msgstr ""
+msgstr "Activation de la détection d'oscillation"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:330
-msgid ""
-"In order to enable the flap detection features in Nagios, you'll need to:"
-msgstr ""
+msgid "In order to enable the flap detection features in Nagios, you'll need to:"
+msgstr "Dans l'ordre, pour activer la détection d'oscillation dans Nagios, il faut faire:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:335
-msgid ""
-"Set <link linkend=\"configuringnagios-configmain-enable_flap_detection"
-"\">enable_flap_detection</link> directive is set to 1."
-msgstr ""
+msgid "Set <link linkend=\"configuringnagios-configmain-enable_flap_detection\">enable_flap_detection</link> directive is set to 1."
+msgstr "Passer la directive <link linkend=\"configuringnagios-configmain-enable_flap_detection\">enable_flap_detection</link> à 1"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/flapping.xml:341
-msgid ""
-"Set the <varname>flap_detection_enabled</varname> directive in your host and "
-"service definitions is set to 1."
-msgstr ""
+msgid "Set the <varname>flap_detection_enabled</varname> directive in your host and service definitions is set to 1."
+msgstr "Passer la directive <varname>flap_detection_enabled</varname> dans la définition de votre hôte ou service à 1"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:346
-msgid ""
-"If you want to disable flap detection on a global basis, set the <link "
-"linkend=\"configuringnagios-configmain-enable_flap_detection"
-"\">enable_flap_detection</link> directive to 0."
-msgstr ""
+msgid "If you want to disable flap detection on a global basis, set the <link linkend=\"configuringnagios-configmain-enable_flap_detection\">enable_flap_detection</link> directive to 0."
+msgstr "Si vous voulez désactiver de manière générale cette option, passez la directive <link linkend=\"configuringnagios-configmain-enable_flap_detection\">enable_flap_detection</link> à 0."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/flapping.xml:351
-msgid ""
-"If you would like to disable flap detection for just a few hosts or "
-"services, use the <varname>flap_detection_enabled</varname> directive in the "
-"host and/or service definitions to do so."
-msgstr ""
+msgid "If you would like to disable flap detection for just a few hosts or services, use the <varname>flap_detection_enabled</varname> directive in the host and/or service definitions to do so."
+msgstr "Si vou voulez désactiver cette option pour quelques hôtes ou services, utilisez la directive <varname>flap_detection_enabled</varname> dans la définition de vos hôtes et services pour faire ça."
+
