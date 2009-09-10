@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-08-17 21:30+0100\n"
-"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
+"PO-Revision-Date: 2009-09-10 16:42+0100\n"
+"Last-Translator: Fronteau Romuald <rfronteau@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1851,51 +1851,51 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1989
 msgid "<anchor id=\"configuringnagios-configmain-check_result_path\" xreflabel=\"Check Result Path\"/>Check Result Path"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-check_result_path\" xreflabel=\"Check Result Path\"/>Répertoire de stockage des résultats de contrôle"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1999
 #, no-wrap
 msgid "check_result_path=&lt;path&gt;"
-msgstr ""
+msgstr "check_result_path=&lt;path&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2005
 #, no-wrap
 msgid "check_result_path=/var/spool/nagios/checkresults"
-msgstr ""
+msgstr "check_result_path=/var/spool/nagios/checkresults"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2011
 msgid "This options determines which directory Nagios will use to temporarily store host and service check results before they are processed. This directory should not be used to store any other files, as Nagios will periodically clean this directory of old file (see the <xref linkend=\"configuringnagios-configmain-max_check_result_file_age\" /> option for more information)."
-msgstr ""
+msgstr "Cette option détermine quel répertoire Nagios utilisera pour stocker temporairement les résultats de contrôle. Ce répertoire ne doit pas stocker d'autres fichiers, car Nagios efface le contenu de ce répertoire de manière récurrente (voir l'option <xref linkend=\"configuringnagios-configmain-max_check_result_file_age\" /> pour plus d'informations)."
 
 # type: Content of: <chapter><section><section><note><para>
 #: ConfiguringNagios/configmain.xml:2018
 msgid "Make sure that only a single instance of Nagios has access to the check result path. If multiple instances of Nagios have their check result path set to the same directory, you will run into problems with check results being processed (incorrectly) by the wrong instance of Nagios!"
-msgstr ""
+msgstr "Assurez vous qu'une seule instance de Nagios n'est qu'accès à ce répertoire. Si plusieurs instances attaquent ce même répertoire, vous allez rencontrer des problèmes car il est possible que la mauvaise instance de Nagios prélève des résultats ne la concernant pas!  "
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2026
 msgid "<anchor id=\"configuringnagios-configmain-max_check_result_file_age\" xreflabel=\"Max Check Result File Age\"/>Max Check Result File Age"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-max_check_result_file_age\" xreflabel=\"Max Check Result File Age\"/>L'age maximum du fichier de résultat de contrôle"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2036
 #, no-wrap
 msgid "max_check_result_file_age=&lt;seconds&gt;"
-msgstr ""
+msgstr "max_check_result_file_age=&lt;seconds&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2042
 #, no-wrap
 msgid "max_check_result_file_age=3600"
-msgstr ""
+msgstr "max_check_result_file_age=3600"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2048
 msgid "This options determines the maximum age in seconds that Nagios will consider check result files found in the <link linkend=\"configuringnagios-configmain-check_result_path\">check_result_path</link> directory to be valid. Check result files that are older that this threshold will be deleted by Nagios and the check results they contain will not be processed. By using a value of zero (0) with this option, Nagios will process all check result files - even if they're older than your hardware :-)."
-msgstr ""
+msgstr "Cette option détermine le temps maximum en seconde que Nagios peut considérer trouver des informations de résultats de contrôles dans le <link linkend=\"configuringnagios-configmain-check_result_path\">répertoire de stockages des résultats</link>. Les résultats dépassant ce temps limite, ils seront effacés par Nagios et ne pourront plus être exploités. En utilisant la valeur zéro (0) pour cette option, Nagios exploitera chaque fichiers de contrôle.  "
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2058
@@ -2095,66 +2095,66 @@ msgstr "1 = Use aggressive host checking"
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2327
 msgid "<anchor id=\"configuringnagios-configmain-translate_passive_host_checks\" xreflabel=\"Translate Passive Host Checks Option\"/>Translate Passive Host Checks Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-translate_passive_host_checks\" xreflabel=\"Translate Passive Host Checks Option\"/>Option de traduction des contrôles d'hôte passif"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2337
 #, no-wrap
 msgid "translate_passive_host_checks=&lt;0/1&gt;"
-msgstr ""
+msgstr "translate_passive_host_checks=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2343
 #, no-wrap
 msgid "translate_passive_host_checks=1"
-msgstr ""
+msgstr "translate_passive_host_checks=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2349
 msgid "This option determines whether or not Nagios will translate DOWN/UNREACHABLE passive host check results to their <quote>correct</quote> state from the viewpoint of the local Nagios instance. This can be very useful in distributed and failover monitoring installations. More information on passive check state translation can be found <link linkend=\"advancedtopics-passivestatetranslation\">here</link>."
-msgstr ""
+msgstr "Cette option determine ou non si Nagios peut traduire l'état DOWN/UNREACHABLE d'un contrôle passif en l'état <quote>correcte</quote> en considérant un point de vue d'une instance Nagios locale. Cette option peut s'avérer vraiment utile lors d'installation de type distribuée. Plus d'informations sur la traduction d'état passif peuvent être trouvés <link linkend=\"advancedtopics-passivestatetranslation\">ici</link>."
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2358
 msgid "0 = Disable check translation (default)"
-msgstr ""
+msgstr "0 = Désactiver la traduction (default)"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2362
 msgid "1 = Enable check translation"
-msgstr ""
+msgstr "1 = Activer la traduction"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2368
 msgid "<anchor id=\"configuringnagios-configmain-passive_host_checks_are_soft\" xreflabel=\"Passive Host Checks Are SOFT Option\"/>Passive Host Checks Are SOFT Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-passive_host_checks_are_soft\" xreflabel=\"Passive Host Checks Are SOFT Option\"/>Option"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2378
 #, no-wrap
 msgid "passive_host_checks_are_soft=&lt;0/1&gt;"
-msgstr ""
+msgstr "passive_host_checks_are_soft=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2384
 #, no-wrap
 msgid "passive_host_checks_are_soft=1"
-msgstr ""
+msgstr "passive_host_checks_are_soft=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2390
 msgid "This option determines whether or not Nagios will treat <link linkend=\"thebasics-passivechecks\">passive host checks</link> as HARD states or SOFT states. By default, a passive host check result will put a host into a <link linkend=\"thebasics-statetypes\">HARD state type</link>. You can change this behavior by enabling this option."
-msgstr ""
+msgstr "Cette option détermine si en effet Nagios traitera les <link linkend=\"thebasics-passivechecks\">contrôles d'hôte passif</link> en états HARD ou SOFT. Par défaut, les résultats de contrôles passif sont considéré en <link linkend=\"thebasics-statetypes\">état HARD</link>. Vous pouvez changer ceci en activant cette option."
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2399
 msgid "0 = Passive host checks are HARD (default)"
-msgstr ""
+msgstr "0 = Les controles d'hôte passifs sont HARD"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2403
 msgid "1 = Passive host checks are SOFT"
-msgstr ""
+msgstr "1 = Les contrôles d'hôte passifs sont SOFT"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2409
@@ -2355,34 +2355,34 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2684
 msgid "<anchor id=\"configuringnagios-configmain-enable_environment_macros\" xreflabel=\"Environment Macros Option\"/>Environment Macros Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-enable_environment_macros\" xreflabel=\"Environment Macros Option\"/>Environment Macros Option"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2694
 #, no-wrap
 msgid "enable_environment_macros=&lt;0/1&gt;"
-msgstr ""
+msgstr "enable_environment_macros=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2700
 #, no-wrap
 msgid "enable_environment_macros=0"
-msgstr ""
+msgstr "enable_environment_macros=0"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2705
 msgid "This option determines whether or not the Nagios daemon will make all standard <link linkend=\"thebasics-macrolist\">macros</link> available as environment variables to your check, notification, event hander, etc. commands. In large Nagios installations this can be problematic because it takes additional memory and (more importantly)  CPU to compute the values of all macros and make them available to the environment."
-msgstr ""
+msgstr "Cette option détermine si oui ou non le démon Nagios peut considérer toutes les <link linkend=\"thebasics-macrolist\">macros</link> standard comme des variables d'environnements pour vos contrôles, notifications, déclencheur d'évènement, etc ... Dans de grand périmètre de production, ceci peut être problématique car une utilisation mémoire et CPU supplémentaire est utile pour convertir ces macros en variables d'environnements."
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2715
 msgid "0 = Don't make macros available as environment variables"
-msgstr ""
+msgstr "0 = Don't make macros available as environment variables"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2720
 msgid "1 = Make macros available as environment variables (default)"
-msgstr ""
+msgstr "1 = Make macros available as environment variables (default)"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2727
@@ -3360,68 +3360,68 @@ msgstr "Cette option détermine l'intervalle de temps (en secondes) entre deux c
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4026
 msgid "<anchor id=\"configuringnagios-configmain-additional_freshness_latency\" xreflabel=\"Additional Freshness Threshold Latency Option\"/>Additional Freshness Threshold Latency Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-additional_freshness_latency\" xreflabel=\"Additional Freshness Threshold Latency Option\"/>Option du Seuil de Fraîcheur Supplémentaire de la Latence "
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4036
 #, no-wrap
 msgid "additional_freshness_latency=&lt;#&gt;"
-msgstr ""
+msgstr "additional_freshness_latency=&lt;#&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4042
 #, no-wrap
 msgid "additional_freshness_latency=15"
-msgstr ""
+msgstr "additional_freshness_latency=15"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:4048
 msgid "This option determines the number of seconds Nagios will add to any host or services freshness threshold it automatically calculates (e.g. those not specified explicity by the user). More information on freshness checking can be found <link linkend=\"advancedtopics-freshness\">here</link>."
-msgstr ""
+msgstr "Cette option détermine le nombres de secondes que Nagios ajoutera pour qu'un hôte ou un service se rafraichisse (Ce n'est pas déterminé nativement par l'utilisateur). Vous trouverez plus d'informations  <link linkend=\"advancedtopics-freshness\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4056
 msgid "<anchor id=\"configuringnagios-configmain-enable_embedded_perl\" xreflabel=\"Embedded Perl Interpreter Option\"/>Embedded Perl Interpreter Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-enable_embedded_perl\" xreflabel=\"Embedded Perl Interpreter Option\"/>Activation de l'interpréteur Perl incorporé"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4066
 #, no-wrap
 msgid "enable_embedded_perl=&lt;0/1&gt;"
-msgstr ""
+msgstr "enable_embedded_perl=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4072
 #, no-wrap
 msgid "enable_embedded_perl=1"
-msgstr ""
+msgstr "enable_embedded_perl=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:4078
 msgid "This setting determines whether or not the embedded Perl interpreter is enabled on a program-wide basis. Nagios must be compiled with support for embedded Perl for this option to have an effect. More information on the embedded Perl interpreter can be found <link linkend=\"advancedtopics-embeddedperl\">here</link>."
-msgstr ""
+msgstr "Cette option détermine ou non si l'interpréteur Perl est activé dans le coeur du programme. Nagios doit être compilé en précisant cette option pour que ce paramétrage soit opérationnel. Vous trouverez plus d'informations à ce sujet <link linkend=\"advancedtopics-embeddedperl\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4086
 msgid "<anchor id=\"configuringnagios-configmain-use_embedded_perl_implicitly\" xreflabel=\"Embedded Perl Implicit Use Option\"/>Embedded Perl Implicit Use Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-use_embedded_perl_implicitly\" xreflabel=\"Embedded Perl Implicit Use Option\"/>Interpréteur Perl Incorporé"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4096
 #, no-wrap
 msgid "use_embedded_perl_implicitly=&lt;0/1&gt;"
-msgstr ""
+msgstr "use_embedded_perl_implicitly=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4102
 #, no-wrap
 msgid "use_embedded_perl_implicitly=1"
-msgstr ""
+msgstr "use_embedded_perl_implicitly=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:4108
 msgid "This setting determines whether or not the embedded Perl interpreter should be used for Perl plugins/scripts that do not explicitly enable/disable it. Nagios must be compiled with support for embedded Perl for this option to have an effect. More information on the embedded Perl interpreter and the effect of this setting can be found <link linkend=\"advancedtopics-embeddedperl\">here</link>."
-msgstr ""
+msgstr "Ce paramétrage détermine si oui ou non l'interpréteur Perl sera utilisé lors d'utilisation de plugins/scripts perl. Nagios doit être compilé en précisant cette option pour que ce paramétrage soit opérationnel. Vous trouverez plus d'informations à ce sujet <link linkend=\"advancedtopics-embeddedperl\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4117
@@ -3797,13 +3797,13 @@ msgstr "# = Regardez la définition de BROKER_* dans le code source (<filename>i
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4504
 msgid "<anchor id=\"configuringnagios-configmain-broker_module\" xreflabel=\"Event Broker Modules\"/>Event Broker Modules"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-broker_module\" xreflabel=\"Event Broker Modules\"/>Les Modules évenementiels"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4514
 #, no-wrap
 msgid "broker_module=&lt;modulepath&gt; [moduleargs]"
-msgstr ""
+msgstr "broker_module=&lt;modulepath&gt; [moduleargs]"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4520
@@ -3812,53 +3812,55 @@ msgid ""
 "broker_module=/usr/local/nagios/bin/ndomod.o\n"
 "              cfg_file=/usr/local/nagios/etc/ndomod.cfg"
 msgstr ""
+"broker_module=/usr/local/nagios/bin/ndomod.o\n"
+"              cfg_file=/usr/local/nagios/etc/ndomod.cfg"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:4527
 msgid "This directive is used to specify an event broker module that should by loaded by Nagios at startup. Use multiple directives if you want to load more than one module. Arguments that should be passed to the module at startup are seperated from the module path by a space."
-msgstr ""
+msgstr "Cette directive est utilisé particulièrement pour que le module évènementiel soit chargé au démarrage de Nagios. On peut utiliser plusieurs de ces mêmes directive si l'on veut en charger plusieurs. Les arguments passés au module seront séparés par un espace."
 
 # type: Content of: <chapter><section><section><warning><para>
 #: ConfiguringNagios/configmain.xml:4533
 msgid "Do NOT overwrite modules while they are being used by Nagios or Nagios will crash in a fiery display of SEGFAULT glory. This is a bug/limitation either in <function>dlopen()</function>, the kernel, and/or the filesystem.  And maybe Nagios..."
-msgstr ""
+msgstr "Ne PAS écraser les modules pendant qu'ils sont utilisés par Nagios ou Nagios plantera en affichant des SEGFAULT. C'est un bogue/limite de la fonction <function>dlopen()</function>, du noyau, et/ou du filesystem. Et peut-être de Nagios..."
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:4538
 msgid "The correct/safe way of updating a module is by using one of these methods:"
-msgstr ""
+msgstr "La manière la plus sûre de mettre à jour un module est l'une des méthodes suivantes:"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:4543
 msgid "Shutdown Nagios, replace the module file, restart Nagios"
-msgstr ""
+msgstr "Stoppez Nagios, remplacez le fichier du module, redémarrez Nagios"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:4548
 msgid "While Nagios is running... delete the original module file, move the new module file into place, restart Nagios"
-msgstr ""
+msgstr "Durant que Nagios tourne... Effacez le fichier original du module, mettre à la place le nouveau fichier, redémarrez Nagios"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4555
 msgid "<anchor id=\"configuringnagios-configmain-debug_file\" xreflabel=\"Debug File\"/>Debug File"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-debug_file\" xreflabel=\"Debug File\"/>Fichier de débogage"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4565
 #, no-wrap
 msgid "debug_file=&lt;file_name&gt;"
-msgstr ""
+msgstr "debug_file=&lt;file_name&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4571
 #, no-wrap
 msgid "debug_file=/usr/local/nagios/var/nagios.debug"
-msgstr ""
+msgstr "debug_file=/usr/local/nagios/var/nagios.debug"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:4577
 msgid "This option determines where Nagios should write debugging information. What (if any) information is written is determined by the <xref linkend=\"configuringnagios-configmain-debug_level\" /> and <xref linkend=\"configuringnagios-configmain-debug_verbosity\" /> options. You can have Nagios automaticaly rotate the debug file when it reaches a certain size by using the <xref linkend=\"configuringnagios-configmain-max_debug_file_size\" /> option."
-msgstr ""
+msgstr "Cette option détermine si oui ou pas Nagios peut écrire des informations de débogage. La précision des informations que Nagios écrit dépend des options <xref linkend=\"configuringnagios-configmain-debug_level\" /> et <xref linkend=\"configuringnagios-configmain-debug_verbosity\" />. Vous pouvez automatique gérer la rotation du fichier de débogage en fonction de sa taille en utilisant l'option <xref linkend=\"configuringnagios-configmain-max_debug_file_size\" />"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4586
