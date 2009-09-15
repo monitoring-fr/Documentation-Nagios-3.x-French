@@ -1,25 +1,25 @@
-XMLSOURCE=About/about.xml About/whatsnew.xml About.xml AdvancedTopics/adaptive.xml AdvancedTopics/cachedchecks.xml AdvancedTopics/cgiincludes.xml AdvancedTopics/checkscheduling.xml AdvancedTopics/clusters.xml AdvancedTopics/dependencies.xml AdvancedTopics/dependencychecks.xml AdvancedTopics/distributed.xml AdvancedTopics/downtime.xml AdvancedTopics/embeddedperl.xml AdvancedTopics/escalations.xml AdvancedTopics/eventhandlers.xml AdvancedTopics/extcommands.xml AdvancedTopics/flapping.xml AdvancedTopics/freshness.xml AdvancedTopics/objectinheritance.xml AdvancedTopics/objecttricks.xml AdvancedTopics/oncallrotation.xml AdvancedTopics/passivestatetranslation.xml AdvancedTopics/perfdata.xml AdvancedTopics/redundancy.xml AdvancedTopics/stalking.xml AdvancedTopics/volatileservices.xml AdvancedTopics.xml ConfiguringNagios/cgiauth.xml ConfiguringNagios/config.xml ConfiguringNagios/configcgi.xml ConfiguringNagios/configmain.xml ConfiguringNagios/configobject.xml ConfiguringNagios/customobjectvars.xml ConfiguringNagios/objectdefinitions.xml ConfiguringNagios.xml Development/epnplugins.xml Development/pluginapi.xml Development.xml GettingStarted/beginners.xml GettingStarted/monitoring-linux.xml GettingStarted/monitoring-netware.xml GettingStarted/monitoring-printers.xml GettingStarted/monitoring-publicservices.xml GettingStarted/monitoring-routers.xml GettingStarted/monitoring-windows.xml GettingStarted/quickstart-fedora.xml GettingStarted/quickstart-opensuse.xml GettingStarted/quickstart-ubuntu.xml GettingStarted/quickstart.xml GettingStarted/upgrading.xml GettingStarted.xml IntegrationWithOtherSoftware/int-snmptrap.xml IntegrationWithOtherSoftware/int-tcpwrappers.xml IntegrationWithOtherSoftware/integration.xml IntegrationWithOtherSoftware.xml NagiosAddons/addons.xml NagiosAddons.xml RunningNagios/startstop.xml RunningNagios/verifyconfig.xml RunningNagios.xml SecurityAndPerformanceTuning/cgisecurity.xml SecurityAndPerformanceTuning/faststartup.xml SecurityAndPerformanceTuning/largeinstalltweaks.xml SecurityAndPerformanceTuning/mrtggraphs.xml SecurityAndPerformanceTuning/nagiostats.xml SecurityAndPerformanceTuning/security.xml SecurityAndPerformanceTuning/tuning.xml SecurityAndPerformanceTuning.xml TheBasics/activechecks.xml TheBasics/cgis.xml TheBasics/hostchecks.xml TheBasics/macrolist.xml TheBasics/macros.xml TheBasics/networkreachability.xml TheBasics/notifications.xml TheBasics/passivechecks.xml TheBasics/plugins.xml TheBasics/servicechecks.xml TheBasics/statetypes.xml TheBasics/timeperiods.xml TheBasics.xml nagios.xml
+XMLSOURCE=About/fr_FR.about.xml About/fr_FR.whatsnew.xml fr_FR.About.xml AdvancedTopics/fr_FR.adaptive.xml AdvancedTopics/fr_FR.cachedchecks.xml AdvancedTopics/fr_FR.cgiincludes.xml AdvancedTopics/fr_FR.checkscheduling.xml AdvancedTopics/fr_FR.clusters.xml AdvancedTopics/fr_FR.dependencies.xml AdvancedTopics/fr_FR.dependencychecks.xml AdvancedTopics/fr_FR.distributed.xml AdvancedTopics/fr_FR.downtime.xml AdvancedTopics/fr_FR.embeddedperl.xml AdvancedTopics/fr_FR.escalations.xml AdvancedTopics/fr_FR.eventhandlers.xml AdvancedTopics/fr_FR.extcommands.xml AdvancedTopics/fr_FR.flapping.xml AdvancedTopics/fr_FR.freshness.xml AdvancedTopics/fr_FR.objectinheritance.xml AdvancedTopics/fr_FR.objecttricks.xml AdvancedTopics/fr_FR.oncallrotation.xml AdvancedTopics/fr_FR.passivestatetranslation.xml AdvancedTopics/fr_FR.perfdata.xml AdvancedTopics/fr_FR.redundancy.xml AdvancedTopics/fr_FR.stalking.xml AdvancedTopics/fr_FR.volatileservices.xml fr_FR.AdvancedTopics.xml ConfiguringNagios/fr_FR.cgiauth.xml ConfiguringNagios/fr_FR.config.xml ConfiguringNagios/fr_FR.configcgi.xml ConfiguringNagios/fr_FR.configmain.xml ConfiguringNagios/fr_FR.configobject.xml ConfiguringNagios/fr_FR.customobjectvars.xml ConfiguringNagios/fr_FR.objectdefinitions.xml fr_FR.ConfiguringNagios.xml Development/fr_FR.epnplugins.xml Development/fr_FR.pluginapi.xml fr_FR.Development.xml GettingStarted/fr_FR.beginners.xml GettingStarted/fr_FR.monitoring-linux.xml GettingStarted/fr_FR.monitoring-netware.xml GettingStarted/fr_FR.monitoring-printers.xml GettingStarted/fr_FR.monitoring-publicservices.xml GettingStarted/fr_FR.monitoring-routers.xml GettingStarted/fr_FR.monitoring-windows.xml GettingStarted/fr_FR.quickstart-fedora.xml GettingStarted/fr_FR.quickstart-opensuse.xml GettingStarted/fr_FR.quickstart-ubuntu.xml GettingStarted/fr_FR.quickstart.xml GettingStarted/fr_FR.upgrading.xml fr_FR.GettingStarted.xml IntegrationWithOtherSoftware/fr_FR.int-snmptrap.xml IntegrationWithOtherSoftware/fr_FR.int-tcpwrappers.xml IntegrationWithOtherSoftware/fr_FR.integration.xml fr_FR.IntegrationWithOtherSoftware.xml NagiosAddons/fr_FR.addons.xml fr_FR.NagiosAddons.xml RunningNagios/fr_FR.startstop.xml RunningNagios/fr_FR.verifyconfig.xml fr_FR.RunningNagios.xml SecurityAndPerformanceTuning/fr_FR.cgisecurity.xml SecurityAndPerformanceTuning/fr_FR.faststartup.xml SecurityAndPerformanceTuning/fr_FR.largeinstalltweaks.xml SecurityAndPerformanceTuning/fr_FR.mrtggraphs.xml SecurityAndPerformanceTuning/fr_FR.nagiostats.xml SecurityAndPerformanceTuning/fr_FR.security.xml SecurityAndPerformanceTuning/fr_FR.tuning.xml fr_FR.SecurityAndPerformanceTuning.xml TheBasics/fr_FR.activechecks.xml TheBasics/fr_FR.cgis.xml TheBasics/fr_FR.hostchecks.xml TheBasics/fr_FR.macrolist.xml TheBasics/fr_FR.macros.xml TheBasics/fr_FR.networkreachability.xml TheBasics/fr_FR.notifications.xml TheBasics/fr_FR.passivechecks.xml TheBasics/fr_FR.plugins.xml TheBasics/fr_FR.servicechecks.xml TheBasics/fr_FR.statetypes.xml TheBasics/fr_FR.timeperiods.xml fr_FR.TheBasics.xml fr_FR.nagios.xml
 
-all:html/index.html pdf/nagios-dblatex.pdf pdf/nagios-db2latex.pdf pdf/nagios-fop.pdf dvi/nagios.dvi
+all:html/index.html pdf/fr_FR.nagios-dblatex.pdf pdf/fr_FR.nagios-db2latex.pdf pdf/fr_FR.nagios-fop.pdf dvi/fr_FR.nagios.dvi
 
 html/index.html:$(XMLSOURCE)
-	xmlto -o html/ html nagios.xml	
+	xmlto -o html/ html fr_FR.nagios.xml	
 	
 pdf/nagios-dblatex.pdf:$(XMLSOURCE)
-	dblatex nagios.xml -o pdf/nagios-dblatex.pdf
+	dblatex fr_FR.nagios.xml -o pdf/fr_FR.nagios-dblatex.pdf
 
 pdf/nagios-db2latex.pdf:$(XMLSOURCE)
-	dblatex nagios.xml -o pdf/nagios-db2latex.pdf -T db2latex
+	dblatex fr_FR.nagios.xml -o pdf/fr_FR.nagios-db2latex.pdf -T db2latex
 
 pdf/nagios-fop.pdf:$(XMLSOURCE)
-	xmlto -o pdf --with-fop pdf nagios.xml
-	mv pdf/nagios.pdf pdf/nagios-fop.pdf
+	xmlto -o pdf --with-fop pdf fr_FR.nagios.xml
+	mv pdf/fr_FR.nagios.pdf pdf/fr_FR.nagios-fop.pdf
 
 dvi/nagios.dvi:$(XMLSOURCE)
-	xmllint --xinclude --postvalid  nagios.xml --output nagios-big.xml
-	docbook2dvi -o dvi nagios-big.xml
-	mv dvi/nagios-big.dvi dvi/nagios.dvi
-	rm nagios-big.xml
+	xmllint --xinclude --postvalid  fr_FR.nagios.xml --output fr_FR.nagios-big.xml
+	docbook2dvi -o dvi fr_FR.nagios-big.xml
+	mv dvi/fr_FR.nagios-big.dvi dvi/fr_FR.nagios.dvi
+	rm fr_FR.nagios-big.xml
 
 clean:
-	rm -f pdf/nagios-dblatex.pdf pdf/nagios-db2latex.pdf pdf/nagios-fop.pdf nagios-big.xml dvi/nagios.dvi html/*.html
+	rm -f pdf/fr_FR.nagios-dblatex.pdf pdf/fr_FR.nagios-db2latex.pdf pdf/fr_FR.nagios-fop.pdf fr_FR.nagios-big.xml dvi/fr_FR.nagios.dvi html/*.html
