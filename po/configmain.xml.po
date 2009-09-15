@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-09-10 16:42+0100\n"
-"Last-Translator: Fronteau Romuald <rfronteau@nagios-fr.org>\n"
+"PO-Revision-Date: 2009-09-15 18:55+0100\n"
+"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,7 +53,7 @@ msgstr "Configuration d'exemple"
 # type: Content of: <chapter><section><tip><para>
 #: ConfiguringNagios/configmain.xml:38
 msgid "A sample main configuration file (<filename>/usr/local/nagios/etc/nagios.cfg</filename>) is installed for you when you follow the <xref linkend=\"gettingstarted-quickstart\" />."
-msgstr "Un fichier de configuration d'exemple (<filename>/usr/local/nagios/etc/nagios.cfg</filename>) est installé pour vous quand suivez le <link linkend=\"gettingstarted-quickstart\">guide de démarrage rapide</linkend>."
+msgstr "Un fichier de configuration d'exemple (<filename>/usr/local/nagios/etc/nagios.cfg</filename>) est installé pour vous quand suivez le <link linkend=\"gettingstarted-quickstart\">guide de démarrage rapide</link>."
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/configmain.xml:46
@@ -111,7 +111,7 @@ msgstr "<literal>log_file=/usr/local/nagios/var/nagios.log</literal>"
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:73
 msgid "This variable specifies where Nagios should create its main log file. This should be the first variable that you define in your configuration file, as Nagios will try to write errors that it finds in the rest of your configuration data to this file. If you have <xref linkend=\"configuringnagios-configmain-log_rotation_method\" /> enabled, this file will automatically be rotated every hour, day, week, or month."
-msgstr "Cette variable détermine le chemin d'accès au fichier journal principal de Nagios. Elle doit être la première variable définie dans le fichier de configuration, car Nagios essaiera d'enregistrer à cet endroit les erreurs découvertes dans le reste du fichier. Si vous avez activé la <link linkend=\"configuringnagios-configmain-log_rotation_method\">rotation des journaux</linkend>, ce fichier sera automatiquement archivé et remplacé chaque heure, jour, semaine et mois."
+msgstr "Cette variable détermine le chemin d'accès au fichier journal principal de Nagios. Elle doit être la première variable définie dans le fichier de configuration, car Nagios essaiera d'enregistrer à cet endroit les erreurs découvertes dans le reste du fichier. Si vous avez activé la <link linkend=\"configuringnagios-configmain-log_rotation_method\">rotation des journaux</link>, ce fichier sera automatiquement archivé et remplacé chaque heure, jour, semaine et mois."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:81
@@ -158,7 +158,7 @@ msgstr "</informalexample>"
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:110
 msgid "This directive is used to specify an <xref linkend=\"configuringnagios-configobject\" /> containing object definitions that Nagios should use for monitoring.  Object configuration files contain definitions for hosts, host groups, contacts, contact groups, services, commands, etc. You can seperate your configuration information into several files and specify multiple"
-msgstr "Cette variable détermine le <link linkend=\"configuringnagios-configobject\">fichier de configuration des objets</linkend> que Nagios doit utiliser pour la supervision. Ce fichier contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes de contacts, services, commandes etc... Vous pouvez éclater votre fichier de configuration des objets en plusieurs fichiers que vous inclurez, pour leur traitement,"
+msgstr "Cette variable détermine le <link linkend=\"configuringnagios-configobject\">fichier de configuration des objets</link> que Nagios doit utiliser pour la supervision. Ce fichier contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes de contacts, services, commandes etc... Vous pouvez éclater votre fichier de configuration des objets en plusieurs fichiers que vous inclurez, pour leur traitement,"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:115
@@ -491,7 +491,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:147
 msgid "This directive is used to specify a directory which contains <xref linkend=\"configuringnagios-configobject\" /> that Nagios should use for monitoring. All files in the directory with a .cfg extension are processed as object config files.  Additionally, Nagios will recursively process all config files in subdirectories of the directory you specify here. You can seperate your configuration files into different directories and specify multiple"
-msgstr "Cette variable détermine le <link linkend=\"configuringnagios-configobject\">fichier de configuration des objets</linkend> que Nagios doit utiliser pour la supervision. Ce fichier contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes de contacts, services, commandes etc... Vous pouvez éclater votre fichier de configuration des objets en plusieurs fichiers que vous inclurez, pour leur traitement, en ajoutant une directive"
+msgstr "Cette variable détermine le <link linkend=\"configuringnagios-configobject\">fichier de configuration des objets</link> que Nagios doit utiliser pour la supervision. Ce fichier contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes de contacts, services, commandes etc... Vous pouvez éclater votre fichier de configuration des objets en plusieurs fichiers que vous inclurez, pour leur traitement, en ajoutant une directive"
 
 # type: Content of: <chapter><section><section><para><programlisting>
 #: ConfiguringNagios/configmain.xml:150
@@ -524,7 +524,7 @@ msgstr "object_cache_file=/usr/local/nagios/var/objects.cache"
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:178
 msgid "This directive is used to specify a file in which a cached copy of <xref linkend=\"configuringnagios-configobject\" /> should be stored. The cache file is (re)created every time Nagios is (re)started and is used by the CGIs. It is intended to speed up config file caching in the CGIs and allow you to edit the source while Nagios is running without affecting the output displayed in the CGIs."
-msgstr "Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui contiendra une copie en <link linkend=\"configuringnagios-configobject\">cache des définitions des objets</linkend>. Ce fichier cache est (re)créé à chaque (re)démarrage de Nagios et est utilisé par les CGI. Il permet d'accélérer le cache des fichiers de configuration pour les CGI, et vous permet de modifier les fichiers de configuration des objets, pendant que Nagios tourne, sans que l'affichage des CGI soit modifié."
+msgstr "Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui contiendra une copie en <link linkend=\"configuringnagios-configobject\">cache des définitions des objets</link>. Ce fichier cache est (re)créé à chaque (re)démarrage de Nagios et est utilisé par les CGI. Il permet d'accélérer le cache des fichiers de configuration pour les CGI, et vous permet de modifier les fichiers de configuration des objets, pendant que Nagios tourne, sans que l'affichage des CGI soit modifié."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:187
@@ -546,7 +546,7 @@ msgstr "precached_object_file=/usr/local/nagios/var/objects.precache"
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:210
 msgid "This directive is used to specify a file in which a pre-processed, pre-cached copy of <xref linkend=\"configuringnagios-configobject\" /> should be stored. This file can be used to drastically improve startup times in large/complex Nagios installations.  Read more information on how to speed up start times <xref linkend=\"securityandperformancetuning-faststartup\" />."
-msgstr "Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui va contenir une copie pré-traitée, pré-cachée du <link linkend=\"configuringnagios-configobject\">fichier de configuration des objets</linkend>. Ce fichier peut améliorer de façon drastique les temps de démarrage de Nagios dans des installations complexes ou de grande dimension. Lisez plus d'informations sur la façon d'améliorer les temps de démarrage <link linkend=\"securityandperformancetuning-faststartup\">ici</linkend>."
+msgstr "Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui va contenir une copie pré-traitée, pré-cachée du <link linkend=\"configuringnagios-configobject\">fichier de configuration des objets</link>. Ce fichier peut améliorer de façon drastique les temps de démarrage de Nagios dans des installations complexes ou de grande dimension. Lisez plus d'informations sur la façon d'améliorer les temps de démarrage <link linkend=\"securityandperformancetuning-faststartup\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:218

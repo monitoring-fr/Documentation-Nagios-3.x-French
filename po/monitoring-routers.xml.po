@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-02-03 11:46+0100\n"
+"PO-Revision-Date: 2009-09-15 18:24+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -146,7 +146,7 @@ msgstr "<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cf
 #: GettingStarted/monitoring-printers.xml:176
 #: GettingStarted/monitoring-routers.xml:153
 msgid "Remove the leading pound (#) sign from the following line in the main configuration file:"
-msgstr "Supprimer le signe dièse (#) de début de ligne pour les lignes suivantes dans le fichier de configuration principal:"
+msgstr "Supprimer le signe dièse (#) de début de ligne pour les lignes suivantes dans le fichier de configuration principal :"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:163
@@ -203,7 +203,7 @@ msgstr "Supervision des routeurs et des switchs."
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/monitoring-routers.xml:13
 msgid "This document describes how you can monitor the status of network switches and routers. Some cheaper \"unmanaged\" switches and hubs don't have"
-msgstr "Ce document décrit la façon don tvous pouvez superviser des routeurs et switchs réseaux. Quelques switchs et hubs bon marché \"non manageables\" n'ont pas"
+msgstr "Ce document décrit la façon don tvous pouvez superviser des routeurs et switchs réseaux. Quelques switchs et hubs bon marché <quote>non manageables</quote> n'ont pas"
 
 # type: Content of: <chapter><abstract><para><acronym>
 #: GettingStarted/monitoring-routers.xml:15
@@ -213,7 +213,7 @@ msgstr "IP"
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/monitoring-routers.xml:15
 msgid "addresses and are essentially invisible on your network, so there's not any way to monitor them. More expensive switches and routers have addresses assigned to them and can be monitored by pinging them or using &protocol-snmp; to query status information."
-msgstr "adresses et sont invisibles sur votre réseau, il n'y a donc aucun moyen de les superviser. Les routeurs et switches plus chers ont une adresse assignée et peuvent donc être supervisés en les pingant ou en utilisant &protocol-snmp pour interroger les informations de statut."
+msgstr "adresses et sont invisibles sur votre réseau, il n'y a donc aucun moyen de les superviser. Les routeurs et switches plus chers ont une adresse assignée et peuvent donc être supervisés en les pingant ou en utilisant &protocol-snmp; pour interroger les informations de statut."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:25
@@ -253,12 +253,12 @@ msgstr "La supervision des switchs et routeurs peut au choix être simple ou plu
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:72
 msgid "Switches and routers can be monitored easily by \"pinging\" them to determine packet loss,"
-msgstr "Les switchs et les routeurs peuvent facilement être supervisés en les \"pingant\" pour déterminer le nombre de paquets perdus,"
+msgstr "Les switchs et les routeurs peuvent facilement être supervisés en les <quote>pingant</quote> pour déterminer le nombre de paquets perdus,"
 
 # type: Content of: <chapter><section><para><application>
 #: GettingStarted/monitoring-routers.xml:73
 msgid ", etc. If your switch supports &protocol-snmp;, you can monitor port status, etc. with the &plugin-snmp; plugin and bandwidth (if you're using <application>"
-msgstr ", etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser l'état des ports, etc. avec le plugin &plugin-snmp; et la bande passante avec /application>) &plugin-mrtgtraf; plugin (si vous utilisez <application>"
+msgstr ", etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser l'état des ports, etc. avec le plugin &plugin-snmp; et la bande passante avec  &plugin-mrtgtraf; plugin (si vous utilisez <application>"
 
 # type: Content of: <chapter><section><para><application><acronym>
 #: GettingStarted/monitoring-routers.xml:76
@@ -268,7 +268,7 @@ msgstr "MRTG"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:76
 msgid "</application>) with the &plugin-mrtgtraf; plugin."
-msgstr "/application>)."
+msgstr "</application>)."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:79
