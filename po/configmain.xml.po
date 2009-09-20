@@ -7,13 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-09-15 18:55+0100\n"
-"Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
+"PO-Revision-Date: 2009-09-20 10:23+0100\n"
+"Last-Translator: David GUENAULT <dguenault@gfi.fr>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
 
 # type: Content of: <chapter><title>
 #: ConfiguringNagios/configmain.xml:10
@@ -1824,29 +1826,29 @@ msgstr "check_result_reaper_frequency=5"
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:1948
 msgid "This option allows you to control the frequency in seconds of check result \"reaper\" events. \"Reaper\" events process the results from host and service checks that have finished executing. These events consitute the core of the monitoring logic in Nagios."
-msgstr "Cette option vous permet de contrôler la fréquence en secondes des événements de <quote>consolidation</quote>. Les événements de <quote>consolidation</quote> traitent les résultats des contrôles d'hôtes et de services dont l'exécution est terminée. Ces événements consitue le cœur de la logique de supervision de Nagios."
+msgstr "Cette option vous permet de contrôler la fréquence en secondes des événements de <quote>consolidation</quote>. Les événements de <quote>consolidation</quote> traitent les résultats des contrôles d'hôtes et de services dont l'exécution est terminée. Ces événements constituent le cœur de la logique de supervision de Nagios."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1955
 msgid "<anchor id=\"configuringnagios-configmain-max_check_result_reaper_time\" xreflabel=\"Maximum Check Result Reaper Time\"/>Maximum Check Result Reaper Time"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-max_check_result_reaper_time\" xreflabel=\"Maximum Check Result Reaper Time\"/>Temps maximum de collecte des résultats de contrôle"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1965
 #, no-wrap
 msgid "max_check_result_reaper_time=&lt;seconds&gt;"
-msgstr ""
+msgstr "max_check_result_reaper_time=&lt;secondes&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:1971
 #, no-wrap
 msgid "max_check_result_reaper_time=30"
-msgstr ""
+msgstr "max_check_result_reaper_time=30"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:1977
 msgid "This option allows you to control the maximum amount of time in seconds that host and service check result \"reaper\" events are allowed to run. \"Reaper\" events process the results from host and service checks that have finished executing. If there are a lot of results to process, reaper events may take a long time to finish, which might delay timely execution of new host and service checks. This variable allows you to limit the amount of time that an individual reaper event will run before it hands control back over to Nagios for other portions of the monitoring logic."
-msgstr ""
+msgstr "Cette option vous permet de contrôler le temps maximum en secondes que doit prendre une collecte de résultat de contrôle d'hôte et de service. Les évènements de collecte traitent les résultats de contrôle d'hôtes et de services qui sont terminés. Si il y a une grande quantité de résultats à traiter, les évènements de collecte peuvent mettre beaucoup de temps à se terminer, ce qui décale d'autant l'exécution de nouveaux contrôles d'hôtes et de services. Cette variable vous permet de limiter le temps que prend un évènement de collecte avant de rendre la main à Nagios pour d'autres traitements de la logique de supervision."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:1989
@@ -2111,8 +2113,9 @@ msgstr "translate_passive_host_checks=1"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2349
+#, fuzzy
 msgid "This option determines whether or not Nagios will translate DOWN/UNREACHABLE passive host check results to their <quote>correct</quote> state from the viewpoint of the local Nagios instance. This can be very useful in distributed and failover monitoring installations. More information on passive check state translation can be found <link linkend=\"advancedtopics-passivestatetranslation\">here</link>."
-msgstr "Cette option determine ou non si Nagios peut traduire l'état DOWN/UNREACHABLE d'un contrôle passif en l'état <quote>correcte</quote> en considérant un point de vue d'une instance Nagios locale. Cette option peut s'avérer vraiment utile lors d'installation de type distribuée. Plus d'informations sur la traduction d'état passif peuvent être trouvés <link linkend=\"advancedtopics-passivestatetranslation\">ici</link>."
+msgstr "Cette option détermine ou non si Nagios peut traduire l'état DOWN/UNREACHABLE d'un contrôle passif en l'état <quote>correcte</quote> en considérant un point de vue d'une instance Nagios locale. Cette option peut s'avérer vraiment utile lors d'installation de type distribuée. Plus d'informations sur la traduction d'état passif peuvent être trouvés <link linkend=\"advancedtopics-passivestatetranslation\">ici</link>."
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2358
@@ -2159,7 +2162,7 @@ msgstr "1 = Les contrôles d'hôte passifs sont SOFT"
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2409
 msgid "<anchor id=\"configuringnagios-configmain-enable_predictive_host_dependency_checks\" xreflabel=\"Predictive Host Dependency Checks Option\"/>Predictive Host Dependency Checks Option"
-msgstr ""
+msgstr "  "
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2418
@@ -2254,103 +2257,103 @@ msgstr ""
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2548
 msgid "This option determines the maximum amount of time (in seconds)  that the state of a previous service check is considered current. Cached service states (from service checks that were performed more recently than the time specified by this value) can improve service check performance when a lot of <link linkend=\"advancedtopics-dependencies\">service dependencies</link> are used. Too high of a value for this option may result in inaccuracies in the service dependency logic. Use a value of 0 if you want to disable service check caching. More information on cached checks can be found <link linkend=\"advancedtopics-cachedchecks\">here</link>."
-msgstr ""
+msgstr "Cette option permet de définir le temps maximum (en secondes) pour que l'état d'un précédent contrôle de service soit considéré comme courant. Le cache d'état de service (Pour les contrôles de services qui sont effectués en avance par rapport à l'intervalle spécifié par cette valeur) peut améliorer la performance des contrôles quand un nombre important de <link linkend=\"advancedtopics-dependencies\">dépendances de services</link> est utilisé. Une valeur trop haute pour cette option se soldera par une manque de précision dans la logique de dépendance des services. Positionnez cette valeur à 0 si vous voulez désactiver le cache de contrôle de service. Plus d'informations sur le cache de contrôles peuvent être trouvées <link linkend=\"advancedtopics-cachedchecks\">ici</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2560
 msgid "<anchor id=\"configuringnagios-configmain-use_large_installation_tweaks\" xreflabel=\"Large Installation Tweaks Option\"/>Large Installation Tweaks Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-use_large_installation_tweaks\" xreflabel=\"Option d'optimisations pour les gros périmètres\"/>Option d'optimisations pour les gros périmètres"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2570
 #, no-wrap
 msgid "use_large_installation_tweaks=&lt;0/1&gt;"
-msgstr ""
+msgstr "use_large_installation_tweaks=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2576
 #, no-wrap
 msgid "use_large_installation_tweaks=0"
-msgstr ""
+msgstr "use_large_installation_tweaks=0"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2582
 msgid "This option determines whether or not the Nagios daemon will take several shortcuts to improve performance. These shortcuts result in the loss of a few features, but larger installations will likely see a lot of benefit from doing so. More information on what optimizations are taken when you enable this option can be found <link linkend=\"securityandperformancetuning-largeinstalltweaks\">here</link>."
-msgstr ""
+msgstr "Cette option détermine si Nagios utilisera différents raccourcis pour améliorer les performances. Ces raccourcis font perdre quelques fonctionnalités, mais ils apportent de gros gains sur des périmètres importants. Plus d'informations sur ces optimisations quand vous activez cette option peuvent être trouvées  <link linkend=\"securityandperformancetuning-largeinstalltweaks\">ici</link>."
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2591
 msgid "0 = Don't use tweaks (default)"
-msgstr ""
+msgstr "0 = Ne pas utiliser les optimisations (par défaut)"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2595
 msgid "1 = Use tweaks"
-msgstr ""
+msgstr "1 = Utiliser les optimisations"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2601
 msgid "<anchor id=\"configuringnagios-configmain-free_child_process_memory\" xreflabel=\"Child Process Memory Option\"/>Child Process Memory Option"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-free_child_process_memory\" xreflabel=\"Option de gestion de la mémoire des processus enfants\"/>Option de gestion de la mémoire des processus enfants"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2611
 #, no-wrap
 msgid "free_child_process_memory=&lt;0/1&gt;"
-msgstr ""
+msgstr "free_child_process_memory=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2617
 #, no-wrap
 msgid "free_child_process_memory=0"
-msgstr ""
+msgstr "free_child_process_memory=0"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2623
 msgid "This option determines whether or not Nagios will free memory in child processes when they are fork()ed off from the main process. By default, Nagios frees memory. However, if the <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link> option is enabled, it will not. By defining this option in your configuration file, you are able to override things to get the behavior you want."
-msgstr ""
+msgstr "Cette option permet de déterminer si Nagios libérera la mémoire utilisée par les processus enfant quand il seront arrivé en fin de traitement. Par défaut, Nagios libère la mémoire. Ce"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2632
 msgid "0 = Don't free memory"
-msgstr ""
+msgstr "0 = Ne pas libérer la mémoire"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2636
 msgid "1 = Free memory"
-msgstr ""
+msgstr "1 = Libérer la mémoire"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2642
 msgid "<anchor id=\"configuringnagios-configmain-child_processes_fork_twice\" xreflabel=\"Child Processes Fork Twice\"/>Child Processes Fork Twice"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-configmain-child_processes_fork_twice\" xreflabel=\"Forker les processus enfants en double\"/>Forker les processus enfant en double"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2652
 #, no-wrap
 msgid "child_processes_fork_twice=&lt;0/1&gt;"
-msgstr ""
+msgstr "child_processes_fork_twice=&lt;0/1&gt;"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:2658
 #, no-wrap
 msgid "child_processes_fork_twice=0"
-msgstr ""
+msgstr "child_processes_fork_twice=0"
 
 # type: Content of: <chapter><section><section><para>
 #: ConfiguringNagios/configmain.xml:2664
 msgid "This option determines whether or not Nagios will fork() child processes twice when it executes host and service checks. By default, Nagios fork()s twice. However, if the <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link> option is enabled, it will only fork() once. By defining this option in your configuration file, you are able to override things to get the behavior you want."
-msgstr ""
+msgstr "Cette option détermine si nagios doit forker ou non en double les processus enfants quand il execute des contrôle d'hôte et de service. Par défaut, Nagios fork en double. Cependant, si l'option <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\"> est activée, il ne fera qu'un fork. En déclarant cette option dans vortre fichier de configuration, vous avez la possibilité de changer ce comportement."
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2674
 msgid "0 = Fork() just once"
-msgstr ""
+msgstr "0 = Fork() une fois"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:2678
 msgid "1 = Fork() twice"
-msgstr ""
+msgstr "1 = Fork() en double"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:2684
@@ -3674,12 +3677,12 @@ msgstr "Cette option détermine si les directives dans vos définitions d'objet 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:4345
 msgid "0 = Don't use regular expression matching (default)"
-msgstr "0 = Don't use regular expression matching (default)"
+msgstr "0 = Ne pas utiliser les concordances par expressions rationnelles (par défaut)"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:4349
 msgid "1 = Use regular expression matching"
-msgstr "1 = Use regular expression matching"
+msgstr "1 = Utiliser les concordances par expressions rationnelles"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4355
@@ -3706,12 +3709,12 @@ msgstr "Si vous avez activé la concordance par expression rationnelle, cette op
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:4389
 msgid "0 = Don't use true regular expression matching (default)"
-msgstr "0 = Don't use true regular expression matching (default)"
+msgstr "0 = Ne pas utiliser les vraies concordances par expressions rationnelles"
 
 # type: Content of: <chapter><section><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/configmain.xml:4394
 msgid "1 = Use true regular expression matching"
-msgstr "1 = Use true regular expression matching"
+msgstr "1 = Utiliser les vraies concordances par expressions rationnelles"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4400
@@ -3797,7 +3800,7 @@ msgstr "# = Regardez la définition de BROKER_* dans le code source (<filename>i
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/configmain.xml:4504
 msgid "<anchor id=\"configuringnagios-configmain-broker_module\" xreflabel=\"Event Broker Modules\"/>Event Broker Modules"
-msgstr "<anchor id=\"configuringnagios-configmain-broker_module\" xreflabel=\"Event Broker Modules\"/>Les Modules évenementiels"
+msgstr "<anchor id=\"configuringnagios-configmain-broker_module\" xreflabel=\"Event Broker Modules\"/>Les Modules évènementiels"
 
 # type: Content of: <chapter><section><section><informaltable><tgroup><tbody><row><entry><para><programlisting>
 #: ConfiguringNagios/configmain.xml:4514
