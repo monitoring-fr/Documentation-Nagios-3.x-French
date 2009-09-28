@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-09-15 17:46+0100\n"
+"PO-Revision-Date: 2009-09-28 12:53+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -923,53 +923,53 @@ msgstr "Description des variables"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:379
 msgid "This directive is used to define a short name used to identify the host. It is used in host group and service definitions to reference this particular host. Hosts can have multiple services (which are monitored) associated with them. When used properly, the $HOSTNAME$ <link linkend=\"thebasics-macros\">macro</link> will contain this short name."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom court identifiant l'hôte. Ce nom est utilisé dans les définitions de groupes d'hôtes et de services pour faire référence à cet hôte en particulier. Les hôtes peuvent avoir plusieurs services (qui sont supervisés) associés à eux. Bien utilisé, la <link linkend=\"thebasics-macros\">macro</link> $HOSTNAME$ contiendra ce nom court."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:394
 msgid "This directive is used to define a longer name or description used to identify the host.  It is provided in order to allow you to more easily identify a particular host. When used properly, the $HOSTALIAS$ <link linkend=\"thebasics-macros\">macro</link> will contain this alias/description."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom long ou une description identifiant l'hôte. Cela permet d'identifier plus facilement un hôte en particulier. Bien utilisé, la <link linkend=\"thebasics-macros\">macro</link> $HOSTALIAS$ contiendra cet alias/description."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:407
 msgid "This directive is used to define the address of the host. Normally, this is an IP address, although it could really be anything you want (so long as it can be used to check the status of the host). You can use a FQDN to identify the host instead of an IP address, but if &protocol-dns; services are not availble this could cause problems. When used properly, the $HOSTADDRESS$ <link linkend=\"thebasics-macros\">macro</link> will contain this address."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir l'adresse de l'hôte. Normalement, c'est une adresse IP, même si cela pourrait être ce que vous voulez (au moins tant que cela peut être utilisé pour contrôler l'état d'un hôte). Vous pouvez utiliser le FQDN pour identifier l'hôte plutôt que son adresse IP, mais avec des problèmes possibles si les services &protocol-dns; ne sont pas disponibles. Bine utilisé, la <link linkend=\"thebasics-macros\">macro</link> $HOSTADDRESS$ contiendra cette adresse."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><note><para>
 #: ConfiguringNagios/objectdefinitions.xml:415
 msgid "If you do not specify an address directive in a host definition, the name of the host will be used as its address."
-msgstr ""
+msgstr "Le nom de l'hôte sera utilisé comme adresse si vous ne précisez pas de variable adresse dans la définition d el'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><caution><para>
 #: ConfiguringNagios/objectdefinitions.xml:417
 msgid "A word of caution about doing this, however - if &protocol-dns; fails, most of your service checks will fail because the plugins will be unable to resolve the host name."
-msgstr ""
+msgstr "Une petite mise en garde néanmoins sur le fait de le faire - si le service &protocol-dns; tombe, la plupart de vos contrôles de services seront en erreur parce que les plugins seront incapbles de résoudre le nom de l'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:428
 msgid "This directive is used to define an alternate name that should be displayed in the web interface for this host. If not specified, this defaults to the value you specify for the <emphasis>host_name</emphasis> directive."
-msgstr ""
+msgstr "Cette variables est utilisée pour afficher un nom différent à l'affichage dans l'interface web pour cet hôte. Si non précisée, la valeur par défaut est prise depuis la variable <emphasis>host_name</emphasis>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><note><para>
 #: ConfiguringNagios/objectdefinitions.xml:432
 #: ConfiguringNagios/objectdefinitions.xml:1524
 msgid "The current CGIs do not use this option, although future versions of the web interface will."
-msgstr ""
+msgstr "Les CGIs actuels n'utilise pas cette option, mais les futurs versions de l'interface le feront."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:442
 msgid "This directive is used to define a comma-delimited list of short names of the \"parent\" hosts for this particular host. Parent hosts are typically routers, switches, firewalls, etc. that lie between the monitoring host and a remote hosts. A router, switch, etc.  which is closest to the remote host is considered to be that host's \"parent\". Read the \"Determining Status and Reachability of Network Hosts\" document located <link linkend=\"thebasics-networkreachability\">here</link> for more information. If this host is on the same network segment as the host doing the monitoring (without any intermediate routers, etc.) the host is considered to be on the local network and will not have a parent host. Leave this value blank if the host does not have a parent host (i.e. it is on the same segment as the Nagios host). The order in which you specify parent hosts has no effect on how things are monitored."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une liste séparée par des virgules de noms courts représentant les hôtes <quote>parents</quote> de cet hôte en particulier. Les hôtes parents sont typiquement des routeurs, des parefeus, etc... qui se trouvent sur la route entre le serveur de supervision et les hôtes à superviser. Un routeur, switch, etc... qui se trouve le plus près de l'hôte à superviser est considéré comme le <quote>parent</quote> de cet hôte. Lisez le document <quote>Déterminer l'état et l'accessibilité du réseau des hôtes</quote> situé <link linkend=\"thebasics-networkreachability\">ici</link> pour plus d'informations. Si l'hôte appartient au même segment réseau que le serveur de supervision (sans routeur intermédiaire, etc...), alors l'hôte est considéré comme membre du réseau local et il n'aura pas d'hôte parent. Laissez cette valeur vide si l'hôte n'a pas d'hôte parent (par exemple si il est sur le même segment réseau que le serveur Nagios). L'ordre dans lequel vous précisez les hôtes parents n'a pas d'effet sur la façon dont sont supervisés les choses."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:466
 msgid "This directive is used to identify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">hostgroup(s)</link> that the host belongs to. Multiple hostgroups should be separated by commas. This directive may be used as an alternative to (or in addition to)  using the <emphasis>members</emphasis> directive in <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">hostgroup</link> definitions."
-msgstr ""
+msgstr "Cette variable est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">groupes d'hôtes</link> auxquels appartient cet hôte. Plusieurs noms de groupes doivent être séparés par des virgules. Cette variable peut être utilisée comme alternative (ou en complément) à la variable <emphasis>members</emphasis> des définitions de <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">groupes d'hôtes</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:481
 msgid "This directive is used to specify the <emphasis>short name</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-command\">command</link> that should be used to check if the host is up or down. Typically, this command would try and ping the host to see if it is \"alive\". The command must return a status of OK (0) or Nagios will assume the host is down. If you leave this argument blank, the host will <emphasis>not</emphasis> be actively checked. Thus, Nagios will likely always assume the host is up (it may show up as being in a \"PENDING\" state in the web interface). This is useful if you are monitoring printers or other devices that are frequently turned off. The maximum amount of time that the notification command can run is controlled by the <link linkend=\"configuringnagios-configmain-host_check_timeout\">host_check_timeout</link> option."
-msgstr ""
+msgstr "Cette variable est utilisée pour identifier le <emphasis>nom court</emphasis> de la <link linkend=\"configuringnagios-objectdefinitions-command\">commande</link> à utiliser pour contrôler si l'hôte répond ou non. Typiquement, cette commande essayera de pinguer l'hôte pour voir s'il est <quote>vivant</quote>. La commande doit retourner un état OK (0) ou Nagios pensera que l'hôte ne répond pas. Si vous laissez cette variable vide, cet hôte ne sera <emphasis>pas</emphasis> contrôlé activement. Du coup, Nagios partira certainement du principe que cet hôte répond (il peut être indiqué en état <quote>PENDING</quote> dans l'interface web). C'est utile si vous supervisez des imprimantes ou des équipements qui sont fréquemment éteints. Le temps maximal d'exécution de la commande peut être contrôlé par l'option <link linkend=\"configuringnagios-configmain-host_check_timeout\">host_check_timeout</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:503
@@ -979,75 +979,75 @@ msgstr "Par défaut, Nagios part du prinicipe que tous les hôtes sont dans un �
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:516
 msgid "This directive is used to define the number of times that Nagios will retry the host check command if it returns any state other than an OK state.  Setting this value to 1 will cause Nagios to generate an alert without retrying the host check again."
-msgstr ""
+msgstr "Cette variable peut être utilisée pour définir le nombre de fois que Nagios va tenter d'exécuter la commande de contrôle d'hôte si elle retourne un état différent de OK. Mettre cette valeur à 1 indique à Nagios de générer une alerte sans réessayer de contrôler l'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><note><para>
 #: ConfiguringNagios/objectdefinitions.xml:520
 msgid "If you do not want to check the status of the host, you must still set this to a minimum value of 1. To bypass the host check, just leave the <varname>check_command</varname> option blank."
-msgstr ""
+msgstr "Si vous ne souhaitez pas contrôler l'état de l'hôte, vous devez quand même placer cette variable à une valeure minimale de 1. Pour court-circuiter le contrôle de l'hôte, laissez simplement vide l'option <varname>check_command</varname>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:532
 msgid "This directive is used to define the number of <quote>time units</quote> between regularly scheduled checks of the host. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. More information on this value can be found in the <link linkend=\"advancedtopics-checkscheduling\">check scheduling</link> documentation."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nombre d'<quote>unités de temps</quote> entre les contrôles réguliers d'un hôte. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus d'informations sur cette valeur peut être trouvée dans la documentation sur <link linkend=\"advancedtopics-checkscheduling\">l'ordonnancement des contrôles</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:546
 msgid "This directive is used to define the number of <quote>time units</quote> to wait before scheduling a re-check of the hosts. Hosts are rescheduled at the retry interval when they have changed to a non-UP state. Once the host has been retried <emphasis role=\"bold\">max_check_attempts</emphasis> times without a change in its status, it will revert to being scheduled at its <quote>normal</quote> rate as defined by the <emphasis role=\"bold\">check_interval</emphasis> value. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. More information on this value can be found in the <link linkend=\"advancedtopics-checkscheduling\">check cheduling</link> documentation."
-msgstr ""
+msgstr "Cette directive est utilisée pour définir le nombre d'<quote>unités de temps</quote> à attendre avant d'ordonnancer un nouveau contrôle des hôtes. Les hôtes sont recontrôlés à l'intervalle de réessai quand ils sont passées dans un état non UP. Une fois que l'hôte à été réessayé le nombre de fois précisé dans <emphasis role=\"bold\">max_check_attempts</emphasis> sans changement d'état, il sera contrôlé à nouveau sur une fréquence <quote>normale</quote> telle que définie dans la valeur <emphasis role=\"bold\">check_interval</emphasis>. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus d'informations sur cette valeur peut être trouvée dans la documentation sur <link linkend=\"advancedtopics-checkscheduling\">l'ordonnancement des contrôles</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:562
 #: ConfiguringNagios/objectdefinitions.xml:1628
 msgid "active_checks_enabled<link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "active_checks_enabled<link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:565
 msgid "This directive is used to determine whether or not active checks (either regularly scheduled or on-demand) of this host are enabled. Values: 0 = disable active host checks, 1 = enable active host checks."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir si les contrôles actifs (soit réguliers soit à la demande) sont possibles pour cet hôte. Valeurs : 0 = contrôles d'hôte actif désactivés, 1 = contrôles d'hôte actif activés."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:574
 #: ConfiguringNagios/objectdefinitions.xml:1642
 msgid "passive_checks_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "passive_checks_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:577
 msgid "This directive is used to determine whether or not passive checks are enabled for this host. Values: 0 = disable passive host checks, 1 = enable passive host checks."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir si les contrôles passifs sont possibles pour cet hôte. Valeurs : 0 = contrôles d'hôte passif désactivés, 1 = contrôles d'hôte passif activés."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:588
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which active checks of this host can be made."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom court de la <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">période de temps</link> pendant laquelle peut se dérouler les contrôles actifs de cet hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:595
 msgid "obsess_over_host <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "obsess_over_host <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:598
 msgid "This directive determines whether or not checks for the host will be <quote>obsessed</quote> over using the <link linkend=\"configuringnagios-configmain-ochp_command\">ochp_command</link>."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir si les contrôles pour cet hôte seront ou non <quote>obsessed</quote> en utilisant la commande <link linkend=\"configuringnagios-configmain-ochp_command\">ochp_command</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:606
 #: ConfiguringNagios/objectdefinitions.xml:1677
 msgid "check_freshness <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "check_freshness <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:609
 msgid "This directive is used to determine whether or not <link linkend=\"advancedtopics-freshness\">freshness checks</link> are enabled for this host. Values: 0 = disable freshness checks, 1 = enable freshness checks."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir si les <link linkend=\"advancedtopics-freshness\">contrôle de fraîcheur</link> sont possibles pour cet hôte. Valeurs : 0 = contrôles de la fraîcheur désactivés, 1 = contrôles de la fraîcheur activés."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:619
 msgid "This directive is used to specify the freshness threshold (in seconds) for this host. If you set this directive to a value of 0, Nagios will determine a freshness threshold to use automatically."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le seuil de fraîcheur (en secondes) de cet hôte. Si vous mettez cette valeur à 0, Nagios va automatiquement déterminer un seuil de fraîcheur à utiliser."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:630
@@ -1674,12 +1674,12 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1795
 msgid "0 = disable performance data processing"
-msgstr ""
+msgstr "0 = traitement des données de performance désactivé"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1796
 msgid "1 = enable performance data processing"
-msgstr ""
+msgstr "1 = traitement des données de performance activé"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1806
@@ -1690,13 +1690,13 @@ msgstr ""
 #: ConfiguringNagios/objectdefinitions.xml:1811
 #: ConfiguringNagios/objectdefinitions.xml:2589
 msgid "0 = disable status information retention"
-msgstr ""
+msgstr "0 = rétention des données d'états désactivée"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1812
 #: ConfiguringNagios/objectdefinitions.xml:2590
 msgid "1 = enable status information retention."
-msgstr ""
+msgstr "1 = rétention des données d'états activée"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1822
@@ -1707,13 +1707,13 @@ msgstr ""
 #: ConfiguringNagios/objectdefinitions.xml:1827
 #: ConfiguringNagios/objectdefinitions.xml:2605
 msgid "0 = disable non-status information retention"
-msgstr ""
+msgstr "0 = rétention des données autres que celles d'états désactivée"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1828
 #: ConfiguringNagios/objectdefinitions.xml:2606
 msgid "1 = enable non-status information retention"
-msgstr ""
+msgstr "1 = rétention des données autres que celles d'états activée"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1838
@@ -1783,12 +1783,12 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1906
 msgid "i0 = disable service notifications"
-msgstr ""
+msgstr "0 = notifications sur les services désactivées"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1907
 msgid "1 = enable service notifications."
-msgstr ""
+msgstr "1 = notifications sur les services activées"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1917
@@ -2164,13 +2164,13 @@ msgstr ""
 #: ConfiguringNagios/objectdefinitions.xml:2413
 #: ConfiguringNagios/objectdefinitions.xml:2427
 msgid "0 = don't send notifications"
-msgstr ""
+msgstr "0 = Envois des notifications désactivés"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2414
 #: ConfiguringNagios/objectdefinitions.xml:2428
 msgid "1 = send notifications"
-msgstr ""
+msgstr "1 = Envois des notifications activés"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2424
@@ -2200,27 +2200,27 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2484
 msgid "d = notify on DOWN host states"
-msgstr ""
+msgstr "d = notification sur les hôtes en états DOWN"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2485
 msgid "u = notify on UNREACHABLE host states"
-msgstr ""
+msgstr "u = notification sur les hôtes en états UNREACHABLE"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2486
 msgid "r = notify on host recoveries (UP states)"
-msgstr ""
+msgstr "r = notification quand un hôte retourne à la normale (états UP)"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2487
 msgid "f = notify when the host starts and stops <link linkend=\"advancedtopics-flapping\">flapping</link>,"
-msgstr ""
+msgstr "f = notification quand un hôte commence ou s'arrête d'<link linkend=\"advancedtopics-flapping\">osciller</link>,"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2488
 msgid "s = send notifications when host or service <link linkend=\"advancedtopics-downtime\">scheduled downtime</link> starts and ends. If you specify <emphasis role=\"bold\">n</emphasis> (none) as an option, the contact will not receive any type of host notifications."
-msgstr ""
+msgstr "s = envoi de notifications quand un hôte ou service entre ou sort de période de <link linkend=\"advancedtopics-downtime\">maintenance planifiée</link>. Si vous précisez <emphasis role=\"bold\">n</emphasis> (null) comme option, le contact ne recevra aucun type de notifications d'hôtes."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2498
