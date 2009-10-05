@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-09-28 12:53+0100\n"
+"PO-Revision-Date: 2009-10-05 11:30+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -1052,85 +1052,85 @@ msgstr "Cette variable est utilisée pour définir le seuil de fraîcheur (en se
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:630
 msgid "This directive is used to specify the <emphasis>short name</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-command\">command</link> that should be run whenever a change in the state of the host is detected (i.e. whenever it goes down or recovers). Read the documentation on <link linkend=\"advancedtopics-eventhandlers\">event handlers</link> for a more detailed explanation of how to write scripts for handling events.  The maximum amount of time that the event handler command can run is controlled by the <link linkend=\"configuringnagios-configmain-event_handler_timeout\">event_handler_timeout</link> option."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis> d'une <link linkend=\"configuringnagios-objectdefinitions-command\">commande</link> qui devrait être exécuté à chaque changement d'état de l'hôte (par exemple quand il n'est plus disponible ou qu'il redevient disponible). Lisez la documentation sur les <link linkend=\"advancedtopics-eventhandlers\">gestionnaire d'événenements</link> pour plus d'explications sur la façon d'écrire des scripts pour gérer les événements. Le temps maximal d'exécution d'une commande de gestion d'événements est contrôlé par l'option <link linkend=\"configuringnagios-configmain-event_handler_timeout\">event_handler_timeout</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:644
 #: ConfiguringNagios/objectdefinitions.xml:1718
 msgid "event_handler_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "event_handler_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:647
 msgid "This directive is used to determine whether or not the event handler for this host is enabled. Values: 0 = disable host event handler, 1 = enable host event handler."
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si le gestionnaire d'événements est activé ou non pour un hôte. Valeurs : 0 = gestionnaire d'événements d'hôte désactivé, 1 = gestionnaire d'événements d'hôte activé"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:658
 msgid "This directive is used to specify the low state change threshold used in flap detection for this host. More information on flap detection can be found <link linkend=\"advancedtopics-flapping\">here</link>.  If you set this directive to a value of 0, the program-wide value specified by the <link linkend=\"configuringnagios-configmain-low_host_flap_threshold\">low_host_flap_threshold</link> directive will be used."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le seuil bas de détection d'oscillation pour l'hôte. Plus d'informations sur la détection d'ocillations se trouve <link linkend=\"advancedtopics-flapping\">ici</link>. Si vous mettez cette variable à 0, la valeur précisée avec <link linkend=\"configuringnagios-configmain-low_host_flap_threshold\">low_host_flap_threshold</link> au niveau global du logiciel sera utilisée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:672
 msgid "This directive is used to specify the high state change threshold used in flap detection for this host. More information on flap detection can be found <link linkend=\"advancedtopics-flapping\">here</link>.  If you set this directive to a value of 0, the program-wide value specified by the <link linkend=\"configuringnagios-configmain-high_host_flap_threshold\">high_host_flap_threshold</link> directive will be used."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le seuil haut de détection d'oscillation pour l'hôte. Plus d'informations sur la détection d'ocillations se trouve <link linkend=\"advancedtopics-flapping\">ici</link>. Si vous mettez cette variable à 0, la valeur précisée avec <link linkend=\"configuringnagios-configmain-low_host_flap_threshold\">low_host_flap_threshold</link> au niveau global du logiciel sera utilisée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:683
 #: ConfiguringNagios/objectdefinitions.xml:1758
 msgid "flap_detection_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "flap_detection_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:686
 msgid "This directive is used to determine whether or not flap detection is enabled for this host. More information on flap detection can be found <link linkend=\"advancedtopics-flapping\">here</link>.  Values: 0 = disable host flap detection, 1 = enable host flap detection."
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si la détection d'oscillation est activée ou non pour l'hôte. Plus d'informations sur la détection d'ocillations se trouve <link linkend=\"advancedtopics-flapping\">ici</link>. Valeurs : 0 = détection d'ocillation pour l'hôte désactivée, 1 = détection d'ocillation pour l'hôte activée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:698
 msgid "This directive is used to determine what host states the <link linkend=\"advancedtopics-flapping\">flap detection logic</link> will use for this host. Valid options are a combination of one or more of the following: <emphasis role=\"bold\">o</emphasis> = UP states, <emphasis role=\"bold\">d</emphasis> = DOWN states, <emphasis role=\"bold\">u</emphasis> = UNREACHABLE states."
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer quels états d'hôte seront utilisés pour la <link linkend=\"advancedtopics-flapping\">logique de détection d'oscillations</link>. Les options valides sont une combinaison d'un ou plusieurs états parmi les suivants : <emphasis role=\"bold\">o</emphasis> = états UP, <emphasis role=\"bold\">d</emphasis> = états DOWN, <emphasis role=\"bold\">u</emphasis> = états UNREACHABLE."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:708
 #: ConfiguringNagios/objectdefinitions.xml:1789
 msgid "process_perf_data <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "process_perf_data <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:711
 msgid "This directive is used to determine whether or not the processing of performance data is enabled for this host. Values: 0 = disable performance data processing, 1 = enable performance data processing."
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si le traitement des données de performance est activé ou non pour l'hôte. Valeurs : 0 = traitement des données de performance désactivé, 1 = traitement des données de performance activé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:723
 msgid "This directive is used to determine whether or not status-related information about the host is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value: 0 = disable status information retention, 1 = enable status information retention."
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les informations relatives aux états de l'hôte sont conservées après redémarrage du programme. C'est seulement utile si vou savez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur : 0 = rétention des données d'états désactivé, 1 = rétention des données d'états activé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:736
 msgid "This directive is used to determine whether or not non-status information about the host is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value: 0 = disable non-status information retention, 1 = enable non-status information retention."
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les informations différentes des états de l'hôte sont conservées après redémarrage du programme. C'est seulement utile si vou savez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur : 0 = rétention des données différentes des états désactivé, 1 = rétention des données différentes des états activé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:750
 msgid "This is a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> that should be notified whenever there are problems (or recoveries) with this host.  Multiple contacts should be separated by commas. Useful if you want notifications to go to just a few people and don't want to configure <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact groups</link>. You must specify at least one contact or contact group in each host definition."
-msgstr ""
+msgstr "C'est une liste des <emphasis>noms courts</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> qui devraient être notifiés quand quand il y a des problèmes (ou retours à la normale) avec cet hôte. Plusieurs contacts peuvent être séparés par des virgules. Utile si vous souhaitez envoyer des notifications vers quelques personnes et que vous ne souhaitez pas configurer des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:765
 msgid "This is a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact groups</link> that should be notified whenever there are problems (or recoveries) with this host. Multiple contact groups should be separated by commas.  You must specify at least one contact or contact group in each host definition."
-msgstr ""
+msgstr "C'est une liste des <emphasis>noms courts</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link> qui devraient être notifiés quand quand il y a des problèmes (ou retours à la normale) avec cet hôte. Plusieurs groupes de contacts peuvent être séparés par des virgules. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:778
 msgid "This directive is used to define the number of <quote>time units</quote> to wait before re-notifying a contact that this service is <emphasis>still</emphasis> down or unreachable. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. If you set this value to 0, Nagios will <emphasis>not</emphasis> re-notify contacts about problems for this host - only one problem notification will be sent out."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nombre d'<quote>unités de temps</quote> à attendre avant de re-notifier un contact que ce service est <emphasis>tojours</emphasis> down ou innacessible. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les contacts des problèmes pour cet hôte - une seule notification de problème sera envoyée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:794
 msgid "This directive is used to define the number of <quote>time units</quote> to wait before sending out the first problem notification when this host enters a non-UP state. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. If you set this value to 0, Nagios will start sending out notifications immediately."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nombre d'<quote>unités de temps</quote> à attendre avant d'envoyer la première notification quand un hôte passe dans un état non-UP. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous mettez cette valeur à 0, Nagios commencera à envoyer des notifications immédiatement."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:808
