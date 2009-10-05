@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-10-05 13:07+0100\n"
+"PO-Revision-Date: 2009-10-05 14:13+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -1052,7 +1052,7 @@ msgstr "Cette variable est utilisée pour définir le seuil de fraîcheur (en se
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:630
 msgid "This directive is used to specify the <emphasis>short name</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-command\">command</link> that should be run whenever a change in the state of the host is detected (i.e. whenever it goes down or recovers). Read the documentation on <link linkend=\"advancedtopics-eventhandlers\">event handlers</link> for a more detailed explanation of how to write scripts for handling events.  The maximum amount of time that the event handler command can run is controlled by the <link linkend=\"configuringnagios-configmain-event_handler_timeout\">event_handler_timeout</link> option."
-msgstr "Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis> d'une <link linkend=\"configuringnagios-objectdefinitions-command\">commande</link> qui devrait être exécuté à chaque changement d'état de l'hôte (par exemple quand il n'est plus disponible ou qu'il redevient disponible). Lisez la documentation sur les <link linkend=\"advancedtopics-eventhandlers\">gestionnaire d'événenements</link> pour plus d'explications sur la façon d'écrire des scripts pour gérer les événements. Le temps maximal d'exécution d'une commande de gestion d'événements est contrôlé par l'option <link linkend=\"configuringnagios-configmain-event_handler_timeout\">event_handler_timeout</link>."
+msgstr "Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis> d'une <link linkend=\"configuringnagios-objectdefinitions-command\">commande</link> à exécuter à chaque changement d'état de l'hôte (par exemple quand il n'est plus disponible ou qu'il redevient disponible). Lisez la documentation sur les <link linkend=\"advancedtopics-eventhandlers\">gestionnaire d'événenements</link> pour plus d'explications sur la façon d'écrire des scripts pour gérer les événements. Le temps maximal d'exécution d'une commande de gestion d'événements est contrôlé par l'option <link linkend=\"configuringnagios-configmain-event_handler_timeout\">event_handler_timeout</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:644
@@ -1524,17 +1524,17 @@ msgstr "Cette variable est utilisée pour définir le nombre de fois que Nagios 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1599
 msgid "This directive is used to define the number of <quote>time units</quote> to wait before scheduling the next <quote>regular</quote> check of the service. <quote>Regular</quote> checks are those that occur when the service is in an OK state or when the service is in a non-OK state, but has already been rechecked <emphasis role=\"bold\">max_check_attempts</emphasis> number of times. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. More information on this value can be found in the <link linkend=\"advancedtopics-checkscheduling\">check scheduling</link> documentation."
-msgstr ""
+msgstr "Cette directive est utilisée pour définir le nombre d'<quote>unités de temps</quote> à attendre avant d'ordonnancer le contrôle <quote>régulier</quote> suivant du service. Les contrôles <quote>réguliers</quote> sont ceux qui sont exécutés quand un service est dans un état OK ou non-OK mais qu'il a déjà été recontrôlé le nombre de fois précisé dans la variable <emphasis role=\"bold\">max_check_attempts</emphasis>. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus d'informations sur cette valeur peut être trouvée dans la documentation sur <link linkend=\"advancedtopics-checkscheduling\">l'ordonnancement des contrôles</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1614
 msgid "This directive is used to define the number of <quote>time units</quote> to wait before scheduling a re-check of the service. Services are rescheduled at the retry interval when they have changed to a non-OK state. Once the service has been retried <emphasis role=\"bold\">max_check_attempts</emphasis> times without a change in its status, it will revert to being scheduled at its <quote>normal</quote> rate as defined by the <emphasis role=\"bold\">check_interval</emphasis> value. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. More information on this value can be found in the <link linkend=\"advancedtopics-checkscheduling\">check scheduling</link> documentation."
-msgstr ""
+msgstr "Cette directive est utilisée pour définir le nombre d'<quote>unités de temps</quote> à attendre avant d'ordonnancer un nouveau contrôle du service. Les services sont recontrôlés à l'intervalle de réessai quand ils sont passées dans un état non UP. Une fois que le service à été réessayé le nombre de fois précisé dans la variable <emphasis role=\"bold\">max_check_attempts</emphasis> sans changement d'état, il sera contrôlé à nouveau sur une fréquence <quote>normale</quote> telle que définie dans la valeur <emphasis role=\"bold\">check_interval</emphasis>. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus d'informations sur cette valeur peut être trouvée dans la documentation sur <link linkend=\"advancedtopics-checkscheduling\">l'ordonnancement des contrôles</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1631
 msgid "This directive is used to determine whether or not active checks of this service are enabled. Values:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si les contrôles actifs sont activés ou non pour ce service. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1634
@@ -1549,7 +1549,7 @@ msgstr "1 = enable active service checks."
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1645
 msgid "This directive is used to determine whether or not passive checks of this service are enabled. Values:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si les contrôles passifs sont activés ou non pour ce service. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1648
@@ -1564,22 +1564,22 @@ msgstr "1 = enable passive service checks."
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1659
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which active checks of this service can be made."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nom court de la <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">période de temps</link> pendant laquelle les contrôles actifs sont possibles."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:1667
 msgid "obsess_over_service <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "obsess_over_service <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1670
 msgid "This directive determines whether or not checks for the service will be <quote>obsessed</quote> over using the <link linkend=\"configuringnagios-configmain-ocsp_command\">ocsp_command</link>."
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si les contrôles de ce service seront ou non <quote>obsessed</quote> en utilisant la commande <link linkend=\"configuringnagios-configmain-ocsp_command\">ocsp_command</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1680
 msgid "This directive is used to determine whether or not <link linkend=\"advancedtopics-freshness\">freshness checks</link> are enabled for this service. Values:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si les <link linkend=\"advancedtopics-freshness\">contres de fraîcheur</link> sont activés ou non pour ce service. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1684
@@ -1594,17 +1594,17 @@ msgstr "1 = enable freshness checks"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1695
 msgid "This directive is used to specify the freshness threshold (in seconds) for this service. If you set this directive to a value of 0, Nagios will determine a freshness threshold to use automatically."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le seuil de fraîcheur (en secondes) de ce service. Si vous mettez cette valeur à 0, Nagios va automatiquement déterminer un seuil de fraîcheur à utiliser."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1706
 msgid "This directive is used to specify the <emphasis>short name</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-command\">command</link> that should be run whenever a change in the state of the service is detected (i.e. whenever it goes down or recovers).  Read the documentation on <link linkend=\"advancedtopics-eventhandlers\">event handlers</link> for a more detailed explanation of how to write scripts for handling events. The maximum amount of time that the event handler command can run is controlled by the <link linkend=\"configuringnagios-configmain-event_handler_timeout\">event_handler_timeout</link> option."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis> d'une <link linkend=\"configuringnagios-objectdefinitions-command\">commande</link> à exécuter à chaque changement d'état du service (par exemple quand il n'est plus disponible ou qu'il redevient disponible). Lisez la documentation sur les <link linkend=\"advancedtopics-eventhandlers\">gestionnaire d'événenements</link> pour plus d'explications sur la façon d'écrire des scripts pour gérer les événements. Le temps maximal d'exécution d'une commande de gestion d'événements est contrôlé par l'option <link linkend=\"configuringnagios-configmain-event_handler_timeout\">event_handler_timeout</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1721
 msgid "This directive is used to determine whether or not the event handler for this service is enabled. Values:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si le gestionnaire d'événements est activé ou non pour ce service. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1724
@@ -1619,17 +1619,17 @@ msgstr "1 = enable service event handler."
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1735
 msgid "This directive is used to specify the low state change threshold used in flap detection for this service. More information on flap detection can be found <link linkend=\"advancedtopics-flapping\">here</link>.  If you set this directive to a value of 0, the program-wide value specified by the <link linkend=\"configuringnagios-configmain-low_service_flap_threshold\">low_service_flap_threshold</link> directive will be used."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le seuil bas de détection d'oscillation pour ce service. Plus d'informations sur la détection d'ocillations se trouve <link linkend=\"advancedtopics-flapping\">ici</link>. Si vous mettez cette variable à 0, la valeur précisée avec <link linkend=\"configuringnagios-configmain-low_host_flap_threshold\">low_host_flap_threshold</link> au niveau global du logiciel sera utilisée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1748
 msgid "This directive is used to specify the high state change threshold used in flap detection for this service. More information on flap detection can be found <link linkend=\"advancedtopics-flapping\">here</link>. If you set this directive to a value of 0, the program-wide value specified by the <link linkend=\"configuringnagios-configmain-high_service_flap_threshold\">high_service_flap_threshold</link> directive will be used."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le seuil haut de détection d'oscillation pour ce service. Plus d'informations sur la détection d'ocillations se trouve <link linkend=\"advancedtopics-flapping\">ici</link>. Si vous mettez cette variable à 0, la valeur précisée avec <link linkend=\"configuringnagios-configmain-low_host_flap_threshold\">low_host_flap_threshold</link> au niveau global du logiciel sera utilisée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1761
 msgid "This directive is used to determine whether or not flap detection is enabled for this service. More information on flap detection can be found <link linkend=\"advancedtopics-flapping\">here</link>.  Values:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si la détection d'oscillation est activée ou non pour ce service. Plus d'informations sur la détection d'ocillations se trouve <link linkend=\"advancedtopics-flapping\">ici</link>. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1765
@@ -1644,7 +1644,7 @@ msgstr "1 = enable service flap detection."
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1776
 msgid "This directive is used to determine what service states the <link linkend=\"advancedtopics-flapping\">flap detection logic</link> will use for this service. Valid options are a combination of one or more of the following :"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer quels états de service seront utilisés pour la <link linkend=\"advancedtopics-flapping\">logique de détection d'oscillations</link>. Les options valides sont une combinaison d'un ou plusieurs états parmi les suivants :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1779
@@ -1669,7 +1669,7 @@ msgstr "<emphasis role=\"bold\">u</emphasis> = états UNKNOWN."
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1792
 msgid "This directive is used to determine whether or not the processing of performance data is enabled for this service. Values:"
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si le traitement des données de performance est activé ou non pour ce service. Valeurs : "
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1795
@@ -1738,42 +1738,42 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1879
 msgid "<emphasis role=\"strong\">w</emphasis> = send notifications on a WARNING state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">w</emphasis> = envois de notifications sur état WARNING"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1880
 msgid "<emphasis role=\"bold\">u</emphasis> = send notifications on an UNKNOWN state"
-msgstr ""
+msgstr "<emphasis role=\"bold\">u</emphasis> = envois de notifications sur état UNKNOWN"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1881
 msgid "<emphasis role=\"strong\">c</emphasis> = send notifications on a CRITICAL state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">c</emphasis> = envois de notifications sur état CRITICAL"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1882
 msgid "<emphasis role=\"bold\">r</emphasis> = send notifications on recoveries (OK state)"
-msgstr ""
+msgstr "<emphasis role=\"bold\">r</emphasis> = envois de notifications sur état OK"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1883
 msgid "<emphasis role=\"strong\">f</emphasis> = send notifications when the service starts and stops <link linkend=\"advancedtopics-flapping\">flapping</link>"
-msgstr ""
+msgstr "<emphasis role=\"strong\">f</emphasis> = envois de notifications quand le service commence ou s'arrête d'<link linkend=\"advancedtopics-flapping\">osciller</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1884
 msgid "<emphasis role=\"strong\">s</emphasis> = send notifications when <link linkend=\"advancedtopics-downtime\">scheduled downtime</link> starts and ends"
-msgstr ""
+msgstr "<emphasis role=\"strong\">s</emphasis> = envois de notifications quand une <link linkend=\"advancedtopics-downtime\">période de maintenance planifiée</link> commence ou se termine"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1885
 msgid "<emphasis role=\"bold\">n</emphasis> (none) as an option, no service notifications will be sent out. If you do not specify any notification options, Nagios will assume that you want notifications to be sent out for all possible states"
-msgstr ""
+msgstr "<emphasis role=\"bold\">n</emphasis> (none) en option, aucune notification ne sera envoyée. Si vous ne précisez aucune option de notification, Nagios va partir du principe que les notifications doivent être envoyées pour tout changement d'état possible."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><informalexample><para>
 #: ConfiguringNagios/objectdefinitions.xml:1890
 msgid "If you specify <emphasis role=\"strong\">w,r</emphasis> in this field, notifications will only be sent out when the service goes into a WARNING state and when it recovers from a WARNING state."
-msgstr ""
+msgstr "Si vous précisez<emphasis role=\"strong\">w,r</emphasis>dans ce champ, les notifications seront envoyées uniquement quand le service passera en état WARNING ou qu'il sortira de cet état WARNING."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1903
@@ -1808,22 +1808,22 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1948
 msgid "o = stalk on OK states"
-msgstr ""
+msgstr "o = mémorisation sur états OK"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1949
 msgid "w = stalk on WARNING states"
-msgstr ""
+msgstr "w = mémorisation sur états WARNING"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1950
 msgid "u = stalk on UNKNOWN states"
-msgstr ""
+msgstr "u = mémorisation sur états UNKNOWN"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1951
 msgid "c = stalk on CRITICAL states"
-msgstr ""
+msgstr "c = mémorisation sur états CRITICAL"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1953
@@ -1861,7 +1861,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2031
 msgid "<anchor id=\"configuringnagios-objectdefinitions-servicegroup\" />Service Group Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-servicegroup\" />Définition de groupe de services"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2036
@@ -1941,6 +1941,9 @@ msgid ""
 "members=&lt;host1&gt;,&lt;service1&gt;,&lt;host2&gt;,&lt;service2&gt;,...,&lt;host<emphasis>n</emphasis>&gt;,&lt;service<emphasis>n</emphasis>&gt;\n"
 "\t\t"
 msgstr ""
+"\n"
+"members=&lt;host1&gt;,&lt;service1&gt;,&lt;host2&gt;,&lt;service2&gt;,...,&lt;host<emphasis>n</emphasis>&gt;,&lt;service<emphasis>n</emphasis>&gt;\n"
+"\t\t"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2163
@@ -1965,7 +1968,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2218
 msgid "<anchor id=\"configuringnagios-objectdefinitions-contact\" />Contact Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-contact\" />Définition de contact"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2223
@@ -2230,32 +2233,32 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2501
 msgid "w = notify on WARNING service states"
-msgstr ""
+msgstr "w = notification sur états WARNING de service"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2502
 msgid "u = notify on UNKNOWN service states"
-msgstr ""
+msgstr "u = notification sur états UNKNOWN de service"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2503
 msgid "c = notify on CRITICAL service states"
-msgstr ""
+msgstr "c = notification sur états CRITICAL de service"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2504
 msgid "r = notify on service recoveries (OK states)"
-msgstr ""
+msgstr "r = notification sur états OK"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2505
 msgid "f = notify when the service starts and stops <link linkend=\"advancedtopics-flapping\">flapping</link>."
-msgstr ""
+msgstr "f = notification quand le service commence et s'arrête d'<link linkend=\"advancedtopics-flapping\">osciller</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2506
 msgid "n = (none) : the contact will not receive any type of service notifications."
-msgstr ""
+msgstr "n = (none) : Le contact ne recevra aucun type de notifications de services"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2516
@@ -2285,12 +2288,12 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2573
 msgid "0 = don't allow contact to submit commands"
-msgstr ""
+msgstr "0 = ne pas autoriser le contact à soumettre des commandes"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2574
 msgid "1 = allow contact to submit commands."
-msgstr ""
+msgstr "1 = autoriser le contact à soumettre des commandes."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2584
@@ -2305,7 +2308,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2616
 msgid "<anchor id=\"configuringnagios-objectdefinitions-contactgroup\" />Contact Group Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-contactgroup\" />Définition de groupe de contacts"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2621
@@ -2315,7 +2318,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2627
 msgid "Definition Format:"
-msgstr ""
+msgstr "Format de définition"
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:2640
@@ -2393,7 +2396,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2735
 msgid "<anchor id=\"configuringnagios-objectdefinitions-timeperiod\" xreflabel=\"Time Period Definition\" />Time Period Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-timeperiod\" xreflabel=\"Time Period Definition\" />Définition de période de temps"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2740
@@ -2577,7 +2580,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2928
 msgid "<anchor id=\"configuringnagios-objectdefinitions-command\" />Command Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-command\" />Définition de commande"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2933
@@ -2593,7 +2596,7 @@ msgstr "define command{"
 #: ConfiguringNagios/objectdefinitions.xml:2964
 #: ConfiguringNagios/objectdefinitions.xml:2999
 msgid "command_name"
-msgstr ""
+msgstr "command_name"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:2969
@@ -2647,7 +2650,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:3050
 msgid "<anchor id=\"configuringnagios-objectdefinitions-servicedependency\" />Service Dependency Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-servicedependency\" />Définition de dépendance de service"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:3055
@@ -2759,7 +2762,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:3175
 msgid "dependent_hostgroup"
-msgstr ""
+msgstr "dependent_hostgroup"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3178
@@ -2800,31 +2803,31 @@ msgstr ""
 #: ConfiguringNagios/objectdefinitions.xml:3256
 #: ConfiguringNagios/objectdefinitions.xml:3282
 msgid "<emphasis role=\"strong\">o</emphasis> = fail on an OK state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">o</emphasis> = erreur sur état OK"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3257
 #: ConfiguringNagios/objectdefinitions.xml:3283
 msgid "<emphasis role=\"strong\">w</emphasis> = fail on a WARNING state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">w</emphasis> = erreur sur état WARNING"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3258
 #: ConfiguringNagios/objectdefinitions.xml:3284
 msgid "<emphasis role=\"strong\">u</emphasis> = fail on an UNKNOWN state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">u</emphasis> = erreur sur état UNKNOWN"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3259
 #: ConfiguringNagios/objectdefinitions.xml:3285
 msgid "<emphasis role=\"strong\">c</emphasis> = fail on a CRITICAL state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">c</emphasis> = erreur sur état CRITICAL"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3260
 #: ConfiguringNagios/objectdefinitions.xml:3286
 msgid "<emphasis role=\"strong\">p</emphasis> = fail on a pending state (e.g. the service has not yet been checked)."
-msgstr ""
+msgstr "<emphasis role=\"strong\">p</emphasis> = erreur sur état d'attente (par exemple le service n'a pas encore été vérifié)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3261
@@ -3303,7 +3306,7 @@ msgstr ""
 #: ConfiguringNagios/objectdefinitions.xml:4126
 #: ConfiguringNagios/objectdefinitions.xml:4381
 msgid "Variable Descriptions"
-msgstr ""
+msgstr "Descriptions de variable"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4134
