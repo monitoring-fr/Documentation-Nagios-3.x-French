@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-10-05 15:18+0100\n"
+"PO-Revision-Date: 2009-10-05 17:29+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -1793,7 +1793,7 @@ msgstr "1 = notifications sur les services activées"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1917
 msgid "This is a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> that should be notified whenever there are problems (or recoveries) with this service.  Multiple contacts should be separated by commas. Useful if you want notifications to go to just a few people and don't want to configure <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact groups</link>.  You must specify at least one contact or contact group in each service definition."
-msgstr "C'est une liste des <emphasis>noms courts</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> qui devraient être notifiés quand quand il y a des problèmes (ou retours à la normale) avec ce service. Plusieurs contacts peuvent être séparés par des virgules. Utile si vous souhaitez envoyer des notifications vers quelques personnes et que vous ne souhaitez pas configurer des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'hôte."
+msgstr "C'est une liste des <emphasis>noms courts</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> qui devraient être notifiés quand quand il y a des problèmes (ou retours à la normale) avec ce service. Plusieurs contacts peuvent être séparés par des virgules. Utile si vous souhaitez envoyer des notifications vers quelques personnes et que vous ne souhaitez pas configurer des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition de service."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1932
@@ -2401,7 +2401,7 @@ msgstr "<anchor id=\"configuringnagios-objectdefinitions-timeperiod\" xreflabel=
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2740
 msgid "A time period is a list of times during various days that are considered to be <quote>valid</quote> times for notifications and service checks.  It consists of time ranges for each day of the week that <quote>rotate</quote> once the week has come to an end. Different types of exceptions to the normal weekly time are supported, including: specific weekdays, days of generic months, days of specific months, and calendar dates."
-msgstr ""
+msgstr "Une période de temps est une liste de plages horaires comprises sur plusieurs jours qui sont considérées comme <quote>valides</quote> pour les notifications et les contrôles de services. Cela consiste en plages horaires définies pour chaque jour de la semaine qui <quote>tournent</quote> une fois la semaine finie. Différents types d'exceptions aux heurs normales de la semaine sont supportées : jours de la semaine en particulier, jours de mois généraux à tous le smois, jours de certains mois et dates de calendrier."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:2763
@@ -2555,7 +2555,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2862
 msgid "This directives is the short name used to identify the time period."
-msgstr ""
+msgstr "Cette variable est un nom court utilisé pour identifer la période de temps."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2870
@@ -2565,17 +2565,17 @@ msgstr "Cette variable est utilisée pour définir un nom long ou une descriptio
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2878
 msgid "The weekday directives (<quote><emphasis>sunday</emphasis></quote> through <quote><emphasis>saturday</emphasis></quote>)are comma-delimited lists of time ranges that are <quote>valid</quote> times for a particular day of the week. Notice that there are seven different days for which you can define time ranges (Sunday through Saturday). Each time range is in the form of <emphasis role=\"bold\">HH:MM-HH:MM</emphasis>, where hours are Specified on a 24 hour clock.  For example, <emphasis role=\"bold\">00:15-24:00</emphasis> means 12:15am in the morning for this day until 12:00am midnight (a 23 hour, 45 minute total time range). If you wish to exclude an entire day from the timeperiod, simply do not include it in the timeperiod definition."
-msgstr ""
+msgstr "Les variables de jours de la semaine (<quote><emphasis>sunday</emphasis></quote> à <quote><emphasis>saturday</emphasis></quote>) sont des listes séparées par des virgules de périodes de temps <quote>valides</quote> pour un jour particulier de la semaine. Notez qu'il y a sept jours différents pour lesquels vous définir des périodes de temps (dimanche à lundi). Chaque période de temps est sous la forme <emphasis role=\"bold\">HH:MM-HH:MM</emphasis>, où les heures sont indiquées sur 24 heures. Par exemple, <emphasis role=\"bold\">00:15-24:00</emphasis> indique 12:15am le matin pour ce jour jusqu'à 12:00am minuit (une période de temps total de 23 heures 45 minutes). Si vous souhaitez exclure un jour entier de la période de temps, il suffit simplement de ne pas l'inclure dans la définition de la période de temps."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2898
 msgid "You can specify several different types of exceptions to the standard rotating weekday schedule. Exceptions can take a number of different forms including single days of a specific or generic month, single weekdays in a month, or single calendar dates. You can also specify a range of days/dates and even specify skip intervals to obtain functionality described by <quote>every 3 days between these dates</quote>. Rather than list all the possible formats for exception strings, I'll let you look at the example timeperiod definitions above to see what's possible. :-)  Weekdays and different types of exceptions all have different levels of precedence, so its important to understand how they can affect each other. More information on this can be found in the documentation on <link linkend=\"thebasics-timeperiods\">timeperiods</link>."
-msgstr ""
+msgstr "Vous pouvez préciser plusieurs types différents d'exceptions au planning habituel de rotation des semaines. Les exceptions peuvent prendre différentes formes comme un seul jour d'un mois particulier ou de tous les mois, une seule semaine d'un mois ou des dates de calendrier. Vous pouvez aussi préciser une plage de jours/dates et même préciser de sauter des intervalles pour obtenir un fonctionnement du type <quote>tous les trois jours entre ces dates</quote>. Plutôt que de lister tous les formats possibles pour les exceptions, je vais vous laisser regarder les quelques exemples de définitions de périodes de temps ci-dessus pour voir ce qui est possible. ;-) Les jours de la semaine et d'autres types d'exceptions ont tous des niveaux différents de précédence, aussi est-il important de comprendre comment ils interagissent les uns les autres. Plus d'informations sur ceci peut être trouvé dans la documentation sur les <link linkend=\"thebasics-timeperiods\">périodes de temps</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2916
 msgid "This directive is used to specify the short names of other timeperiod definitions whose time ranges should be excluded from this timeperiod. Multiple timeperiod names should be separated with a comma."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser les noms courts de d'autres périodes de temps dont les plages horaires doivent être exclues de cette période de temps. Plusieurs périodes de temps peuvent être précisées en les séparant par des virgules."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2928
@@ -2585,7 +2585,7 @@ msgstr "<anchor id=\"configuringnagios-objectdefinitions-command\" />Définition
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2933
 msgid "A command definition is just that. It defines a command.  Commands that can be defined include service checks, service notifications, service event handlers, host checks, host notifications, and host event handlers. Command definitions can contain <link linkend=\"thebasics-macros\">macros</link>, but you must make sure that you include only those macros that are <quote>valid</quote> for the circumstances when the command will be used. More information on what macros are available and when they are <quote>valid</quote> can be found <link linkend=\"thebasics-macros\">here</link>. The different arguments to a command definition are outlined below."
-msgstr ""
+msgstr "Une définition de commande n'est rien d'autre que ça. Elle définit une commande. les commandes qui peuvent être définies sont les contrôles de services, les notifications de services, les gestionnaires d'événements de services, les contrôles d'hôtes, les notifications d'hôtes et les gestionnaires d'événements d'hôtes. Les définitions de commandes peuvent contenir des <link linkend=\"thebasics-timeperiods\">timeperiods</link> mais vous devez vous assurez de n'utiliser que les macros <quote>valides</quote> dans le contexte où sera utilisée la commande. Plus d'informations sur les macros disponibles et quand elles sont <quote>valides</quote> peut être trouvé <link linkend=\"thebasics-macros\">ici</link>. Les différents arguments d'une définition de commande sont indiqués ci-dessous."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:2959
@@ -2630,22 +2630,22 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3002
 msgid "This directive is the short name used to identify the command. It is referenced in <link linkend=\"configuringnagios-objectdefinitions-contact\">contact</link>, <link linkend=\"configuringnagios-objectdefinitions-host\">host</link>, and <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> definitions (in notification, check, and event handler directives), among other places."
-msgstr ""
+msgstr "Cette variable est un nom court utilisé pour identifier la commande. Ceci est référencé dans les définitions de <link linkend=\"configuringnagios-objectdefinitions-contact\">contact</link>, d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôte</link> et de <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> (dans les variables <varname>notification</varname>, <varname>check</varname> et <varname>event handler</varname>) entre autres endroits."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3015
 msgid "This directive is used to define what is actually executed by Nagios when the command is used for service or host checks, notifications, or <link linkend=\"advancedtopics-eventhandlers\">event handlers</link>. Before the command line is executed, all valid <link linkend=\"thebasics-macros\">macros</link> are replaced with their respective values. See the documentation on macros for determining when you can use different macros. Note that the command line is <emphasis>not</emphasis> surrounded in quotes.  Also, if you want to pass a dollar sign ($) on the command line, you have to escape it with another dollar sign."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir ce qui est réellement exécuté par Nagios quand la commande est utilisée pour les contrôles d'hôtes et de services, les notifications ou les <link linkend=\"advancedtopics-eventhandlers\">gestionnaires d'événements</link>. Avant que la commande ne soit exécutée, toutes les <link linkend=\"thebasics-macros\">macros</link> valides sont remplacées par leurs valeurs respectives. Regardez la documentation des macros pour déterminer quand vous pouvez utiliser différentes macros. Notez que la ligne de commande n'est  <emphasis>pas</emphasis> entourée par des guillemets. Également à noter que si vous souhaitez passer le signe ($) sur la ligne de commande, vous devez le protéger avec un autre signe dollar."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><note><para>
 #: ConfiguringNagios/objectdefinitions.xml:3025
 msgid "You may not include a <emphasis role=\"bold\">semicolon</emphasis> (;) in the <emphasis>command_line</emphasis> directive, because everything after it will be ignored as a config file comment. You can work around this limitation by setting one of the <link linkend=\"thebasics-macrolist-user\">$USER$</link> macros in your <link linkend=\"configuringnagios-configmain-resource_file\">resource file</link> to a semicolon and then referencing the appropriate $USER$ macro in the <emphasis>command_line</emphasis> directive in place of the semicolon."
-msgstr ""
+msgstr "Vous devriez ne pas inclure de <emphasis role=\"bold\">point virgule</emphasis> (;) dans la variable <emphasis>command_line</emphasis> parce que tout ce qui se trouvera après sera considéré comme commentaire de fichier de configuration. Vous pouvez contourner cette limitation en initialisant une macro utilisateur <link linkend=\"thebasics-macrolist-user\">$USER$</link> dans votre <link linkend=\"configuringnagios-configmain-resource_file\">fichier de ressource</link> avec un point virgule et en référençant ensuite cette macro $USER$ dans la variable <emphasis>command_line</emphasis> à la place du point virgule. "
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3034
 msgid "If you want to pass arguments to commands during runtime, you can use <link linkend=\"thebasics-macrolist-arg\">$ARGn$ macros</link> in the <emphasis>command_line</emphasis> directive of the command definition and then separate individual arguments from the command name (and from each other) using bang (!) characters in the object definition directive (host check command, service event handler command, etc.) that references the command. More information on how arguments in command definitions are processed during runtime can be found in the documentation on <link linkend=\"thebasics-macros\">macros</link>."
-msgstr ""
+msgstr "Si vous souhaitez passer des arguments aux commandes pendant l'exécution, vous pouvez utiliser les <link linkend=\"thebasics-macrolist-arg\">macros $ARGn$</link> dans la variable <emphasis>command_line</emphasis> de la définition de commande et ensuite séparer chaque argument du nom de la commande (et pour séparer chaque argument) avec le symbole du point d'exclamation (!) dans les variables de définitions (commande de contrôle d'hôte, commande de gestionnaire d'événements, etc...) qui référencent cette commande. Plus d'informations su rla façon dont sont traités les arguments de commande au moment de leur exécution peut être trouvé dans la documentation sur les <link linkend=\"thebasics-macros\">macros</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:3050
@@ -2655,12 +2655,12 @@ msgstr "<anchor id=\"configuringnagios-objectdefinitions-servicedependency\" />D
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:3055
 msgid "Service dependencies are an advanced feature of Nagios that allow you to suppress notifications and active checks of services based on the status of one or more other services. Service dependencies are optional and are mainly targeted at advanced users who have complicated monitoring setups. More information on how service dependencies work (read this!) can be found <link linkend=\"advancedtopics-dependencies\">here</link>."
-msgstr ""
+msgstr "Les dépendances de services sont une fonctionnalité avancée de Nagios qui permet de supprimer des notifications et des contrôles actifs de services en se basant sur l'état d'un ou de plusieurs autres services. Les dépendances de services sont optionnelles et sont principalement destinées aux utilisateurs avancés qui ont des installations de supervision complexes. Plus d'informations sur le focntionnement des dépendances de services (à lire absolument!) peut être trouvée <link linkend=\"advancedtopics-dependencies\">ici</link>."
 
 # type: Content of: <chapter><section><section><section><note><para>
 #: ConfiguringNagios/objectdefinitions.xml:3068
 msgid "Directives in red are required, while those in black are optional. However, you must supply at least one type of criteria for the definition to be of much use."
-msgstr ""
+msgstr "Les variables indiquées en rouge sont obligatoires alors que celles en noires sont optionnelles. De toute façon, vous devez préciser au moins un type de critère pour que la définition soit d'une quelconque utilité."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:3079
@@ -2757,7 +2757,7 @@ msgstr "dependent_host"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3165
 msgid "This directive is used to identify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-host\">host(s)</link> that the <emphasis>dependent</emphasis> service <quote>runs</quote> on or is associated with.  Multiple hosts should be separated by commas. Leaving this directive blank can be used to create <link linkend=\"advancedtopics-objecttricks-same_host_dependency\"><quote>same host</quote> dependencies</link>."
-msgstr ""
+msgstr "Cette variables est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis> d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôte(s)</link> sur lequel <quote>tourne</quote> le service <emphasis>dépendant</emphasis> où avec lequel il est associé. Plusieurs hôtes peuvent être séparés par des virgules. Laissez cette variable vide peut être utilisé pour créer des <link linkend=\"advancedtopics-objecttricks-same_host_dependency\">dépendances <quote>sur le même hôte</quote></link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:3175
@@ -2767,37 +2767,37 @@ msgstr "dependent_hostgroup"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3178
 msgid "This directive is used to specify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">hostgroup(s)</link> that the <emphasis>dependent</emphasis> service \"runs\" on or is associated with.  Multiple hostgroups should be separated by commas. The <varname>dependent_hostgroup</varname> may be used instead of, or in addition to, the <varname>dependent_host</varname> directive."
-msgstr ""
+msgstr "Cette variables est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">groupe(s) d'hôtes</link> sur lesquels <quote>tourne</quote> le service <emphasis>dépendant</emphasis> où avec lesquels il est associé. Plusieurs groupes d'hôtes peuvent être séparés par des virgules. La variable <varname>dependent_hostgroup</varname> peut être utilisé à la place ou en conjonction avec la variable <varname>dependent_host</varname>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3191
 msgid "This directive is used to identify the <emphasis>description</emphasis> of the <emphasis>dependent</emphasis> <link linkend=\"configuringnagios-objectdefinitions-service\">service</link>."
-msgstr ""
+msgstr "Cette variables est utilisée pour identifier la <emphasis>description</emphasis> d'un <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> <emphasis>dépendant</emphasis>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3201
 msgid "This directive is used to identify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-host\">host(s)</link> that the service <emphasis>that is being depended upon</emphasis> (also referred to as the master service) \"runs\" on or is associated with. Multiple hosts should be separated by commas."
-msgstr ""
+msgstr "Cette variables est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis> d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôte()s</link> sur lequel <quote>tourne</quote> le service <emphasis>dont on dépend</emphasis> (aussi appelé service maître) où avec lequel il est associé. Plusieurs hôtes peuvent être séparés par des virgules."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3213
 msgid "This directive is used to identify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-host\">hostgroup(s)</link> that the service <emphasis>that is being depended upon</emphasis> (also referred to as the master service)  \"runs\" on or is associated with. Multiple hostgroups should be separated by commas. The <varname>hostgroup_name</varname> may be used instead of, or in addition to, the <varname>host_name</varname> directive."
-msgstr ""
+msgstr "Cette variables est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis> de<link linkend=\"configuringnagios-objectdefinitions-hostgroup\">groupe(s) d'hôtes</link> sur lequel <quote>tourne</quote> le service <emphasis>dont on dépend</emphasis> (aussi appelé service maître) où avec lequel il est associé. Plusieurs groupes hôtes peuvent être séparés par des virgules. La variable <varname>hostgroup_name</varname> peut être utilisé à la place ou en conjonction avec la variable <varname>host_name</varname>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3227
 msgid "This directive is used to identify the <emphasis>description</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> <emphasis>that is being depended upon</emphasis> (also referred to as the master service)."
-msgstr ""
+msgstr "Cette variables est utilisée pour identifier la <emphasis>description</emphasis> du <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> <emphasis>dont on dépend</emphasis> (aussi appelé service maître)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3238
 msgid "This directive indicates whether or not the dependency inherits dependencies of the service <emphasis>that is being depended upon</emphasis> (also referred to as the master service).  In other words, if the master service is dependent upon other services and any one of those dependencies fail, this dependency will also fail."
-msgstr ""
+msgstr "Cette variables indique si la dépendance hérite des dépendances du service <emphasis>dont on dépend</emphasis> (aussi appelé service maître). En d'autres termes, si le service maître est dépendant de plusieurs autres services et qu'une des ces dépendances échoue, alors cette dépendance échouera également."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3250
 msgid "This directive is used to specify the criteria that determine when the dependent service should <emphasis>not</emphasis> be actively checked. If the <emphasis>master</emphasis> service is in one of the failure states we specify, the <emphasis>dependent</emphasis> service will not be actively checked. Valid options are a combination of one or more of the following (multiple options are separated with commas):"
-msgstr ""
+msgstr "Cette variable est utilisée pour péciser les critères qui déterminent quand le service dépendant ne doit <emphasis>pas</emphasis> être contrôlé activement. Si le service <emphasis>maître</emphasis> est dans un état d'erreur que nous précisons, le service <emphasis>dépendant</emphasis> ne sera pas contrôlé activement. Les options valides sont une combinaison d'un ou de plusieurs des état suivants (les options multiples sont séparées par des virgules)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3256
@@ -2832,43 +2832,43 @@ msgstr "<emphasis role=\"strong\">p</emphasis> = erreur sur état d'attente (par
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3261
 msgid "<emphasis role=\"strong\">n</emphasis> (none) : the execution dependency will never fail and checks of the dependent service will always be actively checked (if other conditions allow for it to be)."
-msgstr ""
+msgstr "<emphasis role=\"strong\">n</emphasis> (none) : la dépendance d'exécution n'échouera jamais et les contrôles du service dépendant seront toujours faits activement (si d'autres conditions permettent de le faire)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><informalexample><para>
 #: ConfiguringNagios/objectdefinitions.xml:3264
 msgid "If you specify <emphasis role=\"strong\">o,c,u</emphasis> in this field, the <emphasis>dependent</emphasis> service will not be actively checked if the <emphasis>master</emphasis> service is in either an OK, a CRITICAL, or an UNKNOWN state."
-msgstr ""
+msgstr "Si vous précisez <emphasis role=\"strong\">o,c,u</emphasis> dans ce champ, le service <emphasis>dépendant</emphasis> ne sera pas contrôlé activement si le service <emphasis>maître</emphasis> est dans un des états OK, CRITICAL ou UNKNOWN."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3276
 msgid "This directive is used to define the criteria that determine when notifications for the dependent service should <emphasis>not</emphasis> be sent out.  If the <emphasis>master</emphasis> service is in one of the failure states we specify, notifications for the <emphasis>dependent</emphasis> service will not be sent to contacts. Valid options are a combination of one or more of the following:"
-msgstr ""
+msgstr "Cette variable est utilisée pour définir les critères qui déterminent quand les notifications pour le service dépendant ne doivent <emphasis>pas</emphasis> être envoyées. Si le service <emphasis>maître</emphasis> est dans un des états d'erreur que nous précisons, les notifications pour les services <emphasis>dépendants</emphasis> ne seront pas envoyées aux contacts. Les options valides sont une combinaison d'un ou de plusieurs des état suivants :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3288
 msgid "<emphasis role=\"strong\">n</emphasis> = (none) : the notification dependency will never fail and notifications for the dependent service will always be sent out."
-msgstr ""
+msgstr "<emphasis role=\"strong\">n</emphasis> (none) : la dépendance de notification n'échouera jamais et les notifications du service dépendant seront toujours envoyées."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><informalexample><para>
 #: ConfiguringNagios/objectdefinitions.xml:3293
 msgid "If you specify <emphasis role=\"bold\">w</emphasis> in this field, the notifications for the <emphasis>dependent</emphasis> service will not be sent out if the <emphasis>master</emphasis> service is in a WARNING state."
-msgstr ""
+msgstr "Si vous précisez <emphasis role=\"bold\">w</emphasis> dans ce champ, les notifications pour le service <emphasis>dépendant</emphasis> ne seront pas envoyées si le service <emphasis>maître</emphasis> est dans un état WARNING."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3306
 #: ConfiguringNagios/objectdefinitions.xml:3769
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which this dependency is valid. If this directive is not specified, the dependency is considered to be valid during all times."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nom court d'une <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">période de temps</link> pendant laquelle les dépendances sont valides. Si cette variable est vide, les dépendances seront considérées comme valides tout le temps."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:3317
 msgid "<anchor id=\"configuringnagios-objectdefinitions-serviceescalation\" />Service Escalation Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-serviceescalation\" />Définition d'escalade de service"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:3322
 msgid "Service escalations are completely optional and are used to escalate notifications for a particular service. More information on how notification escalations work can be found <link linkend=\"advancedtopics-escalations\">here</link>."
-msgstr ""
+msgstr "Les escalades de services sont complètement optionnelles et sont utilisées pour escalader les notificaitons d'un service particulier. Plus d'informations sur le fonctionnement des esacalades peut être trouvé <link linkend=\"advancedtopics-escalations\">ici</link>."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:3341
@@ -2941,95 +2941,95 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3427
 msgid "This directive is used to identify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-host\">host(s)</link> that the <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> escalation should apply to or is associated with."
-msgstr ""
+msgstr "La variable est utilisée pour identifer le(s) <emphasis>nom(s) court(s)</emphasis> de(s) <link linkend=\"configuringnagios-objectdefinitions-host\">hôte(s)</link> pour lesquel(s) l'escalade de <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> doit s'appliquer ou auquel(s) il est associé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3439
 msgid "This directive is used to specify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">hostgroup(s)</link> that the service escalation should apply to or is associated with. Multiple hostgroups should be separated by commas. The <varname>hostgroup_name</varname> may be used instead of, or in addition to, the <varname>host_name</varname> directive."
-msgstr ""
+msgstr "La variable est utilisée pour identifer le(s) <emphasis>nom(s) court(s)</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">groupe(s) d'hôtes</link> pour lesquel(s) l'escalade de <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> doit s'appliquer ou auquel(s) il est associé. Plusieurs groupes hôtes peuvent être séparés par des virgules. La variable <varname>hostgroup_name</varname> peut être utilisé à la place ou en conjonction avec la variable <varname>host_name</varname>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3452
 msgid "This directive is used to identify the <emphasis>description</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> the escalation should apply to."
-msgstr ""
+msgstr "Cette variable est utilisée pour identifier la <emphasis>description</emphasis> du <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> pour lequel s'applique l'escalade."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3463
 msgid "This directive is a number that identifies the <emphasis>first</emphasis> notification for which this escalation is effective. For instance, if you set this value to 3, this escalation will only be used if the service is in a non-OK state long enough for a third notification to go out."
-msgstr ""
+msgstr "Cette variable est utilisée pour identifier la <emphasis>première</emphasis> notification pour laquelle l'esacalade est effective. Par exemple, si vous mettez cette valeur à 3, cette esacalade sera seulement utilisée si le service est dans un état non-OK depuis suffisamment longtemps pour qu'une troisième notification soit envoyée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3475
 msgid "This directive is a number that identifies the <emphasis>last</emphasis> notification for which this escalation is effective. For instance, if you set this value to 5, this escalation will not be used if more than five notifications are sent out for the service. Setting this value to 0 means to keep using this escalation entry forever (no matter how many notifications go out)."
-msgstr ""
+msgstr "Cette variable est un nombre qui indique la <emphasis>dernière</emphasis> notification pour laquelle l'esacalade est effective. Par exemple, si vous mettez cette valeur à 5, cette escalade ne sera pas utilisée si plus de cinq notifications ont été envoyées pour le service. Mettre cette valeur à 0 précise de continuer à utiliser cette escalade sans fin (peu importe le nombre de notifications envoyées)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3487
 msgid "This is a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> that should be notified whenever there are problems (or recoveries) with this service.  Multiple contacts should be separated by commas. Useful if you want notifications to go to just a few people and don't want to configure <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact groups</link>.  You must specify at least one contact or contact group in each service escalation definition."
-msgstr ""
+msgstr "Cette une liste de <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> à notifier à chaque fois qu'il y a des problèmes (ou des retours à la normale) avec ce service. Plusieurs contacts peuvent être précisés en les séparant par des virgules. Utile si vous souhaitez envoyer des notifications vers quelques personnes et que vous ne souhaitez pas configurer des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'escalade de service."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3502
 msgid "This directive is used to identify the <emphasis>short name</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact group</link> that should be notified when the service notification is escalated. Multiple contact groups should be separated by commas. You must specify at least one contact or contact group in each service escalation definition."
-msgstr ""
+msgstr "Cette une liste de <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link> à notifier à chaque fois que ce service est escaladé. Plusieurs groupes de contacts peuvent être précisés en les séparant par des virgules. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'escalade de service."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3515
 #: ConfiguringNagios/objectdefinitions.xml:3957
 msgid "This directive is used to determine the interval at which notifications should be made while this escalation is valid. If you specify a value of 0 for the interval, Nagios will send the first notification when this escalation definition is valid, but will then prevent any more problem notifications from being sent out for the host. Notifications are sent out again until the host recovers. This is useful if you want to stop having notifications sent out after a certain amount of time."
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer l'intervalle auquel envoyer les notifications pendant que l'escalade est valide. Si vous précisez une valeur de 0 pour cet intervalle, Nagios va envoyer la première notification quand la définition d'escalade est valide mais prendra soin de ne plus envoyer aucune notification de problème pour l'hôte. Les notification sont renvoyés quand l'hôte revient à la normale. Utile si vous souhaitez arrêter l'envoi des notifications après un certain temps."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><note><para>
 #: ConfiguringNagios/objectdefinitions.xml:3521
 #: ConfiguringNagios/objectdefinitions.xml:3964
 msgid "If multiple escalation entries for a host overlap for one or more notification ranges, the smallest notification interval from all escalation entries is used."
-msgstr ""
+msgstr "Si de multiples entrées d'escalade pour un hôte se chevauchent sur une ou plusieurs plages de notificitions, le plus petit des intervalles de notification pour toutes les escalades sera utilisé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3530
 #: ConfiguringNagios/objectdefinitions.xml:3974
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which this escalation is valid. If this directive is not specified, the escalation is considered to be valid during all times."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nom court d'une <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">période de temps</link> pendant laquelle les escalades sont valides. Si cette variable est vide, les escalades seront considérées comme valides tout le temps."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3542
 msgid "This directive is used to define the criteria that determine when this service escalation is used. The escalation is used only if the service is in one of the states specified in this directive. If this directive is not specified in a service escalation, the escalation is considered to be valid during all service states.  Valid options are a combination of one or more of the following:"
-msgstr ""
+msgstr "Cette variable est utilisée pour définir les critères qui déterminent si une esaclade de service doit être utilisé. L'escalade est seulement utilisée si le service est dans un des états précisés dans cette variable. Si cette variable n'est pas précisée dans la définition d'escalade de service, l'esaclade est considérée comme valide pendant l'ensemble des états du service. Les options valides osnt une combinaison de l'un ou de plusieurs de ces états :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3548
 msgid "<emphasis role=\"strong\">r</emphasis> = escalate on an OK (recovery) state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">r</emphasis> = escalade sur un état OK (retour à la normale)"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3549
 msgid "<emphasis role=\"strong\">w</emphasis> = escalate on a WARNING state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">w</emphasis> = escalade sur un état WARNING"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3550
 msgid "<emphasis role=\"strong\">u</emphasis> = escalate on an UNKNOWN state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">u</emphasis> = escalade sur un état UNKNOWN"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3551
 msgid "<emphasis role=\"strong\">c</emphasis> = escalate on a CRITICAL state"
-msgstr ""
+msgstr "<emphasis role=\"strong\">c</emphasis> = escalade sur un état CRITICAL"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><informalexample><para>
 #: ConfiguringNagios/objectdefinitions.xml:3553
 msgid "If you specify <emphasis role=\"bold\">w</emphasis> in this field, the escalation will only be used if the service is in a WARNING state."
-msgstr ""
+msgstr "Si vous précisez <emphasis role=\"bold\">w</emphasis> dans ce champ, l'esaclade sera seulement utilisée quand le service es ten état WARNING."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:3563
 msgid "<anchor id=\"configuringnagios-objectdefinitions-hostdependency\" />Host Dependency Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-hostdependency\" />Définitions de dépendance d'hôte"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:3568
 msgid "Host dependencies are an advanced feature of Nagios that allow you to suppress notifications for hosts based on the status of one or more other hosts. Host dependencies are optional and are mainly targeted at advanced users who have complicated monitoring setups.  More information on how host dependencies work (read this!) can be found <link linkend=\"advancedtopics-dependencies\">here</link>."
-msgstr ""
+msgstr "Les dépendances de services sont une fonctionnalité avancée de Nagios qui permet de supprimer des notifications et des contrôles actifs d'hôtes en se basant sur l'état d'un ou de plusieurs autres hôtes. Les dépendances d'hôtes sont optionnelles et sont principalement destinées aux utilisateurs avancés qui ont des installations de supervision complexes. Plus d'informations sur le focntionnement des dépendances de services (à lire absolument!) peut être trouvée <link linkend=\"advancedtopics-dependencies\">ici</link>."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:3591
@@ -3212,12 +3212,12 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3930
 msgid "This is a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> that should be notified whenever there are problems (or recoveries) with this host.  Multiple contacts should be separated by commas. Useful if you want notifications to go to just a few people and don't want to configure <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact groups</link>.  You must specify at least one contact or contact group in each host escalation definition."
-msgstr ""
+msgstr "Cette une liste de <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> à notifier à chaque fois qu'il y a des problèmes (ou des retours à la normale) avec cet hôte. Plusieurs contacts peuvent être précisés en les séparant par des virgules. Utile si vous souhaitez envoyer des notifications vers quelques personnes et que vous ne souhaitez pas configurer des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'escalade d'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3945
 msgid "This directive is used to identify the <emphasis>short name</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact group</link> that should be notified when the host notification is escalated. Multiple contact groups should be separated by commas. You must specify at least one contact or contact group in each host escalation definition."
-msgstr ""
+msgstr "Cette une liste de <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link> à notifier à chaque escalade de l'hôte. Plusieurs groupes de contacts peuvent être précisés en les séparant par des virgules. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'escalade d'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:3985
@@ -3326,12 +3326,12 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4185
 msgid "This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host. This image will be displayed in the <link linkend=\"thebasics-cgis-status_cgi\">status</link> and <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGIs.  The image will look best if it is 40x40 pixels in size. Images for hosts are assumed to be in the <emphasis role=\"strong\">logos/</emphasis> subdirectory in your HTML images directory (i.e. <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom d'une image au format GIF, PNG ou JPG à associer à cet hôte. Cette image sera affichée dans les CGIs <link linkend=\"thebasics-cgis-status_cgi\">status</link> et <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link>. Le rendu de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images des hôtes sont censées se trouver dans le sous-répertoire <emphasis role=\"strong\">logos/</emphasis> de votre dossier d'images HTML (par exemple <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4212
 msgid "This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host. This image will be used as the texture map for the specified host in the <link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl</link> CGI.  Unlike the image you use for the <emphasis>&lt;icon_image&gt;</emphasis> variable, this one should probably <emphasis>not</emphasis> have any transparency. If it does, the host object will look a bit weird. Images for hosts are assumed to be in the <emphasis role=\"bold\">logos/</emphasis> subdirectory in your HTML images directory (i.e.  <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom d'une image au format GIF, PNG ou JPG à associer à cet hôte. Cette image sera utilisée comme fond de carte pour l'hôte spécifié dans le CGI <link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl</link>. Au contraire de l'image utilisée dans la variable <emphasis>&lt;icon_image&gt;</emphasis>, celle-ci ne devrait <emphasis>pas</emphasis> avoir d'attribut de transparence. Si c'est le cas, le rendu de l'hôte sera un peu bizarre. Les images des hôtes sont censées se trouver dans le sous-répertoire <emphasis role=\"strong\">logos/</emphasis> de votre dossier d'images HTML (par exemple <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4228
@@ -3422,5 +3422,5 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4451
 msgid "This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host. This image will be displayed in the <link linkend=\"thebasics-cgis-status_cgi\">status</link> and <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGIs.  The image will look best if it is 40x40 pixels in size. Images for hosts are assumed to be in the <emphasis role=\"strong\">logos/</emphasis> subdirectory in your HTML images directory (i.e.  <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom d'une image au format GIF, PNG ou JPG à associer à l'hôte. Cette image sera affichée dans plusieurs endroits des CGIs. Le rendu de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images des hôtes sont censées se trouver dans le sous-répertoire <emphasis role=\"strong\">logos/</emphasis> de votre dossier d'images HTML (par exemple <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
 
