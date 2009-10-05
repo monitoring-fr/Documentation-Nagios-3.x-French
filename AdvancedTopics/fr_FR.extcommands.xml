@@ -10,80 +10,79 @@
 	<title>External Commands</title>
 	<section>
 		<title>Introduction</title>
-		<para>Nagios can process commands from external applications (including the CGIs)  
-and alter various aspects of its monitoring functions based on the commands 
-it receives.  External applications can submit commands by writing to the 
-<link linkend="configuringnagios-configmain-command_file">command 
-file</link>, which is periodically processed by the Nagios daemon.</para>
+		<para>Nagios® peut traiter des commandes d'applications externes (y compris les
+CGIs, voir CGI de commande à titre d'exemple) et modifier de nombreux
+aspects de ses fonctions de supervision suivant les commandes qu'il reçoit.</para>
 	</section>
 	<section>
-		<title>Enabling External Commands</title>
+		<title>Autoriser les commandes externes</title>
 		<para><informalfigure><mediaobject>
 	      <imageobject>
 	        <imagedata fileref="images/externalcommands.png" format="PNG"/>
 	      </imageobject>
-	    </mediaobject></informalfigure>In order to have Nagios process external commands, make sure you do the 
-following:</para>
+	    </mediaobject></informalfigure>Par défaut, Nagios® ne contrôle, ni ne traite les commandes externes. Si
+vous voulez autoriser le traitement des commandes externes, il faut
+effectuer les actions suivantes…</para>
 		<itemizedlist>
 			<listitem>
-				<para>Enable external command checking with the <link 
-linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link> 
-option.</para>
+				<para>Activer le contrôle des commandes externes à l'aide de l'option <link
+linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link></para>
 			</listitem>
 			<listitem>
-				<para>Set the frequency of command checks with the <link 
-linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link> 
-option.</para>
+				<para>Régler la fréquence des contrôles de commande à l'aide de l'option <link
+linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link></para>
 			</listitem>
 			<listitem>
-				<para>Specify the location of the command file with the <link 
-linkend="configuringnagios-configmain-command_file">command_file</link> 
-option.</para>
+				<para>Préciser l'emplacement du fichier de commandes à l'aide de l'option <link
+linkend="configuringnagios-configmain-command_file">command_file</link> .</para>
 			</listitem>
 			<listitem>
-				<para>Setup proper permissions on the directory containing the external command 
-file, as described in the <link 
-linkend="gettingstarted-quickstart">quickstart guide</link>.</para>
+				<para>Configurer les bonnes autorisations pour le répertoire contenant les
+fichiers de commandes. Des détails sur la manière de faire cela se trouvent
+<link linkend="gettingstarted-quickstart">ici</link>.</para>
 			</listitem>
 		</itemizedlist>
 	</section>
 	<section>
-		<title>When Does Nagios Check For External Commands?</title>
+		<title>Quand Nagios® contrôle-t-il les commandes externes ?</title>
 		<itemizedlist>
 			<listitem>
-				<para>At regular intervals specified by the <link 
-linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link> 
-option in the main configuration file</para>
+				<para>A intervalles réguliers précisés par l'option <link
+linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link>
+du fichier de configuration principal.</para>
 			</listitem>
 			<listitem>
-				<para>Immediately after <link linkend="advancedtopics-eventhandlers">event 
-handlers</link> are executed. This is in addtion to the regular cycle of 
-external command checks and is done to provide immediate action if an event 
-handler submits commands to Nagios.</para>
+				<para>Immédiatement après que les <link
+linkend="advancedtopics-eventhandlers">gestionnaires d'évènements</link>
+soient exécutés. Cela s'effectue en plus du cycle régulier des contrôles de
+commandes externes et sert à fournir une action immédiate si un gestionnaire
+d'événement soumet des commandes à Nagios®.</para>
 			</listitem>
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Using External Commands</title>
-		<para>External commands can be used to accomplish a variety of things while Nagios 
-is running.  Example of what can be done include temporarily disabling 
-notifications for services and hosts, temporarily disabling service checks, 
-forcing immediate service checks, adding comments to hosts and services, 
-etc.</para>
+		<title>L'utilisation des commandes externes</title>
+		<para>Les commandes externes peuvent être utilisées pour mener à bien un certain
+nombre de choses pendant que Nagios® fonctionne. A titre d'exemple, ce qui
+peut être effectué comprend : la désactivation temporaire des notifications
+pour les services et les hôtes, la désactivation temporaire des tests de
+service, l'obligation de contrôler immédiatement un service, l'ajout de
+commentaires aux hôtes et services, etc.</para>
 	</section>
 	<section>
-		<title>Command Format</title>
-		<para>External commands that are written to the <link 
-linkend="configuringnagios-configmain-command_file">command file</link> have 
-the following format...</para>
+		<title>Format des commandes</title>
+		<para>Les commandes externes écrites pour le <link
+linkend="configuringnagios-configmain-command_file">fichier de
+commande</link> suivent le format suivant :</para>
 		<programlisting>[time] command_id;command_arguments</programlisting>
-		<para>...where time is the time (in <option>time_t</option> format) that the external application submitted the external command to the 
-command file. The values for the <option>command_id</option> 
-		and <option>command_arguments</option> arguments will depend on what command is being submitted to Nagios.</para>
-		<para>A full listing of external commands that can be used (along with examples of 
-how to use them)  can be found online at the following URL:</para>
+		<para>…où time est l'heure (au format <option>time_t</option>  à laquelle l'application externe ou le CGI a envoyé la commande externe au
+fichier de commande. Certaines des commandes disponibles sont décrites dans
+le tableau ci-dessous, ainsi que leur  <option>command_id et une description de leurs </option> 
+		et <option>command_arguments.</option> Les arguments dépendent de la commande qui sera soumisse à Nagios.</para>
+		<para>Un listing complet des commandes externes qui peuvent être utilisées (ainsi
+que des exemples d'utilisation) sont en ligne à l'adresse suivante:</para>
 		<para>
-			<ulink 
+			<ulink
 url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/externalcommands/</ulink>
 		</para>
 	</section>

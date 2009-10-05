@@ -7,26 +7,27 @@
 ]
 >
 <chapter id="configuringnagios-configobject" xreflabel="Object Configuration Overview">
-	<title>Object Configuration Overview</title>
+	<title>Survol de la configuration des objets</title>
 	
 	<section>
-		<title>What Are Objects?</title>
+		<title>Que sont les données des objets ?</title>
 		
-		<para>Objects are all the elements that are involved in the monitoring and 
-notification logic. Types of objects include:</para>
+		<para>Les objets représentent l'ensemble de tous les éléments entrants en compte
+ans la logique de surveillance et de notification. Les types de défintions
+d'objet sont les suivants:</para>
 		
 		<itemizedlist>
 			<listitem>
 				<para>Services</para>
 			</listitem>
 			<listitem>
-				<para>Service Groups</para>
+				<para>Groupes de services </para>
 			</listitem>
 			<listitem>
-				<para>Hosts</para>
+				<para>Hôtes</para>
 			</listitem>
 			<listitem>
-				<para>Host Groups</para>
+				<para>Groupes d'hôtes</para>
 			</listitem>
 			<listitem>
 				<para>Contacts</para>
@@ -35,7 +36,7 @@ notification logic. Types of objects include:</para>
 				<para>Contact Groups</para>
 			</listitem>
 			<listitem>
-				<para>Commands</para>
+				<para>Commandes</para>
 			</listitem>
 			<listitem>
 				<para>Time Periods</para>
@@ -44,94 +45,102 @@ notification logic. Types of objects include:</para>
 				<para>Notification Escalations</para>
 			</listitem>
 			<listitem>
-				<para>Notification and Execution Dependencies</para>
+				<para>Dépendances d'exécution et de notification</para>
 			</listitem>
 		</itemizedlist>
 		
-		<para>More information on what objects are and how they relate to each other can 
-be found below. </para>
+		<para>Plus d'informations sur les types d'objets et comment ils interagissent les
+uns avec les autres peut être trouvée ci-dessous. </para>
 	</section>
 	
 	<section>
-		<title>Where Are Objects Defined?</title>
+		<title>Où sont définies les données des objets ?</title>
 		
-		<para>Objects can be defined in one or more configuration files and/or directories 
-that you specify using the <link 
-linkend="configuringnagios-configmain-cfg_file">cfg_file</link> and/or <link 
-linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link> directives in 
-the main configuration file.</para>
+		<para>Les données des objets sont définies dans un ou plusieurs fichiers de
+configuration que vous déclarez en utilisant les directives <link
+linkend="configuringnagios-configmain-cfg_file">cfg_file</link> et/ou <link
+linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link> dans le
+fichier de configuration principal.</para>
 		
 		<tip>
-			<para>When you follow the <xref linkend="gettingstarted-quickstart" />, several 
-sample object configuration files are placed in <filename 
-class="directory">/usr/local/nagios/etc/objects/</filename>.  You can use 
-these sample files to see how object inheritance works and learn how to 
-define your own object definitions.</para>
+			<para>Quand vous suivez <link  linkend="gettingstarted-quickstart">le guide de
+démarrage rapide</link>, plusieurs fichiers exemple de configuration
+d'objets sont installés dans le dossier <filename
+class="directory">/usr/local/nagios/etc/objects/</filename>. Vous pouvez
+utiliser ces fichiers d'exemple pour voir comme fonctionne l'héritage entre
+objets et pour apprendre comment définir vos propres définitions d'objets.</para>
 		</tip>
 	</section>
 	
 	<section>
-		<title>How Are Objects Defined?</title>
+		<title>Comment définir les données des objets ?</title>
 		
-		<para>Objects are defined in a flexible template format, which can make it much 
-easier to manage your Nagios configuration in the long term. Basic 
-information on how to define objects in your configuration files can be 
-found <link linkend="configuringnagios-objectdefinitions">here</link>.</para>
+		<para>Les définitions des objets se font à travers un système de gabarit qui vous
+permet une gestion beaucoup plus aisée de vos fichiers de configuration sur
+le long terme. Les informations de base sur la façon de définir les objets
+dans vos fichier de configuration se trouvent <link
+linkend="configuringnagios-objectdefinitions">ici</link>.</para>
 		
-		<para>Once you get familiar with the basics of how to define objects, you should 
-read up on <link linkend="advancedtopics-objectinheritance">object 
-inheritance</link>, as it will make your configuration more robust for the 
-future. Seasoned users can exploit some advanced features of object 
-definitions as described in the documentation on <link 
-linkend="advancedtopics-objecttricks">object tricks</link>.</para>
+		<para>Quand vous serez plus familier avec les définitions d'objets, vous devriez
+approfondir le concept en lisant <link
+linkend="advancedtopics-objectinheritance">l'héritage d'objet</link>. Ce
+document vous permet de rendre votre configuration plus pérenne dans le
+futur. Les utilisateurs occasionnels peuvent utiliser les fonctions avancées
+des définitions d'objets comme indiqué dans la documentation à <link
+linkend="advancedtopics-objecttricks">trucs sur les objets</link>.</para>
 	</section>
 	
 	<section>
 		<title>
-			<anchor id="configuringnagios-configobject-objectoverview" />Objects 
-Explained</title>
+			<anchor id="configuringnagios-configobject-objectoverview" />Explication des
+objets</title>
 		
-		<para>Some of the main object types are explained in greater detail below...</para>
+		<para>Quelques uns des objets de configuration les plus importants sont expliqués
+en détail ci-dessous...</para>
 		
 		
 		<section>
-		<title>Hosts</title>
+		<title>Hôtes</title>
 			<para>
-				<link linkend="configuringnagios-objectdefinitions-host">Hosts</link> are 
-one of the central objects in the monitoring logic. Important attributes of 
-hosts are	as follows:
+				Les <link linkend="configuringnagios-objectdefinitions-host">Hôtes</link>
+sont un des objets les plus importants dans la logique de supervision. Les
+attributs importants pour les hôtes sont les suivants:
 							<itemizedlist mark="opencircle">
 								<listitem>
 									<para>
-									Hosts are usually physical devices on your network (servers, workstations, 
-routers, switches, printers, etc).
+									Les hôtes sont en général des composants physiques sur le réseau (serveurs,
+ordinateurs de bureau, routeurs, switchs, imprimantes, etc).
 									</para>
 					</listitem>
 				
 					<listitem>
-						<para>Hosts have an address of some kind (e.g. an IP or MAC address).</para>
+						<para>Les hôtes ont une adresse (une adresse IP ou MAC par exemple).</para>
 					</listitem>
 				
 					<listitem>
-						<para>Hosts have one or more more services associated with them.</para>
+						<para>Les hôtes ont un ou plusieurs services qui leur sont associés.</para>
 					</listitem>
 				
 					<listitem>
-						<para>Hosts can have parent/child relationships with other hosts, often 
-representing real-world network connections, which is used in the <link 
-linkend="thebasics-networkreachability">network reachability</link> logic.</para>
+						<para>Les hôtes peuvent avoir des relations de type parent/enfant avec d'autres
+hôtes, représentant souvent les connexions réelles entre ces hôtes, qui sont
+utilisées dans la logique de <link
+linkend="thebasics-networkreachability">rupture de la continuité du
+réseau</link>.</para>
 					</listitem>
 				</itemizedlist>
 			</para>
 		</section>
 		<section>
-		<title>Host Groups</title>
+		<title>Groupes d'hôtes</title>
 			<para>
-				<link linkend="configuringnagios-objectdefinitions-hostgroup">Host 
-Groups</link> are groups of one or more hosts. Host groups can make it 
-easier to (1) view the status of related hosts in the Nagios web interface 
-and (2) simplify your configuration through the use of <link 
-linkend="advancedtopics-objecttricks">object tricks</link>.
+				Les <link linkend="configuringnagios-objectdefinitions-hostgroup">Groupes
+d'Hôtes</link> permettent de regrouper un ou plusieurs hôtes ensemble. Les
+groupes d'hôtes peuvent vous rendre la vue d'état plus facile pour plusieurs
+hôtes en relation dans l'interface web de Nagios (1) et simplifient votre
+configuration (2) par l'utilisation de <link
+linkend="advancedtopics-objecttricks">trucs et astuces sur les
+objets</link>.
 								</para>
 		</section>
 	
@@ -148,32 +157,36 @@ linkend="advancedtopics-objecttricks">object tricks</link>.
 <section>
 		<title>Services</title>
 			<para>
-				<link linkend="configuringnagios-objectdefinitions-service">Services</link> 
-are one of the central objects in the monitoring logic. Services are 
-associated with hosts and can be:</para>
+				Les <link
+linkend="configuringnagios-objectdefinitions-service">Services</link> sont
+un des objets les plus importants dans la logique de supervision. Les
+services sont associés à un hôte et peuvent être:</para>
 			<itemizedlist>
 				<listitem>
-					<para>Attributes of a host (CPU load, disk usage, uptime, etc.)</para>
+					<para>Des attributs d'hôtes (charge CPU, utilisation disque, temps écoulé depuis
+le dernier (re)démarrage, etc).</para>
 				</listitem>
 		
 				<listitem>
-					<para>Services provided by the host (&protocol-http;, &protocol-pop3;, 
+					<para>Des services fournis par l'hôte (&protocol-http;, &protocol-pop3;,
 &protocol-ftp;, &protocol-ssh;, etc.)</para>
 				</listitem>
 		
 				<listitem>
-					<para>Other things associated with the host (&protocol-dns; records, etc.)</para>
+					<para>D'autres choses associés à un hôte (&protocol-dns; enregistrements, etc.)</para>
 				</listitem>
 			</itemizedlist>
 		</section>
 		<section>
-		<title>Service Groups</title>
+		<title>Groupes de services </title>
 			<para>
-				<link linkend="configuringnagios-objectdefinitions-servicegroup">Service 
-Groups</link> are groups of one or more services. Service groups can make it 
-easier to (1) view the status of related services in the Nagios web 
-interface and (2) simplify your configuration through the use of <link 
-linkend="advancedtopics-objecttricks">object tricks</link>.
+				Les <link linkend="configuringnagios-objectdefinitions-servicegroup">Groupes
+de Services</link> permettent de regrouper un ou plusieurs services
+ensemble. Les groupes de services peuvent vous rendre la vue d'état plus
+facile pour plusieurs services en relation dans l'interface web de Nagios
+(1) et simplifient votre configuration (2) par l'utilisation de <link
+linkend="advancedtopics-objecttricks">trucs et astuces sur les
+objets</link>.
 							</para>
 
 		<!--		
@@ -189,27 +202,29 @@ linkend="advancedtopics-objecttricks">object tricks</link>.
 		<section>
 		<title>Contacts</title>
 			<para>
-				<link linkend="configuringnagios-objectdefinitions-contact">Contacts</link> 
-are people involved in the notification process:</para>
+				Les <link
+linkend="configuringnagios-objectdefinitions-contact">Contacts</link> sont
+les personnes impliquées dans le processus de notification:</para>
 			<itemizedlist>
 				<listitem>
-					<para>Contacts have one or more notification methods (cellphone, pager, email, 
-instant messaging, etc.)</para>
+					<para>Les contacts peuvent avoir un ou plusieurs moyens de notification (mobile,
+pager, courrier électronique, messagerie instantanée, etc.)</para>
 				</listitem>
 		
 				<listitem>
-					<para>Contacts receive notifications for hosts and service they are responsible 
-for</para>
+					<para>Les contacts reçoivent des notifications pour les hôtes et services dont ils
+sont responsables</para>
 				</listitem>
 			</itemizedlist>
 		</section>
 		<section>
 		<title>Contact Groups</title>
 			<para>
-				<link linkend="configuringnagios-objectdefinitions-contactgroup">Contact 
-Groups</link> are groups of one or more contacts. Contact groups can make it 
-easier to define all the people who get notified when certain host or 
-service problems occur.</para>
+				Les <link linkend="configuringnagios-objectdefinitions-contactgroup">Groupes
+de Contacts</link> permettent de regrouper un ou plusieurs contacts
+ensemble. Les groupes de contacts peuvent vous aider à définir de façon plus
+simple qui doit être notifié quand surviennent des problèmes sur un hôte ou
+un service.</para>
 		</section>
 
 		<!--		
@@ -222,21 +237,20 @@ service problems occur.</para>
 							</para>
 -->
 <section>
-		<title>Timeperiods</title>
+		<title>Périodes de temps</title>
 			<para>
-				<link 
-linkend="configuringnagios-objectdefinitions-timeperiod">Timeperiods</link> 
-are are used to control:</para>
+				Les <link linkend="configuringnagios-objectdefinitions-timeperiod">Périodes
+de temps</link> sont utilisées pour contrôlés:</para>
 			<itemizedlist>
 				<listitem>
-					<para>When hosts and services can be monitored</para>
+					<para>Quand les hôtes et services sont supervisés</para>
 				</listitem>
 		
 				<listitem>
-					<para>When contacts can receive notifications</para>
+					<para>Quand les contacts reçoivent des notifications</para>
 				</listitem>
 			</itemizedlist>
-			<para>Information on how timeperiods work can be found <link 
+			<para>La documentation des périodes de temps se trouve <link
 linkend="thebasics-timeperiods">here</link>.
 							</para>
 		</section>
@@ -251,15 +265,16 @@ linkend="thebasics-timeperiods">here</link>.
 							</para>
 -->
 <section>
-		<title>Commands</title>
+		<title>Commandes</title>
 			<para>
-				<link linkend="configuringnagios-objectdefinitions-command">Commands</link> 
-are used to tell Nagios what programs, scripts, etc. it should execute to 
-perform:
+				Les <link
+linkend="configuringnagios-objectdefinitions-command">Commandes</link> sont
+utilisées pour indiquer à Nagios quels programmes, scripts, etc. il doit
+exécuter pour assurer:
 							</para>
 			<itemizedlist>
 				<listitem>
-					<para>Host and service checks</para>
+					<para>Contrôles d'hôtes et de services</para>
 				</listitem>
 		
 				<listitem>
@@ -267,7 +282,7 @@ perform:
 				</listitem>
 		
 				<listitem>
-					<para>Event handlers</para>
+					<para>Gestionnaires d'événements</para>
 				</listitem>
 		
 				<listitem>

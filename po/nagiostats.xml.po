@@ -22,43 +22,25 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -69,25 +51,21 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
 # type: Content of: <chapter><section><para><option>
 #: GettingStarted/monitoring-publicservices.xml:172
-#: GettingStarted/monitoring-publicservices.xml:173
-#: TheBasics/plugins.xml:130
+#: GettingStarted/monitoring-publicservices.xml:173 TheBasics/plugins.xml:130
 #: SecurityAndPerformanceTuning/nagiostats.xml:21
 #: SecurityAndPerformanceTuning/nagiostats.xml:107
 msgid "--help"
 msgstr "--help"
 
 # type: Content of: <chapter><section><para>
-#: TheBasics/macros.xml:103
-#: TheBasics/servicechecks.xml:21
-#: TheBasics/activechecks.xml:62
-#: AdvancedTopics/extcommands.xml:74
+#: TheBasics/macros.xml:103 TheBasics/servicechecks.xml:21
+#: TheBasics/activechecks.xml:62 AdvancedTopics/extcommands.xml:74
 #: SecurityAndPerformanceTuning/nagiostats.xml:104
 msgid "and"
 msgstr "et"
@@ -99,8 +77,22 @@ msgstr "Utilisation de Nagiostats"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:13
-msgid "A utility called <command>nagiostats</command> is included in the Nagios distribution.  It is compiled and installed along with the main Nagios daemon. The <command>nagiostats</command> utility allows you to obtain various information about a running Nagios process that can be very helpful in <xref linkend=\"securityandperformancetuning-tuning\"/>tuning performance You can obtain information either in human-readable or MRTG-compatible format."
-msgstr "Un utilitaire appelé <command>nagiostats</command> est inclus dans la distribution de Nagios. Il est compilé et installé avec le démon principal de Nagios. L'utilitaire <command>nagiostats</command> vous permet d'obtenir diverses informations sur le processus Nagios qui peuvent être très utiles lors de <link linkend=\"securityandperformancetuning-tuning\">l'optimisation des performances</link>. Vous pouvez obtenir les informations soit dans un format compatible avec MRTG soit dans un format intelligible. "
+msgid ""
+"A utility called <command>nagiostats</command> is included in the Nagios "
+"distribution.  It is compiled and installed along with the main Nagios "
+"daemon. The <command>nagiostats</command> utility allows you to obtain "
+"various information about a running Nagios process that can be very helpful "
+"in <xref linkend=\"securityandperformancetuning-tuning\"/>tuning performance "
+"You can obtain information either in human-readable or MRTG-compatible "
+"format."
+msgstr ""
+"Un utilitaire appelé <command>nagiostats</command> est inclus dans la "
+"distribution de Nagios. Il est compilé et installé avec le démon principal "
+"de Nagios. L'utilitaire <command>nagiostats</command> vous permet d'obtenir "
+"diverses informations sur le processus Nagios qui peuvent être très utiles "
+"lors de <link linkend=\"securityandperformancetuning-tuning\">l'optimisation "
+"des performances</link>. Vous pouvez obtenir les informations soit dans un "
+"format compatible avec MRTG soit dans un format intelligible. "
 
 # type: Content of: <chapter><section><title>
 #: SecurityAndPerformanceTuning/nagiostats.xml:20
@@ -124,8 +116,12 @@ msgstr "Affichage intelligible"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:26
-msgid "To obtain human-readable information on the performance of a running Nagios process, run the <command>nagiostats</command> utility with the"
-msgstr "Pour une utilisation normale, lancez l'utilitaire <command>nagiostats</command> avec l'argument "
+msgid ""
+"To obtain human-readable information on the performance of a running Nagios "
+"process, run the <command>nagiostats</command> utility with the"
+msgstr ""
+"Pour une utilisation normale, lancez l'utilitaire <command>nagiostats</"
+"command> avec l'argument "
 
 # type: Content of: <chapter><section><para><option>
 #: SecurityAndPerformanceTuning/nagiostats.xml:27
@@ -134,8 +130,14 @@ msgstr "-c"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:27
-msgid "command line argument to specify your main configuration file location like such: <userinput>[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -c /usr/local/nagios/etc/nagios.cfg</userinput>"
-msgstr "pour sépcifier  l'emplacement de votre fichier de configuration principal comme ceci:<userinput>[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -c /usr/local/nagios/etc/nagios.cfg</userinput>"
+msgid ""
+"command line argument to specify your main configuration file location like "
+"such: <userinput>[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -c /usr/"
+"local/nagios/etc/nagios.cfg</userinput>"
+msgstr ""
+"pour sépcifier  l'emplacement de votre fichier de configuration principal "
+"comme ceci:<userinput>[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -"
+"c /usr/local/nagios/etc/nagios.cfg</userinput>"
 
 # type: Content of: <chapter><section><screen>
 #: SecurityAndPerformanceTuning/nagiostats.xml:32
@@ -273,8 +275,16 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:96
-msgid "As you can see, the utility displays a number of different metrics pertaining to the Nagios process. Metrics which have multiple values are (unless otherwise specified) min, max and average values for that particular metric."
-msgstr "Comme vous pouvez le constater, l'utilitaire affiche un bon nombre de mesures concernant le processus Nagios. Les mesures qui ont des valeurs multiples sont (sauf mention contraire) les valeurs min, max et moyenne pour cette mesure particulière."
+msgid ""
+"As you can see, the utility displays a number of different metrics "
+"pertaining to the Nagios process. Metrics which have multiple values are "
+"(unless otherwise specified) min, max and average values for that particular "
+"metric."
+msgstr ""
+"Comme vous pouvez le constater, l'utilitaire affiche un bon nombre de "
+"mesures concernant le processus Nagios. Les mesures qui ont des valeurs "
+"multiples sont (sauf mention contraire) les valeurs min, max et moyenne pour "
+"cette mesure particulière."
 
 # type: Content of: <chapter><section><title>
 #: SecurityAndPerformanceTuning/nagiostats.xml:101
@@ -283,8 +293,14 @@ msgstr "Intégration à MRTG"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:102
-msgid "You can use the nagiostats utility to display various Nagios metrics using MRTG (or other compatible program). To do so, run the <command>nagiostats</command> utility using the"
-msgstr "Vous pouvez utiliser l'outil nagiostat pour afficher diverses mesures de Nagios avec MRTG (ou tout autre programme compatible). Pour cela, lancez <command>nagiostats</command> en utilisant les arguments "
+msgid ""
+"You can use the nagiostats utility to display various Nagios metrics using "
+"MRTG (or other compatible program). To do so, run the <command>nagiostats</"
+"command> utility using the"
+msgstr ""
+"Vous pouvez utiliser l'outil nagiostat pour afficher diverses mesures de "
+"Nagios avec MRTG (ou tout autre programme compatible). Pour cela, lancez "
+"<command>nagiostats</command> en utilisant les arguments "
 
 # type: Content of: <chapter><section><para><option>
 #: SecurityAndPerformanceTuning/nagiostats.xml:104
@@ -305,13 +321,21 @@ msgstr "L'"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:105
-msgid "argument is used to specify what statistics should be graphed. Possible values for the"
-msgstr "option --data est utilisée pour spécifier que les statistiques sont destinées à être représentées graphiquement. Les valeurs possibles pour"
+msgid ""
+"argument is used to specify what statistics should be graphed. Possible "
+"values for the"
+msgstr ""
+"option --data est utilisée pour spécifier que les statistiques sont "
+"destinées à être représentées graphiquement. Les valeurs possibles pour"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:106
-msgid "argument can be found by running the <command>nagiostats</command> utility with the"
-msgstr "l'option --data sont listées en lançant l'utilitaire <command>nagiostats</command> avec l'option"
+msgid ""
+"argument can be found by running the <command>nagiostats</command> utility "
+"with the"
+msgstr ""
+"l'option --data sont listées en lançant l'utilitaire <command>nagiostats</"
+"command> avec l'option"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:107
@@ -320,6 +344,12 @@ msgstr "--help."
 
 # type: Content of: <chapter><section><note><para>
 #: SecurityAndPerformanceTuning/nagiostats.xml:108
-msgid "Information on using the <command>nagiostats</command> utility to generate MRTG graphs for Nagios performance statistics can be found <xref linkend=\"securityandperformancetuning-mrtggraphs\"/> here."
-msgstr "Les informations pour utiliser l'utilitaire <command>nagiostats</command> pour générer des graphiques MRTG des statistiques de performance de Nagios peuvent être <link linkend=\"securityandperformancetuning-mrtggraphs\">ici</link>."
-
+msgid ""
+"Information on using the <command>nagiostats</command> utility to generate "
+"MRTG graphs for Nagios performance statistics can be found <xref linkend="
+"\"securityandperformancetuning-mrtggraphs\"/> here."
+msgstr ""
+"Les informations pour utiliser l'utilitaire <command>nagiostats</command> "
+"pour générer des graphiques MRTG des statistiques de performance de Nagios "
+"peuvent être <link linkend=\"securityandperformancetuning-mrtggraphs\">ici</"
+"link>."

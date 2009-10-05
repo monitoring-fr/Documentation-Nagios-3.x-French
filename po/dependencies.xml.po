@@ -22,43 +22,25 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -69,8 +51,7 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
@@ -81,8 +62,17 @@ msgstr "Dépendances d'hôtes et de services"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:13
-msgid "Service and host dependencies are an advanced feature of Nagios that allow you to control the behavior of hosts and services based on the status of one or more other hosts or services. I'll explain how dependencies work, along with the differences between host and service dependencies."
-msgstr "Les dépendances d'hôtes et de services sont une fonctionnalité avancée qui vous permet de contrôler le comportement des hôtes et des services selon l'état d'un ou plusieurs autres hôtes ou services. Je vais expliquer comment les dépendances fonctionnent, ainsi que les différences entre les dépendances d'hôtes ou de services."
+msgid ""
+"Service and host dependencies are an advanced feature of Nagios that allow "
+"you to control the behavior of hosts and services based on the status of one "
+"or more other hosts or services. I'll explain how dependencies work, along "
+"with the differences between host and service dependencies."
+msgstr ""
+"Les dépendances d'hôtes et de services sont une fonctionnalité avancée qui "
+"vous permet de contrôler le comportement des hôtes et des services selon "
+"l'état d'un ou plusieurs autres hôtes ou services. Je vais expliquer comment "
+"les dépendances fonctionnent, ainsi que les différences entre les "
+"dépendances d'hôtes ou de services."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:18
@@ -92,7 +82,9 @@ msgstr "Aperçu des dépendances de services"
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:19
 msgid "There are a few things you should know about service dependencies:"
-msgstr "Il y a quelques points qu'il faut savoir concernant la dépendances de service:"
+msgstr ""
+"Il y a quelques points qu'il faut savoir concernant la dépendances de "
+"service:"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:22
@@ -101,23 +93,40 @@ msgstr "Un service peut être dépendant d'un ou plusieurs autres services"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:25
-msgid "A service can be dependent on services which are not associated with the same host"
-msgstr "Un service peut être dépendant de services qui ne sont pas associés au même hôte"
+msgid ""
+"A service can be dependent on services which are not associated with the "
+"same host"
+msgstr ""
+"Un service peut être dépendant de services qui ne sont pas associés au même "
+"hôte"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:28
-msgid "Service dependencies are not inherited (unless specifically configured to)"
-msgstr "Les dépendances de service ne se sont pas héritées (à moins que ce ne soit explicitement spécifié)"
+msgid ""
+"Service dependencies are not inherited (unless specifically configured to)"
+msgstr ""
+"Les dépendances de service ne se sont pas héritées (à moins que ce ne soit "
+"explicitement spécifié)"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:31
-msgid "Service dependencies can be used to cause service check execution and service notifications to be suppressed under different circumstances (OK, WARNING, UNKNOWN, and/or CRITICAL states)"
-msgstr "Les dépendances de service permettent de supprimer l'exécution de services et de notifications de service selon différents critères (états OK, WARNING, UNKNOWN, et/ou CRITICAL)"
+msgid ""
+"Service dependencies can be used to cause service check execution and "
+"service notifications to be suppressed under different circumstances (OK, "
+"WARNING, UNKNOWN, and/or CRITICAL states)"
+msgstr ""
+"Les dépendances de service permettent de supprimer l'exécution de services "
+"et de notifications de service selon différents critères (états OK, WARNING, "
+"UNKNOWN, et/ou CRITICAL)"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:35
-msgid "Service dependencies might only be valid during specific <link linkend=\"thebasics-timeperiods\">timeperiods</link>"
-msgstr "Les dépendances d'un service ne sont seulement valable durant le <link linkend=\"thebasics-timeperiods\">timeperiods</link> spécifié"
+msgid ""
+"Service dependencies might only be valid during specific <link linkend="
+"\"thebasics-timeperiods\">timeperiods</link>"
+msgstr ""
+"Les dépendances d'un service ne sont seulement valable durant le <link "
+"linkend=\"thebasics-timeperiods\">timeperiods</link> spécifié"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:42
@@ -126,13 +135,34 @@ msgstr "Définition de dépendances de services"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:43
-msgid "First, the basics. You create service dependencies by adding <link linkend=\"configuringnagios-objectdefinitions-servicedependency\">service dependency definitions</link> in your <link linkend=\"configuringnagios-configobject\">object config file(s)</link>. In each definition you specify the <emphasis>dependent</emphasis> service, the service you are <emphasis>depending on</emphasis>, and the criteria (if any) that cause the execution and notification dependencies to fail (these are described later)."
-msgstr "Tout d'abord, les bases. Vous créez des dépendances de service en ajoutant des <link linkend=\"configuringnagios-objectdefinitions-servicedependency\">définitions de dépendance de service</link> dans votre (vos) <link linkend=\"configuringnagios-configobject\">fichier(s) de configuration des objets</link>. Dans chaque définition, vous spécifiez le service <emphasis>dépendant</emphasis>, le service dont il <emphasis>dépend</emphasis>, et la condition (s'il y a lieu) qui provoque l'échec des dépendances d'exécution et de notification (ces notions sont décrites plus loin)."
+msgid ""
+"First, the basics. You create service dependencies by adding <link linkend="
+"\"configuringnagios-objectdefinitions-servicedependency\">service dependency "
+"definitions</link> in your <link linkend=\"configuringnagios-configobject"
+"\">object config file(s)</link>. In each definition you specify the "
+"<emphasis>dependent</emphasis> service, the service you are "
+"<emphasis>depending on</emphasis>, and the criteria (if any) that cause the "
+"execution and notification dependencies to fail (these are described later)."
+msgstr ""
+"Tout d'abord, les bases. Vous créez des dépendances de service en ajoutant "
+"des <link linkend=\"configuringnagios-objectdefinitions-servicedependency"
+"\">définitions de dépendance de service</link> dans votre (vos) <link "
+"linkend=\"configuringnagios-configobject\">fichier(s) de configuration des "
+"objets</link>. Dans chaque définition, vous spécifiez le service "
+"<emphasis>dépendant</emphasis>, le service dont il <emphasis>dépend</"
+"emphasis>, et la condition (s'il y a lieu) qui provoque l'échec des "
+"dépendances d'exécution et de notification (ces notions sont décrites plus "
+"loin)."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:47
-msgid "You can create several dependencies for a given service, but you must add a separate service dependency definition for each dependency you create."
-msgstr "Vous pouvez créer plusieurs dépendances pour un même service, mais il vous faut une définition de dépendance de service séparée pour chaque dépendance créée."
+msgid ""
+"You can create several dependencies for a given service, but you must add a "
+"separate service dependency definition for each dependency you create."
+msgstr ""
+"Vous pouvez créer plusieurs dépendances pour un même service, mais il vous "
+"faut une définition de dépendance de service séparée pour chaque dépendance "
+"créée."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:51
@@ -141,13 +171,24 @@ msgstr "Exemple de dépendances de services"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:52
-msgid "The image below shows an example logical layout of service notification and execution dependencies.  Different services are dependent on other services for notifications and check execution."
-msgstr "L'image suivante nous montre un exemple d'une trame typique de notification de service et d'éxécution de ses dépendances. Différents services dépendent d'autres services pour que l'éxécution des checks et des notifications se réalise."
+msgid ""
+"The image below shows an example logical layout of service notification and "
+"execution dependencies.  Different services are dependent on other services "
+"for notifications and check execution."
+msgstr ""
+"L'image suivante nous montre un exemple d'une trame typique de notification "
+"de service et d'éxécution de ses dépendances. Différents services dépendent "
+"d'autres services pour que l'éxécution des checks et des notifications se "
+"réalise."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:63
-msgid "In this example, the dependency definitions for <emphasis>Service F</emphasis> on <emphasis>Host C</emphasis> would be defined as follows:"
-msgstr "Dans l'exemple ci-dessus, les définitions de dépendance du <emphasis>Service F</emphasis> sur <emphasis>l'hôte C</emphasis> seraient écrites comme ceci :"
+msgid ""
+"In this example, the dependency definitions for <emphasis>Service F</"
+"emphasis> on <emphasis>Host C</emphasis> would be defined as follows:"
+msgstr ""
+"Dans l'exemple ci-dessus, les définitions de dépendance du <emphasis>Service "
+"F</emphasis> sur <emphasis>l'hôte C</emphasis> seraient écrites comme ceci :"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/dependencies.xml:64
@@ -213,8 +254,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:92
-msgid "The other dependency definitions shown in the image above would be defined as follows:"
-msgstr "Les autres définitions de dépendances décrites dans l'image précédente s'écriraient comme suit :"
+msgid ""
+"The other dependency definitions shown in the image above would be defined "
+"as follows:"
+msgstr ""
+"Les autres définitions de dépendances décrites dans l'image précédente "
+"s'écriraient comme suit :"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/dependencies.xml:93
@@ -285,38 +330,93 @@ msgstr "Comment les dépendances d'un service sont testées"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:124
-msgid "Before Nagios executes a service check or sends notifications out for a service, it will check to see if the service has any dependencies. If it doesn't have any dependencies, the check is executed or the notification is sent out as it normally would be. If the service <emphasis>does</emphasis> have one or more dependencies, Nagios will check each dependency entry as follows:"
-msgstr "Avant que Nagios n'exécute un contrôle de service ou n'envoie des notifications concernant un service, il vérifiera si le service comporte des dépendances. Si ce n'est pas le cas, le contrôle est exécuté ou la notification est envoyée comme en temps normal. Si le service a bien une ou plusieurs dépendances, Nagios vérifiera chacune de la manière suivante :"
+msgid ""
+"Before Nagios executes a service check or sends notifications out for a "
+"service, it will check to see if the service has any dependencies. If it "
+"doesn't have any dependencies, the check is executed or the notification is "
+"sent out as it normally would be. If the service <emphasis>does</emphasis> "
+"have one or more dependencies, Nagios will check each dependency entry as "
+"follows:"
+msgstr ""
+"Avant que Nagios n'exécute un contrôle de service ou n'envoie des "
+"notifications concernant un service, il vérifiera si le service comporte des "
+"dépendances. Si ce n'est pas le cas, le contrôle est exécuté ou la "
+"notification est envoyée comme en temps normal. Si le service a bien une ou "
+"plusieurs dépendances, Nagios vérifiera chacune de la manière suivante :"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:130
-msgid "Nagios gets the current status<link linkend=\"advancedtopics-dependencies-hard_dependencies\">*</link> of the service that is being <emphasis>depended upon</emphasis>."
-msgstr "Nagios récupère l'état courant<link linkend=\"advancedtopics-dependencies-hard_dependencies\">*</link> du service dont il <emphasis>dépend</emphasis>."
+msgid ""
+"Nagios gets the current status<link linkend=\"advancedtopics-dependencies-"
+"hard_dependencies\">*</link> of the service that is being <emphasis>depended "
+"upon</emphasis>."
+msgstr ""
+"Nagios récupère l'état courant<link linkend=\"advancedtopics-dependencies-"
+"hard_dependencies\">*</link> du service dont il <emphasis>dépend</emphasis>."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:133
-msgid "Nagios compares the current status of the service that is being <emphasis>depended upon</emphasis> against either the execution or notification failure options in the dependency definition (whichever one is relevant at the time)."
-msgstr "Nagios compare l'état courant du service dont il <emphasis>dépend</emphasis> aux options d'échec soit d'exécution soit de notification dans la définition de dépendance (selon ce qui adapté)."
+msgid ""
+"Nagios compares the current status of the service that is being "
+"<emphasis>depended upon</emphasis> against either the execution or "
+"notification failure options in the dependency definition (whichever one is "
+"relevant at the time)."
+msgstr ""
+"Nagios compare l'état courant du service dont il <emphasis>dépend</emphasis> "
+"aux options d'échec soit d'exécution soit de notification dans la définition "
+"de dépendance (selon ce qui adapté)."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:138
-msgid "If the current status of the service that is being <emphasis>depended upon</emphasis> matches one of the failure options, the dependency is said to have failed and Nagios will break out of the dependency check loop."
-msgstr "Si l'état courant du service dont il <emphasis>dépend</emphasis> correspond à une des options d'échec, la dépendance est réputée avoir échoué et Nagios sortira de la boucle de vérification des dépendances."
+msgid ""
+"If the current status of the service that is being <emphasis>depended upon</"
+"emphasis> matches one of the failure options, the dependency is said to have "
+"failed and Nagios will break out of the dependency check loop."
+msgstr ""
+"Si l'état courant du service dont il <emphasis>dépend</emphasis> correspond "
+"à une des options d'échec, la dépendance est réputée avoir échoué et Nagios "
+"sortira de la boucle de vérification des dépendances."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:142
-msgid "If the current state of the service that is being <emphasis>depended upon</emphasis> does not match any of the failure options for the dependency entry, the dependency is said to have passed and Nagios will go on and check the next dependency entry."
-msgstr "Si l'état courant du service dont il <emphasis>dépend</emphasis> ne correspond à aucune des options d'échec de la dépendance, la dépendance est réputée avoir réussi et Nagios continuera avec la prochaine dépendance."
+msgid ""
+"If the current state of the service that is being <emphasis>depended upon</"
+"emphasis> does not match any of the failure options for the dependency "
+"entry, the dependency is said to have passed and Nagios will go on and check "
+"the next dependency entry."
+msgstr ""
+"Si l'état courant du service dont il <emphasis>dépend</emphasis> ne "
+"correspond à aucune des options d'échec de la dépendance, la dépendance est "
+"réputée avoir réussi et Nagios continuera avec la prochaine dépendance."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:147
-msgid "This cycle continues until either all dependencies for the service have been checked or until one dependency check fails."
-msgstr "Ce cycle continue jusqu'à ce que toutes les dépendances du service aient été vérifiées, ou jusqu'à ce qu'une dépendance échoue."
+msgid ""
+"This cycle continues until either all dependencies for the service have been "
+"checked or until one dependency check fails."
+msgstr ""
+"Ce cycle continue jusqu'à ce que toutes les dépendances du service aient été "
+"vérifiées, ou jusqu'à ce qu'une dépendance échoue."
 
 # type: Content of: <chapter><section><note><para>
 #: AdvancedTopics/dependencies.xml:150
-msgid "<anchor id=\"advancedtopics-dependencies-hard_dependencies\"/>* One important thing to note is that by default, Nagios will use the most current <link linkend=\"thebasics-statetypes\">hard state</link> of the service(s) that is/are being depended upon when it does the dependeny checks. If you want Nagios to use the most current state of the services (regardless of whether its a soft or hard state), enable the <link linkend=\"configuringnagios-configmain-soft_state_dependencies\">soft_state_dependencies</link> option."
-msgstr "<anchor id=\"advancedtopics-dependencies-hard_dependencies\"/>*Il est important de noter que par défaut, Nagios utilisera <link linkend=\"thebasics-statetypes\">l'état hard</link> courant du (des) service(s) dont il dépend lors de ses vérifications de dépendance. Si vous voulez que Nagios utilise l'état le plus récent des services (que ce soit un état soft ou hard), activez l'option <link linkend=\"configuringnagios-configmain-soft_state_dependencies\">soft_state_dependencies</link>."
+msgid ""
+"<anchor id=\"advancedtopics-dependencies-hard_dependencies\"/>* One "
+"important thing to note is that by default, Nagios will use the most current "
+"<link linkend=\"thebasics-statetypes\">hard state</link> of the service(s) "
+"that is/are being depended upon when it does the dependeny checks. If you "
+"want Nagios to use the most current state of the services (regardless of "
+"whether its a soft or hard state), enable the <link linkend="
+"\"configuringnagios-configmain-soft_state_dependencies"
+"\">soft_state_dependencies</link> option."
+msgstr ""
+"<anchor id=\"advancedtopics-dependencies-hard_dependencies\"/>*Il est "
+"important de noter que par défaut, Nagios utilisera <link linkend="
+"\"thebasics-statetypes\">l'état hard</link> courant du (des) service(s) dont "
+"il dépend lors de ses vérifications de dépendance. Si vous voulez que Nagios "
+"utilise l'état le plus récent des services (que ce soit un état soft ou "
+"hard), activez l'option <link linkend=\"configuringnagios-configmain-"
+"soft_state_dependencies\">soft_state_dependencies</link>."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:157
@@ -325,18 +425,52 @@ msgstr "Dépendances d'exécution"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:158
-msgid "Execution dependencies are used to restrict when <link linkend=\"thebasics-activechecks\">active checks</link> of a service can be performed. <link linkend=\"thebasics-passivechecks\">Passive checks</link> are not restricted by execution dependencies."
-msgstr "Les dépendances d'exécution permettent de limiter les <link linkend=\"thebasics-activechecks\">vérifications de service actives</link>. Les <link linkend=\"thebasics-passivechecks\">vérifications de service passives</link> ne sont pas affectées par les dépendances d'exécution."
+msgid ""
+"Execution dependencies are used to restrict when <link linkend=\"thebasics-"
+"activechecks\">active checks</link> of a service can be performed. <link "
+"linkend=\"thebasics-passivechecks\">Passive checks</link> are not restricted "
+"by execution dependencies."
+msgstr ""
+"Les dépendances d'exécution permettent de limiter les <link linkend="
+"\"thebasics-activechecks\">vérifications de service actives</link>. Les "
+"<link linkend=\"thebasics-passivechecks\">vérifications de service passives</"
+"link> ne sont pas affectées par les dépendances d'exécution."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:161
-msgid "If all of the execution dependency tests for the service passed, Nagios will execute the check of the service as it normally would. If even just one of the execution dependencies for a service fails, Nagios will temporarily prevent the execution of checks for that (dependent) service. At some point in the future the execution dependency tests for the service may all pass. If this happens, Nagios will start checking the service again as it normally would. More information on the check scheduling logic can be found <link linkend=\"advancedtopics-checkscheduling\">here</link>."
-msgstr "Si tous les tests de dépendance d'exécution du service réussissent, Nagios exécute le contrôle du service comme à l'accoutumée. Si ne serait-ce qu'une dépendance d'exécution du service échoue, Nagios arrêtera temporairement l'exécution des contrôles pour ce service (dépendant). Par la suite, les tests des dépendances d'exécution du service vont réussir. Alors, Nagios recommencera les contrôles de ce service de manière normale. Pour plus d'informations sur l'algorithme d'ordonnancement des contrôles , lisez <link linkend=\"advancedtopics-checkscheduling\">ceci</link>."
+msgid ""
+"If all of the execution dependency tests for the service passed, Nagios will "
+"execute the check of the service as it normally would. If even just one of "
+"the execution dependencies for a service fails, Nagios will temporarily "
+"prevent the execution of checks for that (dependent) service. At some point "
+"in the future the execution dependency tests for the service may all pass. "
+"If this happens, Nagios will start checking the service again as it normally "
+"would. More information on the check scheduling logic can be found <link "
+"linkend=\"advancedtopics-checkscheduling\">here</link>."
+msgstr ""
+"Si tous les tests de dépendance d'exécution du service réussissent, Nagios "
+"exécute le contrôle du service comme à l'accoutumée. Si ne serait-ce qu'une "
+"dépendance d'exécution du service échoue, Nagios arrêtera temporairement "
+"l'exécution des contrôles pour ce service (dépendant). Par la suite, les "
+"tests des dépendances d'exécution du service vont réussir. Alors, Nagios "
+"recommencera les contrôles de ce service de manière normale. Pour plus "
+"d'informations sur l'algorithme d'ordonnancement des contrôles , lisez <link "
+"linkend=\"advancedtopics-checkscheduling\">ceci</link>."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:166
-msgid "In the example above, <emphasis role=\"bold\">Service E</emphasis> would have failed execution dependencies if <emphasis role=\"bold\">Service B</emphasis> is in a WARNING or UNKNOWN state. If this was the case, the service check would not be performed and the check would be scheduled for (potential) execution at a later time."
-msgstr "Dans l'exemple ci-dessus, les dépendances d'exécution du <emphasis role=\"bold\">Service E</emphasis> échoueraient si le <emphasis role=\"bold\">Service B</emphasis> est dans un état WARNING ou UNKNOWN. Si c'était le cas, le contrôle de service ne serait pas réalisé et serait ordonnancé pour une future exécution (potentielle)."
+msgid ""
+"In the example above, <emphasis role=\"bold\">Service E</emphasis> would "
+"have failed execution dependencies if <emphasis role=\"bold\">Service B</"
+"emphasis> is in a WARNING or UNKNOWN state. If this was the case, the "
+"service check would not be performed and the check would be scheduled for "
+"(potential) execution at a later time."
+msgstr ""
+"Dans l'exemple ci-dessus, les dépendances d'exécution du <emphasis role="
+"\"bold\">Service E</emphasis> échoueraient si le <emphasis role=\"bold"
+"\">Service B</emphasis> est dans un état WARNING ou UNKNOWN. Si c'était le "
+"cas, le contrôle de service ne serait pas réalisé et serait ordonnancé pour "
+"une future exécution (potentielle)."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:171
@@ -345,13 +479,46 @@ msgstr "Dépendances de notification"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:172
-msgid "If all of the notification dependency tests for the service <emphasis>passed</emphasis>, Nagios will send notifications out for the service as it normally would. If even just one of the notification dependencies for a service fails, Nagios will temporarily repress notifications for that (dependent) service. At some point in the future the notification dependency tests for the service may all pass. If this happens, Nagios will start sending out notifications again as it normally would for the service. More information on the notification logic can be found <link linkend=\"thebasics-notifications\">here</link>."
-msgstr "Si tous les tests de dépendance de notification du service <emphasis>réussissent</emphasis>, Nagios enverra les notifications pour ce service comme à l'accoutumée. Si, ne serait-ce qu'une dépendance de notification du service échoue, Nagios arrêtera temporairement l'émission de notifications pour ce service (dépendant). Plus tard, les tests des dépendances de notifications du service vont réussir. Alors, Nagios recommencera à envoyer des notifications pour ce service de manière normale. Pour plus d'informations sur l'algorithme de notification, lisez <link linkend=\"thebasics-notifications\">ceci</link>."
+msgid ""
+"If all of the notification dependency tests for the service "
+"<emphasis>passed</emphasis>, Nagios will send notifications out for the "
+"service as it normally would. If even just one of the notification "
+"dependencies for a service fails, Nagios will temporarily repress "
+"notifications for that (dependent) service. At some point in the future the "
+"notification dependency tests for the service may all pass. If this happens, "
+"Nagios will start sending out notifications again as it normally would for "
+"the service. More information on the notification logic can be found <link "
+"linkend=\"thebasics-notifications\">here</link>."
+msgstr ""
+"Si tous les tests de dépendance de notification du service "
+"<emphasis>réussissent</emphasis>, Nagios enverra les notifications pour ce "
+"service comme à l'accoutumée. Si, ne serait-ce qu'une dépendance de "
+"notification du service échoue, Nagios arrêtera temporairement l'émission de "
+"notifications pour ce service (dépendant). Plus tard, les tests des "
+"dépendances de notifications du service vont réussir. Alors, Nagios "
+"recommencera à envoyer des notifications pour ce service de manière normale. "
+"Pour plus d'informations sur l'algorithme de notification, lisez <link "
+"linkend=\"thebasics-notifications\">ceci</link>."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:178
-msgid "In the example above, <emphasis role=\"bold\">Service F</emphasis> would have failed notification dependencies if <emphasis role=\"bold\">Service C</emphasis> is in a CRITICAL state, <emphasis>and/or</emphasis> <emphasis role=\"bold\">Service D</emphasis> is in a WARNING or UNKNOWN state, <emphasis>and/or</emphasis> if <emphasis role=\"bold\">Service E</emphasis> is in a WARNING, UNKNOWN, or CRITICAL state. If this were the case, notifications for the service would not be sent out."
-msgstr "Dans l'exemple ci-dessus, les dépendances de notification du <emphasis role=\"bold\">Service F</emphasis> échoueraient si le <emphasis role=\"bold\">Service C</emphasis> est dans un état CRITICAL, <emphasis>et/ou</emphasis> si le <emphasis role=\"bold\">Service D</emphasis> est dans un état WARNING ou UNKNOWN, <emphasis>et/ou</emphasis> si le <emphasis role=\"bold\">Service E</emphasis> est dans un état WARNING, UNKNOWN, ou CRITICAL. Si c'était le cas, les notifications pour ce service ne seraient pas envoyées."
+msgid ""
+"In the example above, <emphasis role=\"bold\">Service F</emphasis> would "
+"have failed notification dependencies if <emphasis role=\"bold\">Service C</"
+"emphasis> is in a CRITICAL state, <emphasis>and/or</emphasis> <emphasis role="
+"\"bold\">Service D</emphasis> is in a WARNING or UNKNOWN state, "
+"<emphasis>and/or</emphasis> if <emphasis role=\"bold\">Service E</emphasis> "
+"is in a WARNING, UNKNOWN, or CRITICAL state. If this were the case, "
+"notifications for the service would not be sent out."
+msgstr ""
+"Dans l'exemple ci-dessus, les dépendances de notification du <emphasis role="
+"\"bold\">Service F</emphasis> échoueraient si le <emphasis role=\"bold"
+"\">Service C</emphasis> est dans un état CRITICAL, <emphasis>et/ou</"
+"emphasis> si le <emphasis role=\"bold\">Service D</emphasis> est dans un "
+"état WARNING ou UNKNOWN, <emphasis>et/ou</emphasis> si le <emphasis role="
+"\"bold\">Service E</emphasis> est dans un état WARNING, UNKNOWN, ou "
+"CRITICAL. Si c'était le cas, les notifications pour ce service ne seraient "
+"pas envoyées."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:183
@@ -360,18 +527,59 @@ msgstr "Héritage de dépendance"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:184
-msgid "As mentioned before, service dependencies are not inherited by default. In the example above you can see that Service F is dependent on Service E. However, it does not automatically inherit Service E's dependencies on Service B and Service C. In order to make Service F dependent on Service C we had to add another service dependency definition. There is no dependency definition for Service B, so Service F is not dependent on Service B."
-msgstr "Comme je l'ai déjà dit, par défaut les dépendances de service ne sont pas héritées. Dans l'exemple ci-dessus, vous pouvez voir que le Service F est dépendant du Service E. Toutefois, il n'hérite pas automatiquement des dépendances du Service E sur le Service B et le Service C. Pour rendre le Service F dépendant du Service C, nous avons dû ajouter une autre définition de dépendance. Il n'y a pas de définition de dépendance pour le Service B, donc le Service F n'est pas  dépendant du Service B."
+msgid ""
+"As mentioned before, service dependencies are not inherited by default. In "
+"the example above you can see that Service F is dependent on Service E. "
+"However, it does not automatically inherit Service E's dependencies on "
+"Service B and Service C. In order to make Service F dependent on Service C "
+"we had to add another service dependency definition. There is no dependency "
+"definition for Service B, so Service F is not dependent on Service B."
+msgstr ""
+"Comme je l'ai déjà dit, par défaut les dépendances de service ne sont pas "
+"héritées. Dans l'exemple ci-dessus, vous pouvez voir que le Service F est "
+"dépendant du Service E. Toutefois, il n'hérite pas automatiquement des "
+"dépendances du Service E sur le Service B et le Service C. Pour rendre le "
+"Service F dépendant du Service C, nous avons dû ajouter une autre définition "
+"de dépendance. Il n'y a pas de définition de dépendance pour le Service B, "
+"donc le Service F n'est pas  dépendant du Service B."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:188
-msgid "If you do wish to make service dependencies inheritable, you must use the inherits_parent directive in the <link linkend=\"configuringnagios-objectdefinitions-servicedependency\">service dependency</link> definition. When this directive is enabled, it indicates that the dependency inherits dependencies of the service that is being depended upon (also referred to as the master service). In other words, if the master service is dependent upon other services and any one of those dependencies fail, this dependency will also fail."
-msgstr "Si vous voulez rendre les dépendances de service héritables, utilisez le paramètre inherits_parent dans la définition de la <link linkend=\"configuringnagios-objectdefinitions-servicedependency\">dépendance du service</link>. Quand ce paramètre est activé, il indique que la dépendance hérite des dépendances du service dont elle dépend  (également appelé le service maître). En d'autres termes, si le service maître dépend d'autres services et qu'une de ces dépendances est en échec, la dépendance sera aussi en échec."
+msgid ""
+"If you do wish to make service dependencies inheritable, you must use the "
+"inherits_parent directive in the <link linkend=\"configuringnagios-"
+"objectdefinitions-servicedependency\">service dependency</link> definition. "
+"When this directive is enabled, it indicates that the dependency inherits "
+"dependencies of the service that is being depended upon (also referred to as "
+"the master service). In other words, if the master service is dependent upon "
+"other services and any one of those dependencies fail, this dependency will "
+"also fail."
+msgstr ""
+"Si vous voulez rendre les dépendances de service héritables, utilisez le "
+"paramètre inherits_parent dans la définition de la <link linkend="
+"\"configuringnagios-objectdefinitions-servicedependency\">dépendance du "
+"service</link>. Quand ce paramètre est activé, il indique que la dépendance "
+"hérite des dépendances du service dont elle dépend  (également appelé le "
+"service maître). En d'autres termes, si le service maître dépend d'autres "
+"services et qu'une de ces dépendances est en échec, la dépendance sera aussi "
+"en échec."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:193
-msgid "In the example above, imagine that you want to add a new dependency for service F to make it dependent on service A. You could create a new dependency definition that specified service F as the dependent service and service A as being the master service (i.e. the service that is being dependend on). You could alternatively modify the dependency definition for services D and F to look like this:"
-msgstr "Dans l'exemple ci-dessus, imaginez que vous vouliez ajouter une nouvelle dépendance au service F qui le rende dépendant du service A. Vous pourriez créer une nouvelle définition de dépendance qui indique le service F comme le service dépendant et le service A comme le service maître  (c'est-à-dire le service dont il est dépendant). Vous pourriez également modifier la définition de dépendance des services D et F de la manière suivante :"
+msgid ""
+"In the example above, imagine that you want to add a new dependency for "
+"service F to make it dependent on service A. You could create a new "
+"dependency definition that specified service F as the dependent service and "
+"service A as being the master service (i.e. the service that is being "
+"dependend on). You could alternatively modify the dependency definition for "
+"services D and F to look like this:"
+msgstr ""
+"Dans l'exemple ci-dessus, imaginez que vous vouliez ajouter une nouvelle "
+"dépendance au service F qui le rende dépendant du service A. Vous pourriez "
+"créer une nouvelle définition de dépendance qui indique le service F comme "
+"le service dépendant et le service A comme le service maître  (c'est-à-dire "
+"le service dont il est dépendant). Vous pourriez également modifier la "
+"définition de dépendance des services D et F de la manière suivante :"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/dependencies.xml:197
@@ -403,13 +611,29 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:209
-msgid "Since the inherits_parent directive is enabled, the dependency between services A and D will be tested when the dependency between services F and D are being tested."
-msgstr "Comme le paramètre inherits_parent est activé, la dépendance entre les services A et D sera testée quand la dépendance entre les services F et D le sera."
+msgid ""
+"Since the inherits_parent directive is enabled, the dependency between "
+"services A and D will be tested when the dependency between services F and D "
+"are being tested."
+msgstr ""
+"Comme le paramètre inherits_parent est activé, la dépendance entre les "
+"services A et D sera testée quand la dépendance entre les services F et D le "
+"sera."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:211
-msgid "Dependencies can have multiple levels of inheritence. If the dependency definition between A and D had its inherits_parent directive enable and service A was dependent on some other service (let's call it service G), the service F would be dependent on services D, A, and G (each with potentially different criteria)."
-msgstr "Les dépendances peuvent avoir de multiples niveaux d'héritage. Si la définition de dépendance entre A et D avait le paramètre inherits_parent activé, et que le service A était dépendant d'un autre service (appelons-le service G), le service F serait dépendant des services D, A, et G (et le serait potentiellement avec chacun selon des critères différents)."
+msgid ""
+"Dependencies can have multiple levels of inheritence. If the dependency "
+"definition between A and D had its inherits_parent directive enable and "
+"service A was dependent on some other service (let's call it service G), the "
+"service F would be dependent on services D, A, and G (each with potentially "
+"different criteria)."
+msgstr ""
+"Les dépendances peuvent avoir de multiples niveaux d'héritage. Si la "
+"définition de dépendance entre A et D avait le paramètre inherits_parent "
+"activé, et que le service A était dépendant d'un autre service (appelons-le "
+"service G), le service F serait dépendant des services D, A, et G (et le "
+"serait potentiellement avec chacun selon des critères différents)."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:216
@@ -418,13 +642,32 @@ msgstr "Dépendances d'hôtes"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:217
-msgid "As you'd probably expect, host dependencies work in a similiar fashion to service dependencies.  The difference is that they're for hosts, not services."
-msgstr "Comme vous vous y attendez probablement, les dépendances d'hôtes fonctionnent d'une manière similaire à celles de services. La principale différence est que ce sont des hôtes et pas des services. Une autre différence est que la dépendance d'hôte ne sert qu'à supprimer des notifications d'hôtes et non pas des controles d'hôtes."
+msgid ""
+"As you'd probably expect, host dependencies work in a similiar fashion to "
+"service dependencies.  The difference is that they're for hosts, not "
+"services."
+msgstr ""
+"Comme vous vous y attendez probablement, les dépendances d'hôtes "
+"fonctionnent d'une manière similaire à celles de services. La principale "
+"différence est que ce sont des hôtes et pas des services. Une autre "
+"différence est que la dépendance d'hôte ne sert qu'à supprimer des "
+"notifications d'hôtes et non pas des controles d'hôtes."
 
 # type: Content of: <chapter><section><tip><para>
 #: AdvancedTopics/dependencies.xml:219
-msgid "Do not confuse host dependencies with parent/child host relationships. You should be using parent/child host relationships (defined with the parents directive in <link linkend=\"configuringnagios-objectdefinitions-host\">host</link> definitions)  for most cases, rather than host dependencies. A description of how parent/child host relationships work can be found in the documentation on <link linkend=\"thebasics-networkreachability\">network reachability</link>."
-msgstr "ATTENTION ! Ne confondez pas les dépendance d'hôtes avec les relations parent/enfant. Vous utiliserez les relations parent/enfant (définies avec le paramètre parents dans la définition d'hôte) dans la plupart des cas, plutôt que des dépendances d'hôtes."
+msgid ""
+"Do not confuse host dependencies with parent/child host relationships. You "
+"should be using parent/child host relationships (defined with the parents "
+"directive in <link linkend=\"configuringnagios-objectdefinitions-host"
+"\">host</link> definitions)  for most cases, rather than host dependencies. "
+"A description of how parent/child host relationships work can be found in "
+"the documentation on <link linkend=\"thebasics-networkreachability\">network "
+"reachability</link>."
+msgstr ""
+"ATTENTION ! Ne confondez pas les dépendance d'hôtes avec les relations "
+"parent/enfant. Vous utiliserez les relations parent/enfant (définies avec le "
+"paramètre parents dans la définition d'hôte) dans la plupart des cas, plutôt "
+"que des dépendances d'hôtes."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:223
@@ -439,17 +682,28 @@ msgstr "Un hôte peut dépendre d'un ou pusieurs hôtes"
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:229
 msgid "Host dependencies are not inherited (unless specifically configured to)"
-msgstr "Les dépendances d\"hôtes ne se sont pas héritées (à moins que ce ne soit explicitement spécifié)"
+msgstr ""
+"Les dépendances d\"hôtes ne se sont pas héritées (à moins que ce ne soit "
+"explicitement spécifié)"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:232
-msgid "Host dependencies can be used to cause host check execution and host notifications to be suppressed under different circumstances (UP, DOWN, and/or UNREACHABLE states)"
-msgstr "Les dépendances d'hôtes peuvent désactiver l'éxécution des vérifications et notifications dans certains circonstances (état UP, DOWN, et/ou UNREACHABLE)"
+msgid ""
+"Host dependencies can be used to cause host check execution and host "
+"notifications to be suppressed under different circumstances (UP, DOWN, and/"
+"or UNREACHABLE states)"
+msgstr ""
+"Les dépendances d'hôtes peuvent désactiver l'éxécution des vérifications et "
+"notifications dans certains circonstances (état UP, DOWN, et/ou UNREACHABLE)"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/dependencies.xml:236
-msgid "Host dependencies might only be valid during specific <link linkend=\"thebasics-timeperiods\">timeperiods</link>"
-msgstr "Les dépendances d'un hôte ne sont seulement valable durant le <link linkend=\"thebasics-timeperiods\">timeperiods</link> spécifié"
+msgid ""
+"Host dependencies might only be valid during specific <link linkend="
+"\"thebasics-timeperiods\">timeperiods</link>"
+msgstr ""
+"Les dépendances d'un hôte ne sont seulement valable durant le <link linkend="
+"\"thebasics-timeperiods\">timeperiods</link> spécifié"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/dependencies.xml:243
@@ -458,13 +712,21 @@ msgstr "Exemple de dépendances d'hôtes"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:244
-msgid "The image below shows an example of the logical layout of host notification dependencies. Different hosts are dependent on other hosts for notifications."
-msgstr "L'image suivante nous montre une trame de l'acheminement logique des dépendances de notifications d'hôtes."
+msgid ""
+"The image below shows an example of the logical layout of host notification "
+"dependencies. Different hosts are dependent on other hosts for notifications."
+msgstr ""
+"L'image suivante nous montre une trame de l'acheminement logique des "
+"dépendances de notifications d'hôtes."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:255
-msgid "In the example above, the dependency definitions for Host C would be defined as follows:"
-msgstr "Dans l'image ci-dessus, les définitions de dépendances pour l'hôte C devraient être définies ainsi:"
+msgid ""
+"In the example above, the dependency definitions for Host C would be defined "
+"as follows:"
+msgstr ""
+"Dans l'image ci-dessus, les définitions de dépendances pour l'hôte C "
+"devraient être définies ainsi:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/dependencies.xml:256
@@ -500,11 +762,37 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:269
-msgid "As with service dependencies, host dependencies are not inherited. In the example image you can see that Host C does not inherit the host dependencies of Host B. In order for Host C to be dependent on Host A, a new host dependency definition must be defined."
-msgstr "Comme pour les dépendances de services, les dépendances d'hôtes ne sont pas héritées. Dans l'exemple de cette image, vous pouvez voir que l'hôte C n'hérite pas des dépendances de l'hôte B. Pour que C soit dépendant de A, une autre définition d'hôte doit être précisée."
+msgid ""
+"As with service dependencies, host dependencies are not inherited. In the "
+"example image you can see that Host C does not inherit the host dependencies "
+"of Host B. In order for Host C to be dependent on Host A, a new host "
+"dependency definition must be defined."
+msgstr ""
+"Comme pour les dépendances de services, les dépendances d'hôtes ne sont pas "
+"héritées. Dans l'exemple de cette image, vous pouvez voir que l'hôte C "
+"n'hérite pas des dépendances de l'hôte B. Pour que C soit dépendant de A, "
+"une autre définition d'hôte doit être précisée."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/dependencies.xml:272
-msgid "Host notification dependencies work in a similiar manner to service notification dependencies. If <emphasis>all</emphasis> of the notification dependency tests for the host <emphasis>pass</emphasis>, Nagios will send notifications out for the host as it normally would. If even just one of the notification dependencies for a host fails, Nagios will temporarily repress notifications for that (dependent) host. At some point in the future the notification dependency tests for the host may all pass. If this happens, Nagios will start sending out notifications again as it normally would for the host. More information on the notification logic can be found <link linkend=\"thebasics-notifications\">here</link>."
-msgstr "Les dépendances de notifications d'hôtes marchent d'une manière similaire à celles de services. Si <emphasis>toutes</emphasis> les notifications de dépendance d'un hôte <emphasis>réussissent</emphasis>, Nagios enverra les notifications comme à l'accoutumée. Si ne serait-ce qu'une de ces dépendances échoue, Nagios supprimera temporairement toutes les notifications pour cet hôte (dépendant). Par la suite, les dépendances réussiront à nouveau. Nagios recommencera alors à envoyer les notifications de manière habituelle. Vous trouverez <link linkend=\"thebasics-notifications\">ici</link> plus d'informations sur la l'algorithme de notification."
-
+msgid ""
+"Host notification dependencies work in a similiar manner to service "
+"notification dependencies. If <emphasis>all</emphasis> of the notification "
+"dependency tests for the host <emphasis>pass</emphasis>, Nagios will send "
+"notifications out for the host as it normally would. If even just one of the "
+"notification dependencies for a host fails, Nagios will temporarily repress "
+"notifications for that (dependent) host. At some point in the future the "
+"notification dependency tests for the host may all pass. If this happens, "
+"Nagios will start sending out notifications again as it normally would for "
+"the host. More information on the notification logic can be found <link "
+"linkend=\"thebasics-notifications\">here</link>."
+msgstr ""
+"Les dépendances de notifications d'hôtes marchent d'une manière similaire à "
+"celles de services. Si <emphasis>toutes</emphasis> les notifications de "
+"dépendance d'un hôte <emphasis>réussissent</emphasis>, Nagios enverra les "
+"notifications comme à l'accoutumée. Si ne serait-ce qu'une de ces "
+"dépendances échoue, Nagios supprimera temporairement toutes les "
+"notifications pour cet hôte (dépendant). Par la suite, les dépendances "
+"réussiront à nouveau. Nagios recommencera alors à envoyer les notifications "
+"de manière habituelle. Vous trouverez <link linkend=\"thebasics-notifications"
+"\">ici</link> plus d'informations sur la l'algorithme de notification."

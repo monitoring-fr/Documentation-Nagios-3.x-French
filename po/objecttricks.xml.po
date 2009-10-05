@@ -22,43 +22,25 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -69,15 +51,16 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
 # type: Content of: <chapter><title>
 #: AdvancedTopics/objecttricks.xml:10
 msgid "Time-Saving Tricks For Object Definitions"
-msgstr "Trucs et astuces <quote>gain de temps</quote> dans les définitions de modèles d'objets"
+msgstr ""
+"Trucs et astuces <quote>gain de temps</quote> dans les définitions de "
+"modèles d'objets"
 
 # type: Content of: <chapter><abstract><para>
 #: AdvancedTopics/objecttricks.xml:13
@@ -86,8 +69,26 @@ msgstr "<quote>Comment ne pas pêter les plombs</quote>"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/objecttricks.xml:17
-msgid "This documentation attempts to explain how you can exploit the (somewhat) hidden features of <link linkend=\"configuringnagios-objectdefinitions\">template-based object definitions</link> to save your sanity. How so, you ask? Several types of objects allow you to specify multiple host names and/or hostgroup names in definitions, allowing you to \"copy\" the object defintion to multiple hosts or services. I'll cover each type of object that supports these features seperately. For starters, the object types which support this time-saving feature are as follows:"
-msgstr "Cette documentation va essayer de vous expliquer comment vous pouvez exploiter les fonctionnalités (quelque peu) cachées des <link linkend=\"configuringnagios-objectdefinitions\">définitions d'objets basées sur des modèles</link>histoire de <quote>ne pas pêter les plombs</quote>. Comment, me demanderez vous ? Plusieurs types d'objets permettent de spécifier de multiples noms d'hôtes et/ou de groupes d'hôtes dans les définitions, vous permettant de <quote>copier</quote> la défintion de l'objet dans de multiples hôtes ou services. Je vais parcourir séparement chaque type d'objet permettant cette fonctionnalité. Pour commencer, les types d'objets concernés sont les suivants :"
+msgid ""
+"This documentation attempts to explain how you can exploit the (somewhat) "
+"hidden features of <link linkend=\"configuringnagios-objectdefinitions"
+"\">template-based object definitions</link> to save your sanity. How so, you "
+"ask? Several types of objects allow you to specify multiple host names and/"
+"or hostgroup names in definitions, allowing you to \"copy\" the object "
+"defintion to multiple hosts or services. I'll cover each type of object that "
+"supports these features seperately. For starters, the object types which "
+"support this time-saving feature are as follows:"
+msgstr ""
+"Cette documentation va essayer de vous expliquer comment vous pouvez "
+"exploiter les fonctionnalités (quelque peu) cachées des <link linkend="
+"\"configuringnagios-objectdefinitions\">définitions d'objets basées sur des "
+"modèles</link>histoire de <quote>ne pas pêter les plombs</quote>. Comment, "
+"me demanderez vous ? Plusieurs types d'objets permettent de spécifier de "
+"multiples noms d'hôtes et/ou de groupes d'hôtes dans les définitions, vous "
+"permettant de <quote>copier</quote> la défintion de l'objet dans de "
+"multiples hôtes ou services. Je vais parcourir séparement chaque type "
+"d'objet permettant cette fonctionnalité. Pour commencer, les types d'objets "
+"concernés sont les suivants :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/objecttricks.xml:26
@@ -96,33 +97,57 @@ msgstr "<link linkend=\"advancedtopics-objecttricks-service\">Services</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/objecttricks.xml:31
-msgid "<link linkend=\"advancedtopics-objecttricks-serviceescalation\">Service escalations</link>"
-msgstr "<link linkend=\"advancedtopics-objecttricks-serviceescalation\">Escalades de service</link>"
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-serviceescalation\">Service "
+"escalations</link>"
+msgstr ""
+"<link linkend=\"advancedtopics-objecttricks-serviceescalation\">Escalades de "
+"service</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/objecttricks.xml:36
-msgid "<link linkend=\"advancedtopics-objecttricks-servicedependency\">Service dependencies</link>"
-msgstr "<link linkend=\"advancedtopics-objecttricks-servicedependency\">Dépendances de service</link>"
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-servicedependency\">Service "
+"dependencies</link>"
+msgstr ""
+"<link linkend=\"advancedtopics-objecttricks-servicedependency\">Dépendances "
+"de service</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/objecttricks.xml:41
-msgid "<link linkend=\"advancedtopics-objecttricks-hostescalation\">Host escalations</link>"
-msgstr "<link linkend=\"advancedtopics-objecttricks-hostescalation\">Escalades d'hôte</link>"
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-hostescalation\">Host "
+"escalations</link>"
+msgstr ""
+"<link linkend=\"advancedtopics-objecttricks-hostescalation\">Escalades "
+"d'hôte</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/objecttricks.xml:46
-msgid "<link linkend=\"advancedtopics-objecttricks-hostdependency\">Host dependencies</link>"
-msgstr "<link linkend=\"advancedtopics-objecttricks-hostdependency\">Dépendances d'hôte</link>"
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-hostdependency\">Host "
+"dependencies</link>"
+msgstr ""
+"<link linkend=\"advancedtopics-objecttricks-hostdependency\">Dépendances "
+"d'hôte</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/objecttricks.xml:51
-msgid "<link linkend=\"advancedtopics-objecttricks-hostgroup\">Hostgroups</link>"
-msgstr "<link linkend=\"advancedtopics-objecttricks-hostgroup\">Groupes d'hôtes</link>"
+msgid ""
+"<link linkend=\"advancedtopics-objecttricks-hostgroup\">Hostgroups</link>"
+msgstr ""
+"<link linkend=\"advancedtopics-objecttricks-hostgroup\">Groupes d'hôtes</"
+"link>"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/objecttricks.xml:55
-msgid "Object types that are not listed above (i.e. timeperiods, commands, etc.) do not support the features I'm about to describe."
-msgstr "Les types d'objets qui ne sont pas listés ci-dessus (par exexmple les périodes de temps, les commandes) ne supportent pas les fonctionnalités que je vais vous décrire maintenant. "
+msgid ""
+"Object types that are not listed above (i.e. timeperiods, commands, etc.) do "
+"not support the features I'm about to describe."
+msgstr ""
+"Les types d'objets qui ne sont pas listés ci-dessus (par exexmple les "
+"périodes de temps, les commandes) ne supportent pas les fonctionnalités que "
+"je vais vous décrire maintenant. "
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/objecttricks.xml:59
@@ -131,32 +156,77 @@ msgstr "Correspondance avec des expressions régulières "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/objecttricks.xml:60
-msgid "The examples I give below use <quote>standard</quote> matching of object names. If you wish, you can enable regular expression matching for object names by using the <link linkend=\"configuringnagios-configmain-use_regexp_matching\">use_regexp_matching</link> config option. By default, regular expression matching will only be used in object names that contain *, ?, +, or \\.. If you want regular expression matching to be used on all object names, enable the <link linkend=\"configuringnagios-configmain-use_true_regexp_matching\">use_true_regexp_matching</link> config option.  Regular expressions can be used in any of the fields used in the examples below (host names, hostgroup names, service names, and servicegroup names)."
-msgstr "Les exemples que je donne ci-dessous utilisent une correspondance <quote>standard</quote> avec les noms des objets. Si vous le souhaitez, vous pouvez activer la correspondance des noms d'objets avec des expressions régulières grâce au paramètre de configuration <link linkend=\"configuringnagios-configmain-use_regexp_matching\">use_regexp_matching</link>. Par défaut, les expressions régulières ne sont utilisées que dans les noms d'objets contenant les caractères de remplacement *, ?, + ou \\.. Si vous souhaitez voir les expressions régulières appliquées sur tous les noms d'objets, activez le paramétre de configuration <link linkend=\"configuringnagios-configmain-use_true_regexp_matching\">use_true_regexp_matching</link>. Les expressions régulières peuvent être utilisées dans n'importe quel champ des exemples ci-dessous (noms d'hôtes, noms de groupe d'hôtes, noms de service, et noms de groupes de service). "
+msgid ""
+"The examples I give below use <quote>standard</quote> matching of object "
+"names. If you wish, you can enable regular expression matching for object "
+"names by using the <link linkend=\"configuringnagios-configmain-"
+"use_regexp_matching\">use_regexp_matching</link> config option. By default, "
+"regular expression matching will only be used in object names that contain "
+"*, ?, +, or \\.. If you want regular expression matching to be used on all "
+"object names, enable the <link linkend=\"configuringnagios-configmain-"
+"use_true_regexp_matching\">use_true_regexp_matching</link> config option.  "
+"Regular expressions can be used in any of the fields used in the examples "
+"below (host names, hostgroup names, service names, and servicegroup names)."
+msgstr ""
+"Les exemples que je donne ci-dessous utilisent une correspondance "
+"<quote>standard</quote> avec les noms des objets. Si vous le souhaitez, vous "
+"pouvez activer la correspondance des noms d'objets avec des expressions "
+"régulières grâce au paramètre de configuration <link linkend="
+"\"configuringnagios-configmain-use_regexp_matching\">use_regexp_matching</"
+"link>. Par défaut, les expressions régulières ne sont utilisées que dans les "
+"noms d'objets contenant les caractères de remplacement *, ?, + ou \\.. Si "
+"vous souhaitez voir les expressions régulières appliquées sur tous les noms "
+"d'objets, activez le paramétre de configuration <link linkend="
+"\"configuringnagios-configmain-use_true_regexp_matching"
+"\">use_true_regexp_matching</link>. Les expressions régulières peuvent être "
+"utilisées dans n'importe quel champ des exemples ci-dessous (noms d'hôtes, "
+"noms de groupe d'hôtes, noms de service, et noms de groupes de service). "
 
 # type: Content of: <chapter><section><note><para>
 #: AdvancedTopics/objecttricks.xml:71
-msgid "Be careful when enabling regular expression matching - you may have to change your config file, since some directives that you might not want to be interpreted as a regular expression just might be ! Any problems should become evident once you verify your configuration."
-msgstr "Attention lorsque vous activez les expressions régulières - vous aurez peut-être à modifier votre fichier de configuration, pour éviter que des paramètres que vous ne souhaitez pas voir interprétés comme des expressions régulières ne le soient ! Les problèmes devraient être mis en évidence lorsque vous vérifiez votre configuration."
+msgid ""
+"Be careful when enabling regular expression matching - you may have to "
+"change your config file, since some directives that you might not want to be "
+"interpreted as a regular expression just might be ! Any problems should "
+"become evident once you verify your configuration."
+msgstr ""
+"Attention lorsque vous activez les expressions régulières - vous aurez peut-"
+"être à modifier votre fichier de configuration, pour éviter que des "
+"paramètres que vous ne souhaitez pas voir interprétés comme des expressions "
+"régulières ne le soient ! Les problèmes devraient être mis en évidence "
+"lorsque vous vérifiez votre configuration."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/objecttricks.xml:80
 msgid "<anchor id=\"advancedtopics-objecttricks-service\"/>Service Definitions"
-msgstr "<anchor id=\"advancedtopics-objecttricks-service\"/>Définitions de service"
+msgstr ""
+"<anchor id=\"advancedtopics-objecttricks-service\"/>Définitions de service"
 
 # type: Content of: <chapter><section><section><title>
-#: AdvancedTopics/objecttricks.xml:82
-#: AdvancedTopics/objecttricks.xml:149
-#: AdvancedTopics/objecttricks.xml:270
-#: AdvancedTopics/objecttricks.xml:382
+#: AdvancedTopics/objecttricks.xml:82 AdvancedTopics/objecttricks.xml:149
+#: AdvancedTopics/objecttricks.xml:270 AdvancedTopics/objecttricks.xml:382
 #: AdvancedTopics/objecttricks.xml:443
 msgid "Multiple Hosts:"
 msgstr "Hôtes multiples"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:83
-msgid "If you want to create identical <link linkend=\"configuringnagios-objectdefinitions-service\">services</link> that are assigned to multiple hosts, you can specify multiple hosts in the <varname>host_name</varname> directive.  The definition below would create a service called SOMESERVICE on hosts HOST1 through HOSTN.  All the instances of the SOMESERVICE service would be identical (i.e. have the same check command, max check attempts, notification period, etc.)."
-msgstr "Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-service\">services</link> identiques assignés à plusieurs hôtes, vous pouvez préciser plusieurs hôtes dans la directive <varname>host_name</varname>. La définition ci-dessous va créer une service nommé SOMESERVICE sur les hôtes HOST1 jusqu'à HOSTN. Toutes les instances du service SOMESERVICE devraient être identiques (c.-à-d. auront la même commande de contrôle, le même nombre maximum d'essais, la même période de notification)."
+msgid ""
+"If you want to create identical <link linkend=\"configuringnagios-"
+"objectdefinitions-service\">services</link> that are assigned to multiple "
+"hosts, you can specify multiple hosts in the <varname>host_name</varname> "
+"directive.  The definition below would create a service called SOMESERVICE "
+"on hosts HOST1 through HOSTN.  All the instances of the SOMESERVICE service "
+"would be identical (i.e. have the same check command, max check attempts, "
+"notification period, etc.)."
+msgstr ""
+"Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-"
+"service\">services</link> identiques assignés à plusieurs hôtes, vous pouvez "
+"préciser plusieurs hôtes dans la directive <varname>host_name</varname>. La "
+"définition ci-dessous va créer une service nommé SOMESERVICE sur les hôtes "
+"HOST1 jusqu'à HOSTN. Toutes les instances du service SOMESERVICE devraient "
+"être identiques (c.-à-d. auront la même commande de contrôle, le même nombre "
+"maximum d'essais, la même période de notification)."
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:89
@@ -179,18 +249,33 @@ msgstr ""
 "\t\t\t"
 
 # type: Content of: <chapter><section><section><title>
-#: AdvancedTopics/objecttricks.xml:98
-#: AdvancedTopics/objecttricks.xml:166
-#: AdvancedTopics/objecttricks.xml:290
-#: AdvancedTopics/objecttricks.xml:397
+#: AdvancedTopics/objecttricks.xml:98 AdvancedTopics/objecttricks.xml:166
+#: AdvancedTopics/objecttricks.xml:290 AdvancedTopics/objecttricks.xml:397
 #: AdvancedTopics/objecttricks.xml:461
 msgid "All Hosts In Multiple Hostgroups:"
 msgstr "Tous les hôtes situés dans de multiples groupes d'hôtes : "
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:99
-msgid "If you want to create identical services that are assigned to all hosts in one or more hostgroups, you can do so by creating a single service definition. How ? The <varname>hostgroup_name</varname> directive allows you to specify the name of one or more hostgroups that the service should be created for. The definition below would create a service called SOMESERVICE on all hosts that are members of hostgroups HOSTGROUP1 through HOSTGROUPN. All the instances of the SOMESERVICE service would be identical (i.e. have the same check command, max check attempts, notification period, etc.)."
-msgstr "Si vous voulez créer des services identiques, assignés à tous les hôtes d'un ou de plusieurs groupes d'hôtes, vous pouvez le faire en une seule définition de service. Comment ? Le paramètre <varname>hostgroup_name</varname> vous permet de spécifier un ou plusieurs groupes d'hôtes pour lesquels le service doit être créé. La définition ci-dessous va créer un service appellé SOMESERVICE sur tous les hôtes membre des groupes d'hôtes HOSTGROUP1 à HOSTGROUPN. Toutes les instances du service SOMESERVICE seront identiques (c.-à-d. auront la même commande de contrôle, le même nombre maximum d'essais, la même période de notification, etc.). "
+msgid ""
+"If you want to create identical services that are assigned to all hosts in "
+"one or more hostgroups, you can do so by creating a single service "
+"definition. How ? The <varname>hostgroup_name</varname> directive allows you "
+"to specify the name of one or more hostgroups that the service should be "
+"created for. The definition below would create a service called SOMESERVICE "
+"on all hosts that are members of hostgroups HOSTGROUP1 through HOSTGROUPN. "
+"All the instances of the SOMESERVICE service would be identical (i.e. have "
+"the same check command, max check attempts, notification period, etc.)."
+msgstr ""
+"Si vous voulez créer des services identiques, assignés à tous les hôtes d'un "
+"ou de plusieurs groupes d'hôtes, vous pouvez le faire en une seule "
+"définition de service. Comment ? Le paramètre <varname>hostgroup_name</"
+"varname> vous permet de spécifier un ou plusieurs groupes d'hôtes pour "
+"lesquels le service doit être créé. La définition ci-dessous va créer un "
+"service appellé SOMESERVICE sur tous les hôtes membre des groupes d'hôtes "
+"HOSTGROUP1 à HOSTGROUPN. Toutes les instances du service SOMESERVICE seront "
+"identiques (c.-à-d. auront la même commande de contrôle, le même nombre "
+"maximum d'essais, la même période de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:106
@@ -213,17 +298,29 @@ msgstr ""
 "\t\t\t"
 
 # type: Content of: <chapter><section><section><title>
-#: AdvancedTopics/objecttricks.xml:115
-#: AdvancedTopics/objecttricks.xml:182
-#: AdvancedTopics/objecttricks.xml:412
-#: AdvancedTopics/objecttricks.xml:481
+#: AdvancedTopics/objecttricks.xml:115 AdvancedTopics/objecttricks.xml:182
+#: AdvancedTopics/objecttricks.xml:412 AdvancedTopics/objecttricks.xml:481
 msgid "All Hosts:"
 msgstr "Tous les hôtes :"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:116
-msgid "If you want to create identical services that are assigned to all hosts that are defined in your configuration files, you can use a wildcard in the <varname>host_name</varname> directive. The definition below would create a service called SOMESERVICE on all hosts that are defined in your configuration files. All the instances of the SOMESERVICE service would be identical (i.e. have the same check command, max check attempts, notification period, etc.)."
-msgstr "Si vous voulez créer des services identiques, assignés à tous les hôtes de vos fichiers de configurations, vous pouvez utiliser un caractère de remplacement dans le paramètre <varname>host_name</varname>. La définition ci-dessous va créer un service appellé SOMESERVICE sur tous les hôtes définis dans vos fichiers de configurations. Toutes les instances du service SOMESERVICE seront identiques (c.-à-d. auront la même commande de contrôle, le même nombre maximum d'essais, la même période de notification, etc.). "
+msgid ""
+"If you want to create identical services that are assigned to all hosts that "
+"are defined in your configuration files, you can use a wildcard in the "
+"<varname>host_name</varname> directive. The definition below would create a "
+"service called SOMESERVICE on all hosts that are defined in your "
+"configuration files. All the instances of the SOMESERVICE service would be "
+"identical (i.e. have the same check command, max check attempts, "
+"notification period, etc.)."
+msgstr ""
+"Si vous voulez créer des services identiques, assignés à tous les hôtes de "
+"vos fichiers de configurations, vous pouvez utiliser un caractère de "
+"remplacement dans le paramètre <varname>host_name</varname>. La définition "
+"ci-dessous va créer un service appellé SOMESERVICE sur tous les hôtes "
+"définis dans vos fichiers de configurations. Toutes les instances du service "
+"SOMESERVICE seront identiques (c.-à-d. auront la même commande de contrôle, "
+"le même nombre maximum d'essais, la même période de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:122
@@ -246,16 +343,21 @@ msgstr ""
 "\t\t\t"
 
 # type: Content of: <chapter><section><section><title>
-#: AdvancedTopics/objecttricks.xml:131
-#: AdvancedTopics/objecttricks.xml:199
+#: AdvancedTopics/objecttricks.xml:131 AdvancedTopics/objecttricks.xml:199
 #: AdvancedTopics/objecttricks.xml:426
 msgid "Excluding Hosts:"
 msgstr "Exclusion d'hôtes : "
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:132
-msgid "If you want to create identical services on numerous hosts or hostgroups, but would like to exclude some hosts from the definition, this can be accomplished by preceding the host or hostgroup with a ! symbol."
-msgstr "Si vous voulez créer des services identiques sur plusieurs hôtes ou groupes d'hôtes, mais désirez exclure certains hôtes de la définition, vous pouvez le faire en précédant l'hôte ou le groupe d'hôte du symbole !."
+msgid ""
+"If you want to create identical services on numerous hosts or hostgroups, "
+"but would like to exclude some hosts from the definition, this can be "
+"accomplished by preceding the host or hostgroup with a ! symbol."
+msgstr ""
+"Si vous voulez créer des services identiques sur plusieurs hôtes ou groupes "
+"d'hôtes, mais désirez exclure certains hôtes de la définition, vous pouvez "
+"le faire en précédant l'hôte ou le groupe d'hôte du symbole !."
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:135
@@ -281,13 +383,32 @@ msgstr ""
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/objecttricks.xml:147
-msgid "<anchor id=\"advancedtopics-objecttricks-serviceescalation\"/>Service Escalation Definitions"
-msgstr "<anchor id=\"advancedtopics-objecttricks-serviceescalation\"/>Définitions d'escalade de service"
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-serviceescalation\"/>Service "
+"Escalation Definitions"
+msgstr ""
+"<anchor id=\"advancedtopics-objecttricks-serviceescalation\"/>Définitions "
+"d'escalade de service"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:150
-msgid "If you want to create <link linkend=\"configuringnagios-objectdefinitions-serviceescalation\">service escalations</link> for services of the same name/description that are assigned to multiple hosts, you can specify multiple hosts in the <varname>host_name</varname> directive. The definition below would create a service escalation for services called SOMESERVICE on hosts HOST1 through HOSTN. All the instances of the service escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-serviceescalation\">service escalations</link> pour des services portant le même nom/description, et qui sont assignés à plusieurs hôtes, vous pouvez spécifier des hôtes multiples dans le paramètre <varname>host_name</varname> La définition ci-dessous va créer une escalade pour les services appelés SOMESERVICE sur les hôtes HOST1 à HOSTN. Toutes les instances de l'escalade de service seront identiques (c.-à-d. auront le même groupe de contact, le même intervalle de notification, etc.). ."
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">service escalations</link> for services of the same name/"
+"description that are assigned to multiple hosts, you can specify multiple "
+"hosts in the <varname>host_name</varname> directive. The definition below "
+"would create a service escalation for services called SOMESERVICE on hosts "
+"HOST1 through HOSTN. All the instances of the service escalation would be "
+"identical (i.e. have the same contact groups, notification interval, etc.)."
+msgstr ""
+"Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">service escalations</link> pour des services portant le "
+"même nom/description, et qui sont assignés à plusieurs hôtes, vous pouvez "
+"spécifier des hôtes multiples dans le paramètre <varname>host_name</varname> "
+"La définition ci-dessous va créer une escalade pour les services appelés "
+"SOMESERVICE sur les hôtes HOST1 à HOSTN. Toutes les instances de l'escalade "
+"de service seront identiques (c.-à-d. auront le même groupe de contact, le "
+"même intervalle de notification, etc.). ."
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:157
@@ -311,8 +432,23 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:167
-msgid "If you want to create service escalations for services of the same name/description that are assigned to all hosts in in one or more hostgroups, you can do use the <varname>hostgroup_name</varname> directive. The definition below would create a service escalation for services called SOMESERVICE on all hosts that are members of hostgroups HOSTGROUP1 through HOSTGROUPN. All the instances of the service escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer une escalade de service pour des services portant le même nom/description et qui sont assignés à tous les hôtes dans un ou plusieurs groupes d'hôtes, vous pouvez le faire avec le paramètre <varname>hostgroup_name</varname>. La définition ci-dessous va créer une escalade pour les services appelés SOMESERVICE sur tous les hôtes membres des groupes HOSTGROUP1 à HOSTGROUPN. Toutes les instances de l'escalade de service seront identiques (c.-à-d. auront le même groupe de contact, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create service escalations for services of the same name/"
+"description that are assigned to all hosts in in one or more hostgroups, you "
+"can do use the <varname>hostgroup_name</varname> directive. The definition "
+"below would create a service escalation for services called SOMESERVICE on "
+"all hosts that are members of hostgroups HOSTGROUP1 through HOSTGROUPN. All "
+"the instances of the service escalation would be identical (i.e. have the "
+"same contact groups, notification interval, etc.)."
+msgstr ""
+"Si vous voulez créer une escalade de service pour des services portant le "
+"même nom/description et qui sont assignés à tous les hôtes dans un ou "
+"plusieurs groupes d'hôtes, vous pouvez le faire avec le paramètre "
+"<varname>hostgroup_name</varname>. La définition ci-dessous va créer une "
+"escalade pour les services appelés SOMESERVICE sur tous les hôtes membres "
+"des groupes HOSTGROUP1 à HOSTGROUPN. Toutes les instances de l'escalade de "
+"service seront identiques (c.-à-d. auront le même groupe de contact, le même "
+"intervalle de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:173
@@ -336,8 +472,23 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:183
-msgid "If you want to create identical service escalations for services of the same name/description that are assigned to all hosts that are defined in your configuration files, you can use a wildcard in the <varname>host_name</varname> directive.  The definition below would create a service escalation for all services called SOMESERVICE on all hosts that are defined in your configuration files. All the instances of the service escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer une escalade de service identique pour des services portant le même nom/description et qui sont assignés à tous les hôtes définis dans vos fichiers de configuration, vous pouvez utiliser un caractère de remplacement dans la directive <varname>host_name</varname>. La définition ci-dessous va créer une escalade pour tous les services appelés SOMESERVICE de tous les hôtes définis dans vos fichiers de configuration. Toutes les instances de l'escalade de service seront identiques (c.-à-d. auront le même groupe de contact, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create identical service escalations for services of the same "
+"name/description that are assigned to all hosts that are defined in your "
+"configuration files, you can use a wildcard in the <varname>host_name</"
+"varname> directive.  The definition below would create a service escalation "
+"for all services called SOMESERVICE on all hosts that are defined in your "
+"configuration files. All the instances of the service escalation would be "
+"identical (i.e. have the same contact groups, notification interval, etc.)."
+msgstr ""
+"Si vous voulez créer une escalade de service identique pour des services "
+"portant le même nom/description et qui sont assignés à tous les hôtes "
+"définis dans vos fichiers de configuration, vous pouvez utiliser un "
+"caractère de remplacement dans la directive <varname>host_name</varname>. La "
+"définition ci-dessous va créer une escalade pour tous les services appelés "
+"SOMESERVICE de tous les hôtes définis dans vos fichiers de configuration. "
+"Toutes les instances de l'escalade de service seront identiques (c.-à-d. "
+"auront le même groupe de contact, le même intervalle de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:190
@@ -361,8 +512,16 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:200
-msgid "If you want to create identical services escalations for services on numerous hosts or hostgroups, but would like to exclude some hosts from the definition, this can be accomplished by preceding the host or hostgroup with a ! symbol."
-msgstr "Si vous voulez créer des escalades de services identiques sur plusieurs hôtes ou groupes d'hôtes, mais désirez exclure certains hôtes de la définition, vous pouvez le faire en précédant l'hôte ou le groupe d'hôte du symbole !."
+msgid ""
+"If you want to create identical services escalations for services on "
+"numerous hosts or hostgroups, but would like to exclude some hosts from the "
+"definition, this can be accomplished by preceding the host or hostgroup with "
+"a ! symbol."
+msgstr ""
+"Si vous voulez créer des escalades de services identiques sur plusieurs "
+"hôtes ou groupes d'hôtes, mais désirez exclure certains hôtes de la "
+"définition, vous pouvez le faire en précédant l'hôte ou le groupe d'hôte du "
+"symbole !."
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:203
@@ -393,13 +552,37 @@ msgstr "Tous les services d'un même hôte :"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:214
-msgid "If you want to create <link linkend=\"configuringnagios-objectdefinitions-serviceescalation\">service escalations</link> for all services assigned to a particular host, you can use a wildcard in the <varname>service_description</varname> directive. The definition below would create a service escalation for all services on host HOST1. All the instances of the service escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-serviceescalation\">escalades de service</link> pour tous les services assignés à un hôte précis, vous pouvez utiliser un caractère de remplacement dans le paramètre <varname>service_description</varname>. La définition ci-dessous va créer une escalade de service pour tous les services de l'hôte HOST1. Toutes les instances de l'escalade de service seront identiques (c.-à-d. auront le même groupe de contact, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">service escalations</link> for all services assigned to "
+"a particular host, you can use a wildcard in the "
+"<varname>service_description</varname> directive. The definition below would "
+"create a service escalation for all services on host HOST1. All the "
+"instances of the service escalation would be identical (i.e. have the same "
+"contact groups, notification interval, etc.)."
+msgstr ""
+"Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">escalades de service</link> pour tous les services "
+"assignés à un hôte précis, vous pouvez utiliser un caractère de remplacement "
+"dans le paramètre <varname>service_description</varname>. La définition ci-"
+"dessous va créer une escalade de service pour tous les services de l'hôte "
+"HOST1. Toutes les instances de l'escalade de service seront identiques (c.-à-"
+"d. auront le même groupe de contact, le même intervalle de notification, "
+"etc.). "
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:221
-msgid "If you feel like being particularly adventurous, you can specify a wildcard in both the <varname>host_name</varname> and <varname>service_description</varname> directives.  Doing so would create a service escalation for all services that you've defined in your configuration files."
-msgstr "Si vous vous sentez l'esprit particulièrement aventureux, vous pouvez spécifier un caractère de remplacement à la fois dans les paramètres <varname>host_name</varname> et <varname>service_description</varname>. Cela va créer une escalade de service pour tous les services définis dans vos fichiers de configuration."
+msgid ""
+"If you feel like being particularly adventurous, you can specify a wildcard "
+"in both the <varname>host_name</varname> and <varname>service_description</"
+"varname> directives.  Doing so would create a service escalation for all "
+"services that you've defined in your configuration files."
+msgstr ""
+"Si vous vous sentez l'esprit particulièrement aventureux, vous pouvez "
+"spécifier un caractère de remplacement à la fois dans les paramètres "
+"<varname>host_name</varname> et <varname>service_description</varname>. Cela "
+"va créer une escalade de service pour tous les services définis dans vos "
+"fichiers de configuration."
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:225
@@ -428,8 +611,24 @@ msgstr "Services multiples du même hôte :"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:235
-msgid "If you want to create <link linkend=\"configuringnagios-objectdefinitions-serviceescalation\">service escalations</link> for all multiple services assigned to a particular host, you can use a specify more than one service description in the <varname>service_description</varname> directive.  The definition below would create a service escalation for services SERVICE1 through SERVICEN on host HOST1. All the instances of the service escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-serviceescalation\">escalades de service</link> pour plusieurs services assignés à un hôte précis, vous pouvez spécfier plusieurs descriptions de service dans le paramètre <varname>service_description</varname>. La définition ci-dessous va créer une escalade pour les services SERVICE1 à SERVICEN de l'hôte HOST1. Toutes les instances de l'escalade de service seront identiques (c.-à-d. auront le même groupe de contact, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">service escalations</link> for all multiple services "
+"assigned to a particular host, you can use a specify more than one service "
+"description in the <varname>service_description</varname> directive.  The "
+"definition below would create a service escalation for services SERVICE1 "
+"through SERVICEN on host HOST1. All the instances of the service escalation "
+"would be identical (i.e. have the same contact groups, notification "
+"interval, etc.)."
+msgstr ""
+"Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-"
+"serviceescalation\">escalades de service</link> pour plusieurs services "
+"assignés à un hôte précis, vous pouvez spécfier plusieurs descriptions de "
+"service dans le paramètre <varname>service_description</varname>. La "
+"définition ci-dessous va créer une escalade pour les services SERVICE1 à "
+"SERVICEN de l'hôte HOST1. Toutes les instances de l'escalade de service "
+"seront identiques (c.-à-d. auront le même groupe de contact, le même "
+"intervalle de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:242
@@ -452,15 +651,27 @@ msgstr ""
 "\t\t\t"
 
 # type: Content of: <chapter><section><section><title>
-#: AdvancedTopics/objecttricks.xml:251
-#: AdvancedTopics/objecttricks.xml:345
+#: AdvancedTopics/objecttricks.xml:251 AdvancedTopics/objecttricks.xml:345
 msgid "All Services In Multiple Servicegroups:"
 msgstr "Tous les Services de multiples groupes de services :"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:252
-msgid "If you want to create service escalations for all services that belong in one or more servicegroups, you can do use the <varname>servicegroup_name</varname> directive.  The definition below would create service escalations for all services that are members of servicegroups SERVICEGROUP1 through SERVICEGROUPN.  All the instances of the service escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer des escalades de service pour tous les services appartenant à un ou plusieurs groupes de services, vous pouvez utiliser le paramètre <varname>servicegroup_name</varname>. La définition ci-dessous va créer une escalade pour tous les services membres des groupes de services SERVICEGROUP1 à SERVICEGROUPN. Toutes les instances de l'escalade de service seront identiques (c.-à-d. auront le même groupe de contact, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create service escalations for all services that belong in "
+"one or more servicegroups, you can do use the <varname>servicegroup_name</"
+"varname> directive.  The definition below would create service escalations "
+"for all services that are members of servicegroups SERVICEGROUP1 through "
+"SERVICEGROUPN.  All the instances of the service escalation would be "
+"identical (i.e. have the same contact groups, notification interval, etc.)."
+msgstr ""
+"Si vous voulez créer des escalades de service pour tous les services "
+"appartenant à un ou plusieurs groupes de services, vous pouvez utiliser le "
+"paramètre <varname>servicegroup_name</varname>. La définition ci-dessous va "
+"créer une escalade pour tous les services membres des groupes de services "
+"SERVICEGROUP1 à SERVICEGROUPN. Toutes les instances de l'escalade de service "
+"seront identiques (c.-à-d. auront le même groupe de contact, le même "
+"intervalle de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:258
@@ -482,13 +693,35 @@ msgstr ""
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/objecttricks.xml:268
-msgid "<anchor id=\"advancedtopics-objecttricks-servicedependency\"/>Service Dependency Definitions"
-msgstr "<anchor id=\"advancedtopics-objecttricks-servicedependency\"/>Définitions de dépendance de service"
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-servicedependency\"/>Service "
+"Dependency Definitions"
+msgstr ""
+"<anchor id=\"advancedtopics-objecttricks-servicedependency\"/>Définitions de "
+"dépendance de service"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:271
-msgid "If you want to create <link linkend=\"configuringnagios-objectdefinitions-servicedependency\">service dependencies</link> for services of the same name/description that are assigned to multiple hosts, you can specify multiple hosts in the <varname>host_name</varname> and or <varname>dependent_host_name</varname> directives. In the example below, service SERVICE2 on hosts HOST3 and HOST4 would be dependent on service SERVICE1 on hosts HOST1 and HOST2. All the instances of the service dependencies would be identical except for the host names (i.e. have the same notification failure criteria, etc.)."
-msgstr "Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-servicedependency\">dépendances de service</link> pour des services portant le même nom/description, et qui sont assignés à plusieurs hôtes, vous pouvez spécifier de multiples hôtes dans les paramètres <varname>host_name</varname> et/ou <varname>dependent_host_name</varname>. Dans l'exemple ci-dessous, le service SERVICE2 des hôtes HOST3 et HOST4 sera dépendant du service SERVICE1 des hôtes HOST1 et HOST2. Toutes les instances de la dépendance de service seront identiques, mis à part les noms d'hôtes (c.-à-d. auront le même critère d'échec de notification, etc.). "
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"servicedependency\">service dependencies</link> for services of the same "
+"name/description that are assigned to multiple hosts, you can specify "
+"multiple hosts in the <varname>host_name</varname> and or "
+"<varname>dependent_host_name</varname> directives. In the example below, "
+"service SERVICE2 on hosts HOST3 and HOST4 would be dependent on service "
+"SERVICE1 on hosts HOST1 and HOST2. All the instances of the service "
+"dependencies would be identical except for the host names (i.e. have the "
+"same notification failure criteria, etc.)."
+msgstr ""
+"Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-"
+"servicedependency\">dépendances de service</link> pour des services portant "
+"le même nom/description, et qui sont assignés à plusieurs hôtes, vous pouvez "
+"spécifier de multiples hôtes dans les paramètres <varname>host_name</"
+"varname> et/ou <varname>dependent_host_name</varname>. Dans l'exemple ci-"
+"dessous, le service SERVICE2 des hôtes HOST3 et HOST4 sera dépendant du "
+"service SERVICE1 des hôtes HOST1 et HOST2. Toutes les instances de la "
+"dépendance de service seront identiques, mis à part les noms d'hôtes (c.-à-"
+"d. auront le même critère d'échec de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:279
@@ -516,8 +749,31 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:291
-msgid "If you want to create service dependencies for services of the same name/description that are assigned to all hosts in in one or more hostgroups, you can do use the <varname>hostgroup_name</varname> and/or <varname>dependent_hostgroup_name</varname> directives. In the example below, service SERVICE2 on all hosts in hostgroups HOSTGROUP3 and HOSTGROUP4 would be dependent on service SERVICE1 on all hosts in hostgroups HOSTGROUP1 and HOSTGROUP2. Assuming there were five hosts in each of the hostgroups, this definition would be equivalent to creating 100 single service dependency definitions ! All the instances of the service dependency would be identical except for the host names (i.e. have the same notification failure criteria, etc.)."
-msgstr "Si vous voulez créer des dépendances de service pour des services portant le même nom/description, et qui sont assignés à tous les hôtes d'un ou plusieurs groupes d'hôtes, vous pouvez utiliser le paramètre <varname>hostgroup_name</varname> et/ou <varname>dependent_hostgroup_name</varname>. Dans l'exemple ci-dessous, le service SERVICE2 de tous les hôtes membres des groupes d'hôtes HOSTGROUP3 et HOSTGROUP4 seront dépendant du service SERVICE1 de tous les hôtes membres des groupes d'hôtes HOSTGROUP1 et HOSTGROUP2. Si l'on suppose qu'il y a cinq hôtes dans chacun des groupes d'hôtes, cette définition équivaut à créer 100 définitions simples de dépendance de service ! Toutes les instances de la dépendance de service seront identiques, mis à part les noms d'hôtes (c.-à-d. auront le même critère d'échec de notification, etc.). "
+msgid ""
+"If you want to create service dependencies for services of the same name/"
+"description that are assigned to all hosts in in one or more hostgroups, you "
+"can do use the <varname>hostgroup_name</varname> and/or "
+"<varname>dependent_hostgroup_name</varname> directives. In the example "
+"below, service SERVICE2 on all hosts in hostgroups HOSTGROUP3 and HOSTGROUP4 "
+"would be dependent on service SERVICE1 on all hosts in hostgroups HOSTGROUP1 "
+"and HOSTGROUP2. Assuming there were five hosts in each of the hostgroups, "
+"this definition would be equivalent to creating 100 single service "
+"dependency definitions ! All the instances of the service dependency would "
+"be identical except for the host names (i.e. have the same notification "
+"failure criteria, etc.)."
+msgstr ""
+"Si vous voulez créer des dépendances de service pour des services portant le "
+"même nom/description, et qui sont assignés à tous les hôtes d'un ou "
+"plusieurs groupes d'hôtes, vous pouvez utiliser le paramètre "
+"<varname>hostgroup_name</varname> et/ou <varname>dependent_hostgroup_name</"
+"varname>. Dans l'exemple ci-dessous, le service SERVICE2 de tous les hôtes "
+"membres des groupes d'hôtes HOSTGROUP3 et HOSTGROUP4 seront dépendant du "
+"service SERVICE1 de tous les hôtes membres des groupes d'hôtes HOSTGROUP1 et "
+"HOSTGROUP2. Si l'on suppose qu'il y a cinq hôtes dans chacun des groupes "
+"d'hôtes, cette définition équivaut à créer 100 définitions simples de "
+"dépendance de service ! Toutes les instances de la dépendance de service "
+"seront identiques, mis à part les noms d'hôtes (c.-à-d. auront le même "
+"critère d'échec de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:300
@@ -550,8 +806,21 @@ msgstr "Tous les services d'un même hôte :"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:312
-msgid "If you want to create service dependencies for all services assigned to a particular host, you can use a wildcard in the <varname>service_description</varname> and/or <varname>dependent_service_description</varname> directives. In the example below, all services on host HOST2 would be dependent on all services on host HOST1. All the instances of the service dependencies would be identical (i.e. have the same notification failure criteria, etc.)."
-msgstr "Si vous voulez créer des dépendances de service pour tous les services assignés à un hôte précis, vous pouvez utiliser un caractère de remplacement dans les paramètres  <varname>service_description</varname> et/ou <varname>dependent_service_description</varname>. Dans l'exemple ci-dessous, tous les services de l'hôte HOST2 seront dépendants de tous les services de l'hôte HOST1. Toutes les instances de la dépendance de service seront identiques (c.-à-d. auront le même critère d'échec de notification, etc.). "
+msgid ""
+"If you want to create service dependencies for all services assigned to a "
+"particular host, you can use a wildcard in the <varname>service_description</"
+"varname> and/or <varname>dependent_service_description</varname> directives. "
+"In the example below, all services on host HOST2 would be dependent on all "
+"services on host HOST1. All the instances of the service dependencies would "
+"be identical (i.e. have the same notification failure criteria, etc.)."
+msgstr ""
+"Si vous voulez créer des dépendances de service pour tous les services "
+"assignés à un hôte précis, vous pouvez utiliser un caractère de remplacement "
+"dans les paramètres  <varname>service_description</varname> et/ou "
+"<varname>dependent_service_description</varname>. Dans l'exemple ci-dessous, "
+"tous les services de l'hôte HOST2 seront dépendants de tous les services de "
+"l'hôte HOST1. Toutes les instances de la dépendance de service seront "
+"identiques (c.-à-d. auront le même critère d'échec de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:318
@@ -584,8 +853,16 @@ msgstr "Services multiples d'un même hôte :"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:330
-msgid "If you want to create service dependencies for multiple services assigned to a particular host, you can specify more than one service description in the <varname>service_description</varname> and/or <varname>dependent_service_description</varname> directives as follows:"
-msgstr "Si vous voulez créer des dépendances de service pour plusieurs services assignés à un hôte précis, vous pouvez spécifier plusieurs descriptions de service dans les paramètres <varname>service_description</varname> et/ou <varname>dependent_service_description</varname> comme suit : "
+msgid ""
+"If you want to create service dependencies for multiple services assigned to "
+"a particular host, you can specify more than one service description in the "
+"<varname>service_description</varname> and/or "
+"<varname>dependent_service_description</varname> directives as follows:"
+msgstr ""
+"Si vous voulez créer des dépendances de service pour plusieurs services "
+"assignés à un hôte précis, vous pouvez spécifier plusieurs descriptions de "
+"service dans les paramètres <varname>service_description</varname> et/ou "
+"<varname>dependent_service_description</varname> comme suit : "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:334
@@ -613,8 +890,16 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:346
-msgid "If you want to create service dependencies for all services that belong in one or more servicegroups, you can do use the <varname>servicegroup_name</varname> and/or <varname>dependent_servicegroup_name</varname> directive as follows:"
-msgstr "Si vous voulez créer des dépendances de service pour tous les services appartenant à un ou plusieurs groupes de services, vous pouvez utiliser les paramètres <varname>servicegroup_name</varname> et/ou <varname>dependent_servicegroup_name</varname> comme suit : "
+msgid ""
+"If you want to create service dependencies for all services that belong in "
+"one or more servicegroups, you can do use the <varname>servicegroup_name</"
+"varname> and/or <varname>dependent_servicegroup_name</varname> directive as "
+"follows:"
+msgstr ""
+"Si vous voulez créer des dépendances de service pour tous les services "
+"appartenant à un ou plusieurs groupes de services, vous pouvez utiliser les "
+"paramètres <varname>servicegroup_name</varname> et/ou "
+"<varname>dependent_servicegroup_name</varname> comme suit : "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:349
@@ -638,13 +923,35 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><title>
 #: AdvancedTopics/objecttricks.xml:359
-msgid "<anchor id=\"advancedtopics-objecttricks-same_host_dependency\"/>Same Host Dependencies:"
-msgstr "<anchor id=\"advancedtopics-objecttricks-same_host_dependency\"/>Dépendances sur le même hôte :"
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-same_host_dependency\"/>Same Host "
+"Dependencies:"
+msgstr ""
+"<anchor id=\"advancedtopics-objecttricks-same_host_dependency\"/>Dépendances "
+"sur le même hôte :"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:360
-msgid "If you want to create service dependencies for multiple services that are dependent on services on the same host, leave the <varname>dependent_host_name</varname> and <varname>dependent_hostgroup_name</varname> directives empty.  The example below assumes that hosts HOST1 and HOST2 have at least the following four services associated with them: SERVICE1, SERVICE2, SERVICE3, and SERVICE4.  In this example, SERVICE3 and SERVICE4 on HOST1 will be dependent on both SERVICE1 and SERVICE2 on HOST1. Similiarly, SERVICE3 and SERVICE4 on HOST2 will be dependent on both SERVICE1 and SERVICE2 on HOST2."
-msgstr "Si vous voulez créer des dépendances de service pour plusieurs services dépendants de services sur le même hôte, laissez les paramètres <varname>dependent_host_name</varname> et <varname>dependent_hostgroup_name</varname> vides.  L'exemple ci-dessous part du principe que les hôtes HOST1 et HOST2 ont un minimum de quatre services associés avec eux : SERVICE1, SERVICE2, SERVICE3, et SERVICE4. Dans cet exemple, SERVICE3 et SERVICE4 sur HOST1 seront dépendants à la fois de SERVICE1 et SERVICE2 sur HOST1. De façon identique, SERVICE3 et SERVICE4 sur HOST2 seront dépendants à la fois de SERVICE1 et SERVICE2 sur HOST2."
+msgid ""
+"If you want to create service dependencies for multiple services that are "
+"dependent on services on the same host, leave the "
+"<varname>dependent_host_name</varname> and "
+"<varname>dependent_hostgroup_name</varname> directives empty.  The example "
+"below assumes that hosts HOST1 and HOST2 have at least the following four "
+"services associated with them: SERVICE1, SERVICE2, SERVICE3, and SERVICE4.  "
+"In this example, SERVICE3 and SERVICE4 on HOST1 will be dependent on both "
+"SERVICE1 and SERVICE2 on HOST1. Similiarly, SERVICE3 and SERVICE4 on HOST2 "
+"will be dependent on both SERVICE1 and SERVICE2 on HOST2."
+msgstr ""
+"Si vous voulez créer des dépendances de service pour plusieurs services "
+"dépendants de services sur le même hôte, laissez les paramètres "
+"<varname>dependent_host_name</varname> et <varname>dependent_hostgroup_name</"
+"varname> vides.  L'exemple ci-dessous part du principe que les hôtes HOST1 "
+"et HOST2 ont un minimum de quatre services associés avec eux : SERVICE1, "
+"SERVICE2, SERVICE3, et SERVICE4. Dans cet exemple, SERVICE3 et SERVICE4 sur "
+"HOST1 seront dépendants à la fois de SERVICE1 et SERVICE2 sur HOST1. De "
+"façon identique, SERVICE3 et SERVICE4 sur HOST2 seront dépendants à la fois "
+"de SERVICE1 et SERVICE2 sur HOST2."
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:368
@@ -670,13 +977,30 @@ msgstr ""
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/objecttricks.xml:380
-msgid "<anchor id=\"advancedtopics-objecttricks-hostescalation\"/>Host Escalation Definitions"
-msgstr "<anchor id=\"advancedtopics-objecttricks-hostescalation\"/>Définitions d'escalade d'hôte"
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-hostescalation\"/>Host Escalation "
+"Definitions"
+msgstr ""
+"<anchor id=\"advancedtopics-objecttricks-hostescalation\"/>Définitions "
+"d'escalade d'hôte"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:383
-msgid "If you want to create <link linkend=\"configuringnagios-objectdefinitions-hostescalation\">host escalations</link> for multiple hosts, you can specify multiple hosts in the <varname>host_name</varname> directive.  The definition below would create a host escalation for hosts HOST1 through HOSTN. All the instances of the host escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous souhaitez créer des <link linkend=\"configuringnagios-objectdefinitions-hostescalation\">escalades d'hôte</link> pour plusieurs hôtes, vos pouvez spécifier plusieurs hôtes dans le paramètre <varname>host_name</varname>. La définition ci-dessous va créer une escalade d'hôte pour les hôtes HOST1 à HOSTN. Toutes les instances de l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de contacts, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"hostescalation\">host escalations</link> for multiple hosts, you can specify "
+"multiple hosts in the <varname>host_name</varname> directive.  The "
+"definition below would create a host escalation for hosts HOST1 through "
+"HOSTN. All the instances of the host escalation would be identical (i.e. "
+"have the same contact groups, notification interval, etc.)."
+msgstr ""
+"Si vous souhaitez créer des <link linkend=\"configuringnagios-"
+"objectdefinitions-hostescalation\">escalades d'hôte</link> pour plusieurs "
+"hôtes, vos pouvez spécifier plusieurs hôtes dans le paramètre "
+"<varname>host_name</varname>. La définition ci-dessous va créer une escalade "
+"d'hôte pour les hôtes HOST1 à HOSTN. Toutes les instances de l'escalade "
+"d'hôte seront identiques (c.-à-d. auront les mêmes groupes de contacts, le "
+"même intervalle de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:389
@@ -698,8 +1022,21 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:398
-msgid "If you want to create host escalations for all hosts in in one or more hostgroups, you can do use the <varname>hostgroup_name</varname> directive.  The definition below would create a host escalation on all hosts that are members of hostgroups HOSTGROUP1 through HOSTGROUPN. All the instances of the host escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer des escalades d'hôte pour tous les hôtes d'un ou plusieurs groupes d'hôtes, vos pouvez utiliser le paramètre <varname>hostgroup_name</varname>. La définition ci-dessous va créer une escalade d'hôte sur tous les hôtes membres des groupes d'hôtes HOSTGROUP1 à HOSTGROUPN. Toutes les instances de l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de contacts, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create host escalations for all hosts in in one or more "
+"hostgroups, you can do use the <varname>hostgroup_name</varname> directive.  "
+"The definition below would create a host escalation on all hosts that are "
+"members of hostgroups HOSTGROUP1 through HOSTGROUPN. All the instances of "
+"the host escalation would be identical (i.e. have the same contact groups, "
+"notification interval, etc.)."
+msgstr ""
+"Si vous voulez créer des escalades d'hôte pour tous les hôtes d'un ou "
+"plusieurs groupes d'hôtes, vos pouvez utiliser le paramètre "
+"<varname>hostgroup_name</varname>. La définition ci-dessous va créer une "
+"escalade d'hôte sur tous les hôtes membres des groupes d'hôtes HOSTGROUP1 à "
+"HOSTGROUPN. Toutes les instances de l'escalade d'hôte seront identiques (c.-"
+"à-d. auront les mêmes groupes de contacts, le même intervalle de "
+"notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:404
@@ -721,8 +1058,21 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:413
-msgid "If you want to create identical host escalations for all hosts that are defined in your configuration files, you can use a wildcard in the <varname>host_name</varname> directive.  The definition below would create a hosts escalation for all hosts that are defined in your configuration files. All the instances of the host escalation would be identical (i.e. have the same contact groups, notification interval, etc.)."
-msgstr "Si vous voulez créer des escalades d'hôte identiques pour tous les hôtes définis dans vos fichiers de configuration, vous pouvez utiliser un caractère de remplacement dans le paramètre <varname>host_name</varname>. La définition ci-dessous va créer une escalade d'hôte sur tous les hôtes définis dans vos fichiers de configuration. Toutes les instances de l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de contacts, le même intervalle de notification, etc.). "
+msgid ""
+"If you want to create identical host escalations for all hosts that are "
+"defined in your configuration files, you can use a wildcard in the "
+"<varname>host_name</varname> directive.  The definition below would create a "
+"hosts escalation for all hosts that are defined in your configuration files. "
+"All the instances of the host escalation would be identical (i.e. have the "
+"same contact groups, notification interval, etc.)."
+msgstr ""
+"Si vous voulez créer des escalades d'hôte identiques pour tous les hôtes "
+"définis dans vos fichiers de configuration, vous pouvez utiliser un "
+"caractère de remplacement dans le paramètre <varname>host_name</varname>. La "
+"définition ci-dessous va créer une escalade d'hôte sur tous les hôtes "
+"définis dans vos fichiers de configuration. Toutes les instances de "
+"l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de "
+"contacts, le même intervalle de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:418
@@ -744,8 +1094,14 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:427
-msgid "If you want to create identical host escalations on numerous hosts or hostgroups, but would like to exclude some hosts from the definition, this can be accomplished by preceding the host or hostgroup with a ! symbol."
-msgstr "Si vous voulez créer des escalades d'hôtes identiques sur plusieurs hôtes ou groupes d'hôtes, mais désirez exclure certains hôtes de la définition, vous pouvez le faire en précédant l'hôte ou le groupe d'hôte du symbole !."
+msgid ""
+"If you want to create identical host escalations on numerous hosts or "
+"hostgroups, but would like to exclude some hosts from the definition, this "
+"can be accomplished by preceding the host or hostgroup with a ! symbol."
+msgstr ""
+"Si vous voulez créer des escalades d'hôtes identiques sur plusieurs hôtes ou "
+"groupes d'hôtes, mais désirez exclure certains hôtes de la définition, vous "
+"pouvez le faire en précédant l'hôte ou le groupe d'hôte du symbole !."
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:430
@@ -769,13 +1125,35 @@ msgstr ""
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/objecttricks.xml:441
-msgid "<anchor id=\"advancedtopics-objecttricks-hostdependency\"/>Host Dependency Definitions"
-msgstr "<anchor id=\"advancedtopics-objecttricks-hostdependency\"/>Définitions de dépendance d'hôte"
+msgid ""
+"<anchor id=\"advancedtopics-objecttricks-hostdependency\"/>Host Dependency "
+"Definitions"
+msgstr ""
+"<anchor id=\"advancedtopics-objecttricks-hostdependency\"/>Définitions de "
+"dépendance d'hôte"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:444
-msgid "If you want to create <link linkend=\"configuringnagios-objectdefinitions-hostdependency\">host dependencies</link> for multiple hosts, you can specify multiple hosts in the <varname>host_name</varname> and/or <varname>dependent_host_name</varname> directives. The definition below would be equivalent to creating six seperate host dependencies. In the example above, hosts HOST3, HOST4 and HOST5 would be dependent upon both HOST1 and HOST2. All the instances of the host dependencies would be identical except for the host names (i.e. have the same notification failure criteria, etc.)."
-msgstr "Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-hostdependency\">dépendances d'hôte</link> pour plusieurs hôtes, vous pouvez spécifier plusieurs hôtes dans les paramètres <varname>host_name</varname> et/ou <varname>dependent_host_name</varname>. La définition ci-dessous équivaut à créer six dépendances d'hôte distinctes. Dans l'exemple ci-dessus, les hôtes HOST3, HOST4 et HOST5 seront dépendants à la fois d'HOST1 et de HOST2. Toutes les instances de la dépendance d'hôte seront identiques, à l'exception des noms d'hôtes (c.-à-d. auront le même critère d'échec de notification, etc.). "
+msgid ""
+"If you want to create <link linkend=\"configuringnagios-objectdefinitions-"
+"hostdependency\">host dependencies</link> for multiple hosts, you can "
+"specify multiple hosts in the <varname>host_name</varname> and/or "
+"<varname>dependent_host_name</varname> directives. The definition below "
+"would be equivalent to creating six seperate host dependencies. In the "
+"example above, hosts HOST3, HOST4 and HOST5 would be dependent upon both "
+"HOST1 and HOST2. All the instances of the host dependencies would be "
+"identical except for the host names (i.e. have the same notification failure "
+"criteria, etc.)."
+msgstr ""
+"Si vous voulez créer des <link linkend=\"configuringnagios-objectdefinitions-"
+"hostdependency\">dépendances d'hôte</link> pour plusieurs hôtes, vous pouvez "
+"spécifier plusieurs hôtes dans les paramètres <varname>host_name</varname> "
+"et/ou <varname>dependent_host_name</varname>. La définition ci-dessous "
+"équivaut à créer six dépendances d'hôte distinctes. Dans l'exemple ci-"
+"dessus, les hôtes HOST3, HOST4 et HOST5 seront dépendants à la fois d'HOST1 "
+"et de HOST2. Toutes les instances de la dépendance d'hôte seront identiques, "
+"à l'exception des noms d'hôtes (c.-à-d. auront le même critère d'échec de "
+"notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:452
@@ -799,8 +1177,23 @@ msgstr ""
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:462
-msgid "If you want to create host escalations for all hosts in in one or more hostgroups, you can do use the <varname>hostgroup_name</varname> and /or <varname>dependent_hostgroup_name</varname> directives. In the example below, all hosts in hostgroups HOSTGROUP3 and HOSTGROUP4 would be dependent on all hosts in hostgroups HOSTGROUP1 and HOSTGROUP2. All the instances of the host dependencies would be identical except for host names (i.e. have the same notification failure criteria, etc.)."
-msgstr "Si vous désire créer des dépendances d'hôte pour tous les hôtes d'un ou plusieurs groupes d'hôtes, vous pouvez utiliser les paramètres <varname>hostgroup_name</varname> et/ou <varname>dependent_hostgroup_name</varname>. Dans l'exemple ci-dessous, tous les hôtes des groupes d'hôtes HOSTGROUP3 et HOSTGROUP4 seront dépendants de tous les hôtes des groupes d'hôtes HOSTGROUP1 et HOSTGROUP2. Toutes les instances de la dépendance d'hôte seront identiques, à l'exception des noms d'hôtes (c.-à-d. auront le même critère d'échec de notification, etc.). "
+msgid ""
+"If you want to create host escalations for all hosts in in one or more "
+"hostgroups, you can do use the <varname>hostgroup_name</varname> and /or "
+"<varname>dependent_hostgroup_name</varname> directives. In the example "
+"below, all hosts in hostgroups HOSTGROUP3 and HOSTGROUP4 would be dependent "
+"on all hosts in hostgroups HOSTGROUP1 and HOSTGROUP2. All the instances of "
+"the host dependencies would be identical except for host names (i.e. have "
+"the same notification failure criteria, etc.)."
+msgstr ""
+"Si vous désire créer des dépendances d'hôte pour tous les hôtes d'un ou "
+"plusieurs groupes d'hôtes, vous pouvez utiliser les paramètres "
+"<varname>hostgroup_name</varname> et/ou <varname>dependent_hostgroup_name</"
+"varname>. Dans l'exemple ci-dessous, tous les hôtes des groupes d'hôtes "
+"HOSTGROUP3 et HOSTGROUP4 seront dépendants de tous les hôtes des groupes "
+"d'hôtes HOSTGROUP1 et HOSTGROUP2. Toutes les instances de la dépendance "
+"d'hôte seront identiques, à l'exception des noms d'hôtes (c.-à-d. auront le "
+"même critère d'échec de notification, etc.). "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:468
@@ -829,8 +1222,18 @@ msgstr "<anchor id=\"advancedtopics-objecttricks-hostgroup\"/>Groupes d'hôtes"
 
 # type: Content of: <chapter><section><section><para>
 #: AdvancedTopics/objecttricks.xml:482
-msgid "If you want to create a hostgroup that has all hosts that are defined in your configuration files as members, you can use a wildcard in the <varname>members</varname> directive. The definition below would create a hostgroup called HOSTGROUP1 that has all all hosts that are defined in your configuration files as members."
-msgstr "Si vous voulez créer un groupe d'hôte contenant tous les hôtes définis dans vos fichiers de configuration, vous pouvez utiliser un caractère de remplacement dans le paramètre <varname>members</varname>. La définition ci-dessous créera un groupe d'hôtes appelé HOSTGROUP1 contenant tous les hôtes définis dans vos fichiers de configuration. "
+msgid ""
+"If you want to create a hostgroup that has all hosts that are defined in "
+"your configuration files as members, you can use a wildcard in the "
+"<varname>members</varname> directive. The definition below would create a "
+"hostgroup called HOSTGROUP1 that has all all hosts that are defined in your "
+"configuration files as members."
+msgstr ""
+"Si vous voulez créer un groupe d'hôte contenant tous les hôtes définis dans "
+"vos fichiers de configuration, vous pouvez utiliser un caractère de "
+"remplacement dans le paramètre <varname>members</varname>. La définition ci-"
+"dessous créera un groupe d'hôtes appelé HOSTGROUP1 contenant tous les hôtes "
+"définis dans vos fichiers de configuration. "
 
 # type: Content of: <chapter><section><section><programlisting>
 #: AdvancedTopics/objecttricks.xml:486
@@ -851,4 +1254,3 @@ msgstr ""
 "    other hostgroup directives ...\n"
 "}\n"
 "\t\t\t"
-

@@ -19,8 +19,7 @@ msgstr ""
 #: GettingStarted/quickstart-fedora.xml:59
 #: GettingStarted/monitoring-windows.xml:148
 #: GettingStarted/monitoring-printers.xml:166
-#: GettingStarted/monitoring-routers.xml:143
-#: AdvancedTopics/redundancy.xml:31
+#: GettingStarted/monitoring-routers.xml:143 AdvancedTopics/redundancy.xml:31
 msgid "Prerequisites"
 msgstr "Pré-requis"
 
@@ -31,43 +30,25 @@ msgstr "Pré-requis"
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -78,8 +59,7 @@ msgstr "Pré-requis"
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
@@ -102,8 +82,15 @@ msgstr "Étapes"
 #: GettingStarted/monitoring-windows.xml:98
 #: GettingStarted/monitoring-printers.xml:120
 #: GettingStarted/monitoring-routers.xml:96
+#, fuzzy
 msgid "Perform first-time prerequisites"
-msgstr "Complétez les prérequis de départ"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Effectuez les pré-requis de départ\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Complétez les prérequis de départ\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Effectuez les pré-requis de départ"
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:111
@@ -123,15 +110,34 @@ msgstr "Ce qui est déjà fait pour vous"
 #: GettingStarted/monitoring-windows.xml:119
 #: GettingStarted/monitoring-printers.xml:137
 #: GettingStarted/monitoring-routers.xml:113
-msgid "To make your life a bit easier, a few configuration tasks have already been done for you:"
-msgstr "Pour vous faciliter la vie, quelques tâches de configuration ont déjà été faites pour vous:"
+#, fuzzy
+msgid ""
+"To make your life a bit easier, a few configuration tasks have already been "
+"done for you:"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Pour vous rendre la vie un peu plus facile, un certain nombre de choses ont "
+"déjà été faîtes pour vous:\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Pour vous faciliter la vie, quelques tâches de configuration ont déjà été "
+"faites pour vous:\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Pour vous rendre la vie un peu plus facile, un certain nombre de choses ont "
+"déjà été faîtes pour vous:"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:154
 #: GettingStarted/monitoring-printers.xml:172
 #: GettingStarted/monitoring-routers.xml:149
+#, fuzzy
 msgid "Edit the main Nagios config file."
-msgstr "Éditez le fichier de configuration principal de Nagios."
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Éditez le fichier principal de configuration de Nagios.\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Éditez le fichier de configuration principal de Nagios.\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Éditez le fichier principal de configuration de Nagios."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/monitoring-windows.xml:156
@@ -145,8 +151,20 @@ msgstr "<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cf
 #: GettingStarted/monitoring-windows.xml:158
 #: GettingStarted/monitoring-printers.xml:176
 #: GettingStarted/monitoring-routers.xml:153
-msgid "Remove the leading pound (#) sign from the following line in the main configuration file:"
-msgstr "Supprimer le signe dièse (#) de début de ligne pour les lignes suivantes dans le fichier de configuration principal :"
+#, fuzzy
+msgid ""
+"Remove the leading pound (#) sign from the following line in the main "
+"configuration file:"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Supprimez le signe dièse (#) de la ligne suivante dans le fichier principal "
+"de configuration:\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Supprimer le signe dièse (#) de début de ligne pour les lignes suivantes "
+"dans le fichier de configuration principal :\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Supprimez le signe dièse (#) de la ligne suivante dans le fichier principal "
+"de configuration:"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:163
@@ -166,8 +184,15 @@ msgstr "Configuration de Nagios"
 #: GettingStarted/monitoring-windows.xml:444
 #: GettingStarted/monitoring-printers.xml:271
 #: GettingStarted/monitoring-routers.xml:393
+#, fuzzy
 msgid "Save the file."
-msgstr "Enregistrez le fichier"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Enregistrez le fichier.\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Enregistrez le fichier\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Enregistrez le fichier."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:448
@@ -175,16 +200,48 @@ msgstr "Enregistrez le fichier"
 #: GettingStarted/monitoring-routers.xml:397
 #: GettingStarted/monitoring-publicservices.xml:421
 #: RunningNagios/startstop.xml:38
+#, fuzzy
 msgid "Restarting Nagios"
-msgstr "Redémarrage de Nagios"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrez Nagios\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrage de Nagios\n"
+"#-#-#-#-#  monitoring-publicservices.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrage de Nagios\n"
+"#-#-#-#-#  startstop.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrer Nagios\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redamérrage de Nagios"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:455
 #: GettingStarted/monitoring-printers.xml:283
 #: GettingStarted/monitoring-routers.xml:405
 #: GettingStarted/monitoring-publicservices.xml:429
-msgid "If the verification process produces any errors messages, fix your configuration file before continuing. Make sure that you don't (re)start Nagios until the verification process completes without any errors!"
-msgstr "Si la vérification sort n'importe quel type de message, corrigez votre fichier de configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios avant que la vérification de la configuration soit sans erreur! "
+#, fuzzy
+msgid ""
+"If the verification process produces any errors messages, fix your "
+"configuration file before continuing. Make sure that you don't (re)start "
+"Nagios until the verification process completes without any errors!"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si le processus de vérification sort des messages d'erreurs, corrigez votre "
+"configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios "
+"avant que le processus de vérification ne se termine sans erreur!\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si la vérification sort n'importe quel type de message, corrigez votre "
+"fichier de configuration avant de continuer. Assurez-vous de ne pas (re)"
+"démarrer Nagios avant que la vérification de la configuration soit sans "
+"erreur! \n"
+"#-#-#-#-#  monitoring-publicservices.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si le processus de vérification sort des messages d'erreurs, corrigez votre "
+"configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios "
+"avant que le processus de vérification ne se termine sans erreur!\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si le processus de vérification sort des messages d'erreurs, corrigez votre "
+"configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios "
+"avant que le processus de vérification ne se termine sans erreur!"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para><acronym>
 #: GettingStarted/monitoring-printers.xml:257
@@ -202,8 +259,13 @@ msgstr "Supervision des routeurs et des switchs."
 
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/monitoring-routers.xml:13
-msgid "This document describes how you can monitor the status of network switches and routers. Some cheaper \"unmanaged\" switches and hubs don't have"
-msgstr "Ce document décrit la façon don tvous pouvez superviser des routeurs et switchs réseaux. Quelques switchs et hubs bon marché <quote>non manageables</quote> n'ont pas"
+msgid ""
+"This document describes how you can monitor the status of network switches "
+"and routers. Some cheaper \"unmanaged\" switches and hubs don't have"
+msgstr ""
+"Ce document décrit la façon don tvous pouvez superviser des routeurs et "
+"switchs réseaux. Quelques switchs et hubs bon marché <quote>non manageables</"
+"quote> n'ont pas"
 
 # type: Content of: <chapter><abstract><para><acronym>
 #: GettingStarted/monitoring-routers.xml:15
@@ -212,18 +274,34 @@ msgstr "IP"
 
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/monitoring-routers.xml:15
-msgid "addresses and are essentially invisible on your network, so there's not any way to monitor them. More expensive switches and routers have addresses assigned to them and can be monitored by pinging them or using &protocol-snmp; to query status information."
-msgstr "adresses et sont invisibles sur votre réseau, il n'y a donc aucun moyen de les superviser. Les routeurs et switches plus chers ont une adresse assignée et peuvent donc être supervisés en les pingant ou en utilisant &protocol-snmp; pour interroger les informations de statut."
+msgid ""
+"addresses and are essentially invisible on your network, so there's not any "
+"way to monitor them. More expensive switches and routers have addresses "
+"assigned to them and can be monitored by pinging them or using &protocol-"
+"snmp; to query status information."
+msgstr ""
+"adresses et sont invisibles sur votre réseau, il n'y a donc aucun moyen de "
+"les superviser. Les routeurs et switches plus chers ont une adresse assignée "
+"et peuvent donc être supervisés en les pingant ou en utilisant &protocol-"
+"snmp; pour interroger les informations de statut."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:25
-msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/switch.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
-msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/switch.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/switch.png\" "
+"format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/switch.png\" "
+"format=\"PNG\"/> </imageobject> </inlinemediaobject>"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:31
-msgid "I'll describe how you can monitor the following things on managed switches, hubs, and routers:"
-msgstr "Je vais décrire la façon dont vous pouvez superviser les choses suivantes sur vos switchs, hubs et routeurs:"
+msgid ""
+"I'll describe how you can monitor the following things on managed switches, "
+"hubs, and routers:"
+msgstr ""
+"Je vais décrire la façon dont vous pouvez superviser les choses suivantes "
+"sur vos switchs, hubs et routeurs:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:36
@@ -242,23 +320,52 @@ msgstr "Trafic / bande passante consommée"
 
 # type: Content of: <chapter><section><note><para>
 #: GettingStarted/monitoring-routers.xml:49
-msgid "These instructions assume that you've installed Nagios according to the <link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The sample configuration entries below reference objects that are defined in the sample config files (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>, etc.) that are installed when you follow the quickstart."
-msgstr "Ces instructions impliquent que vous ayez installé Nagios comme précisé dans le <link linkend=\"gettingstarted-quickstart\">guide rapide</link>. Les exemples de configuration ci-dessous font référence aux objets de configuration définis dans les fichiers d'exemples (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>, etc.) qui ont été installé si vous avez suivi le guide rapide."
+msgid ""
+"These instructions assume that you've installed Nagios according to the "
+"<link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The "
+"sample configuration entries below reference objects that are defined in the "
+"sample config files (<filename>commands.cfg</filename>, <filename>templates."
+"cfg</filename>, etc.) that are installed when you follow the quickstart."
+msgstr ""
+"Ces instructions impliquent que vous ayez installé Nagios comme précisé dans "
+"le <link linkend=\"gettingstarted-quickstart\">guide rapide</link>. Les "
+"exemples de configuration ci-dessous font référence aux objets de "
+"configuration définis dans les fichiers d'exemples (<filename>commands.cfg</"
+"filename>, <filename>templates.cfg</filename>, etc.) qui ont été installé si "
+"vous avez suivi le guide rapide."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:67
-msgid "Monitoring switches and routers can either be easy or more involved - depending on what equipment you have and what you want to monitor. As they are critical infrastructure components, you'll no doubt want to monitor them in at least some basic manner."
-msgstr "La supervision des switchs et routeurs peut au choix être simple ou plus évoluée suivant le type d'équipements que vous souhaitez superviser. Dans le cas où ce sont des composants critiques de votre infrastrcuture, vous voudrez sans aucun doute les superviser d'une façon au moins basique."
+msgid ""
+"Monitoring switches and routers can either be easy or more involved - "
+"depending on what equipment you have and what you want to monitor. As they "
+"are critical infrastructure components, you'll no doubt want to monitor them "
+"in at least some basic manner."
+msgstr ""
+"La supervision des switchs et routeurs peut au choix être simple ou plus "
+"évoluée suivant le type d'équipements que vous souhaitez superviser. Dans le "
+"cas où ce sont des composants critiques de votre infrastrcuture, vous "
+"voudrez sans aucun doute les superviser d'une façon au moins basique."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:72
-msgid "Switches and routers can be monitored easily by \"pinging\" them to determine packet loss,"
-msgstr "Les switchs et les routeurs peuvent facilement être supervisés en les <quote>pingant</quote> pour déterminer le nombre de paquets perdus,"
+msgid ""
+"Switches and routers can be monitored easily by \"pinging\" them to "
+"determine packet loss,"
+msgstr ""
+"Les switchs et les routeurs peuvent facilement être supervisés en les "
+"<quote>pingant</quote> pour déterminer le nombre de paquets perdus,"
 
 # type: Content of: <chapter><section><para><application>
 #: GettingStarted/monitoring-routers.xml:73
-msgid ", etc. If your switch supports &protocol-snmp;, you can monitor port status, etc. with the &plugin-snmp; plugin and bandwidth (if you're using <application>"
-msgstr ", etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser l'état des ports, etc. avec le plugin &plugin-snmp; et la bande passante avec  &plugin-mrtgtraf; plugin (si vous utilisez <application>"
+msgid ""
+", etc. If your switch supports &protocol-snmp;, you can monitor port status, "
+"etc. with the &plugin-snmp; plugin and bandwidth (if you're using "
+"<application>"
+msgstr ""
+", etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser "
+"l'état des ports, etc. avec le plugin &plugin-snmp; et la bande passante "
+"avec  &plugin-mrtgtraf; plugin (si vous utilisez <application>"
 
 # type: Content of: <chapter><section><para><application><acronym>
 #: GettingStarted/monitoring-routers.xml:76
@@ -272,38 +379,94 @@ msgstr "</application>)."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:79
-msgid "The &plugin-snmp; plugin will only get compiled and installed if you have the net-snmp and net-snmp-utils packages installed on your system. Make sure the plugin exists in <filename class=\"directory\">/usr/local/nagios/libexec</filename> before you continue. If it doesn't, install <application>net-snmp</application> and <application>net-snmp-utils</application> and recompile/reinstall the Nagios plugins."
-msgstr "Le plugin &plugin-snmp; sera compilé et installé seulement si vous avez les paquets <application>net-snmp</application> et <application>net-snmp-utils</application> installés sur votre système. Assurez-vous que le plugin soit présent dans <filename class=\"directory\">/usr/local/nagios/libexec</filename> avant de continuer. Si ce n'est pas le cas, installez <application>net-snmp</application>, <application>net-snmp-utils</application> et recompilez/réinstallez les plugins Nagios."
+msgid ""
+"The &plugin-snmp; plugin will only get compiled and installed if you have "
+"the net-snmp and net-snmp-utils packages installed on your system. Make sure "
+"the plugin exists in <filename class=\"directory\">/usr/local/nagios/"
+"libexec</filename> before you continue. If it doesn't, install "
+"<application>net-snmp</application> and <application>net-snmp-utils</"
+"application> and recompile/reinstall the Nagios plugins."
+msgstr ""
+"Le plugin &plugin-snmp; sera compilé et installé seulement si vous avez les "
+"paquets <application>net-snmp</application> et <application>net-snmp-utils</"
+"application> installés sur votre système. Assurez-vous que le plugin soit "
+"présent dans <filename class=\"directory\">/usr/local/nagios/libexec</"
+"filename> avant de continuer. Si ce n'est pas le cas, installez "
+"<application>net-snmp</application>, <application>net-snmp-utils</"
+"application> et recompilez/réinstallez les plugins Nagios."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:91
-msgid "There are several steps you'll need to follow in order to monitor a new router or switch. They are:"
-msgstr "Il y a plusieurs étapes à suivre pour pouvoir superviser un nouveau routeur ou switch. Les voici:"
+msgid ""
+"There are several steps you'll need to follow in order to monitor a new "
+"router or switch. They are:"
+msgstr ""
+"Il y a plusieurs étapes à suivre pour pouvoir superviser un nouveau routeur "
+"ou switch. Les voici:"
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-routers.xml:100
 msgid "Create new host and service definitions for monitoring the device"
-msgstr "Créez de nouvelles définitions d'hôte et service pour la supervision du périphérique."
+msgstr ""
+"Créez de nouvelles définitions d'hôte et service pour la supervision du "
+"périphérique."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:118
-msgid "Two command definitions (<emphasis>check_snmp</emphasis> and <emphasis>check_local_mrtgtraf</emphasis>) have been added to the <filename>commands.cfg</filename> file. These allows you to use the &plugin-snmp; and &plugin-mrtgtraf; plugins to monitor network routers."
-msgstr "Deux définitions de commandes (<emphasis>check_snmp</emphasis> et <emphasis>check_local_mrtgtraf</emphasis>) ont été ajoutées au fichier <filename>commands.cfg</filename>. Elles vous permettent d'utiliser les plugins &plugin-snmp; et &plugin-mrtgtraf; pour superviser les routeurs réseaux."
+msgid ""
+"Two command definitions (<emphasis>check_snmp</emphasis> and "
+"<emphasis>check_local_mrtgtraf</emphasis>) have been added to the "
+"<filename>commands.cfg</filename> file. These allows you to use the &plugin-"
+"snmp; and &plugin-mrtgtraf; plugins to monitor network routers."
+msgstr ""
+"Deux définitions de commandes (<emphasis>check_snmp</emphasis> et "
+"<emphasis>check_local_mrtgtraf</emphasis>) ont été ajoutées au fichier "
+"<filename>commands.cfg</filename>. Elles vous permettent d'utiliser les "
+"plugins &plugin-snmp; et &plugin-mrtgtraf; pour superviser les routeurs "
+"réseaux."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:126
-msgid "A switch host template (called <emphasis>generic-switch</emphasis>) has already been created in the <filename>templates.cfg</filename> file. This allows you to add new router/switch host definitions in a simple manner."
-msgstr "Un gabarit d'hôte de type switch  (nommé <emphasis>generic-switch</emphasis>) a déjà été créé dans le fichier <filename>templates.cfg</filename>. Cela vous permet de rajouter des définitions d'hôtes de type routeur/switch de façon simple."
+msgid ""
+"A switch host template (called <emphasis>generic-switch</emphasis>) has "
+"already been created in the <filename>templates.cfg</filename> file. This "
+"allows you to add new router/switch host definitions in a simple manner."
+msgstr ""
+"Un gabarit d'hôte de type switch  (nommé <emphasis>generic-switch</"
+"emphasis>) a déjà été créé dans le fichier <filename>templates.cfg</"
+"filename>. Cela vous permet de rajouter des définitions d'hôtes de type "
+"routeur/switch de façon simple."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:133
-msgid "The above-mentioned config files can be found in the <filename class=\"directory\">/usr/local/nagios/etc/objects/</filename> directory. You can modify the definitions in these and other definitions to suit your needs better if you'd like. However, I'd recommend waiting until you're more familiar with configuring Nagios before doing so. For the time being, just follow the directions outlined below and you'll be monitoring your network routers/switches in no time."
-msgstr "Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans le répertoire <filename class=\"directory\">/usr/local/nagios/etc/objects/</filename>. Vous pouvez modifier les définitions de ceux-ci ou en créez de nouvelles pour répondre le mieux à votre besoin. Quoi qu'il en soit, je vous recommande d'attendre d'avoir une meilleure connaissance de la configuration de Nagios avant de le faire. Pour le moment, contentez-vous de suivre les directions précisées ci-dessous et vous pourrez superviser vos routeurs/switchs réseaux en un rien de temps."
+msgid ""
+"The above-mentioned config files can be found in the <filename class="
+"\"directory\">/usr/local/nagios/etc/objects/</filename> directory. You can "
+"modify the definitions in these and other definitions to suit your needs "
+"better if you'd like. However, I'd recommend waiting until you're more "
+"familiar with configuring Nagios before doing so. For the time being, just "
+"follow the directions outlined below and you'll be monitoring your network "
+"routers/switches in no time."
+msgstr ""
+"Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans "
+"le répertoire <filename class=\"directory\">/usr/local/nagios/etc/objects/</"
+"filename>. Vous pouvez modifier les définitions de ceux-ci ou en créez de "
+"nouvelles pour répondre le mieux à votre besoin. Quoi qu'il en soit, je vous "
+"recommande d'attendre d'avoir une meilleure connaissance de la configuration "
+"de Nagios avant de le faire. Pour le moment, contentez-vous de suivre les "
+"directions précisées ci-dessous et vous pourrez superviser vos routeurs/"
+"switchs réseaux en un rien de temps."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:145
-msgid "The first time you configure Nagios to monitor a network switch, you'll need to do a bit of extra work. Remember, you only need to do this for the *first* switch you monitor."
-msgstr "La première fois que vous configurez Nagios pour superviser un switch réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez à le faire que pour le *premier* switch à superviser."
+msgid ""
+"The first time you configure Nagios to monitor a network switch, you'll need "
+"to do a bit of extra work. Remember, you only need to do this for the "
+"*first* switch you monitor."
+msgstr ""
+"La première fois que vous configurez Nagios pour superviser un switch "
+"réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez "
+"à le faire que pour le *premier* switch à superviser."
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-routers.xml:156
@@ -313,13 +476,34 @@ msgstr "#cfg_file=/usr/local/nagios/etc/objects/switch.cfg"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:160
-msgid "What did you just do? You told Nagios to look to the <filename>/usr/local/nagios/etc/objects/switch.cfg</filename> to find additional object definitions. That's where you'll be adding host and service definitions for routers and switches. That configuration file already contains some sample host, hostgroup, and service definitions. For the *first* router/switch you monitor, you can simply modify the sample host and service definitions in that file, rather than creating new ones."
-msgstr "Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier <filename>/usr/local/nagios/etc/objects/switch.cfg</filename> pour y trouver des définitions d'objets additionnels. C'est là que vous ajouterez des définitions pour les routeurs et les switchs. Ce fichier de configuration contient déjà un exemple de definitions d'hôte et de service. Pour le *premier* routeur/switch que vous supervisez, vous pouvez simplement modifier les définitions d'exemple d'hôte et de service dans ce fichier plutôt que d'en créer de nouvelles."
+msgid ""
+"What did you just do? You told Nagios to look to the <filename>/usr/local/"
+"nagios/etc/objects/switch.cfg</filename> to find additional object "
+"definitions. That's where you'll be adding host and service definitions for "
+"routers and switches. That configuration file already contains some sample "
+"host, hostgroup, and service definitions. For the *first* router/switch you "
+"monitor, you can simply modify the sample host and service definitions in "
+"that file, rather than creating new ones."
+msgstr ""
+"Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier "
+"<filename>/usr/local/nagios/etc/objects/switch.cfg</filename> pour y trouver "
+"des définitions d'objets additionnels. C'est là que vous ajouterez des "
+"définitions pour les routeurs et les switchs. Ce fichier de configuration "
+"contient déjà un exemple de definitions d'hôte et de service. Pour le "
+"*premier* routeur/switch que vous supervisez, vous pouvez simplement "
+"modifier les définitions d'exemple d'hôte et de service dans ce fichier "
+"plutôt que d'en créer de nouvelles."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:173
-msgid "You'll need to create some <link linkend=\"configuringnagios-objectdefinitions\">object definitions</link> in order to monitor a new router/switch."
-msgstr "Vous allez devoir créer quelques <link linkend=\"configuringnagios-objectdefinitions\">définitions d'objets</link> pour pouvoir superviser un nouveau routeur/switch."
+msgid ""
+"You'll need to create some <link linkend=\"configuringnagios-"
+"objectdefinitions\">object definitions</link> in order to monitor a new "
+"router/switch."
+msgstr ""
+"Vous allez devoir créer quelques <link linkend=\"configuringnagios-"
+"objectdefinitions\">définitions d'objets</link> pour pouvoir superviser un "
+"nouveau routeur/switch."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:176
@@ -334,8 +518,21 @@ msgstr "<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/s
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:180
-msgid "Add a new <link linkend=\"configuringnagios-objectdefinitions-host\">host</link> definition for the switch that you're going to monitor. If this is the *first* switch you're monitoring, you can simply modify the sample host definition in <filename>switch.cfg</filename>. Change the <varname>host_name</varname>, <varname>alias</varname>, and <varname>address</varname> fields to appropriate values for the switch."
-msgstr "Ajouter une nouvelle définition d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôte</link> pour le switch que vous souhaitez superviser. Si c'est le *premier* que vous supervisez, vous pouvez simplement modifier l'exemple de définition d'hôte dans <filename>switch.cfg</filename>. Remplacez les champs <varname>host_name</varname>, <varname>alias</varname>, et <varname>address</varname> par les valeurs appropriées pour votre switch."
+msgid ""
+"Add a new <link linkend=\"configuringnagios-objectdefinitions-host\">host</"
+"link> definition for the switch that you're going to monitor. If this is the "
+"*first* switch you're monitoring, you can simply modify the sample host "
+"definition in <filename>switch.cfg</filename>. Change the "
+"<varname>host_name</varname>, <varname>alias</varname>, and "
+"<varname>address</varname> fields to appropriate values for the switch."
+msgstr ""
+"Ajouter une nouvelle définition d'<link linkend=\"configuringnagios-"
+"objectdefinitions-host\">hôte</link> pour le switch que vous souhaitez "
+"superviser. Si c'est le *premier* que vous supervisez, vous pouvez "
+"simplement modifier l'exemple de définition d'hôte dans <filename>switch."
+"cfg</filename>. Remplacez les champs <varname>host_name</varname>, "
+"<varname>alias</varname>, et <varname>address</varname> par les valeurs "
+"appropriées pour votre switch."
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-routers.xml:188
@@ -366,13 +563,29 @@ msgstr "Supervision des services"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:202
-msgid "Now you can add some service definitions (to the same configuration file) to monitor different aspects of the switch. If this is the *first* switch you're monitoring, you can simply modify the sample service definition in <filename>switch.cfg</filename>."
-msgstr "Vous pouvez ajouter maintenant quelques définitions de services (dans le même fichier de configuration) pour superviser différents aspects de votre switch. Si c'est le *premier* switch que vous supervisez, vous pouvez simplement modifier l'exemple de définition d'hôte dans <filename>switch.cfg</filename>."
+msgid ""
+"Now you can add some service definitions (to the same configuration file) to "
+"monitor different aspects of the switch. If this is the *first* switch "
+"you're monitoring, you can simply modify the sample service definition in "
+"<filename>switch.cfg</filename>."
+msgstr ""
+"Vous pouvez ajouter maintenant quelques définitions de services (dans le "
+"même fichier de configuration) pour superviser différents aspects de votre "
+"switch. Si c'est le *premier* switch que vous supervisez, vous pouvez "
+"simplement modifier l'exemple de définition d'hôte dans <filename>switch."
+"cfg</filename>."
 
 # type: Content of: <chapter><section><note><para>
 #: GettingStarted/monitoring-routers.xml:208
-msgid "Replace <quote><replaceable>linksys-srw224p</replaceable></quote> in the example definitions below with the name you specified in the <varname>host_name</varname> directive of the host definition you just added."
-msgstr "Remplacez <quote><replaceable>linksys-srw224p</replaceable></quote> dans les exemples de définitions ci-dessous par le nom que vous avez renseigné dans la directive <varname>host_name</varname> que vous venez d'ajouter dans la définition d'hôte."
+msgid ""
+"Replace <quote><replaceable>linksys-srw224p</replaceable></quote> in the "
+"example definitions below with the name you specified in the "
+"<varname>host_name</varname> directive of the host definition you just added."
+msgstr ""
+"Remplacez <quote><replaceable>linksys-srw224p</replaceable></quote> dans les "
+"exemples de définitions ci-dessous par le nom que vous avez renseigné dans "
+"la directive <varname>host_name</varname> que vous venez d'ajouter dans la "
+"définition d'hôte."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-routers.xml:216
@@ -381,8 +594,14 @@ msgstr "Supervision des paquets perdus et de la RTA"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:218
-msgid "Add the following service definition in order to monitor packet loss and round trip average between the Nagios host and the switch every 5 minutes under normal conditions."
-msgstr "Ajoutez cette définition de service pour pouvoir superviser les paquets perdus et le temps moyen de réponse entre le serveur Nagios et le switch toutes les 5 minutes en condition normale."
+msgid ""
+"Add the following service definition in order to monitor packet loss and "
+"round trip average between the Nagios host and the switch every 5 minutes "
+"under normal conditions."
+msgstr ""
+"Ajoutez cette définition de service pour pouvoir superviser les paquets "
+"perdus et le temps moyen de réponse entre le serveur Nagios et le switch "
+"toutes les 5 minutes en condition normale."
 
 # type: Content of: <chapter><section><programlistingco><programlisting>
 #: GettingStarted/monitoring-routers.xml:231
@@ -435,8 +654,11 @@ msgstr "Contrôle le service toutes les 5 minutes en condition normale"
 
 # type: Content of: <chapter><section><programlistingco><calloutlist><callout><para>
 #: GettingStarted/monitoring-routers.xml:258
-msgid "Re-check the service every minute until its final/hard state is determined"
-msgstr "Recontrôle le service toutes les minutes jusqu'à ce que son état final/hard soit déterminé"
+msgid ""
+"Re-check the service every minute until its final/hard state is determined"
+msgstr ""
+"Recontrôle le service toutes les minutes jusqu'à ce que son état final/hard "
+"soit déterminé"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:264
@@ -451,7 +673,9 @@ msgstr "CRITICAL si le temps de réponse moyen ("
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:268
 msgid ") is greater than 600 milliseconds or the packet loss is 60% or more"
-msgstr ") est plus élevé que 600 millisecondes ou que le nombre de paquets perdus est égal ou supérieur à 60%"
+msgstr ""
+") est plus élevé que 600 millisecondes ou que le nombre de paquets perdus "
+"est égal ou supérieur à 60%"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:273
@@ -461,7 +685,9 @@ msgstr "WARNING si le"
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:273
 msgid "is greater than 200 ms or the packet loss is 20% or more"
-msgstr "est supérieur à 200 ms ou que le nombre de paquets perdus est égal ou supérieur à 20% "
+msgstr ""
+"est supérieur à 200 ms ou que le nombre de paquets perdus est égal ou "
+"supérieur à 20% "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:278
@@ -471,7 +697,8 @@ msgstr "OK si le"
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-routers.xml:278
 msgid "is less than 200 ms and the packet loss is less than 20%"
-msgstr "est inférieur à 200 ms et que le nombre de paquets perdus est inférieur à 20%"
+msgstr ""
+"est inférieur à 200 ms et que le nombre de paquets perdus est inférieur à 20%"
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-routers.xml:285
@@ -480,13 +707,22 @@ msgstr "Supervision de l'information d'état SNMP"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:287
-msgid "If your switch or router supports &protocol-snmp;, you can monitor a lot of information by using the &plugin-snmp; plugin. If it doesn't, skip this section."
-msgstr "Si votre switch ou routeur supporte &protocol-snmp;, vous pouvez superviser un tas d'information en utilisant le plugin &plugin-snmp;. Sinon, sautez cette section."
+msgid ""
+"If your switch or router supports &protocol-snmp;, you can monitor a lot of "
+"information by using the &plugin-snmp; plugin. If it doesn't, skip this "
+"section."
+msgstr ""
+"Si votre switch ou routeur supporte &protocol-snmp;, vous pouvez superviser "
+"un tas d'information en utilisant le plugin &plugin-snmp;. Sinon, sautez "
+"cette section."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:291
-msgid "Add the following service definition to monitor the uptime of the switch."
-msgstr "Ajoutez la définition de service suivante pour superviser le temps écoulé depuis la mise sous tension de votre switch."
+msgid ""
+"Add the following service definition to monitor the uptime of the switch."
+msgstr ""
+"Ajoutez la définition de service suivante pour superviser le temps écoulé "
+"depuis la mise sous tension de votre switch."
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-routers.xml:294
@@ -510,8 +746,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:303
-msgid "In the <varname>check_command</varname> directive of the service definition above, the"
-msgstr "Dans la directive <varname>check_command</varname> de la définition de service ci-dessus, le"
+msgid ""
+"In the <varname>check_command</varname> directive of the service definition "
+"above, the"
+msgstr ""
+"Dans la directive <varname>check_command</varname> de la définition de "
+"service ci-dessus, le"
 
 # type: Content of: <chapter><section><para><option>
 #: GettingStarted/monitoring-routers.xml:304
@@ -520,8 +760,14 @@ msgstr "-C public"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:304
-msgid "tells the plugin that the &protocol-snmp; community name to be used is <varname>public</varname> and the <computeroutput>-o sysUpTime.0</computeroutput> indicates which"
-msgstr "indique au plugin que le nom de communauté &protocol-snmp; à utiliser est <varname>public</varname> et que <computeroutput>-o sysUpTime.0</computeroutput> indique que l'"
+msgid ""
+"tells the plugin that the &protocol-snmp; community name to be used is "
+"<varname>public</varname> and the <computeroutput>-o sysUpTime.0</"
+"computeroutput> indicates which"
+msgstr ""
+"indique au plugin que le nom de communauté &protocol-snmp; à utiliser est "
+"<varname>public</varname> et que <computeroutput>-o sysUpTime.0</"
+"computeroutput> indique que l'"
 
 # type: Content of: <chapter><section><tip><para><acronym>
 #: GettingStarted/monitoring-routers.xml:307
@@ -537,8 +783,13 @@ msgstr "doit être contrôlé."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:310
-msgid "If you want to ensure that a specific port/interface on the switch is in an up state, you could add a service definition like this:"
-msgstr "Si vous souhaitez vous assurer qu'un port/interface particulier du switch est dans un état up, vous pouvez ajouter une définition de service comme celle-ci:"
+msgid ""
+"If you want to ensure that a specific port/interface on the switch is in an "
+"up state, you could add a service definition like this:"
+msgstr ""
+"Si vous souhaitez vous assurer qu'un port/interface particulier du switch "
+"est dans un état up, vous pouvez ajouter une définition de service comme "
+"celle-ci:"
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-routers.xml:313
@@ -562,8 +813,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:323
-msgid "In the example above, the <computeroutput>-o ifOperStatus.1</computeroutput> refers to the"
-msgstr "Dans l'exemple ci-dessus, <computeroutput>-o ifOperStatus.1</computeroutput> fait référence à"
+msgid ""
+"In the example above, the <computeroutput>-o ifOperStatus.1</computeroutput> "
+"refers to the"
+msgstr ""
+"Dans l'exemple ci-dessus, <computeroutput>-o ifOperStatus.1</computeroutput> "
+"fait référence à"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:324
@@ -574,10 +829,14 @@ msgstr "pour l'état opérationnel du port 1 sur le switch."
 #: GettingStarted/monitoring-routers.xml:327
 #: GettingStarted/monitoring-routers.xml:332
 #: GettingStarted/monitoring-routers.xml:382
-#: GettingStarted/monitoring-routers.xml:387
-#: TheBasics/macros.xml:171
+#: GettingStarted/monitoring-routers.xml:387 TheBasics/macros.xml:171
+#, fuzzy
 msgid "The"
-msgstr "L'option"
+msgstr ""
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"L'option\n"
+"#-#-#-#-#  macros.xml.po (docnagios 3)  #-#-#-#-#\n"
+"La variable personnalisée"
 
 # type: Content of: <chapter><section><para><option>
 #: GettingStarted/monitoring-routers.xml:327
@@ -586,8 +845,14 @@ msgstr "-r 1"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:327
-msgid "option tells the &plugin-snmp; plugin to return an OK state if <computeroutput>1</computeroutput> is found in the &protocol-snmp; result (1 indicates an \"up\" state on the port) and CRITICAL if it isn't found."
-msgstr "indique au plugin &plugin-snmp; de retourner un état OK si <computeroutput>1</computeroutput> est trouvé dans la réponse &protocol-snmp; (1 indique que le port est \"up\") et CRITICAL sinon."
+msgid ""
+"option tells the &plugin-snmp; plugin to return an OK state if "
+"<computeroutput>1</computeroutput> is found in the &protocol-snmp; result (1 "
+"indicates an \"up\" state on the port) and CRITICAL if it isn't found."
+msgstr ""
+"indique au plugin &plugin-snmp; de retourner un état OK si "
+"<computeroutput>1</computeroutput> est trouvé dans la réponse &protocol-"
+"snmp; (1 indique que le port est \"up\") et CRITICAL sinon."
 
 # type: Content of: <chapter><section><para><option>
 #: GettingStarted/monitoring-routers.xml:332
@@ -596,7 +861,9 @@ msgstr "-m RFC1213-MIB"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:332
-msgid "is optional and tells the &plugin-snmp; plugin to only load the <quote>RFC1213-MIB</quote> instead of every single"
+msgid ""
+"is optional and tells the &plugin-snmp; plugin to only load the "
+"<quote>RFC1213-MIB</quote> instead of every single"
 msgstr "est optionnel et indique"
 
 # type: Content of: <chapter><section><para><acronym>
@@ -607,12 +874,20 @@ msgstr "MIB"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:334
 msgid "that's installed on your system, which can help speed things up."
-msgstr "qui sont installés sur votre système peuvent aider à accélérer les choses."
+msgstr ""
+"qui sont installés sur votre système peuvent aider à accélérer les choses."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:337
-msgid "That's it for the &protocol-snmp; monitoring example. There are a million things that can be monitored via &protocol-snmp;, so its up to you to decide what you need and want to monitor. Good luck!"
-msgstr "Voilà pour l'exemple de supervision avec &protocol-snmp;. Il y a des millions de choses qui peuvent être supervisées par &protocol-snmp;, aussi est-ce à vous décider ce que dont vous avez besoin et ce que vous souhaitez superviser. Bonne chance!"
+msgid ""
+"That's it for the &protocol-snmp; monitoring example. There are a million "
+"things that can be monitored via &protocol-snmp;, so its up to you to decide "
+"what you need and want to monitor. Good luck!"
+msgstr ""
+"Voilà pour l'exemple de supervision avec &protocol-snmp;. Il y a des "
+"millions de choses qui peuvent être supervisées par &protocol-snmp;, aussi "
+"est-ce à vous décider ce que dont vous avez besoin et ce que vous souhaitez "
+"superviser. Bonne chance!"
 
 # type: Content of: <chapter><section><tip><para>
 #: GettingStarted/monitoring-routers.xml:343
@@ -621,8 +896,14 @@ msgstr "Vous pouvez trouver les"
 
 # type: Content of: <chapter><section><tip><para>
 #: GettingStarted/monitoring-routers.xml:343
-msgid "s that can be monitored on a switch by running the following command (replace <emphasis>192.168.1.253</emphasis> with the IP address of the switch): <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command>"
-msgstr "s qui peuvent supervisés sur un switch en exécutant la commande suivante  (remplacez <emphasis>192.168.1.253</emphasis> par l'adresse IP de votre switch):  <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command>"
+msgid ""
+"s that can be monitored on a switch by running the following command "
+"(replace <emphasis>192.168.1.253</emphasis> with the IP address of the "
+"switch): <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command>"
+msgstr ""
+"s qui peuvent supervisés sur un switch en exécutant la commande suivante  "
+"(remplacez <emphasis>192.168.1.253</emphasis> par l'adresse IP de votre "
+"switch):  <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command>"
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-routers.xml:351
@@ -631,13 +912,36 @@ msgstr "Supervision de la bande passante/trafic"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:353
-msgid "If you're monitoring bandwidth usage on your switches or routers using <ulink url=\"http://oss.oetiker.ch/mrtg/\"><application>MRTG</application></ulink>, you can have Nagios alert you when traffic rates exceed thresholds you specify. The &plugin-mrtgtraf; plugin (which is included in the Nagios plugins distribution) allows you to do this."
-msgstr "Si vous supervisez l'usage de la bande passante de vos switchs et routeurs en utilisant  <ulink url=\"http://oss.oetiker.ch/mrtg/\"><application>MRTG</application></ulink>, vous pouvez utiliser Nagios pour alerter quand les valeurs dépassent un seuil que vous spécifiez. Le plugin &plugin-mrtgtraf; (inclus dans la distribution de splugins Nagios) vous permet de le faire."
+msgid ""
+"If you're monitoring bandwidth usage on your switches or routers using "
+"<ulink url=\"http://oss.oetiker.ch/mrtg/\"><application>MRTG</application></"
+"ulink>, you can have Nagios alert you when traffic rates exceed thresholds "
+"you specify. The &plugin-mrtgtraf; plugin (which is included in the Nagios "
+"plugins distribution) allows you to do this."
+msgstr ""
+"Si vous supervisez l'usage de la bande passante de vos switchs et routeurs "
+"en utilisant  <ulink url=\"http://oss.oetiker.ch/mrtg/\"><application>MRTG</"
+"application></ulink>, vous pouvez utiliser Nagios pour alerter quand les "
+"valeurs dépassent un seuil que vous spécifiez. Le plugin &plugin-mrtgtraf; "
+"(inclus dans la distribution de splugins Nagios) vous permet de le faire."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:359
-msgid "You'll need to let the &plugin-mrtgtraf; plugin know what log file the <application>MRTG</application> data is being stored in, along with thresholds, etc. In my example, I'm monitoring one of the ports on a Linksys switch. The <application>MRTG</application> log file is stored in <filename>/var/lib/mrtg/192.168.1.253_1.log</filename>. Here's the service definition I use to monitor the bandwidth data that's stored in the log file..."
-msgstr "Vous aurez besoin que le plugin &plugin-mrtgtraf; connaisse l'emplacement du fichier où <application>MRTG</application> stockes ses données, ainsi que les seuils, etc. Dans mon exemple, je supervise un des ports d'un switch Linksys. Le fichier de log de <application>MRTG</application> est stocké dans <filename>/var/lib/mrtg/192.168.1.253_1.log</filename>. Voici la définition de service que j'utilise pour superviser les données de bande passante stockées dans ce fichier... "
+msgid ""
+"You'll need to let the &plugin-mrtgtraf; plugin know what log file the "
+"<application>MRTG</application> data is being stored in, along with "
+"thresholds, etc. In my example, I'm monitoring one of the ports on a Linksys "
+"switch. The <application>MRTG</application> log file is stored in <filename>/"
+"var/lib/mrtg/192.168.1.253_1.log</filename>. Here's the service definition I "
+"use to monitor the bandwidth data that's stored in the log file..."
+msgstr ""
+"Vous aurez besoin que le plugin &plugin-mrtgtraf; connaisse l'emplacement du "
+"fichier où <application>MRTG</application> stockes ses données, ainsi que "
+"les seuils, etc. Dans mon exemple, je supervise un des ports d'un switch "
+"Linksys. Le fichier de log de <application>MRTG</application> est stocké "
+"dans <filename>/var/lib/mrtg/192.168.1.253_1.log</filename>. Voici la "
+"définition de service que j'utilise pour superviser les données de bande "
+"passante stockées dans ce fichier... "
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-routers.xml:368
@@ -661,8 +965,16 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:377
-msgid "In the example above, the <filename>/var/lib/mrtg/192.168.1.253_1.log</filename> option that gets passed to the <emphasis>check_local_mrtgtraf</emphasis> command tells the plugin which <application>MRTG</application> log file to read from."
-msgstr "Dans l'exemple ci-dessus, l'option <filename>/var/lib/mrtg/192.168.1.253_1.log</filename> passée à la commande <emphasis>check_local_mrtgtraf</emphasis> indique au plugin dans quel fichier de log <application>MRTG</application> il doit aller lire."
+msgid ""
+"In the example above, the <filename>/var/lib/mrtg/192.168.1.253_1.log</"
+"filename> option that gets passed to the <emphasis>check_local_mrtgtraf</"
+"emphasis> command tells the plugin which <application>MRTG</application> log "
+"file to read from."
+msgstr ""
+"Dans l'exemple ci-dessus, l'option <filename>/var/lib/mrtg/192.168.1.253_1."
+"log</filename> passée à la commande <emphasis>check_local_mrtgtraf</"
+"emphasis> indique au plugin dans quel fichier de log <application>MRTG</"
+"application> il doit aller lire."
 
 # type: Content of: <chapter><section><para><acronym>
 #: GettingStarted/monitoring-routers.xml:382
@@ -672,7 +984,9 @@ msgstr "AVG"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:382
 msgid "option tells it that it should use average bandwidth statistics. The"
-msgstr "option indique qu'il doit utiliser des statistiques basées sur la moyene de la bande passante. Les"
+msgstr ""
+"option indique qu'il doit utiliser des statistiques basées sur la moyene de "
+"la bande passante. Les"
 
 # type: Content of: <chapter><section><para><option>
 #: GettingStarted/monitoring-routers.xml:383
@@ -681,8 +995,10 @@ msgstr "1000000,2000000"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:384
-msgid "options are the warning thresholds (in bytes) for incoming traffic rates."
-msgstr "options sont les seuils de warning (en bytes) pour le taux de trafic entrant."
+msgid ""
+"options are the warning thresholds (in bytes) for incoming traffic rates."
+msgstr ""
+"options sont les seuils de warning (en bytes) pour le taux de trafic entrant."
 
 # type: Content of: <chapter><section><para><option>
 #: GettingStarted/monitoring-routers.xml:387
@@ -692,21 +1008,36 @@ msgstr "5000000,5000000"
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:387
 msgid "are critical thresholds (in bytes)  for outgoing traffic rates. The"
-msgstr "sont des seuils critiques (en bytes) pour le taux de trafic sortant. L'"
+msgstr ""
+"sont des seuils critiques (en bytes) pour le taux de trafic sortant. L'"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
-#: GettingStarted/monitoring-routers.xml:388
-#: TheBasics/statetypes.xml:350
+#: GettingStarted/monitoring-routers.xml:388 TheBasics/statetypes.xml:350
 msgid "10"
 msgstr "10"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:388
-msgid "option causes the plugin to return a CRITICAL state if the <application>MRTG</application> log file is older than 10 minutes (it should be updated every 5 minutes)."
-msgstr "option indique au plugin de renvoyer un état CRITICAL si le fichier de log <application>MRTG</application> est plus vieux que 10 minutes (il devrait être mis à jour toutes les 5 minutes)."
+msgid ""
+"option causes the plugin to return a CRITICAL state if the "
+"<application>MRTG</application> log file is older than 10 minutes (it should "
+"be updated every 5 minutes)."
+msgstr ""
+"option indique au plugin de renvoyer un état CRITICAL si le fichier de log "
+"<application>MRTG</application> est plus vieux que 10 minutes (il devrait "
+"être mis à jour toutes les 5 minutes)."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-routers.xml:399
-msgid "Once you've added the new host and service definitions to the <filename>switch.cfg</filename> file, you're ready to start monitoring the router/switch. To do this, you'll need to <link linkend=\"runningnagios-verifyconfig\">verify your configuration</link> and <link linkend=\"runningnagios-startstop\">restart Nagios</link>."
-msgstr "Une fois que vous avez ajouté les nouvelles définitions d'hôte et de service dans le fichier <filename>switch.cfg</filename>, vous êtes prêt à démarrer la supervision d'un routeur/switch. Pour cela, vous aurez besoin de <link linkend=\"runningnagios-verifyconfig\">vérifier votre configuration</link> et <link linkend=\"runningnagios-startstop\">redémarrez Nagios</link>."
-
+msgid ""
+"Once you've added the new host and service definitions to the "
+"<filename>switch.cfg</filename> file, you're ready to start monitoring the "
+"router/switch. To do this, you'll need to <link linkend=\"runningnagios-"
+"verifyconfig\">verify your configuration</link> and <link linkend="
+"\"runningnagios-startstop\">restart Nagios</link>."
+msgstr ""
+"Une fois que vous avez ajouté les nouvelles définitions d'hôte et de service "
+"dans le fichier <filename>switch.cfg</filename>, vous êtes prêt à démarrer "
+"la supervision d'un routeur/switch. Pour cela, vous aurez besoin de <link "
+"linkend=\"runningnagios-verifyconfig\">vérifier votre configuration</link> "
+"et <link linkend=\"runningnagios-startstop\">redémarrez Nagios</link>."

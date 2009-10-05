@@ -22,43 +22,25 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -69,8 +51,7 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
@@ -81,8 +62,14 @@ msgstr "Authentification et autorisations dans les CGI"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:16
-msgid "This documentation describes how the Nagios CGIs decide who has access to view monitoring and configuration information, and who can submit commands to the Nagios daemon through the web interface."
-msgstr "Cette documentation décrit la façon dont les CGI de Nagios décident de qui a le droit de voir les informations de configurations et de d'états et de qui a le droit de soumettre des commandes au démon Nagios depuis l'interface web."
+msgid ""
+"This documentation describes how the Nagios CGIs decide who has access to "
+"view monitoring and configuration information, and who can submit commands "
+"to the Nagios daemon through the web interface."
+msgstr ""
+"Cette documentation décrit la façon dont les CGI de Nagios décident de qui a "
+"le droit de voir les informations de configurations et de d'états et de qui "
+"a le droit de soumettre des commandes au démon Nagios depuis l'interface web."
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/cgiauth.xml:22
@@ -91,33 +78,78 @@ msgstr "<anchor id=\"configuringnagios-cgiauth-definitions\" />Définitions"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:25
-msgid "Before continuing, it is important that you understand the meaning of and difference between authenticated users and authenticated contacts:"
-msgstr "Avant de continuer, il est important de bien comprendre le sens et la différence entre des utilisateurs authentifiés et des contacts authentifiés:"
+msgid ""
+"Before continuing, it is important that you understand the meaning of and "
+"difference between authenticated users and authenticated contacts:"
+msgstr ""
+"Avant de continuer, il est important de bien comprendre le sens et la "
+"différence entre des utilisateurs authentifiés et des contacts authentifiés:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:31
-msgid "An authenticated user is an someone who has authenticated to the web server with a username and password and has been granted access to the Nagios web interface."
-msgstr "Un utilisateur authentifié est quelqu'un qui s'est authentifié auprès du serveur web avec un nom d'utilisateur et un mot de passe, et à qui le serveur web a donné accès à l'interface web de Nagios."
+msgid ""
+"An authenticated user is an someone who has authenticated to the web server "
+"with a username and password and has been granted access to the Nagios web "
+"interface."
+msgstr ""
+"Un utilisateur authentifié est quelqu'un qui s'est authentifié auprès du "
+"serveur web avec un nom d'utilisateur et un mot de passe, et à qui le "
+"serveur web a donné accès à l'interface web de Nagios."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:37
-msgid "An authenticated contact is an authenticated user whose username matches the short name of a <link linkend=\"configuringnagios-objectdefinitions-contact\">contact definition</link>."
-msgstr "Un contact authentifié est un utilisateur authentifié dont le nom correspond à celui d'une <link linkend=\"configuringnagios-objectdefinitions-contact\">définition de contact</link> du fichier de configuration. "
+msgid ""
+"An authenticated contact is an authenticated user whose username matches the "
+"short name of a <link linkend=\"configuringnagios-objectdefinitions-contact"
+"\">contact definition</link>."
+msgstr ""
+"Un contact authentifié est un utilisateur authentifié dont le nom correspond "
+"à celui d'une <link linkend=\"configuringnagios-objectdefinitions-contact"
+"\">définition de contact</link> du fichier de configuration. "
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/cgiauth.xml:46
-msgid "<anchor id=\"configuringnagios-cgiauth-config_web_users\" />Setting Up Authenticated Users"
-msgstr "<anchor id=\"configuringnagios-cgiauth-config_web_users\" />Déclarer des utilisateurs authentifiés "
+msgid ""
+"<anchor id=\"configuringnagios-cgiauth-config_web_users\" />Setting Up "
+"Authenticated Users"
+msgstr ""
+"<anchor id=\"configuringnagios-cgiauth-config_web_users\" />Déclarer des "
+"utilisateurs authentifiés "
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:49
-msgid "Assuming you configured your web server as described in the <xref linkend=\"gettingstarted-quickstart\" />quickstart guide, it should require that you authenticate before accessing the Nagios CGIs. You should also have one user account (nagiosadmin) that can access the CGIs."
-msgstr "En partant du principe que vous avez configuré votre serveur web comme décrit dans le <link linkend=\"gettingstarted-quickstart\">guide démarrage rapide</link>, celui-ci devrait vous demander de vous authentifier avant de pouvoir accéder aux CGI de Nagios."
+msgid ""
+"Assuming you configured your web server as described in the <xref linkend="
+"\"gettingstarted-quickstart\" />quickstart guide, it should require that you "
+"authenticate before accessing the Nagios CGIs. You should also have one user "
+"account (nagiosadmin) that can access the CGIs."
+msgstr ""
+"En partant du principe que vous avez configuré votre serveur web comme "
+"décrit dans le <link linkend=\"gettingstarted-quickstart\">guide démarrage "
+"rapide</link>, celui-ci devrait vous demander de vous authentifier avant de "
+"pouvoir accéder aux CGI de Nagios."
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:54
-msgid "As you define more <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> for receiving host and service notifications, you'll most likely want to let them access the Nagios web interface. You can use the following command to add additional users who can authenticate to the CGIs. Replace &lt;username&gt; with the actual username you want to add. In most cases, the username should match the short name of a <link linkend=\"configuringnagios-objectdefinitions-contact\">contact</link> that has been defined."
-msgstr "Au fur et à mesure que vous allez ajouter de nouveaux <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> pour recevoir des notifications d'hôtes et de services,  vous souhaiterez certainement leur donner accès à l'interface web de Nagios. Vous pouvez utiliser la commande suivante pour ajouter de nouveaux utilisateurs capables de s'authentifier aux CGI. Remplacez &lt;username&gt; par le nom d'utilisateur que vous souhaitez ajouter. Dans la plupart des cas, le nom d'utilisateur devrait correspondre au nom court du <link linkend=\"configuringnagios-objectdefinitions-contact\">contact</link> défini."
+msgid ""
+"As you define more <link linkend=\"configuringnagios-objectdefinitions-"
+"contact\">contacts</link> for receiving host and service notifications, "
+"you'll most likely want to let them access the Nagios web interface. You can "
+"use the following command to add additional users who can authenticate to "
+"the CGIs. Replace &lt;username&gt; with the actual username you want to add. "
+"In most cases, the username should match the short name of a <link linkend="
+"\"configuringnagios-objectdefinitions-contact\">contact</link> that has been "
+"defined."
+msgstr ""
+"Au fur et à mesure que vous allez ajouter de nouveaux <link linkend="
+"\"configuringnagios-objectdefinitions-contact\">contacts</link> pour "
+"recevoir des notifications d'hôtes et de services,  vous souhaiterez "
+"certainement leur donner accès à l'interface web de Nagios. Vous pouvez "
+"utiliser la commande suivante pour ajouter de nouveaux utilisateurs capables "
+"de s'authentifier aux CGI. Remplacez &lt;username&gt; par le nom "
+"d'utilisateur que vous souhaitez ajouter. Dans la plupart des cas, le nom "
+"d'utilisateur devrait correspondre au nom court du <link linkend="
+"\"configuringnagios-objectdefinitions-contact\">contact</link> défini."
 
 # type: Content of: <chapter><section><para><screen>
 #: ConfiguringNagios/cgiauth.xml:62
@@ -127,13 +159,30 @@ msgstr "<prompt>linux:~ # </prompt><userinput>htpasswd /usr/local/nagios/etc/htp
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/cgiauth.xml:67
-msgid "<anchor id=\"configuringnagios-cgiauth-enable_cgi_auth\" />Enabling Authentication/Authorization Functionality In The CGIs"
-msgstr "<anchor id=\"configuringnagios-cgiauth-enable_cgi_auth\" />Activer l'authentification/l'autorisation dans les CGI"
+msgid ""
+"<anchor id=\"configuringnagios-cgiauth-enable_cgi_auth\" />Enabling "
+"Authentication/Authorization Functionality In The CGIs"
+msgstr ""
+"<anchor id=\"configuringnagios-cgiauth-enable_cgi_auth\" />Activer "
+"l'authentification/l'autorisation dans les CGI"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:70
-msgid "The next thing you need to do is make sure that the CGIs are configured to use the authentication and authorization functionality in determining what information and/or commands users have access to. This is done be setting the <link linkend=\"configuringnagios-configcgi-use_authentication\">use_authentication</link> variable in the <xref linkend=\"configuringnagios-configcgi\" />CGI configuration file to a non-zero value. Example:"
-msgstr "Maintenant il s'agit de s'assurer que les CGI sont configurés pour filtrer les informations et les commandes auxquelles les utilisateurs peuvent accéder. Pour cela la variable <link linkend=\"configuringnagios-configcgi-use_authentication\">use_authentication</link> du fichier de configuration des <link linkend=\"configuringnagios-configcgi\">CGI</link> doit être positionnée à une valeur différente de zéro. Par exemple: "
+msgid ""
+"The next thing you need to do is make sure that the CGIs are configured to "
+"use the authentication and authorization functionality in determining what "
+"information and/or commands users have access to. This is done be setting "
+"the <link linkend=\"configuringnagios-configcgi-use_authentication"
+"\">use_authentication</link> variable in the <xref linkend="
+"\"configuringnagios-configcgi\" />CGI configuration file to a non-zero "
+"value. Example:"
+msgstr ""
+"Maintenant il s'agit de s'assurer que les CGI sont configurés pour filtrer "
+"les informations et les commandes auxquelles les utilisateurs peuvent "
+"accéder. Pour cela la variable <link linkend=\"configuringnagios-configcgi-"
+"use_authentication\">use_authentication</link> du fichier de configuration "
+"des <link linkend=\"configuringnagios-configcgi\">CGI</link> doit être "
+"positionnée à une valeur différente de zéro. Par exemple: "
 
 # type: Content of: <chapter><section><programlisting>
 #: ConfiguringNagios/cgiauth.xml:78
@@ -143,18 +192,30 @@ msgstr "use_authentication=1"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:80
-msgid "Okay, you're now done with setting up basic authentication/authorization functionality in the CGIs."
-msgstr "Voilà, la fonctionnalité d'authentification/d'autorisation de base est activée dans les CGI."
+msgid ""
+"Okay, you're now done with setting up basic authentication/authorization "
+"functionality in the CGIs."
+msgstr ""
+"Voilà, la fonctionnalité d'authentification/d'autorisation de base est "
+"activée dans les CGI."
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/cgiauth.xml:85
-msgid "<anchor id=\"configuringnagios-cgiauth-default_rights\" />Default Permissions To CGI Information"
-msgstr "<anchor id=\"configuringnagios-cgiauth-default_rights\" />Droits d'accès par défaut aux informations des CGI"
+msgid ""
+"<anchor id=\"configuringnagios-cgiauth-default_rights\" />Default "
+"Permissions To CGI Information"
+msgstr ""
+"<anchor id=\"configuringnagios-cgiauth-default_rights\" />Droits d'accès par "
+"défaut aux informations des CGI"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:88
-msgid "So what default permissions do users have in the CGIs by default when the authentication/authorization functionality is enabled?"
-msgstr "Quelles sont les droits d'accès aux CGI par défaut quand la fonctionnalité d'authentification/autorisation est activée ?"
+msgid ""
+"So what default permissions do users have in the CGIs by default when the "
+"authentication/authorization functionality is enabled?"
+msgstr ""
+"Quelles sont les droits d'accès aux CGI par défaut quand la fonctionnalité "
+"d'authentification/autorisation est activée ?"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: ConfiguringNagios/cgiauth.xml:95
@@ -163,13 +224,21 @@ msgstr "Données des CGI"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: ConfiguringNagios/cgiauth.xml:97
-msgid "Authenticated Contacts<link linkend=\"configuringnagios-cgiauth-definitions\">*</link>"
-msgstr "Contacts authentifiés<link linkend=\"configuringnagios-cgiauth-definitions\">*</link>"
+msgid ""
+"Authenticated Contacts<link linkend=\"configuringnagios-cgiauth-definitions"
+"\">*</link>"
+msgstr ""
+"Contacts authentifiés<link linkend=\"configuringnagios-cgiauth-definitions"
+"\">*</link>"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: ConfiguringNagios/cgiauth.xml:101
-msgid "Other Authenticated Users<link linkend=\"configuringnagios-cgiauth-definitions\">*</link>"
-msgstr "Autres utilisateurs authentifiés<link linkend=\"configuringnagios-cgiauth-definitions\">*</link>"
+msgid ""
+"Other Authenticated Users<link linkend=\"configuringnagios-cgiauth-"
+"definitions\">*</link>"
+msgstr ""
+"Autres utilisateurs authentifiés<link linkend=\"configuringnagios-cgiauth-"
+"definitions\">*</link>"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/cgiauth.xml:108
@@ -177,1226 +246,618 @@ msgid "Host Status Information"
 msgstr "Information sur l'état des hôtes"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
-#: ConfiguringNagios/cgiauth.xml:110
-#: ConfiguringNagios/cgiauth.xml:118
-#: ConfiguringNagios/cgiauth.xml:126
-#: ConfiguringNagios/cgiauth.xml:134
-#: ConfiguringNagios/cgiauth.xml:142
-#: ConfiguringNagios/cgiauth.xml:150
-#: ConfiguringNagios/cgiauth.xml:158
-#: ConfiguringNagios/cgiauth.xml:166
-#: ConfiguringNagios/cgiauth.xml:174
-#: ConfiguringNagios/cgiauth.xml:182
-#: TheBasics/macrolist.xml:79
-#: TheBasics/macrolist.xml:148
-#: TheBasics/macrolist.xml:151
-#: TheBasics/macrolist.xml:154
-#: TheBasics/macrolist.xml:157
-#: TheBasics/macrolist.xml:160
-#: TheBasics/macrolist.xml:163
-#: TheBasics/macrolist.xml:166
-#: TheBasics/macrolist.xml:169
-#: TheBasics/macrolist.xml:179
-#: TheBasics/macrolist.xml:182
-#: TheBasics/macrolist.xml:185
-#: TheBasics/macrolist.xml:188
-#: TheBasics/macrolist.xml:191
-#: TheBasics/macrolist.xml:194
-#: TheBasics/macrolist.xml:197
-#: TheBasics/macrolist.xml:200
-#: TheBasics/macrolist.xml:210
-#: TheBasics/macrolist.xml:213
-#: TheBasics/macrolist.xml:216
-#: TheBasics/macrolist.xml:219
-#: TheBasics/macrolist.xml:222
-#: TheBasics/macrolist.xml:225
-#: TheBasics/macrolist.xml:228
-#: TheBasics/macrolist.xml:231
-#: TheBasics/macrolist.xml:241
-#: TheBasics/macrolist.xml:244
-#: TheBasics/macrolist.xml:247
-#: TheBasics/macrolist.xml:250
-#: TheBasics/macrolist.xml:253
-#: TheBasics/macrolist.xml:256
-#: TheBasics/macrolist.xml:259
-#: TheBasics/macrolist.xml:262
-#: TheBasics/macrolist.xml:272
-#: TheBasics/macrolist.xml:275
-#: TheBasics/macrolist.xml:282
-#: TheBasics/macrolist.xml:285
-#: TheBasics/macrolist.xml:288
-#: TheBasics/macrolist.xml:291
-#: TheBasics/macrolist.xml:294
-#: TheBasics/macrolist.xml:304
-#: TheBasics/macrolist.xml:307
-#: TheBasics/macrolist.xml:314
-#: TheBasics/macrolist.xml:317
-#: TheBasics/macrolist.xml:320
-#: TheBasics/macrolist.xml:323
-#: TheBasics/macrolist.xml:326
-#: TheBasics/macrolist.xml:336
-#: TheBasics/macrolist.xml:339
-#: TheBasics/macrolist.xml:342
-#: TheBasics/macrolist.xml:345
-#: TheBasics/macrolist.xml:348
-#: TheBasics/macrolist.xml:351
-#: TheBasics/macrolist.xml:354
-#: TheBasics/macrolist.xml:357
-#: TheBasics/macrolist.xml:367
-#: TheBasics/macrolist.xml:370
-#: TheBasics/macrolist.xml:373
-#: TheBasics/macrolist.xml:376
-#: TheBasics/macrolist.xml:379
-#: TheBasics/macrolist.xml:382
-#: TheBasics/macrolist.xml:385
-#: TheBasics/macrolist.xml:388
-#: TheBasics/macrolist.xml:398
-#: TheBasics/macrolist.xml:401
-#: TheBasics/macrolist.xml:408
-#: TheBasics/macrolist.xml:411
-#: TheBasics/macrolist.xml:414
-#: TheBasics/macrolist.xml:417
-#: TheBasics/macrolist.xml:420
-#: TheBasics/macrolist.xml:430
-#: TheBasics/macrolist.xml:433
-#: TheBasics/macrolist.xml:436
-#: TheBasics/macrolist.xml:439
-#: TheBasics/macrolist.xml:442
-#: TheBasics/macrolist.xml:445
-#: TheBasics/macrolist.xml:448
-#: TheBasics/macrolist.xml:451
-#: TheBasics/macrolist.xml:461
-#: TheBasics/macrolist.xml:464
-#: TheBasics/macrolist.xml:467
-#: TheBasics/macrolist.xml:470
-#: TheBasics/macrolist.xml:473
-#: TheBasics/macrolist.xml:476
-#: TheBasics/macrolist.xml:479
-#: TheBasics/macrolist.xml:482
-#: TheBasics/macrolist.xml:492
-#: TheBasics/macrolist.xml:495
-#: TheBasics/macrolist.xml:498
-#: TheBasics/macrolist.xml:501
-#: TheBasics/macrolist.xml:504
-#: TheBasics/macrolist.xml:507
-#: TheBasics/macrolist.xml:510
-#: TheBasics/macrolist.xml:513
-#: TheBasics/macrolist.xml:523
-#: TheBasics/macrolist.xml:526
-#: TheBasics/macrolist.xml:529
-#: TheBasics/macrolist.xml:532
-#: TheBasics/macrolist.xml:535
-#: TheBasics/macrolist.xml:538
-#: TheBasics/macrolist.xml:541
-#: TheBasics/macrolist.xml:544
-#: TheBasics/macrolist.xml:554
-#: TheBasics/macrolist.xml:557
-#: TheBasics/macrolist.xml:560
-#: TheBasics/macrolist.xml:563
-#: TheBasics/macrolist.xml:566
-#: TheBasics/macrolist.xml:569
-#: TheBasics/macrolist.xml:572
-#: TheBasics/macrolist.xml:575
-#: TheBasics/macrolist.xml:585
-#: TheBasics/macrolist.xml:588
-#: TheBasics/macrolist.xml:591
-#: TheBasics/macrolist.xml:594
-#: TheBasics/macrolist.xml:597
-#: TheBasics/macrolist.xml:600
-#: TheBasics/macrolist.xml:603
-#: TheBasics/macrolist.xml:606
-#: TheBasics/macrolist.xml:616
-#: TheBasics/macrolist.xml:619
-#: TheBasics/macrolist.xml:622
-#: TheBasics/macrolist.xml:625
-#: TheBasics/macrolist.xml:628
-#: TheBasics/macrolist.xml:631
-#: TheBasics/macrolist.xml:634
-#: TheBasics/macrolist.xml:637
-#: TheBasics/macrolist.xml:647
-#: TheBasics/macrolist.xml:650
-#: TheBasics/macrolist.xml:657
-#: TheBasics/macrolist.xml:660
-#: TheBasics/macrolist.xml:663
-#: TheBasics/macrolist.xml:666
-#: TheBasics/macrolist.xml:669
-#: TheBasics/macrolist.xml:679
-#: TheBasics/macrolist.xml:682
-#: TheBasics/macrolist.xml:685
-#: TheBasics/macrolist.xml:688
-#: TheBasics/macrolist.xml:691
-#: TheBasics/macrolist.xml:694
-#: TheBasics/macrolist.xml:697
-#: TheBasics/macrolist.xml:700
-#: TheBasics/macrolist.xml:710
-#: TheBasics/macrolist.xml:713
-#: TheBasics/macrolist.xml:716
-#: TheBasics/macrolist.xml:719
-#: TheBasics/macrolist.xml:722
-#: TheBasics/macrolist.xml:725
-#: TheBasics/macrolist.xml:728
-#: TheBasics/macrolist.xml:731
-#: TheBasics/macrolist.xml:741
-#: TheBasics/macrolist.xml:744
-#: TheBasics/macrolist.xml:747
-#: TheBasics/macrolist.xml:750
-#: TheBasics/macrolist.xml:753
-#: TheBasics/macrolist.xml:756
-#: TheBasics/macrolist.xml:759
-#: TheBasics/macrolist.xml:762
-#: TheBasics/macrolist.xml:772
-#: TheBasics/macrolist.xml:775
-#: TheBasics/macrolist.xml:778
-#: TheBasics/macrolist.xml:781
-#: TheBasics/macrolist.xml:784
-#: TheBasics/macrolist.xml:787
-#: TheBasics/macrolist.xml:790
-#: TheBasics/macrolist.xml:793
-#: TheBasics/macrolist.xml:803
-#: TheBasics/macrolist.xml:806
-#: TheBasics/macrolist.xml:809
-#: TheBasics/macrolist.xml:812
-#: TheBasics/macrolist.xml:815
-#: TheBasics/macrolist.xml:818
-#: TheBasics/macrolist.xml:821
-#: TheBasics/macrolist.xml:824
-#: TheBasics/macrolist.xml:834
-#: TheBasics/macrolist.xml:837
-#: TheBasics/macrolist.xml:840
-#: TheBasics/macrolist.xml:843
-#: TheBasics/macrolist.xml:846
-#: TheBasics/macrolist.xml:849
-#: TheBasics/macrolist.xml:852
-#: TheBasics/macrolist.xml:855
-#: TheBasics/macrolist.xml:865
-#: TheBasics/macrolist.xml:868
-#: TheBasics/macrolist.xml:871
-#: TheBasics/macrolist.xml:874
-#: TheBasics/macrolist.xml:877
-#: TheBasics/macrolist.xml:880
-#: TheBasics/macrolist.xml:883
-#: TheBasics/macrolist.xml:886
-#: TheBasics/macrolist.xml:896
-#: TheBasics/macrolist.xml:899
-#: TheBasics/macrolist.xml:902
-#: TheBasics/macrolist.xml:905
-#: TheBasics/macrolist.xml:908
-#: TheBasics/macrolist.xml:911
-#: TheBasics/macrolist.xml:914
-#: TheBasics/macrolist.xml:917
-#: TheBasics/macrolist.xml:927
-#: TheBasics/macrolist.xml:930
-#: TheBasics/macrolist.xml:933
-#: TheBasics/macrolist.xml:936
-#: TheBasics/macrolist.xml:939
-#: TheBasics/macrolist.xml:942
-#: TheBasics/macrolist.xml:945
-#: TheBasics/macrolist.xml:948
-#: TheBasics/macrolist.xml:958
-#: TheBasics/macrolist.xml:961
-#: TheBasics/macrolist.xml:964
-#: TheBasics/macrolist.xml:967
-#: TheBasics/macrolist.xml:970
-#: TheBasics/macrolist.xml:973
-#: TheBasics/macrolist.xml:976
-#: TheBasics/macrolist.xml:979
-#: TheBasics/macrolist.xml:989
-#: TheBasics/macrolist.xml:992
-#: TheBasics/macrolist.xml:995
-#: TheBasics/macrolist.xml:998
-#: TheBasics/macrolist.xml:1001
-#: TheBasics/macrolist.xml:1004
-#: TheBasics/macrolist.xml:1007
-#: TheBasics/macrolist.xml:1010
-#: TheBasics/macrolist.xml:1020
-#: TheBasics/macrolist.xml:1023
-#: TheBasics/macrolist.xml:1030
-#: TheBasics/macrolist.xml:1033
-#: TheBasics/macrolist.xml:1036
-#: TheBasics/macrolist.xml:1039
-#: TheBasics/macrolist.xml:1042
-#: TheBasics/macrolist.xml:1052
-#: TheBasics/macrolist.xml:1055
-#: TheBasics/macrolist.xml:1062
-#: TheBasics/macrolist.xml:1065
-#: TheBasics/macrolist.xml:1068
-#: TheBasics/macrolist.xml:1071
-#: TheBasics/macrolist.xml:1074
-#: TheBasics/macrolist.xml:1084
-#: TheBasics/macrolist.xml:1087
-#: TheBasics/macrolist.xml:1094
-#: TheBasics/macrolist.xml:1097
-#: TheBasics/macrolist.xml:1100
-#: TheBasics/macrolist.xml:1103
-#: TheBasics/macrolist.xml:1106
-#: TheBasics/macrolist.xml:1116
-#: TheBasics/macrolist.xml:1119
-#: TheBasics/macrolist.xml:1122
-#: TheBasics/macrolist.xml:1125
-#: TheBasics/macrolist.xml:1128
-#: TheBasics/macrolist.xml:1131
-#: TheBasics/macrolist.xml:1134
-#: TheBasics/macrolist.xml:1137
-#: TheBasics/macrolist.xml:1157
-#: TheBasics/macrolist.xml:1189
-#: TheBasics/macrolist.xml:1221
-#: TheBasics/macrolist.xml:1253
-#: TheBasics/macrolist.xml:1275
-#: TheBasics/macrolist.xml:1278
-#: TheBasics/macrolist.xml:1281
-#: TheBasics/macrolist.xml:1284
-#: TheBasics/macrolist.xml:1287
-#: TheBasics/macrolist.xml:1290
-#: TheBasics/macrolist.xml:1293
-#: TheBasics/macrolist.xml:1296
-#: TheBasics/macrolist.xml:1306
-#: TheBasics/macrolist.xml:1309
-#: TheBasics/macrolist.xml:1312
-#: TheBasics/macrolist.xml:1315
-#: TheBasics/macrolist.xml:1318
-#: TheBasics/macrolist.xml:1321
-#: TheBasics/macrolist.xml:1324
-#: TheBasics/macrolist.xml:1327
-#: TheBasics/macrolist.xml:1337
-#: TheBasics/macrolist.xml:1340
-#: TheBasics/macrolist.xml:1343
-#: TheBasics/macrolist.xml:1346
-#: TheBasics/macrolist.xml:1349
-#: TheBasics/macrolist.xml:1352
-#: TheBasics/macrolist.xml:1355
-#: TheBasics/macrolist.xml:1358
-#: TheBasics/macrolist.xml:1368
-#: TheBasics/macrolist.xml:1371
-#: TheBasics/macrolist.xml:1374
-#: TheBasics/macrolist.xml:1377
-#: TheBasics/macrolist.xml:1380
-#: TheBasics/macrolist.xml:1383
-#: TheBasics/macrolist.xml:1386
-#: TheBasics/macrolist.xml:1389
-#: TheBasics/macrolist.xml:1399
-#: TheBasics/macrolist.xml:1402
-#: TheBasics/macrolist.xml:1405
-#: TheBasics/macrolist.xml:1408
-#: TheBasics/macrolist.xml:1411
-#: TheBasics/macrolist.xml:1414
-#: TheBasics/macrolist.xml:1417
-#: TheBasics/macrolist.xml:1420
-#: TheBasics/macrolist.xml:1430
-#: TheBasics/macrolist.xml:1433
-#: TheBasics/macrolist.xml:1436
-#: TheBasics/macrolist.xml:1439
-#: TheBasics/macrolist.xml:1442
-#: TheBasics/macrolist.xml:1445
-#: TheBasics/macrolist.xml:1448
-#: TheBasics/macrolist.xml:1451
-#: TheBasics/macrolist.xml:1461
-#: TheBasics/macrolist.xml:1464
-#: TheBasics/macrolist.xml:1467
-#: TheBasics/macrolist.xml:1470
-#: TheBasics/macrolist.xml:1473
-#: TheBasics/macrolist.xml:1476
-#: TheBasics/macrolist.xml:1479
-#: TheBasics/macrolist.xml:1482
-#: TheBasics/macrolist.xml:1492
-#: TheBasics/macrolist.xml:1495
-#: TheBasics/macrolist.xml:1498
-#: TheBasics/macrolist.xml:1501
-#: TheBasics/macrolist.xml:1504
-#: TheBasics/macrolist.xml:1507
-#: TheBasics/macrolist.xml:1510
-#: TheBasics/macrolist.xml:1513
-#: TheBasics/macrolist.xml:1565
-#: TheBasics/macrolist.xml:1568
-#: TheBasics/macrolist.xml:1571
-#: TheBasics/macrolist.xml:1574
-#: TheBasics/macrolist.xml:1577
-#: TheBasics/macrolist.xml:1580
-#: TheBasics/macrolist.xml:1583
-#: TheBasics/macrolist.xml:1586
-#: TheBasics/macrolist.xml:1597
-#: TheBasics/macrolist.xml:1600
-#: TheBasics/macrolist.xml:1603
-#: TheBasics/macrolist.xml:1606
-#: TheBasics/macrolist.xml:1609
-#: TheBasics/macrolist.xml:1612
-#: TheBasics/macrolist.xml:1615
-#: TheBasics/macrolist.xml:1618
-#: TheBasics/macrolist.xml:1629
-#: TheBasics/macrolist.xml:1632
-#: TheBasics/macrolist.xml:1635
-#: TheBasics/macrolist.xml:1638
-#: TheBasics/macrolist.xml:1641
-#: TheBasics/macrolist.xml:1644
-#: TheBasics/macrolist.xml:1647
-#: TheBasics/macrolist.xml:1650
-#: TheBasics/macrolist.xml:1661
-#: TheBasics/macrolist.xml:1664
-#: TheBasics/macrolist.xml:1667
-#: TheBasics/macrolist.xml:1670
-#: TheBasics/macrolist.xml:1673
-#: TheBasics/macrolist.xml:1676
-#: TheBasics/macrolist.xml:1679
-#: TheBasics/macrolist.xml:1682
-#: TheBasics/macrolist.xml:1693
-#: TheBasics/macrolist.xml:1696
-#: TheBasics/macrolist.xml:1699
-#: TheBasics/macrolist.xml:1702
-#: TheBasics/macrolist.xml:1705
-#: TheBasics/macrolist.xml:1708
-#: TheBasics/macrolist.xml:1711
-#: TheBasics/macrolist.xml:1714
-#: TheBasics/macrolist.xml:1765
-#: TheBasics/macrolist.xml:1768
-#: TheBasics/macrolist.xml:1777
-#: TheBasics/macrolist.xml:1783
-#: TheBasics/macrolist.xml:1796
-#: TheBasics/macrolist.xml:1799
-#: TheBasics/macrolist.xml:1808
-#: TheBasics/macrolist.xml:1814
-#: TheBasics/macrolist.xml:1831
-#: TheBasics/macrolist.xml:1840
-#: TheBasics/macrolist.xml:1846
-#: TheBasics/macrolist.xml:1863
-#: TheBasics/macrolist.xml:1872
-#: TheBasics/macrolist.xml:1878
-#: TheBasics/macrolist.xml:1891
-#: TheBasics/macrolist.xml:1894
-#: TheBasics/macrolist.xml:1903
-#: TheBasics/macrolist.xml:1909
-#: TheBasics/macrolist.xml:1922
-#: TheBasics/macrolist.xml:1925
-#: TheBasics/macrolist.xml:1934
-#: TheBasics/macrolist.xml:1940
-#: TheBasics/macrolist.xml:1953
-#: TheBasics/macrolist.xml:1956
-#: TheBasics/macrolist.xml:1965
-#: TheBasics/macrolist.xml:1971
-#: TheBasics/macrolist.xml:1984
-#: TheBasics/macrolist.xml:1987
-#: TheBasics/macrolist.xml:1996
-#: TheBasics/macrolist.xml:2002
-#: TheBasics/macrolist.xml:2015
-#: TheBasics/macrolist.xml:2018
-#: TheBasics/macrolist.xml:2027
-#: TheBasics/macrolist.xml:2033
-#: TheBasics/macrolist.xml:2046
-#: TheBasics/macrolist.xml:2049
-#: TheBasics/macrolist.xml:2058
-#: TheBasics/macrolist.xml:2064
-#: TheBasics/macrolist.xml:2077
-#: TheBasics/macrolist.xml:2080
-#: TheBasics/macrolist.xml:2089
-#: TheBasics/macrolist.xml:2095
-#: TheBasics/macrolist.xml:2108
-#: TheBasics/macrolist.xml:2111
-#: TheBasics/macrolist.xml:2120
-#: TheBasics/macrolist.xml:2126
-#: TheBasics/macrolist.xml:2139
-#: TheBasics/macrolist.xml:2142
-#: TheBasics/macrolist.xml:2151
-#: TheBasics/macrolist.xml:2157
-#: TheBasics/macrolist.xml:2170
-#: TheBasics/macrolist.xml:2173
-#: TheBasics/macrolist.xml:2182
-#: TheBasics/macrolist.xml:2188
-#: TheBasics/macrolist.xml:2201
-#: TheBasics/macrolist.xml:2204
-#: TheBasics/macrolist.xml:2213
-#: TheBasics/macrolist.xml:2219
-#: TheBasics/macrolist.xml:2236
-#: TheBasics/macrolist.xml:2245
-#: TheBasics/macrolist.xml:2251
-#: TheBasics/macrolist.xml:2264
-#: TheBasics/macrolist.xml:2267
-#: TheBasics/macrolist.xml:2276
-#: TheBasics/macrolist.xml:2282
-#: TheBasics/macrolist.xml:2295
-#: TheBasics/macrolist.xml:2298
-#: TheBasics/macrolist.xml:2307
-#: TheBasics/macrolist.xml:2313
-#: TheBasics/macrolist.xml:2326
-#: TheBasics/macrolist.xml:2329
-#: TheBasics/macrolist.xml:2338
-#: TheBasics/macrolist.xml:2344
-#: TheBasics/macrolist.xml:2357
-#: TheBasics/macrolist.xml:2360
-#: TheBasics/macrolist.xml:2369
-#: TheBasics/macrolist.xml:2375
-#: TheBasics/macrolist.xml:2388
-#: TheBasics/macrolist.xml:2391
-#: TheBasics/macrolist.xml:2400
-#: TheBasics/macrolist.xml:2406
-#: TheBasics/macrolist.xml:2419
-#: TheBasics/macrolist.xml:2422
-#: TheBasics/macrolist.xml:2431
-#: TheBasics/macrolist.xml:2437
-#: TheBasics/macrolist.xml:2450
-#: TheBasics/macrolist.xml:2453
-#: TheBasics/macrolist.xml:2462
-#: TheBasics/macrolist.xml:2468
-#: TheBasics/macrolist.xml:2481
-#: TheBasics/macrolist.xml:2484
-#: TheBasics/macrolist.xml:2493
-#: TheBasics/macrolist.xml:2499
-#: TheBasics/macrolist.xml:2512
-#: TheBasics/macrolist.xml:2515
-#: TheBasics/macrolist.xml:2524
-#: TheBasics/macrolist.xml:2530
-#: TheBasics/macrolist.xml:2543
-#: TheBasics/macrolist.xml:2546
-#: TheBasics/macrolist.xml:2555
-#: TheBasics/macrolist.xml:2561
-#: TheBasics/macrolist.xml:2574
-#: TheBasics/macrolist.xml:2577
-#: TheBasics/macrolist.xml:2586
-#: TheBasics/macrolist.xml:2592
-#: TheBasics/macrolist.xml:2605
-#: TheBasics/macrolist.xml:2608
-#: TheBasics/macrolist.xml:2617
-#: TheBasics/macrolist.xml:2623
-#: TheBasics/macrolist.xml:2640
-#: TheBasics/macrolist.xml:2649
-#: TheBasics/macrolist.xml:2655
-#: TheBasics/macrolist.xml:2672
-#: TheBasics/macrolist.xml:2681
-#: TheBasics/macrolist.xml:2687
-#: TheBasics/macrolist.xml:2704
-#: TheBasics/macrolist.xml:2713
-#: TheBasics/macrolist.xml:2719
-#: TheBasics/macrolist.xml:2732
-#: TheBasics/macrolist.xml:2735
-#: TheBasics/macrolist.xml:2744
-#: TheBasics/macrolist.xml:2750
-#: TheBasics/macrolist.xml:2767
-#: TheBasics/macrolist.xml:2799
-#: TheBasics/macrolist.xml:2831
-#: TheBasics/macrolist.xml:2863
-#: TheBasics/macrolist.xml:2891
-#: TheBasics/macrolist.xml:2894
-#: TheBasics/macrolist.xml:2903
-#: TheBasics/macrolist.xml:2909
-#: TheBasics/macrolist.xml:2922
-#: TheBasics/macrolist.xml:2925
-#: TheBasics/macrolist.xml:2934
-#: TheBasics/macrolist.xml:2940
-#: TheBasics/macrolist.xml:2953
-#: TheBasics/macrolist.xml:2956
-#: TheBasics/macrolist.xml:2965
-#: TheBasics/macrolist.xml:2971
-#: TheBasics/macrolist.xml:3026
-#: TheBasics/macrolist.xml:3029
-#: TheBasics/macrolist.xml:3032
-#: TheBasics/macrolist.xml:3035
-#: TheBasics/macrolist.xml:3038
-#: TheBasics/macrolist.xml:3041
-#: TheBasics/macrolist.xml:3044
-#: TheBasics/macrolist.xml:3047
-#: TheBasics/macrolist.xml:3058
-#: TheBasics/macrolist.xml:3061
-#: TheBasics/macrolist.xml:3064
-#: TheBasics/macrolist.xml:3067
-#: TheBasics/macrolist.xml:3070
-#: TheBasics/macrolist.xml:3073
-#: TheBasics/macrolist.xml:3076
-#: TheBasics/macrolist.xml:3079
-#: TheBasics/macrolist.xml:3090
-#: TheBasics/macrolist.xml:3093
-#: TheBasics/macrolist.xml:3096
-#: TheBasics/macrolist.xml:3099
-#: TheBasics/macrolist.xml:3102
-#: TheBasics/macrolist.xml:3105
-#: TheBasics/macrolist.xml:3108
-#: TheBasics/macrolist.xml:3111
-#: TheBasics/macrolist.xml:3122
-#: TheBasics/macrolist.xml:3125
-#: TheBasics/macrolist.xml:3128
-#: TheBasics/macrolist.xml:3131
-#: TheBasics/macrolist.xml:3134
-#: TheBasics/macrolist.xml:3137
-#: TheBasics/macrolist.xml:3140
-#: TheBasics/macrolist.xml:3143
-#: TheBasics/macrolist.xml:3154
-#: TheBasics/macrolist.xml:3157
-#: TheBasics/macrolist.xml:3160
-#: TheBasics/macrolist.xml:3163
-#: TheBasics/macrolist.xml:3166
-#: TheBasics/macrolist.xml:3169
-#: TheBasics/macrolist.xml:3172
-#: TheBasics/macrolist.xml:3175
-#: TheBasics/macrolist.xml:3229
-#: TheBasics/macrolist.xml:3235
-#: TheBasics/macrolist.xml:3260
-#: TheBasics/macrolist.xml:3266
-#: TheBasics/macrolist.xml:3291
-#: TheBasics/macrolist.xml:3297
-#: TheBasics/macrolist.xml:3322
-#: TheBasics/macrolist.xml:3328
-#: TheBasics/macrolist.xml:3353
-#: TheBasics/macrolist.xml:3359
-#: TheBasics/macrolist.xml:3423
-#: TheBasics/macrolist.xml:3426
-#: TheBasics/macrolist.xml:3429
-#: TheBasics/macrolist.xml:3432
-#: TheBasics/macrolist.xml:3435
-#: TheBasics/macrolist.xml:3438
-#: TheBasics/macrolist.xml:3441
-#: TheBasics/macrolist.xml:3444
-#: TheBasics/macrolist.xml:3455
-#: TheBasics/macrolist.xml:3458
-#: TheBasics/macrolist.xml:3461
-#: TheBasics/macrolist.xml:3464
-#: TheBasics/macrolist.xml:3467
-#: TheBasics/macrolist.xml:3470
-#: TheBasics/macrolist.xml:3473
-#: TheBasics/macrolist.xml:3476
-#: TheBasics/macrolist.xml:3529
-#: TheBasics/macrolist.xml:3536
-#: TheBasics/macrolist.xml:3543
-#: TheBasics/macrolist.xml:3546
-#: TheBasics/macrolist.xml:3549
-#: TheBasics/macrolist.xml:3552
-#: TheBasics/macrolist.xml:3563
-#: TheBasics/macrolist.xml:3570
-#: TheBasics/macrolist.xml:3577
-#: TheBasics/macrolist.xml:3580
-#: TheBasics/macrolist.xml:3583
-#: TheBasics/macrolist.xml:3586
-#: TheBasics/macrolist.xml:3597
-#: TheBasics/macrolist.xml:3604
-#: TheBasics/macrolist.xml:3611
-#: TheBasics/macrolist.xml:3614
-#: TheBasics/macrolist.xml:3617
-#: TheBasics/macrolist.xml:3620
-#: TheBasics/macrolist.xml:3631
-#: TheBasics/macrolist.xml:3638
-#: TheBasics/macrolist.xml:3645
-#: TheBasics/macrolist.xml:3648
-#: TheBasics/macrolist.xml:3651
-#: TheBasics/macrolist.xml:3654
-#: TheBasics/macrolist.xml:3665
-#: TheBasics/macrolist.xml:3672
-#: TheBasics/macrolist.xml:3679
-#: TheBasics/macrolist.xml:3682
-#: TheBasics/macrolist.xml:3685
-#: TheBasics/macrolist.xml:3688
-#: TheBasics/macrolist.xml:3699
-#: TheBasics/macrolist.xml:3705
-#: TheBasics/macrolist.xml:3711
-#: TheBasics/macrolist.xml:3714
-#: TheBasics/macrolist.xml:3717
-#: TheBasics/macrolist.xml:3720
-#: TheBasics/macrolist.xml:3731
-#: TheBasics/macrolist.xml:3737
-#: TheBasics/macrolist.xml:3743
-#: TheBasics/macrolist.xml:3746
-#: TheBasics/macrolist.xml:3749
-#: TheBasics/macrolist.xml:3752
-#: TheBasics/macrolist.xml:3763
-#: TheBasics/macrolist.xml:3769
-#: TheBasics/macrolist.xml:3775
-#: TheBasics/macrolist.xml:3778
-#: TheBasics/macrolist.xml:3781
-#: TheBasics/macrolist.xml:3784
-#: TheBasics/macrolist.xml:3795
-#: TheBasics/macrolist.xml:3801
-#: TheBasics/macrolist.xml:3807
-#: TheBasics/macrolist.xml:3810
-#: TheBasics/macrolist.xml:3813
-#: TheBasics/macrolist.xml:3816
-#: TheBasics/macrolist.xml:3827
-#: TheBasics/macrolist.xml:3833
-#: TheBasics/macrolist.xml:3839
-#: TheBasics/macrolist.xml:3842
-#: TheBasics/macrolist.xml:3845
-#: TheBasics/macrolist.xml:3848
-#: TheBasics/macrolist.xml:3859
-#: TheBasics/macrolist.xml:3865
-#: TheBasics/macrolist.xml:3871
-#: TheBasics/macrolist.xml:3874
-#: TheBasics/macrolist.xml:3877
-#: TheBasics/macrolist.xml:3880
-#: TheBasics/macrolist.xml:3891
-#: TheBasics/macrolist.xml:3897
-#: TheBasics/macrolist.xml:3903
-#: TheBasics/macrolist.xml:3906
-#: TheBasics/macrolist.xml:3909
-#: TheBasics/macrolist.xml:3912
-#: TheBasics/macrolist.xml:3923
-#: TheBasics/macrolist.xml:3929
-#: TheBasics/macrolist.xml:3935
-#: TheBasics/macrolist.xml:3938
-#: TheBasics/macrolist.xml:3941
-#: TheBasics/macrolist.xml:3944
-#: TheBasics/macrolist.xml:3955
-#: TheBasics/macrolist.xml:3961
-#: TheBasics/macrolist.xml:3967
-#: TheBasics/macrolist.xml:3970
-#: TheBasics/macrolist.xml:3973
-#: TheBasics/macrolist.xml:3976
-#: TheBasics/macrolist.xml:3987
-#: TheBasics/macrolist.xml:3993
-#: TheBasics/macrolist.xml:3999
-#: TheBasics/macrolist.xml:4002
-#: TheBasics/macrolist.xml:4005
-#: TheBasics/macrolist.xml:4008
-#: TheBasics/macrolist.xml:4019
-#: TheBasics/macrolist.xml:4025
-#: TheBasics/macrolist.xml:4031
-#: TheBasics/macrolist.xml:4034
-#: TheBasics/macrolist.xml:4037
-#: TheBasics/macrolist.xml:4040
-#: TheBasics/macrolist.xml:4092
-#: TheBasics/macrolist.xml:4098
-#: TheBasics/macrolist.xml:4123
-#: TheBasics/macrolist.xml:4129
-#: TheBasics/macrolist.xml:4154
-#: TheBasics/macrolist.xml:4160
-#: TheBasics/macrolist.xml:4185
-#: TheBasics/macrolist.xml:4191
-#: TheBasics/macrolist.xml:4216
-#: TheBasics/macrolist.xml:4222
-#: TheBasics/macrolist.xml:4247
-#: TheBasics/macrolist.xml:4253
-#: TheBasics/macrolist.xml:4278
-#: TheBasics/macrolist.xml:4284
-#: TheBasics/macrolist.xml:4309
-#: TheBasics/macrolist.xml:4315
-#: TheBasics/macrolist.xml:4340
-#: TheBasics/macrolist.xml:4346
-#: TheBasics/macrolist.xml:4371
-#: TheBasics/macrolist.xml:4377
-#: TheBasics/macrolist.xml:4402
-#: TheBasics/macrolist.xml:4408
-#: TheBasics/macrolist.xml:4469
-#: TheBasics/macrolist.xml:4472
-#: TheBasics/macrolist.xml:4475
-#: TheBasics/macrolist.xml:4478
-#: TheBasics/macrolist.xml:4481
-#: TheBasics/macrolist.xml:4484
-#: TheBasics/macrolist.xml:4487
-#: TheBasics/macrolist.xml:4490
-#: TheBasics/macrolist.xml:4500
-#: TheBasics/macrolist.xml:4503
-#: TheBasics/macrolist.xml:4506
-#: TheBasics/macrolist.xml:4509
-#: TheBasics/macrolist.xml:4512
-#: TheBasics/macrolist.xml:4515
-#: TheBasics/macrolist.xml:4518
-#: TheBasics/macrolist.xml:4521
-#: TheBasics/macrolist.xml:4531
-#: TheBasics/macrolist.xml:4534
-#: TheBasics/macrolist.xml:4537
-#: TheBasics/macrolist.xml:4540
-#: TheBasics/macrolist.xml:4543
-#: TheBasics/macrolist.xml:4546
-#: TheBasics/macrolist.xml:4549
-#: TheBasics/macrolist.xml:4552
-#: TheBasics/macrolist.xml:4562
-#: TheBasics/macrolist.xml:4565
-#: TheBasics/macrolist.xml:4568
-#: TheBasics/macrolist.xml:4571
-#: TheBasics/macrolist.xml:4574
-#: TheBasics/macrolist.xml:4577
-#: TheBasics/macrolist.xml:4580
-#: TheBasics/macrolist.xml:4583
-#: TheBasics/macrolist.xml:4593
-#: TheBasics/macrolist.xml:4596
-#: TheBasics/macrolist.xml:4599
-#: TheBasics/macrolist.xml:4602
-#: TheBasics/macrolist.xml:4605
-#: TheBasics/macrolist.xml:4608
-#: TheBasics/macrolist.xml:4611
-#: TheBasics/macrolist.xml:4614
-#: TheBasics/macrolist.xml:4625
-#: TheBasics/macrolist.xml:4628
-#: TheBasics/macrolist.xml:4631
-#: TheBasics/macrolist.xml:4634
-#: TheBasics/macrolist.xml:4637
-#: TheBasics/macrolist.xml:4640
-#: TheBasics/macrolist.xml:4643
-#: TheBasics/macrolist.xml:4646
-#: TheBasics/macrolist.xml:4657
-#: TheBasics/macrolist.xml:4660
-#: TheBasics/macrolist.xml:4663
-#: TheBasics/macrolist.xml:4666
-#: TheBasics/macrolist.xml:4669
-#: TheBasics/macrolist.xml:4672
-#: TheBasics/macrolist.xml:4675
-#: TheBasics/macrolist.xml:4678
-#: TheBasics/macrolist.xml:4727
-#: TheBasics/macrolist.xml:4730
-#: TheBasics/macrolist.xml:4733
-#: TheBasics/macrolist.xml:4736
-#: TheBasics/macrolist.xml:4739
-#: TheBasics/macrolist.xml:4742
-#: TheBasics/macrolist.xml:4745
-#: TheBasics/macrolist.xml:4748
-#: TheBasics/macrolist.xml:4758
-#: TheBasics/macrolist.xml:4761
-#: TheBasics/macrolist.xml:4764
-#: TheBasics/macrolist.xml:4767
-#: TheBasics/macrolist.xml:4770
-#: TheBasics/macrolist.xml:4773
-#: TheBasics/macrolist.xml:4776
-#: TheBasics/macrolist.xml:4779
-#: TheBasics/macrolist.xml:4789
-#: TheBasics/macrolist.xml:4792
-#: TheBasics/macrolist.xml:4795
-#: TheBasics/macrolist.xml:4798
-#: TheBasics/macrolist.xml:4801
-#: TheBasics/macrolist.xml:4804
-#: TheBasics/macrolist.xml:4807
-#: TheBasics/macrolist.xml:4820
-#: TheBasics/macrolist.xml:4823
-#: TheBasics/macrolist.xml:4826
-#: TheBasics/macrolist.xml:4829
-#: TheBasics/macrolist.xml:4832
-#: TheBasics/macrolist.xml:4835
-#: TheBasics/macrolist.xml:4838
-#: TheBasics/macrolist.xml:4841
-#: TheBasics/macrolist.xml:4851
-#: TheBasics/macrolist.xml:4854
-#: TheBasics/macrolist.xml:4857
-#: TheBasics/macrolist.xml:4860
-#: TheBasics/macrolist.xml:4863
-#: TheBasics/macrolist.xml:4866
-#: TheBasics/macrolist.xml:4869
-#: TheBasics/macrolist.xml:4872
-#: TheBasics/macrolist.xml:4882
-#: TheBasics/macrolist.xml:4885
-#: TheBasics/macrolist.xml:4888
-#: TheBasics/macrolist.xml:4891
-#: TheBasics/macrolist.xml:4894
-#: TheBasics/macrolist.xml:4897
-#: TheBasics/macrolist.xml:4900
-#: TheBasics/macrolist.xml:4903
-#: TheBasics/macrolist.xml:4913
-#: TheBasics/macrolist.xml:4916
-#: TheBasics/macrolist.xml:4919
-#: TheBasics/macrolist.xml:4922
-#: TheBasics/macrolist.xml:4925
-#: TheBasics/macrolist.xml:4928
-#: TheBasics/macrolist.xml:4931
-#: TheBasics/macrolist.xml:4934
-#: TheBasics/macrolist.xml:4944
-#: TheBasics/macrolist.xml:4947
-#: TheBasics/macrolist.xml:4950
-#: TheBasics/macrolist.xml:4953
-#: TheBasics/macrolist.xml:4956
-#: TheBasics/macrolist.xml:4959
-#: TheBasics/macrolist.xml:4962
-#: TheBasics/macrolist.xml:4965
-#: TheBasics/macrolist.xml:4975
-#: TheBasics/macrolist.xml:4978
-#: TheBasics/macrolist.xml:4981
-#: TheBasics/macrolist.xml:4984
-#: TheBasics/macrolist.xml:4987
-#: TheBasics/macrolist.xml:4990
-#: TheBasics/macrolist.xml:4993
-#: TheBasics/macrolist.xml:4996
-#: TheBasics/macrolist.xml:5006
-#: TheBasics/macrolist.xml:5009
-#: TheBasics/macrolist.xml:5012
-#: TheBasics/macrolist.xml:5015
-#: TheBasics/macrolist.xml:5018
-#: TheBasics/macrolist.xml:5021
-#: TheBasics/macrolist.xml:5024
-#: TheBasics/macrolist.xml:5027
-#: TheBasics/macrolist.xml:5037
-#: TheBasics/macrolist.xml:5040
-#: TheBasics/macrolist.xml:5043
-#: TheBasics/macrolist.xml:5046
-#: TheBasics/macrolist.xml:5049
-#: TheBasics/macrolist.xml:5052
-#: TheBasics/macrolist.xml:5055
-#: TheBasics/macrolist.xml:5058
-#: TheBasics/macrolist.xml:5068
-#: TheBasics/macrolist.xml:5071
-#: TheBasics/macrolist.xml:5074
-#: TheBasics/macrolist.xml:5077
-#: TheBasics/macrolist.xml:5080
-#: TheBasics/macrolist.xml:5083
-#: TheBasics/macrolist.xml:5086
-#: TheBasics/macrolist.xml:5089
-#: TheBasics/macrolist.xml:5099
-#: TheBasics/macrolist.xml:5102
-#: TheBasics/macrolist.xml:5105
-#: TheBasics/macrolist.xml:5108
-#: TheBasics/macrolist.xml:5111
-#: TheBasics/macrolist.xml:5114
-#: TheBasics/macrolist.xml:5117
-#: TheBasics/macrolist.xml:5120
-#: TheBasics/macrolist.xml:5169
-#: TheBasics/macrolist.xml:5172
-#: TheBasics/macrolist.xml:5175
-#: TheBasics/macrolist.xml:5178
-#: TheBasics/macrolist.xml:5181
-#: TheBasics/macrolist.xml:5184
-#: TheBasics/macrolist.xml:5187
-#: TheBasics/macrolist.xml:5190
-#: TheBasics/macrolist.xml:5200
-#: TheBasics/macrolist.xml:5203
-#: TheBasics/macrolist.xml:5206
-#: TheBasics/macrolist.xml:5209
-#: TheBasics/macrolist.xml:5212
-#: TheBasics/macrolist.xml:5215
-#: TheBasics/macrolist.xml:5218
-#: TheBasics/macrolist.xml:5221
-#: TheBasics/macrolist.xml:5231
-#: TheBasics/macrolist.xml:5234
-#: TheBasics/macrolist.xml:5237
-#: TheBasics/macrolist.xml:5240
-#: TheBasics/macrolist.xml:5243
-#: TheBasics/macrolist.xml:5246
-#: TheBasics/macrolist.xml:5249
-#: TheBasics/macrolist.xml:5252
-#: TheBasics/macrolist.xml:5262
-#: TheBasics/macrolist.xml:5265
-#: TheBasics/macrolist.xml:5268
-#: TheBasics/macrolist.xml:5271
-#: TheBasics/macrolist.xml:5274
-#: TheBasics/macrolist.xml:5277
-#: TheBasics/macrolist.xml:5280
-#: TheBasics/macrolist.xml:5283
-#: TheBasics/macrolist.xml:5293
-#: TheBasics/macrolist.xml:5296
-#: TheBasics/macrolist.xml:5299
-#: TheBasics/macrolist.xml:5302
-#: TheBasics/macrolist.xml:5305
-#: TheBasics/macrolist.xml:5308
-#: TheBasics/macrolist.xml:5311
-#: TheBasics/macrolist.xml:5314
-#: TheBasics/macrolist.xml:5324
-#: TheBasics/macrolist.xml:5327
-#: TheBasics/macrolist.xml:5330
-#: TheBasics/macrolist.xml:5333
-#: TheBasics/macrolist.xml:5336
-#: TheBasics/macrolist.xml:5339
-#: TheBasics/macrolist.xml:5342
-#: TheBasics/macrolist.xml:5345
-#: TheBasics/statetypes.xml:218
-#: TheBasics/statetypes.xml:233
-#: TheBasics/statetypes.xml:248
-#: TheBasics/statetypes.xml:265
-#: TheBasics/statetypes.xml:297
-#: TheBasics/statetypes.xml:326
-#: TheBasics/statetypes.xml:341
+#: ConfiguringNagios/cgiauth.xml:110 ConfiguringNagios/cgiauth.xml:118
+#: ConfiguringNagios/cgiauth.xml:126 ConfiguringNagios/cgiauth.xml:134
+#: ConfiguringNagios/cgiauth.xml:142 ConfiguringNagios/cgiauth.xml:150
+#: ConfiguringNagios/cgiauth.xml:158 ConfiguringNagios/cgiauth.xml:166
+#: ConfiguringNagios/cgiauth.xml:174 ConfiguringNagios/cgiauth.xml:182
+#: TheBasics/macrolist.xml:79 TheBasics/macrolist.xml:148
+#: TheBasics/macrolist.xml:151 TheBasics/macrolist.xml:154
+#: TheBasics/macrolist.xml:157 TheBasics/macrolist.xml:160
+#: TheBasics/macrolist.xml:163 TheBasics/macrolist.xml:166
+#: TheBasics/macrolist.xml:169 TheBasics/macrolist.xml:179
+#: TheBasics/macrolist.xml:182 TheBasics/macrolist.xml:185
+#: TheBasics/macrolist.xml:188 TheBasics/macrolist.xml:191
+#: TheBasics/macrolist.xml:194 TheBasics/macrolist.xml:197
+#: TheBasics/macrolist.xml:200 TheBasics/macrolist.xml:210
+#: TheBasics/macrolist.xml:213 TheBasics/macrolist.xml:216
+#: TheBasics/macrolist.xml:219 TheBasics/macrolist.xml:222
+#: TheBasics/macrolist.xml:225 TheBasics/macrolist.xml:228
+#: TheBasics/macrolist.xml:231 TheBasics/macrolist.xml:241
+#: TheBasics/macrolist.xml:244 TheBasics/macrolist.xml:247
+#: TheBasics/macrolist.xml:250 TheBasics/macrolist.xml:253
+#: TheBasics/macrolist.xml:256 TheBasics/macrolist.xml:259
+#: TheBasics/macrolist.xml:262 TheBasics/macrolist.xml:272
+#: TheBasics/macrolist.xml:275 TheBasics/macrolist.xml:282
+#: TheBasics/macrolist.xml:285 TheBasics/macrolist.xml:288
+#: TheBasics/macrolist.xml:291 TheBasics/macrolist.xml:294
+#: TheBasics/macrolist.xml:304 TheBasics/macrolist.xml:307
+#: TheBasics/macrolist.xml:314 TheBasics/macrolist.xml:317
+#: TheBasics/macrolist.xml:320 TheBasics/macrolist.xml:323
+#: TheBasics/macrolist.xml:326 TheBasics/macrolist.xml:336
+#: TheBasics/macrolist.xml:339 TheBasics/macrolist.xml:342
+#: TheBasics/macrolist.xml:345 TheBasics/macrolist.xml:348
+#: TheBasics/macrolist.xml:351 TheBasics/macrolist.xml:354
+#: TheBasics/macrolist.xml:357 TheBasics/macrolist.xml:367
+#: TheBasics/macrolist.xml:370 TheBasics/macrolist.xml:373
+#: TheBasics/macrolist.xml:376 TheBasics/macrolist.xml:379
+#: TheBasics/macrolist.xml:382 TheBasics/macrolist.xml:385
+#: TheBasics/macrolist.xml:388 TheBasics/macrolist.xml:398
+#: TheBasics/macrolist.xml:401 TheBasics/macrolist.xml:408
+#: TheBasics/macrolist.xml:411 TheBasics/macrolist.xml:414
+#: TheBasics/macrolist.xml:417 TheBasics/macrolist.xml:420
+#: TheBasics/macrolist.xml:430 TheBasics/macrolist.xml:433
+#: TheBasics/macrolist.xml:436 TheBasics/macrolist.xml:439
+#: TheBasics/macrolist.xml:442 TheBasics/macrolist.xml:445
+#: TheBasics/macrolist.xml:448 TheBasics/macrolist.xml:451
+#: TheBasics/macrolist.xml:461 TheBasics/macrolist.xml:464
+#: TheBasics/macrolist.xml:467 TheBasics/macrolist.xml:470
+#: TheBasics/macrolist.xml:473 TheBasics/macrolist.xml:476
+#: TheBasics/macrolist.xml:479 TheBasics/macrolist.xml:482
+#: TheBasics/macrolist.xml:492 TheBasics/macrolist.xml:495
+#: TheBasics/macrolist.xml:498 TheBasics/macrolist.xml:501
+#: TheBasics/macrolist.xml:504 TheBasics/macrolist.xml:507
+#: TheBasics/macrolist.xml:510 TheBasics/macrolist.xml:513
+#: TheBasics/macrolist.xml:523 TheBasics/macrolist.xml:526
+#: TheBasics/macrolist.xml:529 TheBasics/macrolist.xml:532
+#: TheBasics/macrolist.xml:535 TheBasics/macrolist.xml:538
+#: TheBasics/macrolist.xml:541 TheBasics/macrolist.xml:544
+#: TheBasics/macrolist.xml:554 TheBasics/macrolist.xml:557
+#: TheBasics/macrolist.xml:560 TheBasics/macrolist.xml:563
+#: TheBasics/macrolist.xml:566 TheBasics/macrolist.xml:569
+#: TheBasics/macrolist.xml:572 TheBasics/macrolist.xml:575
+#: TheBasics/macrolist.xml:585 TheBasics/macrolist.xml:588
+#: TheBasics/macrolist.xml:591 TheBasics/macrolist.xml:594
+#: TheBasics/macrolist.xml:597 TheBasics/macrolist.xml:600
+#: TheBasics/macrolist.xml:603 TheBasics/macrolist.xml:606
+#: TheBasics/macrolist.xml:616 TheBasics/macrolist.xml:619
+#: TheBasics/macrolist.xml:622 TheBasics/macrolist.xml:625
+#: TheBasics/macrolist.xml:628 TheBasics/macrolist.xml:631
+#: TheBasics/macrolist.xml:634 TheBasics/macrolist.xml:637
+#: TheBasics/macrolist.xml:647 TheBasics/macrolist.xml:650
+#: TheBasics/macrolist.xml:657 TheBasics/macrolist.xml:660
+#: TheBasics/macrolist.xml:663 TheBasics/macrolist.xml:666
+#: TheBasics/macrolist.xml:669 TheBasics/macrolist.xml:679
+#: TheBasics/macrolist.xml:682 TheBasics/macrolist.xml:685
+#: TheBasics/macrolist.xml:688 TheBasics/macrolist.xml:691
+#: TheBasics/macrolist.xml:694 TheBasics/macrolist.xml:697
+#: TheBasics/macrolist.xml:700 TheBasics/macrolist.xml:710
+#: TheBasics/macrolist.xml:713 TheBasics/macrolist.xml:716
+#: TheBasics/macrolist.xml:719 TheBasics/macrolist.xml:722
+#: TheBasics/macrolist.xml:725 TheBasics/macrolist.xml:728
+#: TheBasics/macrolist.xml:731 TheBasics/macrolist.xml:741
+#: TheBasics/macrolist.xml:744 TheBasics/macrolist.xml:747
+#: TheBasics/macrolist.xml:750 TheBasics/macrolist.xml:753
+#: TheBasics/macrolist.xml:756 TheBasics/macrolist.xml:759
+#: TheBasics/macrolist.xml:762 TheBasics/macrolist.xml:772
+#: TheBasics/macrolist.xml:775 TheBasics/macrolist.xml:778
+#: TheBasics/macrolist.xml:781 TheBasics/macrolist.xml:784
+#: TheBasics/macrolist.xml:787 TheBasics/macrolist.xml:790
+#: TheBasics/macrolist.xml:793 TheBasics/macrolist.xml:803
+#: TheBasics/macrolist.xml:806 TheBasics/macrolist.xml:809
+#: TheBasics/macrolist.xml:812 TheBasics/macrolist.xml:815
+#: TheBasics/macrolist.xml:818 TheBasics/macrolist.xml:821
+#: TheBasics/macrolist.xml:824 TheBasics/macrolist.xml:834
+#: TheBasics/macrolist.xml:837 TheBasics/macrolist.xml:840
+#: TheBasics/macrolist.xml:843 TheBasics/macrolist.xml:846
+#: TheBasics/macrolist.xml:849 TheBasics/macrolist.xml:852
+#: TheBasics/macrolist.xml:855 TheBasics/macrolist.xml:865
+#: TheBasics/macrolist.xml:868 TheBasics/macrolist.xml:871
+#: TheBasics/macrolist.xml:874 TheBasics/macrolist.xml:877
+#: TheBasics/macrolist.xml:880 TheBasics/macrolist.xml:883
+#: TheBasics/macrolist.xml:886 TheBasics/macrolist.xml:896
+#: TheBasics/macrolist.xml:899 TheBasics/macrolist.xml:902
+#: TheBasics/macrolist.xml:905 TheBasics/macrolist.xml:908
+#: TheBasics/macrolist.xml:911 TheBasics/macrolist.xml:914
+#: TheBasics/macrolist.xml:917 TheBasics/macrolist.xml:927
+#: TheBasics/macrolist.xml:930 TheBasics/macrolist.xml:933
+#: TheBasics/macrolist.xml:936 TheBasics/macrolist.xml:939
+#: TheBasics/macrolist.xml:942 TheBasics/macrolist.xml:945
+#: TheBasics/macrolist.xml:948 TheBasics/macrolist.xml:958
+#: TheBasics/macrolist.xml:961 TheBasics/macrolist.xml:964
+#: TheBasics/macrolist.xml:967 TheBasics/macrolist.xml:970
+#: TheBasics/macrolist.xml:973 TheBasics/macrolist.xml:976
+#: TheBasics/macrolist.xml:979 TheBasics/macrolist.xml:989
+#: TheBasics/macrolist.xml:992 TheBasics/macrolist.xml:995
+#: TheBasics/macrolist.xml:998 TheBasics/macrolist.xml:1001
+#: TheBasics/macrolist.xml:1004 TheBasics/macrolist.xml:1007
+#: TheBasics/macrolist.xml:1010 TheBasics/macrolist.xml:1020
+#: TheBasics/macrolist.xml:1023 TheBasics/macrolist.xml:1030
+#: TheBasics/macrolist.xml:1033 TheBasics/macrolist.xml:1036
+#: TheBasics/macrolist.xml:1039 TheBasics/macrolist.xml:1042
+#: TheBasics/macrolist.xml:1052 TheBasics/macrolist.xml:1055
+#: TheBasics/macrolist.xml:1062 TheBasics/macrolist.xml:1065
+#: TheBasics/macrolist.xml:1068 TheBasics/macrolist.xml:1071
+#: TheBasics/macrolist.xml:1074 TheBasics/macrolist.xml:1084
+#: TheBasics/macrolist.xml:1087 TheBasics/macrolist.xml:1094
+#: TheBasics/macrolist.xml:1097 TheBasics/macrolist.xml:1100
+#: TheBasics/macrolist.xml:1103 TheBasics/macrolist.xml:1106
+#: TheBasics/macrolist.xml:1116 TheBasics/macrolist.xml:1119
+#: TheBasics/macrolist.xml:1122 TheBasics/macrolist.xml:1125
+#: TheBasics/macrolist.xml:1128 TheBasics/macrolist.xml:1131
+#: TheBasics/macrolist.xml:1134 TheBasics/macrolist.xml:1137
+#: TheBasics/macrolist.xml:1157 TheBasics/macrolist.xml:1189
+#: TheBasics/macrolist.xml:1221 TheBasics/macrolist.xml:1253
+#: TheBasics/macrolist.xml:1275 TheBasics/macrolist.xml:1278
+#: TheBasics/macrolist.xml:1281 TheBasics/macrolist.xml:1284
+#: TheBasics/macrolist.xml:1287 TheBasics/macrolist.xml:1290
+#: TheBasics/macrolist.xml:1293 TheBasics/macrolist.xml:1296
+#: TheBasics/macrolist.xml:1306 TheBasics/macrolist.xml:1309
+#: TheBasics/macrolist.xml:1312 TheBasics/macrolist.xml:1315
+#: TheBasics/macrolist.xml:1318 TheBasics/macrolist.xml:1321
+#: TheBasics/macrolist.xml:1324 TheBasics/macrolist.xml:1327
+#: TheBasics/macrolist.xml:1337 TheBasics/macrolist.xml:1340
+#: TheBasics/macrolist.xml:1343 TheBasics/macrolist.xml:1346
+#: TheBasics/macrolist.xml:1349 TheBasics/macrolist.xml:1352
+#: TheBasics/macrolist.xml:1355 TheBasics/macrolist.xml:1358
+#: TheBasics/macrolist.xml:1368 TheBasics/macrolist.xml:1371
+#: TheBasics/macrolist.xml:1374 TheBasics/macrolist.xml:1377
+#: TheBasics/macrolist.xml:1380 TheBasics/macrolist.xml:1383
+#: TheBasics/macrolist.xml:1386 TheBasics/macrolist.xml:1389
+#: TheBasics/macrolist.xml:1399 TheBasics/macrolist.xml:1402
+#: TheBasics/macrolist.xml:1405 TheBasics/macrolist.xml:1408
+#: TheBasics/macrolist.xml:1411 TheBasics/macrolist.xml:1414
+#: TheBasics/macrolist.xml:1417 TheBasics/macrolist.xml:1420
+#: TheBasics/macrolist.xml:1430 TheBasics/macrolist.xml:1433
+#: TheBasics/macrolist.xml:1436 TheBasics/macrolist.xml:1439
+#: TheBasics/macrolist.xml:1442 TheBasics/macrolist.xml:1445
+#: TheBasics/macrolist.xml:1448 TheBasics/macrolist.xml:1451
+#: TheBasics/macrolist.xml:1461 TheBasics/macrolist.xml:1464
+#: TheBasics/macrolist.xml:1467 TheBasics/macrolist.xml:1470
+#: TheBasics/macrolist.xml:1473 TheBasics/macrolist.xml:1476
+#: TheBasics/macrolist.xml:1479 TheBasics/macrolist.xml:1482
+#: TheBasics/macrolist.xml:1492 TheBasics/macrolist.xml:1495
+#: TheBasics/macrolist.xml:1498 TheBasics/macrolist.xml:1501
+#: TheBasics/macrolist.xml:1504 TheBasics/macrolist.xml:1507
+#: TheBasics/macrolist.xml:1510 TheBasics/macrolist.xml:1513
+#: TheBasics/macrolist.xml:1565 TheBasics/macrolist.xml:1568
+#: TheBasics/macrolist.xml:1571 TheBasics/macrolist.xml:1574
+#: TheBasics/macrolist.xml:1577 TheBasics/macrolist.xml:1580
+#: TheBasics/macrolist.xml:1583 TheBasics/macrolist.xml:1586
+#: TheBasics/macrolist.xml:1597 TheBasics/macrolist.xml:1600
+#: TheBasics/macrolist.xml:1603 TheBasics/macrolist.xml:1606
+#: TheBasics/macrolist.xml:1609 TheBasics/macrolist.xml:1612
+#: TheBasics/macrolist.xml:1615 TheBasics/macrolist.xml:1618
+#: TheBasics/macrolist.xml:1629 TheBasics/macrolist.xml:1632
+#: TheBasics/macrolist.xml:1635 TheBasics/macrolist.xml:1638
+#: TheBasics/macrolist.xml:1641 TheBasics/macrolist.xml:1644
+#: TheBasics/macrolist.xml:1647 TheBasics/macrolist.xml:1650
+#: TheBasics/macrolist.xml:1661 TheBasics/macrolist.xml:1664
+#: TheBasics/macrolist.xml:1667 TheBasics/macrolist.xml:1670
+#: TheBasics/macrolist.xml:1673 TheBasics/macrolist.xml:1676
+#: TheBasics/macrolist.xml:1679 TheBasics/macrolist.xml:1682
+#: TheBasics/macrolist.xml:1693 TheBasics/macrolist.xml:1696
+#: TheBasics/macrolist.xml:1699 TheBasics/macrolist.xml:1702
+#: TheBasics/macrolist.xml:1705 TheBasics/macrolist.xml:1708
+#: TheBasics/macrolist.xml:1711 TheBasics/macrolist.xml:1714
+#: TheBasics/macrolist.xml:1765 TheBasics/macrolist.xml:1768
+#: TheBasics/macrolist.xml:1777 TheBasics/macrolist.xml:1783
+#: TheBasics/macrolist.xml:1796 TheBasics/macrolist.xml:1799
+#: TheBasics/macrolist.xml:1808 TheBasics/macrolist.xml:1814
+#: TheBasics/macrolist.xml:1831 TheBasics/macrolist.xml:1840
+#: TheBasics/macrolist.xml:1846 TheBasics/macrolist.xml:1863
+#: TheBasics/macrolist.xml:1872 TheBasics/macrolist.xml:1878
+#: TheBasics/macrolist.xml:1891 TheBasics/macrolist.xml:1894
+#: TheBasics/macrolist.xml:1903 TheBasics/macrolist.xml:1909
+#: TheBasics/macrolist.xml:1922 TheBasics/macrolist.xml:1925
+#: TheBasics/macrolist.xml:1934 TheBasics/macrolist.xml:1940
+#: TheBasics/macrolist.xml:1953 TheBasics/macrolist.xml:1956
+#: TheBasics/macrolist.xml:1965 TheBasics/macrolist.xml:1971
+#: TheBasics/macrolist.xml:1984 TheBasics/macrolist.xml:1987
+#: TheBasics/macrolist.xml:1996 TheBasics/macrolist.xml:2002
+#: TheBasics/macrolist.xml:2015 TheBasics/macrolist.xml:2018
+#: TheBasics/macrolist.xml:2027 TheBasics/macrolist.xml:2033
+#: TheBasics/macrolist.xml:2046 TheBasics/macrolist.xml:2049
+#: TheBasics/macrolist.xml:2058 TheBasics/macrolist.xml:2064
+#: TheBasics/macrolist.xml:2077 TheBasics/macrolist.xml:2080
+#: TheBasics/macrolist.xml:2089 TheBasics/macrolist.xml:2095
+#: TheBasics/macrolist.xml:2108 TheBasics/macrolist.xml:2111
+#: TheBasics/macrolist.xml:2120 TheBasics/macrolist.xml:2126
+#: TheBasics/macrolist.xml:2139 TheBasics/macrolist.xml:2142
+#: TheBasics/macrolist.xml:2151 TheBasics/macrolist.xml:2157
+#: TheBasics/macrolist.xml:2170 TheBasics/macrolist.xml:2173
+#: TheBasics/macrolist.xml:2182 TheBasics/macrolist.xml:2188
+#: TheBasics/macrolist.xml:2201 TheBasics/macrolist.xml:2204
+#: TheBasics/macrolist.xml:2213 TheBasics/macrolist.xml:2219
+#: TheBasics/macrolist.xml:2236 TheBasics/macrolist.xml:2245
+#: TheBasics/macrolist.xml:2251 TheBasics/macrolist.xml:2264
+#: TheBasics/macrolist.xml:2267 TheBasics/macrolist.xml:2276
+#: TheBasics/macrolist.xml:2282 TheBasics/macrolist.xml:2295
+#: TheBasics/macrolist.xml:2298 TheBasics/macrolist.xml:2307
+#: TheBasics/macrolist.xml:2313 TheBasics/macrolist.xml:2326
+#: TheBasics/macrolist.xml:2329 TheBasics/macrolist.xml:2338
+#: TheBasics/macrolist.xml:2344 TheBasics/macrolist.xml:2357
+#: TheBasics/macrolist.xml:2360 TheBasics/macrolist.xml:2369
+#: TheBasics/macrolist.xml:2375 TheBasics/macrolist.xml:2388
+#: TheBasics/macrolist.xml:2391 TheBasics/macrolist.xml:2400
+#: TheBasics/macrolist.xml:2406 TheBasics/macrolist.xml:2419
+#: TheBasics/macrolist.xml:2422 TheBasics/macrolist.xml:2431
+#: TheBasics/macrolist.xml:2437 TheBasics/macrolist.xml:2450
+#: TheBasics/macrolist.xml:2453 TheBasics/macrolist.xml:2462
+#: TheBasics/macrolist.xml:2468 TheBasics/macrolist.xml:2481
+#: TheBasics/macrolist.xml:2484 TheBasics/macrolist.xml:2493
+#: TheBasics/macrolist.xml:2499 TheBasics/macrolist.xml:2512
+#: TheBasics/macrolist.xml:2515 TheBasics/macrolist.xml:2524
+#: TheBasics/macrolist.xml:2530 TheBasics/macrolist.xml:2543
+#: TheBasics/macrolist.xml:2546 TheBasics/macrolist.xml:2555
+#: TheBasics/macrolist.xml:2561 TheBasics/macrolist.xml:2574
+#: TheBasics/macrolist.xml:2577 TheBasics/macrolist.xml:2586
+#: TheBasics/macrolist.xml:2592 TheBasics/macrolist.xml:2605
+#: TheBasics/macrolist.xml:2608 TheBasics/macrolist.xml:2617
+#: TheBasics/macrolist.xml:2623 TheBasics/macrolist.xml:2640
+#: TheBasics/macrolist.xml:2649 TheBasics/macrolist.xml:2655
+#: TheBasics/macrolist.xml:2672 TheBasics/macrolist.xml:2681
+#: TheBasics/macrolist.xml:2687 TheBasics/macrolist.xml:2704
+#: TheBasics/macrolist.xml:2713 TheBasics/macrolist.xml:2719
+#: TheBasics/macrolist.xml:2732 TheBasics/macrolist.xml:2735
+#: TheBasics/macrolist.xml:2744 TheBasics/macrolist.xml:2750
+#: TheBasics/macrolist.xml:2767 TheBasics/macrolist.xml:2799
+#: TheBasics/macrolist.xml:2831 TheBasics/macrolist.xml:2863
+#: TheBasics/macrolist.xml:2891 TheBasics/macrolist.xml:2894
+#: TheBasics/macrolist.xml:2903 TheBasics/macrolist.xml:2909
+#: TheBasics/macrolist.xml:2922 TheBasics/macrolist.xml:2925
+#: TheBasics/macrolist.xml:2934 TheBasics/macrolist.xml:2940
+#: TheBasics/macrolist.xml:2953 TheBasics/macrolist.xml:2956
+#: TheBasics/macrolist.xml:2965 TheBasics/macrolist.xml:2971
+#: TheBasics/macrolist.xml:3026 TheBasics/macrolist.xml:3029
+#: TheBasics/macrolist.xml:3032 TheBasics/macrolist.xml:3035
+#: TheBasics/macrolist.xml:3038 TheBasics/macrolist.xml:3041
+#: TheBasics/macrolist.xml:3044 TheBasics/macrolist.xml:3047
+#: TheBasics/macrolist.xml:3058 TheBasics/macrolist.xml:3061
+#: TheBasics/macrolist.xml:3064 TheBasics/macrolist.xml:3067
+#: TheBasics/macrolist.xml:3070 TheBasics/macrolist.xml:3073
+#: TheBasics/macrolist.xml:3076 TheBasics/macrolist.xml:3079
+#: TheBasics/macrolist.xml:3090 TheBasics/macrolist.xml:3093
+#: TheBasics/macrolist.xml:3096 TheBasics/macrolist.xml:3099
+#: TheBasics/macrolist.xml:3102 TheBasics/macrolist.xml:3105
+#: TheBasics/macrolist.xml:3108 TheBasics/macrolist.xml:3111
+#: TheBasics/macrolist.xml:3122 TheBasics/macrolist.xml:3125
+#: TheBasics/macrolist.xml:3128 TheBasics/macrolist.xml:3131
+#: TheBasics/macrolist.xml:3134 TheBasics/macrolist.xml:3137
+#: TheBasics/macrolist.xml:3140 TheBasics/macrolist.xml:3143
+#: TheBasics/macrolist.xml:3154 TheBasics/macrolist.xml:3157
+#: TheBasics/macrolist.xml:3160 TheBasics/macrolist.xml:3163
+#: TheBasics/macrolist.xml:3166 TheBasics/macrolist.xml:3169
+#: TheBasics/macrolist.xml:3172 TheBasics/macrolist.xml:3175
+#: TheBasics/macrolist.xml:3229 TheBasics/macrolist.xml:3235
+#: TheBasics/macrolist.xml:3260 TheBasics/macrolist.xml:3266
+#: TheBasics/macrolist.xml:3291 TheBasics/macrolist.xml:3297
+#: TheBasics/macrolist.xml:3322 TheBasics/macrolist.xml:3328
+#: TheBasics/macrolist.xml:3353 TheBasics/macrolist.xml:3359
+#: TheBasics/macrolist.xml:3423 TheBasics/macrolist.xml:3426
+#: TheBasics/macrolist.xml:3429 TheBasics/macrolist.xml:3432
+#: TheBasics/macrolist.xml:3435 TheBasics/macrolist.xml:3438
+#: TheBasics/macrolist.xml:3441 TheBasics/macrolist.xml:3444
+#: TheBasics/macrolist.xml:3455 TheBasics/macrolist.xml:3458
+#: TheBasics/macrolist.xml:3461 TheBasics/macrolist.xml:3464
+#: TheBasics/macrolist.xml:3467 TheBasics/macrolist.xml:3470
+#: TheBasics/macrolist.xml:3473 TheBasics/macrolist.xml:3476
+#: TheBasics/macrolist.xml:3529 TheBasics/macrolist.xml:3536
+#: TheBasics/macrolist.xml:3543 TheBasics/macrolist.xml:3546
+#: TheBasics/macrolist.xml:3549 TheBasics/macrolist.xml:3552
+#: TheBasics/macrolist.xml:3563 TheBasics/macrolist.xml:3570
+#: TheBasics/macrolist.xml:3577 TheBasics/macrolist.xml:3580
+#: TheBasics/macrolist.xml:3583 TheBasics/macrolist.xml:3586
+#: TheBasics/macrolist.xml:3597 TheBasics/macrolist.xml:3604
+#: TheBasics/macrolist.xml:3611 TheBasics/macrolist.xml:3614
+#: TheBasics/macrolist.xml:3617 TheBasics/macrolist.xml:3620
+#: TheBasics/macrolist.xml:3631 TheBasics/macrolist.xml:3638
+#: TheBasics/macrolist.xml:3645 TheBasics/macrolist.xml:3648
+#: TheBasics/macrolist.xml:3651 TheBasics/macrolist.xml:3654
+#: TheBasics/macrolist.xml:3665 TheBasics/macrolist.xml:3672
+#: TheBasics/macrolist.xml:3679 TheBasics/macrolist.xml:3682
+#: TheBasics/macrolist.xml:3685 TheBasics/macrolist.xml:3688
+#: TheBasics/macrolist.xml:3699 TheBasics/macrolist.xml:3705
+#: TheBasics/macrolist.xml:3711 TheBasics/macrolist.xml:3714
+#: TheBasics/macrolist.xml:3717 TheBasics/macrolist.xml:3720
+#: TheBasics/macrolist.xml:3731 TheBasics/macrolist.xml:3737
+#: TheBasics/macrolist.xml:3743 TheBasics/macrolist.xml:3746
+#: TheBasics/macrolist.xml:3749 TheBasics/macrolist.xml:3752
+#: TheBasics/macrolist.xml:3763 TheBasics/macrolist.xml:3769
+#: TheBasics/macrolist.xml:3775 TheBasics/macrolist.xml:3778
+#: TheBasics/macrolist.xml:3781 TheBasics/macrolist.xml:3784
+#: TheBasics/macrolist.xml:3795 TheBasics/macrolist.xml:3801
+#: TheBasics/macrolist.xml:3807 TheBasics/macrolist.xml:3810
+#: TheBasics/macrolist.xml:3813 TheBasics/macrolist.xml:3816
+#: TheBasics/macrolist.xml:3827 TheBasics/macrolist.xml:3833
+#: TheBasics/macrolist.xml:3839 TheBasics/macrolist.xml:3842
+#: TheBasics/macrolist.xml:3845 TheBasics/macrolist.xml:3848
+#: TheBasics/macrolist.xml:3859 TheBasics/macrolist.xml:3865
+#: TheBasics/macrolist.xml:3871 TheBasics/macrolist.xml:3874
+#: TheBasics/macrolist.xml:3877 TheBasics/macrolist.xml:3880
+#: TheBasics/macrolist.xml:3891 TheBasics/macrolist.xml:3897
+#: TheBasics/macrolist.xml:3903 TheBasics/macrolist.xml:3906
+#: TheBasics/macrolist.xml:3909 TheBasics/macrolist.xml:3912
+#: TheBasics/macrolist.xml:3923 TheBasics/macrolist.xml:3929
+#: TheBasics/macrolist.xml:3935 TheBasics/macrolist.xml:3938
+#: TheBasics/macrolist.xml:3941 TheBasics/macrolist.xml:3944
+#: TheBasics/macrolist.xml:3955 TheBasics/macrolist.xml:3961
+#: TheBasics/macrolist.xml:3967 TheBasics/macrolist.xml:3970
+#: TheBasics/macrolist.xml:3973 TheBasics/macrolist.xml:3976
+#: TheBasics/macrolist.xml:3987 TheBasics/macrolist.xml:3993
+#: TheBasics/macrolist.xml:3999 TheBasics/macrolist.xml:4002
+#: TheBasics/macrolist.xml:4005 TheBasics/macrolist.xml:4008
+#: TheBasics/macrolist.xml:4019 TheBasics/macrolist.xml:4025
+#: TheBasics/macrolist.xml:4031 TheBasics/macrolist.xml:4034
+#: TheBasics/macrolist.xml:4037 TheBasics/macrolist.xml:4040
+#: TheBasics/macrolist.xml:4092 TheBasics/macrolist.xml:4098
+#: TheBasics/macrolist.xml:4123 TheBasics/macrolist.xml:4129
+#: TheBasics/macrolist.xml:4154 TheBasics/macrolist.xml:4160
+#: TheBasics/macrolist.xml:4185 TheBasics/macrolist.xml:4191
+#: TheBasics/macrolist.xml:4216 TheBasics/macrolist.xml:4222
+#: TheBasics/macrolist.xml:4247 TheBasics/macrolist.xml:4253
+#: TheBasics/macrolist.xml:4278 TheBasics/macrolist.xml:4284
+#: TheBasics/macrolist.xml:4309 TheBasics/macrolist.xml:4315
+#: TheBasics/macrolist.xml:4340 TheBasics/macrolist.xml:4346
+#: TheBasics/macrolist.xml:4371 TheBasics/macrolist.xml:4377
+#: TheBasics/macrolist.xml:4402 TheBasics/macrolist.xml:4408
+#: TheBasics/macrolist.xml:4469 TheBasics/macrolist.xml:4472
+#: TheBasics/macrolist.xml:4475 TheBasics/macrolist.xml:4478
+#: TheBasics/macrolist.xml:4481 TheBasics/macrolist.xml:4484
+#: TheBasics/macrolist.xml:4487 TheBasics/macrolist.xml:4490
+#: TheBasics/macrolist.xml:4500 TheBasics/macrolist.xml:4503
+#: TheBasics/macrolist.xml:4506 TheBasics/macrolist.xml:4509
+#: TheBasics/macrolist.xml:4512 TheBasics/macrolist.xml:4515
+#: TheBasics/macrolist.xml:4518 TheBasics/macrolist.xml:4521
+#: TheBasics/macrolist.xml:4531 TheBasics/macrolist.xml:4534
+#: TheBasics/macrolist.xml:4537 TheBasics/macrolist.xml:4540
+#: TheBasics/macrolist.xml:4543 TheBasics/macrolist.xml:4546
+#: TheBasics/macrolist.xml:4549 TheBasics/macrolist.xml:4552
+#: TheBasics/macrolist.xml:4562 TheBasics/macrolist.xml:4565
+#: TheBasics/macrolist.xml:4568 TheBasics/macrolist.xml:4571
+#: TheBasics/macrolist.xml:4574 TheBasics/macrolist.xml:4577
+#: TheBasics/macrolist.xml:4580 TheBasics/macrolist.xml:4583
+#: TheBasics/macrolist.xml:4593 TheBasics/macrolist.xml:4596
+#: TheBasics/macrolist.xml:4599 TheBasics/macrolist.xml:4602
+#: TheBasics/macrolist.xml:4605 TheBasics/macrolist.xml:4608
+#: TheBasics/macrolist.xml:4611 TheBasics/macrolist.xml:4614
+#: TheBasics/macrolist.xml:4625 TheBasics/macrolist.xml:4628
+#: TheBasics/macrolist.xml:4631 TheBasics/macrolist.xml:4634
+#: TheBasics/macrolist.xml:4637 TheBasics/macrolist.xml:4640
+#: TheBasics/macrolist.xml:4643 TheBasics/macrolist.xml:4646
+#: TheBasics/macrolist.xml:4657 TheBasics/macrolist.xml:4660
+#: TheBasics/macrolist.xml:4663 TheBasics/macrolist.xml:4666
+#: TheBasics/macrolist.xml:4669 TheBasics/macrolist.xml:4672
+#: TheBasics/macrolist.xml:4675 TheBasics/macrolist.xml:4678
+#: TheBasics/macrolist.xml:4727 TheBasics/macrolist.xml:4730
+#: TheBasics/macrolist.xml:4733 TheBasics/macrolist.xml:4736
+#: TheBasics/macrolist.xml:4739 TheBasics/macrolist.xml:4742
+#: TheBasics/macrolist.xml:4745 TheBasics/macrolist.xml:4748
+#: TheBasics/macrolist.xml:4758 TheBasics/macrolist.xml:4761
+#: TheBasics/macrolist.xml:4764 TheBasics/macrolist.xml:4767
+#: TheBasics/macrolist.xml:4770 TheBasics/macrolist.xml:4773
+#: TheBasics/macrolist.xml:4776 TheBasics/macrolist.xml:4779
+#: TheBasics/macrolist.xml:4789 TheBasics/macrolist.xml:4792
+#: TheBasics/macrolist.xml:4795 TheBasics/macrolist.xml:4798
+#: TheBasics/macrolist.xml:4801 TheBasics/macrolist.xml:4804
+#: TheBasics/macrolist.xml:4807 TheBasics/macrolist.xml:4820
+#: TheBasics/macrolist.xml:4823 TheBasics/macrolist.xml:4826
+#: TheBasics/macrolist.xml:4829 TheBasics/macrolist.xml:4832
+#: TheBasics/macrolist.xml:4835 TheBasics/macrolist.xml:4838
+#: TheBasics/macrolist.xml:4841 TheBasics/macrolist.xml:4851
+#: TheBasics/macrolist.xml:4854 TheBasics/macrolist.xml:4857
+#: TheBasics/macrolist.xml:4860 TheBasics/macrolist.xml:4863
+#: TheBasics/macrolist.xml:4866 TheBasics/macrolist.xml:4869
+#: TheBasics/macrolist.xml:4872 TheBasics/macrolist.xml:4882
+#: TheBasics/macrolist.xml:4885 TheBasics/macrolist.xml:4888
+#: TheBasics/macrolist.xml:4891 TheBasics/macrolist.xml:4894
+#: TheBasics/macrolist.xml:4897 TheBasics/macrolist.xml:4900
+#: TheBasics/macrolist.xml:4903 TheBasics/macrolist.xml:4913
+#: TheBasics/macrolist.xml:4916 TheBasics/macrolist.xml:4919
+#: TheBasics/macrolist.xml:4922 TheBasics/macrolist.xml:4925
+#: TheBasics/macrolist.xml:4928 TheBasics/macrolist.xml:4931
+#: TheBasics/macrolist.xml:4934 TheBasics/macrolist.xml:4944
+#: TheBasics/macrolist.xml:4947 TheBasics/macrolist.xml:4950
+#: TheBasics/macrolist.xml:4953 TheBasics/macrolist.xml:4956
+#: TheBasics/macrolist.xml:4959 TheBasics/macrolist.xml:4962
+#: TheBasics/macrolist.xml:4965 TheBasics/macrolist.xml:4975
+#: TheBasics/macrolist.xml:4978 TheBasics/macrolist.xml:4981
+#: TheBasics/macrolist.xml:4984 TheBasics/macrolist.xml:4987
+#: TheBasics/macrolist.xml:4990 TheBasics/macrolist.xml:4993
+#: TheBasics/macrolist.xml:4996 TheBasics/macrolist.xml:5006
+#: TheBasics/macrolist.xml:5009 TheBasics/macrolist.xml:5012
+#: TheBasics/macrolist.xml:5015 TheBasics/macrolist.xml:5018
+#: TheBasics/macrolist.xml:5021 TheBasics/macrolist.xml:5024
+#: TheBasics/macrolist.xml:5027 TheBasics/macrolist.xml:5037
+#: TheBasics/macrolist.xml:5040 TheBasics/macrolist.xml:5043
+#: TheBasics/macrolist.xml:5046 TheBasics/macrolist.xml:5049
+#: TheBasics/macrolist.xml:5052 TheBasics/macrolist.xml:5055
+#: TheBasics/macrolist.xml:5058 TheBasics/macrolist.xml:5068
+#: TheBasics/macrolist.xml:5071 TheBasics/macrolist.xml:5074
+#: TheBasics/macrolist.xml:5077 TheBasics/macrolist.xml:5080
+#: TheBasics/macrolist.xml:5083 TheBasics/macrolist.xml:5086
+#: TheBasics/macrolist.xml:5089 TheBasics/macrolist.xml:5099
+#: TheBasics/macrolist.xml:5102 TheBasics/macrolist.xml:5105
+#: TheBasics/macrolist.xml:5108 TheBasics/macrolist.xml:5111
+#: TheBasics/macrolist.xml:5114 TheBasics/macrolist.xml:5117
+#: TheBasics/macrolist.xml:5120 TheBasics/macrolist.xml:5169
+#: TheBasics/macrolist.xml:5172 TheBasics/macrolist.xml:5175
+#: TheBasics/macrolist.xml:5178 TheBasics/macrolist.xml:5181
+#: TheBasics/macrolist.xml:5184 TheBasics/macrolist.xml:5187
+#: TheBasics/macrolist.xml:5190 TheBasics/macrolist.xml:5200
+#: TheBasics/macrolist.xml:5203 TheBasics/macrolist.xml:5206
+#: TheBasics/macrolist.xml:5209 TheBasics/macrolist.xml:5212
+#: TheBasics/macrolist.xml:5215 TheBasics/macrolist.xml:5218
+#: TheBasics/macrolist.xml:5221 TheBasics/macrolist.xml:5231
+#: TheBasics/macrolist.xml:5234 TheBasics/macrolist.xml:5237
+#: TheBasics/macrolist.xml:5240 TheBasics/macrolist.xml:5243
+#: TheBasics/macrolist.xml:5246 TheBasics/macrolist.xml:5249
+#: TheBasics/macrolist.xml:5252 TheBasics/macrolist.xml:5262
+#: TheBasics/macrolist.xml:5265 TheBasics/macrolist.xml:5268
+#: TheBasics/macrolist.xml:5271 TheBasics/macrolist.xml:5274
+#: TheBasics/macrolist.xml:5277 TheBasics/macrolist.xml:5280
+#: TheBasics/macrolist.xml:5283 TheBasics/macrolist.xml:5293
+#: TheBasics/macrolist.xml:5296 TheBasics/macrolist.xml:5299
+#: TheBasics/macrolist.xml:5302 TheBasics/macrolist.xml:5305
+#: TheBasics/macrolist.xml:5308 TheBasics/macrolist.xml:5311
+#: TheBasics/macrolist.xml:5314 TheBasics/macrolist.xml:5324
+#: TheBasics/macrolist.xml:5327 TheBasics/macrolist.xml:5330
+#: TheBasics/macrolist.xml:5333 TheBasics/macrolist.xml:5336
+#: TheBasics/macrolist.xml:5339 TheBasics/macrolist.xml:5342
+#: TheBasics/macrolist.xml:5345 TheBasics/statetypes.xml:218
+#: TheBasics/statetypes.xml:233 TheBasics/statetypes.xml:248
+#: TheBasics/statetypes.xml:265 TheBasics/statetypes.xml:297
+#: TheBasics/statetypes.xml:326 TheBasics/statetypes.xml:341
 msgid "Yes"
 msgstr "Oui"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
-#: ConfiguringNagios/cgiauth.xml:112
-#: ConfiguringNagios/cgiauth.xml:120
-#: ConfiguringNagios/cgiauth.xml:128
-#: ConfiguringNagios/cgiauth.xml:136
-#: ConfiguringNagios/cgiauth.xml:144
-#: ConfiguringNagios/cgiauth.xml:152
-#: ConfiguringNagios/cgiauth.xml:160
-#: ConfiguringNagios/cgiauth.xml:168
-#: ConfiguringNagios/cgiauth.xml:176
-#: ConfiguringNagios/cgiauth.xml:184
-#: ConfiguringNagios/cgiauth.xml:190
-#: ConfiguringNagios/cgiauth.xml:192
-#: ConfiguringNagios/cgiauth.xml:198
-#: ConfiguringNagios/cgiauth.xml:200
-#: ConfiguringNagios/cgiauth.xml:206
-#: ConfiguringNagios/cgiauth.xml:208
-#: TheBasics/macrolist.xml:71
-#: TheBasics/macrolist.xml:1148
-#: TheBasics/macrolist.xml:1151
-#: TheBasics/macrolist.xml:1154
-#: TheBasics/macrolist.xml:1160
-#: TheBasics/macrolist.xml:1163
-#: TheBasics/macrolist.xml:1166
-#: TheBasics/macrolist.xml:1169
-#: TheBasics/macrolist.xml:1180
-#: TheBasics/macrolist.xml:1183
-#: TheBasics/macrolist.xml:1186
-#: TheBasics/macrolist.xml:1192
-#: TheBasics/macrolist.xml:1195
-#: TheBasics/macrolist.xml:1198
-#: TheBasics/macrolist.xml:1201
-#: TheBasics/macrolist.xml:1212
-#: TheBasics/macrolist.xml:1215
-#: TheBasics/macrolist.xml:1218
-#: TheBasics/macrolist.xml:1224
-#: TheBasics/macrolist.xml:1227
-#: TheBasics/macrolist.xml:1230
-#: TheBasics/macrolist.xml:1233
-#: TheBasics/macrolist.xml:1244
-#: TheBasics/macrolist.xml:1247
-#: TheBasics/macrolist.xml:1250
-#: TheBasics/macrolist.xml:1256
-#: TheBasics/macrolist.xml:1259
-#: TheBasics/macrolist.xml:1262
-#: TheBasics/macrolist.xml:1265
-#: TheBasics/macrolist.xml:1771
-#: TheBasics/macrolist.xml:1774
-#: TheBasics/macrolist.xml:1780
-#: TheBasics/macrolist.xml:1786
-#: TheBasics/macrolist.xml:1802
-#: TheBasics/macrolist.xml:1805
-#: TheBasics/macrolist.xml:1811
-#: TheBasics/macrolist.xml:1817
-#: TheBasics/macrolist.xml:1834
-#: TheBasics/macrolist.xml:1837
-#: TheBasics/macrolist.xml:1843
-#: TheBasics/macrolist.xml:1849
-#: TheBasics/macrolist.xml:1866
-#: TheBasics/macrolist.xml:1869
-#: TheBasics/macrolist.xml:1875
-#: TheBasics/macrolist.xml:1881
-#: TheBasics/macrolist.xml:1897
-#: TheBasics/macrolist.xml:1900
-#: TheBasics/macrolist.xml:1906
-#: TheBasics/macrolist.xml:1912
-#: TheBasics/macrolist.xml:1928
-#: TheBasics/macrolist.xml:1931
-#: TheBasics/macrolist.xml:1937
-#: TheBasics/macrolist.xml:1943
-#: TheBasics/macrolist.xml:1959
-#: TheBasics/macrolist.xml:1962
-#: TheBasics/macrolist.xml:1968
-#: TheBasics/macrolist.xml:1974
-#: TheBasics/macrolist.xml:1990
-#: TheBasics/macrolist.xml:1993
-#: TheBasics/macrolist.xml:1999
-#: TheBasics/macrolist.xml:2005
-#: TheBasics/macrolist.xml:2021
-#: TheBasics/macrolist.xml:2024
-#: TheBasics/macrolist.xml:2030
-#: TheBasics/macrolist.xml:2036
-#: TheBasics/macrolist.xml:2052
-#: TheBasics/macrolist.xml:2055
-#: TheBasics/macrolist.xml:2061
-#: TheBasics/macrolist.xml:2067
-#: TheBasics/macrolist.xml:2083
-#: TheBasics/macrolist.xml:2086
-#: TheBasics/macrolist.xml:2092
-#: TheBasics/macrolist.xml:2098
-#: TheBasics/macrolist.xml:2114
-#: TheBasics/macrolist.xml:2117
-#: TheBasics/macrolist.xml:2123
-#: TheBasics/macrolist.xml:2129
-#: TheBasics/macrolist.xml:2145
-#: TheBasics/macrolist.xml:2148
-#: TheBasics/macrolist.xml:2154
-#: TheBasics/macrolist.xml:2160
-#: TheBasics/macrolist.xml:2176
-#: TheBasics/macrolist.xml:2179
-#: TheBasics/macrolist.xml:2185
-#: TheBasics/macrolist.xml:2191
-#: TheBasics/macrolist.xml:2207
-#: TheBasics/macrolist.xml:2210
-#: TheBasics/macrolist.xml:2216
-#: TheBasics/macrolist.xml:2222
-#: TheBasics/macrolist.xml:2239
-#: TheBasics/macrolist.xml:2242
-#: TheBasics/macrolist.xml:2248
-#: TheBasics/macrolist.xml:2254
-#: TheBasics/macrolist.xml:2270
-#: TheBasics/macrolist.xml:2273
-#: TheBasics/macrolist.xml:2279
-#: TheBasics/macrolist.xml:2285
-#: TheBasics/macrolist.xml:2301
-#: TheBasics/macrolist.xml:2304
-#: TheBasics/macrolist.xml:2310
-#: TheBasics/macrolist.xml:2316
-#: TheBasics/macrolist.xml:2332
-#: TheBasics/macrolist.xml:2335
-#: TheBasics/macrolist.xml:2341
-#: TheBasics/macrolist.xml:2347
-#: TheBasics/macrolist.xml:2363
-#: TheBasics/macrolist.xml:2366
-#: TheBasics/macrolist.xml:2372
-#: TheBasics/macrolist.xml:2378
-#: TheBasics/macrolist.xml:2394
-#: TheBasics/macrolist.xml:2397
-#: TheBasics/macrolist.xml:2403
-#: TheBasics/macrolist.xml:2409
-#: TheBasics/macrolist.xml:2425
-#: TheBasics/macrolist.xml:2428
-#: TheBasics/macrolist.xml:2434
-#: TheBasics/macrolist.xml:2440
-#: TheBasics/macrolist.xml:2456
-#: TheBasics/macrolist.xml:2459
-#: TheBasics/macrolist.xml:2465
-#: TheBasics/macrolist.xml:2471
-#: TheBasics/macrolist.xml:2487
-#: TheBasics/macrolist.xml:2490
-#: TheBasics/macrolist.xml:2496
-#: TheBasics/macrolist.xml:2502
-#: TheBasics/macrolist.xml:2518
-#: TheBasics/macrolist.xml:2521
-#: TheBasics/macrolist.xml:2527
-#: TheBasics/macrolist.xml:2533
-#: TheBasics/macrolist.xml:2549
-#: TheBasics/macrolist.xml:2552
-#: TheBasics/macrolist.xml:2558
-#: TheBasics/macrolist.xml:2564
-#: TheBasics/macrolist.xml:2580
-#: TheBasics/macrolist.xml:2583
-#: TheBasics/macrolist.xml:2589
-#: TheBasics/macrolist.xml:2595
-#: TheBasics/macrolist.xml:2611
-#: TheBasics/macrolist.xml:2614
-#: TheBasics/macrolist.xml:2620
-#: TheBasics/macrolist.xml:2626
-#: TheBasics/macrolist.xml:2643
-#: TheBasics/macrolist.xml:2646
-#: TheBasics/macrolist.xml:2652
-#: TheBasics/macrolist.xml:2658
-#: TheBasics/macrolist.xml:2675
-#: TheBasics/macrolist.xml:2678
-#: TheBasics/macrolist.xml:2684
-#: TheBasics/macrolist.xml:2690
-#: TheBasics/macrolist.xml:2707
-#: TheBasics/macrolist.xml:2710
-#: TheBasics/macrolist.xml:2716
-#: TheBasics/macrolist.xml:2722
-#: TheBasics/macrolist.xml:2738
-#: TheBasics/macrolist.xml:2741
-#: TheBasics/macrolist.xml:2747
-#: TheBasics/macrolist.xml:2753
-#: TheBasics/macrolist.xml:2764
-#: TheBasics/macrolist.xml:2770
-#: TheBasics/macrolist.xml:2773
-#: TheBasics/macrolist.xml:2776
-#: TheBasics/macrolist.xml:2779
-#: TheBasics/macrolist.xml:2782
-#: TheBasics/macrolist.xml:2785
-#: TheBasics/macrolist.xml:2796
-#: TheBasics/macrolist.xml:2802
-#: TheBasics/macrolist.xml:2805
-#: TheBasics/macrolist.xml:2808
-#: TheBasics/macrolist.xml:2811
-#: TheBasics/macrolist.xml:2814
-#: TheBasics/macrolist.xml:2817
-#: TheBasics/macrolist.xml:2828
-#: TheBasics/macrolist.xml:2834
-#: TheBasics/macrolist.xml:2837
-#: TheBasics/macrolist.xml:2840
-#: TheBasics/macrolist.xml:2843
-#: TheBasics/macrolist.xml:2846
-#: TheBasics/macrolist.xml:2849
-#: TheBasics/macrolist.xml:2860
-#: TheBasics/macrolist.xml:2866
-#: TheBasics/macrolist.xml:2869
-#: TheBasics/macrolist.xml:2872
-#: TheBasics/macrolist.xml:2875
-#: TheBasics/macrolist.xml:2878
-#: TheBasics/macrolist.xml:2881
-#: TheBasics/macrolist.xml:2897
-#: TheBasics/macrolist.xml:2900
-#: TheBasics/macrolist.xml:2906
-#: TheBasics/macrolist.xml:2912
-#: TheBasics/macrolist.xml:2928
-#: TheBasics/macrolist.xml:2931
-#: TheBasics/macrolist.xml:2937
-#: TheBasics/macrolist.xml:2943
-#: TheBasics/macrolist.xml:2959
-#: TheBasics/macrolist.xml:2962
-#: TheBasics/macrolist.xml:2968
-#: TheBasics/macrolist.xml:2974
-#: TheBasics/macrolist.xml:3226
-#: TheBasics/macrolist.xml:3232
-#: TheBasics/macrolist.xml:3238
-#: TheBasics/macrolist.xml:3241
-#: TheBasics/macrolist.xml:3244
-#: TheBasics/macrolist.xml:3247
-#: TheBasics/macrolist.xml:3257
-#: TheBasics/macrolist.xml:3263
-#: TheBasics/macrolist.xml:3269
-#: TheBasics/macrolist.xml:3272
-#: TheBasics/macrolist.xml:3275
-#: TheBasics/macrolist.xml:3278
-#: TheBasics/macrolist.xml:3288
-#: TheBasics/macrolist.xml:3294
-#: TheBasics/macrolist.xml:3300
-#: TheBasics/macrolist.xml:3303
-#: TheBasics/macrolist.xml:3306
-#: TheBasics/macrolist.xml:3309
-#: TheBasics/macrolist.xml:3319
-#: TheBasics/macrolist.xml:3325
-#: TheBasics/macrolist.xml:3331
-#: TheBasics/macrolist.xml:3334
-#: TheBasics/macrolist.xml:3337
-#: TheBasics/macrolist.xml:3340
-#: TheBasics/macrolist.xml:3350
-#: TheBasics/macrolist.xml:3356
-#: TheBasics/macrolist.xml:3362
-#: TheBasics/macrolist.xml:3365
-#: TheBasics/macrolist.xml:3368
-#: TheBasics/macrolist.xml:3371
-#: TheBasics/macrolist.xml:4089
-#: TheBasics/macrolist.xml:4095
-#: TheBasics/macrolist.xml:4101
-#: TheBasics/macrolist.xml:4104
-#: TheBasics/macrolist.xml:4107
-#: TheBasics/macrolist.xml:4110
-#: TheBasics/macrolist.xml:4120
-#: TheBasics/macrolist.xml:4126
-#: TheBasics/macrolist.xml:4132
-#: TheBasics/macrolist.xml:4135
-#: TheBasics/macrolist.xml:4138
-#: TheBasics/macrolist.xml:4141
-#: TheBasics/macrolist.xml:4151
-#: TheBasics/macrolist.xml:4157
-#: TheBasics/macrolist.xml:4163
-#: TheBasics/macrolist.xml:4166
-#: TheBasics/macrolist.xml:4169
-#: TheBasics/macrolist.xml:4172
-#: TheBasics/macrolist.xml:4182
-#: TheBasics/macrolist.xml:4188
-#: TheBasics/macrolist.xml:4194
-#: TheBasics/macrolist.xml:4197
-#: TheBasics/macrolist.xml:4200
-#: TheBasics/macrolist.xml:4203
-#: TheBasics/macrolist.xml:4213
-#: TheBasics/macrolist.xml:4219
-#: TheBasics/macrolist.xml:4225
-#: TheBasics/macrolist.xml:4228
-#: TheBasics/macrolist.xml:4231
-#: TheBasics/macrolist.xml:4234
-#: TheBasics/macrolist.xml:4244
-#: TheBasics/macrolist.xml:4250
-#: TheBasics/macrolist.xml:4256
-#: TheBasics/macrolist.xml:4259
-#: TheBasics/macrolist.xml:4262
-#: TheBasics/macrolist.xml:4265
-#: TheBasics/macrolist.xml:4275
-#: TheBasics/macrolist.xml:4281
-#: TheBasics/macrolist.xml:4287
-#: TheBasics/macrolist.xml:4290
-#: TheBasics/macrolist.xml:4293
-#: TheBasics/macrolist.xml:4296
-#: TheBasics/macrolist.xml:4306
-#: TheBasics/macrolist.xml:4312
-#: TheBasics/macrolist.xml:4318
-#: TheBasics/macrolist.xml:4321
-#: TheBasics/macrolist.xml:4324
-#: TheBasics/macrolist.xml:4327
-#: TheBasics/macrolist.xml:4337
-#: TheBasics/macrolist.xml:4343
-#: TheBasics/macrolist.xml:4349
-#: TheBasics/macrolist.xml:4352
-#: TheBasics/macrolist.xml:4355
-#: TheBasics/macrolist.xml:4358
-#: TheBasics/macrolist.xml:4368
-#: TheBasics/macrolist.xml:4374
-#: TheBasics/macrolist.xml:4380
-#: TheBasics/macrolist.xml:4383
-#: TheBasics/macrolist.xml:4386
-#: TheBasics/macrolist.xml:4389
-#: TheBasics/macrolist.xml:4399
-#: TheBasics/macrolist.xml:4405
-#: TheBasics/macrolist.xml:4411
-#: TheBasics/macrolist.xml:4414
-#: TheBasics/macrolist.xml:4417
-#: TheBasics/macrolist.xml:4420
-#: TheBasics/statetypes.xml:204
-#: TheBasics/statetypes.xml:281
-#: TheBasics/statetypes.xml:312
+#: ConfiguringNagios/cgiauth.xml:112 ConfiguringNagios/cgiauth.xml:120
+#: ConfiguringNagios/cgiauth.xml:128 ConfiguringNagios/cgiauth.xml:136
+#: ConfiguringNagios/cgiauth.xml:144 ConfiguringNagios/cgiauth.xml:152
+#: ConfiguringNagios/cgiauth.xml:160 ConfiguringNagios/cgiauth.xml:168
+#: ConfiguringNagios/cgiauth.xml:176 ConfiguringNagios/cgiauth.xml:184
+#: ConfiguringNagios/cgiauth.xml:190 ConfiguringNagios/cgiauth.xml:192
+#: ConfiguringNagios/cgiauth.xml:198 ConfiguringNagios/cgiauth.xml:200
+#: ConfiguringNagios/cgiauth.xml:206 ConfiguringNagios/cgiauth.xml:208
+#: TheBasics/macrolist.xml:71 TheBasics/macrolist.xml:1148
+#: TheBasics/macrolist.xml:1151 TheBasics/macrolist.xml:1154
+#: TheBasics/macrolist.xml:1160 TheBasics/macrolist.xml:1163
+#: TheBasics/macrolist.xml:1166 TheBasics/macrolist.xml:1169
+#: TheBasics/macrolist.xml:1180 TheBasics/macrolist.xml:1183
+#: TheBasics/macrolist.xml:1186 TheBasics/macrolist.xml:1192
+#: TheBasics/macrolist.xml:1195 TheBasics/macrolist.xml:1198
+#: TheBasics/macrolist.xml:1201 TheBasics/macrolist.xml:1212
+#: TheBasics/macrolist.xml:1215 TheBasics/macrolist.xml:1218
+#: TheBasics/macrolist.xml:1224 TheBasics/macrolist.xml:1227
+#: TheBasics/macrolist.xml:1230 TheBasics/macrolist.xml:1233
+#: TheBasics/macrolist.xml:1244 TheBasics/macrolist.xml:1247
+#: TheBasics/macrolist.xml:1250 TheBasics/macrolist.xml:1256
+#: TheBasics/macrolist.xml:1259 TheBasics/macrolist.xml:1262
+#: TheBasics/macrolist.xml:1265 TheBasics/macrolist.xml:1771
+#: TheBasics/macrolist.xml:1774 TheBasics/macrolist.xml:1780
+#: TheBasics/macrolist.xml:1786 TheBasics/macrolist.xml:1802
+#: TheBasics/macrolist.xml:1805 TheBasics/macrolist.xml:1811
+#: TheBasics/macrolist.xml:1817 TheBasics/macrolist.xml:1834
+#: TheBasics/macrolist.xml:1837 TheBasics/macrolist.xml:1843
+#: TheBasics/macrolist.xml:1849 TheBasics/macrolist.xml:1866
+#: TheBasics/macrolist.xml:1869 TheBasics/macrolist.xml:1875
+#: TheBasics/macrolist.xml:1881 TheBasics/macrolist.xml:1897
+#: TheBasics/macrolist.xml:1900 TheBasics/macrolist.xml:1906
+#: TheBasics/macrolist.xml:1912 TheBasics/macrolist.xml:1928
+#: TheBasics/macrolist.xml:1931 TheBasics/macrolist.xml:1937
+#: TheBasics/macrolist.xml:1943 TheBasics/macrolist.xml:1959
+#: TheBasics/macrolist.xml:1962 TheBasics/macrolist.xml:1968
+#: TheBasics/macrolist.xml:1974 TheBasics/macrolist.xml:1990
+#: TheBasics/macrolist.xml:1993 TheBasics/macrolist.xml:1999
+#: TheBasics/macrolist.xml:2005 TheBasics/macrolist.xml:2021
+#: TheBasics/macrolist.xml:2024 TheBasics/macrolist.xml:2030
+#: TheBasics/macrolist.xml:2036 TheBasics/macrolist.xml:2052
+#: TheBasics/macrolist.xml:2055 TheBasics/macrolist.xml:2061
+#: TheBasics/macrolist.xml:2067 TheBasics/macrolist.xml:2083
+#: TheBasics/macrolist.xml:2086 TheBasics/macrolist.xml:2092
+#: TheBasics/macrolist.xml:2098 TheBasics/macrolist.xml:2114
+#: TheBasics/macrolist.xml:2117 TheBasics/macrolist.xml:2123
+#: TheBasics/macrolist.xml:2129 TheBasics/macrolist.xml:2145
+#: TheBasics/macrolist.xml:2148 TheBasics/macrolist.xml:2154
+#: TheBasics/macrolist.xml:2160 TheBasics/macrolist.xml:2176
+#: TheBasics/macrolist.xml:2179 TheBasics/macrolist.xml:2185
+#: TheBasics/macrolist.xml:2191 TheBasics/macrolist.xml:2207
+#: TheBasics/macrolist.xml:2210 TheBasics/macrolist.xml:2216
+#: TheBasics/macrolist.xml:2222 TheBasics/macrolist.xml:2239
+#: TheBasics/macrolist.xml:2242 TheBasics/macrolist.xml:2248
+#: TheBasics/macrolist.xml:2254 TheBasics/macrolist.xml:2270
+#: TheBasics/macrolist.xml:2273 TheBasics/macrolist.xml:2279
+#: TheBasics/macrolist.xml:2285 TheBasics/macrolist.xml:2301
+#: TheBasics/macrolist.xml:2304 TheBasics/macrolist.xml:2310
+#: TheBasics/macrolist.xml:2316 TheBasics/macrolist.xml:2332
+#: TheBasics/macrolist.xml:2335 TheBasics/macrolist.xml:2341
+#: TheBasics/macrolist.xml:2347 TheBasics/macrolist.xml:2363
+#: TheBasics/macrolist.xml:2366 TheBasics/macrolist.xml:2372
+#: TheBasics/macrolist.xml:2378 TheBasics/macrolist.xml:2394
+#: TheBasics/macrolist.xml:2397 TheBasics/macrolist.xml:2403
+#: TheBasics/macrolist.xml:2409 TheBasics/macrolist.xml:2425
+#: TheBasics/macrolist.xml:2428 TheBasics/macrolist.xml:2434
+#: TheBasics/macrolist.xml:2440 TheBasics/macrolist.xml:2456
+#: TheBasics/macrolist.xml:2459 TheBasics/macrolist.xml:2465
+#: TheBasics/macrolist.xml:2471 TheBasics/macrolist.xml:2487
+#: TheBasics/macrolist.xml:2490 TheBasics/macrolist.xml:2496
+#: TheBasics/macrolist.xml:2502 TheBasics/macrolist.xml:2518
+#: TheBasics/macrolist.xml:2521 TheBasics/macrolist.xml:2527
+#: TheBasics/macrolist.xml:2533 TheBasics/macrolist.xml:2549
+#: TheBasics/macrolist.xml:2552 TheBasics/macrolist.xml:2558
+#: TheBasics/macrolist.xml:2564 TheBasics/macrolist.xml:2580
+#: TheBasics/macrolist.xml:2583 TheBasics/macrolist.xml:2589
+#: TheBasics/macrolist.xml:2595 TheBasics/macrolist.xml:2611
+#: TheBasics/macrolist.xml:2614 TheBasics/macrolist.xml:2620
+#: TheBasics/macrolist.xml:2626 TheBasics/macrolist.xml:2643
+#: TheBasics/macrolist.xml:2646 TheBasics/macrolist.xml:2652
+#: TheBasics/macrolist.xml:2658 TheBasics/macrolist.xml:2675
+#: TheBasics/macrolist.xml:2678 TheBasics/macrolist.xml:2684
+#: TheBasics/macrolist.xml:2690 TheBasics/macrolist.xml:2707
+#: TheBasics/macrolist.xml:2710 TheBasics/macrolist.xml:2716
+#: TheBasics/macrolist.xml:2722 TheBasics/macrolist.xml:2738
+#: TheBasics/macrolist.xml:2741 TheBasics/macrolist.xml:2747
+#: TheBasics/macrolist.xml:2753 TheBasics/macrolist.xml:2764
+#: TheBasics/macrolist.xml:2770 TheBasics/macrolist.xml:2773
+#: TheBasics/macrolist.xml:2776 TheBasics/macrolist.xml:2779
+#: TheBasics/macrolist.xml:2782 TheBasics/macrolist.xml:2785
+#: TheBasics/macrolist.xml:2796 TheBasics/macrolist.xml:2802
+#: TheBasics/macrolist.xml:2805 TheBasics/macrolist.xml:2808
+#: TheBasics/macrolist.xml:2811 TheBasics/macrolist.xml:2814
+#: TheBasics/macrolist.xml:2817 TheBasics/macrolist.xml:2828
+#: TheBasics/macrolist.xml:2834 TheBasics/macrolist.xml:2837
+#: TheBasics/macrolist.xml:2840 TheBasics/macrolist.xml:2843
+#: TheBasics/macrolist.xml:2846 TheBasics/macrolist.xml:2849
+#: TheBasics/macrolist.xml:2860 TheBasics/macrolist.xml:2866
+#: TheBasics/macrolist.xml:2869 TheBasics/macrolist.xml:2872
+#: TheBasics/macrolist.xml:2875 TheBasics/macrolist.xml:2878
+#: TheBasics/macrolist.xml:2881 TheBasics/macrolist.xml:2897
+#: TheBasics/macrolist.xml:2900 TheBasics/macrolist.xml:2906
+#: TheBasics/macrolist.xml:2912 TheBasics/macrolist.xml:2928
+#: TheBasics/macrolist.xml:2931 TheBasics/macrolist.xml:2937
+#: TheBasics/macrolist.xml:2943 TheBasics/macrolist.xml:2959
+#: TheBasics/macrolist.xml:2962 TheBasics/macrolist.xml:2968
+#: TheBasics/macrolist.xml:2974 TheBasics/macrolist.xml:3226
+#: TheBasics/macrolist.xml:3232 TheBasics/macrolist.xml:3238
+#: TheBasics/macrolist.xml:3241 TheBasics/macrolist.xml:3244
+#: TheBasics/macrolist.xml:3247 TheBasics/macrolist.xml:3257
+#: TheBasics/macrolist.xml:3263 TheBasics/macrolist.xml:3269
+#: TheBasics/macrolist.xml:3272 TheBasics/macrolist.xml:3275
+#: TheBasics/macrolist.xml:3278 TheBasics/macrolist.xml:3288
+#: TheBasics/macrolist.xml:3294 TheBasics/macrolist.xml:3300
+#: TheBasics/macrolist.xml:3303 TheBasics/macrolist.xml:3306
+#: TheBasics/macrolist.xml:3309 TheBasics/macrolist.xml:3319
+#: TheBasics/macrolist.xml:3325 TheBasics/macrolist.xml:3331
+#: TheBasics/macrolist.xml:3334 TheBasics/macrolist.xml:3337
+#: TheBasics/macrolist.xml:3340 TheBasics/macrolist.xml:3350
+#: TheBasics/macrolist.xml:3356 TheBasics/macrolist.xml:3362
+#: TheBasics/macrolist.xml:3365 TheBasics/macrolist.xml:3368
+#: TheBasics/macrolist.xml:3371 TheBasics/macrolist.xml:4089
+#: TheBasics/macrolist.xml:4095 TheBasics/macrolist.xml:4101
+#: TheBasics/macrolist.xml:4104 TheBasics/macrolist.xml:4107
+#: TheBasics/macrolist.xml:4110 TheBasics/macrolist.xml:4120
+#: TheBasics/macrolist.xml:4126 TheBasics/macrolist.xml:4132
+#: TheBasics/macrolist.xml:4135 TheBasics/macrolist.xml:4138
+#: TheBasics/macrolist.xml:4141 TheBasics/macrolist.xml:4151
+#: TheBasics/macrolist.xml:4157 TheBasics/macrolist.xml:4163
+#: TheBasics/macrolist.xml:4166 TheBasics/macrolist.xml:4169
+#: TheBasics/macrolist.xml:4172 TheBasics/macrolist.xml:4182
+#: TheBasics/macrolist.xml:4188 TheBasics/macrolist.xml:4194
+#: TheBasics/macrolist.xml:4197 TheBasics/macrolist.xml:4200
+#: TheBasics/macrolist.xml:4203 TheBasics/macrolist.xml:4213
+#: TheBasics/macrolist.xml:4219 TheBasics/macrolist.xml:4225
+#: TheBasics/macrolist.xml:4228 TheBasics/macrolist.xml:4231
+#: TheBasics/macrolist.xml:4234 TheBasics/macrolist.xml:4244
+#: TheBasics/macrolist.xml:4250 TheBasics/macrolist.xml:4256
+#: TheBasics/macrolist.xml:4259 TheBasics/macrolist.xml:4262
+#: TheBasics/macrolist.xml:4265 TheBasics/macrolist.xml:4275
+#: TheBasics/macrolist.xml:4281 TheBasics/macrolist.xml:4287
+#: TheBasics/macrolist.xml:4290 TheBasics/macrolist.xml:4293
+#: TheBasics/macrolist.xml:4296 TheBasics/macrolist.xml:4306
+#: TheBasics/macrolist.xml:4312 TheBasics/macrolist.xml:4318
+#: TheBasics/macrolist.xml:4321 TheBasics/macrolist.xml:4324
+#: TheBasics/macrolist.xml:4327 TheBasics/macrolist.xml:4337
+#: TheBasics/macrolist.xml:4343 TheBasics/macrolist.xml:4349
+#: TheBasics/macrolist.xml:4352 TheBasics/macrolist.xml:4355
+#: TheBasics/macrolist.xml:4358 TheBasics/macrolist.xml:4368
+#: TheBasics/macrolist.xml:4374 TheBasics/macrolist.xml:4380
+#: TheBasics/macrolist.xml:4383 TheBasics/macrolist.xml:4386
+#: TheBasics/macrolist.xml:4389 TheBasics/macrolist.xml:4399
+#: TheBasics/macrolist.xml:4405 TheBasics/macrolist.xml:4411
+#: TheBasics/macrolist.xml:4414 TheBasics/macrolist.xml:4417
+#: TheBasics/macrolist.xml:4420 TheBasics/statetypes.xml:204
+#: TheBasics/statetypes.xml:281 TheBasics/statetypes.xml:312
 #: TheBasics/statetypes.xml:358
 msgid "No"
 msgstr "Non"
@@ -1412,20 +873,19 @@ msgid "Host History"
 msgstr "Historique des hôtes"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: ConfiguringNagios/cgiauth.xml:132
-#: TheBasics/macrolist.xml:116
-#: TheBasics/macrolist.xml:1535
-#: TheBasics/macrolist.xml:1736
-#: TheBasics/macrolist.xml:2996
-#: TheBasics/macrolist.xml:3197
-#: TheBasics/macrolist.xml:3393
-#: TheBasics/macrolist.xml:3498
-#: TheBasics/macrolist.xml:4062
-#: TheBasics/macrolist.xml:4442
-#: TheBasics/macrolist.xml:4700
-#: TheBasics/macrolist.xml:5142
+#: ConfiguringNagios/cgiauth.xml:132 TheBasics/macrolist.xml:116
+#: TheBasics/macrolist.xml:1535 TheBasics/macrolist.xml:1736
+#: TheBasics/macrolist.xml:2996 TheBasics/macrolist.xml:3197
+#: TheBasics/macrolist.xml:3393 TheBasics/macrolist.xml:3498
+#: TheBasics/macrolist.xml:4062 TheBasics/macrolist.xml:4442
+#: TheBasics/macrolist.xml:4700 TheBasics/macrolist.xml:5142
+#, fuzzy
 msgid "Host Notifications"
-msgstr "Notifications des hôtes"
+msgstr ""
+"#-#-#-#-#  macrolist.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Notifications d'hôte\n"
+"#-#-#-#-#  cgiauth.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Notifications des hôtes"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/cgiauth.xml:140
@@ -1448,20 +908,19 @@ msgid "Service History"
 msgstr "Historique des services"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: ConfiguringNagios/cgiauth.xml:172
-#: TheBasics/macrolist.xml:110
-#: TheBasics/macrolist.xml:1529
-#: TheBasics/macrolist.xml:1730
-#: TheBasics/macrolist.xml:2990
-#: TheBasics/macrolist.xml:3191
-#: TheBasics/macrolist.xml:3387
-#: TheBasics/macrolist.xml:3492
-#: TheBasics/macrolist.xml:4056
-#: TheBasics/macrolist.xml:4436
-#: TheBasics/macrolist.xml:4694
-#: TheBasics/macrolist.xml:5136
+#: ConfiguringNagios/cgiauth.xml:172 TheBasics/macrolist.xml:110
+#: TheBasics/macrolist.xml:1529 TheBasics/macrolist.xml:1730
+#: TheBasics/macrolist.xml:2990 TheBasics/macrolist.xml:3191
+#: TheBasics/macrolist.xml:3387 TheBasics/macrolist.xml:3492
+#: TheBasics/macrolist.xml:4056 TheBasics/macrolist.xml:4436
+#: TheBasics/macrolist.xml:4694 TheBasics/macrolist.xml:5136
+#, fuzzy
 msgid "Service Notifications"
-msgstr "Notifications des services"
+msgstr ""
+"#-#-#-#-#  macrolist.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Notifications de service\n"
+"#-#-#-#-#  cgiauth.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Notifications des services"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/cgiauth.xml:180
@@ -1485,8 +944,14 @@ msgstr "Commandes système/processus"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:214
-msgid "Authenticated contacts<link linkend=\"configuringnagios-cgiauth-definitions\">*</link> are granted the following permissions for each service for which they are contacts (but not for services for which they are not contacts)..."
-msgstr "Les Contacts authentifiés<link linkend=\"configuringnagios-cgiauth-definitions\">*</link> ont les droits suivants sur chaque service dont ils sont un contact (mais pas sur ceux dont ils ne sont pas un contact)... "
+msgid ""
+"Authenticated contacts<link linkend=\"configuringnagios-cgiauth-definitions"
+"\">*</link> are granted the following permissions for each service for which "
+"they are contacts (but not for services for which they are not contacts)..."
+msgstr ""
+"Les Contacts authentifiés<link linkend=\"configuringnagios-cgiauth-"
+"definitions\">*</link> ont les droits suivants sur chaque service dont ils "
+"sont un contact (mais pas sur ceux dont ils ne sont pas un contact)... "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:221
@@ -1510,8 +975,14 @@ msgstr "Droit de passer des commandes à ce service"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:238
-msgid "Authenticated contacts<link linkend=\"configuringnagios-cgiauth-definitions\">*</link> are granted the following permissions for each host for which they are contacts (but not for hosts for which they are not contacts)..."
-msgstr "Les Contacts authentifiés<link linkend=\"configuringnagios-cgiauth-definitions\">*</link> ont les droits suivants sur chaque hôte dont ils sont un contact (mais pas sur ceux dont ils ne sont pas un contact)..."
+msgid ""
+"Authenticated contacts<link linkend=\"configuringnagios-cgiauth-definitions"
+"\">*</link> are granted the following permissions for each host for which "
+"they are contacts (but not for hosts for which they are not contacts)..."
+msgstr ""
+"Les Contacts authentifiés<link linkend=\"configuringnagios-cgiauth-"
+"definitions\">*</link> ont les droits suivants sur chaque hôte dont ils sont "
+"un contact (mais pas sur ceux dont ils ne sont pas un contact)..."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:245
@@ -1540,13 +1011,18 @@ msgstr "Droit de voir l'état de tous les services de cet hôte"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:267
-msgid "Authorization to view configuration information for all services on the host"
+msgid ""
+"Authorization to view configuration information for all services on the host"
 msgstr "Droit de voir la configuration de tous les services de cet hôte"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:272
-msgid "Authorization to view history and notification information for all services on the host"
-msgstr "Droit de voir l'historique et les notifications de tous les services de cet hôte"
+msgid ""
+"Authorization to view history and notification information for all services "
+"on the host"
+msgstr ""
+"Droit de voir l'historique et les notifications de tous les services de cet "
+"hôte"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:277
@@ -1555,106 +1031,227 @@ msgstr "Droit de passer des commandes à tous les services de cet hôte"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:282
-msgid "It is important to note that by default no one is authorized for the following..."
+msgid ""
+"It is important to note that by default no one is authorized for the "
+"following..."
 msgstr "Il est important de noter que par défaut, personne n'a le droit de..."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:287
-msgid "Viewing the raw log file via the <link linkend=\"thebasics-cgis-showlog_cgi\">showlog CGI</link>"
-msgstr "Voir le fichier journal brut via la <link linkend=\"thebasics-cgis-showlog_cgi\">CGI</link> d'affichage du journal"
+msgid ""
+"Viewing the raw log file via the <link linkend=\"thebasics-cgis-showlog_cgi"
+"\">showlog CGI</link>"
+msgstr ""
+"Voir le fichier journal brut via la <link linkend=\"thebasics-cgis-"
+"showlog_cgi\">CGI</link> d'affichage du journal"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:292
-msgid "Viewing Nagios process information via the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information CGI</link>"
-msgstr "Voir les informations sur le processus de Nagios via le <link linkend=\"thebasics-cgis-extinfo_cgi\">CGI d'informations complémentaires</link>"
+msgid ""
+"Viewing Nagios process information via the <link linkend=\"thebasics-cgis-"
+"extinfo_cgi\">extended information CGI</link>"
+msgstr ""
+"Voir les informations sur le processus de Nagios via le <link linkend="
+"\"thebasics-cgis-extinfo_cgi\">CGI d'informations complémentaires</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:298
-msgid "Issuing Nagios process commands via the <link linkend=\"thebasics-cgis-cmd_cgi\">command CGI</link>"
-msgstr "Passer des commandes à Nagios via la <link linkend=\"thebasics-cgis-cmd_cgi\">CGI de commande</link>"
+msgid ""
+"Issuing Nagios process commands via the <link linkend=\"thebasics-cgis-"
+"cmd_cgi\">command CGI</link>"
+msgstr ""
+"Passer des commandes à Nagios via la <link linkend=\"thebasics-cgis-cmd_cgi"
+"\">CGI de commande</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:303
-msgid "Viewing host group, contact, contact group, time period, and command definitions via the <link linkend=\"thebasics-cgis-config_cgi\">configuration CGI</link>"
-msgstr "Voir les définitions des groupes d'hôtes, contacts, groupes de contacts, périodes, et commandes via la <link linkend=\"thebasics-cgis-config_cgi\">CGI de configuration</link>"
+msgid ""
+"Viewing host group, contact, contact group, time period, and command "
+"definitions via the <link linkend=\"thebasics-cgis-config_cgi"
+"\">configuration CGI</link>"
+msgstr ""
+"Voir les définitions des groupes d'hôtes, contacts, groupes de contacts, "
+"périodes, et commandes via la <link linkend=\"thebasics-cgis-config_cgi"
+"\">CGI de configuration</link>"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:309
-msgid "You will undoubtably want to access this information, so you'll have to assign additional rights for yourself (and possibly other users) as described below..."
-msgstr "Vous aurez sans doute besoin de ces informations, c'est pourquoi vous devrez vous donner des droits d'accès supplémentaires (et éventuellement à d'autres utilisateurs) comme décrit ci-dessous..."
+msgid ""
+"You will undoubtably want to access this information, so you'll have to "
+"assign additional rights for yourself (and possibly other users) as "
+"described below..."
+msgstr ""
+"Vous aurez sans doute besoin de ces informations, c'est pourquoi vous devrez "
+"vous donner des droits d'accès supplémentaires (et éventuellement à d'autres "
+"utilisateurs) comme décrit ci-dessous..."
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/cgiauth.xml:315
-msgid "<anchor id=\"configuringnagios-cgiauth-additional_rights\" />Granting Additional Permissions To CGI Information"
-msgstr "<anchor id=\"configuringnagios-cgiauth-additional_rights\" />Donner des droits d'accès supplémentaires aux informations des CGI"
+msgid ""
+"<anchor id=\"configuringnagios-cgiauth-additional_rights\" />Granting "
+"Additional Permissions To CGI Information"
+msgstr ""
+"<anchor id=\"configuringnagios-cgiauth-additional_rights\" />Donner des "
+"droits d'accès supplémentaires aux informations des CGI"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:318
-msgid "You can grant authenticated contacts or other authenticated users permission to additional information in the CGIs by adding them to various authorization variables in the <link linkend=\"configuringnagios-configcgi\">CGI configuration file</link>. I realize that the available options don't allow for getting really specific about particular permissions, but its better than nothing.."
-msgstr "Vous pouvez donner aux contacts authentifiés et autres utilisateurs authentifiés des droits d'accès à d'autres informations des CGI en les ajoutant à diverses variables d'autorisation dans le <link linkend=\"configuringnagios-configcgi\">fichier de configuration des CGI</link>. Je m'aperçois que ces variables ne permettent pas d'être très précis dans les autorisations, mais c'est mieux que rien. "
+msgid ""
+"You can grant authenticated contacts or other authenticated users permission "
+"to additional information in the CGIs by adding them to various "
+"authorization variables in the <link linkend=\"configuringnagios-configcgi"
+"\">CGI configuration file</link>. I realize that the available options don't "
+"allow for getting really specific about particular permissions, but its "
+"better than nothing.."
+msgstr ""
+"Vous pouvez donner aux contacts authentifiés et autres utilisateurs "
+"authentifiés des droits d'accès à d'autres informations des CGI en les "
+"ajoutant à diverses variables d'autorisation dans le <link linkend="
+"\"configuringnagios-configcgi\">fichier de configuration des CGI</link>. Je "
+"m'aperçois que ces variables ne permettent pas d'être très précis dans les "
+"autorisations, mais c'est mieux que rien. "
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:325
-msgid "Additional authorization can be given to users by adding them to the following variables in the CGI configuration file..."
-msgstr "Des droits supplémentaires peuvent être accordés aux utilisateurs en les ajoutant aux variables suivantes..."
+msgid ""
+"Additional authorization can be given to users by adding them to the "
+"following variables in the CGI configuration file..."
+msgstr ""
+"Des droits supplémentaires peuvent être accordés aux utilisateurs en les "
+"ajoutant aux variables suivantes..."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:330
-msgid "<link linkend=\"configuringnagios-configcgi-authorized_for_system_information\">authorized_for_system_information</link>"
-msgstr "<link linkend=\"configuringnagios-configcgi-authorized_for_system_information\">autorisé pour les informations système</link>"
+msgid ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_system_information"
+"\">authorized_for_system_information</link>"
+msgstr ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_system_information"
+"\">autorisé pour les informations système</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:335
-msgid "<link linkend=\"configuringnagios-configcgi-authorized_for_system_commands\">authorized_for_system_commands</link>"
-msgstr "<link linkend=\"configuringnagios-configcgi-authorized_for_system_commands\">autorisé pour les commandes système</link>"
+msgid ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_system_commands"
+"\">authorized_for_system_commands</link>"
+msgstr ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_system_commands"
+"\">autorisé pour les commandes système</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:340
-msgid "<link linkend=\"configuringnagios-configcgi-authorized_for_configuration_information\">authorized_for_configuration_information</link>"
-msgstr "<link linkend=\"configuringnagios-configcgi-authorized_for_configuration_information\">autorisé pour les informations de configuration</link>"
+msgid ""
+"<link linkend=\"configuringnagios-configcgi-"
+"authorized_for_configuration_information"
+"\">authorized_for_configuration_information</link>"
+msgstr ""
+"<link linkend=\"configuringnagios-configcgi-"
+"authorized_for_configuration_information\">autorisé pour les informations de "
+"configuration</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:345
-msgid "<link linkend=\"configuringnagios-configcgi-authorized_for_all_hosts\">authorized_for_all_hosts</link>"
-msgstr "<link linkend=\"configuringnagios-configcgi-authorized_for_all_hosts\">autorisé pour tous les hôtes</link>"
+msgid ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_all_hosts"
+"\">authorized_for_all_hosts</link>"
+msgstr ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_all_hosts"
+"\">autorisé pour tous les hôtes</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:350
-msgid "<link linkend=\"configuringnagios-configcgi-authorized_for_all_host_commands\">authorized_for_all_host_commands</link>"
-msgstr "<link linkend=\"configuringnagios-configcgi-authorized_for_all_host_commands\">autorisé pour toutes les commandes aux hôtes</link>"
+msgid ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_all_host_commands"
+"\">authorized_for_all_host_commands</link>"
+msgstr ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_all_host_commands"
+"\">autorisé pour toutes les commandes aux hôtes</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:355
-msgid "<link linkend=\"configuringnagios-configcgi-authorized_for_all_services\">authorized_for_all_services</link>"
-msgstr "<link linkend=\"configuringnagios-configcgi-authorized_for_all_services\">autorisé pour tous les services</link>"
+msgid ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_all_services"
+"\">authorized_for_all_services</link>"
+msgstr ""
+"<link linkend=\"configuringnagios-configcgi-authorized_for_all_services"
+"\">autorisé pour tous les services</link>"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/cgiauth.xml:360
-msgid "<link linkend=\"configuringnagios-configcgi-authorized_for_all_service_commands\">authorized_for_all_service_commands</link>"
-msgstr "<link linkend=\"configuringnagios-configcgi-authorized_for_all_service_commands\">autorisé pour toutes les commandes aux services</link>"
+msgid ""
+"<link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_service_commands\">authorized_for_all_service_commands</"
+"link>"
+msgstr ""
+"<link linkend=\"configuringnagios-configcgi-"
+"authorized_for_all_service_commands\">autorisé pour toutes les commandes aux "
+"services</link>"
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/cgiauth.xml:367
-msgid "<anchor id=\"configuringnagios-cgiauth-cgi_auth_requirements\" />CGI Authorization Requirements"
-msgstr "<anchor id=\"configuringnagios-cgiauth-cgi_auth_requirements\" />Autorisations requises par les CGI"
+msgid ""
+"<anchor id=\"configuringnagios-cgiauth-cgi_auth_requirements\" />CGI "
+"Authorization Requirements"
+msgstr ""
+"<anchor id=\"configuringnagios-cgiauth-cgi_auth_requirements\" /"
+">Autorisations requises par les CGI"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:370
-msgid "If you are confused about the authorization needed to access various information in the CGIs, read the Authorization Requirements section for each CGI as described <link linkend=\"thebasics-cgis\">here</link>."
-msgstr "Si les droits d'accès aux diverses informations des CGI ne vous paraissent pas clairs, lisez la section Autorisations requises de chaque CGI qui se trouve <link linkend=\"thebasics-cgis\">ici</link>."
+msgid ""
+"If you are confused about the authorization needed to access various "
+"information in the CGIs, read the Authorization Requirements section for "
+"each CGI as described <link linkend=\"thebasics-cgis\">here</link>."
+msgstr ""
+"Si les droits d'accès aux diverses informations des CGI ne vous paraissent "
+"pas clairs, lisez la section Autorisations requises de chaque CGI qui se "
+"trouve <link linkend=\"thebasics-cgis\">ici</link>."
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/cgiauth.xml:376
-msgid "<anchor id=\"configuringnagios-cgiauth-secure_web_servers\" />Authentication On Secured Web Servers"
-msgstr "<anchor id=\"configuringnagios-cgiauth-secure_web_servers\" />Authentification sur des serveurs web sécurisés"
+msgid ""
+"<anchor id=\"configuringnagios-cgiauth-secure_web_servers\" />Authentication "
+"On Secured Web Servers"
+msgstr ""
+"<anchor id=\"configuringnagios-cgiauth-secure_web_servers\" /"
+">Authentification sur des serveurs web sécurisés"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/cgiauth.xml:380
-msgid "If your web server is located in a secure domain (i.e., behind a firewall) or if you are using SSL, you can define a default username that can be used to access the CGIs. This is done by defining the <link linkend=\"configuringnagios-configcgi-default_user_name\">default_user_name</link> option in the <link linkend=\"configuringnagios-configcgi\">CGI configuration file</link>. By defining a default username that can access the CGIs, you can allow users to access the CGIs without necessarily having to authenticate to the web server. You may want to use this to avoid having to use basic web authentication, as basic authentication transmits passwords in clear text over the Internet."
-msgstr "Si votre serveur web se trouve dans un domaine sécurisé (i.e., derrière un firewall) ou si vous utilisez SSL, vous pouvez définir un utilisateur par défaut pour accéder aux CGI. C'est le rôle de la variable <link linkend=\"configuringnagios-configcgi-default_user_name\">default_user_name</link> du<link linkend=\"configuringnagios-configcgi\">fichier de configuration des CGI</link>. En définissant un nom d'utilisateur par défaut, vous pouvez autoriser les utilisateurs à accéder aux CGI sans qu'ils ne s'authentifient auprès du serveur web. Ceci vous permet d'éviter d'utiliser l'authentification web de base, qui transmet les mots de passe en clair sur Internet."
+msgid ""
+"If your web server is located in a secure domain (i.e., behind a firewall) "
+"or if you are using SSL, you can define a default username that can be used "
+"to access the CGIs. This is done by defining the <link linkend="
+"\"configuringnagios-configcgi-default_user_name\">default_user_name</link> "
+"option in the <link linkend=\"configuringnagios-configcgi\">CGI "
+"configuration file</link>. By defining a default username that can access "
+"the CGIs, you can allow users to access the CGIs without necessarily having "
+"to authenticate to the web server. You may want to use this to avoid having "
+"to use basic web authentication, as basic authentication transmits passwords "
+"in clear text over the Internet."
+msgstr ""
+"Si votre serveur web se trouve dans un domaine sécurisé (i.e., derrière un "
+"firewall) ou si vous utilisez SSL, vous pouvez définir un utilisateur par "
+"défaut pour accéder aux CGI. C'est le rôle de la variable <link linkend="
+"\"configuringnagios-configcgi-default_user_name\">default_user_name</link> "
+"du<link linkend=\"configuringnagios-configcgi\">fichier de configuration des "
+"CGI</link>. En définissant un nom d'utilisateur par défaut, vous pouvez "
+"autoriser les utilisateurs à accéder aux CGI sans qu'ils ne s'authentifient "
+"auprès du serveur web. Ceci vous permet d'éviter d'utiliser "
+"l'authentification web de base, qui transmet les mots de passe en clair sur "
+"Internet."
 
 # type: Content of: <chapter><section><important><para>
 #: ConfiguringNagios/cgiauth.xml:392
-msgid "Do not define a default username unless you are running a secure web server and are sure that everyone who has access to the CGIs has been authenticated in some manner. If you define this variable, anyone who has not authenticated to the web server will inherit all rights you assign to this user!"
-msgstr "Ne définissez pas d'utilisateur par défaut, à moins que vous n'utilisiez un serveur web sécurisé et que vous soyez sûr que les utilisateurs qui accèdent aux CGI ont été authentifiés d'une manière ou d'une autre ! Si vous utilisez cette variable, un utilisateur non authentifié héritera des droits de cet utilisateur par défaut !"
-
+msgid ""
+"Do not define a default username unless you are running a secure web server "
+"and are sure that everyone who has access to the CGIs has been authenticated "
+"in some manner. If you define this variable, anyone who has not "
+"authenticated to the web server will inherit all rights you assign to this "
+"user!"
+msgstr ""
+"Ne définissez pas d'utilisateur par défaut, à moins que vous n'utilisiez un "
+"serveur web sécurisé et que vous soyez sûr que les utilisateurs qui accèdent "
+"aux CGI ont été authentifiés d'une manière ou d'une autre ! Si vous utilisez "
+"cette variable, un utilisateur non authentifié héritera des droits de cet "
+"utilisateur par défaut !"

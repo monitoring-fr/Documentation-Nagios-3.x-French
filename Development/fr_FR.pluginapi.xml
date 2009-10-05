@@ -7,59 +7,59 @@
 ]
 >
 <chapter id="development-pluginapi" xreflabel="Nagios Plugin API">
-	<title>Nagios Plugin API</title>
+	<title>API Pour Les Plugins Nagios</title>
 	<section>
-		<title>Other Resources</title>
-		<para>If you're looking at writing your own plugins for Nagios, please make sure 
-to visit these other resources:</para>
+		<title>Autres Ressources</title>
+		<para>Si vous cherchez à écrire vos propres plugins pour Nagios, soyez sûrs
+d'avoir visiter ces autres ressources:</para>
 		<itemizedlist>
 			<listitem>
-				<para>The official <ulink url="&url-sourceforge-projects;nagiosplug/">Nagios 
-plugin project website</ulink>
+				<para>Le <ulink url="&url-sourceforge-projects;nagiosplug/">site officiel 'Nagios
+plugin project' </ulink>
 				</para>
 			</listitem>
 			<listitem>
-				<para>The official <ulink 
-url="http://nagiosplug.sourceforge.net/developer-guidelines.html"> Nagios 
-plugin development guidelines</ulink>
+				<para>Le <ulink url="http://nagiosplug.sourceforge.net/developer-guidelines.html">
+site officiel des grandes lignes du developpement des plugins Nagios</ulink>
 				</para>
 			</listitem>
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Plugin Overview</title>
-		<para>Scripts and executables must do two things (at a minimum) in order to 
-function as Nagios plugins:</para>
+		<title>Vue d'ensemble du plugin</title>
+		<para>Les scripts et exécutables doivent faire deux choses (au minimum) afin
+d'être considérés comme plugins Nagios</para>
 		<itemizedlist>
 			<listitem>
-				<para>Exit with one of several possible return values</para>
+				<para>Sortir avec une des différentes valeurs de retour possibles</para>
 			</listitem>
 			<listitem>
-				<para>Return at least one line of text output to <varname>STDOUT</varname></para>
+				<para>Retourner au moins une ligne de texte vers le <varname>STDOUT</varname></para>
 			</listitem>
 		</itemizedlist>
-		<para>The inner workings of your plugin are unimportant to Nagios. Your plugin 
-could check the status of a TCP port, run a database query, check disk free 
-space, or do whatever else it needs to check something. The details will 
-depend on what needs to be checked - that's up to you.</para>
+		<para>Le fonctionnement interne de votre plugin n'intéresse pas Nagios. Votre
+plugin peut contrôler l'état d'un port TCP, exécuter une requête sur une
+base de données, vérifier l'espace disque restant, ou faire tout à fait
+autre chose dont il a besoin pour effectuer son contrôle.</para>
 	</section>
 	<section>
-		<title>Return Code</title>
-		<para>Nagios determines the status of a host or service by evaluating the return 
-code from plugins.  The following tables shows a list of valid return codes, 
-along with their corresponding service or host states.</para>
+		<title>Code de retour</title>
+		<para>Nagios determine l'état de l'hôte ou du service en évaluant le code de
+retour du plugin. Le tableau suivant nous montre une liste des différents
+codes de retour valides, ainsi que l'état du service ou de l'hôte
+correspondant.</para>
 		<informaltable frame="all">
 			<tgroup cols="3">
 				<thead>
 					<row>
 						<entry>
-							<para>Plugin Return Code</para>
+							<para>Code de retour du plugin</para>
 						</entry>
 						<entry>
-							<para>Service State</para>
+							<para>Etat du service</para>
 						</entry>
 						<entry>
-							<para>Host State</para>
+							<para>Etat de l'hôte</para>
 						</entry>
 					</row>
 				</thead>
@@ -83,7 +83,7 @@ along with their corresponding service or host states.</para>
 							<para>WARNING</para>
 						</entry>
 						<entry>
-							<para>UP or DOWN/UNREACHABLE*</para>
+							<para>UP ou DOWN/UNREACHABLE*</para>
 						</entry>
 					</row>
 					<row>
@@ -111,67 +111,71 @@ along with their corresponding service or host states.</para>
 				</tbody>
 			</tgroup>
 		</informaltable>
-		<note><para>If the <link 
-linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressive_host_checking</link> 
-option is enabled, return codes of 1 will result in a host state of DOWN or 
-UNREACHABLE. Otherwise return codes of 1 will result in a host state of 
-UP. The process by which Nagios determines whether or not a host is DOWN or 
-UNREACHABLE is discussed <link 
-linkend="thebasics-networkreachability">here</link>.</para></note>
+		<note><para>Si l'option <link
+linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressive_host_checking</link>
+est activée, les codes de retour 1 donneront un état DOWN ou UNREACHABLE
+pour l'hôte. Sinon, les codes de retour 1 donneront un état UP pour
+l'hôte. Le processus par lequel Nagios détermine si une machine est DOWN ou
+UNREACHABLE est traité  <link
+linkend="thebasics-networkreachability">ici</link>.</para></note>
 	</section>
 	<section>
-		<title>Plugin Output Spec</title>
-		<para>At a minimum, plugins should return at least one of text output. Beginning 
-with Nagios 3, plugins can optionally return multiple lines of 
-output. Plugins may also return optional performance data that can be 
-processed by external applications. The basic format for plugin output is 
-shown below:</para>
-		<para>TEXT OUTPUT | OPTIONAL PERFDATALONG TEXT LINE 1LONG TEXT LINE 2...LONG TEXT 
+		<title>Spécifications Pour La Sortie Du Plugin</title>
+		<para>Au minimum, les plugins doivent retourner au moins du texte en sortie. A
+partir de Nagios 3, les plugins peuvent optionnellement retourner plusieurs
+lignes de texte en sortie. Les plugins peuvent aussi retourner
+optionnellement des données de performance qui pourront être traitées par
+une applicaiotn externe. Le format basique pour la sortie d'un plugin est
+décrit ci-dessous:</para>
+		<para>TEXT OUTPUT | OPTIONAL PERFDATALONG TEXT LINE 1LONG TEXT LINE 2...LONG TEXT
 LINE N | PERFDATA LINE 2PERFDATA LINE 3...PERFDATA LINE N</para>
-		<para>The performance data (shown in orange) is optional. If a plugin returns 
-performance data in its output, it must separate the performance data from 
-the other text output using a pipe (|) symbol.  Additional lines of long 
-text output (shown in blue) are also optional.</para>
+		<para>Les données de performance (ici en orange) sont optionnelles. Si un plugin
+renvoie des données de performance dans sa sortie, elles doivent être
+séparées du texte en utilisant le symbole 'pipe' ou 'tube' ( | ). Les lignes
+supplémentaires de texte de sorties (ici en bleu) sont aussi optionnelles.</para>
 	</section>
 	<section>
-		<title>Plugin Output Examples</title>
-		<para>Let's see some examples of possible plugin output...</para>
-		<para><emphasis role="bold">Case 1: One line of output (text only)</emphasis></para><para>Assume we have a plugin that returns one line of output that looks like 
-this:</para>
+		<title>Exemples De Sorties De Plugin</title>
+		<para>Voyons quelques exemples de sorties de plugin possibles...</para>
+		<para><emphasis role="bold">Cas 1: Une ligne en sortie (texte
+seulement)</emphasis></para><para>Imaginons que notre plugin ne retourne qu'une seule ligne de texte en
+sortie, cela ressemblerait à ceci:</para>
 		<screen>DISK OK - free space: / 3326 MB (56%);</screen>
-		<para>If this plugin was used to perform a service check, the entire line of 
-output will be stored in the <link 
-linkend="thebasics-macrolist-serviceoutput"><varname>$SERVICEOUTPUT$</varname></link> 
-macro.</para>
-		<para><emphasis role="bold">Case 2: One line of output (text and 
-perfdata)</emphasis></para><para>A plugin can return optional performance data for use by external 
-applications. To do this, the performance data must be separated from the 
-text output with a pipe (|) symbol like such:</para>
+		<para>Si le plugin est utilisé pour effectuer un contrôle d'un service, la ligne
+entière de sortie sera écrite dans la macro <link
+linkend="thebasics-macrolist-serviceoutput"><varname>$SERVICEOUTPUT$</varname></link>
+.</para>
+		<para><emphasis role="bold">Cas 2: Une ligne en sortie (texte et données de
+performance)</emphasis></para><para>Un plugin peut retourner optionnelement des données de performance pouvant
+être utilisées par des applications externes. Pour ce faire, les données de
+performance doivent être séparées du texte par un 'pipe' ou 'tube' ( | )
+comme ceci:</para>
 		<screen>DISK OK - free space: / 3326 MB (56%);</screen>
-		<screen> | </screen>
+		<screen>|</screen>
 		<screen>/=2643MB;5948;5958;0;5968</screen>
-		<para>If this plugin was used to perform a service check, the red portion of 
-output (left of the pipe separator) will be stored in the <link 
-linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link> macro and 
-the orange portion of output (right of the pipe separator) will be stored in 
-the <link 
-linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> 
-macro.</para>
-		<para><emphasis role="bold">Case 3: Multiple lines of output (text and 
-perfdata)</emphasis></para><para>A plugin optionally return multiple lines of both text output and perfdata, 
-like such:</para>
+		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
+rouge du message de sortie du plugin (à gauche du séparateur 'pipe') sera
+écrite dans la macro <link
+linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link> et la
+partie orange du message de sortie du plugin (à droite du séparateur 'pipe'
+) sera écrite dans la macro <link
+linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> .</para>
+		<para><emphasis role="bold">Cas 3: Plusieurs lignes de sortie (texte et données de
+performance)</emphasis></para><para>Un plugin peut optionnellement retourner plusieurs lignes de texte et de
+données de performance, comme suit:</para>
 		<screen>DISK OK - free space: / 3326 MB (56%); | /=2643MB;5948;5958;0;5968/ 15272 MB (77%);/boot 68 MB (69%);/home 69357 MB (27%);/var/log 819 MB (84%); | /boot=68MB;88;93;0;98/home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</screen>
-		<para>If this plugin was used to perform a service check, the red portion of first 
-line of output (left of the pipe separator) will be stored in the <link 
-linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link> macro.  
-The orange portions of the first and subsequent lines are concatenated (with 
-spaces) are stored in the <link 
-linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> 
-macro. The blue portions of the 2nd - 5th lines of output will be 
-concatenated (with escaped newlines) and stored in <link 
-linkend="thebasics-macrolist-longserviceoutput">$LONGSERVICEOUTPUT$</link> 
-the macro.</para>
-		<para>The final contents of each macro are listed below:</para>
+		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
+rouge de la première ligne du message de sortie du plugin (à gauche du
+séparateur 'pipe') sera écrite dans la macro <link
+linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link> .  Les
+parties oranges de la première ligne et suivantes seront concaténées (avec
+des espaces) et seront stockées dans la macro <link
+linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> . Les
+parties bleues de la 2ème à la 5ème ligne du message de sortie du plugin
+seront concaténées (avec comme séparateur le caractère 'nouvelle ligne' [
+ ] ) et seront stockées dans la macro <link
+linkend="thebasics-macrolist-longserviceoutput">$LONGSERVICEOUTPUT$</link> .</para>
+		<para>Le contenu final de chaque macro est listé ci-dessous:</para>
 		<informaltable frame="all">
 			<tgroup cols="2">
 				<thead>
@@ -180,7 +184,7 @@ the macro.</para>
 							<para>Macro</para>
 						</entry>
 						<entry>
-							<para>Value</para>
+							<para>Valeur</para>
 						</entry>
 					</row>
 				</thead>
@@ -212,48 +216,51 @@ the macro.</para>
 				</tbody>
 			</tgroup>
 		</informaltable>
-		<para>With regards to multiple lines of output, you have the following options for 
-returning performance data:</para>
+		<para>Dans le cas de plusieurs lignes en sortie, vous disposez des options
+suivantes pour retourner les données de performance:</para>
 		<itemizedlist>
 			<listitem>
-				<para>You can choose to return no performance data whatsoever</para>
+				<para>Vous pouvez choisir de ne pas retourner de données de performance</para>
 			</listitem>
 			<listitem>
-				<para>You can return performance data on the first line only</para>
+				<para>Vous pouvez retourner des données de performances seulement sur la première
+ligne</para>
 			</listitem>
 			<listitem>
-				<para>You can return performance data only in subsequent lines (after the first)</para>
+				<para>Vous pouvez retourner des données de performance seulement sur les lignes
+suivantes (après la première)</para>
 			</listitem>
 			<listitem>
-				<para>You can return performance data in both the first line and subsequent lines 
-(as shown above)</para>
+				<para>Vous pouvez retourner des données de performance aussi bien sur la première
+ligne que les suivantes (comme montré si dessous)</para>
 			</listitem>
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Plugin Output Length Restrictions</title>
-		<para>Nagios will only read the first 4 KB of data that a plugin returns. This is 
-done in order to prevent runaway plugins from dumping megs or gigs of data 
-back to Nagios. This 4 KB output limit is fairly easy to change if you 
-need. Simply edit the value of the MAX_PLUGIN_OUTPUT_LENGTH definition in 
-the include/nagios.h.in file of the source code distribution and recompile 
-Nagios. There's nothing else you need to change!</para>
+		<title>Restriction De Longueur De Message De Sortie De Plugin</title>
+		<para>Nagios ne lira que les premiers 4KB des données qui seront retournées par le
+plugin. Ceci dans le but d'empêcher les plugins à déverser des Mégas ou des
+Gigas de données à Nagios. Cette limite de 4KB est assez facile à modifier
+si vous en ressentez le besoin. Il suffit de modifier la valeur de la
+définition nommée MAX_PLUGIN_OUTPUT_LENGTH dans le fichier
+include/nagios.h.in du code source et de recompiler Nagios. Il n'y a rien
+d'autre à faire!</para>
 	</section>
 	<section>
-		<title>Examples</title>
-		<para>If you're looking for some example plugins to study, I would recommend that 
-you download the official Nagios plugins and look through the code for 
-various C, Perl, and shell script plugins.  Information on obtaining the 
-official Nagios plugins can be found <link 
-linkend="thebasics-plugins">here</link>.</para>
+		<title>Exemples</title>
+		<para>Si vous êtes à la recherche d'exemples de plugins à étudier, Je vous
+recommande de télécharger les plugins officiels Nagios et de jeter un oeil
+sur les différents scripts des plugins en C, Perl ou encore Shell. Des
+information sur l'obtention des plugins Nagios officiels peuvent être
+trouvées <link linkend="thebasics-plugins">ici</link>.</para>
 	</section>
 	<section>
-		<title>Perl Plugins</title>
-		<para>Nagios features an optional <link 
-linkend="advancedtopics-embeddedperl">embedded Perl interpreter</link> which 
-can speed up the execution of Perl plugins. More information on developing 
-Perl plugins for use with the embedded Perl interpreter can be found <link 
-linkend="advancedtopics-embeddedperl">here</link>.</para>
+		<title>Plugins Perl</title>
+		<para>Nagios peut utiliser en option un <link
+linkend="advancedtopics-embeddedperl">interpreteur Perl embarqué</link> qui
+peut accélérer l'exécution des plugins codés en Perl. Plus d'informations
+sur le développement des plugins en Perl utilisant l'interpréteur Perl
+embarqué disponibles <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
 	</section>
 </chapter>
 

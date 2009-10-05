@@ -8,72 +8,74 @@
 >
 <chapter id="securityandperformancetuning-faststartup"
          xreflabel="Fast Startup Options">
-  <title>Fast Startup Options</title>
+  <title>Options de démarrage rapide</title>
 
   <section>
     <title>Introduction</title>
 
-    <para>There are a few things you can do that can decrease the amount of time it 
-take Nagios to startup (or restart). These speedups involve easing some of 
-the burden involved in processing your configuration files.</para>
+    <para>Il y a plusieurs choses que vous pouvez faire pour diminuer le temps de
+démarrage de Nagios (ou de redémarrage). Ces options permettent toutes
+d'alléger la charge de travail nécessaire à Nagios dans le calcul de vos
+fichiers de configuration.</para>
 
-    <para>Using these techniques is particularly useful when you have one or more of 
-the following:</para>
+    <para>L'utilisation de ces techniques est particulièrement intéressante quand vous
+êtes dans un ou plusieurs des cas suivants : </para>
 
     <itemizedlist>
       <listitem>
-        <para>Large configurations</para>
+        <para>Configurations importantes</para>
       </listitem>
 
       <listitem>
-        <para>Complex configurations (heavy use of template features)</para>
+        <para>Configurations complexes (utilisation massive des gabarits)</para>
       </listitem>
 
       <listitem>
-        <para>Installations where frequest restarts are necessary</para>
+        <para>Installations où les redémarrages fréquents sont nécessaires</para>
       </listitem>
     </itemizedlist>
   </section>
 
   <section>
-    <title>Background</title>
+    <title>Arrière-plan</title>
 
-    <para>Whenever Nagios starts/restarts it has to process your configuration files 
-before it can get down to the business of monitoring. This configuration 
-startup process involves a number of steps:</para>
+    <para>Nagios doit calculer les fichiers de configuration à chaque
+démarrage/redémarrage avant de pouvoir passer à son boulot de
+supervision. Ce processus de démarrage implique un certain nombre d'étapes</para>
 
     <itemizedlist>
       <listitem>
-        <para>Reading the config files</para>
+        <para>Lecture des fichiers de configuration</para>
       </listitem>
 
       <listitem>
-        <para>Resolving template definitions</para>
+        <para>Résolution des définitions de gabarits</para>
       </listitem>
 
       <listitem>
-        <para>"Recombobulating" your objects (my term for the various types of work that 
-occurs)</para>
+        <para><quote>Recalcul</quote> de vos objets (le terme employé par Ethan pour
+indiquer les différents opérations impliquées est
+<quote>recombobulating</quote>)</para>
       </listitem>
 
       <listitem>
-        <para>Duplicating object definitions</para>
+        <para>Duplication des définitions d'objets</para>
       </listitem>
 
       <listitem>
-        <para>Inheriting object properties</para>
+        <para>Héritage des propriétés d'objets</para>
       </listitem>
 
       <listitem>
-        <para>Sorting your object definitions</para>
+        <para>Classement des définitions d'objets</para>
       </listitem>
 
       <listitem>
-        <para>Verifying object relationship integrity</para>
+        <para>Vérification de l'intégrité des relations entre objets</para>
       </listitem>
 
       <listitem>
-        <para>Checking for circular paths</para>
+        <para>Contrôle de références circulaires</para>
       </listitem>
 
       <listitem>
@@ -81,21 +83,21 @@ occurs)</para>
       </listitem>
     </itemizedlist>
 
-    <para>Some of these steps can be quite time-consuming when you have large or 
-complex configurations. Is there a way to speed any of these steps up? Yes!</para>
+    <para>Certaines de ces étapes peuvent se révéler consommatrices en temps quand
+vous avez des configurations importantes ou complexes. Existe t'il un moyen
+d'accélérer une de ces étapes? Oui!</para>
   </section>
 
   <section>
-    <title>Evaluating Startup Times</title>
+    <title>Évaluation des temps de démarrage</title>
 
-    <para>Before we get on to making things faster, we need to see what's possible and 
-whether or not we should even bother with the whole thing.  This is easy to 
-do - simply start nagios with the -s command line switch to get timing and 
-scheduling information.</para>
+    <para>Avant d'essayer d'accélérer les choses, nous avons besoin de savoir si le
+jeu en vaut la chandelle. C'est facile à faire - démarrer simplement Nagios
+avec l'argument -s pour avoir les informations de planification et de temps.</para>
 
-    <para>An example of the output (abbreviated to only show relevant portions) is 
-shown below. For this example, I'm using a Nagios config that has 25 hosts 
-defined and just over 10,000 services. <screen>
+    <para>Un exemple de la sortie (uniquement la partie intéressante) est montrée
+ci-dessous. Pour cet exemple, j'utilise une configuration Nagios qui a 25
+hôtes et juste un plus de 10 000 services définis. <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -s /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
 
@@ -140,69 +142,72 @@ defined and just over 10,000 services. <screen>
 		TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
 		</screen>
 
-    <para>Okay, lets see what happened. Looking at the totals, it took roughly 11.6 
-seconds to process the configuration files and another 56 seconds to verify 
-the config. That means that every time I start or restart Nagios with this 
-configuration, it will take nearly 68 seconds of startup work before it can 
-monitor anything! That's not acceptable if I have to restart Nagios on a 
-semi-regular basis.</para>
+    <para>Ok, voyons ce qui s'est passé. En regardant les totaux, il a fallu à peu
+près 11,6 secondes pour calculer les fichiers de configuration et encore 56
+secondes pour vérifier cette configuration. Cela implique qu'à cahque fois
+que je vais démarrer ou redémarrer Nagios, il va se passer presque 68
+secondes avant que Nagios ne commence à superviser quoi que ce soit! C'est
+inacceptable si je dois redémarrer Nagios de façon assez régulière.</para>
 
-    <para>What can I do about this? Take another look at the output and you'll see 
-that Nagios estimates that I could save about 8.4 seconds off the 
-configuration processing time and another 54.7 off the verification times.  
-In total, Nagios thinks I could save 63 seconds of the normal startup time 
-if some optimizations were taken.</para>
+    <para>Que puis-je faire? Regardez de nouveau la sortie et vous verrez que Nagios
+estime qu'il pourrait gagner 8,4 secondes dans le calcul de la configuration
+et encore 54,7 secondes pour la vérification de celle-ci. Au total, Nagios
+pense qu'il pourrait gagner 63 secondes sur le temps de démarrage normal si
+quelques optimisations étaient appliquées.</para>
 
-    <para>Whoa! From 68 seconds to just 5 seconds? Yep, read on for how to do it.</para>
+    <para>Whoa! De 68 secondes à 5 secondes? Et oui, lisez ceci pour savoir comment
+faire.</para>
   </section>
 
   <section>
-    <title>Pre-Caching Object Configuration</title>
+    <title>Mise en pré-cache des objets de configuration</title>
 
-    <para>Nagios can spend quite a bit of time parsing your config files, especially 
-if you make use of the template features such as inheritance, etc. In order 
-to reduce the time it takes to parse your config, you can have Nagios 
-pre-process and pre-cache your config files for future use.</para>
+    <para>Nagios peut passer un temps non négligeable à parcourir vos fichiers de
+configuration, surtout si vous utilisez des fonctionnalités de gabarits
+telles que l'héritage, etc. Pour réduire le temps que Nagios prend à
+parcourir vos fichiers de configuration, vous pouvez demander à Nagios de
+précalculer vos fichiers de configuration et de mettre en cache le résultat
+pour une utilisation future.</para>
 
     <informaltable frame="all">
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>When you run nagios with the <option>-p</option>
-            command line option, Nagios will read your config files in, process them, 
-and save them to a pre-cached object config file (specified by the <link 
-linkend="configuringnagios-configmain-precached_object_file">precached_object_file</link> 
-directive). This pre-cached config file will contain pre-processed 
-configuration entries that are easier/faster for Nagios to process in the 
-future.</para> <para>You must use the <option>-p</option>
-            command line option along with either the <option>-v</option> or
-            <option>-s</option> command line options, as shown below. This ensures that your configuration 
-is verified before the precached file is created.</para> <screen>
+            <entry><para>Quand vous excéutez Nagios avec l'option <option>-p, </option>
+            Nagios va lire vos fichiers de configuration, les calculer et enregistrer le
+résultat dans un fichier de pré-cache (spécifié par la directive <link
+linkend="configuringnagios-configmain-precached_object_file">precached_object_file</link>).
+Ce fichier de configuration pré-caché contiendra les entrées de
+configuration pré-calculées et sera plus facile/rapide à traiter par Nagios
+dans le futur.  </para> <para>Vous devez utiliser l'option <option>-p, </option>
+            en même que  <option>-v</option> ou
+            <option>-s</option> options, comme indiqué ci-dessous. Cela permet de s'assurer que votre
+configuration est vérifiée avant que la fichier de pré-cache ne soit créé.</para> <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -pv /usr/local/nagios/etc/nagios.cfg</userinput>
-</screen> <para>The size of your precached config file will most likely be significantly 
-larger than the sum of the sizes of your object config files. This is normal 
-and by design.</para></entry>
+</screen> <para>La taille de votre fichier de pré-cache sera très certainement supérieure à
+la somme de la taille de vos fichiers d'objets de configuration. C'est
+normal et ainsi pensé.</para></entry>
 
-            <entry><para> <inlinemediaobject> <imageobject> <imagedata 
-fileref="images/fast-startup1.png" format="PNG"/> </imageobject> 
+            <entry><para> <inlinemediaobject> <imageobject> <imagedata
+fileref="images/fast-startup1.png" format="PNG"/> </imageobject>
 </inlinemediaobject> </para></entry>
           </row>
 
           <row>
-            <entry><para>Once the precached object configuration file have been created, you can 
-start Nagios and tell it to use the precached config file instead of your 
-object config file(s) by using the <option>-u</option> command line option. <screen>
+            <entry><para>Une fois qu ele fichier de pré-cache a été créé, vous pouvez démarrer Nagios
+et lui indiquer d'utiliser ce fichier plutôt que d'utiliser les fichiers
+d'objets de configuration en utilisant l'argument <option>-u</option> à la ligne de commande. <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -ud /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para> <important>
-                <para>If you modify your configuration files, you will need to re-verify and 
-re-cache your configuration files before restarting Nagios. If you don't 
-re-generate the precached object file, Nagios will continue to use your old 
-configuration because it is now reading from the precached file, rather than 
-your source configuration files.</para>
+                <para>Si vous avez modifié vos fichiers de configuration, vous devrez revérifier
+et recacher vos fichiers de configuration avant de pouvoir redémarrer
+Nagios. Si vous ne le faîtes pas, Nagios va continuer à utiliser votre
+ancienne configuration parce qu'il la lit désormais depuis le fichier de
+pré-cache plutôt que depuis vos fichiers de configuration sources.</para>
               </important></entry>
 
-            <entry><para> <inlinemediaobject> <imageobject> <imagedata 
-fileref="images/fast-startup2.png" format="PNG"/> </imageobject> 
+            <entry><para> <inlinemediaobject> <imageobject> <imagedata
+fileref="images/fast-startup2.png" format="PNG"/> </imageobject>
 </inlinemediaobject> </para></entry>
           </row>
         </tbody>
@@ -211,71 +216,79 @@ fileref="images/fast-startup2.png" format="PNG"/> </imageobject>
   </section>
 
   <section>
-    <title>Skipping Circular Path Tests</title>
+    <title>Passer outre les tests de références circulaires</title>
 
-    <para>The second (and most time-intensive) portion of the configuration startup 
-phase is the circular path check. In the example above, it took nearly a 
-minute to perform this step of the configuration verification.</para>
+    <para>La deuxième partie (et la plus consommatrice en temps) de la phase de
+démarrage est le contrôle des références circulaires. Dans l'exemple
+ci-dessus, cela a pris près d'une minute pour achever cette étape de la
+vérification de la configuration.</para>
 
-    <para>What is the circular path check and why does it take so long? The circular 
-patch check is designed to ensure that you don't define any circular paths 
-in your host, host dependency, or service dependency definitions. If a 
-circular path existed in your config files, Nagios could end up in a 
-deadlock situation. The most likely reason for the check taking so long is 
-that I'm not using an efficient algorithm. A much more efficient algorithm 
-for detecting circular paths would be most welcomed.  Hint: That means all 
-you CompSci graduate students who have been emailing me about doing your 
-thesis on Nagios can contribute some code back.  :-)</para>
+    <para>Qu'est-ce que le contrôle de références circulaires et pourquoi cela prend
+t'il autant de temps? La vérifcation des références circulaires est prévue
+pour s'assurer que vous n'avez pas défini de références circulaires dans vos
+hôtes, les dépendances d'hôtes ou les définitions de dépendances de
+services. Si une référence circulaire existe dans vos fichiers de
+configuration, Nagios pourrait finir dans une situation d'impasse. La raison
+la plus probable qui fait que cette vérification est aussi longue est que je
+n'utilise pas un algorithme efficace. Un algorithme plus efficace pour
+détecter les références circulaires serait le bienvenu. Astuce : Cela veut
+dire que tous les étudiants en sciences informatique qui m'écrive pour
+m'indiquer qu'ils vont faire leur thèse sur Nagios pourrait contribuer en
+retour au code. :-) [Note du traducteur] : Cet algorithme a été revu et
+amélioré dans une version 3.x de Nagios.</para>
 
-    <para>If you want to skip the circular path check when Nagios starts, you can add 
-the -x command line option like this: <screen>
+    <para>Si vous souhaitez outrepasser la vérification des références circualires au
+démarrage de Nagios, vous pouvez ajouter l'argument -x sur la ligne de
+commande comme suit : <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -xd /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
 
     <important>
-      <para>It is of utmost importance that you verify your configuration before 
-starting/restarting Nagios when skipping circular path checks.  Failure to 
-do so could lead to deadlocks in the Nagios logic. You have been warned.</para>
+      <para>Il est de la plus haute importance de vérifier votre configuration avant de
+démarrer/redémarrer Nagios sans vérification des références circulaires. Ne
+pas le faire pourrait vous conduire dans l'impasse. Vous êtes prévenu.</para>
     </important>
   </section>
 
   <section>
-    <title>Putting It All Together</title>
+    <title>Tout mettre ensemble</title>
 
-    <para>Follow these steps if you want to make use of potential speedups from 
-pre-caching your configuration and skipping circular path checks.</para>
+    <para>Suivez ces étapes si vous souhaitez profiter de gains potentiels en
+utilisant le fichier de pré-cache et en omettant le contrôle des références
+circulaires.</para>
 
     <procedure>
       <step>
-        <para>Verify your configuration and create the precache file with the following 
-command: <screen>
+        <para>Vérifiez votre configuration Nagios et créez le fichier de pré-cache avec la
+commande suivante : <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -vp /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
       </step>
 
       <step>
-        <para>Stop Nagios if it is currently running.</para>
+        <para>Arrêtez Nagios s'il est en cours d'exécution.</para>
       </step>
 
       <step>
-        <para>Start Nagios like so to use the precached config file and skip circular path 
-checks: <screen>
+        <para>Démarrez Nagios comme ceci de façon à utiliser le fichier de pré-cache et à
+ne pas faire le contrôle des références circulaires. <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -uxd /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
       </step>
 
       <step>
-        <para>When you modify your original configuration files in the future and need to 
-restart Nagios to make those changes take place, repeat step 1 to re-verify 
-your config and regenerate your cached config file. Once that is done you 
-can restart Nagios through the web interface or by sending a SIGHUP 
-signal. If you don't re-generate the precached object file, Nagios will 
-continue to use your old confguration because it is now reading from the 
-precached file, rather than your source configuration files.</para>
+        <para>À l'avenir, quand vous modifiez vos fichiers de configuration originaux et
+que vous avez besoin de redémarrer Nagios pour appluiquer ces modifications,
+répétez l'étape 1 pour revérifier votre configuration et regénérer le
+fichier de pré-cache. Une fois ceci fait, vous pouvez redémarrer Nagios à
+partir de l'interface web ou en envoyant un signal SIGHUP. Si vous ne
+regénérez pas le fichier de pré-cache, Nagios continuera à utiliser votre
+ancienne configuration parce qu'il la lit depuis le fichier de pré-cache
+plutôt que depuis les fichiers de configuration sources.</para>
       </step>
 
       <step>
-        <para>That's it! Enjoy the increased startup speed.</para>
+        <para>Et voilà! Appréciez la vitesse accrue de démarrage.</para>
       </step>
     </procedure>
   </section>

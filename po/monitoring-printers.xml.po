@@ -19,8 +19,7 @@ msgstr ""
 #: GettingStarted/quickstart-fedora.xml:59
 #: GettingStarted/monitoring-windows.xml:148
 #: GettingStarted/monitoring-printers.xml:166
-#: GettingStarted/monitoring-routers.xml:143
-#: AdvancedTopics/redundancy.xml:31
+#: GettingStarted/monitoring-routers.xml:143 AdvancedTopics/redundancy.xml:31
 msgid "Prerequisites"
 msgstr "Pré-requis"
 
@@ -31,43 +30,25 @@ msgstr "Pré-requis"
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -78,8 +59,7 @@ msgstr "Pré-requis"
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
@@ -87,8 +67,19 @@ msgstr "Introduction"
 #: GettingStarted/monitoring-windows.xml:53
 #: GettingStarted/monitoring-linux.xml:49
 #: GettingStarted/monitoring-printers.xml:79
-msgid "These instructions assume that you've installed Nagios according to the <link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The sample configuration entries below reference objects that are defined in the sample config files (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>, etc.) that are installed if you follow the quickstart."
-msgstr "Ces instructions impliquent que vous ayez installé Nagios comme précisé dans le <link linkend=\"gettingstarted-quickstart\">guide rapide</link>. Les exemples de configuration ci-dessous font référence aux objets de configuration définis dans les fichiers d'exemples (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>, etc.) qui ont été installé si vous avez suivi le guide rapide."
+msgid ""
+"These instructions assume that you've installed Nagios according to the "
+"<link linkend=\"gettingstarted-quickstart\">quickstart guide</link>. The "
+"sample configuration entries below reference objects that are defined in the "
+"sample config files (<filename>commands.cfg</filename>, <filename>templates."
+"cfg</filename>, etc.) that are installed if you follow the quickstart."
+msgstr ""
+"Ces instructions impliquent que vous ayez installé Nagios comme précisé dans "
+"le <link linkend=\"gettingstarted-quickstart\">guide rapide</link>. Les "
+"exemples de configuration ci-dessous font référence aux objets de "
+"configuration définis dans les fichiers d'exemples (<filename>commands.cfg</"
+"filename>, <filename>templates.cfg</filename>, etc.) qui ont été installé si "
+"vous avez suivi le guide rapide."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:63
@@ -109,8 +100,15 @@ msgstr "Étapes"
 #: GettingStarted/monitoring-windows.xml:98
 #: GettingStarted/monitoring-printers.xml:120
 #: GettingStarted/monitoring-routers.xml:96
+#, fuzzy
 msgid "Perform first-time prerequisites"
-msgstr "Effectuez les pré-requis de départ"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Effectuez les pré-requis de départ\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Complétez les prérequis de départ\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Effectuez les pré-requis de départ"
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-windows.xml:111
@@ -130,15 +128,34 @@ msgstr "Ce qui est déjà fait pour vous"
 #: GettingStarted/monitoring-windows.xml:119
 #: GettingStarted/monitoring-printers.xml:137
 #: GettingStarted/monitoring-routers.xml:113
-msgid "To make your life a bit easier, a few configuration tasks have already been done for you:"
-msgstr "Pour vous rendre la vie un peu plus facile, un certain nombre de choses ont déjà été faîtes pour vous:"
+#, fuzzy
+msgid ""
+"To make your life a bit easier, a few configuration tasks have already been "
+"done for you:"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Pour vous rendre la vie un peu plus facile, un certain nombre de choses ont "
+"déjà été faîtes pour vous:\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Pour vous faciliter la vie, quelques tâches de configuration ont déjà été "
+"faites pour vous:\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Pour vous rendre la vie un peu plus facile, un certain nombre de choses ont "
+"déjà été faîtes pour vous:"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:154
 #: GettingStarted/monitoring-printers.xml:172
 #: GettingStarted/monitoring-routers.xml:149
+#, fuzzy
 msgid "Edit the main Nagios config file."
-msgstr "Éditez le fichier principal de configuration de Nagios."
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Éditez le fichier principal de configuration de Nagios.\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Éditez le fichier de configuration principal de Nagios.\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Éditez le fichier principal de configuration de Nagios."
 
 # type: Content of: <chapter><section><screen>
 #: GettingStarted/monitoring-windows.xml:156
@@ -152,8 +169,20 @@ msgstr "<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cf
 #: GettingStarted/monitoring-windows.xml:158
 #: GettingStarted/monitoring-printers.xml:176
 #: GettingStarted/monitoring-routers.xml:153
-msgid "Remove the leading pound (#) sign from the following line in the main configuration file:"
-msgstr "Supprimez le signe dièse (#) de la ligne suivante dans le fichier principal de configuration:"
+#, fuzzy
+msgid ""
+"Remove the leading pound (#) sign from the following line in the main "
+"configuration file:"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Supprimez le signe dièse (#) de la ligne suivante dans le fichier principal "
+"de configuration:\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Supprimer le signe dièse (#) de début de ligne pour les lignes suivantes "
+"dans le fichier de configuration principal :\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Supprimez le signe dièse (#) de la ligne suivante dans le fichier principal "
+"de configuration:"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:163
@@ -173,8 +202,15 @@ msgstr "Configuration de Nagios"
 #: GettingStarted/monitoring-windows.xml:444
 #: GettingStarted/monitoring-printers.xml:271
 #: GettingStarted/monitoring-routers.xml:393
+#, fuzzy
 msgid "Save the file."
-msgstr "Enregistrez le fichier."
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Enregistrez le fichier.\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Enregistrez le fichier\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Enregistrez le fichier."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:448
@@ -182,16 +218,48 @@ msgstr "Enregistrez le fichier."
 #: GettingStarted/monitoring-routers.xml:397
 #: GettingStarted/monitoring-publicservices.xml:421
 #: RunningNagios/startstop.xml:38
+#, fuzzy
 msgid "Restarting Nagios"
-msgstr "Redamérrage de Nagios"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrez Nagios\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrage de Nagios\n"
+"#-#-#-#-#  monitoring-publicservices.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrage de Nagios\n"
+"#-#-#-#-#  startstop.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redémarrer Nagios\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Redamérrage de Nagios"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-windows.xml:455
 #: GettingStarted/monitoring-printers.xml:283
 #: GettingStarted/monitoring-routers.xml:405
 #: GettingStarted/monitoring-publicservices.xml:429
-msgid "If the verification process produces any errors messages, fix your configuration file before continuing. Make sure that you don't (re)start Nagios until the verification process completes without any errors!"
-msgstr "Si le processus de vérification sort des messages d'erreurs, corrigez votre configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios avant que le processus de vérification ne se termine sans erreur!"
+#, fuzzy
+msgid ""
+"If the verification process produces any errors messages, fix your "
+"configuration file before continuing. Make sure that you don't (re)start "
+"Nagios until the verification process completes without any errors!"
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si le processus de vérification sort des messages d'erreurs, corrigez votre "
+"configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios "
+"avant que le processus de vérification ne se termine sans erreur!\n"
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si la vérification sort n'importe quel type de message, corrigez votre "
+"fichier de configuration avant de continuer. Assurez-vous de ne pas (re)"
+"démarrer Nagios avant que la vérification de la configuration soit sans "
+"erreur! \n"
+"#-#-#-#-#  monitoring-publicservices.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si le processus de vérification sort des messages d'erreurs, corrigez votre "
+"configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios "
+"avant que le processus de vérification ne se termine sans erreur!\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Si le processus de vérification sort des messages d'erreurs, corrigez votre "
+"configuration avant de continuer. Assurez-vous de ne pas (re)démarrer Nagios "
+"avant que le processus de vérification ne se termine sans erreur!"
 
 # type: Content of: <chapter><title>
 #: GettingStarted/monitoring-printers.xml:11
@@ -200,18 +268,46 @@ msgstr "Supervision des imprimantes réseaux"
 
 # type: Content of: <chapter><abstract><para>
 #: GettingStarted/monitoring-printers.xml:14
-msgid "This document describes how you can monitor the status of networked printers. Specifically, <productname class=\"trade\">HP</productname> printers that have internal/external <productname class=\"registered\">JetDirect</productname> cards/devices, or other print servers (like the <productname class=\"trade\">Troy</productname> <productname class=\"registered\">PocketPro 100S</productname> or the <productname class=\"trade\">Netgear</productname> <productname class=\"registered\">PS101</productname>) that support the JetDirect protocol."
-msgstr "Ce document décrit la façon de superviser l'état d'imprimantes réseaux. Plus particulièrement, les imprimantes <productname class=\"trade\">HP</productname> qui ont une carte interne/externe <productname class=\"registered\">JetDirect</productname>, ou toute autres imprimantes (comme la <productname class=\"trade\">Troy</productname> <productname class=\"registered\">PocketPro 100S</productname> ou la <productname class=\"trade\">Netgear</productname> <productname class=\"registered\">PS101</productname>) supportant le protocole JetDirect."
+msgid ""
+"This document describes how you can monitor the status of networked "
+"printers. Specifically, <productname class=\"trade\">HP</productname> "
+"printers that have internal/external <productname class=\"registered"
+"\">JetDirect</productname> cards/devices, or other print servers (like the "
+"<productname class=\"trade\">Troy</productname> <productname class="
+"\"registered\">PocketPro 100S</productname> or the <productname class=\"trade"
+"\">Netgear</productname> <productname class=\"registered\">PS101</"
+"productname>) that support the JetDirect protocol."
+msgstr ""
+"Ce document décrit la façon de superviser l'état d'imprimantes réseaux. Plus "
+"particulièrement, les imprimantes <productname class=\"trade\">HP</"
+"productname> qui ont une carte interne/externe <productname class="
+"\"registered\">JetDirect</productname>, ou toute autres imprimantes (comme "
+"la <productname class=\"trade\">Troy</productname> <productname class="
+"\"registered\">PocketPro 100S</productname> ou la <productname class=\"trade"
+"\">Netgear</productname> <productname class=\"registered\">PS101</"
+"productname>) supportant le protocole JetDirect."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:28
-msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/printer.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
-msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/printer.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/printer.png\" "
+"format=\"PNG\"/> </imageobject> </inlinemediaobject>"
+msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/printer.png\" "
+"format=\"PNG\"/> </imageobject> </inlinemediaobject>"
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:34
-msgid "The &plugin-hpjd; plugin (which is part of the standard Nagios plugins distribution) allows you to monitor the status of JetDirect-capable printers which have &protocol-snmp; enabled. The plugin is capable of detecting the following printer states:"
-msgstr "Le plugin &plugin-hpjd; (qui fait partie de la distribution des plugins standards Nagios) vous permettent de superviser l'état de toutes imprimantes compatibles JetDirect avec &protocol-snmp; activé. Le plugin est capable de détecter les états suivants de l'imprimante:"
+msgid ""
+"The &plugin-hpjd; plugin (which is part of the standard Nagios plugins "
+"distribution) allows you to monitor the status of JetDirect-capable printers "
+"which have &protocol-snmp; enabled. The plugin is capable of detecting the "
+"following printer states:"
+msgstr ""
+"Le plugin &plugin-hpjd; (qui fait partie de la distribution des plugins "
+"standards Nagios) vous permettent de superviser l'état de toutes imprimantes "
+"compatibles JetDirect avec &protocol-snmp; activé. Le plugin est capable de "
+"détecter les états suivants de l'imprimante:"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-printers.xml:42
@@ -257,48 +353,115 @@ msgstr "Le plateau de sortie papier est plein"
 #: GettingStarted/monitoring-printers.xml:74
 #: ConfiguringNagios/configobject.xml:269
 #: SecurityAndPerformanceTuning/faststartup.xml:80
+#, fuzzy
 msgid "and more..."
-msgstr "et bien plus..."
+msgstr ""
+"#-#-#-#-#  configobject.xml.po (docnagios 3)  #-#-#-#-#\n"
+"et plus...\n"
+"#-#-#-#-#  faststartup.xml.po (docnagios 3)  #-#-#-#-#\n"
+"et plus...\n"
+"#-#-#-#-#  monitoring-printers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"et bien plus..."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:97
-msgid "Monitoring the status of a networked printer is pretty simple.  JetDirect-enabled printers usually have &protocol-snmp; enabled, which allows Nagios to monitor their status using the &plugin-hpjd; plugin."
-msgstr "Superviser l'état d'une imprimante réseau est simple. Les imprimantes compatibles JetDirect ont en général  &protocol-snmp; activé, ce qui permet à Nagios de les superviser en utilisant le plugin &plugin-hpjd;."
+msgid ""
+"Monitoring the status of a networked printer is pretty simple.  JetDirect-"
+"enabled printers usually have &protocol-snmp; enabled, which allows Nagios "
+"to monitor their status using the &plugin-hpjd; plugin."
+msgstr ""
+"Superviser l'état d'une imprimante réseau est simple. Les imprimantes "
+"compatibles JetDirect ont en général  &protocol-snmp; activé, ce qui permet "
+"à Nagios de les superviser en utilisant le plugin &plugin-hpjd;."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:102
-msgid "The &plugin-hpjd; plugin will only get compiled and installed if you have the <application>net-snmp</application> and <application>net-snmp-utils</application> packages installed on your system. Make sure the plugin exists in <filename class=\"directory\">/usr/local/nagios/libexec</filename> before you continue. If it doesn't, install <application>net-snmp</application> and <application>net-snmp-utils</application> and recompile/reinstall the Nagios plugins."
-msgstr "Le plugin &plugin-hpjd; sera compilé et installé seulement si vous avez les paquets <application>net-snmp</application> et <application>net-snmp-utils</application> installés sur votre système. Assurez-vous que le plugin soit présent dans <filename class=\"directory\">/usr/local/nagios/libexec</filename> avant de continuer. Si ce n'est pas le cas, installez <application>net-snmp</application>, <application>net-snmp-utils</application> et recompilez/réinstallez les plugins Nagios."
+msgid ""
+"The &plugin-hpjd; plugin will only get compiled and installed if you have "
+"the <application>net-snmp</application> and <application>net-snmp-utils</"
+"application> packages installed on your system. Make sure the plugin exists "
+"in <filename class=\"directory\">/usr/local/nagios/libexec</filename> before "
+"you continue. If it doesn't, install <application>net-snmp</application> and "
+"<application>net-snmp-utils</application> and recompile/reinstall the Nagios "
+"plugins."
+msgstr ""
+"Le plugin &plugin-hpjd; sera compilé et installé seulement si vous avez les "
+"paquets <application>net-snmp</application> et <application>net-snmp-utils</"
+"application> installés sur votre système. Assurez-vous que le plugin soit "
+"présent dans <filename class=\"directory\">/usr/local/nagios/libexec</"
+"filename> avant de continuer. Si ce n'est pas le cas, installez "
+"<application>net-snmp</application>, <application>net-snmp-utils</"
+"application> et recompilez/réinstallez les plugins Nagios."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:115
-msgid "There are several steps you'll need to follow in order to monitor a new network printer. They are:"
-msgstr "Il y a plusieurs étapes à suivre pour pouvoir superviser une nouvelle imprimante réseau. Les voici:"
+msgid ""
+"There are several steps you'll need to follow in order to monitor a new "
+"network printer. They are:"
+msgstr ""
+"Il y a plusieurs étapes à suivre pour pouvoir superviser une nouvelle "
+"imprimante réseau. Les voici:"
 
 # type: Content of: <chapter><section><procedure><step><para>
 #: GettingStarted/monitoring-printers.xml:124
 msgid "Create new host and service definitions for monitoring the printer"
-msgstr "Créez de nouvelles définitions d'hôte et service pour la supervision de l'imprimante"
+msgstr ""
+"Créez de nouvelles définitions d'hôte et service pour la supervision de "
+"l'imprimante"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-printers.xml:142
-msgid "A <emphasis>check_hpjd</emphasis> command definition has been added to the <filename>commands.cfg</filename> file. This allows you to use the &plugin-hpjd; plugin to monitor network printers."
-msgstr "Une définition de commande <emphasis>check_hpjd</emphasis> a déjà été créé dans le fichier <filename>commands.cfg</filename> file. Cela permet d'utiliser le plugin &plugin-hpjd; pour superviser des imprimantes réseaux."
+msgid ""
+"A <emphasis>check_hpjd</emphasis> command definition has been added to the "
+"<filename>commands.cfg</filename> file. This allows you to use the &plugin-"
+"hpjd; plugin to monitor network printers."
+msgstr ""
+"Une définition de commande <emphasis>check_hpjd</emphasis> a déjà été créé "
+"dans le fichier <filename>commands.cfg</filename> file. Cela permet "
+"d'utiliser le plugin &plugin-hpjd; pour superviser des imprimantes réseaux."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-printers.xml:149
-msgid "A printer host template (called <emphasis>generic-printer</emphasis>) has already been created in the <filename>templates.cfg</filename> file. This allows you to add new printer host definitions in a simple manner."
-msgstr "Un gabarit d'hôte de type switch  (nommé <emphasis>generic-printer</emphasis>) a déjà été créé dans le fichier <filename>templates.cfg</filename>. Cela vous permet de rajouter des définitions d'hôtes de type imprimante de façon simple."
+msgid ""
+"A printer host template (called <emphasis>generic-printer</emphasis>) has "
+"already been created in the <filename>templates.cfg</filename> file. This "
+"allows you to add new printer host definitions in a simple manner."
+msgstr ""
+"Un gabarit d'hôte de type switch  (nommé <emphasis>generic-printer</"
+"emphasis>) a déjà été créé dans le fichier <filename>templates.cfg</"
+"filename>. Cela vous permet de rajouter des définitions d'hôtes de type "
+"imprimante de façon simple."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:156
-msgid "The above-mentioned config files can be found in the <filename class=\"directory\">/usr/local/nagios/etc/objects/</filename> directory. You can modify the definitions in these and other definitions to suit your needs better if you'd like. However, I'd recommend waiting until you're more familiar with configuring Nagios before doing so. For the time being, just follow the directions outlined below and you'll be monitoring your network printers in no time."
-msgstr "Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans le répertoire <filename class=\"directory\">/usr/local/nagios/etc/objects/</filename>. Vous pouvez modifier les définitions de ceux-ci ou en créez de nouvelles pour répondre le mieux à votre besoin. Quoi qu'il en soit, je vous recommande d'attendre d'avoir une meilleure connaissance de la configuration de Nagios avant de le faire. Pour le moment, contentez-vous de suivre les directions précisées ci-dessous et vous pourrez superviser vos imprimantes réseaux en un rien de temps."
+msgid ""
+"The above-mentioned config files can be found in the <filename class="
+"\"directory\">/usr/local/nagios/etc/objects/</filename> directory. You can "
+"modify the definitions in these and other definitions to suit your needs "
+"better if you'd like. However, I'd recommend waiting until you're more "
+"familiar with configuring Nagios before doing so. For the time being, just "
+"follow the directions outlined below and you'll be monitoring your network "
+"printers in no time."
+msgstr ""
+"Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans "
+"le répertoire <filename class=\"directory\">/usr/local/nagios/etc/objects/</"
+"filename>. Vous pouvez modifier les définitions de ceux-ci ou en créez de "
+"nouvelles pour répondre le mieux à votre besoin. Quoi qu'il en soit, je vous "
+"recommande d'attendre d'avoir une meilleure connaissance de la configuration "
+"de Nagios avant de le faire. Pour le moment, contentez-vous de suivre les "
+"directions précisées ci-dessous et vous pourrez superviser vos imprimantes "
+"réseaux en un rien de temps."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:168
-msgid "The first time you configure Nagios to monitor a network printer, you'll need to do a bit of extra work. Remember, you only need to do this for the *first* printer you monitor."
-msgstr "La première fois que vous configurez Nagios pour superviser une imprimante réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez à le faire que pour la *première* imprimante à superviser."
+msgid ""
+"The first time you configure Nagios to monitor a network printer, you'll "
+"need to do a bit of extra work. Remember, you only need to do this for the "
+"*first* printer you monitor."
+msgstr ""
+"La première fois que vous configurez Nagios pour superviser une imprimante "
+"réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez "
+"à le faire que pour la *première* imprimante à superviser."
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-printers.xml:179
@@ -312,13 +475,34 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:185
-msgid "What did you just do? You told Nagios to look to the <filename>/usr/local/nagios/etc/objects/printer.cfg</filename> to find additional object definitions. That's where you'll be adding host and service definitions for the printer. That configuration file already contains some sample host, hostgroup, and service definitions. For the *first* printer you monitor, you can simply modify the sample host and service definitions in that file, rather than creating new ones."
-msgstr "Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier <filename>/usr/local/nagios/etc/objects/printer.cfg</filename> pour y trouver des définitions d'objets additionnels. C'est là que vous ajouterez des définitions pour l'imprimante. Ce fichier de configuration contient déjà un exemple de définitions d'hôte, de groupe d'hôtes et de service. Pour la *première* imprimante que vous supervisez, vous pouvez simplement modifier les définitions d'exemples d'hôte et de service dans ce fichier plutôt que d'en créer de nouvelles."
+msgid ""
+"What did you just do? You told Nagios to look to the <filename>/usr/local/"
+"nagios/etc/objects/printer.cfg</filename> to find additional object "
+"definitions. That's where you'll be adding host and service definitions for "
+"the printer. That configuration file already contains some sample host, "
+"hostgroup, and service definitions. For the *first* printer you monitor, you "
+"can simply modify the sample host and service definitions in that file, "
+"rather than creating new ones."
+msgstr ""
+"Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier "
+"<filename>/usr/local/nagios/etc/objects/printer.cfg</filename> pour y "
+"trouver des définitions d'objets additionnels. C'est là que vous ajouterez "
+"des définitions pour l'imprimante. Ce fichier de configuration contient déjà "
+"un exemple de définitions d'hôte, de groupe d'hôtes et de service. Pour la "
+"*première* imprimante que vous supervisez, vous pouvez simplement modifier "
+"les définitions d'exemples d'hôte et de service dans ce fichier plutôt que "
+"d'en créer de nouvelles."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:197
-msgid "You'll need to create some <link linkend=\"configuringnagios-objectdefinitions\">object definitions</link> in order to monitor a new printer."
-msgstr "Vous allez devoir créer quelques <link linkend=\"configuringnagios-objectdefinitions\">définitions d'objets</link> pour pouvoir superviser une nouvelle imprimante."
+msgid ""
+"You'll need to create some <link linkend=\"configuringnagios-"
+"objectdefinitions\">object definitions</link> in order to monitor a new "
+"printer."
+msgstr ""
+"Vous allez devoir créer quelques <link linkend=\"configuringnagios-"
+"objectdefinitions\">définitions d'objets</link> pour pouvoir superviser une "
+"nouvelle imprimante."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:201
@@ -339,8 +523,21 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:208
-msgid "Add a new <link linkend=\"configuringnagios-objectdefinitions-host\">host</link> definition for the networked printer that you're going to monitor. If this is the *first* printer you're monitoring, you can simply modify the sample host definition in <filename>printer.cfg</filename>. Change the <varname>host_name</varname>, <varname>alias</varname>, and <varname>address</varname> fields to appropriate values for the printer."
-msgstr "Ajouter une nouvelle définition d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôte</link> pour l'imprimante réseau que vous souhaitez superviser. Si c'est la *première* que vous supervisez, vous pouvez simplement modifier l'exemple de définition d'hôte dans <filename>printer.cfg</filename>. Remplacez les champs <varname>host_name</varname>, <varname>alias</varname>, et <varname>address</varname> par les valeurs appropriées pour votre imprimante."
+msgid ""
+"Add a new <link linkend=\"configuringnagios-objectdefinitions-host\">host</"
+"link> definition for the networked printer that you're going to monitor. If "
+"this is the *first* printer you're monitoring, you can simply modify the "
+"sample host definition in <filename>printer.cfg</filename>. Change the "
+"<varname>host_name</varname>, <varname>alias</varname>, and "
+"<varname>address</varname> fields to appropriate values for the printer."
+msgstr ""
+"Ajouter une nouvelle définition d'<link linkend=\"configuringnagios-"
+"objectdefinitions-host\">hôte</link> pour l'imprimante réseau que vous "
+"souhaitez superviser. Si c'est la *première* que vous supervisez, vous "
+"pouvez simplement modifier l'exemple de définition d'hôte dans "
+"<filename>printer.cfg</filename>. Remplacez les champs <varname>host_name</"
+"varname>, <varname>alias</varname>, et <varname>address</varname> par les "
+"valeurs appropriées pour votre imprimante."
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-printers.xml:217
@@ -366,18 +563,43 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:227
-msgid "Now you can add some service definitions (to the same configuration file) to monitor different aspects of the printer. If this is the *first* printer you're monitoring, you can simply modify the sample service definition in <filename>printer.cfg</filename>."
-msgstr "Vous pouvez ajouter maintenant quelques définitions de services (dans le même fichier de configuration) pour superviser différents aspects de votre imprimante. Si c'est la *première* imprimante que vous supervisez, vous pouvez simplement modifier l'exemple de définition d'hôte dans <filename>printer.cfg</filename>."
+msgid ""
+"Now you can add some service definitions (to the same configuration file) to "
+"monitor different aspects of the printer. If this is the *first* printer "
+"you're monitoring, you can simply modify the sample service definition in "
+"<filename>printer.cfg</filename>."
+msgstr ""
+"Vous pouvez ajouter maintenant quelques définitions de services (dans le "
+"même fichier de configuration) pour superviser différents aspects de votre "
+"imprimante. Si c'est la *première* imprimante que vous supervisez, vous "
+"pouvez simplement modifier l'exemple de définition d'hôte dans "
+"<filename>printer.cfg</filename>."
 
 # type: Content of: <chapter><section><note><para>
 #: GettingStarted/monitoring-printers.xml:233
-msgid "Replace \"hplj2605dn\" in the example definitions below with the name you specified in the <varname>host_name</varname> directive of the host definition you just added."
-msgstr "Remplacez <quote><replaceable>hplj2605dn</replaceable></quote> dans les exemples de définitions ci-dessous par le nom que vous avez renseigné dans la directive <varname>host_name</varname> que vous venez d'ajouter dans la définition d'hôte."
+msgid ""
+"Replace \"hplj2605dn\" in the example definitions below with the name you "
+"specified in the <varname>host_name</varname> directive of the host "
+"definition you just added."
+msgstr ""
+"Remplacez <quote><replaceable>hplj2605dn</replaceable></quote> dans les "
+"exemples de définitions ci-dessous par le nom que vous avez renseigné dans "
+"la directive <varname>host_name</varname> que vous venez d'ajouter dans la "
+"définition d'hôte."
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:239
-msgid "Add the following service definition to check the status of the printer. The service uses the &plugin-hpjd; plugin to check the status of the printer every 10 minutes by default. The &protocol-snmp; community string used to query the printer is \"public\" in this example."
-msgstr "Ajoutez cette définition de service pour pouvoir superviser l'état de l'imprimante. Le service utilise le plugin &plugin-hpjd; pour vérifier l'état de l'imprimante toutes les 10 minutes par défaut. La communauté &protocol-snmp; utilisée dans cet exemple pour interrgoer l'imprimante est <quote>public</quote>."
+msgid ""
+"Add the following service definition to check the status of the printer. The "
+"service uses the &plugin-hpjd; plugin to check the status of the printer "
+"every 10 minutes by default. The &protocol-snmp; community string used to "
+"query the printer is \"public\" in this example."
+msgstr ""
+"Ajoutez cette définition de service pour pouvoir superviser l'état de "
+"l'imprimante. Le service utilise le plugin &plugin-hpjd; pour vérifier "
+"l'état de l'imprimante toutes les 10 minutes par défaut. La communauté "
+"&protocol-snmp; utilisée dans cet exemple pour interrgoer l'imprimante est "
+"<quote>public</quote>."
 
 # type: Content of: <chapter><section><programlisting>
 #: GettingStarted/monitoring-printers.xml:245
@@ -405,8 +627,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:256
-msgid "Add the following service definition to ping the printer every 10 minutes by default. This is useful for monitoring"
-msgstr "Ajoutez la définition de service suivante pour pinger l'imprimante toutes les 10 minutes par défaut. C'est utile pour superviser le "
+msgid ""
+"Add the following service definition to ping the printer every 10 minutes by "
+"default. This is useful for monitoring"
+msgstr ""
+"Ajoutez la définition de service suivante pour pinger l'imprimante toutes "
+"les 10 minutes par défaut. C'est utile pour superviser le "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para><acronym>
 #: GettingStarted/monitoring-printers.xml:257
@@ -448,6 +674,15 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: GettingStarted/monitoring-printers.xml:277
-msgid "Once you've added the new host and service definitions to the <filename>printer.cfg</filename> file, you're ready to start monitoring the printer. To do this, you'll need to <link linkend=\"runningnagios-verifyconfig\">verify your configuration</link> and <link linkend=\"runningnagios-startstop\">restart Nagios</link>."
-msgstr "Une fois que vous avez ajouté les définitions d'hôte et de service au fichier <filename>printer.cfg</filename>, vous êtes prêt à commencer la supervision de l'imprimante. Pour cela, vous aurez besoin de <link linkend=\"runningnagios-verifyconfig\">vérifier votre configuration</link> et de <link linkend=\"runningnagios-startstop\">redémarrer Nagios</link>."
-
+msgid ""
+"Once you've added the new host and service definitions to the "
+"<filename>printer.cfg</filename> file, you're ready to start monitoring the "
+"printer. To do this, you'll need to <link linkend=\"runningnagios-"
+"verifyconfig\">verify your configuration</link> and <link linkend="
+"\"runningnagios-startstop\">restart Nagios</link>."
+msgstr ""
+"Une fois que vous avez ajouté les définitions d'hôte et de service au "
+"fichier <filename>printer.cfg</filename>, vous êtes prêt à commencer la "
+"supervision de l'imprimante. Pour cela, vous aurez besoin de <link linkend="
+"\"runningnagios-verifyconfig\">vérifier votre configuration</link> et de "
+"<link linkend=\"runningnagios-startstop\">redémarrer Nagios</link>."

@@ -10,51 +10,57 @@
 	<title>Custom Object Variables</title>
 	<section>
 		<title>Introduction</title>
-		<para>Users often request that new variables be added to host, service, and 
-contact definitions. These include variables for &protocol-snmp; community, 
-MAC address, AIM username, Skype number, and street address. The list is 
-endless. The problem that I see with doing this is that it makes Nagios less 
-generic and more infrastructure-specific.  Nagios was intended to be 
-flexible, which meant things needed to be designed in a generic manner.  
-Host definitions in Nagios, for example, have a generic "address" variable 
-that can contain anything from an IP address to human-readable driving 
-directions - whatever is appropriate for the user's setup.</para>
-		<para>Still, there needs to be a method for admins to store information about 
-their infrastructure components in their Nagios configuration without 
-imposing a set of specific variables on others.  Nagios attempts to solve 
-this problem by allowing users to define custom variables in their object 
-definitions. Custom variables allow users to define additional properties in 
-their host, service, and contact definitions, and use their values in 
-notifications, event handlers, and host and service checks.</para>
+		<para>Les utilisateurs demandent souvent que de nouvelles variables puissent être
+ajoutés aux définitions d'hôtes, de services et de contacts. Ceci inclut des
+variables comme la communauté du protocole &protocol-snmp; l'adresse MAC, le
+nom d'utilisateur AIM, le numéro Skype ou une simple adresse. Le problème
+que je vois à faire ça est que Nagios devient alors moins générique et plus
+spécifique à un type d'infrasctructure. Nagios a été prévu pour être
+flexible, ce qui sous-entend que les choses doivent être pensées de façon
+générique. Par exemple, les définitions d'hôtes dans Nagios ont une variable
+générique <quote>address</quote> qui peut contenir n'importe quoi; de la
+simple adresse IP à l'adresse complète de type FQDN; quoique soit
+d'approprié à l'utilisateur.</para>
+		<para>Pourtant, il y a bien un besoin pour les administrateurs d'avoir la
+possibilité de stocker des informations à propos des composants de leur
+infrastructure dans la configuration de Nagios sans imposé un ensemble de
+variables spécifiques pour les autres. Nagios essaie de solutionner ce
+problème en autorisant les utilisateurs à définir des variables
+personnalisées dans leurs définitions d'objets. Les variables personnalisées
+permettent aux utilisateurs de définir des propriétés supplémentaires pour
+leurs hôtes, services et définitions de contacts et d'utiliser leurs valeurs
+dans les notifications, les gestionnaires d'événements et les contrôles
+d'hôtes et de services.</para>
 	</section>
 	<section>
-		<title>Custom Variable Basics</title>
-		<para>There are a few important things that you should note about custom 
-variables:</para>
+		<title>Principes de base des variables personnalisées</title>
+		<para>Il ya quelques points importants que vous devriez connaître sur les
+variables personnalisées :</para>
 		<itemizedlist>
 			<listitem>
-				<para>Custom variable names must begin with an underscore (_) to prevent name 
-collision with standard variables</para>
+				<para>Les noms de variables personnalisées doivent commencer par un underscore (_)
+pour prévenir tout conflit avec les variables standards.</para>
 			</listitem>
 			<listitem>
-				<para>Custom variable names are case-insensitive</para>
+				<para>Les noms de variables personnalisées sont insensibles à la casse</para>
 			</listitem>
 			<listitem>
-				<para>Custom variables are <link 
-linkend="advancedtopics-objectinheritance">inherited</link> from object 
-templates like normal variables</para>
+				<para>Les variables personnalisées sont <link
+linkend="advancedtopics-objectinheritance">héritées</link> des gabarits
+d'objets comme n'importe quelle variable standard</para>
 			</listitem>
 			<listitem>
-				<para>Scripts can reference custom variable values with <link 
-linkend="thebasics-macros">macros and environment variables</link>
+				<para>Les scripts peuvent référencer des valeurs de variables personnalisées avec
+les <link linkend="thebasics-macros">variables d'environnement et les
+macros</link>
 				</para>
 			</listitem>
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Examples</title>
-		<para>Here's an example of how custom variables can be defined in different types 
-of object definitions:</para>
+		<title>Exemples</title>
+		<para>Voici un exemple de la façon dont peuvent être définies les variables
+personnalisées dans différents types de définitions d'objets</para>
 		<programlisting>
 define host{
    host_name       linuxserver
@@ -84,17 +90,19 @@ define contact{
 		</programlisting>
 	</section>
 	<section>
-		<title>Custom Variables As Macros</title>
-		<para>Custom variable values can be referenced in scripts and executables that 
-Nagios runs for checks, notifications, etc. by using <link 
-linkend="thebasics-macros">macros</link> or environment variables.</para>
-		<para>In order to prevent name collision among custom variables from different 
-object types, Nagios prepends <quote>_HOST</quote>, <quote>_SERVICE</quote>, 
-or <quote>_CONTACT</quote> to the beginning of custom host, service, or 
-contact variables, respectively, in macro and environment variable 
-names. The table below shows the corresponding macro and environment 
-variable names for the custom variables that were defined in the example 
-above.</para>
+		<title>Les variables personnalisées comme macro</title>
+		<para>Les variables personnalisées peuvent être référencées dans des scripts et
+exécutables que Nagios utilisent pour exécuter les contrôles, notifications,
+etc... en utilisant les <link linkend="thebasics-macros">macros</link> ou
+variables d'environnement.</para>
+		<para>Pour éviter tous conflits de noms parmi les variables personnalisées de
+différents types d'objets, Nagios ajoute <quote>_HOST</quote>,
+<quote>_SERVICE</quote> ou <quote>_CONTACT</quote> au début des variables
+personnalisées d'hôtes, de services et de contacts des macros et des
+variables d'environnement. Le tableau ci-dessous montre la correspondance
+entre les variables personnalisées et leur macro ou variable d'environnement
+respectives pour les variables personnalisées définies dans l'exemple
+précédent.</para>
 		<informaltable frame="all">
 			<tgroup cols="4">
 			<colspec colnum="1" colwidth="12*"/>
@@ -107,20 +115,20 @@ above.</para>
 							<para>Object Type</para>
 						</entry>
 						<entry>
-							<para>Variable Name</para>
+							<para>Nom de variable</para>
 						</entry>
 						<entry>
 							<para>Macro Name</para>
 						</entry>
 						<entry>
-							<para>Environment Variable</para>
+							<para>Variable d'environnement</para>
 						</entry>
 					</row>
 				</thead>
 				<tbody>
 					<row>
 						<entry>
-							<para>Host</para>
+							<para>Hôte</para>
 						</entry>
 						<entry>
 							<para>MAC_ADDRESS</para>
@@ -134,7 +142,7 @@ above.</para>
 					</row>
 					<row>
 						<entry>
-							<para>Host</para>
+							<para>Hôte</para>
 						</entry>
 						<entry>
 							<para>RACK_NUMBER</para>
@@ -207,10 +215,10 @@ above.</para>
 		</informaltable>
 	</section>
 	<section>
-		<title>Custom Variables And Inheritance</title>
-		<para>Custom object variables are <link 
-linkend="advancedtopics-objectinheritance">inherited</link> just like 
-standard host, service, or contact variables.</para>
+		<title>Variables personnalisées et héritage</title>
+		<para>Les variables personnalisées d'objets peuvent être <link
+linkend="advancedtopics-objectinheritance">héritées</link> comme n'importe
+quelle variable standard d'hôte, de service ou de contact.</para>
 	</section>
 </chapter>
 

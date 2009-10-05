@@ -16,8 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: Content of: <chapter><section><title>
-#: About/whatsnew.xml:49
-#: TheBasics/macros.xml:12
+#: About/whatsnew.xml:49 TheBasics/macros.xml:12
 msgid "Macros"
 msgstr "Macros"
 
@@ -25,14 +24,17 @@ msgstr "Macros"
 #: GettingStarted/monitoring-routers.xml:327
 #: GettingStarted/monitoring-routers.xml:332
 #: GettingStarted/monitoring-routers.xml:382
-#: GettingStarted/monitoring-routers.xml:387
-#: TheBasics/macros.xml:171
+#: GettingStarted/monitoring-routers.xml:387 TheBasics/macros.xml:171
+#, fuzzy
 msgid "The"
-msgstr "La variable personnalisée"
+msgstr ""
+"#-#-#-#-#  monitoring-routers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"L'option\n"
+"#-#-#-#-#  macros.xml.po (docnagios 3)  #-#-#-#-#\n"
+"La variable personnalisée"
 
 # type: Content of: <chapter><section><para>
-#: ConfiguringNagios/configmain.xml:252
-#: TheBasics/macros.xml:25
+#: ConfiguringNagios/configmain.xml:252 TheBasics/macros.xml:25
 msgid "macros."
 msgstr "."
 
@@ -43,8 +45,16 @@ msgstr "Utilisation des macros dans les commandes"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:13
-msgid "One of the main features that make Nagios so flexible is the ability to use macros in command defintions. Macros allow you to reference information from hosts, services, and other sources in your commands."
-msgstr "Une des fonctionalités disponibles dans Nagios® est la possibilité d'utiliser des macros [NdT: macro-commandes] dans les définitions de commandes. Avant d'exécuter une commande, Nagios® remplacera toutes les macros dans celle-ci par les valeurs correspondantes. Cela vous permet de définir quelques commandes génériques que vous manipulerez à votre guise."
+msgid ""
+"One of the main features that make Nagios so flexible is the ability to use "
+"macros in command defintions. Macros allow you to reference information from "
+"hosts, services, and other sources in your commands."
+msgstr ""
+"Une des fonctionalités disponibles dans Nagios® est la possibilité "
+"d'utiliser des macros [NdT: macro-commandes] dans les définitions de "
+"commandes. Avant d'exécuter une commande, Nagios® remplacera toutes les "
+"macros dans celle-ci par les valeurs correspondantes. Cela vous permet de "
+"définir quelques commandes génériques que vous manipulerez à votre guise."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:18
@@ -53,18 +63,26 @@ msgstr "Substitution des macros"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:19
-msgid "Before Nagios executes a command, it will replace any macros it finds in the command definition with their corresponding values. This macro substitution occurs for all types of commands that Nagios executes - host and service checks, notifications, event handlers, etc."
-msgstr "Avant qu'une commande (contrôles d'hôte et de service, notifications, gestionnaires d'événements, etc.) soit exécutée, Nagios® va remplacer toutes les macros qu'il trouvera dans la définition de la commande par les valeurs correspondantes."
+msgid ""
+"Before Nagios executes a command, it will replace any macros it finds in the "
+"command definition with their corresponding values. This macro substitution "
+"occurs for all types of commands that Nagios executes - host and service "
+"checks, notifications, event handlers, etc."
+msgstr ""
+"Avant qu'une commande (contrôles d'hôte et de service, notifications, "
+"gestionnaires d'événements, etc.) soit exécutée, Nagios® va remplacer toutes "
+"les macros qu'il trouvera dans la définition de la commande par les valeurs "
+"correspondantes."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:23
 msgid "Certain macros may themselves contain other macros. These include the"
-msgstr "Certaines macros peuvent contenir elles-mêmes d'autres macros. Ceux-ci incluent les macros"
+msgstr ""
+"Certaines macros peuvent contenir elles-mêmes d'autres macros. Ceux-ci "
+"incluent les macros"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
-#: TheBasics/macros.xml:23
-#: TheBasics/macros.xml:24
-#: TheBasics/macros.xml:136
+#: TheBasics/macros.xml:23 TheBasics/macros.xml:24 TheBasics/macros.xml:136
 #: SecurityAndPerformanceTuning/security.xml:188
 #: SecurityAndPerformanceTuning/security.xml:193
 #: SecurityAndPerformanceTuning/security.xml:194
@@ -72,8 +90,7 @@ msgid ","
 msgstr ","
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
-#: TheBasics/macros.xml:25
-#: TheBasics/macros.xml:136
+#: TheBasics/macros.xml:25 TheBasics/macros.xml:136
 #: SecurityAndPerformanceTuning/security.xml:189
 msgid ", and"
 msgstr ", et"
@@ -85,8 +102,17 @@ msgstr "Exemple 1: La macro d'adresse de l'hôte"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:30
-msgid "When you use host and service macros in command definitions, they refer to values for the host or service for which the command is being run. Let's try an example. Assuming we are using a host definition and a check_ping command defined like this:"
-msgstr "Quand vous utilisez des macros d'hôte et de service dans les définitions de commandes, elles font référence aux valeurs de l'hôte ou du service pour lequel s'exécute la commande. Prenons un exemple. Supposons que nous ayons une définition d'hôte et une commande check_ping définies de la manière suivante :"
+msgid ""
+"When you use host and service macros in command definitions, they refer to "
+"values for the host or service for which the command is being run. Let's try "
+"an example. Assuming we are using a host definition and a check_ping command "
+"defined like this:"
+msgstr ""
+"Quand vous utilisez des macros d'hôte et de service dans les définitions de "
+"commandes, elles font référence aux valeurs de l'hôte ou du service pour "
+"lequel s'exécute la commande. Prenons un exemple. Supposons que nous ayons "
+"une définition d'hôte et une commande check_ping définies de la manière "
+"suivante :"
 
 # type: Content of: <chapter><section><programlisting>
 #: TheBasics/macros.xml:34
@@ -122,13 +148,25 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:47
-msgid "the expanded/final command line to be executed for the host's check command would look like this:"
-msgstr "La ligne de commande finale, après substitution, qui sera exécutée pour le contrôle de l'hôte ressemblera à ceci :"
+msgid ""
+"the expanded/final command line to be executed for the host's check command "
+"would look like this:"
+msgstr ""
+"La ligne de commande finale, après substitution, qui sera exécutée pour le "
+"contrôle de l'hôte ressemblera à ceci :"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:49
-msgid "Pretty simple, right? The beauty in this is that you can use a single command definition to check an unlimited number of hosts. Each host can be checked with the same command definition because each host's address is automatically substituted in the command line before execution."
-msgstr "Ce qui est beau c'est que vous pouvez utilisez une simple commande de contrôle pour un nombre illimité d'hôtes. Chaque hôte vont être contrôlé avec cette même commande parce que chaque adresse de vos hôtes seront automatiquement soumis pendant l'exécution de votre commande."
+msgid ""
+"Pretty simple, right? The beauty in this is that you can use a single "
+"command definition to check an unlimited number of hosts. Each host can be "
+"checked with the same command definition because each host's address is "
+"automatically substituted in the command line before execution."
+msgstr ""
+"Ce qui est beau c'est que vous pouvez utilisez une simple commande de "
+"contrôle pour un nombre illimité d'hôtes. Chaque hôte vont être contrôlé "
+"avec cette même commande parce que chaque adresse de vos hôtes seront "
+"automatiquement soumis pendant l'exécution de votre commande."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:54
@@ -137,8 +175,17 @@ msgstr "Exemple 2: Les commandes d'Argument de macros "
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:55
-msgid "You can pass arguments to commands as well, which is quite handy if you'd like to keep your command definitions rather generic. Arguments are specified in the object (i.e. host or service)  definition, by separating them from the command name with exclamation points (!) like so:"
-msgstr "Vous pouvez aussi passer des paramètres aux commandes, ce qui est pratique si vous voulez avoir des définitions de commandes plus génériques. Les paramètres sont spécifiés dans la définition de l'objet (c.-à-d. de l'hôte ou du service), en les séparant du nom de la commande par des points d'exclamation (!) comme ceci :"
+msgid ""
+"You can pass arguments to commands as well, which is quite handy if you'd "
+"like to keep your command definitions rather generic. Arguments are "
+"specified in the object (i.e. host or service)  definition, by separating "
+"them from the command name with exclamation points (!) like so:"
+msgstr ""
+"Vous pouvez aussi passer des paramètres aux commandes, ce qui est pratique "
+"si vous voulez avoir des définitions de commandes plus génériques. Les "
+"paramètres sont spécifiés dans la définition de l'objet (c.-à-d. de l'hôte "
+"ou du service), en les séparant du nom de la commande par des points "
+"d'exclamation (!) comme ceci :"
 
 # type: Content of: <chapter><section><programlisting>
 #: TheBasics/macros.xml:58
@@ -164,13 +211,23 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:66
-msgid "In the example above, the service check command has two arguments (which can be referenced with <link linkend=\"thebasics-macrolist-arg\">$ARGn$</link> macros). The $ARG1$ macro will be \"200.0,80%\" and"
-msgstr "Dans l'exemple ci-dessus, la commande de contrôle du service a deux paramètres (auxquels on fait référence par les macros $ARGn$). La macro $ARG1$ vaudra \"200.0,80%\" et $ARG2$"
+msgid ""
+"In the example above, the service check command has two arguments (which can "
+"be referenced with <link linkend=\"thebasics-macrolist-arg\">$ARGn$</link> "
+"macros). The $ARG1$ macro will be \"200.0,80%\" and"
+msgstr ""
+"Dans l'exemple ci-dessus, la commande de contrôle du service a deux "
+"paramètres (auxquels on fait référence par les macros $ARGn$). La macro $ARG1"
+"$ vaudra \"200.0,80%\" et $ARG2$"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:68
-msgid "will be \"400.0,40%\" (both without quotes).  Assuming we are using the host definition given earlier and a &plugin-ping; command defined like this:"
-msgstr "vaudra \"400.0,40%\" (sans les guillemets). Supposons que nous utilisons la définition d'hôte ci-dessus et une commande check_ping définie comme ceci :"
+msgid ""
+"will be \"400.0,40%\" (both without quotes).  Assuming we are using the host "
+"definition given earlier and a &plugin-ping; command defined like this:"
+msgstr ""
+"vaudra \"400.0,40%\" (sans les guillemets). Supposons que nous utilisons la "
+"définition d'hôte ci-dessus et une commande check_ping définie comme ceci :"
 
 # type: Content of: <chapter><section><programlisting>
 #: TheBasics/macros.xml:71
@@ -192,13 +249,24 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:77
-msgid "the expanded/final command line to be executed for the service's check command would look like this:"
-msgstr "La ligne de commande finale à exécuter pour le contrôle du service sera :"
+msgid ""
+"the expanded/final command line to be executed for the service's check "
+"command would look like this:"
+msgstr ""
+"La ligne de commande finale à exécuter pour le contrôle du service sera :"
 
 # type: Content of: <chapter><section><para><tip><para>
 #: TheBasics/macros.xml:79
-msgid "If you need to pass bang (!) characters in your command arguments, you can do so by escaping them with a backslash (\\). If you need to include backslashes in your command arguments, they should also be escaped with a backslash."
-msgstr "Si vous devez passer des points d'exclamations (!) dans vos arguments de commandes, vous pouvez faire ainsi en les espaçant avec un backslash (\\). Si vous devez inclure des backslashes dans vos arguments de commandes, ils devront aussi être espacés avec un backslash."
+msgid ""
+"If you need to pass bang (!) characters in your command arguments, you can "
+"do so by escaping them with a backslash (\\). If you need to include "
+"backslashes in your command arguments, they should also be escaped with a "
+"backslash."
+msgstr ""
+"Si vous devez passer des points d'exclamations (!) dans vos arguments de "
+"commandes, vous pouvez faire ainsi en les espaçant avec un backslash (\\). "
+"Si vous devez inclure des backslashes dans vos arguments de commandes, ils "
+"devront aussi être espacés avec un backslash."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:84
@@ -207,43 +275,80 @@ msgstr "Macro à la demande"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:85
-msgid "Normally when you use host and service macros in command definitions, they refer to values for the host or service for which the command is being run. For instance, if a host check command is being executed for a host named \"linuxbox\", all the <link linkend=\"thebasics-macrolist\">standard host macros</link> will refer to values for that host (\"linuxbox\")."
-msgstr "Normalement, quand vous utilisez des macros d'hôte ou de service dans les définitions de commandes, elles font référence aux valeurs de l'hôte ou du service pour lequel s'exécute la commande. Par exemple, si la commande de contrôle d'un hôte s'exécute pour l'hôte appelé \"linuxbox\", toutes les macros d'hôte listées dans le tableau ci-après font référence aux valeurs de cet hôte (\"linuxbox\")."
+msgid ""
+"Normally when you use host and service macros in command definitions, they "
+"refer to values for the host or service for which the command is being run. "
+"For instance, if a host check command is being executed for a host named "
+"\"linuxbox\", all the <link linkend=\"thebasics-macrolist\">standard host "
+"macros</link> will refer to values for that host (\"linuxbox\")."
+msgstr ""
+"Normalement, quand vous utilisez des macros d'hôte ou de service dans les "
+"définitions de commandes, elles font référence aux valeurs de l'hôte ou du "
+"service pour lequel s'exécute la commande. Par exemple, si la commande de "
+"contrôle d'un hôte s'exécute pour l'hôte appelé \"linuxbox\", toutes les "
+"macros d'hôte listées dans le tableau ci-après font référence aux valeurs de "
+"cet hôte (\"linuxbox\")."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:90
-msgid "If you would like to reference values for another host or service in a command (for which the command is not being run), you can use what are called \"on-demand\" macros.  On-demand macros look like normal macros, except for the fact that they contain an identifier for the host or service from which they should get their value. Here's the basic format for on-demand macros:"
-msgstr "Si vous souhaitez faire référence aux valeurs d'un autre hôte ou service dans une commande (pour lequel ne s'exécute pas la commande), vous pouvez utiliser ce qu'on appellle des macros \"à la demande\". Les macros à la demande ressemblent aux macros normales, mis à part qu'elle contiennent l'identifiant de l'hôte ou du service où aller chercher leur valeur. Voici la syntaxe de base pour les macros à la demande :"
+msgid ""
+"If you would like to reference values for another host or service in a "
+"command (for which the command is not being run), you can use what are "
+"called \"on-demand\" macros.  On-demand macros look like normal macros, "
+"except for the fact that they contain an identifier for the host or service "
+"from which they should get their value. Here's the basic format for on-"
+"demand macros:"
+msgstr ""
+"Si vous souhaitez faire référence aux valeurs d'un autre hôte ou service "
+"dans une commande (pour lequel ne s'exécute pas la commande), vous pouvez "
+"utiliser ce qu'on appellle des macros \"à la demande\". Les macros à la "
+"demande ressemblent aux macros normales, mis à part qu'elle contiennent "
+"l'identifiant de l'hôte ou du service où aller chercher leur valeur. Voici "
+"la syntaxe de base pour les macros à la demande :"
 
 # type: Content of: <chapter><section><para>
-#: TheBasics/macros.xml:103
-#: TheBasics/macros.xml:136
+#: TheBasics/macros.xml:103 TheBasics/macros.xml:136
 msgid "Replace"
 msgstr "Remplace"
 
 # type: Content of: <chapter><section><para>
-#: TheBasics/macros.xml:103
-#: TheBasics/servicechecks.xml:21
-#: TheBasics/activechecks.xml:62
-#: AdvancedTopics/extcommands.xml:74
+#: TheBasics/macros.xml:103 TheBasics/servicechecks.xml:21
+#: TheBasics/activechecks.xml:62 AdvancedTopics/extcommands.xml:74
 #: SecurityAndPerformanceTuning/nagiostats.xml:104
 msgid "and"
 msgstr "et"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:103
-msgid "with the name of one of the standard host of service macros found <link linkend=\"thebasics-macrolist\">here</link>."
-msgstr "avec le nom d'une des macros standard d'hôte ou de service trouvé <link linkend=\"thebasics-macrolist\">ici</link>."
+msgid ""
+"with the name of one of the standard host of service macros found <link "
+"linkend=\"thebasics-macrolist\">here</link>."
+msgstr ""
+"avec le nom d'une des macros standard d'hôte ou de service trouvé <link "
+"linkend=\"thebasics-macrolist\">ici</link>."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:105
-msgid "Note that the macro name is separated from the host or service identifier by a colon (:).  For on-demand service macros, the service identifier consists of both a host name and a service description - these are separated by a colon (:) as well."
-msgstr "Notez que le nom de la macro est séparé de l'identifiant de l'hôte ou du service par deux points (:). Pour les macros de service à la demande, l'identifiant du service est composé d'un nom d'hôte et d'une description de service - qui sont séparés par deux point (:) également."
+msgid ""
+"Note that the macro name is separated from the host or service identifier by "
+"a colon (:).  For on-demand service macros, the service identifier consists "
+"of both a host name and a service description - these are separated by a "
+"colon (:) as well."
+msgstr ""
+"Notez que le nom de la macro est séparé de l'identifiant de l'hôte ou du "
+"service par deux points (:). Pour les macros de service à la demande, "
+"l'identifiant du service est composé d'un nom d'hôte et d'une description de "
+"service - qui sont séparés par deux point (:) également."
 
 # type: Content of: <chapter><section><para><tip><para>
 #: TheBasics/macros.xml:108
-msgid "On-demand service macros can contain an empty host name field. In this case the name of the host associated with the service will automatically be used."
-msgstr "Le service de macros à la demande peut contenir un champ de nom d'hôte vide. Dans ce cas, le nom de l'hôte est automatiquement associé dès que le service est utilisé."
+msgid ""
+"On-demand service macros can contain an empty host name field. In this case "
+"the name of the host associated with the service will automatically be used."
+msgstr ""
+"Le service de macros à la demande peut contenir un champ de nom d'hôte vide. "
+"Dans ce cas, le nom de l'hôte est automatiquement associé dès que le service "
+"est utilisé."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:110
@@ -252,8 +357,13 @@ msgstr "Voici des exemples de macros d'hôte et de service à la demande :"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:114
-msgid "On-demand macros are also available for hostgroup, servicegroup, contact, and contactgroup macros. For example:"
-msgstr "Les macros à la demande sont aussi valable pour les macros des groupes d'hôtes, des groupes de services, des contacts et des groupes de contact. Par exemple:"
+msgid ""
+"On-demand macros are also available for hostgroup, servicegroup, contact, "
+"and contactgroup macros. For example:"
+msgstr ""
+"Les macros à la demande sont aussi valable pour les macros des groupes "
+"d'hôtes, des groupes de services, des contacts et des groupes de contact. "
+"Par exemple:"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:121
@@ -262,23 +372,44 @@ msgstr "Les groupes de macros à la demande"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:122
-msgid "You can obtain the values of a macro across all contacts, hosts, or services in a specific group by using a special format for your on-demand macro declaration. You do this by referencing a specific host group, service group, or contact group name in an on-demand macro, like so:"
-msgstr "Vous pouvez obtenir les valeurs d'une macro à travers tous les contacts, les hôtes, ou les services dans un groupe spécifique en utilisant un format spécial dans votre déclaration de macro à la demande. Vous le faites en vous référant à un groupe d'hôte spécifique, un groupe de service, ou le nom du groupe de contact dans une macro à la demande, comme ainsi :"
+msgid ""
+"You can obtain the values of a macro across all contacts, hosts, or services "
+"in a specific group by using a special format for your on-demand macro "
+"declaration. You do this by referencing a specific host group, service "
+"group, or contact group name in an on-demand macro, like so:"
+msgstr ""
+"Vous pouvez obtenir les valeurs d'une macro à travers tous les contacts, les "
+"hôtes, ou les services dans un groupe spécifique en utilisant un format "
+"spécial dans votre déclaration de macro à la demande. Vous le faites en vous "
+"référant à un groupe d'hôte spécifique, un groupe de service, ou le nom du "
+"groupe de contact dans une macro à la demande, comme ainsi :"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:136
-msgid "with the name of one of the standard host, service, or contact macros found <link linkend=\"thebasics-macrolist\">here</link>. The delimiter you specify is used to separate macro values for each group member."
-msgstr "avec le nom de macro d'un hôte standard, un service, ou le contact trouvé <link linkend=\"thebasics-macrolist\">ici</link>. Le délimiteur que vous spécifiez est utilisé pour séparer des valeurs de macro pour chaque membre d'un groupe."
+msgid ""
+"with the name of one of the standard host, service, or contact macros found "
+"<link linkend=\"thebasics-macrolist\">here</link>. The delimiter you specify "
+"is used to separate macro values for each group member."
+msgstr ""
+"avec le nom de macro d'un hôte standard, un service, ou le contact trouvé "
+"<link linkend=\"thebasics-macrolist\">ici</link>. Le délimiteur que vous "
+"spécifiez est utilisé pour séparer des valeurs de macro pour chaque membre "
+"d'un groupe."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:140
-msgid "For example, the following macro will return a comma-separated list of host state ids for hosts that are members of the hg1 hostgroup:"
-msgstr "Par exemple, la macro suivante retournera une liste d'état hôte séparé par des virgules pour les hôtes membres du groupe hg1:"
+msgid ""
+"For example, the following macro will return a comma-separated list of host "
+"state ids for hosts that are members of the hg1 hostgroup:"
+msgstr ""
+"Par exemple, la macro suivante retournera une liste d'état hôte séparé par "
+"des virgules pour les hôtes membres du groupe hg1:"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:143
 msgid "This macro definition will return something that looks like this:"
-msgstr "La définition de cette macro retournera quelque chose ressemblant à ça:"
+msgstr ""
+"La définition de cette macro retournera quelque chose ressemblant à ça:"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:147
@@ -287,13 +418,22 @@ msgstr "Les macros de variable personnalisée"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:148
-msgid "Any <link linkend=\"configuringnagios-customobjectvars\">custom object variables</link> that you define in host, service, or contact definitions are also available as macros.  Custom variable macros are named as follows:"
-msgstr "N'importe quelles <link linkend=\"configuringnagios-customobjectvars\">variables d'objet personnalisées</link> que vous définissez dans la définition de l'hôte, du service, ou du contact sont aussi disponibles comme macros. La macro de variable personnalisée est appelée comme suit :"
+msgid ""
+"Any <link linkend=\"configuringnagios-customobjectvars\">custom object "
+"variables</link> that you define in host, service, or contact definitions "
+"are also available as macros.  Custom variable macros are named as follows:"
+msgstr ""
+"N'importe quelles <link linkend=\"configuringnagios-customobjectvars"
+"\">variables d'objet personnalisées</link> que vous définissez dans la "
+"définition de l'hôte, du service, ou du contact sont aussi disponibles comme "
+"macros. La macro de variable personnalisée est appelée comme suit :"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:162
 msgid "Take the following host definition with a custom variable called \""
-msgstr "Prenez la définition d'hôte suivante avec une variable personnalisée appelée \""
+msgstr ""
+"Prenez la définition d'hôte suivante avec une variable personnalisée appelée "
+"\""
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:162
@@ -329,8 +469,14 @@ msgstr "serait disponible dans une macro appelée"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:172
-msgid ". More information on custom object variables and how they can be used in macros can be found <link linkend=\"configuringnagios-customobjectvars\">here</link>."
-msgstr ". Plus d'information sur les variables personnalisées d'objets et comment les utiliser dans des macros peut être trouvé <link linkend=\"configuringnagios-customobjectvars\">ici</link>."
+msgid ""
+". More information on custom object variables and how they can be used in "
+"macros can be found <link linkend=\"configuringnagios-customobjectvars"
+"\">here</link>."
+msgstr ""
+". Plus d'information sur les variables personnalisées d'objets et comment "
+"les utiliser dans des macros peut être trouvé <link linkend="
+"\"configuringnagios-customobjectvars\">ici</link>."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:176
@@ -339,64 +485,96 @@ msgstr "Nettoyage des macros"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:177
-msgid "Some macros are stripped of potentially dangerous shell metacharacters before being substituted into commands to be executed. Which characters are stripped from the macros depends on the setting of the <link linkend=\"configuringnagios-configmain-illegal_macro_output_chars\">illegal_macro_output_chars</link> directive.  The following macros are stripped of potentially dangerous characters:"
-msgstr "Les valeurs de certaines macros sont dépouillées des métacaractères du shell potentiellement dangereux, avant d'être remplacées dans la commande à exécuter. Les caractéres qui seront supprimés dans les macros sont définis par le paramètre <link linkend=\"configuringnagios-configmain-illegal_macro_output_chars\">illegal_macro_output_chars</link>. Ce nettoyage s'applique aux macros suivantes :"
+msgid ""
+"Some macros are stripped of potentially dangerous shell metacharacters "
+"before being substituted into commands to be executed. Which characters are "
+"stripped from the macros depends on the setting of the <link linkend="
+"\"configuringnagios-configmain-illegal_macro_output_chars"
+"\">illegal_macro_output_chars</link> directive.  The following macros are "
+"stripped of potentially dangerous characters:"
+msgstr ""
+"Les valeurs de certaines macros sont dépouillées des métacaractères du shell "
+"potentiellement dangereux, avant d'être remplacées dans la commande à "
+"exécuter. Les caractéres qui seront supprimés dans les macros sont définis "
+"par le paramètre <link linkend=\"configuringnagios-configmain-"
+"illegal_macro_output_chars\">illegal_macro_output_chars</link>. Ce nettoyage "
+"s'applique aux macros suivantes :"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: TheBasics/macros.xml:184
-#: TheBasics/macrolist.xml:1016
+#: TheBasics/macros.xml:184 TheBasics/macrolist.xml:1016
 msgid "<link linkend=\"thebasics-macrolist-hostoutput\">$HOSTOUTPUT$</link>"
 msgstr "<link linkend=\"thebasics-macrolist-hostoutput\">$HOSTOUTPUT$</link>"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: TheBasics/macros.xml:189
-#: TheBasics/macrolist.xml:1048
-msgid "<link linkend=\"thebasics-macrolist-longhostoutput\">$LONGHOSTOUTPUT$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-longhostoutput\">$LONGHOSTOUTPUT$</link>"
+#: TheBasics/macros.xml:189 TheBasics/macrolist.xml:1048
+msgid ""
+"<link linkend=\"thebasics-macrolist-longhostoutput\">$LONGHOSTOUTPUT$</link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-longhostoutput\">$LONGHOSTOUTPUT$</link>"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: TheBasics/macros.xml:194
-#: TheBasics/macrolist.xml:1080
-msgid "<link linkend=\"thebasics-macrolist-hostperfdata\">$HOSTPERFDATA$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-hostperfdata\">$HOSTPERFDATA$</link>"
+#: TheBasics/macros.xml:194 TheBasics/macrolist.xml:1080
+msgid ""
+"<link linkend=\"thebasics-macrolist-hostperfdata\">$HOSTPERFDATA$</link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-hostperfdata\">$HOSTPERFDATA$</link>"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/macros.xml:199
-msgid "<link linkend=\"thebasics-macrolist-hostackauthor\">$HOSTACKAUTHOR$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-hostackauthor\">$HOSTACKAUTHOR$</link>"
+msgid ""
+"<link linkend=\"thebasics-macrolist-hostackauthor\">$HOSTACKAUTHOR$</link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-hostackauthor\">$HOSTACKAUTHOR$</link>"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/macros.xml:204
-msgid "<link linkend=\"thebasics-macrolist-hostackcomment\">$HOSTACKCOMMENT$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-hostackcomment\">$HOSTACKCOMMENT$</link>"
+msgid ""
+"<link linkend=\"thebasics-macrolist-hostackcomment\">$HOSTACKCOMMENT$</link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-hostackcomment\">$HOSTACKCOMMENT$</link>"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: TheBasics/macros.xml:209
-#: TheBasics/macrolist.xml:2632
-msgid "<link linkend=\"thebasics-macrolist-serviceoutput\">$SERVICEOUTPUT$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-serviceoutput\">$SERVICEOUTPUT$</link>"
+#: TheBasics/macros.xml:209 TheBasics/macrolist.xml:2632
+msgid ""
+"<link linkend=\"thebasics-macrolist-serviceoutput\">$SERVICEOUTPUT$</link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-serviceoutput\">$SERVICEOUTPUT$</link>"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: TheBasics/macros.xml:214
-#: TheBasics/macrolist.xml:2664
-msgid "<link linkend=\"thebasics-macrolist-longserviceoutput\">$LONGSERVICEOUTPUT$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-longserviceoutput\">$LONGSERVICEOUTPUT$</link>"
+#: TheBasics/macros.xml:214 TheBasics/macrolist.xml:2664
+msgid ""
+"<link linkend=\"thebasics-macrolist-longserviceoutput\">$LONGSERVICEOUTPUT$</"
+"link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-longserviceoutput\">$LONGSERVICEOUTPUT$</"
+"link>"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: TheBasics/macros.xml:219
-#: TheBasics/macrolist.xml:2696
-msgid "<link linkend=\"thebasics-macrolist-serviceperfdata\">$SERVICEPERFDATA$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-serviceperfdata\">$SERVICEPERFDATA$</link>"
+#: TheBasics/macros.xml:219 TheBasics/macrolist.xml:2696
+msgid ""
+"<link linkend=\"thebasics-macrolist-serviceperfdata\">$SERVICEPERFDATA$</"
+"link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-serviceperfdata\">$SERVICEPERFDATA$</"
+"link>"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/macros.xml:224
-msgid "<link linkend=\"thebasics-macrolist-serviceackauthor\">$SERVICEACKAUTHOR$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-serviceackauthor\">$SERVICEACKAUTHOR$</link>"
+msgid ""
+"<link linkend=\"thebasics-macrolist-serviceackauthor\">$SERVICEACKAUTHOR$</"
+"link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-serviceackauthor\">$SERVICEACKAUTHOR$</"
+"link>"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: TheBasics/macros.xml:229
-msgid "<link linkend=\"thebasics-macrolist-serviceackcomment\">$SERVICEACKCOMMENT$</link>"
-msgstr "<link linkend=\"thebasics-macrolist-serviceackcomment\">$SERVICEACKCOMMENT$</link>"
+msgid ""
+"<link linkend=\"thebasics-macrolist-serviceackcomment\">$SERVICEACKCOMMENT$</"
+"link>"
+msgstr ""
+"<link linkend=\"thebasics-macrolist-serviceackcomment\">$SERVICEACKCOMMENT$</"
+"link>"
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:235
@@ -405,13 +583,36 @@ msgstr "Macros et variables d'environnement"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:236
-msgid "Most macros are made available as environment variables for easy reference by scripts or commands that are executed by Nagios. For purposes of security and sanity, <link linkend=\"thebasics-macrolist-user\">$USERn$</link> and \"on-demand\" host and service macros are not made available as environment variables."
-msgstr "A partir de la version 2.0 de Nagios®, la plupart des macros sont disponibles sous forme de variables d'environnement. Cela signifie que les scripts lancés par Nagios® (c.-à-d. les commandes de contrôle de service et d'hôte, les commandes de notification, etc.) peuvent faire référence à ces macros directement en tant que variables d'environnement standard. Pour des raisons de sécurité et de bon sens, <link linkend=\"thebasics-macrolist-user\">$USERn$</link> et les macros d'hôte et de service à la demande ne sont pas disponibles comme variables d'environnement."
+msgid ""
+"Most macros are made available as environment variables for easy reference "
+"by scripts or commands that are executed by Nagios. For purposes of security "
+"and sanity, <link linkend=\"thebasics-macrolist-user\">$USERn$</link> and "
+"\"on-demand\" host and service macros are not made available as environment "
+"variables."
+msgstr ""
+"A partir de la version 2.0 de Nagios®, la plupart des macros sont "
+"disponibles sous forme de variables d'environnement. Cela signifie que les "
+"scripts lancés par Nagios® (c.-à-d. les commandes de contrôle de service et "
+"d'hôte, les commandes de notification, etc.) peuvent faire référence à ces "
+"macros directement en tant que variables d'environnement standard. Pour des "
+"raisons de sécurité et de bon sens, <link linkend=\"thebasics-macrolist-user"
+"\">$USERn$</link> et les macros d'hôte et de service à la demande ne sont "
+"pas disponibles comme variables d'environnement."
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:239
-msgid "Environment variables that contain standard macros are named the same as their corresponding macro names (listed <link linkend=\"thebasics-macrolist\">here</link>), with \"NAGIOS_\" prepended to their names. For example, the <link linkend=\"thebasics-macrolist-hostname\">$HOSTNAME$</link> macro would be available as an environment variable named \"NAGIOS_HOSTNAME\"."
-msgstr "Les variables d'environnement qui contiennent des macros sont nommées comme les macros correspondantes (listées <link linkend=\"thebasics-macrolist\">ici</link>), avec le préfixe \"NAGIOS_\". Par exemple, la macro <link linkend=\"thebasics-macrolist-hostname\">$HOSTNAME$</link> est disponible à travers la variable d'environnement nommée \"NAGIOS_HOSTNAME\"."
+msgid ""
+"Environment variables that contain standard macros are named the same as "
+"their corresponding macro names (listed <link linkend=\"thebasics-macrolist"
+"\">here</link>), with \"NAGIOS_\" prepended to their names. For example, the "
+"<link linkend=\"thebasics-macrolist-hostname\">$HOSTNAME$</link> macro would "
+"be available as an environment variable named \"NAGIOS_HOSTNAME\"."
+msgstr ""
+"Les variables d'environnement qui contiennent des macros sont nommées comme "
+"les macros correspondantes (listées <link linkend=\"thebasics-macrolist"
+"\">ici</link>), avec le préfixe \"NAGIOS_\". Par exemple, la macro <link "
+"linkend=\"thebasics-macrolist-hostname\">$HOSTNAME$</link> est disponible à "
+"travers la variable d'environnement nommée \"NAGIOS_HOSTNAME\"."
 
 # type: Content of: <chapter><section><title>
 #: TheBasics/macros.xml:245
@@ -420,6 +621,11 @@ msgstr "Validité des macros"
 
 # type: Content of: <chapter><section><para>
 #: TheBasics/macros.xml:246
-msgid "A list of all the macros that are available in Nagios, as well as a chart of when they can be used, can be found <link linkend=\"thebasics-macrolist\">here</link>."
-msgstr "Une liste de tous les macros qui sont disponibles dans Nagios, aussi bien qu'un graphique d'utilisation, peut être trouvée <link linkend=\"thebasics-macrolist\">ici</link>."
-
+msgid ""
+"A list of all the macros that are available in Nagios, as well as a chart of "
+"when they can be used, can be found <link linkend=\"thebasics-macrolist"
+"\">here</link>."
+msgstr ""
+"Une liste de tous les macros qui sont disponibles dans Nagios, aussi bien "
+"qu'un graphique d'utilisation, peut être trouvée <link linkend=\"thebasics-"
+"macrolist\">ici</link>."

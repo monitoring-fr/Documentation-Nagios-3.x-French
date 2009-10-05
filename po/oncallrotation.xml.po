@@ -22,43 +22,25 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -69,8 +51,7 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
@@ -81,18 +62,57 @@ msgstr "Les astreintes à la demande"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:14
-msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-timeperiods.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Admins often have to shoulder the burden of answering pagers, cell phone calls, etc. when they least desire them. No one likes to be woken up at 4 am to fix a problem.  But its often better to fix the problem in the middle of the night, rather than face the wrath of an unhappy boss when you stroll in at 9 am the next morning."
-msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-timeperiods.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>Les Administrateurs peuvent souvent être dérangés au téléphone, les appels de téléphone cellulaire, etc. à n'importe quel moment. Personne n'aime être réveillé à 4h00 pour fixer un problème. Mais c'est souvent mieux pour régler le problème dans le milieu de la nuit, plutôt que de voir le visage en colère du patron malheureux quand vous vous promenez à 9h le matin suivant."
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-"
+"contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> "
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-"
+"timeperiods.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> "
+"Admins often have to shoulder the burden of answering pagers, cell phone "
+"calls, etc. when they least desire them. No one likes to be woken up at 4 am "
+"to fix a problem.  But its often better to fix the problem in the middle of "
+"the night, rather than face the wrath of an unhappy boss when you stroll in "
+"at 9 am the next morning."
+msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-"
+"contacts.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> "
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/objects-"
+"timeperiods.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>Les "
+"Administrateurs peuvent souvent être dérangés au téléphone, les appels de "
+"téléphone cellulaire, etc. à n'importe quel moment. Personne n'aime être "
+"réveillé à 4h00 pour fixer un problème. Mais c'est souvent mieux pour régler "
+"le problème dans le milieu de la nuit, plutôt que de voir le visage en "
+"colère du patron malheureux quand vous vous promenez à 9h le matin suivant."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:28
-msgid "For those lucky admins who have a team of gurus who can help share the responsibility of answering alerts, on-call rotations are often setup. Multiple admins will often alternate taking notifications on weekends, weeknights, holidays, etc."
-msgstr "Pour ces administrateurs chanceux qui peuvent se partager la responsabilité de répondre aux alertes, les astreintes à la demande est souvent le choix judicieux. Plusieurs administrateurs vont alternativement gérer les notifications les week-end, les nuits, les vacances, ect..."
+msgid ""
+"For those lucky admins who have a team of gurus who can help share the "
+"responsibility of answering alerts, on-call rotations are often setup. "
+"Multiple admins will often alternate taking notifications on weekends, "
+"weeknights, holidays, etc."
+msgstr ""
+"Pour ces administrateurs chanceux qui peuvent se partager la responsabilité "
+"de répondre aux alertes, les astreintes à la demande est souvent le choix "
+"judicieux. Plusieurs administrateurs vont alternativement gérer les "
+"notifications les week-end, les nuits, les vacances, ect..."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:31
-msgid "I'll show you how you can create <link linkend=\"thebasics-timeperiods\">timeperiod</link> definitions in a way that can facilitate most on-call notification rotations.  These definitions won't handle human issues that will inevitably crop up (admins calling in sick, swapping shifts, or throwing their pagers into the river), but they will allow you to setup a basic structure that should work the majority of the time."
-msgstr "Nous allons vous montrer comment créer des définitions de <link linkend=\"thebasics-timeperiods\">période de temps</link> pour vous faciliter le plus possible la rotation de l'astreinte. Ces définitions ne pourront pas remplacer une intervention humaine (un administrateur appelé est malade, un changement de dernière minute, un lançé de téléphone dans la rivière), mais ceci permettra d'avoir une installation concordant avec le fonctionnement de votre planning d'entreprise."
+msgid ""
+"I'll show you how you can create <link linkend=\"thebasics-timeperiods"
+"\">timeperiod</link> definitions in a way that can facilitate most on-call "
+"notification rotations.  These definitions won't handle human issues that "
+"will inevitably crop up (admins calling in sick, swapping shifts, or "
+"throwing their pagers into the river), but they will allow you to setup a "
+"basic structure that should work the majority of the time."
+msgstr ""
+"Nous allons vous montrer comment créer des définitions de <link linkend="
+"\"thebasics-timeperiods\">période de temps</link> pour vous faciliter le "
+"plus possible la rotation de l'astreinte. Ces définitions ne pourront pas "
+"remplacer une intervention humaine (un administrateur appelé est malade, un "
+"changement de dernière minute, un lançé de téléphone dans la rivière), mais "
+"ceci permettra d'avoir une installation concordant avec le fonctionnement de "
+"votre planning d'entreprise."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/oncallrotation.xml:38
@@ -101,8 +121,18 @@ msgstr "Scénario 1: Les vacances et les week-ends"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:39
-msgid "Two admins - John and Bob - are responsible for responding to Nagios alerts.  John receives all notifications for weekdays (and weeknights) - except for holidays - and Bob gets handles notifications during the weekends and holidays. Lucky Bob. Here's how you can define this type of rotation using timeperiods..."
-msgstr "2 Administrateurs - John et Bob - sont responsable de répondre aux alertes Nagios. John recoit toutes les notifications de la semaine (et les nuits de la semaine) - excepté les vancances - et Bob quant à lui gérera celle du week-end et des vacances. Bonne pioche Bob! Nous allons voir comment définir ce type astreinte en utilisant les périodes de temps..."
+msgid ""
+"Two admins - John and Bob - are responsible for responding to Nagios "
+"alerts.  John receives all notifications for weekdays (and weeknights) - "
+"except for holidays - and Bob gets handles notifications during the weekends "
+"and holidays. Lucky Bob. Here's how you can define this type of rotation "
+"using timeperiods..."
+msgstr ""
+"2 Administrateurs - John et Bob - sont responsable de répondre aux alertes "
+"Nagios. John recoit toutes les notifications de la semaine (et les nuits de "
+"la semaine) - excepté les vancances - et Bob quant à lui gérera celle du "
+"week-end et des vacances. Bonne pioche Bob! Nous allons voir comment définir "
+"ce type astreinte en utilisant les périodes de temps..."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:43
@@ -143,8 +173,14 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:57
-msgid "Next, define a timeperiod for John's on-call times that include weekdays and weeknights, but excludes the dates/times defined in the holidays timeperiod above:"
-msgstr "Ensuite, définissons les périodes d'astreintes de John incluant les jours et les nuits de la semaine tout en excluant les dates qu'il aura définit pour ces vacances:"
+msgid ""
+"Next, define a timeperiod for John's on-call times that include weekdays and "
+"weeknights, but excludes the dates/times defined in the holidays timeperiod "
+"above:"
+msgstr ""
+"Ensuite, définissons les périodes d'astreintes de John incluant les jours et "
+"les nuits de la semaine tout en excluant les dates qu'il aura définit pour "
+"ces vacances:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:59
@@ -171,10 +207,11 @@ msgstr ""
 "\t\t        }"
 
 # type: Content of: <chapter><section><para>
-#: AdvancedTopics/oncallrotation.xml:68
-#: AdvancedTopics/oncallrotation.xml:198
+#: AdvancedTopics/oncallrotation.xml:68 AdvancedTopics/oncallrotation.xml:198
 msgid "You can now reference this timeperiod in John's contact definition:"
-msgstr "Nous pouvons référencer cette période de temps dans la définition du contact John:"
+msgstr ""
+"Nous pouvons référencer cette période de temps dans la définition du contact "
+"John:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:69
@@ -196,8 +233,13 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:75
-msgid "Define a new timeperiod for Bob's on-call times that include weekends and the dates/times defined in the holidays timeperiod above:"
-msgstr "Définissons une nouvelle période de temps pour les astreintes de Bob incluant le week-end et les dates définies dans la période de temps \"holidays\":"
+msgid ""
+"Define a new timeperiod for Bob's on-call times that include weekends and "
+"the dates/times defined in the holidays timeperiod above:"
+msgstr ""
+"Définissons une nouvelle période de temps pour les astreintes de Bob "
+"incluant le week-end et les dates définies dans la période de temps "
+"\"holidays\":"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:77
@@ -218,10 +260,11 @@ msgstr ""
 "\t\t        }"
 
 # type: Content of: <chapter><section><para>
-#: AdvancedTopics/oncallrotation.xml:83
-#: AdvancedTopics/oncallrotation.xml:211
+#: AdvancedTopics/oncallrotation.xml:83 AdvancedTopics/oncallrotation.xml:211
 msgid "You can now reference this timeperiod in Bob's contact definition:"
-msgstr "Nous pouvons référencer cette période de temps dans la définition du contact Bob:"
+msgstr ""
+"Nous pouvons référencer cette période de temps dans la définition du contact "
+"Bob:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:84
@@ -248,13 +291,23 @@ msgstr "Scénario 2: Jours alternés: "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:93
-msgid "In this scenario John and Bob alternate handling alerts every other day - regardless of whether its a weekend, weekday, or holiday."
-msgstr "Dans ce scénario, John et Bob se partage les alertes à tours de rôle sans être regardant sur la semaine, le week-end, ou les vacances."
+msgid ""
+"In this scenario John and Bob alternate handling alerts every other day - "
+"regardless of whether its a weekend, weekday, or holiday."
+msgstr ""
+"Dans ce scénario, John et Bob se partage les alertes à tours de rôle sans "
+"être regardant sur la semaine, le week-end, ou les vacances."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:95
-msgid "Define a timeperiod for when John should receive notifications. Assuming today's date is August 1st, 2007 and John is handling notifications starting today, the definition would look like this:"
-msgstr "Définissons une période de temps de quand John recevra les notifications. Admettons qu'aujourd'hui nous sommes le 1er aout 2007 et que john commence son astreinte aujourd'hui. La définition ressemberait à ceci:"
+msgid ""
+"Define a timeperiod for when John should receive notifications. Assuming "
+"today's date is August 1st, 2007 and John is handling notifications starting "
+"today, the definition would look like this:"
+msgstr ""
+"Définissons une période de temps de quand John recevra les notifications. "
+"Admettons qu'aujourd'hui nous sommes le 1er aout 2007 et que john commence "
+"son astreinte aujourd'hui. La définition ressemberait à ceci:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:98
@@ -272,8 +325,13 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:102
-msgid "Now define a timeperiod for when Bob should receive notifications. Bob gets notifications on the days that John doesn't, so his first on-call day starts tomorrow (August 2nd, 2007)."
-msgstr "Maintenant, au tour de Bob. Bob reçoit les notifications les jours où John n'en reçoit pas. Son astreinte commencera donc le lendemain (2 aout 2007)."
+msgid ""
+"Now define a timeperiod for when Bob should receive notifications. Bob gets "
+"notifications on the days that John doesn't, so his first on-call day starts "
+"tomorrow (August 2nd, 2007)."
+msgstr ""
+"Maintenant, au tour de Bob. Bob reçoit les notifications les jours où John "
+"n'en reçoit pas. Son astreinte commencera donc le lendemain (2 aout 2007)."
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:105
@@ -290,14 +348,16 @@ msgstr ""
 "\t\t        }"
 
 # type: Content of: <chapter><section><para>
-#: AdvancedTopics/oncallrotation.xml:109
-#: AdvancedTopics/oncallrotation.xml:155
-msgid "Now you need to reference these timeperiod definitions in the contact definitions for John and Bob:"
-msgstr "Maintenant, vous avez besoin de renseigner ces périodes de temps dans la définition des contacts John et Bob:"
+#: AdvancedTopics/oncallrotation.xml:109 AdvancedTopics/oncallrotation.xml:155
+msgid ""
+"Now you need to reference these timeperiod definitions in the contact "
+"definitions for John and Bob:"
+msgstr ""
+"Maintenant, vous avez besoin de renseigner ces périodes de temps dans la "
+"définition des contacts John et Bob:"
 
 # type: Content of: <chapter><section><programlisting>
-#: AdvancedTopics/oncallrotation.xml:111
-#: AdvancedTopics/oncallrotation.xml:157
+#: AdvancedTopics/oncallrotation.xml:111 AdvancedTopics/oncallrotation.xml:157
 #, no-wrap
 msgid ""
 "define contact{\n"
@@ -333,13 +393,25 @@ msgstr "Scénario 3: Semaines alternées"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:126
-msgid "In this scenario John and Bob alternate handling alerts every other week.  John handles alerts Sunday through Saturday one week, and Bob handles alerts for the following seven days. This continues in perpetuity."
-msgstr "Dans ce scénario, les astreintes de John et Bob sont alternées par semaine. John débute son astreinte du dimanche jusqu'au samedi d'après, et Bob prend le relais la semaine suivante pendant 7 jours ... Ainsi de suite."
+msgid ""
+"In this scenario John and Bob alternate handling alerts every other week.  "
+"John handles alerts Sunday through Saturday one week, and Bob handles alerts "
+"for the following seven days. This continues in perpetuity."
+msgstr ""
+"Dans ce scénario, les astreintes de John et Bob sont alternées par semaine. "
+"John débute son astreinte du dimanche jusqu'au samedi d'après, et Bob prend "
+"le relais la semaine suivante pendant 7 jours ... Ainsi de suite."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:129
-msgid "Define a timeperiod for when John should receive notifications. Assuming today's date is Sunday, July 29th, 2007 and John is handling notifications this week (starting today), the definition would look like this:"
-msgstr "Nous allons définir l'astreinte de John. Admettons que nous sommes le dimanche 29 juillet 2007 et John doit débuter son astreinte cette semaine (débute aujourd'hui), la définition ressemblerait à ceci:"
+msgid ""
+"Define a timeperiod for when John should receive notifications. Assuming "
+"today's date is Sunday, July 29th, 2007 and John is handling notifications "
+"this week (starting today), the definition would look like this:"
+msgstr ""
+"Nous allons définir l'astreinte de John. Admettons que nous sommes le "
+"dimanche 29 juillet 2007 et John doit débuter son astreinte cette semaine "
+"(débute aujourd'hui), la définition ressemblerait à ceci:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:132
@@ -369,8 +441,13 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:142
-msgid "Now define a timeperiod for when Bob should receive notifications. Bob gets notifications on the weeks that John doesn't, so his first on-call day starts next Sunday (August 5th, 2007)."
-msgstr "Maintenant, au tour de Bob, Quant à lui, son astreinte débutera le dimanche d'après (le 5 aout 2007)."
+msgid ""
+"Now define a timeperiod for when Bob should receive notifications. Bob gets "
+"notifications on the weeks that John doesn't, so his first on-call day "
+"starts next Sunday (August 5th, 2007)."
+msgstr ""
+"Maintenant, au tour de Bob, Quant à lui, son astreinte débutera le dimanche "
+"d'après (le 5 aout 2007)."
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:145
@@ -405,12 +482,21 @@ msgstr "Scénario 4: Les jours de vacances"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:172
-msgid "In this scenarios, John handles notifications for all days except those he has off. He has several standing days off each month, as well as some planned vacations. Bob handles notifications when John is on vacation or out of the office."
-msgstr "Dans ce scénario, John prend les alertes tous les jours sauf quand il est absent. Il a le droit à plusieurs jours de congés chaque mois, et il a planifié ces vacances. Bob prendra les notifications when John sera absent."
+msgid ""
+"In this scenarios, John handles notifications for all days except those he "
+"has off. He has several standing days off each month, as well as some "
+"planned vacations. Bob handles notifications when John is on vacation or out "
+"of the office."
+msgstr ""
+"Dans ce scénario, John prend les alertes tous les jours sauf quand il est "
+"absent. Il a le droit à plusieurs jours de congés chaque mois, et il a "
+"planifié ces vacances. Bob prendra les notifications when John sera absent."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:175
-msgid "First, define a timeperiod that contains time ranges for John's vacation days and days off:"
+msgid ""
+"First, define a timeperiod that contains time ranges for John's vacation "
+"days and days off:"
 msgstr "Premièrement, définissons les périodes de temps où john s'absente:"
 
 # type: Content of: <chapter><section><programlisting>
@@ -441,8 +527,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:187
-msgid "Next, define a timeperiod for John's on-call times that excludes the dates/times defined in the timeperiod above:"
-msgstr "Ensuite, définissons une période de temps pour l'astreinte de john tout en excluant ces jours de repos: "
+msgid ""
+"Next, define a timeperiod for John's on-call times that excludes the dates/"
+"times defined in the timeperiod above:"
+msgstr ""
+"Ensuite, définissons une période de temps pour l'astreinte de john tout en "
+"excluant ces jours de repos: "
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:189
@@ -488,8 +578,12 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:205
-msgid "Define a new timeperiod for Bob's on-call times that include the dates/times that John is out of the office:"
-msgstr "Définissons la nouvelle période de temps de l'astreinte de Bob en incluant les dates d'absence de John:"
+msgid ""
+"Define a new timeperiod for Bob's on-call times that include the dates/times "
+"that John is out of the office:"
+msgstr ""
+"Définissons la nouvelle période de temps de l'astreinte de Bob en incluant "
+"les dates d'absence de John:"
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/oncallrotation.xml:207
@@ -530,6 +624,18 @@ msgstr "Autres scénarios"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/oncallrotation.xml:221
-msgid "There are a lot of other on-call notification rotation scenarios that you might have.  The date exception directive in <link linkend=\"thebasics-timeperiods\">timeperiod definitions</link> is capable of handling most dates and date ranges that you might need to use, so check out the different formats that you can use. If you make a mistake when creating timeperiod definitions, always err on the side of giving someone else more on-call duty time. :-)"
-msgstr "IL y a une multitude de scénario de période d'astreintes possible. La directive d'exception de date dans la <link linkend=\"thebasics-timeperiods\">définition de période de temps</link> est capable de tout et n'importe quelle période, format de date dont vous avez besoin. Si vous faites une erreur en créant vos période de temps, elle sera bénéfique pour quelqu'un et moins pour une autre. :-)"
-
+msgid ""
+"There are a lot of other on-call notification rotation scenarios that you "
+"might have.  The date exception directive in <link linkend=\"thebasics-"
+"timeperiods\">timeperiod definitions</link> is capable of handling most "
+"dates and date ranges that you might need to use, so check out the different "
+"formats that you can use. If you make a mistake when creating timeperiod "
+"definitions, always err on the side of giving someone else more on-call duty "
+"time. :-)"
+msgstr ""
+"IL y a une multitude de scénario de période d'astreintes possible. La "
+"directive d'exception de date dans la <link linkend=\"thebasics-timeperiods"
+"\">définition de période de temps</link> est capable de tout et n'importe "
+"quelle période, format de date dont vous avez besoin. Si vous faites une "
+"erreur en créant vos période de temps, elle sera bénéfique pour quelqu'un et "
+"moins pour une autre. :-)"

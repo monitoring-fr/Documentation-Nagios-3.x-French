@@ -7,101 +7,105 @@
 ]
 >
 <chapter id="gettingstarted-monitoring-publicservices" xreflabel="Monitoring publicly available services (HTTP, FTP, SSH, etc.)">
-  <title>Monitoring Publicly Available Services</title>
+  <title>Supervision des services publiquement disponibles</title>
   <abstract>
-    <para>This document describes how you can monitor publicly available services, 
-applications and protocols. By <quote>public</quote> I mean services that 
-are accessible across the network - either the local network or the greater 
-Internet. Examples of public services include &protocol-http;, 
-&protocol-pop3;, &protocol-imap;, &protocol-ftp;, and &protocol-ssh;. There 
-are many more public services that you probably use on a daily basis. These 
-services and applications, as well as their underlying protocols, can 
-usually be monitored by Nagios without any special access requirements.</para>
+    <para>Ce document décrit la façon de superviser des services, applications et
+protocoles rendus disponibles publiquement. Par <quote>public</quote>
+j'entends les services qui sont accessibles à travers le réseau - que ce
+soit votre réseau local ou plus grand avec Internet. Les exemples de ce type
+de services incluent &protocol-http;, &protocol-pop3;, &protocol-imap;,
+&protocol-ftp;, and &protocol-ssh;. Il y a beaucoup plus de services publics
+que ce que vous utilisez probablement au quotidien. Ces services et
+applications, ainsi que les protocoles sous-jacents, peuvent en général être
+supervisés avec Nagios sans nécessiter d'accès spéciaux.</para>
   </abstract>
   <section>
     <title>Introduction</title>
-    <para>Private services, in contrast, cannot be monitored with Nagios without an 
-intermediary agent of some kind. Examples of private services associated 
-with hosts are things like CPU load, memory usage, disk usage, current user 
-count, process information, etc. These private services or attributes of 
-hosts are not usually exposed to external clients. This situation requires 
-that an intermediary monitoring agent be installed on any host that you need 
-to monitor such information on. More information on monitoring private 
-services on different types of hosts can be found in the documentation on:</para>
+    <para>Les services privés, à l'opposé, ne peuvent pas être supervisés par Nagios
+sans agent intermédiaire de quelque type. Les exemples de services privés
+associés à des hôtes sont des choses comme la charge CPU, l'utilisation
+mémoire, l'utilisation du disque, le nombre d'utilisateurs connectés, des
+informations sur les processus, etc. Ces services privés ou attributs
+d'hôtes ne sont en général pas exposés à un client externe. Cette situation
+requiert qu'un agent intermédiaire de supervision soit installé sur chacun
+des hôtes dont vous avez besoin de superviser ce type d'informations. Plus
+d'information sur la supervison des services privés attachés à des hôtes  de
+différents types peut être trouvée dans la documentation à:</para>
     <itemizedlist>
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-windows">Superviser des machines 
+        <para><link linkend="gettingstarted-monitoring-windows">Superviser des machines
 Windows</link></para>
       </listitem>
 
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-netware">Superviser des serveurs 
+        <para><link linkend="gettingstarted-monitoring-netware">Superviser des serveurs
 Netware</link></para>
       </listitem>
 
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-linux">Superviser des machines 
+        <para><link linkend="gettingstarted-monitoring-linux">Superviser des machines
 Linux/Unix</link></para>
       </listitem>
     </itemizedlist>
 
     <tip>
-      <para>Occassionally you will find that information on private services and 
-applications can be monitored with &protocol-snmp;. The &protocol-snmp; 
-agent allows you to remotely monitor otherwise private (and inaccessible) 
-information about the host. For more information about monitoring services 
-using &protocol-snmp;, check out the documentation on <link 
-linkend="gettingstarted-monitoring-routers">Monitoring 
-routers/switches</link>.</para>
+      <para>Vous trouverez occasionnellement que cette information sur les services et
+applications privés peut être supervisée avec &protocol-snmp;. L'agent
+&protocol-snmp; vous permet de superviser à distance l'information d'hôte
+normalement privée (et inaccessible). Jetez un oeil sur la documentation
+<link linkend="gettingstarted-monitoring-routers">Supervision des
+routeurs/switches</link> pour avoir plus d'information sur la façon de
+superviser des services avec le protocole &protocol-snmp;.</para>
     </tip>
     <note>
-      <para>These instructions assume that you've installed Nagios according to the 
-<link linkend="gettingstarted-quickstart">quickstart guide</link>. The 
-sample configuration entries below reference objects that are defined in the 
-sample <filename>commands.cfg</filename> and 
-<filename>localhost.cfg</filename> config files.</para>
+      <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
+le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
+exemples de configuration ci-dessous font référence aux objets de
+configuration définis dans les fichiers d'exemples
+(<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
+etc.) qui ont été installé si vous avez suivi le guide rapide.</para>
     </note>
   </section>
   <section>
-    <title>Plugins For Monitoring Services</title>
-    <para>When you find yourself needing to monitor a particular application, service, 
-or protocol, chances are good that a <link 
-linkend="thebasics-plugins">plugin</link> exists to monitor it. The official 
-Nagios plugins distribution comes with plugins that can be used to monitor a 
-variety of services and protocols. There are also a large number of 
-contributed plugins that can be found in the <filename 
-class="directory">contrib/</filename> subdirectory of the plugin 
-distribution. The <ulink 
-url="&url-nagiosexchange;">NagiosExchange.org</ulink> website hosts a number 
-of additional plugins that have been written by users, so check it out when 
-you have a chance.</para>
-    <para>If you don't happen to find an appropriate plugin for monitoring what you 
-need, you can always write your own. Plugins are easy to write, so don't let 
-this thought scare you off. Read the documentation on <link 
-linkend="development-pluginapi">developing plugins</link> for more 
-information.</para>
-    <para>I'll walk you through monitoring some basic services that you'll probably 
-use sooner or later. Each of these services can be monitored using one of 
-the plugins that gets installed as part of the Nagios plugins 
-distribution. Let's get started...</para>
+    <title>Plugins pour la supervision des services</title>
+    <para>Quand vous avez besoin de superviser un services, application, protocole
+particulier, les chances sont grandes q'un <link
+linkend="thebasics-plugins">plugin</link> existe pour le faire. La
+distribution officielle des plugins Nagios fournit des plugins qui peuvent
+être utilisés pour contrôler une grande variété de services et
+protocoles. Il y a aussi toute une collection de plugins qui peut être
+trouvée dans le sous répertoire <filename
+class="directory">contrib/</filename> de la distribution des plugins. Le
+site <ulink url="&url-nagiosexchange;">NagiosExchange.org</ulink> héberge
+aussi de nombreux plugins additionnels écrits par des utilisateurs,
+n'hésitez pas à y tenter votre chance.</para>
+    <para>Si vous ne parvenez pas à trouver un plugin approprié pour superviser ce
+dont vous avez besoin, vous pouvez toujours écrire le vôtre. Les plugins
+sont faciles à écrire, ne vous laissez donc pas effrayer par cette
+idée. Lisez la documentation sur le <link
+linkend="development-pluginapi">développement de plugins</link> pour plus
+d'information.</para>
+    <para>Je vais passer en revue la supervision de services basiques que vous aurez
+probablement à faire tôt au tard. Chacun de ces services peut être supervisé
+en utilisant un des plugins compris dans la ditribution Nagios. Allons-y...</para>
   </section>
   <section>
-    <title>Creating A Host Definition</title>
+    <title>Création d'une définition d'hôte</title>
 
-    <para>Before you can monitor a service, you first need to define a <link 
-linkend="configuringnagios-objectdefinitions-host">host</link> that is 
-associated with the service. You can place host definitions in any object 
-configuration file specified by a <link 
-linkend="configuringnagios-configmain-cfg_file">cfg_file</link> directive or 
-placed in a directory specified by a <link 
-linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link> directive. If 
-you have already created a host definition, you can skip this step.</para>
+    <para>Avant de pouvoir superviser un service, vous devez d'abord définir un <link
+linkend="configuringnagios-objectdefinitions-host">host</link> associé à ce
+service. Vous pouvez mettre les définitions d'hôtes dans n'importe quel
+fichier de configuration spécifié avec la directive <link
+linkend="configuringnagios-configmain-cfg_file">cfg_file</link> ou les
+mettre dans un dossier précisé par la directive <link
+linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link>. Si vous avez
+déjà créé une définition d'hôte, vous pouvez passer cette étape.</para>
 
-    <para>For this example, lets say you want to monitor a variety of services on a 
-remote host. Let's call that host <emphasis>remotehost</emphasis>.  The host 
-definition can be placed in its own file or added to an already exiting 
-object configuration file. Here's what the host definition for 
-<emphasis>remotehost</emphasis> might look like:</para>
+    <para>Pour cet exemple, disons que vous souhaitez superviser une variété de
+services sur un hôte distant. Appelons cet hôte
+<emphasis>remotehost</emphasis>. La définition de l'hôte peut être mise dans
+son propre fichier de configuration ou ajoutée à un existant. Voilà à quoi
+pourrait ressembler la définition de l'hôte <emphasis>remotehost</emphasis>:</para>
 
     <programlisting>
 define host{
@@ -113,38 +117,41 @@ define host{
     }
 </programlisting>
 
-    <para>Now that a definition has been added for the host that will be monitored, we 
-can start defining services that should be monitored. As with host 
-definitions, service definitions can be placed in any object configuration 
-file.</para>
+    <para>Maintenant qu'une définition d'hôte a été ajouté pour l'hôte à superviser,
+nous pouvons commencer à définir les services qui doivent être
+contrôlés. Comme pour la définition de l'hôte, les définitions de services
+poeuvent être mises dans n'importe quel fichier de configuration.</para>
   </section>
 
   <section>
-    <title>Creating Service Definitions</title>
+    <title>Création d'une définition de service</title>
 
-    <para>For each service you want to monitor, you need to define a <link 
-linkend="configuringnagios-objectdefinitions-service">service</link> in 
-Nagios that is associated with the host definition you just created. You can 
-place service definitions in any object configuration file specified by a 
-<link linkend="configuringnagios-configmain-cfg_file">cfg_file</link> 
-directive or placed in a directory specified by a <link 
-linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link> directive.</para>
+    <para>Pour chaque service à superviser, vous devez créer un <link
+linkend="configuringnagios-objectdefinitions-service">service</link> dans
+Nagios associé à la définition d'hôte que vous avez juste créé. Vous pouvez
+mettre des définitions de services dans n'importe quel fichier de
+configuration précisé par la directive <link
+linkend="configuringnagios-configmain-cfg_file">cfg_file</link> ou dans
+n'importe quel dossier précisé par la directive <link
+linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link>.</para>
 
-    <para>Some example service definitions for monitoring common public service 
-(&protocol-http;, &protocol-ftp;, etc) are given below.</para>
+    <para>Quelques exemples de définitions de services pour superviser des services
+publics communs (&protocol-http;, &protocol-ftp;, etc) sont donnés
+ci-dessous.</para>
   </section>
 
   <section>
-    <title>Monitoring HTTP</title>
+    <title>Supervision HTTP</title>
 
-    <para>Chances are you're going to want to monitor web servers at some point - 
-either yours or someone else's. The &plugin-http; plugin is designed to do 
-just that. It understands the &protocol-http; protocol and can monitor 
-response time, error codes, strings in the returned HTML, server 
-certificates, and much more.</para>
+    <para>Il y a de bonnes chances que vous ayez envie de superviser des serveurs web
+- que ce soit le vôtre ou celui de quelqu'un d'autre. Le plugin
+&plugin-http; est juste fait pour ça. Il fonctionne avec le protocole
+&protocol-http; et peut superviser un temps de réponse, des codes d'erreurs,
+des chaînes de caractère dans la réponse HTML, des certificats de serveurs,
+et beaucoup plus encore.</para>
 
-    <para>The <filename>commands.cfg</filename> file contains a command definition for 
-using the &plugin-http; plugin. It looks like this:</para>
+    <para>Le fichier <filename>commands.cfg</filename> contient une définition de
+commande pour utiliser le plugin &plugin-http;. Il ressemble à ceci:</para>
 
     <programlisting>
 define command{
@@ -154,8 +161,8 @@ define command{
     }
 </programlisting>
 
-    <para>A simple service definition for monitoring the &protocol-http; service on 
-the <emphasis>remotehost</emphasis> machine might look like this:</para>
+    <para>Une définition simple de service pour superviser un service &protocol-http;
+sur la machine <emphasis>remotehost</emphasis> pourrait ressembler à ceci:</para>
 
     <programlisting>
 define service{
@@ -166,23 +173,25 @@ define service{
     }
 </programlisting>
 
-    <para>This simple service definition will monitor the &protocol-http; service 
-running on <emphasis>remotehost</emphasis>. It will produce alerts if the 
-web server doesn't respond within 10 seconds or if it returns 
-&protocol-http; errors codes (403, 404, etc.). That's all you need for basic 
-monitoring. Pretty simple, huh?</para>
+    <para>Cette simple définition de service va superviser le service &protocol-http;
+fonctionnant sur <emphasis>remotehost</emphasis>. Ce service génèrera des
+alertes si le sereur web ne répond pas dans les 10 secondes ou si la réponse
+contient un code d'erreur &protocol-http; (403, 404, etc.). C'est tout ce
+dont vous avez besoin pour une supervision basique. Plutôt simple, non ?</para>
 
     <tip>
-      <para>For more advanced monitoring, run the &plugin-http; plugin manually with
-      <option>--help</option> as a command-line argument to see all the options you can give the 
-plugin. This <option>--help</option> syntax works with all of the plugins I'll cover in this document.</para>
+      <para>Pour des possibilités plus avancées de supervision, utilisez le plugin
+&plugin-http; manuellement avec
+      <option>--help</option> comme argument de la lligne de commande pour voir toutes les options que
+peut vous fournir ce plugin. Cette <option>--help</option> syntaxe fonctionne avec tous les plugins couverts par cette documentation. </para>
     </tip>
 
-    <para>A more advanced definition for monitoring the &protocol-http; service is 
-shown below. This service definition will check to see if the 
-/download/index.php URI contains the string "latest-version.tar.gz". It will 
-produce an error if the string isn't found, the URI isn't valid, or the web 
-server takes longer than 5 seconds to respond.</para>
+    <para>Une définition plus avancée pour superviser le service &protocol-http; est
+donnée ci-dessous. Cette définition de service va vérifier que l'adresse URI
+/download/index.php contient la chaîne de caractères
+"latest-version.tar.gz". Une erreur sera produite si la chaîne n'est pas
+trouvée, si l'URI n'est pas valable, ou si le serveur web met plus de 5
+secondes à répondre.</para>
 
     <programlisting>
 define service{
@@ -195,11 +204,12 @@ define service{
   </section>
 
   <section>
-    <title>Monitoring FTP</title>
+    <title>Supervision FTP</title>
 
-    <para>When you need to monitor &protocol-ftp; servers, you can use the 
-&plugin-ftp; plugin. The <filename>commands.cfg</filename> file contains a 
-command definition for using the &plugin-ftp; plugin, which looks like this:</para>
+    <para>Quand vous avez besoin de superviser des serveurs &protocol-ftp;, vous
+pouvez utiliser le plugin &plugin-ftp;. Le fichier
+<filename>commands.cfg</filename> une définition de commande pour utiliser
+le plugin &plugin-ftp; qui ressemble à ceci:</para>
 
     <programlisting>
 define command{
@@ -208,8 +218,8 @@ define command{
     }
 </programlisting>
 
-    <para>A simple service definition for monitoring the &protocol-ftp; server on 
-<emphasis>remotehost</emphasis> would look like this:</para>
+    <para>Une définition simple de service pour superviser un serveur &protocol-ftp;
+sur <emphasis>remotehost</emphasis> devrait ressembler à ceci:</para>
 
     <programlisting>
 define service{
@@ -220,14 +230,15 @@ define service{
     }
 </programlisting>
 
-    <para>This service definition will monitor the &protocol-ftp; service and generate 
-alerts if the &protocol-ftp; server doesn't respond within 10 seconds.</para>
+    <para>Cette définition de service va superviser le service &protocol-ftp; et
+générer des alertes si le serveur &protocol-ftp; ne répond pas dans les 10
+secondes.</para>
 
-    <para>A more advanced service definition is shown below. This service will check 
-the &protocol-ftp; server running on port 1023 on 
-<emphasis>remotehost</emphasis>. It will generate an alert if the server 
-doesn't respond within 5 seconds or if the server response doesn't contain 
-the string <quote>Pure-FTPd [TLS]</quote>.</para>
+    <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
+vérifier le serveur &protocol-ftp; en écoute sur le port 1023 de
+<emphasis>remotehost</emphasis>. Une alerte sera émise  si le serveur ne
+répond pas dans les 5 secondes ou si la réponse que fait le serveur ne
+contient pas la chaîne de caractère <quote>Pure-FTPd [TLS]</quote>.</para>
 
     <programlisting>
 define service{
@@ -240,11 +251,12 @@ define service{
   </section>
 
   <section>
-    <title>Monitoring SSH</title>
+    <title>Supervision SSH</title>
 
-    <para>When you need to monitor &protocol-ssh; servers, you can use the 
-&plugin-ssh; plugin. The <filename>commands.cfg</filename> file contains a 
-command definition for using the &plugin-ssh; plugin, which looks like this:</para>
+    <para>Quand vous avez besoin de superviser des serveurs &protocol-ssh;, vous
+pouvez utiliser le plugin &plugin-ssh;. Le fichier
+<filename>commands.cfg</filename> contient une définition de commande pour
+utiliser le plugin &plugin-ssh; qui ressemble à ceci:</para>
 
     <programlisting>
 define command{
@@ -253,8 +265,8 @@ define command{
     }
 </programlisting>
 
-    <para>A simple service definition for monitoring the &protocol-ssh; server on 
-<emphasis>remotehost</emphasis> would look like this:</para>
+    <para>Une définition simple de service pour superviser un serveur &protocol-ssh;
+sur <emphasis>remotehost</emphasis> devrait ressembler à ceci:</para>
 
     <programlisting>
 define service{
@@ -265,13 +277,13 @@ define service{
     }
 </programlisting>
 
-    <para>This service definition will monitor the &protocol-ssh; service and generate 
-alerts if the &protocol-ssh; server doesn't respond within 10 seconds.</para>
+    <para>Cette définition de service va superviser le service &protocol-ssh; et
+générer des alertes si le serveur ne répond pas dans les 10 secondes.</para>
 
-    <para>A more advanced service definition is shown below. This service will check 
-the &protocol-ssh; server and generate an alert if the server doesn't 
-respond within 5 seconds or if the server version string string doesn't 
-match <quote>OpenSSH_4.2</quote>.</para>
+    <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
+vérifier le serveur &protocol-ssh; et générer une alerte si le serveur ne
+répond pas dans les 5 secondes ou si le numéro de version ne correspond pas
+à <quote>OpenSSH_4.2</quote>.</para>
 
     <programlisting>
 define service{
@@ -284,11 +296,11 @@ define service{
   </section>
 
   <section>
-    <title>Monitoring SMTP</title>
+    <title>Supervision SMTP</title>
 
-    <para>The &plugin-smtp; plugin can be using for monitoring your email servers. The 
-<filename>commands.cfg</filename> file contains a command definition for 
-using the &plugin-smtp; plugin, which looks like this:</para>
+    <para>Le plugin &plugin-smtp; peut être utilisé pour superviser vos serveurs de
+messagerie. Le fichier <filename>commands.cfg</filename> une définition de
+commande pour utiliser le plugin &plugin-smtp; qui ressemble à ceci:</para>
 
     <programlisting>
 define command{
@@ -297,8 +309,8 @@ define command{
     }
 </programlisting>
 
-    <para>A simple service definition for monitoring the &protocol-smtp; server on 
-<emphasis>remotehost</emphasis> would look like this:</para>
+    <para>Une définition simple de service pour superviser un serveur &protocol-smtp;
+sur <emphasis>remotehost</emphasis> devrait ressembler à ceci:</para>
 
     <programlisting>
 define service{
@@ -309,14 +321,14 @@ define service{
     }
 </programlisting>
 
-    <para>This service definition will monitor the &protocol-smtp; service and 
-generate alerts if the &protocol-smtp; server doesn't respond within 10 
-seconds.</para>
+    <para>Cette définition de service va superviser le service &protocol-smtp; et
+générer des alertes si le serveur &protocol-smtp; ne répond pas dans les 10
+secondes.</para>
 
-    <para>A more advanced service definition is shown below. This service will check 
-the &protocol-smtp; server and generate an alert if the server doesn't 
-respond within 5 seconds or if the response from the server doesn't contain 
-"mygreatmailserver.com".</para>
+    <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
+vérifier le serveur &protocol-smtp; et générer une alerte si le serveur ne
+répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
+la chaîne de caractères "mygreatmailserver.com".</para>
 
     <programlisting>
 define service{
@@ -329,12 +341,12 @@ define service{
   </section>
 
   <section>
-    <title>Monitoring POP3</title>
+    <title>Supervision POP3</title>
 
-    <para>The &plugin-pop; plugin can be using for monitoring the &protocol-pop3; 
-service on your email servers. The <filename>commands.cfg</filename> file 
-contains a command definition for using the &plugin-pop; plugin, which looks 
-like this:</para>
+    <para>Le plugin &plugin-pop; peut être utilisé pour superviser le service
+&protocol-pop3; de vos serveurs de messagerie. Le fichier
+<filename>commands.cfg</filename> une définition de commande pour utiliser
+le plugin &plugin-pop; qui ressemble à ceci:</para>
 
     <programlisting>
 define command{
@@ -343,8 +355,8 @@ define command{
     }
 </programlisting>
 
-    <para>A simple service definition for monitoring the &protocol-pop3; service on 
-<emphasis>remotehost</emphasis> would look like this:</para>
+    <para>Une définition simple de service pour superviser un serveur &protocol-pop3;
+sur <emphasis>remotehost</emphasis> devrait ressembler à ceci:</para>
 
     <programlisting>
 define service{
@@ -355,14 +367,14 @@ define service{
     }
 </programlisting>
 
-    <para>This service definition will monitor the &protocol-pop3; service and 
-generate alerts if the &protocol-pop3; server doesn't respond within 10 
-seconds.</para>
+    <para>Cette définition de service va superviser le service &protocol-pop3; et
+générer des alertes si le serveur &protocol-pop3; ne répond pas dans les 10
+secondes.</para>
 
-    <para>A more advanced service definition is shown below. This service will check 
-the &protocol-pop3; service and generate an alert if the server doesn't 
-respond within 5 seconds or if the response from the server doesn't contain 
-"mygreatmailserver.com".</para>
+    <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
+vérifier le serveur &protocol-pop3; et générer une alerte si le serveur ne
+répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
+la chaîne de caractères "mygreatmailserver.com".</para>
 
     <programlisting>
 define service{
@@ -375,12 +387,12 @@ define service{
   </section>
 
   <section>
-    <title>Monitoring IMAP</title>
+    <title>Supervision IMAP</title>
 
-    <para>The &plugin-imap; plugin can be using for monitoring &protocol-imap4; 
-service on your email servers. The <filename>commands.cfg</filename> file 
-contains a command definition for using the &plugin-imap; plugin, which 
-looks like this:</para>
+    <para>Le plugin &plugin-imap; peut être utilisé pour superviser le service
+&protocol-imap4; sur vos serveurs de messagerie. Le fichier
+<filename>commands.cfg</filename> une définition de commande pour utiliser
+le plugin &plugin-imap; qui ressemble à ceci:</para>
 
     <programlisting>
 define command{
@@ -389,8 +401,8 @@ define command{
     }
 </programlisting>
 
-    <para>A simple service definition for monitoring the &protocol-imap4; service on 
-<emphasis>remotehost</emphasis> would look like this:</para>
+    <para>Une définition simple de service pour superviser un serveur &protocol-imap4;
+sur <emphasis>remotehost</emphasis> devrait ressembler à ceci:</para>
 
     <programlisting>
 define service{
@@ -401,14 +413,14 @@ define service{
     }
 </programlisting>
 
-    <para>This service definition will monitor the &protocol-imap4; service and 
-generate alerts if the &protocol-imap; server doesn't respond within 10 
-seconds.</para>
+    <para>Cette définition de service va superviser le service &protocol-imap4; et
+générer des alertes si le serveur &protocol-imap; ne répond pas dans les 10
+secondes.</para>
 
-    <para>A more advanced service definition is shown below. This service will check 
-the IAMP4 service and generate an alert if the server doesn't respond within 
-5 seconds or if the response from the server doesn't contain 
-<quote>mygreatmailserver.com</quote>.</para>
+    <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
+vérifier le service &protocol-imap4; et générer une alerte si le serveur ne
+répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
+la chaîne de caractères "mygreatmailserver.com".</para>
 
     <programlisting>
 define service{
@@ -421,16 +433,16 @@ define service{
   </section>
 
   <section>
-    <title>Restarting Nagios</title>
+        <title>Redémarrage de Nagios</title>
 
-    <para>Once you've added the new host and service definitions to your object 
-configuration file(s), you're ready to start monitoring them. To do this, 
-you'll need to <link linkend="runningnagios-verifyconfig">verify your 
-configuration</link> and <link linkend="runningnagios-startstop">restart 
-Nagios</link>.</para>
+    <para>Une fois que vous avez ajouté les définitions du nouvel hôte et du service à
+vos fichiers de configuration d'objets, vous êtes prêt à démarrer la
+supervision de ceux-ci. Pour cela, vous devez <link
+linkend="runningnagios-verifyconfig">vérifier votre configuration</link> et
+<link linkend="runningnagios-startstop">redémarrer Nagios</link>.</para>
 
-    <para>If the verification process produces any errors messages, fix your 
-configuration file before continuing. Make sure that you don't (re)start 
+    <para>If the verification process produces any errors messages, fix your
+configuration file before continuing. Make sure that you don't (re)start
 Nagios until the verification process completes without any errors!</para>
   </section>
 </chapter>

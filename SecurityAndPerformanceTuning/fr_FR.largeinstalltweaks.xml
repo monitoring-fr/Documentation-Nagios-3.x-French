@@ -7,48 +7,50 @@
 ]
 >
 <chapter id="securityandperformancetuning-largeinstalltweaks" xreflabel="Large Installation Tweaks">
-	<title>Large Installation Tweaks</title>
+	<title>Trucs et astuces pour les installations de grande dimension</title>
 	<section>
 		<title>Introduction</title>
-		<para>Users with large Nagios installations may benefit from the <link 
-linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link> 
-configuration option.  Enabling this option allows the Nagios daemon to take 
-certain shortcuts which result in lower system load and better performance.</para>
+		<para>Les utilisateurs ayant des installations de grande dimension peuvent tirer
+quelques bénéfices de l'option de configuration <link
+linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link>.
+Activer cette option permet à Nagios d'utiliser quelques raccourcis dont les
+résultats sont une moindre consommation système et de meilleures
+performances.</para>
 	</section>
 	<section>
-		<title>Effects</title>
-		<para>When you enable the <link 
-linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link> 
-option in your main Nagios config file, several changes are made to the way 
-the Nagios daemon operates:</para>
+		<title>Effets</title>
+		<para>Quand vous activez l'option <link
+linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link>
+dans votre fichier de configuration Nagios, plusieurs choses changent dans
+le fonctionnement du démon Nagios:</para>
 		<orderedlist>
 			<listitem>
-				<para>No Summary Macros In Environment Variables - The <link 
-linkend="thebasics-macrolist-summary_macros">summary macros</link> will not 
-be available to you as environment variables. Calculating the values of 
-these macros can be quite time-intensive in large configurations, so they 
-are not available as environment variables when use this option. Summary 
-macros will still be available as regular macros if you pass them to to your 
-scripts as arguments.</para>
+				<para>Pas de macros de résumé dans les variables d'environnement - les <link
+linkend="thebasics-macrolist-summary_macros">macros de résumé</link> ne
+seront pas disponibles comme variables d'environnement. Calculer les valeurs
+de ces macros peut devenir assez consommateur de temps dans des
+installations de grande dimension, aussi ne sont elles pas disponibles quand
+cette option est activée. Les macros de résumé resteront disponibles comme
+toutes les macros si vous les passez en argument de vos scripts.</para>
 			</listitem>
 			<listitem>
-				<para>Different Memory Cleanup - Normally Nagios will free all allocated memory in 
-child processes before they exit. This is probably best practice, but is 
-likely unnecessary in most installations, as most OSes will take care of 
-freeing allocated memory when processes exit. The OS tends to free allocated 
-memory faster than can be done within Nagios itself, so Nagios won't attempt 
-to free memory in child processes if you enable this option.</para>
+				<para>Nettoyage de la mémoire différent - Habituellement, Nagios va libérer tout
+l'espace mémoire alloué aux processus enfants avant de les terminer. C'est
+certainement la meilleure façon de faire, mais cela n'est pas utile dans la
+plupart des installations parce que la plupart des OS prennent soin de
+libérer la mémoire allouée quand les processus se terminent.</para>
 			</listitem>
 			<listitem>
-				<para>Checks <function>fork()</function> Less - Normally Nagios will 
-<function>fork()</function> twice when it executes host and service 
-checks. This is done to (1) ensure a high level of resistance against 
-plugins that go awry and segfault and (2) make the OS deal with cleaning up 
-the grandchild process once it exits. The extra <function>fork()</function> 
-is not really necessary, so it is skipped when you enable this option.  As a 
-result, Nagios will itself clean up child processes that exit (instead of 
-leaving that job to the OS). This feature should result in significant load 
-savings on your Nagios installation.</para>
+				<para>Moins de <function>fork()</function> - Habituellement, Nagios va
+<function>fork()</function> deux fois quand il exécute un contrôle d'hôte et
+de service. Cela permet (1) d'avoir une plus grande résistance contre les
+plugins qui provoquent des segfault et (2) permet à l'OS de gérer le
+nettoyage du processus parent quand il se termine. Le
+<function>fork()</function> supplémentaire n'est pas forcément nécessaire,
+aussi est-il ignoré quand vous activez cette option. Le résultat est que
+c'est Nagios lui-même qui va nettoyer les processus enfants quand ils se
+terminent (au lieu de laisser ce boulot à l'OS). Cette fonction devrait
+permettre de réduire de façon significative la charge du serveur Nagios.</para>
 			</listitem>
 		</orderedlist>
 	</section>

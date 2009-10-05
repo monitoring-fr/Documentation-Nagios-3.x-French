@@ -7,51 +7,52 @@
 ]
 >
 <chapter id="advancedtopics-redundancy" xreflabel="Redundant and Failover Network Monitoring">
-	<title>Redundant and Failover Network Monitoring</title>
+	<title>Gestion de panne et redondance pour la supervision réseau</title>
 	
 	<section>
 		<title>Introduction</title>
 		
-		<para>This section describes a few scenarios for implementing redundant monitoring 
-hosts an various types of network layouts. With redundant hosts, you can 
-maintain the ability to monitor your network when the primary host that runs 
-Nagios fails or when portions of your network become unreachable.</para>
+		<para>Cette section décrit quelques scénarii d’implémentation de systèmes de
+supervision redondante ainsi que plusieurs topologies réseau. Avec la
+redondance des systèmes, vous pouvez maintenir la possibilité de surveiller
+votre réseau alors que le premier système sur lequel tourne Nagios pose
+problème ou lorsque des parties du réseau deviennent injoignables.</para>
 		
 		<note>
-			<para>If you are just learning how to use Nagios, I would suggest not trying to 
-implement redudancy until you have becoming familiar with the <link 
-linkend="advancedtopics-redundancy-prerequisites">prerequisites</link> I've 
-laid out. Redundancy is a relatively complicated issue to understand, and 
-even more difficult to implement properly.</para>
+			<para>Note: Si vous apprenez à utiliser Nagios, je suggère de ne pas essayer
+d’implémenter la redondance tant que vous n’êtes pas habitué aux <link
+linkend="advancedtopics-redundancy-prerequisites">pré-requis</link> déjà
+présentés. La redondance est un sujet relativement complexe, et il est
+encore plus difficile de l’implémenter correctement.</para>
 		</note>
 	</section>
 	
 	<section>
 		<title>Pré-requis</title>
 		<para>
-			<anchor id="advancedtopics-redundancy-prerequisites" />Before you can even 
-think about implementing redundancy with Nagios, you need to be familiar 
-with the following...
+			<anchor id="advancedtopics-redundancy-prerequisites" />Pré-requisAvant de
+penser pouvoir implémenter la redondance avec Nagios, vous devez être
+familier avec ce qui suit…
 		<itemizedlist>
 			<listitem>
-				<para>Implementing <link linkend="advancedtopics-eventhandlers">event 
-handlers</link> for hosts and services</para>
+				<para>Implémenter les <link linkend="advancedtopics-eventhandlers">Gestionnaires
+d’événements</link> pour les hôtes et services</para>
 			</listitem>
 			
 			<listitem>
-				<para>Issuing <link linkend="advancedtopics-extcommands">external commands</link> 
-to Nagios via shell scripts</para>
+				<para>Présenter une <link linkend="advancedtopics-extcommands">commande
+externe</link> à Nagios via des scripts shell</para>
 			</listitem>
 			
 			<listitem>
-				<para>Executing plugins on remote hosts using either the <link 
-linkend="nagiosaddons-addons-nrpe">&name-nrpe; addon</link> or some other 
-method</para>
+				<para>Exécuter des plugins sur des hôtes distants en utilisant soit <link
+linkend="nagiosaddons-addons-nrpe">&name-nrpe;</link>, soit d’autres
+méthodes</para>
 			</listitem>
 			
 			<listitem>
-				<para>Checking the status of the Nagios process with the 
-<command>check_nagios</command> plugin</para>
+				<para>Vérifier l’état du processus Nagios avec le plugin
+<command>check_nagios</command>.</para>
 			</listitem>
 		</itemizedlist>
 
@@ -59,53 +60,55 @@ method</para>
 	</section>
 	
 	<section>
-		<title>Sample Scripts</title>
-		<para>All of the sample scripts that I use in this documentation can be found in 
-the <filename class="directory">eventhandlers/</filename> subdirectory of 
-the Nagios distribution.  You'll probably need to modify them to work on 
-your system...</para>
+		<title>Exemples de scripts</title>
+		<para>Tous les exemples que j’utilise dans cette documentation se trouvent dans le
+répertoire eventhandlers/ de la distribution Nagios. Vous devrez
+probablement les modifier pour les faire fonctionner sur votre système…</para>
 	</section>
 	
 	<section>
 		<title>
-			<anchor id="advancedtopics-redundancy-scenario_1" />Scenario 1 - Redundant 
-Monitoring</title>
+			<anchor id="advancedtopics-redundancy-scenario_1" />Scénario 1 - Supervision
+Redondante</title>
 		<section>
 			<title>Introduction</title>
 			
-			<para>This is an easy (and naive) method of implementing redundant monitoring 
-hosts on your network and it will only protect against a limited number of 
-failures. More complex setups are necessary in order to provide smarter 
-redundancy, better redundancy across different network segments, etc.</para>
+			<para>Ceci est une méthode facile (et naïve) pour implémenter le monitoring
+redondant d’hôtes sur votre réseau, qui protègera seulement contre un nombre
+limité de problèmes. Des réglages plus complexes sont nécessaires pour
+fournir une redondance plus pratique, une meilleure redondance à travers des
+segments réseau, etc.</para>
 		</section>
 		
 		<section>
-			<title>Goals</title>
+			<title>Buts</title>
 			
-			<para>The goal of this type of redundancy implementation is simple. Both the 
-"master" and "slave" hosts monitor the same hosts and service on the 
-network. Under normal circumstances only the "master" host will be sending 
-out notifications to contacts about problems. We want the "slave" host 
-running Nagios to take over the job of notifying contacts about problems if:</para>
+			<para>Le but de ce type d’implémentation de redondance est simple. Les hôtes
+"maître" et "esclave" surveillent les mêmes systèmes et services sur le
+réseau. Dans des circonstances normales, le système "maître" prendra en
+charge l’envoi des notifications aux contacts concernant les problèmes
+détectés. Nous voulons que système "esclave" fasse fonctionner Nagios et
+prenne en charge la notification des problèmes si:</para>
 			
 			<orderedlist>
 				<listitem>
-					<para>The "master" host that runs Nagios is down or..</para>
+					<para>Soit le système "Maître" faisant fonctionner Nagios ne répond plus</para>
 				</listitem>
 				
 				<listitem>
-					<para>The Nagios process on the "master" host stops running for some reason</para>
+					<para>Soit le processus Nagios sur le système "Maître" arrête de fonctionner.</para>
 				</listitem>
 			</orderedlist>
 		</section>
 		
 		<section>
-			<title>Network Layout Diagram</title>
+			<title>Diagramme de topologie réseau</title>
 			
-			<para>The diagram below shows a very simple network setup. For this scenario I 
-will be assuming that hosts A and E are both running Nagios and are 
-monitoring all the hosts shown. Host A will be considered the "master" host 
-and host E will be considered the "slave" host.</para>
+			<para>Le diagramme ci-dessous montre une configuration réseau très simple. Pour ce
+scénario, je vais supposer que les systèmes A et E font tourner tous deux
+Nagios et surveillent tous les systèmes que l’on y voit. Le système A sera
+considéré comme étant le système "maître" et le système E sera considéré
+comme étant "l’esclave". </para>
 			
 			<informaltable frame="all">
 				<tgroup cols="1">
@@ -129,62 +132,64 @@ and host E will be considered the "slave" host.</para>
 		</section>
 		
 		<section>
-			<title>Initial Program Settings</title>
+			<title>Réglages initiaux du programme</title>
 			
-			<para>The slave host (host E) has its initial <link 
-linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link> 
-directive disabled, thereby preventing it from sending out any host or 
-service notifications.  You also want to make sure that the slave host has 
-its <link 
-linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link> 
-directive enabled. That was easy enough...</para>
+			<para>Le système esclave (système E) a sa directive initiale de notification <link
+linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link>
+désactivée, afin de lui éviter d’envoyer des notifications autant pour les
+hôtes que pour les services. Il faut aussi s’assurer que le système esclave
+a sa directive <link
+linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link>
+activée. C’est plutôt simple…</para>
 		</section>
 		
 		<section>
-			<title>Initial Configuration</title>
+			<title>Configuration Initiale</title>
 			
-			<para>Next we need to consider the differences between the <link 
-linkend="configuringnagios-configobject">object configuration file(s)</link> 
-on the master and slave hosts...</para>
+			<para>Il faudra ensuite considérer les changements entre le(s) fichier(s) de
+configuration des objets sur les systèmes maître et esclave…</para>
 			
-			<para>I will assume that you have the master host (host A) setup to monitor 
-services on all hosts shown in the diagram above. The slave host (host E) 
-should be setup to monitor the same services and hosts, with the following 
-additions in the configuration file...</para>
+			<para>Je vais supposer que le système maître (système A) est configuré pour
+surveiller des services sur tous les systèmes montrés dans le diagramme
+ci-dessus. Le système esclave (système E) doit être configuré pour
+surveiller les mêmes systèmes et services, avec les ajouts suivants aux
+fichiers de configuration…</para>
 			
 			<itemizedlist>
 				<listitem>
-					<para>The host definition for host A (in the host E configuration file) should 
-have a host <link linkend="advancedtopics-eventhandlers">event 
-handler</link> defined.  Lets say the name of the host event handler is <code>handle-master-host-event</code>.</para>
+					<para>La définition du système A (dans le fichier de configuration du système E)
+devrait avoir un gestionnaire d’événement défini. Supposons que le nom du
+gestionnaire d’événement pour le système s’appelle handle-master-host-event <code>handle-master-host-event</code>.</para>
 				</listitem>
 				
 				<listitem>
-					<para>The configuration file on host E should have a service defined to check the 
-status of the Nagios process on host A. Lets assume that you define this 
-service check to run the &plugin-nagios; plugin on host A. This can be done 
-by using one of the methods described in <emphasis role="bold">this <acronym>FAQ</acronym></emphasis> (update this!).</para>
+					<para>Le fichier de configuration sur le système E devrait avoir un service défini
+pour surveiller l’état du processus Nagios sur le système A. Supposons que
+vous ayez défini cette vérification de service pour lancer le plugin
+check_nagios sur le système A <acronym>FAQ</acronym>.</para>
 				</listitem>
 				
 				<listitem>
-					<para>The service definition for the Nagios process check on host A should have an 
-<link linkend="advancedtopics-eventhandlers">event handler</link> 
-defined. Lets say the name of the service event handler is 
+					<para>La définition du service pour la surveillance du processus Nagios sur le
+système A devrait être un <link
+linkend="advancedtopics-eventhandlers">gestionnaire
+d’événement</link>. Supposons que ce service gestionnaire d’événement soit
 handle-master-proc-event.</para>
 				</listitem>
 			</itemizedlist>
 			
-			<para>It is important to note that host A (the master host) has no knowledge of 
-host E (the slave host). In this scenario it simply doesn't need to. Of 
-course you may be monitoring services on host E from host A, but that has 
-nothing to do with the implementation of redundancy...</para>
+			<para>Il est important de noter que le système A (le système maître) ne sait rien
+du système E (le système esclave). Dans ce scénario, il n’en a simplement
+pas besoin. Bien évidemment, vous pouvez surveiller les services du système
+E depuis le système A, mais cela n’a rien à voir avec l’implémentation de la
+redondance…</para>
 		</section>
 		
 		<section>
-			<title>Event Handler Command Definitions</title>
+			<title>Définition de commandes de Gestion d’Evènements</title>
 			
-			<para>We need to stop for a minute and describe what the command definitions for 
-the event handlers on the slave host look like. Here is an example...</para>
+			<para>Faisons une petite pause, et décrivons les définitions de commandes de
+gestion d’événement sur l’esclave. Voici un exemple…</para>
 			
 			<programlisting>
 	define command{
@@ -201,17 +206,17 @@ the event handlers on the slave host look like. Here is an example...</para>
 	$SERVICESTATE$ $SERVICESTATETYPE$
 		}</programlisting>
 			
-			<para>This assumes that you have placed the event handler scripts in the 
-/usr/local/nagios/libexec/eventhandlers directory. You may place them 
-anywhere you wish, but you'll need to modify the examples I've given here.</para>
+			<para>Cela implique que vous ayez placé les scripts de gestion d’événements dans
+le répertoire /usr/local/nagios/libexec/eventhandlers. Vous pouvez les
+placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.</para>
 		</section>
 		
 		<section>
-			<title>Event Handler Scripts</title>
+			<title>Scripts de Gestion d’Evènements</title>
 			
-			<para>Okay, now lets take a look at what the event handler scripts look like...</para>
+			<para>Ok, regardons à quoi ressemble ce script…</para>
 			
-			<para>Host Event Handler (handle-master-host-event):</para>
+			<para>Gestionnaire d’Evènement de système (handle-master-host-event):</para>
 				
 			<programlisting>#!/bin/sh
 				# Only take action on hard host states...
@@ -237,7 +242,7 @@ anywhere you wish, but you'll need to modify the examples I've given here.</para
 				esac
 				exit 0</programlisting>
 			
-			<para>Service Event Handler (handle-master-proc-event):</para>
+			<para>Gestionnaire d’Evènements de Service (handle-master-proc-event):</para>
 				
 			<programlisting>#!/bin/sh
 				# Only take action on hard service states...
@@ -272,141 +277,149 @@ anywhere you wish, but you'll need to modify the examples I've given here.</para
 		</section>
 		
 		<section>
-			<title>What This Does For Us</title>
+			<title>Que fait ce script pour nous ?</title>
 			
-			<para>The slave host (host E) initially has notifications disabled, so it won't 
-send out any host or service notifications while the Nagios process on the 
-master host (host A) is still running.</para>
+			<para>La notification sur le système esclave (système E) est désactivée, donc il
+n’enverra pas de notifications pour les systèmes autant que pour les
+services tant que le processus Nagios fonctionne sur le système maître
+(système A).</para>
 			
-			<para>The Nagios process on the slave host (host E) becomes the master host 
-when...</para>
-			
-			<itemizedlist>
-				<listitem>
-					<para>The master host (host A) goes down and the handle-master-host-event host 
-event handler is executed.</para>
-				</listitem>
-				
-				<listitem>
-					<para>The Nagios process on the master host (host A) stops running and the 
-handle-master-proc-event service event handler is executed.</para>
-				</listitem>
-			</itemizedlist>
-			
-			<para>When the Nagios process on the slave host (host E) has notifications 
-enabled, it will be able to send out notifications about any service or host 
-problems or recoveries. At this point host E has effectively taken over the 
-responsibility of notifying contacts of host and service problems!</para>
-			
-			<para>The Nagios process on host E returns to being the slave host when...</para>
+			<para>Le processus Nagios sur le système esclave (système E) devient maître quand…</para>
 			
 			<itemizedlist>
 				<listitem>
-					<para>Host A recovers and the handle-master-host-event host event handler is 
-executed.</para>
+					<para>Le système maître (système A) tombe et le gestionnaire d’événement de
+système handle-master-host-event est exécuté.</para>
 				</listitem>
 				
 				<listitem>
-					<para>The Nagios process on host A recovers and the handle-master-proc-event 
-service event handler is executed.</para>
+					<para>Le processus Nagios sur le système maître (système A) s’arrête de
+fonctionner et le gestionnaire d’événement du service
+handle-master-proc-event est exécuté.</para>
 				</listitem>
 			</itemizedlist>
 			
-			<para>When the Nagios process on host E has notifications disabled, it will not 
-send out notifications about any service or host problems or recoveries. At 
-this point host E has handed over the responsibilities of notifying contacts 
-of problems to the Nagios process on host A.  Everything is now as it was 
-when we first started!</para>
+			<para>Dès que le processus Nagios sur le système esclave (système E) a la
+notification activée, il sera capable d’envoyer des notifications quant aux
+services ou problèmes système ou encore les retours à la normale. A ce
+moment, le système E a effectivement pris la responsabilité de notifier les
+contacts des problèmes de systèmes et services!</para>
+			
+			<para>Le processus Nagios sur le système E retourne à son état d’esclave quand…</para>
+			
+			<itemizedlist>
+				<listitem>
+					<para>Le système A revient à la normale et le gestionnaire d’événement de système
+handle-master-host-event est exécuté.</para>
+				</listitem>
+				
+				<listitem>
+					<para>Le processus Nagios sur le système A revient à la normale et que le
+gestionnaire d’événement de service handle-master-proc-event est exécuté.</para>
+				</listitem>
+			</itemizedlist>
+			
+			<para>Dès que le processus Nagios sur le système E est désactivé, il n’enverra
+plus de notification concernant les problèmes liés aux services et aux
+systèmes ou encore les retours à la normale. Dès ce moment, le système E a
+pris la responsabilité de notifier les contacts des problèmes du processus
+Nagios sur le système A. Tout revient maintenant dans le même état que
+lorsque l’on a démarré!</para>
 		</section>
 		
 		<section>
-			<title>Time Lags</title>
+			<title>Délais</title>
 			
-			<para>Redundancy in Nagios is by no means perfect. One of the more obvious 
-problems is the lag time between the master host failing and the slave host 
-taking over. This is affected by the following...</para>
-			
-			<itemizedlist>
-				<listitem>
-					<para>The time between a failure of the master host and the first time the slave 
-host detects a problem</para>
-				</listitem>
-				
-				<listitem>
-					<para>The time needed to verify that the master host really does have a problem 
-(using service or host check retries on the slave host)</para>
-				</listitem>
-				
-				<listitem>
-					<para>The time between the execution of the event handler and the next time that 
-Nagios checks for external commands</para>
-				</listitem>
-			</itemizedlist>
-			
-			<para>You can minimize this lag by...</para>
+			<para>La redondance dans Nagios n’est en rien parfaite. Un des nombreux problèmes
+est le délai entre le moment où le maître tombe et que l’esclave prend le
+relai. En voici les raisons…</para>
 			
 			<itemizedlist>
 				<listitem>
-					<para>Ensuring that the Nagios process on host E (re)checks one or more services 
-at a high frequency. This is done by using the check_interval and 
-retry_interval arguments in each service definition.</para>
+					<para>L’intervalle entre la rupture du système maître et la première fois que le
+système esclave détecte le problème.</para>
 				</listitem>
 				
 				<listitem>
-					<para>Ensuring that the number of host rechecks for host A (on host E) allow for 
-fast detection of host problems. This is done by using the 
-max_check_attempts argument in the host definition.</para>
+					<para>Le temps qu’il faut pour vérifier que le système maître a réellement un
+problème (en utilisant une nouvelle fois la commande ’check’ d’un service ou
+d’un système sur le système esclave)</para>
 				</listitem>
 				
 				<listitem>
-					<para>Increase the frequency of <link 
-linkend="advancedtopics-extcommands">external command</link> checks on host 
-E. This is done by modifying the <link 
-linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link> 
-option in the main configuration file.</para>
+					<para>Le temps entre l’exécution du gestionnaire d’événement et la fois suivante
+où Nagios va vérifier la présence d’une commande externe</para>
 				</listitem>
 			</itemizedlist>
 			
-			<para>When Nagios recovers on the host A, there is also some lag time before host 
-E returns to being a slave host. This is affected by the following...</para>
+			<para>Vous pouvez minimiser ce délai en…</para>
 			
 			<itemizedlist>
 				<listitem>
-					<para>The time between a recovery of host A and the time the Nagios process on 
-host E detects the recovery</para>
+					<para>S’assurant que le processus Nagios sur le système E (re)vérifie un ou
+plusieurs services avec une fréquence élevée. Ceci peut être fait en
+utilisant les arguments check_interval et retry_interval dans chaque
+définition de service.</para>
 				</listitem>
 				
 				<listitem>
-					<para>The time between the execution of the event handler on host B and the next 
-time the Nagios process on host E checks for external commands</para>
+					<para>S’assurer que le nombre de re-vérifications de la présence du système A (sur
+le système E) permette une détection des problèmes liés au système plus
+rapidement. Ceci peut être fait en utilisant l’argument max_check_attempts
+dans la définition du système.</para>
+				</listitem>
+				
+				<listitem>
+					<para>Augmenter la fréquence de vérification des <link
+linkend="advancedtopics-extcommands">commandes externes</link> sur le
+système E. Ceci peut être fait en modifiant l’option <link
+linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link>
+dans le fichier de configuration principal.</para>
 				</listitem>
 			</itemizedlist>
 			
-			<para>The exact lag times between the transfer of monitoring responsibilities will 
-vary depending on how many services you have defined, the interval at which 
-services are checked, and a lot of pure chance. At any rate, its definitely 
-better than nothing.</para>
+			<para>Quand Nagios revient à la normale sur le système A, il y a aussi un délai
+avant que le système E ne redevienne esclave. C’est du aux faits suivants…</para>
+			
+			<itemizedlist>
+				<listitem>
+					<para>Le temps entre le retour à la normale du système A la fois suivante où le
+processus Nagios sur le système E détecte le retour à la normale.</para>
+				</listitem>
+				
+				<listitem>
+					<para>L’intervalle entre l’exécution du gestionnaire d’événement sur le système E
+et la fois suivante où le processus Nagios sur le système E vérifie la
+présence de commandes externes</para>
+				</listitem>
+			</itemizedlist>
+			
+			<para>Les intervalles exacts entre le transfert des responsabilités de supervision
+dépendent du nombre de services définis, l’intervalle auquel les services
+sont vérifiés, et un peu de chance. A tous niveaux, c’est mieux que rien.</para>
 		</section>
 		
 		<section>
-			<title>Special Cases</title>
+			<title>Cas spéciaux</title>
 			
-			<para>Here is one thing you should be aware of... If host A goes down, host E will 
-have notifications enabled and take over the responsibilities of notifying 
-contacts of problems. When host A recovers, host E will have notifications 
-disabled. If - when host A recovers - the Nagios process on host A does not 
-start up properly, there will be a period of time when neither host is 
-notifying contacts of problems! Fortunately, the service check logic in 
-Nagios accounts for this. The next time the Nagios process on host E checks 
-the status of the Nagios process on host A, it will find that it is not 
-running. Host E will then have notifications enabled again and take over all 
-responsibilities of notifying contacts of problems.</para>
+			<para>Il y a une chose à laquelle il faut être attentif… Si le système A tombe, le
+système de notifications sur le système E sera activé et prendra la
+responsabilité de notifier les contacts de problèmes. Lorsque le système A
+revient à la normale, le système E aura sa notification désactivée. Si,
+quand le système A revient à la normale, le processus Nagios ne redémarre
+pas correctement, il y aura une période de temps où aucun système ne
+notifiera les contacts de problèmes! Heureusement on peut compter sur la
+logique de vérification de services de Nagios. La fois suivante où le
+processus Nagios sur le système E vérifie l’état du processus Nagios sur le
+système A, il verra qu’il ne fonctionne pas. Le système E aura donc sa
+notification activée et prendra la responsabilité de notifier les contacts
+des problèmes.</para>
 			
-			<para>The exact amount of time that neither host is monitoring the network is hard 
-to determine. Obviously, this period can be minimized by increasing the 
-frequency of service checks (on host E) of the Nagios process on host A. The 
-rest is up to pure chance, but the total "blackout" time shouldn't be too 
-bad.</para>
+			<para>Le temps où aucun système ne surveille est assez difficile à
+déterminer. Toutefois, cette période peut être minimisée en augmentant la
+fréquence de vérification (sur le système E) du processus Nagios sur le
+système A. Le reste est une question de chance, mais le temps de "blackout"
+total ne devrait pas être trop mauvais.</para>
 
 		
 		</section>
@@ -414,99 +427,103 @@ bad.</para>
 	
 	<section>
 		
-		<title><anchor id="advancedtopics-redundancy-scenario_2" />Scenario 2 - Failover 
-Monitoring</title>
+		<title><anchor id="advancedtopics-redundancy-scenario_2" />Supervision en mode
+haute disponibilité</title>
 
 
 		
 		<section>
 			<title>Introduction</title>
 			
-			<para>Failover monitoring is similiar to, but slightly different than redundant 
-monitoring (as discussed above in <link 
-linkend="advancedtopics-redundancy-scenario_1">scenario 1</link>).</para>
+			<para>La supervision avec gestion de panne est pratiquement identique. Il existe
+quand même des différences avec le système précédent <link
+linkend="advancedtopics-redundancy-scenario_1">scénario 1</link>).</para>
 		</section>
 		
 		<section>
-			<title>Goals</title>
+			<title>Buts</title>
 			
-			<para>The basic goal of failover monitoring is to have the Nagios process on the 
-slave host sit idle while the Nagios process on the master host is 
-running. If the process on the master host stops running (or if the host 
-goes down), the Nagios process on the slave host starts monitoring 
-everything.</para>
+			<para>Le but principal de la gestion de panne est d’avoir le processus Nagios sur
+le système esclave en hibernation tant que le processus Nagios sur le
+système maitre fonctionne. Si le processus sur le système maître arrête de
+fonctionner (ou si le système tombe), le processus Nagios sur le système
+esclave commence à tout surveiller.</para>
 			
-			<para>While the method described in <link 
-linkend="advancedtopics-redundancy-scenario_1">scenario 1</link> will allow 
-you to continue receive notifications if the master monitoring hosts goes 
-down, it does have some pitfalls. The biggest problem is that the slave host 
-is monitoring the same hosts and servers as the master at the same time as 
-the master! This can cause problems with excessive traffic and load on the 
-machines being monitored if you have a lot of services defined. Here's how 
-you can get around that problem...</para>
+			<para>Bien que la méthode décrite dans la partie <link
+linkend="advancedtopics-redundancy-scenario_1">scénario 1</link> permette de
+continuer à recevoir la notification si le système maitre tombe, il y a
+quelques pièges. Le plus gros problème est que le système esclave surveille
+les mêmes systèmes que le maitre au même moment! Ceci peut causer des
+problèmes de trafic excessif et charger les machines surveillées si vous
+avez beaucoup de services définis. Voici une manière de contourner ce
+problème…</para>
 		</section>
 		
 		<section>
-			<title>Initial Program Settings</title>
+			<title>Réglages initiaux du programme</title>
 			
-			<para>Disable active service checks and notifications on the slave host using the 
-<link 
-linkend="configuringnagios-configmain-execute_service_checks">execute_service_checks</link> 
-and <link 
-linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link> 
-directives. This will prevent the slave host from monitoring hosts and 
-services and sending out notifications while the Nagios process on the 
-master host is still up and running. Make sure you also have the <link 
-linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link> 
-directive enabled on the slave host.</para>
+			<para>Désactiver la vérification active des services et la notification sur le
+système esclave en utilisant les directives <link
+linkend="configuringnagios-configmain-execute_service_checks">execute_service_checks</link>
+et <link
+linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link>.
+Ceci évitera au système esclave de surveiller les services et les systèmes
+et d’envoyer des notifications tant que le processus Nagios sur le système
+maître fonctionne. Assurez-vous d’avoir la directive <link
+linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link>
+activée sur le système esclave.</para>
 		</section>
 		
 		<section>
-			<title>Master Process Check</title>
+			<title>Vérification du processus principal</title>
 			
-			<para>Set up a cron job on the slave host that periodically (say every minute) 
-runs a script that checks the staus of the Nagios process on the master host 
-(using the &plugin-nrpe; plugin on the slave host and the <link 
-linkend="nagiosaddons-addons-nrpe">nrpe daemon</link> and &plugin-nagios; 
-plugin on the master host). The script should check the return code of the 
-&plugin-nrpe; plugin . If it returns a non-OK state, the script should send 
-the appropriate commands to the <link 
-linkend="configuringnagios-configmain-command_file">external command 
-file</link> to enable both notifications and active service checks. If the 
-plugin returns an OK state, the script should send commands to the external 
-command file to disable both notifications and active checks.</para>
+			<para>Créer un tâche programmée [cron job] sur le système esclave qui lance
+périodiquement un script (disons toutes les minutes) qui vérifie l’état du
+processus Nagios sur le système maître (en utilisant le plugin check_nrpe
+sur le système esclave et le <link linkend="nagiosaddons-addons-nrpe">démon
+nrpe</link> sur le système maître). Le script va vérifier le code de retour
+du plugin nrpe. S’il retourne un état non-OK, le script va envoyer les
+commandes appropriées au <link
+linkend="configuringnagios-configmain-command_file">fichier de commandes
+externes</link> pour activer la notification et la surveillance des
+services. Si le plugin retourne un état OK, le script enverra les commandes
+pour désactiver la surveillance active des services et la notification.</para>
 			
-			<para>By doing this you end up with only one process monitoring hosts and services 
-at a time, which is much more efficient that monitoring everything twice.</para>
+			<para>En procédant comme suit, vous n’utilisez qu’un processus de surveillance de
+système et de service à la fois, ce qui est plus efficace que de surveiller
+en double.</para>
 			
-			<para>Also of note, you don't need to define host and service handlers as 
-mentioned in <link linkend="advancedtopics-redundancy-scenario_1">scenario 
-1</link> because things are handled differently.</para>
+			<para>Notez aussi que vous ne devez pas définir de gestionnaires d’événements
+comme défini dans le <link
+linkend="advancedtopics-redundancy-scenario_1">scénario 1</link>, car les
+contraintes sont surmontées de manière différente.</para>
 		</section>
 		
 		<section>
-			<title>Additional Issues</title>
+			<title>Cas Supplémentaires</title>
 			
-			<para>At this point, you have implemented a very basic failover monitoring 
-setup. However, there is one more thing you should consider doing to make 
-things work smoother.</para>
+			<para>Vous avez maintenant implémenté une gestion de panne de manière plutôt
+basique. Il y a toutefois d’autres manières de procéder pour que cela
+fonctionne de manière plus douce.</para>
 			
-			<para>The big problem with the way things have been setup thus far is the fact 
-that the slave host doesn't have the current status of any services or hosts 
-at the time it takes over the job of monitoring. One way to solve this 
-problem is to enable the <link 
-linkend="configuringnagios-configmain-ocsp_command">ocsp command</link> on 
-the master host and have it send all service check results to the slave host 
-using the <link linkend="nagiosaddons-addons-nsca">nsca addon</link>.  The 
-slave host will then have up-to-date status information for all services at 
-the time it takes over the job of monitoring things. Since active service 
-checks are not enabled on the slave host, it will not actively run any 
-service checks. However, it will execute host checks if necessary. This 
-means that both the master and slave hosts will be executing host checks as 
-needed, which is not really a big deal since the majority of monitoring 
-deals with service checks.</para>
+			<para>Le gros problème avec cette technique est surtout le fait que l’esclave ne
+connait pas l’état courant des services ou des systèmes au moment même où il
+prend à sa charge le travail de surveillance. Une manière de solutionner ce
+problème est d’activer la <link
+linkend="configuringnagios-configmain-ocsp_command">commande ocsp</link> sur
+le système maître et de lui demander de rapporter les résultats des
+vérifications à l’esclave en utilisant l’ajout <link
+linkend="nagiosaddons-addons-nsca">nsca</link>. De cette manière, le système
+esclave possède un statut mis à jour des informations de tous les services
+et des systèmes s’il venait à prendre en charge la surveillance. Tant que
+les vérifications actives ne sont pas activées sur le système esclave, il
+n’effectuera aucune vérification active. Malgré tout, il exécutera les
+vérifications si nécessaire. Cela signifie qu’autant le maître que l’esclave
+exécuteront les vérifications de système comme il le faut, ce qui n’est pas
+vraiment une bonne affaire puisque la majorité des surveillances
+fonctionnent par rapport aux services.</para>
 			
-			<para>That's pretty much it as far as setup goes.</para>
+			<para>Voilà à peu près tout ce qu’il y a à configurer.</para>
 		</section>
 	</section>
 </chapter>

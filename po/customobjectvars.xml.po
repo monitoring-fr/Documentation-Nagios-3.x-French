@@ -22,43 +22,25 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -69,26 +51,67 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/customobjectvars.xml:10
 #: AdvancedTopics/objectinheritance.xml:250
+#, fuzzy
 msgid "Custom Object Variables"
-msgstr "Variables personnalisées d'objets"
+msgstr ""
+"#-#-#-#-#  customobjectvars.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Variables personnalisées d'objets\n"
+"#-#-#-#-#  objectinheritance.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Les variables objet personnalisées"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/customobjectvars.xml:13
-msgid "Users often request that new variables be added to host, service, and contact definitions. These include variables for &protocol-snmp; community, MAC address, AIM username, Skype number, and street address. The list is endless. The problem that I see with doing this is that it makes Nagios less generic and more infrastructure-specific.  Nagios was intended to be flexible, which meant things needed to be designed in a generic manner.  Host definitions in Nagios, for example, have a generic \"address\" variable that can contain anything from an IP address to human-readable driving directions - whatever is appropriate for the user's setup."
-msgstr "Les utilisateurs demandent souvent que de nouvelles variables puissent être ajoutés aux définitions d'hôtes, de services et de contacts. Ceci inclut des variables comme la communauté du protocole &protocol-snmp; l'adresse MAC, le nom d'utilisateur AIM, le numéro Skype ou une simple adresse. Le problème que je vois à faire ça est que Nagios devient alors moins générique et plus spécifique à un type d'infrasctructure. Nagios a été prévu pour être flexible, ce qui sous-entend que les choses doivent être pensées de façon générique. Par exemple, les définitions d'hôtes dans Nagios ont une variable générique <quote>address</quote> qui peut contenir n'importe quoi; de la simple adresse IP à l'adresse complète de type FQDN; quoique soit d'approprié à l'utilisateur."
+msgid ""
+"Users often request that new variables be added to host, service, and "
+"contact definitions. These include variables for &protocol-snmp; community, "
+"MAC address, AIM username, Skype number, and street address. The list is "
+"endless. The problem that I see with doing this is that it makes Nagios less "
+"generic and more infrastructure-specific.  Nagios was intended to be "
+"flexible, which meant things needed to be designed in a generic manner.  "
+"Host definitions in Nagios, for example, have a generic \"address\" variable "
+"that can contain anything from an IP address to human-readable driving "
+"directions - whatever is appropriate for the user's setup."
+msgstr ""
+"Les utilisateurs demandent souvent que de nouvelles variables puissent être "
+"ajoutés aux définitions d'hôtes, de services et de contacts. Ceci inclut des "
+"variables comme la communauté du protocole &protocol-snmp; l'adresse MAC, le "
+"nom d'utilisateur AIM, le numéro Skype ou une simple adresse. Le problème "
+"que je vois à faire ça est que Nagios devient alors moins générique et plus "
+"spécifique à un type d'infrasctructure. Nagios a été prévu pour être "
+"flexible, ce qui sous-entend que les choses doivent être pensées de façon "
+"générique. Par exemple, les définitions d'hôtes dans Nagios ont une variable "
+"générique <quote>address</quote> qui peut contenir n'importe quoi; de la "
+"simple adresse IP à l'adresse complète de type FQDN; quoique soit "
+"d'approprié à l'utilisateur."
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/customobjectvars.xml:21
-msgid "Still, there needs to be a method for admins to store information about their infrastructure components in their Nagios configuration without imposing a set of specific variables on others.  Nagios attempts to solve this problem by allowing users to define custom variables in their object definitions. Custom variables allow users to define additional properties in their host, service, and contact definitions, and use their values in notifications, event handlers, and host and service checks."
-msgstr "Pourtant, il y a bien un besoin pour les administrateurs d'avoir la possibilité de stocker des informations à propos des composants de leur infrastructure dans la configuration de Nagios sans imposé un ensemble de variables spécifiques pour les autres. Nagios essaie de solutionner ce problème en autorisant les utilisateurs à définir des variables personnalisées dans leurs définitions d'objets. Les variables personnalisées permettent aux utilisateurs de définir des propriétés supplémentaires pour leurs hôtes, services et définitions de contacts et d'utiliser leurs valeurs dans les notifications, les gestionnaires d'événements et les contrôles d'hôtes et de services."
+msgid ""
+"Still, there needs to be a method for admins to store information about "
+"their infrastructure components in their Nagios configuration without "
+"imposing a set of specific variables on others.  Nagios attempts to solve "
+"this problem by allowing users to define custom variables in their object "
+"definitions. Custom variables allow users to define additional properties in "
+"their host, service, and contact definitions, and use their values in "
+"notifications, event handlers, and host and service checks."
+msgstr ""
+"Pourtant, il y a bien un besoin pour les administrateurs d'avoir la "
+"possibilité de stocker des informations à propos des composants de leur "
+"infrastructure dans la configuration de Nagios sans imposé un ensemble de "
+"variables spécifiques pour les autres. Nagios essaie de solutionner ce "
+"problème en autorisant les utilisateurs à définir des variables "
+"personnalisées dans leurs définitions d'objets. Les variables personnalisées "
+"permettent aux utilisateurs de définir des propriétés supplémentaires pour "
+"leurs hôtes, services et définitions de contacts et d'utiliser leurs valeurs "
+"dans les notifications, les gestionnaires d'événements et les contrôles "
+"d'hôtes et de services."
 
 # type: Content of: <chapter><section><title>
 #: ConfiguringNagios/customobjectvars.xml:29
@@ -97,13 +120,20 @@ msgstr "Principes de base des variables personnalisées"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/customobjectvars.xml:30
-msgid "There are a few important things that you should note about custom variables:"
-msgstr "Il ya quelques points importants que vous devriez connaître sur les variables personnalisées :"
+msgid ""
+"There are a few important things that you should note about custom variables:"
+msgstr ""
+"Il ya quelques points importants que vous devriez connaître sur les "
+"variables personnalisées :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/customobjectvars.xml:33
-msgid "Custom variable names must begin with an underscore (_) to prevent name collision with standard variables"
-msgstr "Les noms de variables personnalisées doivent commencer par un underscore (_) pour prévenir tout conflit avec les variables standards."
+msgid ""
+"Custom variable names must begin with an underscore (_) to prevent name "
+"collision with standard variables"
+msgstr ""
+"Les noms de variables personnalisées doivent commencer par un underscore (_) "
+"pour prévenir tout conflit avec les variables standards."
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/customobjectvars.xml:37
@@ -112,24 +142,37 @@ msgstr "Les noms de variables personnalisées sont insensibles à la casse"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/customobjectvars.xml:40
-msgid "Custom variables are <link linkend=\"advancedtopics-objectinheritance\">inherited</link> from object templates like normal variables"
-msgstr "Les variables personnalisées sont <link linkend=\"advancedtopics-objectinheritance\">héritées</link> des gabarits d'objets comme n'importe quelle variable standard"
+msgid ""
+"Custom variables are <link linkend=\"advancedtopics-objectinheritance"
+"\">inherited</link> from object templates like normal variables"
+msgstr ""
+"Les variables personnalisées sont <link linkend=\"advancedtopics-"
+"objectinheritance\">héritées</link> des gabarits d'objets comme n'importe "
+"quelle variable standard"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: ConfiguringNagios/customobjectvars.xml:44
-msgid "Scripts can reference custom variable values with <link linkend=\"thebasics-macros\">macros and environment variables</link>"
-msgstr "Les scripts peuvent référencer des valeurs de variables personnalisées avec les <link linkend=\"thebasics-macros\">variables d'environnement et les macros</link>"
+msgid ""
+"Scripts can reference custom variable values with <link linkend=\"thebasics-"
+"macros\">macros and environment variables</link>"
+msgstr ""
+"Les scripts peuvent référencer des valeurs de variables personnalisées avec "
+"les <link linkend=\"thebasics-macros\">variables d'environnement et les "
+"macros</link>"
 
 # type: Content of: <chapter><section><title>
-#: ConfiguringNagios/customobjectvars.xml:51
-#: Development/pluginapi.xml:216
+#: ConfiguringNagios/customobjectvars.xml:51 Development/pluginapi.xml:216
 msgid "Examples"
 msgstr "Exemples"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/customobjectvars.xml:52
-msgid "Here's an example of how custom variables can be defined in different types of object definitions:"
-msgstr "Voici un exemple de la façon dont peuvent être définies les variables personnalisées dans différents types de définitions d'objets"
+msgid ""
+"Here's an example of how custom variables can be defined in different types "
+"of object definitions:"
+msgstr ""
+"Voici un exemple de la façon dont peuvent être définies les variables "
+"personnalisées dans différents types de définitions d'objets"
 
 # type: Content of: <chapter><section><programlisting>
 #: ConfiguringNagios/customobjectvars.xml:53
@@ -206,20 +249,47 @@ msgstr "Les variables personnalisées comme macro"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/customobjectvars.xml:83
-msgid "Custom variable values can be referenced in scripts and executables that Nagios runs for checks, notifications, etc. by using <link linkend=\"thebasics-macros\">macros</link> or environment variables."
-msgstr "Les variables personnalisées peuvent être référencées dans des scripts et exécutables que Nagios utilisent pour exécuter les contrôles, notifications, etc... en utilisant les <link linkend=\"thebasics-macros\">macros</link> ou variables d'environnement."
+msgid ""
+"Custom variable values can be referenced in scripts and executables that "
+"Nagios runs for checks, notifications, etc. by using <link linkend="
+"\"thebasics-macros\">macros</link> or environment variables."
+msgstr ""
+"Les variables personnalisées peuvent être référencées dans des scripts et "
+"exécutables que Nagios utilisent pour exécuter les contrôles, notifications, "
+"etc... en utilisant les <link linkend=\"thebasics-macros\">macros</link> ou "
+"variables d'environnement."
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/customobjectvars.xml:86
-msgid "In order to prevent name collision among custom variables from different object types, Nagios prepends <quote>_HOST</quote>, <quote>_SERVICE</quote>, or <quote>_CONTACT</quote> to the beginning of custom host, service, or contact variables, respectively, in macro and environment variable names. The table below shows the corresponding macro and environment variable names for the custom variables that were defined in the example above."
-msgstr "Pour éviter tous conflits de noms parmi les variables personnalisées de différents types d'objets, Nagios ajoute <quote>_HOST</quote>, <quote>_SERVICE</quote> ou <quote>_CONTACT</quote> au début des variables personnalisées d'hôtes, de services et de contacts des macros et des variables d'environnement. Le tableau ci-dessous montre la correspondance entre les variables personnalisées et leur macro ou variable d'environnement respectives pour les variables personnalisées définies dans l'exemple précédent."
+msgid ""
+"In order to prevent name collision among custom variables from different "
+"object types, Nagios prepends <quote>_HOST</quote>, <quote>_SERVICE</quote>, "
+"or <quote>_CONTACT</quote> to the beginning of custom host, service, or "
+"contact variables, respectively, in macro and environment variable names. "
+"The table below shows the corresponding macro and environment variable names "
+"for the custom variables that were defined in the example above."
+msgstr ""
+"Pour éviter tous conflits de noms parmi les variables personnalisées de "
+"différents types d'objets, Nagios ajoute <quote>_HOST</quote>, "
+"<quote>_SERVICE</quote> ou <quote>_CONTACT</quote> au début des variables "
+"personnalisées d'hôtes, de services et de contacts des macros et des "
+"variables d'environnement. Le tableau ci-dessous montre la correspondance "
+"entre les variables personnalisées et leur macro ou variable d'environnement "
+"respectives pour les variables personnalisées définies dans l'exemple "
+"précédent."
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
-#: ConfiguringNagios/customobjectvars.xml:101
-#: AdvancedTopics/flapping.xml:211
+#: ConfiguringNagios/customobjectvars.xml:101 AdvancedTopics/flapping.xml:211
 #: AdvancedTopics/objectinheritance.xml:383
+#, fuzzy
 msgid "Object Type"
-msgstr "Type d'objet"
+msgstr ""
+"#-#-#-#-#  customobjectvars.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Type d'objet\n"
+"#-#-#-#-#  objectinheritance.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Les types d'objet\n"
+"#-#-#-#-#  flapping.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Type d'objet"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: ConfiguringNagios/customobjectvars.xml:104
@@ -227,20 +297,19 @@ msgid "Variable Name"
 msgstr "Nom de variable"
 
 # type: Content of: <chapter><section><para><informaltable><tgroup><tbody><row><entry><para>
-#: ConfiguringNagios/customobjectvars.xml:107
-#: TheBasics/macrolist.xml:104
-#: TheBasics/macrolist.xml:1523
-#: TheBasics/macrolist.xml:1724
-#: TheBasics/macrolist.xml:2984
-#: TheBasics/macrolist.xml:3185
-#: TheBasics/macrolist.xml:3381
-#: TheBasics/macrolist.xml:3486
-#: TheBasics/macrolist.xml:4050
-#: TheBasics/macrolist.xml:4430
-#: TheBasics/macrolist.xml:4688
-#: TheBasics/macrolist.xml:5130
+#: ConfiguringNagios/customobjectvars.xml:107 TheBasics/macrolist.xml:104
+#: TheBasics/macrolist.xml:1523 TheBasics/macrolist.xml:1724
+#: TheBasics/macrolist.xml:2984 TheBasics/macrolist.xml:3185
+#: TheBasics/macrolist.xml:3381 TheBasics/macrolist.xml:3486
+#: TheBasics/macrolist.xml:4050 TheBasics/macrolist.xml:4430
+#: TheBasics/macrolist.xml:4688 TheBasics/macrolist.xml:5130
+#, fuzzy
 msgid "Macro Name"
-msgstr "Nom de macro"
+msgstr ""
+"#-#-#-#-#  macrolist.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Nom de la macro\n"
+"#-#-#-#-#  customobjectvars.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Nom de macro"
 
 # type: Content of: <chapter><section><informaltable><tgroup><thead><row><entry><para>
 #: ConfiguringNagios/customobjectvars.xml:110
@@ -249,8 +318,7 @@ msgstr "Variable d'environnement"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/customobjectvars.xml:117
-#: ConfiguringNagios/customobjectvars.xml:131
-#: AdvancedTopics/flapping.xml:220
+#: ConfiguringNagios/customobjectvars.xml:131 AdvancedTopics/flapping.xml:220
 msgid "Host"
 msgstr "Hôte"
 
@@ -286,8 +354,7 @@ msgstr "NAGIOS__HOSTRACK_NUMBER"
 
 # type: Content of: <chapter><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/customobjectvars.xml:145
-#: ConfiguringNagios/customobjectvars.xml:159
-#: AdvancedTopics/flapping.xml:236
+#: ConfiguringNagios/customobjectvars.xml:159 AdvancedTopics/flapping.xml:236
 msgid "Service"
 msgstr "Service"
 
@@ -364,6 +431,10 @@ msgstr "Variables personnalisées et héritage"
 
 # type: Content of: <chapter><section><para>
 #: ConfiguringNagios/customobjectvars.xml:205
-msgid "Custom object variables are <link linkend=\"advancedtopics-objectinheritance\">inherited</link> just like standard host, service, or contact variables."
-msgstr "Les variables personnalisées d'objets peuvent être <link linkend=\"advancedtopics-objectinheritance\">héritées</link> comme n'importe quelle variable standard d'hôte, de service ou de contact."
-
+msgid ""
+"Custom object variables are <link linkend=\"advancedtopics-objectinheritance"
+"\">inherited</link> just like standard host, service, or contact variables."
+msgstr ""
+"Les variables personnalisées d'objets peuvent être <link linkend="
+"\"advancedtopics-objectinheritance\">héritées</link> comme n'importe quelle "
+"variable standard d'hôte, de service ou de contact."

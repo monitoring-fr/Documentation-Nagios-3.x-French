@@ -7,21 +7,23 @@
 ]
 >
 <chapter id="thebasics-cgis" xreflabel="Information On The CGIs">
-  <title>Information On The CGIs</title>
+  <title>Information sur les CGIs</title>
 
   <section>
     <title>Introduction</title>
 
-    <para>The various CGIs distributed with Nagios are described here, along with the 
-authorization requirements for accessing and using each CGI. By default the 
-CGIs require that you have authenticated to the web server and are 
-authorized to view any information you are requesting. More information on 
-configuring authorization can be found <link 
-linkend="configuringnagios-cgiauth">here</link>.</para>
+    <para>Vous trouverez ici une description de l'ensemble des CGIs de Nagios ainsi
+que les autorisations nécessaires pour accéder à chacun d'eux. Par défaut,
+les CGI ne fonctionnent que si vous vous êtes authentifiés auprès du serveur
+web et que vous êtes autorisés à accéder aux informations demandées. Pour
+plus d'informations sur la configuration des autorisations de votre serveur
+web et des CGI, lisez les sections <link
+linkend="configuringnagios-cgiauth">Installer l'interface web et
+Authentification et autorisations dans les CGI</link>.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-status_cgi" />Status CGI</title>
+    <title><anchor id="thebasics-cgis-status_cgi" />CGI d'état</title>
 
     <informaltable frame="all">
       <tgroup cols="4">
@@ -67,9 +69,9 @@ linkend="configuringnagios-cgiauth">here</link>.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>status.cgi</para></entry>
+            <entry><para><filename>status.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -79,27 +81,27 @@ linkend="configuringnagios-cgiauth">here</link>.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This is the most important CGI included with Nagios. It allows 
-you to view the current status of all hosts and services that are being 
-monitored. The status CGI can produce two main types of output - a status 
-overview of all host groups (or a particular host group) and a detailed view 
-of all services (or those associated with a particular host).</para>
-            <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description : C'est le CGI le plus important de Nagios. Il vous permet de
+voir l'état de tous les hôtes et de tous les services supervisés. Le CGI
+d'état peut produire deux types principaux d'affichage - un aperçu de l'état
+de tous les groupes d'hôtes (ou d'un groupe particulier) et une vue
+détaillée de tous les services (ou de ceux associés à un hôte particulier).</para>
+            <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view all hosts and all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir tous les hôtes et tous les services. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir tous les services. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view all hosts and services for 
-which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir tous les hôtes et tous
+les services dont vous êtes un contact. </para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -109,7 +111,7 @@ which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-statusmap_cgi" />Status Map CGI</title>
+    <title><anchor id="thebasics-cgis-statusmap_cgi" />CGI de cartographie des états</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -129,7 +131,7 @@ which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
             <entry><filename>statusmap.cgi</filename></entry>
           </row>
@@ -141,31 +143,32 @@ which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI creates a map of all hosts that you have defined on 
-your network. The CGI uses Thomas Boutell's <ulink url="&url-gd;">gd</ulink> 
-library (version 1.6.3 or higher) to create a PNG image of your network 
-layout. The coordinates used when drawing each host (along with the optional 
-pretty icons) are taken from <link 
-linkend="configuringnagios-objectdefinitions-host">host</link> 
-definitions. If you'd prefer to let the CGI automatically generate drawing 
-coordinates for you, use the <link 
-linkend="configuringnagios-configcgi-default_statusmap_layout">default_statusmap_layout</link> 
-directive to specify a layout algorithm that should be used.</para> <para>Authorization Requirements:</para>
+            <entry><para>Ce CGI crée une carte de tous les hôtes que vous avez défini dans votre
+réseau. Il utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de
+Thomas Boutell (version 1.6.3 ou plus) pour créer une image au format PNG de
+l'agencement de votre réseau. Les coordonnées utilisées pour dessiner chaque
+hôte (ainsi que les jolies icônes facultatives) sont extraites des
+définitions d' <link
+linkend="configuringnagios-objectdefinitions-host">hôtes</link>. Si vous
+souhaitez plutôt laisser le CGI dessiner automatiquement les coordonnées
+pour vous, utilisez la directive <link
+linkend="configuringnagios-configcgi-default_statusmap_layout">default_statusmap_layout</link>
+pour spécifier l'algorithme à utiliser.</para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view all hosts.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir tous les hôtes. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view hosts for which you are a 
-contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
+êtes un contact.</para>
                 </listitem>
-              </itemizedlist><note><para>Users who are not authorized to view specific hosts will see unknown nodes 
-in those positions. I realize that they really shouldn't see anything there, 
-but it doesn't make sense to even generate the map if you can't see all the 
-host dependencies...</para></note></entry>
+              </itemizedlist><note><para>Les utilisateurs qui ne sont pas autorisés à voir un hôte particulier
+verront un noeud nommé unknown à la place. Je suis conscient qu'ils ne
+devraient rien voir du tout, mais ça n'a aucun sens de générer la carte si
+vous ne pouvez pas voir les dépendances entre les hôtes...  </para></note></entry>
           </row>
         </tbody>
       </tgroup>
@@ -173,7 +176,7 @@ host dependencies...</para></note></entry>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-statuswml_cgi" /><acronym>WAP</acronym> Interface CGI</title>
+    <title><anchor id="thebasics-cgis-statuswml_cgi" /><acronym>WAP</acronym> CGI d'interface WAP</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -193,7 +196,7 @@ host dependencies...</para></note></entry>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
             <entry><filename>statuswml.cgi</filename></entry>
           </row>
@@ -205,34 +208,36 @@ host dependencies...</para></note></entry>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI serves as a <acronym>WAP</acronym> interface to network status information. If you have a <acronym>WAP</acronym>-enable device (i.e.  an Internet-ready cellphone), you can view status 
-information while you're on the go. Different status views include hostgroup 
-summary, hostgroup overview, host detail, service detail, all problems, and 
-unhandled problems. In addition to viewing status information, you can also 
-disable notifications and checks and acknowledge problems from your 
-cellphone. Pretty cool, huh?</para>
-            <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description:  Ce CGI gère  <acronym>WAP</acronym> l'interface WAP d'accès aux informations sur l'état du réseau. Si vous avez  <acronym>WAP</acronym>un appareil WAP (i.e. un téléphone portable compatible Internet), vous
+pouvez accéder aux informations d'état alors que vous êtes en
+déplacement. Les vues disponibles comprennent le résumé par groupe d'hôtes,
+l'aperçu par groupe d'hôtes, le détail d'un hôte, le détail d'un service,
+tous les problèmes, et les problèmes non pris en compte. Vous pouvez de plus
+désactiver les notifications et les contrôles et acquitter des problèmes
+depuis votre portable. Plutôt cool, non ?</para>
+            <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_system_information">authorized 
-for system information</link> you can view Nagios process information.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_system_information">autorisé
+pour les informations système</link> vous pouvez voir les informations sur
+le processus de Nagios.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view status data for all hosts and services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir tous les hôtes et tous les services. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view status data for all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir tous les services. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view status data for all hosts 
-and services for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les données d'état de
+tous les hôtes et services dont vous êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -242,7 +247,7 @@ and services for which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-statuswrl_cgi" />Status World CGI (VRML)</title>
+    <title><anchor id="thebasics-cgis-statuswrl_cgi" />CGI du monde des états (VRML)</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -262,9 +267,9 @@ and services for which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>statuswrl.cgi</para></entry>
+            <entry><para><filename>statuswrl.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -274,34 +279,35 @@ and services for which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI creates a 3-D VRML model of all hosts that you have 
-defined on your network. Coordinates used when drawing the hosts (as well as 
-pretty texture maps) are taken from <link 
-linkend="configuringnagios-objectdefinitions-host">host</link> 
-definitions. If you'd prefer to let the CGI automatically generate drawing 
-coordinates for you, use the <link 
-linkend="configuringnagios-configcgi-default_statuswrl_layout">default_statuswrl_layout</link> 
-directive to specify a layout algorithm that should be used.  You'll need a 
-VRML browser (like <ulink 
-url="http://www.parallelgraphics.com/cortona/">Cortona</ulink>, <ulink 
-url="http://www.cosmosoftware.com/">Cosmo Player</ulink> or <ulink 
-url="http://www.intervista.com/">WorldView</ulink>)  installed on your 
-system before you can actually view the generated model.</para> <para>Authorization Requirements:</para>
+            <entry><para>Description : Ce CGI crée une modélisation en 3D utilisant le langage VRML
+de tous les hôtes définis dans votre réseau. Les coordonnées utilisées pour
+dessiner les hôtes (ainsi que les jolies textures) sont extraites des
+définitions d'<link
+linkend="configuringnagios-objectdefinitions-host">hôtes</link>. Si vous
+souhaitez plutôt laisser le CGI dessiner automatiquement les coordonnées
+pour vous, utilisez la directive <link
+linkend="configuringnagios-configcgi-default_statusmap_layout">default_statusmap_layout</link>
+pour spécifier l'algorithme à utiliser. Il vous faudra un navigateur VRML
+(comme <ulink
+url="http://www.parallelgraphics.com/cortona/">Cortona</ulink>, <ulink
+url="http://www.cosmosoftware.com/">Cosmo Player</ulink> ou <ulink
+url="http://www.intervista.com/">WorldView</ulink>) installé sur votre
+système pour pouvoir visualiser ce modèle. </para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view all hosts.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir tous les hôtes. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view hosts for which you are a 
-contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
+êtes un contact.</para>
                 </listitem>
-              </itemizedlist><note><para>Users who are not authorized to view specific hosts will see unknown nodes 
-in those positions. I realize that they really shouldn't see anything there, 
-but it doesn't make sense to even generate the map if you can't see all the 
-host dependencies...</para></note></entry>
+              </itemizedlist><note><para>Les utilisateurs qui ne sont pas autorisés à voir un hôte particulier
+verront un noeud nommé unknown à la place. Je suis conscient qu'ils ne
+devraient rien voir du tout, mais ça n'a aucun sens de générer la carte si
+vous ne pouvez pas voir les dépendances entre les hôtes...  </para></note></entry>
           </row>
         </tbody>
       </tgroup>
@@ -309,7 +315,7 @@ host dependencies...</para></note></entry>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-tac_cgi" />Tactical Overview CGI</title>
+    <title><anchor id="thebasics-cgis-tac_cgi" />CGI d'aperçu tactique</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -329,9 +335,9 @@ host dependencies...</para></note></entry>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>tac.cgi</para></entry>
+            <entry><para><filename>tac.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -341,29 +347,30 @@ host dependencies...</para></note></entry>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI is designed to server as a "birds-eye view" of all 
-network monitoring activity. It allows you to quickly see network outages, 
-host status, and service status.  It distinguishes between problems that 
-have been "handled" in some way (i.e. been acknowledged, had notifications 
-disabled, etc.) and those which have not been handled, and thus need 
-attention. Very useful if you've got a lot of hosts/services you're 
-monitoring and you need to keep a single screen up to alert you of problems.</para> <para>Authorization Requirements:</para>
+            <entry><para>Description: Ce CGI vous donne une vue générale de toute l'activité de
+supervision du réseau. Il vous permet de repérer rapidement les
+indisponibilités du réseau, l'état des hôtes et des services. Il distingue
+les problèmes qui ont été traités d'une façon ou d'une autre (par ex. qui
+ont été acquittés, dont les notifications sont désactivées, etc.) et ceux
+qui n'ont pas été traités, et qui donc méritent attention. Très utile si
+vous avez beaucoup d'hôtes/services à superviser et que vous ne voulez
+consulter qu'un seul écran pour être averti des problèmes. </para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view all hosts and all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir tous les hôtes et tous les services. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir tous les services. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view all hosts and services for 
-which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir tous les hôtes et tous
+les services dont vous êtes un contact. </para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -373,7 +380,7 @@ which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-outages_cgi" />Network Outages CGI</title>
+    <title><anchor id="thebasics-cgis-outages_cgi" />CGI d'indisponibilité du réseau</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -393,9 +400,9 @@ which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>outages.cgi</para></entry>
+            <entry><para><filename>outages.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -405,21 +412,21 @@ which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI will produce a listing of "problem" hosts on your 
-network that are causing network outages.  This can be particularly useful 
-if you have a large network and want to quickly identify the source of the 
-problem. Hosts are sorted based on the severity of the outage they are 
-causing.</para> <para>Authorization Requirements:</para>
+            <entry><para>Description : Ce CGI produit une liste des hôtes <quote>à problèmes</quote>
+de votre réseau qui sont responsables de ruptures de lien. Ceci est
+particulièrement utile sur les grands réseaux pour identifier rapidement la
+cause d'un problème. Les hôtes sont triés selon la gravité de la rupture
+dont ils sont responsables.</para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view all hosts.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir tous les hôtes. </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view hosts for which you are a 
-contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
+êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -429,7 +436,7 @@ contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-config_cgi" />Configuration CGI</title>
+    <title><anchor id="thebasics-cgis-config_cgi" />CGI de configuration</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -449,9 +456,9 @@ contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>config.cgi</para></entry>
+            <entry><para><filename>config.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -461,16 +468,17 @@ contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI allows you to view objects (i.e.  hosts, host groups, 
-contacts, contact groups, time periods, services, etc.) that you have 
-defined in your <link linkend="configuringnagios-configobject">object 
-configuration file(s)</link>.</para> <para>Authorization Requirements:</para>
+            <entry><para> Description : Ce CGI permet de visualiser les définitions d'objets (par
+ex. hôtes, groupes d'hôtes, contacts, groupes de contacts, périodes,
+services et commandes) tels que spécifiés dans vos <link
+linkend="configuringnagios-configobject">fichier(s) de configuration des
+objets</link>. </para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>You must be <link 
-linkend="configuringnagios-configcgi-authorized_for_configuration_information">authorized 
-for configuration information</link> in order to any kind of configuration 
-information.</para>
+                  <para>Vous devez avoir <link
+linkend="configuringnagios-configcgi-authorized_for_configuration_information">l'autorisation
+d'accès aux informations de configuration</link> pour voir n'importe quelle
+information de configuration.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -480,7 +488,7 @@ information.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-cmd_cgi" />Command CGI</title>
+    <title><anchor id="thebasics-cgis-cmd_cgi" />CGI de commande</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -500,9 +508,9 @@ information.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>cmd.cgi</para></entry>
+            <entry><para><filename>scmd.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -512,44 +520,44 @@ information.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI allows you to send commands to the Nagios 
-process. Although this CGI has several arguments, you would be better to 
-leave them alone. Most will change between different revisions of 
-Nagios. Use the <link linkend="thebasics-cgis-extinfo_cgi">extended 
-information CGI</link> as a starting point for issuing commands.</para>
-            <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description : Ce CGI permet d'envoyer des commandes au processus de
+Nagios. Bien que ce CGI accepte plusieurs arguments, mieux vaut ne pas s'y
+essayer. La plupart changent selon les révisions de Nagios. Utilisez plutôt
+les <link linkend="thebasics-cgis-extinfo_cgi">informations complémentaires
+des CGI</link> comme point de départ pour envoyer des commandes. </para>
+            <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>You must be <link 
-linkend="configuringnagios-configcgi-authorized_for_system_commands">authorized 
-for system commands</link> in order to issue commands that affect the Nagios 
-process (restarts, shutdowns, mode changes, etc.).</para>
+                  <para>Vous devez être <link
+linkend="configuringnagios-configcgi-authorized_for_system_commands">autorisé
+pour les commandes système</link> pour envoyer des commandes affectant le
+processus de Nagios (redémarrage, arrêt, changement de mode, etc.).  </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_host_commands">authorized 
-for all host commands</link> you can issue commands for all hosts and 
-services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_host_commands">autorisé
+pour toutes les commandes d'hôtes</link> vous pouvez envoyer des commandes à
+tous les hôtes et à tous les services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_service_commands">authorized 
-for all service commands</link> you can issue commands for all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_service_commands">autorisé
+pour toutes les commandes de services</link> vous pouvez envoyer des
+commandes à tous les services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can issue commands for all hosts and 
-services for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez envoyer des commandes à tous
+les hôtes et services dont vous êtes un contact.</para>
                 </listitem>
-              </itemizedlist> <para>Notes:</para> <itemizedlist>
+              </itemizedlist> <para>Notes :</para> <itemizedlist>
                 <listitem>
-                  <para>If you have chosen not to <link 
-linkend="configuringnagios-configcgi-use_authentication">use 
-authentication</link> with the CGIs, this CGI will not allow anyone to issue 
-commands to Nagios. This is done for your own protection. I would suggest 
-removing this CGI altogether if you decide not to use authentication with 
-the CGIs.</para>
+                  <para>Si vous avez choisi de ne pas <link
+linkend="configuringnagios-configcgi-use_authentication">utiliser
+l'authentification</link> dans les CGI, ce CGI ne permettra à personne
+d'envoyer des commandes à Nagios, et ce dans votre propre intérêt. Je
+suggère dans ce cas de supprimer le CGI.  </para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -559,7 +567,7 @@ the CGIs.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-extinfo_cgi" />Extended Information CGI</title>
+    <title><anchor id="thebasics-cgis-extinfo_cgi" />CGI d'informations complémentaires</title>
 
     <informaltable frame="all">
       <tgroup cols="4">
@@ -605,9 +613,9 @@ the CGIs.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>extinfo.cgi</para></entry>
+            <entry><para><filename>extinfo.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -617,38 +625,44 @@ the CGIs.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI allows you to view Nagios process information, host and 
-service state statistics, host and service comments, and more. It also 
-serves as a launching point for sending commands to Nagios via the <link 
-linkend="thebasics-cgis-cmd_cgi">command CGI</link>. Although this CGI has 
-several arguments, you would be better to leave them alone - they are likely 
-to change between different releases of Nagios.  You can access this CGI by 
-clicking on the 'Network Health' and 'Process Information' links on the side 
-navigation bar, or by clicking on a host or service link in the output of 
-the <link linkend="thebasics-cgis-status_cgi">status CGI</link>.</para>
-            <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description : Ce CGI permet de voir les informations relatives au processus
+de Nagios, aux statistiques sur les hôtes et les services, aux commentaires
+sur les hôtes et les services, et plus encore. C'est également un point
+d'entrée pour envoyer des commandes à Nagios via le <link
+linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Bien que ce CGI
+accepte plusieurs arguments, mieux vaut ne pas s'y essayer : la plupart
+changent selon les révisions de Nagios. Vous pouvez accéder à ce CGI en
+cliquant sur les liens appelés 'Network Health' [NdT: Santé/Etat du réseau]
+et 'Process Information' [NdT: Information sur le processus Nagios] de la
+barre latérale de navigation, ou en cliquant sur un lien hôte ou service
+dans l'affichage du <link linkend="thebasics-cgis-status_cgi">CGI
+d'état</link>. </para>
+            <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>You must be <link 
-linkend="configuringnagios-configcgi-authorized_for_system_information">authorized 
-for system information</link> in order to view Nagios process information.</para>
+                  <para>Vous devez être <link
+linkend="configuringnagios-configcgi-authorized_for_system_information">autorisé
+pour les informations système</link> pour voir les informations sur le
+processus de Nagios.  </para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view extended information for all hosts and 
-services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir les informations complémentaires de
+tous les hôtes et de tous les services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view extended information for all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir les informations
+complémentaires de tous les services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view extended information for 
-all hosts and services for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les informations
+complémentaires de tous les hôtes et de tous les services dont vous êtes un
+contact.  </para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -658,7 +672,7 @@ all hosts and services for which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-showlog_cgi" />Event Log CGI</title>
+    <title><anchor id="thebasics-cgis-showlog_cgi" />CGI du fichier journal</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -678,9 +692,9 @@ all hosts and services for which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>showlog.cgi</para></entry>
+            <entry><para><filename>showlog.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -690,16 +704,17 @@ all hosts and services for which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI will display the <link 
-linkend="configuringnagios-configmain-log_file">log file</link>.  If you 
-have <link linkend="configuringnagios-configmain-log_rotation_method">log 
-rotation</link> enabled, you can browse notifications present in archived 
-log files by using the navigational links near the top of the page.</para> <para>Authorization Requirements:</para>
+            <entry><para>Description : Ce CGI affiche le <link
+linkend="configuringnagios-configmain-log_file">fichier journal</link>. Si
+vous avez activé la <link
+linkend="configuringnagios-configmain-log_rotation_method">rotation du
+journal</link>, vous pouvez voir le contenu des journaux archivés en
+utilisant les liens de navigation situés en haut de la page. </para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>You must be <link 
-linkend="configuringnagios-configcgi-authorized_for_system_information">authorized 
-for system information</link> in order to view the log file.</para>
+                  <para>Vous devez être <link
+linkend="configuringnagios-configcgi-authorized_for_system_information">autorisé
+pour les informations système</link> pour voir le fichier journal.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -709,7 +724,7 @@ for system information</link> in order to view the log file.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-history_cgi" />Alert History CGI</title>
+    <title><anchor id="thebasics-cgis-history_cgi" />CGI d'historique d'alerte</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -729,9 +744,9 @@ for system information</link> in order to view the log file.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>history.cgi</para></entry>
+            <entry><para><filename>history.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -741,32 +756,33 @@ for system information</link> in order to view the log file.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI is used to display the history of problems with either 
-a particular host or all hosts. The output is basically a subset of the 
-information that is displayed by the <link 
-linkend="thebasics-cgis-showlog_cgi">log file CGI</link>.  You have the 
-ability to filter the output to display only the specific types of problems 
-you wish to see (i.e. hard and/or soft alerts, various types of service and 
-host alerts, all types of alerts, etc.). If you have <link 
-linkend="configuringnagios-configmain-log_rotation_method">log 
-rotation</link> enabled, you can browse history information present in 
-archived log files by using the navigational links near the top of the page.</para> <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description : Ce CGI affiche l'historique des problèmes relatifs soit à un
+hôte particulier soit à tous les hôtes. L'affichage est un sous-ensemble de
+ce que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
+journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
+types de problèmes (i.e. alertes hard et/ou soft, les différents types
+d'alertes sur les services et les hôtes, tous les types d'alertes, etc.). Si
+vous avez activé la <link
+linkend="configuringnagios-configmain-log_rotation_method">rotation du
+journal</link>, vous pouvez voir l'historique contenu dans les journaux
+archivés en utilisant les liens de navigation situés en haut de la page. </para> <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view history information for all hosts and all 
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir l'historique de tous les hôtes et de
+tous les services.</para>
+                </listitem>
+
+                <listitem>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir l'historique de tous les
 services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view history information for all services.</para>
-                </listitem>
-
-                <listitem>
-                  <para>If you are an authenticated contact you can view history information for all 
-services and hosts for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir l'historique de tous
+les hôtes et tous les services dont vous êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -776,7 +792,7 @@ services and hosts for which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-notifications_cgi" />Notifications CGI</title>
+    <title><anchor id="thebasics-cgis-notifications_cgi" />CGI des notifications</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -796,9 +812,9 @@ services and hosts for which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>notifications.cgi</para></entry>
+            <entry><para><filename>notifications.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -808,33 +824,34 @@ services and hosts for which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI is used to display host and service notifications that 
-have been sent to various contacts. The output is basically a subset of the 
-information that is displayed by the <link 
-linkend="thebasics-cgis-showlog_cgi">log file CGI</link>. You have the 
-ability to filter the output to display only the specific types of 
-notifications you wish to see (i.e.  service notifications, host 
-notifications, notifications sent to specific contacts, etc). If you have 
-<link linkend="configuringnagios-configmain-log_rotation_method">log 
-rotation</link> enabled, you can browse notifications present in archived 
-log files by using the navigational links near the top of the page.</para> <para>Authorization Requirements:</para>
+            <entry><para>Description : Ce CGI affiche les notifications envoyées aux différents
+contacts d'un hôte ou d'un service. L'affichage est un sous-ensemble de ce
+que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
+journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
+types de problèmes (i.e. notifications relatives aux services, aux hôtes,
+envoyées à des contacts spécifiques, etc). Si vous avez activé la <link
+linkend="configuringnagios-configmain-log_rotation_method">rotation du
+journal</link>, vous pouvez voir les notifications contenues dans les
+journaux archivés en utilisant les liens de navigation situés en haut de la
+page. </para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view notifications for all hosts and all 
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir les notifications de tous les hôtes
+et tous les services.</para>
+                </listitem>
+
+                <listitem>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir les notifications de tous les
 services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view notifications for all services.</para>
-                </listitem>
-
-                <listitem>
-                  <para>If you are an authenticated contact you can view notifications for all 
-services and hosts for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les notifications
+relatives à tous les hôtes et tous les services dont vous êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -844,7 +861,7 @@ services and hosts for which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-trends_cgi" />Trends CGI</title>
+    <title><anchor id="thebasics-cgis-trends_cgi" />CGI de tendances</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -864,9 +881,9 @@ services and hosts for which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>trends.cgi</para></entry>
+            <entry><para><filename>strends.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -876,29 +893,31 @@ services and hosts for which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI is used to create a graph of host or service states 
-over an arbitrary period of time. In order for this CGI to be of much use, 
-you should enable <link 
-linkend="configuringnagios-configmain-log_rotation_method">log 
-rotation</link> and keep archived logs in the path specified by the <link 
-linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link> 
-directive. The CGI uses Thomas Boutell's <ulink url="&url-gd;">gd</ulink> 
-library (version 1.6.3 or higher) to create the trends image.</para> <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description : Ce CGI crée un graphique des états des hôtes et des services
+sur une période donnée. Pour que ce CGI soit pertinent, vous devez activer
+la <link linkend="configuringnagios-configmain-log_rotation_method">rotation
+du journal</link> et archiver les journaux dans le répertoire défini par la
+variable <link
+linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link>.
+Ce CGI utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
+Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.</para> <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view trends for all hosts and all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir les tendances de tous les hôtes et de
+tous les services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view trends for all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir les tendances de tous les
+services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view trends for all services and 
-hosts for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les tendances de tous
+les hôtes et tous les services dont vous êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -908,7 +927,7 @@ hosts for which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-avail_cgi" />Availability Reporting CGI</title>
+    <title><anchor id="thebasics-cgis-avail_cgi" />CGI de rapport de disponibilité</title>
 
     <informaltable frame="all">
       <tgroup cols="2">
@@ -934,9 +953,9 @@ hosts for which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>avail.cgi</para></entry>
+            <entry><para><filename>avail.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -946,30 +965,31 @@ hosts for which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI is used to report on the availability of hosts and 
-services over a user-specified period of time. In order for this CGI to be 
-of much use, you should enable <link 
-linkend="configuringnagios-configmain-log_rotation_method">log 
-rotation</link> and keep archived logs in the path specified by the <link 
-linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link> 
-directive.</para> <para>Authorization Requirements:</para>
+            <entry><para>Description: Ce CGI permet de créer un rapport sur la disponibilité des
+hôtes et des services sur une période donnée. Pour que ce CGI soit
+pertinent, vous devez activer la <link
+linkend="configuringnagios-configmain-log_rotation_method">rotation du
+journal</link> et archiver les journaux dans le répertoire défini par la
+variable <link
+linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link>.</para> <para>Autorisation requises :</para>
             <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view availability data for all hosts and all 
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir la disponibilité de tous les hôtes et
 services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view availability data for all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir la disponibilité de tous les
+services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view availability data for all 
-services and hosts for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir la disponibilité de
+tous les services et hôtes dont vous êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -979,7 +999,7 @@ services and hosts for which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-histogram_cgi" />Alert Histogram CGI</title>
+    <title><anchor id="thebasics-cgis-histogram_cgi" />CGI d'histogramme des alertes</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -999,9 +1019,9 @@ services and hosts for which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>histogram.cgi</para></entry>
+            <entry><para><filename>histogram.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -1011,30 +1031,33 @@ services and hosts for which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI is used to report on the availability of hosts and 
-services over a user-specified period of time. In order for this CGI to be 
-of much use, you should enable <link 
-linkend="configuringnagios-configmain-log_rotation_method">log 
-rotation</link> and keep archived logs in the path specified by the <link 
-linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link> 
-directive. The CGI uses Thomas Boutell's <ulink url="&url-gd;">gd</ulink> 
-library (version 1.6.3 or higher) to create the histogram image.</para>
-            <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description : Ce CGI permet d'afficher l'histogramme de disponibilité
+d'hôtes et services sur une période de temps. Pour que ce CGI soit
+pertinent, vous devez activer la <link
+linkend="configuringnagios-configmain-log_rotation_method">rotation du
+journal</link> et archiver les journaux dans le répertoire défini par la
+variable <link
+linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link>.
+Ce CGI utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
+Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.</para>
+            <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view histograms for all hosts and all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir les histogrammes de tous les hôtes et
+services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view histograms for all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir les histogrammes de tous les
+services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view histograms for all services 
-and hosts for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir les histogrammes de
+tous les services et hôtes dont vous êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>
@@ -1044,7 +1067,7 @@ and hosts for which you are a contact.</para>
   </section>
 
   <section>
-    <title><anchor id="thebasics-cgis-summary_cgi" />Alert Summary CGI</title>
+    <title><anchor id="thebasics-cgis-summary_cgi" />CGI du récapitulatif des alertes</title>
 
     <informaltable frame="all">
       <tgroup cols="1">
@@ -1064,9 +1087,9 @@ and hosts for which you are a contact.</para>
       <tgroup cols="2">
         <tbody>
           <row>
-            <entry><para>File Name:</para></entry>
+            <entry><para>Nom du fichier :</para></entry>
 
-            <entry><para>summary.cgi</para></entry>
+            <entry><para><filename>summary.cgi</filename></para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -1076,24 +1099,26 @@ and hosts for which you are a contact.</para>
       <tgroup cols="1">
         <tbody>
           <row>
-            <entry><para>Description:This CGI provides some generic reports about host and service 
-alert data, including alert totals, top alert producers, etc.</para> <para>Authorization Requirements:</para> <itemizedlist>
+            <entry><para>Description : Ce CGI fournit des rapports synthétiques sur les alertes
+concernant les hôtes et services, ainsi que le nombre total d'alertes, les
+services/hôtes générant le plus d'alertes, etc.</para> <para>Autorisation requises :</para> <itemizedlist>
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized 
-for all hosts</link> you can view summary information for all hosts and all 
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link> vous pouvez voir le récapitulatif de tous les hôtes et
 services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are <link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized 
-for all services</link> you can view summary information for all services.</para>
+                  <para>Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link> vous pouvez voir le récapitulatif de tous les
+services.</para>
                 </listitem>
 
                 <listitem>
-                  <para>If you are an authenticated contact you can view summary information for all 
-services and hosts for which you are a contact.</para>
+                  <para>Si vous êtes un contact authentifié vous pouvez voir le récapitulatif de
+tous les services et hôtes dont vous êtes un contact.</para>
                 </listitem>
               </itemizedlist></entry>
           </row>

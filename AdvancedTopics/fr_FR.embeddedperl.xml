@@ -7,7 +7,7 @@
 ]
 >
 <chapter id="advancedtopics-embeddedperl" xreflabel="Using The Embedded Perl Interpreter">
-	<title>Using The Embedded Perl Interpreter</title>
+	<title>Utilisation de l'interpréteur Perl intégré</title>
 	<section>
 		<title>Introduction</title>
 		<para>
@@ -18,162 +18,174 @@
 		      </imageobject>
 		    </mediaobject>
 		</informalfigure>
-Nagios can be compiled with support for an embedded Perl interpreter. This 
-allows Nagios to execute Perl plugins much more efficiently that it 
-otherwise would, so it may be of interest to you if you rely heavily on 
-plugins written in Perl.</para>
-		<para>Without the embedded Perl interpreter, Nagios executes Perl (and non-Perl) 
-plugins by forking and executing the plugins as an external command. When 
-the embedded Perl interpreter is used, Nagios can execute Perl plugins by 
-simply making a library call.</para>
-		<tip><para>The embedded Perl interpreter works with all Perl scripts that Nagios 
-executes - not just plugins. This documentation discusses the embedded Perl 
-interpreter in relation to plugins used for host and service checks, but it 
-applies just the same to other types of Perl scripts you may be using for 
-other types of commands (e.g. notification scripts, event handler scripts, 
-etc.).</para></tip>
-		<para>Stephen Davies contributed the original embedded Perl interpreter code 
-several years back.  Stanley Hopcroft has been the primary person helping to 
-improve the embedded Perl interpreter code quite a bit and has commented on 
-the advantages/disadvanges of using it. He has also given several helpful 
-hints on creating Perl plugins that work properly with the embedded 
-interpreter.</para>
-		<para>It should be noted that "ePN", as used in this documentation, refers to 
-embedded Perl Nagios, or if you prefer, Nagios compiled with an embedded 
-Perl interpreter.</para>
+Nagios peut être compilé avec le support d'un interpréteur Perl
+intégré. Cela permet à Nagios de pouvoir exécuter les plugins Perl de façon
+beaucoup plus efficace, aussi est-il possible que cela puisse présenter un
+intérêt pour vous si vous dépendez beaucoup de plugins écrits en Perl.</para>
+		<para>Sans l'interpréteur Perl intégré, Nagios exécute les plugins Perl (et non
+Perl) en créant un sous-processus [fork] pour lancer les plugins comme
+commande externe. Quand l'interpréteur Perl intégré est utilisé, Nagios peut
+simplement exécuter les plugins Perl en faisant un simple appel à la
+librairie.</para>
+		<tip><para>L'interpréteur Perl intégré fonctionne avec n'importe quel script Perl que
+nagios est capable d'exécuter - pas seulement les plugins. Cette
+documentation décrit l'interpréteur Perl intégré en relation avec les
+plugins utilisés pour les contrôles d'hôtes et de services, mais ceci
+s'applique aux autres types de scripts Perl que vous pourriez utiliser pour
+les autres types de commandes (ex scripts de notifications, scripts de
+gestion d'événements, etc.).</para></tip>
+		<para>Stephen Davies  a été le premier contributeur du code de l'interpéteur Perl
+intégré il y a plusieurs années. Stanley Hopcroft a été la première personne
+impliquée à améliorer le code de l'interpréteur Perl intégré et a commenté
+les avantages et désavantages de son utilisation. Il a également donné
+plusieurs indices utiles pour écrire des plugins Perl qui fonctionnent
+correctement avec l'interpréteur intégré.</para>
+		<para>Notez que <quote>ePN</quote>, tel qu'il est utilisé dans cette
+documentation, fait référence à l'interpréteur Perl intégré à Nagios
+[embedded Perl Nagios], ou si vous préférez, Nagios compilé avec un
+interpréteur Perl intégré.</para>
 	</section>
 	<section>
-		<title>Advantages</title>
-		<para>Some advantages of ePN (embedded Perl Nagios) include:</para>
+		<title>Avantages</title>
+		<para>Parmi les avantages de ePN [embedded Perl Nagios] on compte :</para>
 		<itemizedlist>
 			<listitem>
-				<para>Nagios will spend much less time running your Perl plugins because it no 
-longer forks to execute the plugin (each time loading the Perl 
-interpreter). Instead, it executes your plugin by making a library call.</para>
+				<para>Nagios passera beaucoup moins de temps à exécuter vos plugins Perl car il
+n'a plus besoin de créer un sous-processus [fork] pour lancer le plugin (en
+chargeant à chaque fois l'interpréteur Perl). Il exécute maintenant votre
+plugin grâce à un appel de librairie.</para>
 			</listitem>
 			<listitem>
-				<para>It greatly reduces the system impact of Perl plugins and/or allows you to 
-run more checks with Perl plugin than you otherwise would be able to. In 
-other words, you have less incentive to write plugins in other languages 
-such as C/C++, or Expect/TCL, that are generally recognised to have 
-development times at least an order of magnitude slower than Perl (although 
-they do run about ten times faster also - TCL being an exception).</para>
+				<para>Il réduit grandement l'impact sur le système des plugins Perl et/ou vous
+permet de lancer plus de contrôles en plugin Perl que ce que vous seriez
+capables autrement. En d'autres termes, vous êtes moins tenté d'écrire vos
+plugins en d'autres langages comme C/C++, ou Expect/TCL, qui sont
+généralement considérés comme ayant un cycle de développement plus long que
+Perl (même s'ils tournent a peu près dix fois plus vite — TCL étant une
+exception).</para>
 			</listitem>
 			<listitem>
-				<para>If you are not a C programmer, then you can still get a huge amount of 
-mileage out of Nagios by letting Perl do all the heavy lifting without 
-having Nagios slow right down.  Note however, that the ePN will not speed up 
-your plugin (apart from eliminating the interpreter load time). If you want 
-fast plugins then consider Perl XSUBs (XS), or C after you are sure that 
-your Perl is tuned and that you have a suitable algorithm (Benchmark.pm is 
-invaluable for comparing the performance of Perl language elements).</para>
+				<para>Si vous n'êtes pas un développeur C, vous pouvez quand même faire beaucoup
+de choses avec Nagios en laissant Perl faire le gros du travail, sans que
+Nagios ne soit trop ralenti. Ceci dit, notez que ePN n'accélèrera pas votre
+plugin (une fois ôté le temps de chargement de l'interpréteur). Si vous
+voulez des plugins plus rapides, alors tournez-vous vers les XSUB Perl (XS),
+ou C après vous être assuré que votre Perl est propre et que votre
+algorithme est correct (l'apport de Benchmark.pm n'a pas de prix pour
+comparer les performances des éléments de langage Perl).</para>
 			</listitem>
 			<listitem>
-				<para>Using the ePN is an excellent opportunity to learn more about Perl.</para>
+				<para>L'utilisation de ePN est un excellent moyen d'en apprendre plus sur Perl.</para>
 			</listitem>
 </itemizedlist>
 	</section>
 	<section>
-		<title>Disadvantages</title>
-		<para>The disadvantages of ePN (embedded Perl Nagios) are much the same as Apache 
-mod_perl (i.e. Apache with an embedded interpreter) compared to a plain 
-Apache:</para>
+		<title>Désavantages</title>
+		<para>Les désavantages de ePN [embedded Perl Nagios] ressemblent beaucoup à ceux
+du mod_perl d'Apache (i.e. Apache avec un interpréteur Perl intégré) par
+rapport à l'Apache standard : </para>
 		<itemizedlist>
 			<listitem>
-				<para>A Perl program that works fine with plain Nagios may not work with the 
-ePN. You may have to modify your plugins to get them to work.</para>
+				<para>Un programme Perl qui fonctionne parfaitement avec Nagios standard peut ne
+pas fonctionner avec ePN. Il vous faudra peut-être modifier vos plugins pour
+qu'ils tournent.</para>
 			</listitem>
 			<listitem>
-				<para>Perl plugins are harder to debug under an ePN than under a plain Nagios.</para>
+				<para>Les plugins Perl sont plus difficiles à déboguer sous ePN qu'avec un Nagios
+standard.</para>
 			</listitem>
 			<listitem>
-				<para>Your ePN will have a larger SIZE (memory footprint) than a plain Nagios.</para>
+				<para>Votre ePN aura une plus grande taille (empreinte mémoire) qu'un Nagios
+standard.</para>
 			</listitem>
 			<listitem>
-				<para>Some Perl constructs cannot be used or may behave differently than what you 
-would expect.</para>
+				<para>Certaines constructions [constructs] Perl ne peuvent pas être utilisées, ou
+peuvent se comporter différemment de ce à quoi vous vous attendiez.</para>
 			</listitem>
 			<listitem>
-				<para>You may have to be aware of 'more than one way to do it' and choose a way 
-that seems less attractive or obvious.</para>
+				<para>Il vous faudra connaître <quote>plus d'une façon de le faire</quote>, et
+peut-être choisir celle qui semble la moins attirante ou évidente.</para>
 			</listitem>
 			<listitem>
-				<para>You will need greater Perl knowledge (but nothing very esoteric or stuff 
-about Perl internals - unless your plugin uses XSUBS).</para>
+				<para>Il vous faudra une meilleure connaissance de Perl (mais rien de bien
+ésotérique ou concernant la structure interne de Perl — sauf si vous
+utilisez les XSUBS).</para>
 			</listitem>
 </itemizedlist>
 	</section>
 	<section>
-		<title>Using The Embedded Perl Interpreter</title>
-		<para>If you want to use the embedded Perl interpreter to run your Perl plugins 
-and scripts, here's what you'll need to do:</para>
+		<title>Utilisation de l'interpréteur Perl intégré</title>
+		<para>Si vous souhaitez utiliser l'interpréteur Perl intégré pour lancer vos
+plugins et scripts Perl, voici ce que vous aurez besoin de faire :</para>
 		<orderedlist>
 			<listitem>
-				<para>Compile Nagios with support for the embedded Perl interpreter (see 
-instructions below).</para>
+				<para>Compiler Nagios avec le support de l'interpréteur Perl intégré (voir
+instructions ci-dessous).</para>
 			</listitem>
 			<listitem>
-				<para>Enable the <link 
-linkend="configuringnagios-configmain-enable_embedded_perl">enable_embedded_perl</link> 
-option in the main configuration file.</para>
+				<para>Activer l'option <link
+linkend="configuringnagios-configmain-enable_embedded_perl">enable_embedded_perl</link>
+dans le fichier principal de configuration.</para>
 			</listitem>
 			<listitem>
-				<para>Set the <link 
-linkend="configuringnagios-configmain-use_embedded_perl_implicitly">use_embedded_perl_implicitly</link> 
-option to fit your needs. This option determines whether or not the Perl 
-interpreter should be used by default for individual Perl plugins and 
-scripts.</para>
+				<para>Réglez l'option <link
+linkend="configuringnagios-configmain-use_embedded_perl_implicitly">use_embedded_perl_implicitly</link>
+en fonction de vos besoins. Cette option détermine si l'interpréteur Perl
+intégré doit être utilisé ou pas par défaut pour les plugins et scripts
+Perl.</para>
 			</listitem>
 			<listitem>
-				<para>Optionally enable or disable certain Perl plugins and scripts from being run 
-using the embedded Perl interpreter. This can be useful if certain Perl 
-scripts have problems being running under the Perl interpreter. See 
-instructions below for more information on doing this.</para>
+				<para>Activer ou désactiver de façon optionnelle les plugins et scripts Perl pour
+ne pas être utilisés via l'interpréteur Perl intégré. Cela peut ête utile si
+certains scripts Perl posent problème en fonctionnant avec l'interpréteur
+Perl. Lisez les instructions ci-dessous pour savoir comment faire.</para>
 			</listitem>
 		</orderedlist>
 	</section>
 	<section>
-		<title>Compiling Nagios With Embedded Perl</title>
-		<para>If you want to use the embedded Perl interpreter, you'll first need to 
-compile Nagios with support for it.  To do this, simply run the configure 
-script with the addition of the <option>--enable-embedded-perl</option> option.  If you want the embedded interpreter to cache internally compiled 
-scripts, add the <option>--with-perlcache</option>
-		option as well. Example:</para>
+		<title>Compilation de Nagios avec l'interpréteur Perl intégré</title>
+		<para> Si vous voulez compiler Nagios avec l'interpréteur Perl intégré il vous
+faut relancer le script de configuration (configure) avec le paramètre  <option>--enable-embedded-perl. </option> Si vous voulez que l'interpréteur Perl intégré utilise un cache interne pour
+les scripts compilés, ajoutez également le paramètre  <option>--with-perlcache.</option>
+		Par exemple : </para>
 		<screen>
 		<prompt>linux:~ # </prompt><userinput>./configure --enable-embedded-perl --with-perlcache otheroptions...</userinput>
 		</screen>
-		<para>Once you've rerun the configure script with the new options, make sure to 
-recompile Nagios.</para>
+		<para>Une fois que vous avez relancé le script de configuration avec les nouvelles
+options, n'oubliez pas de recompiler Nagios.</para>
 	</section>
 	<section>
-		<title>Plugin-Specific Use of the Perl Interpreter</title>
-		<para>Beginning with Nagios 3, you can specify which Perl plugins or scripts 
-should or should not be run under the embedded Perl interpreter. This is 
-particularly useful if you have troublesome Perl scripts which do not work 
-well with the Perl interpreter.</para>
-		<para>To explicitly tell Nagios whether or not to use the embedded Perl 
-interpreter for a particular perl script, add one of the following entries 
-to your Perl script/plugin...</para>
-		<para>To tell Nagios to use the Perl interpreter for a particular script, add this 
-line to the Perl script:</para>
+		<title>Utilisation spécifique de l'interpréteur Perl par plugin</title>
+		<para>À partir de Nagios 3, vous pouvez préciser quels scripts ou plugins Perl
+devront ou non être lancés en utilisant l'interpréteur Perl intégré. Ceci
+est particulièrement utile si vous avez des problèmes à faire fonctionner
+des scripts Perl avec l'interpréteur Perl.</para>
+		<para>Pour préciser de façon explicite à Nagios d'utiliser ou pas l'interpréteur
+Perl intégré pour un script Perl particulier, ajoutez une des entrées
+suivantes dans votre script/plugin Perl...</para>
+		<para>Pour indiquer à Nagios d'utiliser l'interpréteur Perl pour un script
+particulier, ajoutez cette ligne au script Perl : </para>
 		<programlisting># nagios: +epn</programlisting>
-		<para>To tell Nagios to NOT use the embedded Perl interpreter for a particular 
-script, add this line to the Perl script:</para>
+		<para>Pour indiquer à Nagios de ne PAS utiliser l'interpréteur Perl pour un script
+particulier, ajoutez cette ligne au script Perl : </para>
 		<programlisting># nagios: -epn</programlisting>
-		<para>Either line must be located within the first 10 lines of a script for Nagios 
-to detect it.</para>
-		<tip><para>If you do not explicitly use the method above to tell Nagios whether an 
-individual plugin can be run under the Perl interpreter, Nagios will make 
-will a decision for you. This decision process is controlled by the <link 
-linkend="configuringnagios-configmain-use_embedded_perl_implicitly">use_embedded_perl_implicitly</link> 
-variable. If the value is set to 1, all Perl plugins/scripts (that do not 
-explicitly enable/disable the ePN) will be run under the Perl interpreter.  
-If the value is 0, they will NOT be run under the Perl interpreter.</para></tip>
+		<para>Chacune de ces lignes doit être présente dans les 10 premières lignes du
+script pour que Nagios puisse la détecter.</para>
+		<tip><para>Si vous n'utilisez pas explicitement la méthode précédente pour indiquer à
+Nagios qu'un plugin peut être lancé par l'interpréteur Perl, Nagios prendra
+la décision pour vous. Ce processus de décision est contrôlé par la variable
+<link
+linkend="configuringnagios-configmain-use_embedded_perl_implicitly">use_embedded_perl_implicitly</link>.
+Avec une valeur fixée à 1, tous les plugins/scripts Perl (tous ceux qui
+n'activent/désactivent pas explicitement ePN) seront lancés par
+l'interpréteur Perl. Avec une valeur fixée à 0, ils ne seront PAS lancés par
+l'interpréteur Perl.</para></tip>
 	</section>
 	<section>
 		<title>Developing Plugins For Use With Embedded Perl</title>
-		<para>Information on developing plugins for use with the embedded Perl interpreter 
-can be found <link linkend="development-epnplugins">here</link>.</para>
+		<para>Les informations pour développer des plugins utilisant l'interpréteur Perl
+intégré peuvent être trouvées <link
+linkend="development-epnplugins">ici</link>.</para>
 	</section>
 </chapter>
 

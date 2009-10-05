@@ -7,15 +7,15 @@
 ]
 >
 <chapter id="gettingstarted-monitoring-linux" xreflabel="Monitoring Linux/Unix machines">
-  <title>Monitoring Linux/Unix Machines</title>
+  <title>Supervision des machines Linux/Unix</title>
 
   <abstract>
-    <para>This document describes how you can monitor "private" services and 
-attributes of Linux/UNIX servers, such as:</para>
+    <para>Ce document décrit la façon dont vous pouvez superviser les attributs et
+services "privés" de serveurs Linux/UNIX comme:</para>
 
     <para><itemizedlist>
         <listitem>
-          <para>CPU load</para>
+          <para>Charge CPU</para>
         </listitem>
 
         <listitem>
@@ -23,15 +23,15 @@ attributes of Linux/UNIX servers, such as:</para>
         </listitem>
 
         <listitem>
-          <para>Disk usage</para>
+          <para>Utilisation disque</para>
         </listitem>
 
         <listitem>
-          <para>Logged in users</para>
+          <para>Utilisateurs connectés</para>
         </listitem>
 
         <listitem>
-          <para>Running processes</para>
+          <para>Processus en cours d'exécution</para>
         </listitem>
 
         <listitem>
@@ -42,43 +42,46 @@ attributes of Linux/UNIX servers, such as:</para>
   <section>
     <title>Introduction</title>
 
-    <para>Publicly available services that are provided by Linux servers 
-(&protocol-http;, &protocol-ftp;, &protocol-ssh;, &protocol-smtp;, etc.) can 
-be monitored easily by following the documentation on <link 
-linkend="gettingstarted-monitoring-publicservices">Monitoring publicly 
-available services</link>.</para>
+    <para>Les services rendus publiques qui sont fournis par des serveurs Linux
+(&protocol-http;, &protocol-ftp;, &protocol-ssh;, &protocol-smtp;, etc.)
+peuvent être supervisés de façon simple en suivant la documentation sur
+<link linkend="gettingstarted-monitoring-publicservices">la supervision des
+services publiques disponibles.</link>.</para>
     <note>
-      <para>These instructions assume that you've installed Nagios according to the 
-<link linkend="gettingstarted-quickstart">quickstart guide</link>. The 
-sample configuration entries below reference objects that are defined in the 
-sample config files (<filename>commands.cfg</filename>, 
-<filename>templates.cfg</filename>, etc.) that are installed if you follow 
-the quickstart.</para>
+      <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
+le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
+exemples de configuration ci-dessous font référence aux objets de
+configuration définis dans les fichiers d'exemples
+(<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
+etc.) qui ont été installé si vous avez suivi le guide rapide.</para>
     </note>
   </section>
   <section>
-    <title>Overview</title>
+    <title>Vue globale</title>
     <note>
-      <para>[This document has not been completed. I would recommend you read the 
-documentation on the <link linkend="nagiosaddons-addons-nrpe">&name-nrpe; 
-addon</link> for instructions on how to monitor a remote Linux/Unix server.]</para>
+      <para>[Ce document n'a pas été terminé. Je vous recommande de lire la
+documentation sur le <link linkend="nagiosaddons-addons-nrpe">addon
+&name-nrpe;</link> pour les instructions sur la façon de superviser des
+serveurs distants Linux/Unix.]</para>
     </note>
-    <para>There are several different ways to monitor attributes or remote Linux/Unix 
-servers. One is by using shared &protocol-ssh; keys and the &plugin-byssh; 
-plugin to execute plugins on remote servers. This method will not be covered 
-here, but can result in high load on your monitoring server if you are 
-monitoring hundreds or thousands of services. The overhead of setting 
-up/destroying &protocol-ssh; connections is the cause of this.</para>
+    <para>Il y a plusieurs façons de superviser les attributs ou des serveurs distants
+Linux/Unix. Une est d'utiliser des clés partagées &protocol-ssh; et le
+plugin &plugin-byssh; pour exécuter de splugins sur les serveurs
+distants. Cette méthode n'est pas abordée ici, mais peut amener une grande
+charge sur le serveur de supervision si vous superviser des centaines ou
+milliers de services. La charge de travail supplémentaire pour
+créer/détruire les connexions &protocol-ssh; est la cause de ceci.</para>
     <para><informalfigure><mediaobject>
         <imageobject>
           <imagedata fileref="images/nrpe.png" format="PNG"/>
         </imageobject>
       </mediaobject></informalfigure></para>
-    <para>Another common method of monitoring remote Linux/Unix hosts is to use the 
-<link linkend="nagiosaddons-addons-nrpe">&name-nrpe; 
-addon</link>. &name-nrpe; allows you to execute plugins on remote Linux/Unix 
-hosts. This is useful if you need to monitor local resources/attributes like 
-disk usage, CPU load, memory usage, etc. on a remote host.</para>
+    <para>Una autre façon commune de superviser des hôtes distants Linux/Unix est
+d'utiliser l' <link linkend="nagiosaddons-addons-nrpe">addon
+&name-nrpe;</link>. &name-nrpe; vous permet d'exécuter des plugins sur les
+hôtes distants Linux/Unix. C'est utile si vous devez superviser les
+attributs/ressources locaux comme l'utilisation disque, la charge CPU,
+l'utilisation mémoire, etc. sur une hôte distant.</para>
   </section>
 </chapter>
 

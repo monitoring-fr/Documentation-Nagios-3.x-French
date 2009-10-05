@@ -7,164 +7,174 @@
 ]
 >
 <chapter id="advancedtopics-perfdata" xreflabel="Performance Data">
-	<title>Performance Data</title>
+	<title>Données De Performance</title>
 
 	<section>
 		<title>Introduction</title>
 
-		<para>Nagios is designed to allow <link linkend="thebasics-plugins">plugins</link> 
-to return optional performance data in addition to normal status data, as 
-well as allow you to pass that performance data to external applications for 
-processing. A description of the different types of performance data, as 
-well as information on how to go about processing that data is described 
-below...</para>
+		<para>Nagios est conçu pour permettre aux <link
+linkend="thebasics-plugins">plugins</link> de retourner des données de
+performance en plus des données normales de statut, ce qui vous permet ainsi
+de tranférer ces données de performances vers une application externe pour y
+être traitées. Une description des différents type de données de
+performance, ainsi que des informations sur la façon de traiter ces données
+sont décrites ci-dessous...</para>
 	</section>
 
 	<section>
-		<title>Types of Performance Data</title>
+		<title>Les Types De Données De Performance</title>
 
-		<para>There are two basic categories of performance data that can be obtained from 
-Nagios:</para>
+		<para>Il existe deux catégories de base de données de performance qui peuvent être
+obtenues à partir de Nagios:</para>
 
 		<orderedlist>
 			<listitem>
-				<para>Check performance data</para>
+				<para>Les données de performance relatives au contrôle</para>
 			</listitem>
 
 			<listitem>
-				<para>Plugin performance data</para>
+				<para>Les données de performance relatives au plugin</para>
 			</listitem>
 		</orderedlist>
 
-		<para>Check performance data is internal data that relates to the actual execution 
-of a host or service check. This might include things like service check 
-latency (i.e. how "late" was the service check from its scheduled execution 
-time) and the number of seconds a host or service check took to 
-execute. This type of performance data is available for all checks that are 
-performed.  The <link 
-linkend="thebasics-macrolist-hostexecutiontime">$HOSTEXECUTIONTIME$</link> 
-and <link 
-linkend="thebasics-macrolist-serviceexecutiontime">$SERVICEEXECUTIONTIME$</link> 
-<link linkend="thebasics-macros">macros</link> can be used to determine the 
-number of seconds a host or service check was running and the <link 
-linkend="thebasics-macrolist-hostlatency">$HOSTLATENCY$</link> and <link 
-linkend="thebasics-macrolist-servicelatency">$SERVICELATENCY$</link> macros 
-can be used to determine how "late" a regularly-scheduled host or service 
-check was.</para>
+		<para>Les données de performance relative à un contrôle sont des données internes
+relatives à l'exécution courante d'un contrôle de l'hôte ou du service. Cela
+peut comprendre des choses comme la latence d'un contrôle de service
+(i.e. Combien "de retard" a un contrôle de service par rapport à l'horaire
+planifié d'exécution) et le nombre de secondes qu'il aura fallut pour
+exécuter un contrôle d'hôte ou des service. Ce type de données de
+performance sont valables pour tous les contrôles qui sont effectués.  Les
+<link linkend="thebasics-macros">macros</link> <link
+linkend="thebasics-macrolist-hostexecutiontime">$HOSTEXECUTIONTIME$</link>
+et <link
+linkend="thebasics-macrolist-serviceexecutiontime">$SERVICEEXECUTIONTIME$</link>
+peuvent être utilisées pour determiner le nombre de secondes qu'aura duré un
+contrôle d'hôte ou de service et les macros <link
+linkend="thebasics-macrolist-hostlatency">$HOSTLATENCY$</link> et <link
+linkend="thebasics-macrolist-servicelatency">$SERVICELATENCY$</link> peuvent
+être utilisées afin de derterminer le "retard" que pourrait avoir un
+contrôle régulier d'un hôte ou d'un service.</para>
 
-		<para>Plugin performance data is external data specific to the plugin used to 
-perform the host or service check. Plugin-specific data can include things 
-like percent packet loss, free disk space, processor load, number of current 
-users, etc. - basically any type of metric that the plugin is measuring when 
-it executes. Plugin-specific performance data is optional and may not be 
-supported by all plugins. Plugin-specific performance data (if available) 
-can be obtained by using the <link 
-linkend="thebasics-macrolist-hostperfdata">$HOSTPERFDATA$</link> and <link 
-linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> <link 
-linkend="thebasics-macros">macros</link>. Read on for more information on 
-how plugins can return performance data to Nagios for inclusion in the 
-$HOSTPERFDATA$ and $SERVICEPERFDATA$ macros.</para>
+		<para>Les données de performance d'un plugin sont des données spécifiques au
+plugin utilisé pour contrôler l'hôte ou le service. Les données spécifiques
+d'un plugin peuvent contenir des choses comme le pourcentage de paquets
+perdus, l'espace disque restant, la charge processeur, le nombre
+d'utilisateurs connectés, etc... - en fait, tout type de données que le
+plugin contrôle quand il est exécuté. Les données de performance spécifiques
+au plugin sont facultatives et ne sont pas forcement disponibles avec tous
+les plugins. Les données de performances spécifiques au plugin (si
+disponibles) peuvent être obtenues en utilisant les macros <link
+linkend="thebasics-macrolist-hostperfdata">$HOSTPERFDATA$</link> et <link
+linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> <link
+linkend="thebasics-macros"></link>. Lire la suite pour plus d'informations
+sur la façon dont les plugins peuvent retourner les données de performance à
+Nagios afin de les stocker dans les macros $HOSTPERFDATA$ and
+$SERVICEPERFDATA$.</para>
 	</section>
 
 	<section>
-		<title>Plugin Performance Data</title>
+		<title>Les Données De Performance Relatives Au Plugin</title>
 
-		<para>At a minimum, Nagios plugins must return a single line of human-readable 
-text that indicates the status of some type of measurable data. For example, 
-the &plugin-ping; plugin might return a line of text like the following:</para>
+		<para>Au minimum, les plugins Nagios doivent au moins retourner une simple ligne
+de texte compréhensible par l'utilisateur lambda qui indique l'état de
+certains types de données mesurables. Par exemple, le plugin &plugin-ping;
+pourrait retourner une ligne de texte comme celle qui suit:</para>
 
 		<programlisting>PING ok - Packet loss = 0%, RTA = 0.80 ms </programlisting>
 
-		<para>With this simple type of output, the entire line of text is available in the 
-$HOSTOUTPUT$ or $SERVICEOUTPUT$ <link 
-linkend="thebasics-macros">macros</link> (depending on whether this plugin 
-was used as a host check or service check).</para>
+		<para>Avec ce simple type de sortie, la ligne entière est disponible dans les
+<link linkend="thebasics-macros">macros</link> $HOSTOUTPUT$ ou
+$SERVICEOUTPUT$ (Cela dépend si le pllugin est utilisé pour le contrôle d'un
+hôte ou d'un service).</para>
 
-		<para>Plugins can return optional performance data in their output by sending the 
-normal, human-readable text string that they usually would, followed by a 
-pipe character (|), and then a string containing one or more performance 
-data metrics. Let's take the &plugin-ping; plugin as an example and assume 
-that it has been enhanced to return percent packet loss and average round 
-trip time as performance data metrics. Sample output from the plugin might 
-look like this:</para>
+		<para>Les plugins peuvent renvoyer des données de performance dans leur message
+normal de sortie, un texte clair (lisible par l'homme) habituellement suivi
+du caractère 'pipe' (|), et d'une chaîne contenant une ou plusieurs données
+de performance. Prenons le plugin &plugin-ping; comme exemple et supposons
+qu'il a été configuré pour retourner le pourcentage de paquets perdus et la
+moyenne des aller-retour comme données de performance. Un exemple de sortie
+du plugin pourrait ressembler à ceci:</para>
 
 		<programlisting>PING ok - Packet loss = 0%, RTA = 0.80 ms | percent_packet_loss=0, rta=0.80</programlisting>
 
-		<para>When Nagios sees this plugin output format it will split the output into two 
-parts:</para>
+		<para>Quand Nagios rencontre ce type de format pour le message de de sortie du
+plugin, il le scindera en deux parties:</para>
 
 		<orderedlist>
 			<listitem>
-				<para>Everything before the pipe character is considered to be the 
-<quote>normal</quote> plugin output and will be stored in either the 
-$HOSTOUTPUT$ or $SERVICEOUTPUT$ macro</para>
+				<para>Tout ce qui est situé avant le caratère 'pipe' ( | ) est considéré comme le
+message de sortie <quote>normal</quote> du plugin et sera alors stocké selon
+le cas dans les macros $HOSTOUTPUT$ ou $SERVICEOUTPUT$</para>
 			</listitem>
 
 			<listitem>
-				<para>Everything after the pipe character is considered to be the plugin-specific 
-performance data and will be stored in the $HOSTPERFDATA$ or 
-$SERVICEPERFDATA$ macro</para>
+				<para>Tout ce qui est situé après le caractère 'pipe' ( | ) est considéré comme
+étant les données de performance du plugin et seront stockées selon le cas
+dans les macros $HOSTPERFDATA$ ou $SERVICEPERFDATA$ </para>
 			</listitem>
 		</orderedlist>
 
-		<para>In the example above, the $HOSTOUTPUT$ or $SERVICEOUTPUT$ macro would 
-contain <emphasis>"PING ok - Packet loss = 0%, RTA = 0.80 ms"</emphasis> 
-(without quotes)  and the $HOSTPERFDATA$ or $SERVICEPERFDATA$ macro would 
-contain <emphasis>"percent_packet_loss=0, rta=0.80"</emphasis> (without 
-quotes).</para>
+		<para>Dans l'exemple ci-dessus, la macro $HOSTOUTPUT$ ou $SERVICEOUTPUT$
+contiendra  <emphasis>"PING ok - Packet loss = 0%, RTA = 0.80 ms"</emphasis>
+(sans les guillemets) et la macro $HOSTPERFDATA$ ou $SERVICEPERFDATA$
+contiendra <emphasis>"percent_packet_loss=0, rta=0.80"</emphasis> (sans les
+guillemets).</para>
 
-		<para>Multiple lines of performace data (as well as normal text output)  can be 
-obtained from plugins, as described in the <link 
-linkend="development-pluginapi">plugin API documentation</link>.</para>
+		<para>Plusieurs lignes de données de performance (comme pour le texte normal de
+sortie) peuvent être transmises par les plugins, comme décrit dans la <link
+linkend="development-pluginapi">documentation sur les API des
+plugins</link>.</para>
 
 		<note>
-			<para>The Nagios daemon doesn't directly process plugin performance data, so it 
-doesn't really care what the performance data looks like.  There aren't 
-really any inherent limitations on the format or content of the performance 
-data. However, if you are using an external addon to process the performance 
-data (i.e. PerfParse), the addon may be expecting that the plugin returns 
-performance data in a specific format.  Check the documentation that comes 
-with the addon for more information.</para>
+			<para>Le démon Nagios ne traite pas directement les données de performance des
+plugins, du coup il ne sait pas vraiment à quoi elles ressemblent. Il n'y a
+pas vraiment de limites inhérentes au format ou au contenu des données de
+performance. Toutefois, si vous utilisez un module externe pour traiter les
+données de performance (i.e. PerfParse), le module attend que le plugin
+renvoie les données de performance dans un format spécifique. Vérifiez la
+documentation du module pour plus d'information. </para>
 		</note>
 	</section>
 
 	<section>
-		<title>Processing Performance Data</title>
+		<title>Traiter les données de performance</title>
 
-		<para>If you want to process the performance data that is available from Nagios 
-and the plugins, you'll need to do the following:</para>
+		<para>Si vous voulez traiter les données de performance disponible dans Nagios au
+travers des plugins, vous devez configurer ce qui suit:</para>
 
 		<orderedlist>
 			<listitem>
-				<para>Enable the <link 
-linkend="configuringnagios-configmain-process_performance_data">process_performance_data</link> 
-option.</para>
+				<para>Activer l'option <link
+linkend="configuringnagios-configmain-process_performance_data">process_performance_data</link>.</para>
 			</listitem>
 
 			<listitem>
-				<para>Configure Nagios so that performance data is either written to files and/or 
-processed by executing commands.</para>
+				<para>Configurer Nagios pour que les données de performance soient écrites dans
+des fichiers et/ou traitées directement en exécutant des commandes.</para>
 			</listitem>
 		</orderedlist>
 
-		<para>Read on for information on how to process performance data by writing to 
-files or executing commands.</para>
+		<para>Lire la suite pour plus d'informations sur la façon de traiter les données
+de performance en les écrivant des des fichiers ou en exécutant des
+commandes.</para>
 	</section>
 
 	<section>
-		<title>Processing Performance Data Using Commands</title>
+		<title>Commandes Pour Traiter Les Données De Performance</title>
 
-		<para>The most flexible way to process performance data is by having Nagios 
-execute commands (that you specify) to process or redirect the data for 
-later processing by external applications. The commands that Nagios executes 
-to process host and service performance data are determined by the <link 
-linkend="configuringnagios-configmain-host_perfdata_command">host_perfdata_command</link> 
-and <link 
-linkend="configuringnagios-configmain-service_perfdata_command">service_perfdata_command</link> 
-options, respectively.</para>
+		<para>Le moyen le plus souple pour traiter les données de performance est de faire
+exécuter à Nagios des commandes (que vous avez spécifié) pour traiter ou
+rediriger les données pour un traitement ultérieur par des applications
+externes. Les commandes que Nagios exécute pour traiter les données de
+performances sont définies par les options <link
+linkend="configuringnagios-configmain-host_perfdata_command">host_perfdata_command</link>
+and <link
+linkend="configuringnagios-configmain-service_perfdata_command">service_perfdata_command</link>,
+respectivement.</para>
 
-		<para>An example command definition that redirects service check performance data 
-to a text file for later processing by another application is shown below:</para>
+		<para>Un exemple de définition de commande qui redirige les données de performance
+dans un fichier texte pour un traitement ultérieur par une autre application
+est montré ci-dessous:</para>
 
 		<programlisting>define command{
 		        command_name    store-service-perfdata
@@ -172,53 +182,53 @@ to a text file for later processing by another application is shown below:</para
 		        }</programlisting>
 
 		<tip>
-			<para>This method, while flexible, comes with a relatively high CPU overhead. If 
-you're processing performance data for a large number of hosts and services, 
-you'll probably want Nagios to write performance data to files instead. This 
-method is described in the next section.</para>
+			<para>Cette méthode, bien que souple, est synonyme d'un niveau relativement élevé
+en terme de charge du CPU. Si vous traitez les données de performance d'un
+grand nombre de serveurs et de services, vous voudriez probablement que
+Nagios écrive les données de performance dans des fichiers à la place. Cette
+méthode est décrite dans la section suivante.</para>
 		</tip>
 	</section>
 
 	<section>
-		<title>Writing Performance Data To Files</title>
+		<title>Ecrire Les Données De Performances Dans Des Fichiers</title>
 
-		<para>You can have Nagios write all host and service performance data directly to 
-text files using the <link 
-linkend="configuringnagios-configmain-host_perfdata_file">host_perfdata_file</link> 
-and <link 
-linkend="configuringnagios-configmain-service_perfdata_file">service_perfdata_file</link> 
-options.  The format in which host and service performance data is written 
-to those files is determined by the <link 
-linkend="configuringnagios-configmain-host_perfdata_file_template">host_perfdata_file_template</link> 
-and <link 
-linkend="configuringnagios-configmain-service_perfdata_file_template">service_perfdata_file_template</link> 
-options.</para>
+		<para>Vous pouvez faire en sorte que Nagios écrive toutes les données de
+performances des hôtes et des services directement dans un fichier texte en
+utilisant les options <link
+linkend="configuringnagios-configmain-host_perfdata_file">host_perfdata_file</link>
+et <link
+linkend="configuringnagios-configmain-service_perfdata_file">service_perfdata_file</link>.
+Le format dans lequel les données de performance des hôtes et des services
+seront écrites est défini dans les options <link
+linkend="configuringnagios-configmain-host_perfdata_file_template">host_perfdata_file_template</link>
+et <link
+linkend="configuringnagios-configmain-service_perfdata_file_template">service_perfdata_file_template</link>.</para>
 
-		<para>An example file format template for service performance data might look like 
-this:</para>
+		<para>Un exemple de format de modèle pour les données de performance d'un service
+pourrait ressembler à ceci:</para>
 
 		<programlisting>service_perfdata_file_template=[SERVICEPERFDATA]\t$TIMET$\t$HOSTNAME$\t$SERVICEDESC$\t$SERVICEEXECUTIONTIME$\t$SERVICELATENCY$\t$SERVICEOUTPUT$\t$SERVICEPERFDATA$</programlisting>
 
-		<para>By default, the text files will be opened in "append" mode. If you need to 
-change the modes to "write" or "non-blocking read/write" (useful when 
-writing to pipes), you can use the <link 
-linkend="configuringnagios-configmain-host_perfdata_file_mode">host_perfdata_file_mode</link> 
-and <link 
-linkend="configuringnagios-configmain-service_perfdata_file_mode">service_perfdata_file_mode</link> 
-options.</para>
+		<para>Par défaut, les fichiers texte seront ouverts en mode "append" . Si vous
+avez besoin de changer les modes en "write" ou "non-blocking read/write"
+(utile lors d'écriture via 'pipe'), vous pouvez utiliser les options <link
+linkend="configuringnagios-configmain-host_perfdata_file_mode">host_perfdata_file_mode</link>
+et  <link
+linkend="configuringnagios-configmain-service_perfdata_file_mode">service_perfdata_file_mode</link>.</para>
 
-		<para>Additionally, you can have Nagios periodically execute commands to 
-periocially process the performance data files (e.g. rotate them) using the 
-<link 
-linkend="configuringnagios-configmain-host_perfdata_file_processing_command">host_perfdata_file_processing_command</link> 
-and <link 
-linkend="configuringnagios-configmain-service_perfdata_file_processing_command">service_perfdata_file_processing_command</link> 
-options. The interval at which these commands are executed are governed by 
-the <link 
-linkend="configuringnagios-configmain-host_perfdata_file_processing_interval">host_perfdata_file_processing_interval</link> 
-and <link 
-linkend="configuringnagios-configmain-service_perfdata_file_processing_interval">service_perfdata_file_processing_interval</link> 
-options, respectively.</para>
+		<para>En outre, vous pouvez avoir Nagios qui exécute périodiquement des commandes
+traite périodiquement les fichiers de données de performance (par exemple à
+tour de rôle) en utilisant les options <link
+linkend="configuringnagios-configmain-host_perfdata_file_processing_command">host_perfdata_file_processing_command</link>
+et <link
+linkend="configuringnagios-configmain-service_perfdata_file_processing_command">service_perfdata_file_processing_command</link>.
+L'intervalle à laquelle ces commandes sont exécutées sont régies par les
+options <link
+linkend="configuringnagios-configmain-host_perfdata_file_processing_interval">host_perfdata_file_processing_interval</link>
+et <link
+linkend="configuringnagios-configmain-service_perfdata_file_processing_interval">service_perfdata_file_processing_interval</link>,
+respectivement.</para>
 	</section>
 </chapter>
 

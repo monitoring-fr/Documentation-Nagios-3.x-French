@@ -12,109 +12,115 @@
   <section>
     <title>Introduction</title>
 
-    <para>Nagios allows you to change certain commands and host and service check 
-attributes during runtime. I'll refer to this feature as <quote>adaptive 
-monitoring</quote>. Please note that the adaptive monitoring features found 
-in Nagios will probably not be of much use to 99% of users, but they do 
-allow you to do some neat things.</para>
+    <para>Nagios vous permet de modifier certains attributs de check des commandes,
+hôtes et services à l'exécution. Je ferais référence à cette fonctionnalité
+comme <quote>monitoring adaptif</quote>. Veuillez noter que la
+fonctionnalité de monitoring adaptif présente dans nagios ne sera pas
+vraiment utile à 99% des utilisateurs, mais elle vous permet de realiser des
+choses assez élégantes.</para>
   </section>
 
   <section>
-    <title>What Can Be Changed?</title>
+    <title>Qu'est ce qui peut être modifié?</title>
 
-    <para>The following service check attributes can be changed during runtime:</para>
+    <para>Les attributs de check de services suivant peuvent être modifiés à
+l'exécution:</para>
 
     <itemizedlist>
       <listitem>
-        <para>Check command (and command arguments)</para>
+        <para>Commandes de check (et arguments de commandes)</para>
       </listitem>
 
       <listitem>
-        <para>Check interval</para>
+        <para>Intervalles de check</para>
       </listitem>
 
       <listitem>
-        <para>Max check attempts</para>
+        <para>Nombre maximal de tentative de check</para>
       </listitem>
 
       <listitem>
-        <para>Check timeperiod</para>
+        <para>Période de contrôle</para>
       </listitem>
 
       <listitem>
-        <para>Event handler command (and command arguments)</para>
+        <para>Commande de gestionnaire d'évennement (et arguments de commande)</para>
       </listitem>
     </itemizedlist>
 
-    <para>The following host check attributes can be changed during runtime:</para>
+    <para>Les attributs de check d'hôtes suivants peuvent être modifié pendant
+l'exécution:</para>
 
     <itemizedlist>
       <listitem>
-        <para>Check command (and command arguments)</para>
+        <para>Commandes de check (et arguments de commandes)</para>
       </listitem>
 
       <listitem>
-        <para>Check interval</para>
+        <para>Intervalles de check</para>
       </listitem>
 
       <listitem>
-        <para>Max check attempts</para>
+        <para>Nombre maximal de tentative de check</para>
       </listitem>
 
       <listitem>
-        <para>Check timeperiod</para>
+        <para>Période de contrôle</para>
       </listitem>
 
       <listitem>
-        <para>Event handler command (and command arguments)</para>
+        <para>Commande de gestionnaire d'évennement (et arguments de commande)</para>
       </listitem>
     </itemizedlist>
 
-    <para>The following global attributes can be changed during runtime:</para>
+    <para>Les attributs globaux suivants peuvent être modifiés à l'exécution:</para>
 
     <itemizedlist>
       <listitem>
-        <para>Global host event handler command (and command arguments)</para>
+        <para>Commandes globales de gestionnaire d'évènnement d'hôte (et argumments de
+commande)</para>
       </listitem>
 
       <listitem>
-        <para>Global service event handler command (and command arguments)</para>
+        <para>Commandes globales de gestionnaire d'évènnement de services (et argumments
+de commande)</para>
       </listitem>
     </itemizedlist>
   </section>
 
   <section>
-    <title>External Commands For Adaptive Monitoring</title>
+    <title>Commandes externe pour le monitoring adaptif</title>
 
-    <para>In order to change global or host- or service-specific attributes during 
-runtime, you must submit the appropriate <link 
-linkend="advancedtopics-extcommands">external command</link> to Nagios via 
-the <link linkend="advancedtopics-extcommands">external command 
-file</link>. The table below lists the different attributes that may be 
-changed during runtime, along with the external command to accomplish the 
-job.</para>
+    <para>Afin de modifier les atributs spécifiques d'hôtes ou de services pendant
+l'exécution, vous devez soumettre à Nagios la <link
+linkend="advancedtopics-extcommands">commande externe</link>  appropriée via
+le <link linkend="advancedtopics-extcommands">fichier de commande
+externe</link>. Le tableau ci-dessous répertorie les différents attributs
+qui peuvent être modifiés en cours d'exécution, accompagné de la commande
+externe pour accomplir le travail.</para>
 
-    <para>A full listing of external commands that can be used for adaptive monitoring 
-(along with examples of how to use them) can be found online at the 
-following URL: <ulink 
+    <para>Une liste complète de commandes externes qui peuvent être utilisées pour le
+contrôle adaptatif (avec des exemples d'utilisation) est dsponible en ligne
+à l'adresse suivante : <ulink
 url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/externalcommands/</ulink></para>
 
     <note>
       <itemizedlist>
         <listitem>
-          <para>When changing check commands, check timeperiods, or event handler commands, 
-it is important to note that the new values for these options must have been 
-defined before Nagios was started. Any request to change a command or 
-timeperiod to one which had not been defined when Nagios was started is 
-ignored.</para>
+          <para>Lorsque les commandes de contrôles [check command] ou de gestionnaires
+d'événements [event handler] sont modifiées, il est important de noter que
+ces commandes doivent avoir été configurées en utilisant des définitions de
+commande avant que Nagios n'ai été démarré. Si une commande non configurée
+est entrée, elle sera ignorée.</para>
         </listitem>
 
         <listitem>
-          <para>You can specify command arguments along with the actual command name - just 
-seperate individual arguments from the command name (and from each other) 
-using bang (!) characters. More information on how arguments in command 
-definitions are processed during runtime can be found in the documentation 
-on <link linkend="thebasics-macros">macros</link>.</para>
+          <para>Vous pouvez spécifier les arguments de commande avec le nom de la commande -
+séparrez juste les différents arguments du nom de commande (et des autres
+arguments) à l'aide du caractère bang (!). Des informations supplémentaires
+sur la façon dont sont traités les arguments dans la définition des
+commandes durant l'exécution peuvent être trouvés dans la documentation des
+<link linkend="thebasics-macros">macros</link>.</para>
         </listitem>
       </itemizedlist>
     </note>

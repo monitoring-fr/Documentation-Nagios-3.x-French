@@ -7,46 +7,46 @@
 ]
 >
 <chapter id="advancedtopics-stalking" xreflabel="State Stalking">
-  <title>State Stalking</title>
+  <title>Suivi précis des changements d'état</title>
 
   <section>
     <title>Introduction</title>
 
-    <para>State "stalking" is a feature which is probably not going to used by most 
-users. When enabled, it allows you to log changes in the output service and 
-host checks even if the state of the host or service does not change. When 
-stalking is enabled for a particular host or service, Nagios will watch that 
-host or service very carefully and log any changes it sees in the output of 
-check results. As you'll see, it can be very helpful to you in later 
-analysis of the log files.</para>
+    <para>Le suivi précis des changements d'état est une fonctionnalité qui ne sera
+probablement pas utilisée par beaucoup d'entre vous. Quand elle est activée,
+elle permet d'enregistrer des changements dans le contrôle d'un service ou
+d'un hôte, même si l'état de celui-ci ne change pas. Nagios va alors
+surveiller plus particulièrement ce service ou cet hôte et enregistrer tout
+changement. Comme vous allez le constater, ceci peut être très utile plus
+tard, lors d'une analyse de vos fichiers de logs. </para>
   </section>
 
   <section>
     <title>How Does It Work?</title>
 
-    <para>Under normal circumstances, the result of a host or service check is only 
-logged if the host or service has changed state since it was last 
-checked. There are a few exceptions to this, but for the most part, that's 
-the rule.</para>
+    <para>Dans des conditions de fonctionnement normales, le résultat de la
+surveillance d'un hôte ou d'un service n'est enregistré que lorsqu'il a
+changé d'état depuis le dernier contrôle. Il y a quelques exceptions à cette
+règle, mais c'est comme cela que cela se passe la plupart du temps.</para>
 
-    <para>If you enable stalking for one or more states of a particular host or 
-service, Nagios will log the results of the host or service check if the 
-output from the check differs from the output from the previous check.  Take 
-the following example of eight consecutive checks of a service:</para>
+    <para>Si vous activez le suivi précis des changements d'état pour un ou plusieurs
+états d'un hôte ou d'un service en particulier, Nagios enregistrera dans ses
+journaux toute différence entre le contrôle actuel et le précédent. Examinez
+l'exemple suivant, sur 8 tests consécutifs d'un service :</para>
 
     <informaltable frame="all">
       <tgroup cols="5">
         <thead>
           <row>
-            <entry><para>Service Check #:</para></entry>
+            <entry><para>Contrôle du Service #:</para></entry>
 
-            <entry><para>Service State:</para></entry>
+            <entry><para>État du Service:</para></entry>
 
-            <entry><para>Service Check Output:</para></entry>
+            <entry><para>Message de sortie de Contrôle:</para></entry>
 
-            <entry><para>Logged Normally</para></entry>
+            <entry><para>Journalisé normalement</para></entry>
 
-            <entry><para>Logged With Stalking</para></entry>
+            <entry><para>Journalisé avec le suivi précis des changements d'état</para></entry>
           </row>
 		</thead>
 		<tbody>
@@ -55,7 +55,7 @@ the following example of eight consecutive checks of a service:</para>
 
             <entry><para>OK</para></entry>
 
-            <entry><para>RAID array optimal</para></entry>
+            <entry><para>grappe RAID optimale</para></entry>
 
             <entry><para>-</para></entry>
 
@@ -67,7 +67,7 @@ the following example of eight consecutive checks of a service:</para>
 
             <entry><para>OK</para></entry>
 
-            <entry><para>RAID array optimal</para></entry>
+            <entry><para>grappe RAID optimale</para></entry>
 
             <entry><para>-</para></entry>
 
@@ -79,12 +79,13 @@ the following example of eight consecutive checks of a service:</para>
 
             <entry><para>WARNING</para></entry>
 
-            <entry><para>RAID array degraded (1 drive bad, 1 hot spare rebuilding)</para></entry>
+            <entry><para>Grappe RAID dégradée (1 disque hors d'usage, 1 disque de secours en cours de
+reconstruction)</para></entry>
 
-            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png" 
+            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
 format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
 
-            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png" 
+            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
 format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
           </row>
 
@@ -93,13 +94,13 @@ format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
 
             <entry><para>CRITICAL</para></entry>
 
-            <entry><para>RAID array degraded (2 drives bad, 1 host spare online, 1 hot spare 
-rebuilding)</para></entry>
+            <entry><para>Grappe RAID dégradée (2 disques hors d'usage, 1 disque de secours mis en
+ligne, 1 disque de secours en cours de reconstruction)</para></entry>
 
-            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png" 
+            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
 format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
 
-            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png" 
+            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
 format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
           </row>
 
@@ -108,11 +109,12 @@ format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
 
             <entry><para>CRITICAL</para></entry>
 
-            <entry><para>RAID array degraded (3 drives bad, 2 hot spares online)</para></entry>
+            <entry><para>Grappe RAID dégradée (3 disque hors d'usage, 2 disque de secours mis en
+ligne)</para></entry>
 
             <entry><para>-</para></entry>
 
-            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png" 
+            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
 format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
           </row>
 
@@ -121,11 +123,11 @@ format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
 
             <entry><para>CRITICAL</para></entry>
 
-            <entry><para>RAID array failed</para></entry>
+            <entry><para>Grappe RAID hors d'usage</para></entry>
 
             <entry><para>-</para></entry>
 
-            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png" 
+            <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
 format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
           </row>
 
@@ -134,7 +136,7 @@ format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
 
             <entry><para>CRITICAL</para></entry>
 
-            <entry><para>RAID array failed</para></entry>
+            <entry><para>Grappe RAID hors d'usage</para></entry>
 
             <entry><para>-</para></entry>
 
@@ -146,7 +148,7 @@ format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
 
             <entry><para>CRITICAL</para></entry>
 
-            <entry><para>RAID array failed</para></entry>
+            <entry><para>Grappe RAID hors d'usage</para></entry>
 
             <entry><para>-</para></entry>
 
@@ -156,81 +158,80 @@ format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
       </tgroup>
     </informaltable>
 
-    <para>Given this sequence of checks, you would normally only see two log entries 
-for this catastrophe. The first one would occur at service check x+2 when 
-the service changed from an OK state to a WARNING state. The second log 
-entry would occur at service check x+3 when the service changed from a 
-WARNING state to a CRITICAL state.</para>
+    <para>Vu cette séquence de contrôles, vous devriez seulement voir deux entrées
+dans vos journaux, concernant cette catastrophe. La première arrivera à X+2
+quand le service basculera de l'état OK à l'état WARNING. Le deuxième
+arrivera (trop tard), au moment du passage de WARNING à CRITICAL.</para>
 
-    <para>For whatever reason, you may like to have the complete history of this 
-catastrophe in your log files. Perhaps to help explain to your manager how 
-quickly the situation got out of control, perhaps just to laugh at it over a 
-couple of drinks at the local pub...</para>
+    <para>Vous pouriez avoir envie, pour une raison quelconque, d'avoir un historique
+complet de cet accident dans vos journaux. Peut être pour expliquer à votre
+patron comment tout cela est arrivé soudainement, ou aller en rire au bar du
+coin devant quelques coups à boire ....</para>
 
-    <para>Well, if you had enabled stalking of this service for CRITICAL states, you 
-would have events at x+4 and x+5 logged in addition to the events at x+2 and 
-x+3. Why is this? With state stalking enabled, Nagios would have examined 
-the output from each service check to see if it differed from the output of 
-the previous check. If the output differed and the state of the service 
-didn't change between the two checks, the result of the newer service check 
-would get logged.</para>
+    <para>Ceci dit, si le suivi précis avait été activé pour les états CRITICAL, les
+états x+4 et x+5 auraient été enregistrés en plus de x+2 et x+3. Pourquoi ?
+parce que dans ce cas-là, Nagios aurait examiné les message émis pour
+vérifier s'ils différaient des précédents. Si le message émis change alors
+que l'état ne change pas, le message sera quand même enregistré. </para>
 
-    <para>A similiar example of stalking might be on a service that checks your web 
-server. If the &plugin-http; plugin first returns a WARNING state because of 
-a 404 error and on subsequent checks returns a WARNING state because of a 
-particular pattern not being found, you might want to know that. If you 
-didn't enable state stalking for WARNING states of the service, only the 
-first WARNING state event (the 404 error) would be logged and you wouldn't 
-have any idea (looking back in the archived logs)  that future WARNING 
-states were not due to a 404, but rather some text pattern that could not be 
-found in the returned web page.</para>
+    <para>Un exemple similaire peut être donné avec un service qui contrôle un serveur
+web. Si le plugin &plugin-http; retourne d'abord un WARNING sur une erreur
+404, puis ensuite des WARNING à cause d'une suite de caractères manquants
+sur la page, vous pouvez avoir envie de le savoir. Si vous n'avez pas activé
+le suivi précis, seul le premier WARNING (celui de l'erreur 404) sera
+enregistré dans les logs et vous n'aurez aucune idée (en analysant les logs
+archivés) que les WARNING suivants ne sont pas dûs à une erreur 404, mais
+plutôt à une suite de caractères manquants de la page web retournée. </para>
   </section>
 
   <section>
-    <title>Should I Enable Stalking?</title>
+    <title>Dois je activer le suivi précis?</title>
 
-    <para>First, you must decide if you have a real need to analyze archived log data 
-to find the exact cause of a problem. You may decide you need this feature 
-for some hosts or services, but not for all. You may also find that you only 
-have a need to enable stalking for some host or service states, rather than 
-all of them. For example, you may decide to enable stalking for WARNING and 
-CRITICAL states of a service, but not for OK and UNKNOWN states.</para>
+    <para>Tout d'abord, vous devez décider si vous avez réellement besoin d'examiner
+vos logs pour trouver la cause d'un problème. Vous pouvez décider d'activer
+le suivi précis des changements d'état pour quelques services ou hôtes, mais
+pas pour tous. Vous pouvez aussi décider que vous ne surveillerez que
+quelques états d'hôtes ou de services, mais pas tous. Par exemple,
+surveiller les états WARNING et CRITICAL d'un service, et pas les états OK
+ou UNKNOWN.</para>
 
-    <para>The decision to to enable state stalking for a particular host or service 
-will also depend on the plugin that you use to check that host or 
-service. If the plugin always returns the same text output for a particular 
-state, there is no reason to enable stalking for that state.</para>
+    <para>La décision d'activer le suivi précis des changements d'état dépend
+principalement du plugin que vous allez utiliser pour contrôler cet hôte ou
+service. Si le plugin retourne toujours le même texte/message pour un état
+particulier, il n'y a aucune raison d'activer ce type de suivi.</para>
   </section>
 
   <section>
-    <title>How Do I Enable Stalking?</title>
+    <title>Comment activer le suivi précis des changements d'état?</title>
 
-    <para>You can enable state stalking for hosts and services by using the 
-stalking_options directive in <link 
-linkend="configuringnagios-configobject">host and service 
-definitions</link>.</para>
+    <para>Vous pouvez activé le suivi précis des services et des hôtes en utilisant la
+directive stalking_options dans les <link
+linkend="configuringnagios-configobject">définitions d'hôtes et de
+services</link>.</para>
   </section>
 
   <section>
-    <title>How Does Stalking Differ From Volatile Services?</title>
+    <title>Différences entre services volatiles et suivi précis?</title>
 
-    <para><link linkend="advancedtopics-volatileservices">Volatile services</link> are 
-similar, but will cause notifications and event handlers to run. Stalking is 
-purely for logging purposes.</para>
+    <para>Les <link linkend="advancedtopics-volatileservices">services
+volatiles</link> sont similaires, mais provoqueront les envois de
+notifications et les déclenchements d'actions sur événements. Le suivi
+précis des changements d'état ne sert que pour la journalisation</para>
   </section>
 
   <section>
-    <title>Caveats</title>
+    <title>Inconvénients</title>
 
-    <para>You should be aware that there are some potential pitfalls with enabling 
-stalking. These all relate to the reporting functions found in various <link 
-linkend="thebasics-cgis">CGIs</link> (histogram, alert summary, 
-etc.). Because state stalking will cause additional alert entries to be 
-logged, the data produced by the reports will show evidence of inflated 
-numbers of alerts.</para>
+    <para>Vous devez être conscients du fait qu'activer ce type de suivi amène
+quelques inconvénients. Ils sont relatifs aux fonctions d'enregistrement
+trouvées dans les différents <link linkend="thebasics-cgis">CGIs</link>
+(histogramme, résumé des alertes, etc.). Comme le suivi précis va apporter
+des entrées supplémentaires dans les journaux, les données retournées
+montreront un accroissement sensible du nombre d'alertes. </para>
 
-    <para>As a general rule, I would suggest that you <emphasis>not</emphasis> enable 
-stalking for hosts and services without thinking things through. Still, it's 
-there if you need and want it.</para>
+    <para>D'une manière générale, je vous conseille de ne <emphasis>pas</emphasis>
+activer le suivi précis sans avoir mené auparavant une réflexion profonde
+sur le sujet. Mais, bien entendu, c'est là pour servir si vous en avez
+besoin. </para>
   </section>
 </chapter>

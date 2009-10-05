@@ -7,79 +7,82 @@
 ]
 >
 <chapter id="thebasics-activechecks" xreflabel="Active Checks">
-  <title>Active Checks</title>
+  <title>les contrôles actifs</title>
 
   <section>
     <title>Introduction</title>
 
-    <para>Nagios is capable of monitoring hosts and services in two ways: actively and 
-passively. Passive checks are described <link 
-linkend="thebasics-passivechecks">elsewhere</link>, so we'll focus on active 
-checks here. Active checks are the most common method for monitoring hosts 
-and services. The main features of actives checks as as follows:</para>
+    <para>Nagios est capable de contrôler des hôtes et des services de deux façons;
+activement et passivement. Les contrôles passifs sont décrits <link
+linkend="thebasics-passivechecks">ailleurs</link>, aussi allons-nous nous
+concentrer ici sur les contrôles actifs. Les contrôles actifs représentent
+la méthode la plus commune pour superviser des hôtes et services. Les
+principales fonctionnalités des contrôles actifs sont les suivantes :</para>
 
     <itemizedlist>
       <listitem>
-        <para>Active checks are initiated by the Nagios process</para>
+        <para>Les contrôles actifs sont inités par le processus Nagios.</para>
       </listitem>
 
       <listitem>
-        <para>Active checks are run on a regularly scheduled basis</para>
+        <para>Les contrôles actifs sont exécutés à intervalles réguliers</para>
       </listitem>
     </itemizedlist>
   </section>
 
   <section>
-    <title>How Are Active Checks Performed?</title>
+    <title>Comment sont faits les contrôles actifs ?</title>
 
     <para><informalfigure>
 	<mediaobject>
         <imageobject>
           <imagedata fileref="images/activechecks.png" format="PNG"/>
         </imageobject>
-      </mediaobject></informalfigure>Active checks are initiated by the check logic in the Nagios daemon. When 
-Nagios needs to check the status of a host or service it will execute a 
-plugin and pass it information about what needs to be checked. The plugin 
-will then check the operational state of the host or service and report the 
-results back to the Nagios daemon. Nagios will process the results of the 
-host or service check and take appropriate action as necessary (e.g. send 
-notifications, run event handlers, etc).</para>
+      </mediaobject></informalfigure>Les contrôles actifs sont initiés par la logique de contrôle du démon
+Nagios. Quand Nagios a besoin de connaître l'état d'un hôte ou d'un service,
+il va exécuter un plugin et lui passer les informations sur ce qu'il a
+besoin de contrôler. Le plugin contrôle alors l'état opérationnel de l'hôte
+ou du service et renvoie les résultats en retour au démon Nagios. Nagios va
+traiter les résultats du contrôle d'hôte ou de service et conduire les
+actions appropriées (par exemple envoyer des notifications, lancer un
+gestionnaire d'événements, etc).</para>
 
-    <para>More information on how plugins work can be found <link 
-linkend="thebasics-plugins">here</link>.</para>
+    <para>Plus d'informations sur le fonctionnement des plugins peut être trouvé <link
+linkend="thebasics-plugins">ici</link>.</para>
   </section>
 
   <section>
-    <title>When Are Active Checks Executed?</title>
+    <title>Quand sont exécutés les contrôles actifs ?</title>
 
-    <para>Active check are executed:</para>
+    <para>Les contrôles actifs sont exécutés :</para>
 
     <itemizedlist>
       <listitem>
         <para>At regular intervals, as defined by the
-        <code>check_interval</code> and <code>retry_interval</code> options in your host and service definitions</para>
+        <code>check_interval</code> et <code>retry_interval</code> options dans vos définitions d'hôtes et de services</para>
       </listitem>
 
       <listitem>
-        <para>On-demand as needed</para>
+        <para>à la demand quand nécessaire</para>
       </listitem>
     </itemizedlist>
 
-    <para>Regularly scheduled checks occur at intervals equaling either the
-    <code>check_interval</code> or the <code>retry_interval</code> in your host or service definitions, depending on what <link 
-linkend="thebasics-statetypes">type of state</link> the host or service is 
-in. If a host or service is in a HARD state, it will be actively checked at 
-intervals equal to the <code>check_interval</code> option. If it is in a SOFT state, it will be checked at intervals equal to 
-the retry_interval option.</para>
+    <para>Les contrôles réguliers sont faits à intervalles réguliers soit quand
+    <code>check_interval</code> ou le <code>retry_interval</code> dans vos défintions d'hôtes et de services, dépendant du <link
+linkend="thebasics-statetypes">type d'état</link> dans lequel se trouve
+l'hôte ou le service. Si l'hôte ou le service se trouve dans un état HARD,
+il sera activement contrôlé à intervalles réguliers <code>check_interval</code> option. Si il est dans un état SOFT, il sera contrôlé à intervalles égaux à
+l'option retry_interval.</para>
 
-    <para>On-demand checks are performed whenever Nagios sees a need to obtain the 
-latest status information about a particular host or service. For example, 
-when Nagios is determining the <link 
-linkend="thebasics-networkreachability">reachability</link> of a host, it 
-will often perform on-demand checks of parent and child hosts to accurately 
-determine the status of a particular network segment. On-demand checks also 
-occur in the <link linkend="advancedtopics-dependencychecks">predictive 
-dependency check</link> logic in order to ensure Nagios has the most 
-accurate status information.</para>
+    <para>Les contrôles à la demande sont faits quand Nagios estime avoir besoin de
+connaître le dernier état d'un hôte ou service particulier. Par exemple,
+quand Nagios détermine <link
+linkend="thebasics-networkreachability">l'accesibilité</link> d'un hôte, il
+va souvent faire un contrôle à la demande des hôtes parents et enfants pour
+avoir un état exact de ce segment particulier de réseau. Les contrôles à la
+demande peuvent aussi être faits par la logique de <link
+linkend="advancedtopics-dependencychecks">contrôle prédictif de
+dépendances</link> pour s'assurer que Nagios a bien les derniers états
+disponibles.</para>
   </section>
 </chapter>

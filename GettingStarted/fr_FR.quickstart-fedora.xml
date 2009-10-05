@@ -11,21 +11,21 @@
 
   <abstract>
     <para>
-    Ce guide est prévu pour vous fournir les instructions simples sur la façon 
-d'installer Nagios depuis le code source sur &name-fedora; et d'avoir la 
-supervision de votre machine locale prête en moins de 20 minutes. Aucune 
-option d'installation avancée n'est abordée ici - juste les notions basiques 
+    Ce guide est prévu pour vous fournir les instructions simples sur la façon
+d'installer Nagios depuis le code source sur &name-fedora; et d'avoir la
+supervision de votre machine locale prête en moins de 20 minutes. Aucune
+option d'installation avancée n'est abordée ici - juste les notions basiques
 qui fonctionneront pour 95% des utilisateurs qui veulent démarrer.
     </para>
 
     <para>
-    Ces instructions ont été écrite en se basant sur une installation standard 
+    Ces instructions ont été écrite en se basant sur une installation standard
 de la distribution &name-fedora; Core 6.
     </para>
   </abstract>
 
   <section>
-    <title>What You'll End Up With</title>
+    <title>Ce que vous allez obtenir</title>
 
     <para>
     Si vous suivez ces instructions, voici ce que vous obtiendrez à la fin:
@@ -34,21 +34,21 @@ de la distribution &name-fedora; Core 6.
     <itemizedlist>
       <listitem>
         <para>
-	Nagios and the plugins will be installed underneath <filename 
-class="directory">/usr/local/nagios</filename>
+	Nagios et les plugins seront installés dans l'arborescence du répertoire
+<filename class="directory">/usr/local/nagios</filename>
 	</para>
       </listitem>
 
       <listitem>
         <para>
-	Nagios will be configured to monitor a few aspects of your local system (CPU 
-load, disk usage, etc.)
+	Nagios sera configuré pour superviser quelques aspects du système local
+(charge CPU, occupation disque, etc.)
 	</para>
       </listitem>
 
       <listitem>
         <para>
-	The Nagios web interface will be accessible at
+	L'interface web de Nagios sera accessible à
         <uri>http://localhost/nagios/</uri>
 	</para>
       </listitem>
@@ -59,13 +59,13 @@ load, disk usage, etc.)
     <title>Pré-requis</title>
 
     <para>
-    During portions of the installation you'll need to have root access to your 
-machine.
+    Vous aurez besoin d'un accès root sur la machine pour quelques passages de
+l'installation
     </para>
 
     <para>
-    Make sure you've installed the following packages on your &name-fedora; 
-installation before continuing.
+    Assurez-vous d'avoir installé les paquets suivants sur votre installation
+&name-fedora; avant de continuer.
     </para>
 
     <itemizedlist>
@@ -73,16 +73,16 @@ installation before continuing.
         <para>Apache</para>
       </listitem>
       <listitem>
-        <para>GCC compiler</para>
+        <para>Compilateur GCC</para>
       </listitem>
       <listitem>
-        <para><ulink url="&url-gd;">GD</ulink> development libraries</para>
+        <para>librairies de développement <ulink url="&url-gd;">GD</ulink></para>
       </listitem>
     </itemizedlist>
 
     <para>
-    You can use <command>yum</command> to install these packages by running the 
-following commands (as root):
+    Vous pouvez utiliser <command>yum</command> pour installer ces paquets en
+utilisant la commande suivante (en tant que root):
     </para>
 
     <screen>
@@ -109,8 +109,8 @@ following commands (as root):
 <prompt>linux:~ # </prompt><userinput>passwd nagios</userinput>
 </screen>
 
-    <para>Créez un groupe nagcmd pour autoriser la soumission de commandes externes 
-depuis l'interface web. Ajoutez à la fois l'utilisateur nagios et 
+    <para>Créez un groupe nagcmd pour autoriser la soumission de commandes externes
+depuis l'interface web. Ajoutez à la fois l'utilisateur nagios et
 l'utilisateur apache à ce groupe.</para>
 
     <screen>
@@ -131,11 +131,11 @@ l'utilisateur apache à ce groupe.</para>
 </screen>
 
     <para>
-    Téléchargez à la fois l'archive du code source de Nagios et des plugins 
-Nagios (visitez <ulink 
-url="&url-nagios;download/">&url-nagios;download/</ulink> pour les liens 
-vers les dernières versions). Au moment de la rédaction, les dernières 
-versions de Nagios et des plugins Nagios étaient respectivement  la 3.0.3 et 
+    Téléchargez à la fois l'archive du code source de Nagios et des plugins
+Nagios (visitez <ulink
+url="&url-nagios;download/">&url-nagios;download/</ulink> pour les liens
+vers les dernières versions). Au moment de la rédaction, les dernières
+versions de Nagios et des plugins Nagios étaient respectivement  la 3.0.3 et
 la 1.4.11.
     </para>
 
@@ -156,7 +156,7 @@ la 1.4.11.
 <prompt>linux:~ # </prompt><userinput>cd nagios-3.0.2</userinput>
 </screen>
 
-    <para>Exécutez le script de configuration de Nagios en lui passant le nom du 
+    <para>Exécutez le script de configuration de Nagios en lui passant le nom du
 groupe que vous venez juste de créer comme suit:</para>
 
     <screen>
@@ -169,8 +169,8 @@ groupe que vous venez juste de créer comme suit:</para>
 <prompt>linux:~ # </prompt><userinput>make all</userinput>
 </screen>
 
-    <para>Installez les binaires, les scripts de démarrage, les fichiers de 
-configuration fournis en exemple et réglez les permissions sur le dossier 
+    <para>Installez les binaires, les scripts de démarrage, les fichiers de
+configuration fournis en exemple et réglez les permissions sur le dossier
 des commandes externes.</para>
 
     <screen>
@@ -180,22 +180,23 @@ des commandes externes.</para>
 <prompt>linux:~ # </prompt><userinput>make install-commandmode</userinput>
 </screen>
 
-    <para>Don't start Nagios yet - there's still more that needs to be done&hellip;</para>
+    <para>Ne démarrez pas Nagios maintenant - Il reste quelques manipulations à
+faire&hellip;</para>
   </section>
 
   <section>
-    <title>Customisez la configuration</title>
+    <title>Personnalisation de la configuration</title>
 
-    <para>Les exemples de <link linkend="configuringnagios-config">fichiers de 
-configuration</link> ont été installé dans le répertoire <filename 
-class="directory">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple 
-devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à 
+    <para>Les exemples de <link linkend="configuringnagios-config">fichiers de
+configuration</link> ont été installé dans le répertoire <filename
+class="directory">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple
+devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à
 modifier avant de pouvoir commencer...</para>
 
-    <para>Éditez le fichier de configuration 
-<filename>/usr/local/nagios/etc/objects/contacts.cfg</filename> avec votre 
-éditeur de texte préféré et changez l'adresse de courrier électronique 
-associée avec la définition de contact nagiosadmin par celle que vous 
+    <para>Éditez le fichier de configuration
+<filename>/usr/local/nagios/etc/objects/contacts.cfg</filename> avec votre
+éditeur de texte préféré et changez l'adresse de courrier électronique
+associée avec la définition de contact nagiosadmin par celle que vous
 souhaitez utiliser pour recevoir les alertes.</para>
 
     <screen>
@@ -204,18 +205,18 @@ souhaitez utiliser pour recevoir les alertes.</para>
   </section>
 
   <section>
-    <title>Condfiguration de l'interface Web</title>
+    <title>Configuration de l'interface web</title>
 
-    <para>Install the Nagios web config file in the Apache <filename 
-class="directory">conf.d</filename> directory.</para>
+    <para>Installez le fichier de configuration web Nagios dans le répertoire Apache
+<filename class="directory">conf.d</filename>.</para>
 
     <screen>
 <prompt>linux:~ # </prompt><userinput>make install-webconf</userinput>
 </screen>
 
-    <para>Create a nagiosadmin account for logging into the Nagios web 
-interface. Remember the password you assign to this 
-account&nbsp;-&nbsp;you'll need it later.</para>
+    <para>Créez un compte nagiosadmin pour la connexion à l'interface web de
+Nagios. Souvenez-vous du mot de passe que vous avez attribué à ce
+compte&nbsp;-&nbsp;Vous aure besoin plus tard.</para>
 
     <screen>
 <prompt>linux:~ # </prompt><userinput>htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</userinput>
@@ -251,7 +252,7 @@ account&nbsp;-&nbsp;you'll need it later.</para>
   <section>
     <title>Démarrage de Nagios</title>
 
-    <para>Ajouter Nagios à la liste des services système et démarrer le 
+    <para>Ajouter Nagios à la liste des services système et démarrer le
 automatiquement au démarrage du système.</para>
 
     <screen>
@@ -273,104 +274,110 @@ automatiquement au démarrage du système.</para>
   </section>
 
   <section>
-    <title>Modify SELinux Settings</title>
+    <title>Modifiez les réglages SELinux </title>
 
-    <para>&name-fedora; ships with SELinux (Security Enhanced Linux) installed and in 
-Enforcing mode by default. This can result in <errorname>Internal Server 
-Error</errorname> messages when you attempt to access the Nagios CGIs.</para>
+    <para>&name-fedora; est fourni avec SELinux (Security Enhanced Linux) installé et
+en mode Enforcing  par défaut. Cela peut engendrer des messages
+<errorname>Internal Server Error</errorname> quand vous essayez d'accéder au
+CGIs de Nagios.</para>
 
-    <para>See if SELinux is in Enforcing mode.</para>
+    <para>Vérifiez si SELinux est en mode Enforcing.</para>
 
     <screen>
 <prompt>linux:~ # </prompt><userinput>getenforce</userinput>
 </screen>
 
-    <para>Put SELinux into Permissive mode.</para>
+    <para>Réglez SELinux sur le mode Permissif.</para>
 
     <screen>
 <prompt>linux:~ # </prompt><userinput>setenforce 0</userinput>
 </screen>
 
-    <para>To make this change permanent, you'll have to modify the settings in 
-<filename>/etc/selinux/config</filename> and reboot.</para>
+    <para>Pour rendre le changement permanent, vous allez devoir modifier ces réglages
+dans <filename>/etc/selinux/config</filename> et redémarrer.</para>
 
-    <para>Instead of disabling SELinux or setting it to permissive mode, you can use 
-the following command to run the CGIs under SELinux enforcing/targeted mode:</para>
+    <para>Plutôt que de passer SELinux en mode permissif ou de le désactiver, vous
+pouvez utiliser la commande suivante pour exécuter les CGIs en mode SELinux
+enforcing/targeted:</para>
 
     <screen>
 <prompt>linux:~ # </prompt><userinput>chcon -R -t httpd_sys_content_t /usr/local/nagios/sbin/</userinput>
 <prompt>linux:~ # </prompt><userinput>chcon -R -t httpd_sys_content_t /usr/local/nagios/share/</userinput>
 </screen>
 
-    <para>For information on running the Nagios CGIs under Enforcing mode with a 
-targeted policy, visit the NagiosCommunity.org wiki at <ulink 
+    <para>Pour des informations sur la façon d'utiliser les CGIs Nagios en mode
+Enforcing avec une police adaptée, allez sur le wiki de NagiosCommunity.org
+à l'adresse <ulink
 url="&url-nagios-community;">&url-nagios-community;</ulink>.</para>
   </section>
 
   <section>
     <title>Connexion à l'interface Web</title>
 
-    <para>Vous devriez maintenant pouvoir vous connecter à l'interface web de Nagios à 
-l'adresse ci-dessous.Il vous sera demandé un nom d'utilisateur (nagiosadmin) 
+    <para>Vous devriez maintenant pouvoir vous connecter à l'interface web de Nagios à
+l'adresse ci-dessous.Il vous sera demandé un nom d'utilisateur (nagiosadmin)
 et le mot de passe que vous avez spécifié plus tôt.</para>
 
     <para>http://localhost/nagios/</para>
 
-    <para>Cliquez sur le lien <guimenuitem>Service Detail</guimenuitem> de la barre de 
-navigation pour voir les détails de ce que vous supervisez sur votre machine 
-locale. Nagios va prendre quelques minutes pour contrôler l'ensemble des 
-services de votre machine du fait que les contrôles sont répartis dans le 
+    <para>Cliquez sur le lien <guimenuitem>Service Detail</guimenuitem> de la barre de
+navigation pour voir les détails de ce que vous supervisez sur votre machine
+locale. Nagios va prendre quelques minutes pour contrôler l'ensemble des
+services de votre machine du fait que les contrôles sont répartis dans le
 temps.</para>
   </section>
 
   <section>
     <title>Autres Modifications</title>
 
-    <para>Assurez-vous que les règles du pare-feu de la machine sont configurées pour 
-autoriser l'accès au serveur web si vous souhaitez accéder à distance à 
+    <para>Assurez-vous que les règles du pare-feu de la machine sont configurées pour
+autoriser l'accès au serveur web si vous souhaitez accéder à distance à
 l'interface de Nagios.</para>
 
-    <para>Configuring email notifications is out of the scope of this 
-documentation. While Nagios is currently configured to send you email 
-notifications, your system may not yet have a mail program properly 
-installed or configured. Refer to your system documentation, search the web, 
-or look to the <ulink url="&url-nagios-community;">NagiosCommunity.org 
-wiki</ulink> for specific instructions on configuring your system to send 
-email messages to external addresses. More information on notifications can 
-be found <link linkend="thebasics-notifications">here</link>.</para>
+    <para>La configuration des notifications par courrier électronique est en dehors
+du champ de cettte documentation. Même si Nagios est déjà configuré pour
+envoyer des notifications par courrier électronique, votre système peut très
+bien ne pas avoir de système de messagerie correctement installé ou
+configuré. Référez-vous à la documentation de votre système, recherchez sur
+le web, ou regardez sur le <ulink url="&url-nagios-community;">wiki
+NagiosCommunity.org</ulink> pour des instructions spécifiques sur la façon
+de configurer votre système pour qu'il envoie des courriers électroniques
+vers des adresses extérieures. Plus d'information sur les notifications
+<link linkend="thebasics-notifications">ici</link>.</para>
   </section>
 
   <section>
-    <title>You're Done</title>
+    <title>Terminé</title>
 
-    <para>Congratulations! You sucessfully installed Nagios. Your journey into 
-monitoring is just beginning. You'll no doubt want to monitor more than just 
-your local machine, so check out the following docs...</para>
+    <para>Félicitations! Vous avez installé Nagios avec succès. Votre voyage dans
+l'univers de la supervisoin ne fait que commencer. Vous aurez sans nul doute
+envie de superviser plus que votre seule machine locale, alors jetez un œil
+aux documentations suivantes...</para>
 
     <itemizedlist>
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-windows">Superviser des machines 
+        <para><link linkend="gettingstarted-monitoring-windows">Superviser des machines
 Windows</link></para>
       </listitem>
 
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-linux">Superviser des machines 
+        <para><link linkend="gettingstarted-monitoring-linux">Superviser des machines
 Linux/Unix</link></para>
       </listitem>
 
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-netware">Superviser des serveurs 
+        <para><link linkend="gettingstarted-monitoring-netware">Superviser des serveurs
 Netware</link></para>
       </listitem>
 
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-routers">Superviser des 
+        <para><link linkend="gettingstarted-monitoring-routers">Superviser des
 routeurs/switches</link></para>
       </listitem>
 
       <listitem>
-        <para><link linkend="gettingstarted-monitoring-publicservices">Superviser des 
-services disponibles publiquement (&protocol-http;, &protocol-ftp;, 
+        <para><link linkend="gettingstarted-monitoring-publicservices">Superviser des
+services disponibles publiquement (&protocol-http;, &protocol-ftp;,
 &protocol-ssh;, etc.)</link></para>
       </listitem>
     </itemizedlist>

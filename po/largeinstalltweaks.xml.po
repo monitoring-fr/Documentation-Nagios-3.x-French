@@ -22,43 +22,25 @@ msgstr ""
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -69,8 +51,7 @@ msgstr ""
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
@@ -81,8 +62,19 @@ msgstr "Trucs et astuces pour les installations de grande dimension"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/largeinstalltweaks.xml:13
-msgid "Users with large Nagios installations may benefit from the <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link> configuration option.  Enabling this option allows the Nagios daemon to take certain shortcuts which result in lower system load and better performance."
-msgstr "Les utilisateurs ayant des installations de grande dimension peuvent tirer quelques bénéfices de l'option de configuration <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link>. Activer cette option permet à Nagios d'utiliser quelques raccourcis dont les résultats sont une moindre consommation système et de meilleures performances."
+msgid ""
+"Users with large Nagios installations may benefit from the <link linkend="
+"\"configuringnagios-configmain-use_large_installation_tweaks"
+"\">use_large_installation_tweaks</link> configuration option.  Enabling this "
+"option allows the Nagios daemon to take certain shortcuts which result in "
+"lower system load and better performance."
+msgstr ""
+"Les utilisateurs ayant des installations de grande dimension peuvent tirer "
+"quelques bénéfices de l'option de configuration <link linkend="
+"\"configuringnagios-configmain-use_large_installation_tweaks"
+"\">use_large_installation_tweaks</link>. Activer cette option permet à "
+"Nagios d'utiliser quelques raccourcis dont les résultats sont une moindre "
+"consommation système et de meilleures performances."
 
 # type: Content of: <chapter><section><title>
 #: SecurityAndPerformanceTuning/largeinstalltweaks.xml:19
@@ -91,21 +83,71 @@ msgstr "Effets"
 
 # type: Content of: <chapter><section><para>
 #: SecurityAndPerformanceTuning/largeinstalltweaks.xml:20
-msgid "When you enable the <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link> option in your main Nagios config file, several changes are made to the way the Nagios daemon operates:"
-msgstr "Quand vous activez l'option <link linkend=\"configuringnagios-configmain-use_large_installation_tweaks\">use_large_installation_tweaks</link> dans votre fichier de configuration Nagios, plusieurs choses changent dans le fonctionnement du démon Nagios:"
+msgid ""
+"When you enable the <link linkend=\"configuringnagios-configmain-"
+"use_large_installation_tweaks\">use_large_installation_tweaks</link> option "
+"in your main Nagios config file, several changes are made to the way the "
+"Nagios daemon operates:"
+msgstr ""
+"Quand vous activez l'option <link linkend=\"configuringnagios-configmain-"
+"use_large_installation_tweaks\">use_large_installation_tweaks</link> dans "
+"votre fichier de configuration Nagios, plusieurs choses changent dans le "
+"fonctionnement du démon Nagios:"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/largeinstalltweaks.xml:25
-msgid "No Summary Macros In Environment Variables - The <link linkend=\"thebasics-macrolist-summary_macros\">summary macros</link> will not be available to you as environment variables. Calculating the values of these macros can be quite time-intensive in large configurations, so they are not available as environment variables when use this option. Summary macros will still be available as regular macros if you pass them to to your scripts as arguments."
-msgstr "Pas de macros de résumé dans les variables d'environnement - les <link linkend=\"thebasics-macrolist-summary_macros\">macros de résumé</link> ne seront pas disponibles comme variables d'environnement. Calculer les valeurs de ces macros peut devenir assez consommateur de temps dans des installations de grande dimension, aussi ne sont elles pas disponibles quand cette option est activée. Les macros de résumé resteront disponibles comme toutes les macros si vous les passez en argument de vos scripts."
+msgid ""
+"No Summary Macros In Environment Variables - The <link linkend=\"thebasics-"
+"macrolist-summary_macros\">summary macros</link> will not be available to "
+"you as environment variables. Calculating the values of these macros can be "
+"quite time-intensive in large configurations, so they are not available as "
+"environment variables when use this option. Summary macros will still be "
+"available as regular macros if you pass them to to your scripts as arguments."
+msgstr ""
+"Pas de macros de résumé dans les variables d'environnement - les <link "
+"linkend=\"thebasics-macrolist-summary_macros\">macros de résumé</link> ne "
+"seront pas disponibles comme variables d'environnement. Calculer les valeurs "
+"de ces macros peut devenir assez consommateur de temps dans des "
+"installations de grande dimension, aussi ne sont elles pas disponibles quand "
+"cette option est activée. Les macros de résumé resteront disponibles comme "
+"toutes les macros si vous les passez en argument de vos scripts."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/largeinstalltweaks.xml:34
-msgid "Different Memory Cleanup - Normally Nagios will free all allocated memory in child processes before they exit. This is probably best practice, but is likely unnecessary in most installations, as most OSes will take care of freeing allocated memory when processes exit. The OS tends to free allocated memory faster than can be done within Nagios itself, so Nagios won't attempt to free memory in child processes if you enable this option."
-msgstr "Nettoyage de la mémoire différent - Habituellement, Nagios va libérer tout l'espace mémoire alloué aux processus enfants avant de les terminer. C'est certainement la meilleure façon de faire, mais cela n'est pas utile dans la plupart des installations parce que la plupart des OS prennent soin de libérer la mémoire allouée quand les processus se terminent."
+msgid ""
+"Different Memory Cleanup - Normally Nagios will free all allocated memory in "
+"child processes before they exit. This is probably best practice, but is "
+"likely unnecessary in most installations, as most OSes will take care of "
+"freeing allocated memory when processes exit. The OS tends to free allocated "
+"memory faster than can be done within Nagios itself, so Nagios won't attempt "
+"to free memory in child processes if you enable this option."
+msgstr ""
+"Nettoyage de la mémoire différent - Habituellement, Nagios va libérer tout "
+"l'espace mémoire alloué aux processus enfants avant de les terminer. C'est "
+"certainement la meilleure façon de faire, mais cela n'est pas utile dans la "
+"plupart des installations parce que la plupart des OS prennent soin de "
+"libérer la mémoire allouée quand les processus se terminent."
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: SecurityAndPerformanceTuning/largeinstalltweaks.xml:42
-msgid "Checks <function>fork()</function> Less - Normally Nagios will <function>fork()</function> twice when it executes host and service checks. This is done to (1) ensure a high level of resistance against plugins that go awry and segfault and (2) make the OS deal with cleaning up the grandchild process once it exits. The extra <function>fork()</function> is not really necessary, so it is skipped when you enable this option.  As a result, Nagios will itself clean up child processes that exit (instead of leaving that job to the OS). This feature should result in significant load savings on your Nagios installation."
-msgstr "Moins de <function>fork()</function> - Habituellement, Nagios va <function>fork()</function> deux fois quand il exécute un contrôle d'hôte et de service. Cela permet (1) d'avoir une plus grande résistance contre les plugins qui provoquent des segfault et (2) permet à l'OS de gérer le nettoyage du processus parent quand il se termine. Le <function>fork()</function> supplémentaire n'est pas forcément nécessaire, aussi est-il ignoré quand vous activez cette option. Le résultat est que c'est Nagios lui-même qui va nettoyer les processus enfants quand ils se terminent (au lieu de laisser ce boulot à l'OS). Cette fonction devrait permettre de réduire de façon significative la charge du serveur Nagios."
-
+msgid ""
+"Checks <function>fork()</function> Less - Normally Nagios will <function>fork"
+"()</function> twice when it executes host and service checks. This is done "
+"to (1) ensure a high level of resistance against plugins that go awry and "
+"segfault and (2) make the OS deal with cleaning up the grandchild process "
+"once it exits. The extra <function>fork()</function> is not really "
+"necessary, so it is skipped when you enable this option.  As a result, "
+"Nagios will itself clean up child processes that exit (instead of leaving "
+"that job to the OS). This feature should result in significant load savings "
+"on your Nagios installation."
+msgstr ""
+"Moins de <function>fork()</function> - Habituellement, Nagios va "
+"<function>fork()</function> deux fois quand il exécute un contrôle d'hôte et "
+"de service. Cela permet (1) d'avoir une plus grande résistance contre les "
+"plugins qui provoquent des segfault et (2) permet à l'OS de gérer le "
+"nettoyage du processus parent quand il se termine. Le <function>fork()</"
+"function> supplémentaire n'est pas forcément nécessaire, aussi est-il ignoré "
+"quand vous activez cette option. Le résultat est que c'est Nagios lui-même "
+"qui va nettoyer les processus enfants quand ils se terminent (au lieu de "
+"laisser ce boulot à l'OS). Cette fonction devrait permettre de réduire de "
+"façon significative la charge du serveur Nagios."

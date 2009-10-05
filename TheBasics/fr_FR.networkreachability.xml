@@ -8,35 +8,39 @@
 >
 <chapter id="thebasics-networkreachability"
          xreflabel="Determining Status and Reachability of Network Hosts">
-  <title>Determining Status and Reachability of Network Hosts</title>
+  <title>Détermination de l'état et de l'accessibilité des hôtes du réseau</title>
 
   <section>
     <title>Introduction</title>
 
-    <para>If you've ever work in tech support, you've undoubtably had users tell you 
-"the Internet is down". As a techie, you're pretty sure that no one pulled 
-the power cord from the Internet. Something must be going wrong somewhere 
-between the user's chair and the Internet.</para>
+    <para>Sivous avez déjà travaillé dans une équipe de support technique, vous avez
+alors sûrement entendu les utilisateurs vous dire que <quote>Internet est
+coupé</quote>. En tant que technicien, vous pouvez être quasiment sûr que ce
+n'est pas quelqu'un qui a débranché le câble Internet. Il y a certainement
+quelque chose qui ne fonctionne pas entre le siège de l'utilisateur et
+l'Internet.</para>
 
-    <para>Assuming its a technical problem, you begin to search for the 
-problem. Perhaps the user's computer is turned off, maybe their network 
-cable is unplugged, or perhaps your organization's core router just took a 
-dive. Whatever the problem might be, one thing is most certain - the 
-Internet isn't down. It just happens to be unreachable for that user.</para>
+    <para>Partant du principe que c'est un problème technique, vous commencez à
+chercher le problème. C'est peut-être l'ordinateur de l'utilisateur qui est
+éteint, son câble réseaux qui est débranché, ou peut-être que c'est un des
+routeurs de cœur de réseau  de l'entreprise qu ivient de tomber. Quelque
+soit le problème, une chose est sûre, l'Internet n'est pas coupé. Il est
+devenu injoignable pour cet utilisateur.</para>
 
-    <para>Nagios is able to determine whether the hosts you're monitoring are in a 
-DOWN or UNREACHABLE state. These are very different (although related) 
-states and can help you quickly determine the root cause of network 
-problems. Here's how the reachability logic works to distinguish between 
-these two states...</para>
+    <para>Nagios est capable de déterminer si les hôtes que vous supervisez sont en
+état DOWN ou UNREACHABLE. Ces deux états sont complètement différents (mais
+en relation) et peuvent vous aider à rapidement trouvé la cause profonde de
+problèmes réseaux. Voici comment fonctionne la logique d'accessibilité des
+hôtes du réseau pour vous permettre de distinguer ces deux états...</para>
   </section>
 
   <section>
-    <title>Example Network</title>
+    <title>Exemple de réseau</title>
 
-    <para>Take a look at the simple network diagram below. For this example, lets 
-assume you're monitoring all the hosts (server, routers, switches, etc) that 
-are pictured. Nagios is installed and running on the Nagios host.</para>
+    <para>Jetez un œil au diagramme réseau ci-dessous. Pour cet exemple, partons du
+principe que vous superviez l'ensemble des hôtes (serveurs, routeurs,
+switchs, etc) figurant sur le diagramme. Nagios est installé et fonctionne
+sur le serveur Nagios.</para>
 
     <para><informalfigure>
 	<mediaobject>
@@ -49,17 +53,16 @@ are pictured. Nagios is installed and running on the Nagios host.</para>
   </section>
 
   <section>
-    <title>Defining Parent/Child Relationships</title>
+    <title>Définir des relations parents/enfants</title>
 
-    <para>In order for Nagios to be able to distinguish between DOWN and UNREACHABLE 
-states for the hosts that are being monitored, you'll need to tell Nagios 
-how those hosts are connected to each other - from the standpoint of the 
-Nagios daemon. To do this, trace the path that a data packet would take from 
-the Nagios daemon to each individual host. Each switch, router, and server 
-the packet encounters or passes through is considered a "hop" and will 
-require that you define a parent/child host relationship in Nagios. Here's 
-what the host parent/child relationships look like from the viewpoint of 
-Nagios:</para>
+    <para>Pour que Nagios puisse faire la distinction entre les états  DOWN et
+UNREACHABLE des hôtes supervisés, vous devez lui préciser la façon dont sont
+connectés les hôtes les uns aux autres; en vous plaçant du point de vue du
+démon Nagios. Pour cela, tracer le chemin que devrait prendre un paquet de
+données pour aller du démon Nagios à chaque hôte supervisé. Chaque switch,
+routeur, et serveur que le paquet doit traverser est considéré comme une
+<quote>étape</quote> et requiert que vous définissiez une relation
+parent/enfant dans Nagios.</para>
 
     <para><informalfigure>
 	<mediaobject>
@@ -70,12 +73,12 @@ Nagios:</para>
       </informalfigure>
 	</para>
 
-    <para>Now that you know what the parent/child relationships look like for hosts 
-that are being monitored, how do you configure Nagios to reflect them? The 
-parents directive in your <link 
-linkend="configuringnagios-objectdefinitions-host">host definitions</link> 
-allows you to do this. Here's what the (abbreviated) host definitions with 
-parent/child relationships would look like for this example:</para>
+    <para>Maintenant que vous savez ce que représente les relations parent/enfant pour
+les hôtes supervisés; comment configurer Nagios pour représenter celles-ci?
+La directive parents de vos <link
+linkend="configuringnagios-objectdefinitions-host">définitions
+d'hôtes</link> vou spermet de le faire. Voici un extrait des définitions de
+l'hôte avec les relations parent/enfant pour cet exemple:</para>
 
     <programlisting>define host{
 		        host_name               Nagios   ; &lt;-- The local host has no parent - it is the topmost host
@@ -129,11 +132,12 @@ parent/child relationships would look like for this example:</para>
   </section>
 
   <section>
-    <title>Reachability Logic in Action</title>
+    <title>La logique d'accessibilité des hôtes en action</title>
 
-    <para>Now that you're configured Nagios with the proper parent/child relationships 
-for your hosts, let's see what happen when problems arise.  Assume that two 
-hosts - Web and Router1 - go offline...</para>
+    <para>Maintenant que Nagios est configuré avec les relations parent/enfant
+correctes pour vos hôtes, voyons ce qui se passe quand un problème
+survient. Partons du principe que deux hôtes -Web et Router1 - sont
+tombés...</para>
 
     <para><informalfigure>
 	<mediaobject>
@@ -144,11 +148,12 @@ hosts - Web and Router1 - go offline...</para>
       </informalfigure>
 	</para>
 
-    <para>When hosts change state (i.e. from UP to DOWN), the host reachability logic 
-in Nagios kicks in. The reachability logic will initiate parallel checks of 
-the parents and children of whatever hosts change state. This allows Nagios 
-to quickly determine the current status of your network infrastructure when 
-changes occur.</para>
+    <para>Quand l'état de l'hôte change (par exemple de UP à DOWN), la logique
+d'accessibilité des hôtes est mis en action. La logique d'accessibilité des
+hôtes va initier des contrôles parrallèles pour les parents et l'enfant sur
+n'importe quels changements d'états. Cela permet à Nagios de rapidement
+déterminer l'état courant de votre infrastructure réseau dès que quelque
+chose change.</para>
 
     <para><informalfigure>
 	<mediaobject>
@@ -159,31 +164,33 @@ changes occur.</para>
       </informalfigure>
 	</para>
 
-    <para>In this example, Nagios will determine that Web and Router1 are both in DOWN 
-states because the "path" to those hosts is not being blocked.</para>
+    <para>Dans cet exemple, Nagios va déterminer que Web et Router1 sont tous les deux
+en état DOWN parce que le <quote>chemin</quote> vers ces hôtes n'est pas
+bloqué.</para>
 
-    <para>Nagios will determine that all the hosts "beneath" Router1 are all in an 
-UNREACHABLE state because Nagios can't reach them. Router1 is DOWN and is 
-blocking the path to those other hosts. Those hosts might be running fine, 
-or they might be offline - Nagios doesn't know because it can't reach 
-them. Hence Nagios considers them to be UNREACHABLE instead of DOWN.</para>
+    <para>Nagios va déterminer que les hôtes <quote>derrière</quote> Router1 sont tous
+dans un état UNREACHABLE parce que Nagios ne peut les joindre. Router1 est
+tombé et bloque le chemin vers les autre shôtes. Ces hôtes fonctionnent
+peut-être, ou pas - Nagios ne le sait pas parce qu'il ne peut pas les
+joindre. Aussi Nagios les considère comme UNREACHABLE et non DOWN.</para>
   </section>
 
   <section>
-    <title>UNREACHABLE States and Notifications</title>
+    <title>Type de notification DOWN opposé à UNREACHABLE </title>
 
-    <para>By default, Nagios will notify contacts about both DOWN and UNREACHABLE host 
-states. As an admin/tech, you might not want to get notifications about 
-hosts that are UNREACHABLE. You know your network structure, and if Nagios 
-notifies you that your router/firewall is down, you know that everything 
-behind it is unreachable.</para>
+    <para>Par défaut, Nagios va notifier les contacts à la fois pour des hôtes en
+états DOWN et UNREACHABLE. En tant que administrateur/technicien, vous ne
+souhaiterez peut-être pas recevoir de notifications pour des hôtes
+UNREACHABLE. Vous connaissez votre topologie réseau, et si Nagios vous
+notifie qu'un routeur/firewall est tombé, vous savez que tout ce qui trouve
+derrière est inacessible.</para>
 
-    <para>If you want to spare yourself from a flood of UNREACHABLE notifications 
-during network outages, you can exclude the unreachable (u)  option from the 
-notification_options directive in your <link 
-linkend="configuringnagios-objectdefinitions-host">host</link> definitions 
-and/or the host_notification_options directive in your <link 
-linkend="configuringnagios-objectdefinitions-contact">contact</link> 
-definitions.</para>
+    <para>Si vous voulez vous éviter d'être noyé sous un flot de notifications
+UNREACHABLE pendant des coupures réseaux, vous pouvez exclure l'option
+unreachable (u) de la directive notification_options dans votre fichier de
+configuration d'<link
+linkend="configuringnagios-objectdefinitions-host">hôte</link> et/ou dans la
+directive host_notification_options de votre fichier de définitions des
+<link linkend="configuringnagios-objectdefinitions-contact">contacts</link>.</para>
   </section>
 </chapter>

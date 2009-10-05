@@ -16,10 +16,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: Content of: <chapter><title>
-#: About/whatsnew.xml:103
-#: AdvancedTopics/downtime.xml:10
+#: About/whatsnew.xml:103 AdvancedTopics/downtime.xml:10
+#, fuzzy
 msgid "Scheduled Downtime"
-msgstr "Maintenance programmée"
+msgstr ""
+"#-#-#-#-#  downtime.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Maintenance programmée\n"
+"#-#-#-#-#  whatsnew.xml.po (docnagios 3)  #-#-#-#-#\n"
+"Période de maintenance programmée"
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:45
@@ -28,43 +32,25 @@ msgstr "Maintenance programmée"
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -75,15 +61,24 @@ msgstr "Maintenance programmée"
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:14
-msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/downtime.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Nagios allows you to schedule periods of planned downtime for hosts and service that you're monitoring.  This is useful in the event that you actually know you're going to be taking a server down for an upgrade, etc."
-msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/downtime.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Nagios vous permet de planifier des periodes de maintenance programmée pour les hôtes et les services que vous monitorer. C'est pratique dans le cas où vous allez arrêter des serveurs pour une mise à jour, etc."
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/downtime.png\" "
+"format=\"PNG\"/> </imageobject> </inlinemediaobject> Nagios allows you to "
+"schedule periods of planned downtime for hosts and service that you're "
+"monitoring.  This is useful in the event that you actually know you're going "
+"to be taking a server down for an upgrade, etc."
+msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/downtime.png\" "
+"format=\"PNG\"/> </imageobject> </inlinemediaobject> Nagios vous permet de "
+"planifier des periodes de maintenance programmée pour les hôtes et les "
+"services que vous monitorer. C'est pratique dans le cas où vous allez "
+"arrêter des serveurs pour une mise à jour, etc."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/downtime.xml:25
@@ -92,13 +87,31 @@ msgstr "Programmer une maintenance "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:26
-msgid "You can schedule downtime for hosts and service through the <link linkend=\"thebasics-cgis-extinfo_cgi\">extinfo CGI</link> (either when viewing host or service information). Click in the <guimenu>Schedule downtime for this host/service</guimenu> link to actually schedule the downtime."
-msgstr "Vous pouvez programmer des maintenances pour les hôtes et service à travers le <link linkend=\"thebasics-cgis-extinfo_cgi\">extinfo CGI</link> ( en regardant soit les informations de l'hôtes ou du service). Cliquez sur le lien <guimenu>Schedule downtime for this host/service</guimenu> pour programmer une maintenance. "
+msgid ""
+"You can schedule downtime for hosts and service through the <link linkend="
+"\"thebasics-cgis-extinfo_cgi\">extinfo CGI</link> (either when viewing host "
+"or service information). Click in the <guimenu>Schedule downtime for this "
+"host/service</guimenu> link to actually schedule the downtime."
+msgstr ""
+"Vous pouvez programmer des maintenances pour les hôtes et service à travers "
+"le <link linkend=\"thebasics-cgis-extinfo_cgi\">extinfo CGI</link> ( en "
+"regardant soit les informations de l'hôtes ou du service). Cliquez sur le "
+"lien <guimenu>Schedule downtime for this host/service</guimenu> pour "
+"programmer une maintenance. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:30
-msgid "Once you schedule downtime for a host or service, Nagios will add a comment to that host/service indicating that it is scheduled for downtime during the period of time you indicated. When that period of downtime passes, Nagios will automatically delete the comment that it added. Nice, huh?"
-msgstr "Lorsque vous programmez une maintenance pour un hôte ou un service, Nagios ajoutera un commentaire à cet l'hôte/service pour indiquer qu'il est programmé en maintenance pour la période que vous avez définie. Quand cette période est écoulée, Nagios va automatiquement supprimer ce commentaire. Pas mal, hein?"
+msgid ""
+"Once you schedule downtime for a host or service, Nagios will add a comment "
+"to that host/service indicating that it is scheduled for downtime during the "
+"period of time you indicated. When that period of downtime passes, Nagios "
+"will automatically delete the comment that it added. Nice, huh?"
+msgstr ""
+"Lorsque vous programmez une maintenance pour un hôte ou un service, Nagios "
+"ajoutera un commentaire à cet l'hôte/service pour indiquer qu'il est "
+"programmé en maintenance pour la période que vous avez définie. Quand cette "
+"période est écoulée, Nagios va automatiquement supprimer ce commentaire. Pas "
+"mal, hein?"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/downtime.xml:36
@@ -107,18 +120,61 @@ msgstr "Maintenance fixe ou flexible"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:37
-msgid "When you schedule downtime for a host or service through the web interface you'll be asked if the downtime is fixed or flexible. Here's an explanation of how \"fixed\" and \"flexible\" downtime differs:"
-msgstr "Quand vous programmerez une maitenance pour un hôte ou un service à travers l'interface web, il vous sera demandé si la maintenance est fixe ou flexible. Voilà une explication sur les différence entre les maintenance \"fixe\" et \"flexible\" :"
+msgid ""
+"When you schedule downtime for a host or service through the web interface "
+"you'll be asked if the downtime is fixed or flexible. Here's an explanation "
+"of how \"fixed\" and \"flexible\" downtime differs:"
+msgstr ""
+"Quand vous programmerez une maitenance pour un hôte ou un service à travers "
+"l'interface web, il vous sera demandé si la maintenance est fixe ou "
+"flexible. Voilà une explication sur les différence entre les maintenance "
+"\"fixe\" et \"flexible\" :"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:39
-msgid "\"Fixed\" downtime starts and stops at the exact start and end times that you specify when you schedule it. Okay, that was easy enough..."
-msgstr "les maintenance \"fixe\" commencent et finissent à l'heure exacte de début et de fin que vous avez programmée. Bon, ça c'était facile..."
+msgid ""
+"\"Fixed\" downtime starts and stops at the exact start and end times that "
+"you specify when you schedule it. Okay, that was easy enough..."
+msgstr ""
+"les maintenance \"fixe\" commencent et finissent à l'heure exacte de début "
+"et de fin que vous avez programmée. Bon, ça c'était facile..."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:41
-msgid "\"Flexible\" downtime is intended for times when you know that a host or service is going to be down for X minutes (or hours), but you don't know exactly when that'll start. When you schedule flexible downtime, Nagios will start the scheduled downtime sometime between the start and end times you specified.  The downtime will last for as long as the duration you specified when you scheduled the downtime. This assumes that the host or service for which you scheduled flexible downtime either goes down (or becomes unreachable) or goes into a non-OK state sometime between the start and end times you specified.  The time at which a host or service transitions to a problem state determines the time at which Nagios actually starts the downtime. The downtime will then last for the duration you specified, even if the host or service recovers before the downtime expires. This is done for a very good reason. As we all know, you might think you've got a problem fixed, but then have to restart a server ten times before it actually works right. Smart, eh?"
-msgstr "La maintenance \"Flexible\" est utilisé pour les périodes où vous savez que l'hôte ou le service sera arrêté pour X minutes (ou heures), mais vous ne savez pas exactement quand celà commencera. Quand vous programmez une maintenance flexible, Nagios va commencer la maintenance programmée dans l'intervalle de debut et de fin que vous avez programmé. La maintenance va durée aussi longtemps que la durée que vous avez spécifié quand vous avez programmé la maintenance. Celà implique que l'hôte ou le service sur lequel vous avez programmé une maintenance se coupera (ou deviendra unreachable), ou passe par un état non-OK entre les date de début et de fin que vous avez spécifié. Le moment auquel l'hôte ou le service passen dans un état de problème détermine l'heure à laquelle Nagios commencera effectivement la maintenance. La maitenance durera pour le temps que vous avez spécifié, même si l'hôte ou le service est remonté avant que la durée de maintenance expire. Celà est fait pour une bonne raison. Comme vous le savez, vous pouvez penser que vous avez réglé le problème, mais quand vous à redémarrer le serveur 10 fois avant qu'il marche de nouveau bien. Intelligent n'est-ce pas!"
+msgid ""
+"\"Flexible\" downtime is intended for times when you know that a host or "
+"service is going to be down for X minutes (or hours), but you don't know "
+"exactly when that'll start. When you schedule flexible downtime, Nagios will "
+"start the scheduled downtime sometime between the start and end times you "
+"specified.  The downtime will last for as long as the duration you specified "
+"when you scheduled the downtime. This assumes that the host or service for "
+"which you scheduled flexible downtime either goes down (or becomes "
+"unreachable) or goes into a non-OK state sometime between the start and end "
+"times you specified.  The time at which a host or service transitions to a "
+"problem state determines the time at which Nagios actually starts the "
+"downtime. The downtime will then last for the duration you specified, even "
+"if the host or service recovers before the downtime expires. This is done "
+"for a very good reason. As we all know, you might think you've got a problem "
+"fixed, but then have to restart a server ten times before it actually works "
+"right. Smart, eh?"
+msgstr ""
+"La maintenance \"Flexible\" est utilisé pour les périodes où vous savez que "
+"l'hôte ou le service sera arrêté pour X minutes (ou heures), mais vous ne "
+"savez pas exactement quand celà commencera. Quand vous programmez une "
+"maintenance flexible, Nagios va commencer la maintenance programmée dans "
+"l'intervalle de debut et de fin que vous avez programmé. La maintenance va "
+"durée aussi longtemps que la durée que vous avez spécifié quand vous avez "
+"programmé la maintenance. Celà implique que l'hôte ou le service sur lequel "
+"vous avez programmé une maintenance se coupera (ou deviendra unreachable), "
+"ou passe par un état non-OK entre les date de début et de fin que vous avez "
+"spécifié. Le moment auquel l'hôte ou le service passen dans un état de "
+"problème détermine l'heure à laquelle Nagios commencera effectivement la "
+"maintenance. La maitenance durera pour le temps que vous avez spécifié, même "
+"si l'hôte ou le service est remonté avant que la durée de maintenance "
+"expire. Celà est fait pour une bonne raison. Comme vous le savez, vous "
+"pouvez penser que vous avez réglé le problème, mais quand vous à redémarrer "
+"le serveur 10 fois avant qu'il marche de nouveau bien. Intelligent n'est-ce "
+"pas!"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/downtime.xml:53
@@ -127,8 +183,28 @@ msgstr "Maintenance déclanchée"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:54
-msgid "When scheduling host or service downtime you have the option of making it \"triggered\" downtime.  What is triggered downtime, you ask? With triggered downtime the start of the downtime is triggered by the start of some other scheduled host or service downtime. This is extremely useful if you're scheduling downtime for a large number or hosts or services and the start time of the downtime period depends on the start time of another downtime entry. For instance, if you schedule flexible downtime for a particular host (because its going down for maintenance), you might want to schedule triggered downtime for all of that hosts's \"children\"."
-msgstr "Quand vous programmez une maintenance pour un hôte ou un service, vous avez l'option de faire une maintenance \"triggered\". Vous vous demandez ce qu'est une maintenance déclenchés (triggered). Avec des maintenances déclenchéss, le début d'une maintenance est déclenché par le début d'une autre maintenance d'un hôte ou d'un service. C'est extrêmement utile si vous programmez une maintenance pour un grand nombre d'hôtes ou de services et que le début de la période de maintenance dépend du début d'une autre maintenance. Par exemple, vous programmez une maintenance flexible pour un hôte particulier (parce que vous aller l'arrêter pour une mise à jour), vous voulez peut-être programmer une maintenance déclanchés pour tous les hôtes \"fils\""
+msgid ""
+"When scheduling host or service downtime you have the option of making it "
+"\"triggered\" downtime.  What is triggered downtime, you ask? With triggered "
+"downtime the start of the downtime is triggered by the start of some other "
+"scheduled host or service downtime. This is extremely useful if you're "
+"scheduling downtime for a large number or hosts or services and the start "
+"time of the downtime period depends on the start time of another downtime "
+"entry. For instance, if you schedule flexible downtime for a particular host "
+"(because its going down for maintenance), you might want to schedule "
+"triggered downtime for all of that hosts's \"children\"."
+msgstr ""
+"Quand vous programmez une maintenance pour un hôte ou un service, vous avez "
+"l'option de faire une maintenance \"triggered\". Vous vous demandez ce "
+"qu'est une maintenance déclenchés (triggered). Avec des maintenances "
+"déclenchéss, le début d'une maintenance est déclenché par le début d'une "
+"autre maintenance d'un hôte ou d'un service. C'est extrêmement utile si vous "
+"programmez une maintenance pour un grand nombre d'hôtes ou de services et "
+"que le début de la période de maintenance dépend du début d'une autre "
+"maintenance. Par exemple, vous programmez une maintenance flexible pour un "
+"hôte particulier (parce que vous aller l'arrêter pour une mise à jour), vous "
+"voulez peut-être programmer une maintenance déclanchés pour tous les hôtes "
+"\"fils\""
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/downtime.xml:63
@@ -137,18 +213,43 @@ msgstr "Comment les maintenances programmées affectent les notifications"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:64
-msgid "When a host or service is in a period of scheduled downtime, Nagios will not allow normal notifications to be sent out for the host or service. However, a \"DOWNTIMESTART\" notification will get sent out for the host or service, which will serve to put any admins on notice that they won't receive upcoming problem alerts."
-msgstr "Quand un hôte ou un service est dans une période de maitenance programmée, Nagios n'autorisera pas l'envoi de notifcations  pour cet hôte ou service. Cependant une notification de \"DOWNTIMESTART\" sera envoyé pour cet hôte ou service, qui sert à indiquer aux administrateurs qu'ils ne receveront plus d'alerte pour cet hôte/service."
+msgid ""
+"When a host or service is in a period of scheduled downtime, Nagios will not "
+"allow normal notifications to be sent out for the host or service. However, "
+"a \"DOWNTIMESTART\" notification will get sent out for the host or service, "
+"which will serve to put any admins on notice that they won't receive "
+"upcoming problem alerts."
+msgstr ""
+"Quand un hôte ou un service est dans une période de maitenance programmée, "
+"Nagios n'autorisera pas l'envoi de notifcations  pour cet hôte ou service. "
+"Cependant une notification de \"DOWNTIMESTART\" sera envoyé pour cet hôte ou "
+"service, qui sert à indiquer aux administrateurs qu'ils ne receveront plus "
+"d'alerte pour cet hôte/service."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:68
-msgid "When the scheduled downtime is over, Nagios will allow normal notifications to be sent out for the host or service again. A \"DOWNTIMEEND\" notification will get sent out notifying admins that the scheduled downtime is over, and they will start receiving normal alerts again."
-msgstr "Quand une maintenance programmée est finie, Nagios va autorisé de nouveau l'envoit des notifications pour l'hôte ou le service.. Une notification de \"DOWNTIMEEND\" sera envoyé pour notifier aux adiminstrateurs que la maintenance programmée est terminé, et qu'ils receveront les alertes de nouveau. "
+msgid ""
+"When the scheduled downtime is over, Nagios will allow normal notifications "
+"to be sent out for the host or service again. A \"DOWNTIMEEND\" notification "
+"will get sent out notifying admins that the scheduled downtime is over, and "
+"they will start receiving normal alerts again."
+msgstr ""
+"Quand une maintenance programmée est finie, Nagios va autorisé de nouveau "
+"l'envoit des notifications pour l'hôte ou le service.. Une notification de "
+"\"DOWNTIMEEND\" sera envoyé pour notifier aux adiminstrateurs que la "
+"maintenance programmée est terminé, et qu'ils receveront les alertes de "
+"nouveau. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:71
-msgid "If the scheduled downtime is cancelled prematurely (before it expires), a \"DOWNTIMECANCELLED\" notification will get sent out to the appropriate admins."
-msgstr "Si une maintenance programmée est annulé prématurément (avant qu'il expire) une notification de  \"DOWNTIMECANCELLED\" sera envoyé aux administrateurs concernés. "
+msgid ""
+"If the scheduled downtime is cancelled prematurely (before it expires), a "
+"\"DOWNTIMECANCELLED\" notification will get sent out to the appropriate "
+"admins."
+msgstr ""
+"Si une maintenance programmée est annulé prématurément (avant qu'il expire) "
+"une notification de  \"DOWNTIMECANCELLED\" sera envoyé aux administrateurs "
+"concernés. "
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/downtime.xml:75
@@ -157,8 +258,22 @@ msgstr "Maintenances programmées qui se superposent"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:76
-msgid "I like to refer to this as the \"Oh crap, its not working\" syndrome. You know what I'm talking about. You take a server down to perform a \"routine\" hardware upgrade, only to later realize that the OS drivers aren't working, the RAID array blew up, or the drive imaging failed and left your original disks useless to the world. Moral of the story is that any routine work on a server is quite likely to take three or four times as long as you had originally planned..."
-msgstr "Je préfère appeller ça le syndrome du \"Oh merde, ça ne marche pas\". Vous savez de quoi je parle. Vous arrêtez un serveur pour faire une mise à jour de \"routine\", et vous vous rendez-compte plus tard que les driver de l'OS ne marche pas, que les RAID array ont explosé ou que l'image disque à échoué et que vous avez un disque inutile. La moral de l'histoire est qu'une opération de routine peut parfois prendre trois à quatre fois plus de temps que vous n'aviez prévu. "
+msgid ""
+"I like to refer to this as the \"Oh crap, its not working\" syndrome. You "
+"know what I'm talking about. You take a server down to perform a \"routine\" "
+"hardware upgrade, only to later realize that the OS drivers aren't working, "
+"the RAID array blew up, or the drive imaging failed and left your original "
+"disks useless to the world. Moral of the story is that any routine work on a "
+"server is quite likely to take three or four times as long as you had "
+"originally planned..."
+msgstr ""
+"Je préfère appeller ça le syndrome du \"Oh merde, ça ne marche pas\". Vous "
+"savez de quoi je parle. Vous arrêtez un serveur pour faire une mise à jour "
+"de \"routine\", et vous vous rendez-compte plus tard que les driver de l'OS "
+"ne marche pas, que les RAID array ont explosé ou que l'image disque à échoué "
+"et que vous avez un disque inutile. La moral de l'histoire est qu'une "
+"opération de routine peut parfois prendre trois à quatre fois plus de temps "
+"que vous n'aviez prévu. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:81
@@ -168,30 +283,58 @@ msgstr "Regardons le scénario suivant : "
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/downtime.xml:84
 msgid "You schedule downtime for host A from 7:30pm-9:30pm on a Monday"
-msgstr "Vous programmez une maintenance pour l'hote A de 7:30pm-9:30pm un lundu"
+msgstr ""
+"Vous programmez une maintenance pour l'hote A de 7:30pm-9:30pm un lundu"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/downtime.xml:87
-msgid "You bring the server down about 7:45pm Monday evening to start a hard drive upgrade"
-msgstr "Vous arrêtez le serveur à 7:45pm lundi soir pour commencer une mise à jour du disque dur"
+msgid ""
+"You bring the server down about 7:45pm Monday evening to start a hard drive "
+"upgrade"
+msgstr ""
+"Vous arrêtez le serveur à 7:45pm lundi soir pour commencer une mise à jour "
+"du disque dur"
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/downtime.xml:90
-msgid "After wasting an hour and a half battling with SCSI errors and driver incompatabilities, you finally get the machine to boot up"
-msgstr "Après avoir perdu une heure et demi à vous battre avec des erreurs SCSI et des incomptibilité de drivers, vous relancez finalement la machine. "
+msgid ""
+"After wasting an hour and a half battling with SCSI errors and driver "
+"incompatabilities, you finally get the machine to boot up"
+msgstr ""
+"Après avoir perdu une heure et demi à vous battre avec des erreurs SCSI et "
+"des incomptibilité de drivers, vous relancez finalement la machine. "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/downtime.xml:94
-msgid "At 9:15 you realize that one of your partitions is either hosed or doesn't seem to exist anywhere on the drive"
-msgstr "à 9:15pm vous vous rendez-compte qu'une de vos partitions a été cachée soit ne semble plus exister sur le disque. "
+msgid ""
+"At 9:15 you realize that one of your partitions is either hosed or doesn't "
+"seem to exist anywhere on the drive"
+msgstr ""
+"à 9:15pm vous vous rendez-compte qu'une de vos partitions a été cachée soit "
+"ne semble plus exister sur le disque. "
 
 # type: Content of: <chapter><section><orderedlist><listitem><para>
 #: AdvancedTopics/downtime.xml:98
-msgid "Knowing you're in for a long night, you go back and schedule additional downtime for host A from 9:20pm Monday evening to 1:30am Tuesday Morning."
-msgstr "Sachant que vous y êtes pour une longue nui, vous revenez et vous programmez une maintenance additionnelle pour l'hôte A de 9:20pm le lundi soir à 1:30am le mardi matin. "
+msgid ""
+"Knowing you're in for a long night, you go back and schedule additional "
+"downtime for host A from 9:20pm Monday evening to 1:30am Tuesday Morning."
+msgstr ""
+"Sachant que vous y êtes pour une longue nui, vous revenez et vous programmez "
+"une maintenance additionnelle pour l'hôte A de 9:20pm le lundi soir à 1:30am "
+"le mardi matin. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/downtime.xml:102
-msgid "If you schedule overlapping periods of downtime for a host or service (in this case the periods were 7:40pm-9:30pm and 9:20pm-1:30am), Nagios will wait until the last period of scheduled downtime is over before it allows notifications to be sent out for that host or service. In this example notifications would be suppressed for host A until 1:30am Tuesday morning."
-msgstr "Si vous programmez des periodes de maintenance qui se superposent pour un hôte ou un service (Dans ce cas les periodes étaient  7:40pm-9:30pm et 9:20pm-1:30am), Nagios attendra jusqu'à la fin de la dernière periode avant d'autoriser de nouveau l'envoi des notifications pour cet hôte ou service. Dans cette exemple, les notifications aurait été supprimées pour l'hôte A jusqu'à mardi matin 1:30am. "
-
+msgid ""
+"If you schedule overlapping periods of downtime for a host or service (in "
+"this case the periods were 7:40pm-9:30pm and 9:20pm-1:30am), Nagios will "
+"wait until the last period of scheduled downtime is over before it allows "
+"notifications to be sent out for that host or service. In this example "
+"notifications would be suppressed for host A until 1:30am Tuesday morning."
+msgstr ""
+"Si vous programmez des periodes de maintenance qui se superposent pour un "
+"hôte ou un service (Dans ce cas les periodes étaient  7:40pm-9:30pm et "
+"9:20pm-1:30am), Nagios attendra jusqu'à la fin de la dernière periode avant "
+"d'autoriser de nouveau l'envoi des notifications pour cet hôte ou service. "
+"Dans cette exemple, les notifications aurait été supprimées pour l'hôte A "
+"jusqu'à mardi matin 1:30am. "

@@ -17,11 +17,19 @@ msgstr ""
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: GettingStarted/monitoring-windows.xml:39
-#: GettingStarted/monitoring-linux.xml:38
-#: TheBasics/plugins.xml:96
+#: GettingStarted/monitoring-linux.xml:38 TheBasics/plugins.xml:96
 #: AdvancedTopics/eventhandlers.xml:37
+#, fuzzy
 msgid "etc."
-msgstr "etc."
+msgstr ""
+"#-#-#-#-#  monitoring-windows.xml.po (docnagios 3)  #-#-#-#-#\n"
+"etc.\n"
+"#-#-#-#-#  plugins.xml.po (docnagios 3)  #-#-#-#-#\n"
+"etc...\n"
+"#-#-#-#-#  eventhandlers.xml.po (docnagios 3)  #-#-#-#-#\n"
+"etc.\n"
+"#-#-#-#-#  monitoring-linux.xml.po (docnagios 3)  #-#-#-#-#\n"
+"etc."
 
 # type: Content of: <chapter><section><title>
 #: GettingStarted/monitoring-windows.xml:45
@@ -30,43 +38,25 @@ msgstr "etc."
 #: GettingStarted/monitoring-printers.xml:26
 #: GettingStarted/monitoring-routers.xml:23
 #: GettingStarted/monitoring-publicservices.xml:22
-#: ConfiguringNagios/config.xml:13
-#: ConfiguringNagios/objectdefinitions.xml:13
-#: ConfiguringNagios/customobjectvars.xml:12
-#: ConfiguringNagios/cgiauth.xml:14
-#: TheBasics/plugins.xml:13
-#: TheBasics/hostchecks.xml:12
-#: TheBasics/servicechecks.xml:12
-#: TheBasics/activechecks.xml:13
-#: TheBasics/passivechecks.xml:14
-#: TheBasics/statetypes.xml:13
-#: TheBasics/timeperiods.xml:15
-#: TheBasics/networkreachability.xml:14
-#: TheBasics/notifications.xml:13
-#: TheBasics/cgis.xml:13
-#: AdvancedTopics/extcommands.xml:12
-#: AdvancedTopics/eventhandlers.xml:12
-#: AdvancedTopics/volatileservices.xml:13
-#: AdvancedTopics/freshness.xml:12
-#: AdvancedTopics/distributed.xml:12
-#: AdvancedTopics/redundancy.xml:13
-#: AdvancedTopics/redundancy.xml:72
-#: AdvancedTopics/redundancy.xml:433
-#: AdvancedTopics/flapping.xml:14
-#: AdvancedTopics/escalations.xml:13
-#: AdvancedTopics/oncallrotation.xml:12
-#: AdvancedTopics/clusters.xml:12
-#: AdvancedTopics/dependencies.xml:12
-#: AdvancedTopics/stalking.xml:13
-#: AdvancedTopics/perfdata.xml:13
-#: AdvancedTopics/downtime.xml:12
-#: AdvancedTopics/embeddedperl.xml:12
-#: AdvancedTopics/adaptive.xml:13
-#: AdvancedTopics/dependencychecks.xml:12
-#: AdvancedTopics/cachedchecks.xml:12
+#: ConfiguringNagios/config.xml:13 ConfiguringNagios/objectdefinitions.xml:13
+#: ConfiguringNagios/customobjectvars.xml:12 ConfiguringNagios/cgiauth.xml:14
+#: TheBasics/plugins.xml:13 TheBasics/hostchecks.xml:12
+#: TheBasics/servicechecks.xml:12 TheBasics/activechecks.xml:13
+#: TheBasics/passivechecks.xml:14 TheBasics/statetypes.xml:13
+#: TheBasics/timeperiods.xml:15 TheBasics/networkreachability.xml:14
+#: TheBasics/notifications.xml:13 TheBasics/cgis.xml:13
+#: AdvancedTopics/extcommands.xml:12 AdvancedTopics/eventhandlers.xml:12
+#: AdvancedTopics/volatileservices.xml:13 AdvancedTopics/freshness.xml:12
+#: AdvancedTopics/distributed.xml:12 AdvancedTopics/redundancy.xml:13
+#: AdvancedTopics/redundancy.xml:72 AdvancedTopics/redundancy.xml:433
+#: AdvancedTopics/flapping.xml:14 AdvancedTopics/escalations.xml:13
+#: AdvancedTopics/oncallrotation.xml:12 AdvancedTopics/clusters.xml:12
+#: AdvancedTopics/dependencies.xml:12 AdvancedTopics/stalking.xml:13
+#: AdvancedTopics/perfdata.xml:13 AdvancedTopics/downtime.xml:12
+#: AdvancedTopics/embeddedperl.xml:12 AdvancedTopics/adaptive.xml:13
+#: AdvancedTopics/dependencychecks.xml:12 AdvancedTopics/cachedchecks.xml:12
 #: AdvancedTopics/passivestatetranslation.xml:14
-#: AdvancedTopics/cgiincludes.xml:12
-#: AdvancedTopics/objectinheritance.xml:13
+#: AdvancedTopics/cgiincludes.xml:12 AdvancedTopics/objectinheritance.xml:13
 #: AdvancedTopics/objecttricks.xml:16
 #: SecurityAndPerformanceTuning/cgisecurity.xml:13
 #: SecurityAndPerformanceTuning/tuning.xml:14
@@ -77,8 +67,7 @@ msgstr "etc."
 #: IntegrationWithOtherSoftware/integration.xml:12
 #: IntegrationWithOtherSoftware/int-snmptrap.xml:14
 #: IntegrationWithOtherSoftware/int-tcpwrappers.xml:14
-#: NagiosAddons/addons.xml:13
-#: Development/epnplugins.xml:14
+#: NagiosAddons/addons.xml:13 Development/epnplugins.xml:14
 msgid "Introduction"
 msgstr "Introduction"
 
@@ -89,13 +78,28 @@ msgstr "Gestionnaires d'événements"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:14
-msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/eventhandlers.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Event handlers are optional system commands (scripts or executables) that are run whenever a host or service state change occurs."
-msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"images/eventhandlers.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Les gestionnaires d'événements sont des commandes optionnelles qui sont exécutées à chaque fois qu'un changement d'état d'un hôte ou d'un service a lieu."
+msgid ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/eventhandlers."
+"png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Event handlers "
+"are optional system commands (scripts or executables) that are run whenever "
+"a host or service state change occurs."
+msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata fileref=\"images/eventhandlers."
+"png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Les gestionnaires "
+"d'événements sont des commandes optionnelles qui sont exécutées à chaque "
+"fois qu'un changement d'état d'un hôte ou d'un service a lieu."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:21
-msgid "An obvious use for event handlers is the ability for Nagios to proactively fix problems before anyone is notified. Some other uses for event handlers include:"
-msgstr "Une première utilité de ces gestionnaires d'événements réside dans la capacité de Nagios à résoudre les problèmes de manière préventive avant que quelqu'un ne reçoive une notification. D'autres utilisations possibles des gestionnaires d'événements sont :"
+msgid ""
+"An obvious use for event handlers is the ability for Nagios to proactively "
+"fix problems before anyone is notified. Some other uses for event handlers "
+"include:"
+msgstr ""
+"Une première utilité de ces gestionnaires d'événements réside dans la "
+"capacité de Nagios à résoudre les problèmes de manière préventive avant que "
+"quelqu'un ne reçoive une notification. D'autres utilisations possibles des "
+"gestionnaires d'événements sont :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/eventhandlers.xml:25
@@ -119,18 +123,27 @@ msgstr "Reboot d'un hôte"
 
 # type: Content of: <chapter><section><important><para>
 #: AdvancedTopics/eventhandlers.xml:40
-msgid "Cycling power on a host that is experiencing problems with an automated script should not be implemented lightly. Consider the consequences of this carefully before implementing automatic reboots. :-)"
-msgstr "Le reboot d'un hôte ayant des problèmes de façon automatique par un script ne devrait pas être implémenté à la légère. Considérez les conséquences avec exactitude avant d'implémenter des reboots automatiques. :-)"
+msgid ""
+"Cycling power on a host that is experiencing problems with an automated "
+"script should not be implemented lightly. Consider the consequences of this "
+"carefully before implementing automatic reboots. :-)"
+msgstr ""
+"Le reboot d'un hôte ayant des problèmes de façon automatique par un script "
+"ne devrait pas être implémenté à la légère. Considérez les conséquences avec "
+"exactitude avant d'implémenter des reboots automatiques. :-)"
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/eventhandlers.xml:44
 msgid "When Are Event Handlers Executed?"
-msgstr "Quand les commandes de gestionnaires d'événements sont-elles exécutées ? "
+msgstr ""
+"Quand les commandes de gestionnaires d'événements sont-elles exécutées ? "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:45
 msgid "Event handlers are executed when a service or host:"
-msgstr "Les commandes de gestionnaires d'événements de service et d'hôte sont exécutées lorsqu'un service ou un hôte : "
+msgstr ""
+"Les commandes de gestionnaires d'événements de service et d'hôte sont "
+"exécutées lorsqu'un service ou un hôte : "
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/eventhandlers.xml:48
@@ -149,8 +162,12 @@ msgstr "Se rétablit après un état d'erreur SOFT ou HARD"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:57
-msgid "SOFT and HARD states are described in detail <link linkend=\"thebasics-statetypes\">here</link> ."
-msgstr "Les états SOFT et HARD sont décrits en détails <link linkend=\"thebasics-statetypes\">ici</link>."
+msgid ""
+"SOFT and HARD states are described in detail <link linkend=\"thebasics-"
+"statetypes\">here</link> ."
+msgstr ""
+"Les états SOFT et HARD sont décrits en détails <link linkend=\"thebasics-"
+"statetypes\">ici</link>."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/eventhandlers.xml:60
@@ -159,8 +176,12 @@ msgstr "Types de gestionnaires d'événements"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:61
-msgid "There are different types of optional event handlers that you can define to handle host and state changes:"
-msgstr "Il ya différents types de gestionnaires d'événements optionnels qui peuvent être définis pour prendre en compte les changements d'états et d'hôtes :"
+msgid ""
+"There are different types of optional event handlers that you can define to "
+"handle host and state changes:"
+msgstr ""
+"Il ya différents types de gestionnaires d'événements optionnels qui peuvent "
+"être définis pour prendre en compte les changements d'états et d'hôtes :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/eventhandlers.xml:64
@@ -184,13 +205,46 @@ msgstr "Gestionnaires d'événements spécifique à un service"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:76
-msgid "Global host and service event handlers are run for every host or service state change that occurs, immediately prior to any host- or service-specific event handler that may be run. You can specify global event handler commands by using the <link linkend=\"configuringnagios-configmain-global_host_event_handler\">global_host_event_handler</link> and <link linkend=\"configuringnagios-configmain-global_service_event_handler\">global_service_event_handler</link> options in your main configuration file."
-msgstr "Les gestionnaires d'événements globaux sont exécutés à chaque changement d'état d'hôte ou de service, immédiatement avant  d'exécuter n'importe quel gestionnaire d'événements spécifique d'hôte ou de service. Vous pouvez préciser les commandes de gestionnaires d'événements globaux en utilisant les options <link linkend=\"configuringnagios-configmain-global_host_event_handler\">global_host_event_handler</link> et <link linkend=\"configuringnagios-configmain-global_service_event_handler\">global_service_event_handler</link> de votre fichier de configuration principal."
+msgid ""
+"Global host and service event handlers are run for every host or service "
+"state change that occurs, immediately prior to any host- or service-specific "
+"event handler that may be run. You can specify global event handler commands "
+"by using the <link linkend=\"configuringnagios-configmain-"
+"global_host_event_handler\">global_host_event_handler</link> and <link "
+"linkend=\"configuringnagios-configmain-global_service_event_handler"
+"\">global_service_event_handler</link> options in your main configuration "
+"file."
+msgstr ""
+"Les gestionnaires d'événements globaux sont exécutés à chaque changement "
+"d'état d'hôte ou de service, immédiatement avant  d'exécuter n'importe quel "
+"gestionnaire d'événements spécifique d'hôte ou de service. Vous pouvez "
+"préciser les commandes de gestionnaires d'événements globaux en utilisant "
+"les options <link linkend=\"configuringnagios-configmain-"
+"global_host_event_handler\">global_host_event_handler</link> et <link "
+"linkend=\"configuringnagios-configmain-global_service_event_handler"
+"\">global_service_event_handler</link> de votre fichier de configuration "
+"principal."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:80
-msgid "Individual hosts and services can have their own event handler command that should be run to handle state changes. You can specify an event handler that should be run by using the <varname>event_handler</varname> directive in your <link linkend=\"configuringnagios-objectdefinitions-host\">host</link> and <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> definitions.  These host- and service-specific event handlers are executed immediately after the (optional) global host or service event handler is executed."
-msgstr "Les hôtes et les services peuvent avoir leur propre commande de gestionnaire d'événements qui s'exécute à chaque changement d'état. Vous pouvez préciser un gestionnaire d'événements qui doit être exécuté en utilisant l'option <varname>event_handler</varname> dans les définitions d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôtes</link> and <link linkend=\"configuringnagios-objectdefinitions-service\">services</link>. Ces gestionnaires spécifiques d'hôtes et de services sont exécutés juste après l'exécution du gestionnaire global (optionnel) d'hôtes et de services."
+msgid ""
+"Individual hosts and services can have their own event handler command that "
+"should be run to handle state changes. You can specify an event handler that "
+"should be run by using the <varname>event_handler</varname> directive in "
+"your <link linkend=\"configuringnagios-objectdefinitions-host\">host</link> "
+"and <link linkend=\"configuringnagios-objectdefinitions-service\">service</"
+"link> definitions.  These host- and service-specific event handlers are "
+"executed immediately after the (optional) global host or service event "
+"handler is executed."
+msgstr ""
+"Les hôtes et les services peuvent avoir leur propre commande de gestionnaire "
+"d'événements qui s'exécute à chaque changement d'état. Vous pouvez préciser "
+"un gestionnaire d'événements qui doit être exécuté en utilisant l'option "
+"<varname>event_handler</varname> dans les définitions d'<link linkend="
+"\"configuringnagios-objectdefinitions-host\">hôtes</link> and <link linkend="
+"\"configuringnagios-objectdefinitions-service\">services</link>. Ces "
+"gestionnaires spécifiques d'hôtes et de services sont exécutés juste après "
+"l'exécution du gestionnaire global (optionnel) d'hôtes et de services."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/eventhandlers.xml:87
@@ -199,13 +253,36 @@ msgstr "Activation des gestionnaires d'événements"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:88
-msgid "Event handlers can be enabled or disabled on a program-wide basis by using the <link linkend=\"configuringnagios-configmain-enable_event_handlers\">enable_event_handlers</link> in your main configuration file."
-msgstr "Les gestionnaires d'événements peuvent être activés et désactivés au niveau général du programme en utilisant  <link linkend=\"configuringnagios-configmain-enable_event_handlers\">enable_event_handlers</link> dans votre fichier de configuration principal."
+msgid ""
+"Event handlers can be enabled or disabled on a program-wide basis by using "
+"the <link linkend=\"configuringnagios-configmain-enable_event_handlers"
+"\">enable_event_handlers</link> in your main configuration file."
+msgstr ""
+"Les gestionnaires d'événements peuvent être activés et désactivés au niveau "
+"général du programme en utilisant  <link linkend=\"configuringnagios-"
+"configmain-enable_event_handlers\">enable_event_handlers</link> dans votre "
+"fichier de configuration principal."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:90
-msgid "Host- and service-specific event handlers can be enabled or disabled by using the <varname>event_handler_enabled</varname> directive in your <link linkend=\"configuringnagios-objectdefinitions-host\">host</link> and <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> definitions. Host- and service-specific event handlers will not be executed if the global <link linkend=\"configuringnagios-configmain-enable_event_handlers\">enable_event_handlers</link> option is disabled."
-msgstr "Les gestionnaires d'événements spécifiques aux hôtes et services peuvent être activés et désactivés en utilisant les directives <varname>event_handler_enabled</varname> dans vos définitions d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôtes</link> et de <link linkend=\"configuringnagios-objectdefinitions-service\">services</link>.  Les gestionnaires d'événements spécifiques aux hôtes et services ne peuvent pas être exécutés si l'option globale <link linkend=\"configuringnagios-configmain-enable_event_handlers\">enable_event_handlers</link> est désactivée."
+msgid ""
+"Host- and service-specific event handlers can be enabled or disabled by "
+"using the <varname>event_handler_enabled</varname> directive in your <link "
+"linkend=\"configuringnagios-objectdefinitions-host\">host</link> and <link "
+"linkend=\"configuringnagios-objectdefinitions-service\">service</link> "
+"definitions. Host- and service-specific event handlers will not be executed "
+"if the global <link linkend=\"configuringnagios-configmain-"
+"enable_event_handlers\">enable_event_handlers</link> option is disabled."
+msgstr ""
+"Les gestionnaires d'événements spécifiques aux hôtes et services peuvent "
+"être activés et désactivés en utilisant les directives "
+"<varname>event_handler_enabled</varname> dans vos définitions d'<link "
+"linkend=\"configuringnagios-objectdefinitions-host\">hôtes</link> et de "
+"<link linkend=\"configuringnagios-objectdefinitions-service\">services</"
+"link>.  Les gestionnaires d'événements spécifiques aux hôtes et services ne "
+"peuvent pas être exécutés si l'option globale <link linkend="
+"\"configuringnagios-configmain-enable_event_handlers"
+"\">enable_event_handlers</link> est désactivée."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/eventhandlers.xml:96
@@ -214,13 +291,23 @@ msgstr "Ordre d'exécution des gestionnaires d'événements"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:97
-msgid "As already mentioned, global host and service event handlers are executed immediately before host- or service-specific event handlers."
-msgstr "Comme précédemment indiqué, les gestionnaires d'événements globaux d'hôtes et de services sont exécutés juste avant les gestionnaires d'événements spécifiques d'hôtes et de services."
+msgid ""
+"As already mentioned, global host and service event handlers are executed "
+"immediately before host- or service-specific event handlers."
+msgstr ""
+"Comme précédemment indiqué, les gestionnaires d'événements globaux d'hôtes "
+"et de services sont exécutés juste avant les gestionnaires d'événements "
+"spécifiques d'hôtes et de services."
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:99
-msgid "Event handlers are executed for HARD problem and recovery states immediately after notifications are sent out."
-msgstr "Pour l'entrée dans un état d'erreur HARD et le retour à la normale, les gestionnaires d'événements sont exécutés immédiatement après l'envoi des notifications."
+msgid ""
+"Event handlers are executed for HARD problem and recovery states immediately "
+"after notifications are sent out."
+msgstr ""
+"Pour l'entrée dans un état d'erreur HARD et le retour à la normale, les "
+"gestionnaires d'événements sont exécutés immédiatement après l'envoi des "
+"notifications."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/eventhandlers.xml:102
@@ -229,23 +316,70 @@ msgstr "Écriture d'une commande de gestionnaire d'événements"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:103
-msgid "Event handler commands will likely be shell or perl scripts, but they can be any type of executable that can run from a command prompt. At a minimum, the scripts should take the following <link linkend=\"thebasics-macros\">macros</link> as arguments:"
-msgstr "Les commandes de gestionnaires d'événements seront certainement des scripts shell ou perl, mais ils peuvent être n'importe quoi d'exécutable depuis la ligne de commande. Au minimum, les scripts devraient prendre les <link linkend=\"thebasics-macros\">macros</link> suivantes comme arguments :"
+msgid ""
+"Event handler commands will likely be shell or perl scripts, but they can be "
+"any type of executable that can run from a command prompt. At a minimum, the "
+"scripts should take the following <link linkend=\"thebasics-macros\">macros</"
+"link> as arguments:"
+msgstr ""
+"Les commandes de gestionnaires d'événements seront certainement des scripts "
+"shell ou perl, mais ils peuvent être n'importe quoi d'exécutable depuis la "
+"ligne de commande. Au minimum, les scripts devraient prendre les <link "
+"linkend=\"thebasics-macros\">macros</link> suivantes comme arguments :"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:106
-msgid "For Services: <link linkend=\"thebasics-macrolist-servicestate\">$SERVICESTATE$</link>, <link linkend=\"thebasics-macrolist-servicestatetype\">$SERVICESTATETYPE$</link>, <link linkend=\"thebasics-macrolist-serviceattempt\">$SERVICEATTEMPT$</link>For Hosts: <link linkend=\"thebasics-macrolist-hoststate\">$HOSTSTATE$</link>, <link linkend=\"thebasics-macrolist-hoststatetype\">$HOSTSTATETYPE$</link>, <link linkend=\"thebasics-macrolist-hostattempt\">$HOSTATTEMPT$</link>"
-msgstr "Pour les services: <link linkend=\"thebasics-macrolist-servicestate\">$SERVICESTATE$</link>, <link linkend=\"thebasics-macrolist-servicestatetype\">$SERVICESTATETYPE$</link>, <link linkend=\"thebasics-macrolist-serviceattempt\">$SERVICEATTEMPT$</link>Pour les hôtes: <link linkend=\"thebasics-macrolist-hoststate\">$HOSTSTATE$</link>, <link linkend=\"thebasics-macrolist-hoststatetype\">$HOSTSTATETYPE$</link>, <link linkend=\"thebasics-macrolist-hostattempt\">$HOSTATTEMPT$</link>"
+msgid ""
+"For Services: <link linkend=\"thebasics-macrolist-servicestate\">"
+"$SERVICESTATE$</link>, <link linkend=\"thebasics-macrolist-servicestatetype"
+"\">$SERVICESTATETYPE$</link>, <link linkend=\"thebasics-macrolist-"
+"serviceattempt\">$SERVICEATTEMPT$</link>For Hosts: <link linkend=\"thebasics-"
+"macrolist-hoststate\">$HOSTSTATE$</link>, <link linkend=\"thebasics-"
+"macrolist-hoststatetype\">$HOSTSTATETYPE$</link>, <link linkend=\"thebasics-"
+"macrolist-hostattempt\">$HOSTATTEMPT$</link>"
+msgstr ""
+"Pour les services: <link linkend=\"thebasics-macrolist-servicestate\">"
+"$SERVICESTATE$</link>, <link linkend=\"thebasics-macrolist-servicestatetype"
+"\">$SERVICESTATETYPE$</link>, <link linkend=\"thebasics-macrolist-"
+"serviceattempt\">$SERVICEATTEMPT$</link>Pour les hôtes: <link linkend="
+"\"thebasics-macrolist-hoststate\">$HOSTSTATE$</link>, <link linkend="
+"\"thebasics-macrolist-hoststatetype\">$HOSTSTATETYPE$</link>, <link linkend="
+"\"thebasics-macrolist-hostattempt\">$HOSTATTEMPT$</link>"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:110
-msgid "The scripts should examine the values of the arguments passed to it and take any necessary action based upon those values. The best way to understand how event handlers work is to see an example. Lucky for you, one is provided <link linkend=\"advancedtopics-eventhandlers-example\">below</link>."
-msgstr "Les scripts devraient être capables d'examiner les valeurs des arguments qui lui ont été passé et de prendre toute action nécessaire basée sur ces valeurs. La meilleure façon de comprendre comment fonctionne les gestionnaires d'événements est de voir un exemple. Heureusement pour vous, en voici un <link linkend=\"advancedtopics-eventhandlers-example\">ci-dessous</link>."
+msgid ""
+"The scripts should examine the values of the arguments passed to it and take "
+"any necessary action based upon those values. The best way to understand how "
+"event handlers work is to see an example. Lucky for you, one is provided "
+"<link linkend=\"advancedtopics-eventhandlers-example\">below</link>."
+msgstr ""
+"Les scripts devraient être capables d'examiner les valeurs des arguments qui "
+"lui ont été passé et de prendre toute action nécessaire basée sur ces "
+"valeurs. La meilleure façon de comprendre comment fonctionne les "
+"gestionnaires d'événements est de voir un exemple. Heureusement pour vous, "
+"en voici un <link linkend=\"advancedtopics-eventhandlers-example\">ci-"
+"dessous</link>."
 
 # type: Content of: <chapter><section><tip><para>
 #: AdvancedTopics/eventhandlers.xml:113
-msgid "Additional sample event handler scripts can be found in the <filename class=\"directory\">contrib/eventhandlers/</filename> subdirectory of the Nagios distribution. Some of these sample scripts demonstrate the use of <link linkend=\"advancedtopics-extcommands\">external commands</link> to implement a <link linkend=\"advancedtopics-redundancy\">redundant</link> and <link linkend=\"advancedtopics-distributed\">distributed</link> monitoring environments."
-msgstr "D'autres exemples de scripts de gestionanires d'événements peuvent être trouvés dans le sous-répertoire <filename class=\"directory\">contrib/eventhandlers/</filename> de la distribution Nagios. Quelques uns de ces scripts d'exemple démontrent l'utilisation des <link linkend=\"advancedtopics-extcommands\">commandes externes</link> pour mettre en place des environnements de supervision <link linkend=\"advancedtopics-redundancy\">redondés</link> et <link linkend=\"advancedtopics-distributed\">distribués</link>."
+msgid ""
+"Additional sample event handler scripts can be found in the <filename class="
+"\"directory\">contrib/eventhandlers/</filename> subdirectory of the Nagios "
+"distribution. Some of these sample scripts demonstrate the use of <link "
+"linkend=\"advancedtopics-extcommands\">external commands</link> to implement "
+"a <link linkend=\"advancedtopics-redundancy\">redundant</link> and <link "
+"linkend=\"advancedtopics-distributed\">distributed</link> monitoring "
+"environments."
+msgstr ""
+"D'autres exemples de scripts de gestionanires d'événements peuvent être "
+"trouvés dans le sous-répertoire <filename class=\"directory\">contrib/"
+"eventhandlers/</filename> de la distribution Nagios. Quelques uns de ces "
+"scripts d'exemple démontrent l'utilisation des <link linkend="
+"\"advancedtopics-extcommands\">commandes externes</link> pour mettre en "
+"place des environnements de supervision <link linkend=\"advancedtopics-"
+"redundancy\">redondés</link> et <link linkend=\"advancedtopics-distributed"
+"\">distribués</link>."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/eventhandlers.xml:120
@@ -254,23 +388,60 @@ msgstr "Autorisations d'exécution des commandes de gestionnaires d'événements
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:121
-msgid "Event handler commands will normally execute with the same permissions as the user under which Nagios is running on your machine. This can present a problem if you want to write an event handler that restarts system services, as root privileges are generally required to do these sorts of tasks."
-msgstr "Les commandes de gestionnaires d'événements s'exécuteront normalement avec les mêmes permissions que l'utilisateur grâce auquel Nagios tourne sur votre machine. Cela présente un problème pour les scripts qui essaient de redémarrer les services du système, car, pour ce genre de tâches, les privilèges de root sont généralement nécessaires. "
+msgid ""
+"Event handler commands will normally execute with the same permissions as "
+"the user under which Nagios is running on your machine. This can present a "
+"problem if you want to write an event handler that restarts system services, "
+"as root privileges are generally required to do these sorts of tasks."
+msgstr ""
+"Les commandes de gestionnaires d'événements s'exécuteront normalement avec "
+"les mêmes permissions que l'utilisateur grâce auquel Nagios tourne sur votre "
+"machine. Cela présente un problème pour les scripts qui essaient de "
+"redémarrer les services du système, car, pour ce genre de tâches, les "
+"privilèges de root sont généralement nécessaires. "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:124
-msgid "Ideally you should evaluate the types of event handlers you will be implementing and grant just enough permissions to the Nagios user for executing the necessary system commands. You might want to try using <ulink url=\"http://www.courtesan.com/sudo/sudo.html\">sudo</ulink> to accomplish this."
-msgstr "Idéalement, vous devriez être capable d'évaluer les types de gestionnaires d'événements que vous allez implémenter et donc de donner juste ce qu'il faut comme droit à l'utilisateur Nagios pour pouvoir exécuter les commande système nécessaires. Vous pourriez essayer d'utiliser <ulink url=\"http://www.courtesan.com/sudo/sudo.html\">sudo</ulink> pour cela."
+msgid ""
+"Ideally you should evaluate the types of event handlers you will be "
+"implementing and grant just enough permissions to the Nagios user for "
+"executing the necessary system commands. You might want to try using <ulink "
+"url=\"http://www.courtesan.com/sudo/sudo.html\">sudo</ulink> to accomplish "
+"this."
+msgstr ""
+"Idéalement, vous devriez être capable d'évaluer les types de gestionnaires "
+"d'événements que vous allez implémenter et donc de donner juste ce qu'il "
+"faut comme droit à l'utilisateur Nagios pour pouvoir exécuter les commande "
+"système nécessaires. Vous pourriez essayer d'utiliser <ulink url=\"http://"
+"www.courtesan.com/sudo/sudo.html\">sudo</ulink> pour cela."
 
 # type: Content of: <chapter><section><title>
 #: AdvancedTopics/eventhandlers.xml:130
-msgid "<anchor id=\"advancedtopics-eventhandlers-example\"/>Service Event Handler Example"
-msgstr "<anchor id=\"advancedtopics-eventhandlers-example\"/>Exemple de gestionnaire d'événement de service "
+msgid ""
+"<anchor id=\"advancedtopics-eventhandlers-example\"/>Service Event Handler "
+"Example"
+msgstr ""
+"<anchor id=\"advancedtopics-eventhandlers-example\"/>Exemple de gestionnaire "
+"d'événement de service "
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:131
-msgid "The example below assumes that you are monitoring the &protocol-http; server on the local machine and have specified restart-httpd as the event handler command for the &protocol-http; service definition. Also, I will be assuming that you have set the max_check_attempts option for the service to be a value of 4 or greater (i.e. the service is checked 4 times before it is considered to have a real problem). An abbreviated example service definition might look like this..."
-msgstr "L'exemple ci-dessous suppose que vous supervisez le serveur &protocol-http; de la machine locale et que vous avez spécifié restart-httpd comme commande de gestionnaire d'événement pour la définition du service &protocol-http;. Je supposerai également que vous avez donné à l'option max_check_attempts du service une valeur supérieure ou égale à 4 (i.e le service est contrôlé 4 fois avant qu'on ne considère qu'il a un réel problème). Un exemple de définition (avec uniquement les champs concernés) ressemblerait à ceci ... "
+msgid ""
+"The example below assumes that you are monitoring the &protocol-http; server "
+"on the local machine and have specified restart-httpd as the event handler "
+"command for the &protocol-http; service definition. Also, I will be assuming "
+"that you have set the max_check_attempts option for the service to be a "
+"value of 4 or greater (i.e. the service is checked 4 times before it is "
+"considered to have a real problem). An abbreviated example service "
+"definition might look like this..."
+msgstr ""
+"L'exemple ci-dessous suppose que vous supervisez le serveur &protocol-http; "
+"de la machine locale et que vous avez spécifié restart-httpd comme commande "
+"de gestionnaire d'événement pour la définition du service &protocol-http;. "
+"Je supposerai également que vous avez donné à l'option max_check_attempts du "
+"service une valeur supérieure ou égale à 4 (i.e le service est contrôlé 4 "
+"fois avant qu'on ne considère qu'il a un réel problème). Un exemple de "
+"définition (avec uniquement les champs concernés) ressemblerait à ceci ... "
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/eventhandlers.xml:132
@@ -294,8 +465,17 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:139
-msgid "Once the service has been defined with an event handler, we must define that event handler as a command. An example command definition for restart-httpd is shown below. Notice the macros in the command line that I am passing to the event handler script - these are important!"
-msgstr "Une fois que le service a été défini avec un gestionnaire d'événement, nous devons définir le gestionnaire d'événement comme une commande. Un exemple de définition de commande pour restart-https est donné ci-dessous. Remarquez les macros de la ligne de commande que je passe au gestionnaire d'événements, elles sont importantes ! "
+msgid ""
+"Once the service has been defined with an event handler, we must define that "
+"event handler as a command. An example command definition for restart-httpd "
+"is shown below. Notice the macros in the command line that I am passing to "
+"the event handler script - these are important!"
+msgstr ""
+"Une fois que le service a été défini avec un gestionnaire d'événement, nous "
+"devons définir le gestionnaire d'événement comme une commande. Un exemple de "
+"définition de commande pour restart-https est donné ci-dessous. Remarquez "
+"les macros de la ligne de commande que je passe au gestionnaire "
+"d'événements, elles sont importantes ! "
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/eventhandlers.xml:140
@@ -313,8 +493,13 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:144
-msgid "Now, let's actually write the event handler script (this is the <filename>/usr/local/nagios/libexec/eventhandlers/restart-httpd</filename> script)."
-msgstr "Maintenant, nous allons écrire le script de gestionnaire d'événement (c'est le fichier <filename>/usr/local/nagios/libexec/eventhandlers/restart-httpd</filename>). "
+msgid ""
+"Now, let's actually write the event handler script (this is the <filename>/"
+"usr/local/nagios/libexec/eventhandlers/restart-httpd</filename> script)."
+msgstr ""
+"Maintenant, nous allons écrire le script de gestionnaire d'événement (c'est "
+"le fichier <filename>/usr/local/nagios/libexec/eventhandlers/restart-httpd</"
+"filename>). "
 
 # type: Content of: <chapter><section><programlisting>
 #: AdvancedTopics/eventhandlers.xml:145
@@ -444,13 +629,21 @@ msgstr ""
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:205
-msgid "The sample script provided above will attempt to restart the web server on the local machine in two different instances:"
-msgstr "Le script donné à titre d'exemple ci-dessus essaiera de redémarrer le serveur web sur la machine locale à deux occasions différentes :"
+msgid ""
+"The sample script provided above will attempt to restart the web server on "
+"the local machine in two different instances:"
+msgstr ""
+"Le script donné à titre d'exemple ci-dessus essaiera de redémarrer le "
+"serveur web sur la machine locale à deux occasions différentes :"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/eventhandlers.xml:208
-msgid "After the service has been rechecked for the 3rd time and is in a SOFT CRITICAL state"
-msgstr "Après que le le service soit essayé pour la troisième fois (dans un état SOFT CRITICAL)"
+msgid ""
+"After the service has been rechecked for the 3rd time and is in a SOFT "
+"CRITICAL state"
+msgstr ""
+"Après que le le service soit essayé pour la troisième fois (dans un état "
+"SOFT CRITICAL)"
 
 # type: Content of: <chapter><section><itemizedlist><listitem><para>
 #: AdvancedTopics/eventhandlers.xml:211
@@ -459,11 +652,29 @@ msgstr "après que le service soit tombé dans un état HARD CRITICAL"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:214
-msgid "The script should theoretically restart and web server and fix the problem before the service goes into a HARD problem state, but we include a fallback case in the event it doesn't work the first time. It should be noted that the event handler will only be executed the first time that the service falls into a HARD problem state. This prevents Nagios from continuously executing the script to restart the web server if the service remains in a HARD problem state. You don't want that. :-)"
-msgstr "Le script devrait en théorie redémarrer le serveur web et régler le problème avant que le service ne passe en état d'erreur HARD, mais nous avons inclus une solution de repli au cas où il ne fonctionne pas la première fois. Notez bien que le gestionnaire d'événement ne sera exécuté que la première fois que le service passe en état d'erreur HARD. Cela permet d'éviter que Nagios réessaie continuellement de redémarrer le serveur web alors que le service reste dans un état d'erreur HARD. Vous ne voulez pas ça. :-)"
+msgid ""
+"The script should theoretically restart and web server and fix the problem "
+"before the service goes into a HARD problem state, but we include a fallback "
+"case in the event it doesn't work the first time. It should be noted that "
+"the event handler will only be executed the first time that the service "
+"falls into a HARD problem state. This prevents Nagios from continuously "
+"executing the script to restart the web server if the service remains in a "
+"HARD problem state. You don't want that. :-)"
+msgstr ""
+"Le script devrait en théorie redémarrer le serveur web et régler le problème "
+"avant que le service ne passe en état d'erreur HARD, mais nous avons inclus "
+"une solution de repli au cas où il ne fonctionne pas la première fois. Notez "
+"bien que le gestionnaire d'événement ne sera exécuté que la première fois "
+"que le service passe en état d'erreur HARD. Cela permet d'éviter que Nagios "
+"réessaie continuellement de redémarrer le serveur web alors que le service "
+"reste dans un état d'erreur HARD. Vous ne voulez pas ça. :-)"
 
 # type: Content of: <chapter><section><para>
 #: AdvancedTopics/eventhandlers.xml:215
-msgid "That's all there is to it! Event handlers are pretty simple to write and implement, so give it a try and see what you can do."
-msgstr "C'est tout ce qu'il y a à dire! Les gestionnaires d'événements sont simples à écrire et implémenter, aussi faîtes l'essai et voyez ce que vous pouvez en faire."
-
+msgid ""
+"That's all there is to it! Event handlers are pretty simple to write and "
+"implement, so give it a try and see what you can do."
+msgstr ""
+"C'est tout ce qu'il y a à dire! Les gestionnaires d'événements sont simples "
+"à écrire et implémenter, aussi faîtes l'essai et voyez ce que vous pouvez en "
+"faire."

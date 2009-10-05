@@ -8,383 +8,391 @@
 >
 <chapter id="configuringnagios-cgiauth"
          xreflabel="Authentication and Authorization in The CGIs">
-  <title>Authentication And Authorization In The CGIs</title>
+  <title>Authentification et autorisations dans les CGI</title>
 
   <section>
     <title>Introduction</title>
 
-    <para>This documentation describes how the Nagios CGIs decide who has access to 
-view monitoring and configuration information, and who can submit commands 
-to the Nagios daemon through the web interface.</para>
+    <para>Cette documentation décrit la façon dont les CGI de Nagios décident de qui a
+le droit de voir les informations de configurations et de d'états et de qui
+a le droit de soumettre des commandes au démon Nagios depuis l'interface
+web.</para>
   </section>
 
   <section>
-    <title><anchor id="configuringnagios-cgiauth-definitions" />Definitions</title>
+    <title><anchor id="configuringnagios-cgiauth-definitions" />Définitions</title>
 
-    <para>Before continuing, it is important that you understand the meaning of and 
-difference between authenticated users and authenticated contacts:</para>
+    <para>Avant de continuer, il est important de bien comprendre le sens et la
+différence entre des utilisateurs authentifiés et des contacts authentifiés:</para>
 
     <itemizedlist>
       <listitem>
-        <para>An authenticated user is an someone who has authenticated to the web server 
-with a username and password and has been granted access to the Nagios web 
-interface.</para>
+        <para>Un utilisateur authentifié est quelqu'un qui s'est authentifié auprès du
+serveur web avec un nom d'utilisateur et un mot de passe, et à qui le
+serveur web a donné accès à l'interface web de Nagios.</para>
       </listitem>
 
       <listitem>
-        <para>An authenticated contact is an authenticated user whose username matches the 
-short name of a <link 
-linkend="configuringnagios-objectdefinitions-contact">contact 
-definition</link>.</para>
+        <para>Un contact authentifié est un utilisateur authentifié dont le nom correspond
+à celui d'une <link
+linkend="configuringnagios-objectdefinitions-contact">définition de
+contact</link> du fichier de configuration. </para>
       </listitem>
     </itemizedlist>
   </section>
 
   <section>
-    <title><anchor id="configuringnagios-cgiauth-config_web_users" />Setting Up 
-Authenticated Users</title>
+    <title><anchor id="configuringnagios-cgiauth-config_web_users" />Déclarer des
+utilisateurs authentifiés </title>
 
-    <para>Assuming you configured your web server as described in the <xref 
-linkend="gettingstarted-quickstart" />quickstart guide, it should require 
-that you authenticate before accessing the Nagios CGIs. You should also have 
-one user account (nagiosadmin) that can access the CGIs.</para>
+    <para>En partant du principe que vous avez configuré votre serveur web comme
+décrit dans le <link linkend="gettingstarted-quickstart">guide démarrage
+rapide</link>, celui-ci devrait vous demander de vous authentifier avant de
+pouvoir accéder aux CGI de Nagios.</para>
 
-    <para>As you define more <link 
-linkend="configuringnagios-objectdefinitions-contact">contacts</link> for 
-receiving host and service notifications, you'll most likely want to let 
-them access the Nagios web interface. You can use the following command to 
-add additional users who can authenticate to the CGIs. Replace 
-&lt;username&gt; with the actual username you want to add. In most cases, 
-the username should match the short name of a <link 
-linkend="configuringnagios-objectdefinitions-contact">contact</link> that 
-has been defined.<screen><prompt>linux:~ # </prompt><userinput>htpasswd /usr/local/nagios/etc/htpasswd.users <replaceable>&lt;username&gt;</replaceable></userinput></screen>
+    <para>Au fur et à mesure que vous allez ajouter de nouveaux <link
+linkend="configuringnagios-objectdefinitions-contact">contacts</link> pour
+recevoir des notifications d'hôtes et de services,  vous souhaiterez
+certainement leur donner accès à l'interface web de Nagios. Vous pouvez
+utiliser la commande suivante pour ajouter de nouveaux utilisateurs capables
+de s'authentifier aux CGI. Remplacez &lt;username&gt; par le nom
+d'utilisateur que vous souhaitez ajouter. Dans la plupart des cas, le nom
+d'utilisateur devrait correspondre au nom court du <link
+linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.<screen><prompt>linux:~ # </prompt><userinput>htpasswd /usr/local/nagios/etc/htpasswd.users <replaceable>&lt;username&gt;</replaceable></userinput></screen>
     </para>
   </section>
 
   <section>
-    <title><anchor id="configuringnagios-cgiauth-enable_cgi_auth" />Enabling 
-Authentication/Authorization Functionality In The CGIs</title>
+    <title><anchor id="configuringnagios-cgiauth-enable_cgi_auth" />Activer
+l'authentification/l'autorisation dans les CGI</title>
 
-    <para>The next thing you need to do is make sure that the CGIs are configured to 
-use the authentication and authorization functionality in determining what 
-information and/or commands users have access to. This is done be setting 
-the <link 
-linkend="configuringnagios-configcgi-use_authentication">use_authentication</link> 
-variable in the <xref linkend="configuringnagios-configcgi" />CGI 
-configuration file to a non-zero value. Example:</para>
+    <para>Maintenant il s'agit de s'assurer que les CGI sont configurés pour filtrer
+les informations et les commandes auxquelles les utilisateurs peuvent
+accéder. Pour cela la variable <link
+linkend="configuringnagios-configcgi-use_authentication">use_authentication</link>
+du fichier de configuration des <link
+linkend="configuringnagios-configcgi">CGI</link> doit être positionnée à une
+valeur différente de zéro. Par exemple: </para>
 
     <programlisting>use_authentication=1</programlisting>
 
-    <para>Okay, you're now done with setting up basic authentication/authorization 
-functionality in the CGIs.</para>
+    <para>Voilà, la fonctionnalité d'authentification/d'autorisation de base est
+activée dans les CGI.</para>
   </section>
 
   <section>
-    <title><anchor id="configuringnagios-cgiauth-default_rights" />Default Permissions 
-To CGI Information</title>
+    <title><anchor id="configuringnagios-cgiauth-default_rights" />Droits d'accès par
+défaut aux informations des CGI</title>
 
-    <para>So what default permissions do users have in the CGIs by default when the 
-authentication/authorization functionality is enabled?</para>
+    <para>Quelles sont les droits d'accès aux CGI par défaut quand la fonctionnalité
+d'authentification/autorisation est activée ?</para>
 
     <informaltable frame="all">
       <tgroup cols="3">
         <thead>
           <row>
-            <entry><para>CGI Data</para></entry>
+            <entry><para>Données des CGI</para></entry>
 
-            <entry><para>Authenticated Contacts<link 
+            <entry><para>Contacts authentifiés<link
 linkend="configuringnagios-cgiauth-definitions">*</link>
             </para></entry>
 
-            <entry><para>Other Authenticated Users<link 
+            <entry><para>Autres utilisateurs authentifiés<link
 linkend="configuringnagios-cgiauth-definitions">*</link>
             </para></entry>
           </row>
 		</thead>
 		<tbody>
           <row>
-            <entry><para>Host Status Information</para></entry>
+            <entry><para>Information sur l'état des hôtes</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>Host Configuration Information</para></entry>
+            <entry><para>Information sur la configuration des hôtes</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>Host History</para></entry>
+            <entry><para>Historique des hôtes</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
             <entry><para>Host Notifications</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>Host Commands</para></entry>
+            <entry><para>Commandes des hôtes</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>Service Status Information</para></entry>
+            <entry><para>Information sur l'état des services</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>Service Configuration Information</para></entry>
+            <entry><para>Information sur la configuration des services</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>Service History</para></entry>
+            <entry><para>Historique des services</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
             <entry><para>Service Notifications</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>Service Commands</para></entry>
+            <entry><para>Commandes des services</para></entry>
 
-            <entry><para>Yes</para></entry>
+            <entry><para>Oui</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>All Configuration Information</para></entry>
+            <entry><para>Toutes informations de configuration</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>System/Process Information</para></entry>
+            <entry><para>Information sur le système/processus</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
 
           <row>
-            <entry><para>System/Process Commands</para></entry>
+            <entry><para>Commandes système/processus</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
 
-            <entry><para>No</para></entry>
+            <entry><para>Non</para></entry>
           </row>
         </tbody>
       </tgroup>
     </informaltable>
 
-    <para>Authenticated contacts<link 
-linkend="configuringnagios-cgiauth-definitions">*</link> are granted the 
-following permissions for each service for which they are contacts (but not 
-for services for which they are not contacts)...</para>
+    <para>Les Contacts authentifiés<link
+linkend="configuringnagios-cgiauth-definitions">*</link> ont les droits
+suivants sur chaque service dont ils sont un contact (mais pas sur ceux dont
+ils ne sont pas un contact)... </para>
 
     <itemizedlist>
       <listitem>
-        <para>Authorization to view service status information</para>
+        <para>Droit de voir l'état du service</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to view service configuration information</para>
+        <para>Droit de voir la configuration du service</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to view history and notifications for the service</para>
+        <para>Droit de voir l'historique et les notifications de ce service </para>
       </listitem>
 
       <listitem>
-        <para>Authorization to issue service commands</para>
+        <para>Droit de passer des commandes à ce service</para>
       </listitem>
     </itemizedlist>
 
-    <para>Authenticated contacts<link 
-linkend="configuringnagios-cgiauth-definitions">*</link> are granted the 
-following permissions for each host for which they are contacts (but not for 
-hosts for which they are not contacts)...</para>
+    <para>Les Contacts authentifiés<link
+linkend="configuringnagios-cgiauth-definitions">*</link> ont les droits
+suivants sur chaque hôte dont ils sont un contact (mais pas sur ceux dont
+ils ne sont pas un contact)...</para>
 
     <itemizedlist>
       <listitem>
-        <para>Authorization to view host status information</para>
+        <para>Droit de voir l'état de l'hôte</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to view host configuration information</para>
+        <para>Droit de voir la configuration de l'hôte</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to view history and notifications for the host</para>
+        <para>Droit de voir l'historique et les notifications de cet hôte</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to issue host commands</para>
+        <para>Droit de passer des commandes à cet hôte</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to view status information for all services on the host</para>
+        <para>Droit de voir l'état de tous les services de cet hôte</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to view configuration information for all services on the host</para>
+        <para>Droit de voir la configuration de tous les services de cet hôte</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to view history and notification information for all services 
-on the host</para>
+        <para>Droit de voir l'historique et les notifications de tous les services de cet
+hôte</para>
       </listitem>
 
       <listitem>
-        <para>Authorization to issue commands for all services on the host</para>
+        <para>Droit de passer des commandes à tous les services de cet hôte</para>
       </listitem>
     </itemizedlist>
 
-    <para>It is important to note that by default no one is authorized for the 
-following...</para>
+    <para>Il est important de noter que par défaut, personne n'a le droit de...</para>
 
     <itemizedlist>
       <listitem>
-        <para>Viewing the raw log file via the <link 
-linkend="thebasics-cgis-showlog_cgi">showlog CGI</link></para>
+        <para>Voir le fichier journal brut via la <link
+linkend="thebasics-cgis-showlog_cgi">CGI</link> d'affichage du journal</para>
       </listitem>
 
       <listitem>
-        <para>Viewing Nagios process information via the <link 
-linkend="thebasics-cgis-extinfo_cgi">extended information CGI</link></para>
+        <para>Voir les informations sur le processus de Nagios via le <link
+linkend="thebasics-cgis-extinfo_cgi">CGI d'informations
+complémentaires</link></para>
       </listitem>
 
       <listitem>
-        <para>Issuing Nagios process commands via the <link 
-linkend="thebasics-cgis-cmd_cgi">command CGI</link></para>
+        <para>Passer des commandes à Nagios via la <link
+linkend="thebasics-cgis-cmd_cgi">CGI de commande</link></para>
       </listitem>
 
       <listitem>
-        <para>Viewing host group, contact, contact group, time period, and command 
-definitions via the <link linkend="thebasics-cgis-config_cgi">configuration 
-CGI</link></para>
+        <para>Voir les définitions des groupes d'hôtes, contacts, groupes de contacts,
+périodes, et commandes via la <link linkend="thebasics-cgis-config_cgi">CGI
+de configuration</link></para>
       </listitem>
     </itemizedlist>
 
-    <para>You will undoubtably want to access this information, so you'll have to 
-assign additional rights for yourself (and possibly other users) as 
-described below...</para>
+    <para>Vous aurez sans doute besoin de ces informations, c'est pourquoi vous devrez
+vous donner des droits d'accès supplémentaires (et éventuellement à d'autres
+utilisateurs) comme décrit ci-dessous...</para>
   </section>
 
   <section>
-    <title><anchor id="configuringnagios-cgiauth-additional_rights" />Granting 
-Additional Permissions To CGI Information</title>
+    <title><anchor id="configuringnagios-cgiauth-additional_rights" />Donner des droits
+d'accès supplémentaires aux informations des CGI</title>
 
-    <para>You can grant authenticated contacts or other authenticated users permission 
-to additional information in the CGIs by adding them to various 
-authorization variables in the <link 
-linkend="configuringnagios-configcgi">CGI configuration file</link>. I 
-realize that the available options don't allow for getting really specific 
-about particular permissions, but its better than nothing..</para>
+    <para>Vous pouvez donner aux contacts authentifiés et autres utilisateurs
+authentifiés des droits d'accès à d'autres informations des CGI en les
+ajoutant à diverses variables d'autorisation dans le <link
+linkend="configuringnagios-configcgi">fichier de configuration des
+CGI</link>. Je m'aperçois que ces variables ne permettent pas d'être très
+précis dans les autorisations, mais c'est mieux que rien. </para>
 
-    <para>Additional authorization can be given to users by adding them to the 
-following variables in the CGI configuration file...</para>
+    <para>Des droits supplémentaires peuvent être accordés aux utilisateurs en les
+ajoutant aux variables suivantes...</para>
 
     <itemizedlist>
       <listitem>
-        <para><link 
-linkend="configuringnagios-configcgi-authorized_for_system_information">authorized_for_system_information</link></para>
+        <para><link
+linkend="configuringnagios-configcgi-authorized_for_system_information">autorisé
+pour les informations système</link></para>
       </listitem>
 
       <listitem>
-        <para><link 
-linkend="configuringnagios-configcgi-authorized_for_system_commands">authorized_for_system_commands</link></para>
+        <para><link
+linkend="configuringnagios-configcgi-authorized_for_system_commands">autorisé
+pour les commandes système</link></para>
       </listitem>
 
       <listitem>
-        <para><link 
-linkend="configuringnagios-configcgi-authorized_for_configuration_information">authorized_for_configuration_information</link></para>
+        <para><link
+linkend="configuringnagios-configcgi-authorized_for_configuration_information">autorisé
+pour les informations de configuration</link></para>
       </listitem>
 
       <listitem>
-        <para><link 
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized_for_all_hosts</link></para>
+        <para><link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+tous les hôtes</link></para>
       </listitem>
 
       <listitem>
-        <para><link 
-linkend="configuringnagios-configcgi-authorized_for_all_host_commands">authorized_for_all_host_commands</link></para>
+        <para><link
+linkend="configuringnagios-configcgi-authorized_for_all_host_commands">autorisé
+pour toutes les commandes aux hôtes</link></para>
       </listitem>
 
       <listitem>
-        <para><link 
-linkend="configuringnagios-configcgi-authorized_for_all_services">authorized_for_all_services</link></para>
+        <para><link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+pour tous les services</link></para>
       </listitem>
 
       <listitem>
-        <para><link 
-linkend="configuringnagios-configcgi-authorized_for_all_service_commands">authorized_for_all_service_commands</link></para>
+        <para><link
+linkend="configuringnagios-configcgi-authorized_for_all_service_commands">autorisé
+pour toutes les commandes aux services</link></para>
       </listitem>
     </itemizedlist>
   </section>
 
   <section>
-    <title><anchor id="configuringnagios-cgiauth-cgi_auth_requirements" />CGI 
-Authorization Requirements</title>
+    <title><anchor id="configuringnagios-cgiauth-cgi_auth_requirements" />Autorisations
+requises par les CGI</title>
 
-    <para>If you are confused about the authorization needed to access various 
-information in the CGIs, read the Authorization Requirements section for 
-each CGI as described <link linkend="thebasics-cgis">here</link>.</para>
+    <para>Si les droits d'accès aux diverses informations des CGI ne vous paraissent
+pas clairs, lisez la section Autorisations requises de chaque CGI qui se
+trouve <link linkend="thebasics-cgis">ici</link>.</para>
   </section>
 
   <section>
-    <title><anchor id="configuringnagios-cgiauth-secure_web_servers" />Authentication 
-On Secured Web Servers</title>
+    <title><anchor id="configuringnagios-cgiauth-secure_web_servers" />Authentification
+sur des serveurs web sécurisés</title>
 
-    <para>If your web server is located in a secure domain (i.e., behind a firewall) 
-or if you are using SSL, you can define a default username that can be used 
-to access the CGIs. This is done by defining the <link 
-linkend="configuringnagios-configcgi-default_user_name">default_user_name</link> 
-option in the <link linkend="configuringnagios-configcgi">CGI configuration 
-file</link>. By defining a default username that can access the CGIs, you 
-can allow users to access the CGIs without necessarily having to 
-authenticate to the web server. You may want to use this to avoid having to 
-use basic web authentication, as basic authentication transmits passwords in 
-clear text over the Internet.</para>
+    <para>Si votre serveur web se trouve dans un domaine sécurisé (i.e., derrière un
+firewall) ou si vous utilisez SSL, vous pouvez définir un utilisateur par
+défaut pour accéder aux CGI. C'est le rôle de la variable <link
+linkend="configuringnagios-configcgi-default_user_name">default_user_name</link>
+du<link linkend="configuringnagios-configcgi">fichier de configuration des
+CGI</link>. En définissant un nom d'utilisateur par défaut, vous pouvez
+autoriser les utilisateurs à accéder aux CGI sans qu'ils ne s'authentifient
+auprès du serveur web. Ceci vous permet d'éviter d'utiliser
+l'authentification web de base, qui transmet les mots de passe en clair sur
+Internet.</para>
 
     <important>
-      <para>Do not define a default username unless you are running a secure web server 
-and are sure that everyone who has access to the CGIs has been authenticated 
-in some manner. If you define this variable, anyone who has not 
-authenticated to the web server will inherit all rights you assign to this 
-user!</para>
+      <para>Ne définissez pas d'utilisateur par défaut, à moins que vous n'utilisiez un
+serveur web sécurisé et que vous soyez sûr que les utilisateurs qui accèdent
+aux CGI ont été authentifiés d'une manière ou d'une autre ! Si vous utilisez
+cette variable, un utilisateur non authentifié héritera des droits de cet
+utilisateur par défaut !</para>
     </important>
   </section>
 </chapter>
