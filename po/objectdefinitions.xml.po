@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-10-05 11:30+0100\n"
+"PO-Revision-Date: 2009-10-05 13:07+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -1135,100 +1135,100 @@ msgstr "Cette variable est utilisée pour préciser le nombre d'<quote>unités d
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:808
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which notifications of events for this host can be sent out to contacts. If a host goes down, becomes unreachable, or recoveries during a time which is not covered by the time period, no notifications will be sent out."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nom court des <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">périodes de temps</link> pendant lesquelles les notifications d'événements sont envoyées aux contacts de cet hôte. Si cet hôte passe en état down, inaccessible ou qu'il revient à la normale hors d'une période de temps précisée, aucune notification ne sera envoyée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><informalexample>
 #: ConfiguringNagios/objectdefinitions.xml:821
 msgid "This directive is used to determine when notifications for the host should be sent out.  Valid options are a combination of one or more of the following: <emphasis role=\"strong\">d</emphasis> = send notifications on a DOWN state, <emphasis role=\"bold\">u</emphasis> = send notifications on an UNREACHABLE state, <emphasis role=\"strong\">r</emphasis> = send notifications on recoveries (OK state), <emphasis role=\"bold\">f</emphasis> = send notifications when the host starts and stops <link linkend=\"advancedtopics-flapping\">flapping</link>, and <emphasis role=\"strong\">s</emphasis> = send notifications when <link linkend=\"advancedtopics-downtime\">scheduled downtime</link> starts and ends. If you specify <emphasis role=\"bold\">n</emphasis> (none) as an option, no host notifications will be sent out. If you do not specify any notification options, Nagios will assume that you want notifications to be sent out for all possible states.  <informalexample>"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer quand les notifications pour un hôte doivent être envoyées. Les options valides sont une combinaison d'un ou de plusieurs des états suivants : <emphasis role=\"strong\">d</emphasis> = envois de notifications sur état DOWN, <emphasis role=\"bold\">u</emphasis> = envois de notifications sur état UNREACHABLE, <emphasis role=\"strong\">r</emphasis> = envois de notifications sur état OK, <emphasis role=\"bold\">f</emphasis> = envois de notification quand un hôte commence ou arrête d'<link linkend=\"advancedtopics-flapping\">osciller</link>, et <emphasis role=\"strong\">s</emphasis> = envois de notifications quand une <link linkend=\"advancedtopics-downtime\">période de maintenance planifiée</link> commence ou finit."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><informalexample><para>
 #: ConfiguringNagios/objectdefinitions.xml:836
 msgid "If you specify <emphasis role=\"strong\">d,r</emphasis> in this field, notifications will only be sent out when the host goes DOWN and when it recovers from a DOWN state."
-msgstr ""
+msgstr "Si vous mettez <emphasis role=\"strong\">d,r</emphasis> dans ce champ, les notifications seront seulement envoyées quand l'hôte passera en état DOWN et quand il sortira de cet état DOWN (retour à la normale)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:844
 #: ConfiguringNagios/objectdefinitions.xml:1900
 msgid "notifications_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
-msgstr ""
+msgstr "notifications_enabled <link linkend=\"configuringnagios-objectdefinitions-retention_notes\">*</link>"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:847
 msgid "This directive is used to determine whether or not notifications for this host are enabled. Values: 0 = disable host notifications, 1 = enable host notifications."
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les notifications pour cet hôte sont activées ou non. Valeurs : 0 = notifications pour l'hôte désactivées, 1 = notifications pour l'hôte activées."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><term>
 #: ConfiguringNagios/objectdefinitions.xml:855
 msgid "talking_options"
-msgstr ""
+msgstr "talking_options"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:858
 msgid "This directive determines which host states \"stalking\" is enabled for. Valid options are a combination of one or more of the following: <emphasis role=\"bold\">o</emphasis> = stalk on UP states, <emphasis role=\"bold\">d</emphasis> = stalk on DOWN states, and <emphasis role=\"strong\">u</emphasis> = stalk on UNREACHABLE states. More information on state stalking can be found <link linkend=\"advancedtopics-stalking\">here</link>."
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer quelles <quote>mémorisation</quote> d'états est utilisée pour l'hôte. Les options valide ssont une combinaison d'un ou ou de plusieurs des états suivants :  <emphasis role=\"bold\">o</emphasis> = mémorisation des états UP, <emphasis role=\"bold\">d</emphasis> = mémorisation des états DOWN et <emphasis role=\"strong\">u</emphasis> = mémorisation des états UNREACHABLE. Plus d'informations sur la mémorisation d'états peut être trouvée <link linkend=\"advancedtopics-stalking\">ici</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:871
 #: ConfiguringNagios/objectdefinitions.xml:1177
 #: ConfiguringNagios/objectdefinitions.xml:4144
 msgid "This directive is used to define an optional string of notes pertaining to the host. If you specify a note here, you will see the it in the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGI (when you are viewing information about the specified host)."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser une note d'information à rattachée à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le CGI <link linkend=\"thebasics-cgis-extinfo_cgi\">des informations étendues</link> (quand vous regardez les informations d'un hôte spécifié)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:883
 msgid "This variable is used to define an optional URL that can be used to provide more information about the host. If you specify an URL, you will see a red folder icon in the CGIs (when you are viewing host information) that links to the URL you specify here. Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>). This can be very useful if you want to make detailed information on the host, emergency contact methods, etc. available to other support staff."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des informations supplémentaires sur l'hôte. Si vous précisez une URL, vous verrez une icône de dossier rouge dans les CGIs (quand vous regardez les informations de l'hôte) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez mettre à disposition d'autres équipes de support les informations détaillées d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc..."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:901
 msgid "This directive is used to define an optional URL that can be used to provide more actions to be performed on the host. If you specify an URL, you will see a red <quote>splat</quote> icon in the CGIs (when you are viewing host information) that links to the URL you specify here. Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des actions supplémentaires à appliquer à l'hôte. Si vous précisez une URL, vous verrez une icône <quote>splat</quote> rouge dans les CGIs (quand vous regardez les informations de l'hôte) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:917
 msgid "This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host. This image will be displayed in the various places in the CGIs. The image will look best if it is 40x40 pixels in size. Images for hosts are assumed to be in the <emphasis role=\"strong\">logos/</emphasis> subdirectory in your HTML images directory (i.e.  <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom d'une image au format GIF, PNG ou JPG à associer à l'hôte. Cette image sera affichée dans plusieurs endroits des CGIs. Le rendu de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images des hôtes sont censées se trouver dans le sous-répertoire <emphasis role=\"strong\">logos/</emphasis> de votre dossier d'images HTML (par exemple <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:933
 msgid "This variable is used to define an optional string that is used in the ALT tag of the image specified by the <emphasis>&lt;icon_image&gt;</emphasis> argument."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une chaîne de caractère optionnelle à utiliser dans l'attribut ALT de l'image précisée par l'argument <emphasis>&lt;icon_image&gt;</emphasis>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:944
 msgid "This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this host. This image will be used as the texture map for the specified host in the <link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl</link> CGI. Unlike the image you use for the <emphasis>&lt;icon_image&gt;</emphasis> variable, this one should probably <emphasis>not</emphasis> have any transparency. If it does, the host object will look a bit wierd. Images for hosts are assumed to be in the <emphasis role=\"bold\">logos/</emphasis> subdirectory in your HTML images directory (i.e.  <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom d'une image au format GIF, PNG ou JPG à associer à l'hôte. Cette image sera utilisée comme fond de carte pour l'hôte spécifié dans le CGI <link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl</link>. Au contraire de l'image utilisée dans la variable <emphasis>&lt;icon_image&gt;</emphasis>, celle-ci ne devrait <emphasis>pas</emphasis> avoir d'attribut de transparence. Si c'est le cas, le rendu de l'hôte sera un peu bizarre. Les images des hôtes sont censées se trouver dans le sous-répertoire <emphasis role=\"strong\">logos/</emphasis> de votre dossier d'images HTML (par exemple <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:963
 msgid "This variable is used to define the name of an image that should be associated with this host in the <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link> CGI. You can specify a JPEG, PNG, and GIF image if you want, although I would strongly suggest using a GD2 format image, as other image formats will result in a lot of wasted CPU time when the statusmap image is generated. GD2 images can be created from PNG images by using the <emphasis role=\"bold\">pngtogd2</emphasis> utility supplied with Thomas Boutell's <ulink url=\"&url-gd;\">gd library</ulink>. The GD2 images should be created in <emphasis>uncompressed</emphasis> format in order to minimize CPU load when the statusmap CGI is generating the network map image. The image will look best if it is 40x40 pixels in size.  You can leave these option blank if you are not using the statusmap CGI. Images for hosts are assumed to be in the <emphasis role=\"strong\">logos/</emphasis> subdirectory in your HTML images directory (i.e.  <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
-msgstr ""
+msgstr "Cette variable est utlisée pour définir le nom d'une image à associer à l'hôte dans le CGI <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link>. Vous pouvez utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de temps CPU en calcul (comme c'est le cas avec les autres formats) quand vous générez la carte d'états. Le simages GD2 peuvent être créées à partir d'image PNG en utilisant l'utilitaire <emphasis role=\"bold\">pngtogd2</emphasis> fourni avec la <ulink url=\"&url-gd;\">librairie gd</ulink> de Thomas Boutell. Les images au format GD2 doivent être créées dans un format <emphasis>non compressé</emphasis> toujours pour minimiser la charge CPU au moment de charger la carte réseau. Le rendu d el'image sera maximal si vous utilisez une taille de 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas le CGI de carte d'états. Les images des hôtes sont censées se trouver dans le sous-répertoire <emphasis role=\"strong\">logos/</emphasis> de votre dossier d'images HTML (par exemple <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:989
 msgid "This variable is used to define coordinates to use when drawing the host in the <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link> CGI. Coordinates should be given in positive integers, as they correspond to physical pixels in the generated image. The origin for drawing (0,0) is in the upper left hand corner of the image and extends in the positive x direction (to the right) along the top of the image and in the positive y direction (down) along the left hand side of the image. For reference, the size of the icons drawn is usually about 40x40 pixels (text takes a little extra space). The coordinates you specify here are for the upper left hand corner of the host icon that is drawn."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir les coordonnées à utiliser pour l'hôte dans le CGI <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link>. Les coordonnées doivent être données en entier positif car correpsondant aux pixels dans l'image générée. Le départ de la carte (0,0) se trouve dans le coin supérieur gauche de l'image et s'étend en positif dans la direction x (à droite) à partir du haut de l'image et en positif dans la direction y (bas) à partir du bord gauche de l'image. Pour référence, la taille des icônes es thabituellement de 40x40 pixels (le texte prend un peu d'espace supplémentaire). Les coordonnées que vous précisez ici sont pour le coin supérieur gauche de l'icône de l'hôte à dessiner."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><note><para>
 #: ConfiguringNagios/objectdefinitions.xml:1000
 msgid "Don't worry about what the maximum x and y coordinates that you can use are. The CGI will automatically calculate the maximum dimensions of the image it creates based on the largest x and y coordinates you specify."
-msgstr ""
+msgstr "Ne vous inquiétez du nombre maximal de coordonnées que vous pouvez utliser ici. Le CGI va automatiquement calculer les dimensions maximales de l'image qu'il créée en se basant sur les plus grandes valeurs x et y que vous avez précisé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1012
 msgid "This variable is used to define coordinates to use when drawing the host in the <link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl</link> CGI. Coordinates can be positive or negative real numbers. The origin for drawing is (0.0,0.0,0.0). For reference, the size of the host cubes drawn is 0.5 units on each side (text takes a little more space). The coordinates you specify here are used as the center of the host cube."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir les coordonnées de l'hôte à utiliser dans le CGI <link linkend=\"thebasics-cgis-statuswrl_cgi\">statuswrl</link>. Les coordonnées peuvent être des nombres positifs ou négatifs. Le daprt du dessin est (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5 unités de chaque côté (les textes rennent un plus d'espace). Les coordonnées que vous utilisez sont le centre du cube de l'hôte."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:1035
 msgid "<anchor id=\"configuringnagios-objectdefinitions-hostgroup\" />Host Group Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-hostgroup\" />Définition de groupe d'hôtes"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:1041
 msgid "A host group definition is used to group one or more hosts together for simplifying configuration with <link linkend=\"advancedtopics-objecttricks\">object tricks</link> or display purposes in the <link linkend=\"thebasics-cgis\">CGIs</link>."
-msgstr ""
+msgstr "Une définition de groupe d'hôtes es tutilisée pour grouper un ou plusieurs hôtes ensemble de façon à simplifier la configuration avec les <link linkend=\"advancedtopics-objecttricks\">trucs et astuces sur les objets</link> ou pour des besoins de visualisation dans les <link linkend=\"thebasics-cgis\">CGIs</link>."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:1061
@@ -1312,42 +1312,42 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1130
 msgid "This directive is used to define a short name used to identify the host group."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom court à utiliser pour identifier le groupe d'hôtes."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1140
 msgid "This directive is used to define is a longer name or description used to identify the host group. It is provided in order to allow you to more easily identify a particular host group."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom plus long ou une description à utiliser pour identifier le groupe d'hôtes. Ceci est fourni pour vous permettre d'identifier plus facilement un groupe d'hôte en particulier."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1151
 msgid "This is a list of the <emphasis>short names</emphasis> of <link linkend=\"configuringnagios-objectdefinitions-host\">hosts</link> that should be included in this group. Multiple host names should be separated by commas. This directive may be used as an alternative to (or in addition to)  the <emphasis>hostgroups</emphasis> directive in <link linkend=\"configuringnagios-objectdefinitions-host\">host definitions</link>."
-msgstr ""
+msgstr "C'est une liste de <emphasis>noms courts</emphasis> d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôtes</link> qu idoivent faire partie de ce groupe. Plusieurs noms d'hôtes peuvent être séparés par des virgules. Cette variable peut être utilisée comme une alternative (ou en complément) à la variable <emphasis>hostgroups</emphasis> dans les <link linkend=\"configuringnagios-objectdefinitions-host\">définitions d'hôtes</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1165
 msgid "This optional directive can be used to include hosts from other <quote>sub</quote> host groups in this host group. Specify a comma-delimited list of short names of other host groups whose members should be included in this group."
-msgstr ""
+msgstr "Cette variable optionnelle peut être utilisée pour inclure des hôtes depuis des <quote>sous</quote>-groupes dans ce groupe d'hôtes. Précisez une liste séparée par des virgules de noms courts d'autres groupes d'hôtes à inclure dans ce groupe."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1189
 msgid "This variable is used to define an optional URL that can be used to provide more information about the host group. If you specify an URL, you will see a red folder icon in the CGIs (when you are viewing hostgroup information) that links to the URL you specify here. Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>).  This can be very useful if you want to make detailed information on the host group, emergency contact methods, etc. available to other support staff."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des informations supplémentaires sur le groupe d'hôtes. Si vous précisez une URL, vous verrez une icône de dossier rouge dans les CGIs (quand vous regardez les informations de groupe d'hôtes) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez mettre à disposition d'autres équipes de support les informations détaillées d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc..."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1205
 msgid "This directive is used to define an optional URL that can be used to provide more actions to be performed on the host group. If you specify an URL, you will see a red <quote>splat</quote> icon in the CGIs (when you are viewing hostgroup information)  that links to the URL you specify here. Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des actions supplémentaires à appliquer aux groupe d'hôtes. Si vous précisez une URL, vous verrez une icône <quote>splat</quote> rouge dans les CGIs (quand vous regardez les informations du groupe d'hôtes) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>)."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:1219
 msgid "<anchor id=\"configuringnagios-objectdefinitions-service\" />Service Definition"
-msgstr ""
+msgstr "<anchor id=\"configuringnagios-objectdefinitions-service\" />Définition de service"
 
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:1225
 msgid "A service definition is used to identify a <quote>service</quote> that runs on a host. The term <quote>service</quote> is used very loosely. It can mean an actual service that runs on the host (POP, &protocol-smtp;, &protocol-http;, etc.) or some other type of metric associated with the host (response to a ping, number of logged in users, free disk space, etc.). The different arguments to a service definition are outlined below."
-msgstr ""
+msgstr "Une définition de service est utilisée pour identifier un <quote>service</quote> qui fonctionne sur cet hôte. le terme <quote>service</quote> est utilisé de façon générale. Cela peut désigner un service qui fonctionne sur l'hôte (POP, &protocol-smtp;, &protocol-http;, etc.) ou tout autre type de métrique associé à l'hôte (réponse au ping, nombre d'utilisateurs connectés, espace disque dur libre, etc...). Les différents arguments d'une définition de service sont précisés ci-dessous."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:1247
@@ -1459,42 +1459,42 @@ msgstr "Description des variables : "
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1484
 msgid "This directive is used to specify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-host\">host(s)</link> that the service \"runs\" on or is associated with. Multiple hosts should be separated by commas."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis> de(s) l'<link linkend=\"configuringnagios-objectdefinitions-host\">hôte(s)</link> sur lequel le service <quote>tourne</quote> ou avec lequel il est associé. Plusieurs hôtes doivent être séparés par des virgules."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1495
 msgid "This directive is used to specify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">hostgroup(s)</link> that the service \"runs\" on or is associated with. Multiple hostgroups should be separated by commas. The hostgroup_name may be used instead of, or in addition to, the host_name directive."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis> de(s) <link linkend=\"configuringnagios-objectdefinitions-hostgroup\">groupe(s) d'hôtes</link> sur lequel le service <quote>tourne</quote> ou avec lequel il est associé. Plusieurs groupes d'hôtes doivent être séparés par des virgules."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1508
 msgid "This directive is used to define the description of the service, which may contain spaces, dashes, and colons (semicolons, apostrophes, and quotation marks should be avoided). No two services associated with the same host can have the same description. Services are uniquely identified with their <emphasis>host_name</emphasis> and <emphasis>service_description</emphasis> directives."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir la description du service et peut contenir des espaces, des dashes et des colons (les semi-colons, apostrophes et guillements doivent être proscrits). Deux services associés à un même hôte ne peuvent pas avoir la même description. Les services sont uniquement identifiés par leurs variables <emphasis>host_name</emphasis> et <emphasis>service_description</emphasis>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1521
 msgid "This directive is used to define an alternate name that should be displayed in the web interface for this service. If not specified, this defaults to the value you specify for the <emphasis>service_description</emphasis> directive."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom différent à afficher dans l'interface web pour ce service. Si non précisé, la valeur par défaut est prise depuis la variable <emphasis>service_description</emphasis>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1533
 msgid "This directive is used to identify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-servicegroup\">servicegroup(s)</link> that the service belongs to. Multiple servicegroups should be separated by commas.  This directive may be used as an alternative to using the <emphasis>members</emphasis> directive in <link linkend=\"configuringnagios-objectdefinitions-servicegroup\">servicegroup</link> definitions."
-msgstr ""
+msgstr "Cette variable est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-servicegroup\">groupe(s) de services</link> auxquels appartient ce service. Plusieur sgroupes de services peuvent être s&parés par des virgules. Cette variable peut être utilisée comme alternative à la variable <emphasis>members</emphasis> des définitions de <link linkend=\"configuringnagios-objectdefinitions-servicegroup\">groupes de services</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1547
 msgid "This directive is used to denote whether the service is \"volatile\". Services are normally <emphasis>not</emphasis> volatile. More information on volatile service and how they differ from normal services can be found <link linkend=\"advancedtopics-volatileservices\">here</link>.  Value: 0 = service is not volatile, 1 = service is volatile."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser si un service doit être considéré comme <quote>volatile</quote>. Les services ne sont normalement <emphasis>pas</emphasis> volatiles. Plus d'informations sur les services volatiles et en quoi ils différent des services normaux peut être trouvée <link linkend=\"advancedtopics-volatileservices\">ici</link>. Valeur : 0 = service non volatile, 1 = service volatile."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1559
 msgid "This directive is used to specify the <emphasis>short name</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-command\">command</link> that Nagios will run in order to check the status of the service. The maximum amount of time that the service check command can run is controlled by the <link linkend=\"configuringnagios-configmain-service_check_timeout\">service_check_timeout</link> option."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis> d'une <link linkend=\"configuringnagios-objectdefinitions-command\">commande</link> à utiliser pour contrôler l'état du service. Le temps maximal d'exécution d'une commande de contrôle de service est contrôlé par l'option <link linkend=\"configuringnagios-configmain-service_check_timeout\">service_check_timeout</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1572
 msgid "By default Nagios will assume that all services are in OK states when in starts.  You can override the initial state for a service by using this directive.  Valid options are:"
-msgstr ""
+msgstr "Par défaut, Nagios part du principe que tous les services sont en état OK au démarrage. Vous pouvez modifier l'état de départ d'un service en utilisant cette variable. Les options valides :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1576
@@ -1519,7 +1519,7 @@ msgstr "<emphasis role=\"bold\">c</emphasis> = CRITICAL."
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1589
 msgid "This directive is used to define the number of times that Nagios will retry the service check command if it returns any state other than an OK state. Setting this value to 1 will cause Nagios to generate an alert without retrying the service check again."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nombre de fois que Nagios va réessayer la commande de contrôle de service dans le cas où celle-ci renvoie une état différent de OK. Mettre la valeur à 1 fera que Nagios générera une alerte sans recontrôler le service."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1599
