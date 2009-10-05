@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: docnagios 3\n"
 "POT-Creation-Date: 2009-01-06 15:00+0100\n"
-"PO-Revision-Date: 2009-10-05 14:13+0100\n"
+"PO-Revision-Date: 2009-10-05 15:18+0100\n"
 "Last-Translator: Olivier Jan <ojan@nagios-fr.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -928,7 +928,7 @@ msgstr "Cette variable est utilisée pour définir le nom court identifiant l'h�
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:394
 msgid "This directive is used to define a longer name or description used to identify the host.  It is provided in order to allow you to more easily identify a particular host. When used properly, the $HOSTALIAS$ <link linkend=\"thebasics-macros\">macro</link> will contain this alias/description."
-msgstr "Cette variable est utilisée pour définir le nom long ou une description identifiant l'hôte. Cela permet d'identifier plus facilement un hôte en particulier. Bien utilisé, la <link linkend=\"thebasics-macros\">macro</link> $HOSTALIAS$ contiendra cet alias/description."
+msgstr "Cette variable est utilisée pour définir un nom long ou une description identifiant l'hôte. Cela permet d'identifier plus facilement un hôte en particulier. Bien utilisé, la <link linkend=\"thebasics-macros\">macro</link> $HOSTALIAS$ contiendra cet alias/description."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:407
@@ -1105,12 +1105,12 @@ msgstr "Cette variable est utlisée pour déterminer si le traitement des donné
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:723
 msgid "This directive is used to determine whether or not status-related information about the host is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value: 0 = disable status information retention, 1 = enable status information retention."
-msgstr "Cette variable est utlisée pour déterminer si les informations relatives aux états de l'hôte sont conservées après redémarrage du programme. C'est seulement utile si vou savez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur : 0 = rétention des données d'états désactivé, 1 = rétention des données d'états activé."
+msgstr "Cette variable est utlisée pour déterminer si les informations relatives aux états de l'hôte sont conservées ou non après redémarrage du programme. C'est seulement utile si vous avez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur : 0 = rétention des données d'états désactivé, 1 = rétention des données d'états activé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:736
 msgid "This directive is used to determine whether or not non-status information about the host is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value: 0 = disable non-status information retention, 1 = enable non-status information retention."
-msgstr "Cette variable est utlisée pour déterminer si les informations différentes des états de l'hôte sont conservées après redémarrage du programme. C'est seulement utile si vou savez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur : 0 = rétention des données différentes des états désactivé, 1 = rétention des données différentes des états activé."
+msgstr "Cette variable est utlisée pour déterminer si les informations différentes des états de l'hôte sont conservées après redémarrage du programme. C'est seulement utile si vous avez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur : 0 = rétention des données différentes des états désactivé, 1 = rétention des données différentes des états activé."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:750
@@ -1166,14 +1166,14 @@ msgstr "talking_options"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:858
 msgid "This directive determines which host states \"stalking\" is enabled for. Valid options are a combination of one or more of the following: <emphasis role=\"bold\">o</emphasis> = stalk on UP states, <emphasis role=\"bold\">d</emphasis> = stalk on DOWN states, and <emphasis role=\"strong\">u</emphasis> = stalk on UNREACHABLE states. More information on state stalking can be found <link linkend=\"advancedtopics-stalking\">here</link>."
-msgstr "Cette variable est utilisée pour déterminer quelles <quote>mémorisation</quote> d'états est utilisée pour l'hôte. Les options valide ssont une combinaison d'un ou ou de plusieurs des états suivants :  <emphasis role=\"bold\">o</emphasis> = mémorisation des états UP, <emphasis role=\"bold\">d</emphasis> = mémorisation des états DOWN et <emphasis role=\"strong\">u</emphasis> = mémorisation des états UNREACHABLE. Plus d'informations sur la mémorisation d'états peut être trouvée <link linkend=\"advancedtopics-stalking\">ici</link>."
+msgstr "Cette variable est utilisée pour déterminer quelles <quote>mémorisation</quote> d'états est utilisée pour l'hôte. Les options valides sont une combinaison d'un ou ou de plusieurs des états suivants : <emphasis role=\"bold\">o</emphasis> = mémorisation des états UP, <emphasis role=\"bold\">d</emphasis> = mémorisation des états DOWN et <emphasis role=\"strong\">u</emphasis> = mémorisation des états UNREACHABLE. Plus d'informations sur la mémorisation d'états peut être trouvée <link linkend=\"advancedtopics-stalking\">ici</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:871
 #: ConfiguringNagios/objectdefinitions.xml:1177
 #: ConfiguringNagios/objectdefinitions.xml:4144
 msgid "This directive is used to define an optional string of notes pertaining to the host. If you specify a note here, you will see the it in the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGI (when you are viewing information about the specified host)."
-msgstr "Cette variable est utilisée pour préciser une note d'information à rattachée à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le CGI <link linkend=\"thebasics-cgis-extinfo_cgi\">des informations étendues</link> (quand vous regardez les informations d'un hôte spécifié)."
+msgstr "Cette variable est utilisée pour préciser une note d'information à rattacher à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le CGI <link linkend=\"thebasics-cgis-extinfo_cgi\">des informations étendues</link> (quand vous regardez les informations d'un hôte spécifié)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:883
@@ -1228,7 +1228,7 @@ msgstr "<anchor id=\"configuringnagios-objectdefinitions-hostgroup\" />Définiti
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:1041
 msgid "A host group definition is used to group one or more hosts together for simplifying configuration with <link linkend=\"advancedtopics-objecttricks\">object tricks</link> or display purposes in the <link linkend=\"thebasics-cgis\">CGIs</link>."
-msgstr "Une définition de groupe d'hôtes es tutilisée pour grouper un ou plusieurs hôtes ensemble de façon à simplifier la configuration avec les <link linkend=\"advancedtopics-objecttricks\">trucs et astuces sur les objets</link> ou pour des besoins de visualisation dans les <link linkend=\"thebasics-cgis\">CGIs</link>."
+msgstr "Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs hôtes ensemble de façon à simplifier la configuration avec les <link linkend=\"advancedtopics-objecttricks\">trucs et astuces sur les objets</link> ou pour des besoins de visualisation dans les <link linkend=\"thebasics-cgis\">CGIs</link>."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:1061
@@ -1317,12 +1317,12 @@ msgstr "Cette variable est utilisée pour définir le nom court à utiliser pour
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1140
 msgid "This directive is used to define is a longer name or description used to identify the host group. It is provided in order to allow you to more easily identify a particular host group."
-msgstr "Cette variable est utilisée pour définir un nom plus long ou une description à utiliser pour identifier le groupe d'hôtes. Ceci est fourni pour vous permettre d'identifier plus facilement un groupe d'hôte en particulier."
+msgstr "Cette variable est utilisée pour définir un nom long ou une description à utiliser pour identifier le groupe d'hôtes. Ceci est fourni pour vous permettre d'identifier plus facilement un groupe d'hôte en particulier."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1151
 msgid "This is a list of the <emphasis>short names</emphasis> of <link linkend=\"configuringnagios-objectdefinitions-host\">hosts</link> that should be included in this group. Multiple host names should be separated by commas. This directive may be used as an alternative to (or in addition to)  the <emphasis>hostgroups</emphasis> directive in <link linkend=\"configuringnagios-objectdefinitions-host\">host definitions</link>."
-msgstr "C'est une liste de <emphasis>noms courts</emphasis> d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôtes</link> qu idoivent faire partie de ce groupe. Plusieurs noms d'hôtes peuvent être séparés par des virgules. Cette variable peut être utilisée comme une alternative (ou en complément) à la variable <emphasis>hostgroups</emphasis> dans les <link linkend=\"configuringnagios-objectdefinitions-host\">définitions d'hôtes</link>."
+msgstr "C'est une liste de <emphasis>noms courts</emphasis> d'<link linkend=\"configuringnagios-objectdefinitions-host\">hôtes</link> qui doivent faire partie de ce groupe. Plusieurs noms d'hôtes peuvent être séparés par des virgules. Cette variable peut être utilisée comme une alternative (ou en complément) à la variable <emphasis>hostgroups</emphasis> dans les <link linkend=\"configuringnagios-objectdefinitions-host\">définitions d'hôtes</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1165
@@ -1684,7 +1684,7 @@ msgstr "1 = traitement des données de performance activé"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1806
 msgid "This directive is used to determine whether or not status-related information about the service is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value:"
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les informations relatives aux états de service sont conservées ou non après redémarrage du programme. C'est seulement utile si vous avez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1811
@@ -1701,7 +1701,7 @@ msgstr "1 = rétention des données d'états activée"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1822
 msgid "This directive is used to determine whether or not non-status information about the service is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value:"
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les informations différentes des états de service sont conservées après redémarrage du programme. C'est seulement utile si vous avez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1827
@@ -1718,22 +1718,22 @@ msgstr "1 = rétention des données autres que celles d'états activée"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1838
 msgid "This directive is used to define the number of <quote>time units</quote> to wait before re-notifying a contact that this service is <emphasis>still</emphasis> in a non-OK state. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. If you set this value to 0, Nagios will <emphasis>not</emphasis> re-notify contacts about problems for this service - only one problem notification will be sent out."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nombre d'<quote>unités de temps</quote> à attendre avant de re-notifier un contact que ce service est <emphasis>tojours</emphasis> dans un état non-OK. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les contacts des problèmes pour cet hôte - une seule notification de problème sera envoyée."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1852
 msgid "This directive is used to define the number of <quote>time units</quote> to wait before sending out the first problem notification when this service enters a non-OK state. Unless you've changed the <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> directive from the default value of 60, this number will mean minutes. If you set this value to 0, Nagios will start sending out notifications immediately."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nombre d'<quote>unités de temps</quote> à attendre avant d'envoyer la première notification quand un service passe dans un état non-UP. Sauf si vous avez changé la variable <link linkend=\"configuringnagios-configmain-interval_length\">interval_length</link> de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous mettez cette valeur à 0, Nagios commencera à envoyer des notifications immédiatement."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1864
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which notifications of events for this service can be sent out to contacts.  No service notifications will be sent out during times which is not covered by the time period."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nom court des <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">périodes de temps</link> pendant lesquelles les notifications d'événements sont envoyées aux contacts de cet service. Aucune notification ne sera envoyée hors couverture d'une période de temps."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1876
 msgid "This directive is used to determine when notifications for the service should be sent out. Valid options are a combination of one or more of the following:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer quand les notifications pour ce service doivent être envoyées. Le soptions valides sont une combinaison de l'un ou plusieurs des états suivants :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1879
@@ -1778,7 +1778,7 @@ msgstr "Si vous précisez<emphasis role=\"strong\">w,r</emphasis>dans ce champ, 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1903
 msgid "This directive is used to determine whether or not notifications for this service are enabled. Values:"
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les notifications pour ce service sont activées ou non. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1906
@@ -1793,17 +1793,17 @@ msgstr "1 = notifications sur les services activées"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1917
 msgid "This is a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> that should be notified whenever there are problems (or recoveries) with this service.  Multiple contacts should be separated by commas. Useful if you want notifications to go to just a few people and don't want to configure <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact groups</link>.  You must specify at least one contact or contact group in each service definition."
-msgstr ""
+msgstr "C'est une liste des <emphasis>noms courts</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> qui devraient être notifiés quand quand il y a des problèmes (ou retours à la normale) avec ce service. Plusieurs contacts peuvent être séparés par des virgules. Utile si vous souhaitez envoyer des notifications vers quelques personnes et que vous ne souhaitez pas configurer des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition d'hôte."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1932
 msgid "This is a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact groups</link> that should be notified whenever there are problems (or recoveries) with this service. Multiple contact groups should be separated by commas. You must specify at least one contact or contact group in each service definition."
-msgstr ""
+msgstr "C'est une liste des <emphasis>noms courts</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link> qui devraient être notifiés quand quand il y a des problèmes (ou retours à la normale) avec ce service. Plusieurs groupes de contacts peuvent être séparés par des virgules. Vous devez préciser au moins un contact ou un groupe de contacts dans chaque définition de service."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1945
 msgid "This directive determines which service states \"stalking\" is enabled for. Valid options are a combination of one or more of the following :"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer quelles <quote>mémorisation</quote> d'états est utilisée pour le service. Les options valides sont une combinaison d'un ou ou de plusieurs des états suivants : "
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1948
@@ -1828,35 +1828,35 @@ msgstr "c = mémorisation sur états CRITICAL"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1953
 msgid "More information on state stalking can be found <link linkend=\"advancedtopics-stalking\">here</link>."
-msgstr ""
+msgstr "Plus d'informations sur la mémorisation d'états peut être trouvée <link linkend=\"advancedtopics-stalking\">ici</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1962
 #: ConfiguringNagios/objectdefinitions.xml:4410
 msgid "This directive is used to define an optional string of notes pertaining to the service. If you specify a note here, you will see the it in the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGI (when you are viewing information about the specified service)."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser une note d'information à rattacher au service. Si vous avez précisée une note ici, vous la verrez dans le CGI <link linkend=\"thebasics-cgis-extinfo_cgi\">des informations étendues</link> (quand vous regardez les informations de service spécifié)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1974
 msgid "This directive is used to define an optional URL that can be used to provide more information about the service. If you specify an URL, you will see a red folder icon in the CGIs (when you are viewing service information) that links to the URL you specify here.  Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>).  This can be very useful if you want to make detailed information on the service, emergency contact methods, etc. available to other support staff."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des informations supplémentaires sur le service. Si vous précisez une URL, vous verrez une icône de dossier rouge dans les CGIs (quand vous regardez les informations de l'hôte) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez mettre à disposition d'autres équipes de support les informations détaillées d'un service, les moyens de contacts à utiliser en cas d'urgence, etc..."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:1989
 msgid "This directive is used to define an optional URL that can be used to provide more actions to be performed on the service. If you specify an URL, you will see a red <quote>splat</quote> icon in the CGIs (when you are viewing service information) that links to the URL you specify here. Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des actions supplémentaires à appliquer au service. Si vous précisez une URL, vous verrez une icône <quote>splat</quote> rouge dans les CGIs (quand vous regardez les informations du service) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2002
 msgid "This variable is used to define the name of a GIF, PNG, or JPG image that should be associated with this service. This image will be displayed in the <link linkend=\"thebasics-cgis-status_cgi\">status</link> and <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGIs. The image will look best if it is 40x40 pixels in size. Images for services are assumed to be in the <emphasis role=\"strong\">logos/</emphasis> subdirectory in your HTML images directory (i.e. <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir le nom d'une image au format GIF, PNG ou JPG à associer au service. Cette image sera affichée dans les CGIs <link linkend=\"thebasics-cgis-status_cgi\">status</link> et <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link>. Le rendu de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images des services sont censées se trouver dans le sous-répertoire <emphasis role=\"strong\">logos/</emphasis> de votre dossier d'images HTML (par exemple <filename class=\"directory\">/usr/local/nagios/share/images/logos</filename>)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2017
 #: ConfiguringNagios/objectdefinitions.xml:4200
 #: ConfiguringNagios/objectdefinitions.xml:4467
 msgid "This variable is used to define an optional string that is used in the ALT tag of the image specified by the <emphasis>&lt;icon_image&gt;</emphasis> argument. The ALT tag is used in the <link linkend=\"thebasics-cgis-status_cgi\">status</link>, <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> and <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link> CGIs."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une chaîne de caractère optionnelle à utiliser dans l'attribut ALT de l'image précisée par l'argument <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé dans les CGIs <link linkend=\"thebasics-cgis-status_cgi\">status</link>, <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> et <link linkend=\"thebasics-cgis-statusmap_cgi\">statusmap</link>."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2031
@@ -1866,7 +1866,7 @@ msgstr "<anchor id=\"configuringnagios-objectdefinitions-servicegroup\" />Défin
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2036
 msgid "A service group definition is used to group one or more services together for simplifying configuration with <link linkend=\"advancedtopics-objecttricks\">object tricks</link> or display purposes in the <link linkend=\"thebasics-cgis\">CGIs</link>."
-msgstr ""
+msgstr "Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs services ensemble de façon à simplifier la configuration avec les <link linkend=\"advancedtopics-objecttricks\">trucs et astuces sur les objets</link> ou pour des besoins de visualisation dans les <link linkend=\"thebasics-cgis\">CGIs</link>."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:2055
@@ -1921,17 +1921,17 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2122
 msgid "This directive is used to define a short name used to identify the service group."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom court pour identifier le groupe de services."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2132
 msgid "This directive is used to define is a longer name or description used to identify the service group. It is provided in order to allow you to more easily identify a particular service group."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom long ou une description identifiant le groupe de services. Cela permet d'identifier plus facilement un groupe de services en particulier."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2144
 msgid "This is a list of the <emphasis>descriptions</emphasis> of <link linkend=\"configuringnagios-objectdefinitions-service\">services</link> (and the names of their corresponding hosts) that should be included in this group. Host and service names should be separated by commas.  This directive may be used as an alternative to the <emphasis>servicegroups</emphasis> directive in <link linkend=\"configuringnagios-objectdefinitions-service\">service definitions</link>.  The format of the member directive is as follows (note that a host name must precede a service name/description):"
-msgstr ""
+msgstr "C'est une liste de <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-service\">service</link> (et le nom des hôtes correspondants) qui doivent faire partie de ce groupe. Plusieurs noms d'hôtes et de services peuvent être séparés par des virgules. Cette variable peut être utilisée comme une alternative (ou en complément) à la variable <emphasis>servicegroups</emphasis> dans les <link linkend=\"configuringnagios-objectdefinitions-service\">définitions de service</link>. Le format de la variable <variable>member</variable> est le suivant (notez qu ele nom d el'hôte doit précéder le nom/description du service) :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><programlisting>
 #: ConfiguringNagios/objectdefinitions.xml:2152
@@ -1948,22 +1948,22 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2163
 msgid "This optional directive can be used to include services from other <quote>sub</quote> service groups in this service group. Specify a comma-delimited list of short names of other service groups whose members should be included in this group."
-msgstr ""
+msgstr "Cette variable optionnelle peut être utilisée pour inclure des services depuis des <quote>sous</quote>-groupes dans ce groupe de services. Précisez une liste séparée par des virgules de noms courts d'autres groupes de services à inclure dans ce groupe."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2175
 msgid "This directive is used to define an optional string of notes pertaining to the service group. If you specify a note here, you will see the it in the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGI (when you are viewing information about the specified service group)."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser une note d'information à rattacher au groupe de service. Si vous avez précisée une note ici, vous la verrez dans le CGI <link linkend=\"thebasics-cgis-extinfo_cgi\">des informations étendues</link> (quand vous regardez les informations d'un groupe de services spécifié)."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2187
 msgid "This directive is used to define an optional URL that can be used to provide more information about the service group. If you specify an URL, you will see a red folder icon in the CGIs (when you are viewing service group information) that links to the URL you specify here. Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>).  This can be very useful if you want to make detailed information on the service group, emergency contact methods, etc. available to other support staff."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des informations supplémentaires sur le groupe de services. Si vous précisez une URL, vous verrez une icône de dossier rouge dans les CGIs (quand vous regardez les informations de groupe de services) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez mettre à disposition d'autres équipes de support les informations détaillées d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc..."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2203
 msgid "This directive is used to define an optional URL that can be used to provide more actions to be performed on the service group. If you specify an URL, you will see a red <quote>splat</quote> icon in the CGIs (when you are viewing service group information)  that links to the URL you specify here. Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>)."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des actions supplémentaires à appliquer au groupe de services. Si vous précisez une URL, vous verrez une icône <quote>splat</quote> rouge dans les CGIs (quand vous regardez les informations du groupe de services) qui renverra vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>)."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2218
@@ -1973,7 +1973,7 @@ msgstr "<anchor id=\"configuringnagios-objectdefinitions-contact\" />Définition
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2223
 msgid "A contact definition is used to identify someone who should be contacted in the event of a problem on your network. The different arguments to a contact definition are described below."
-msgstr ""
+msgstr "La définition de contact est utilisée pour identifer quelqu'un qui doit être contacté dans le cas de problèmes sur votre réseau. Les différents arguments d'une définition de contact sont décrits ci-dessou."
 
 # type: Content of: <chapter><section><section><section><informaltable><tgroup><tbody><row><entry><para>
 #: ConfiguringNagios/objectdefinitions.xml:2243
@@ -2146,22 +2146,22 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2373
 msgid "This directive is used to define a short name used to identify the contact. It is referenced in <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contact group</link> definitions.  Under the right circumstances, the $CONTACTNAME$ <link linkend=\"thebasics-macros\">macro</link> will contain this value."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom court pour identifer le contact. Ceci est référencé dans les définitions de <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>. Dans les bonnes circonstances, la <link linkend=\"thebasics-macros\">macro</link> $CONTACTNAME$ contiendra cette valeur."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2385
 msgid "This directive is used to define a longer name or description for the contact. Under the rights circumstances, the $CONTACTALIAS$ <link linkend=\"thebasics-macros\">macro</link> will contain this value. If not specified, the <emphasis>contact_name</emphasis> will be used as the alias."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom long ou une description identifiant le contact. Dans les bonnes circonstances, la <link linkend=\"thebasics-macros\">macro</link> $CONTACTNAME$ contiendra cette valeur. Si non précisée, la variable <emphasis>contact_name</emphasis> sera utilisé comme alias."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2396
 msgid "This directive is used to identify the <emphasis>short name(s)</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contactgroup(s)</link> that the contact belongs to. Multiple contactgroups should be separated by commas. This directive may be used as an alternative to (or in addition to) using the <emphasis>members</emphasis> directive in <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">contactgroup</link> definitions."
-msgstr ""
+msgstr "Cette variable est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis> des <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link> auxquels appartient ce contact. Plusieurs noms de groupes doivent être séparés par des virgules. Cette variable peut être utilisée comme alternative (ou en complément) à la variable <emphasis>members</emphasis> des définitions de <link linkend=\"configuringnagios-objectdefinitions-contactgroup\">groupes de contacts</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2410
 msgid "This directive is used to determine whether or not the contact will receive notifications about host problems and recoveries. Values :"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si un contact recevra ou non des notifications à propos des problèmes d'hôtes et des retours à la normale. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2413
@@ -2178,27 +2178,27 @@ msgstr "1 = Envois des notifications activés"
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2424
 msgid "This directive is used to determine whether or not the contact will receive notifications about service problems and recoveries. Values:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si un contact recevra ou non des notifications à propos des problèmes de services et des retours à la normale. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2438
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which the contact can be notified about host problems or recoveries.  You can think of this as an <quote>on call</quote> time for host notifications for the contact.  Read the documentation on <link linkend=\"thebasics-timeperiods\">time periods</link> for more information on how this works and potential problems that may result from improper use."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nom court d'une <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">période de temps</link> pendant laquelle un contact peut être notifié des problèmes d'hôtes et des retours à la normale. Vous pouvez penser à ceci comme une heure <quote>d'appel</quote> du contact pour les notifications d'hôtes. Lisez la documentation sur les <link linkend=\"thebasics-timeperiods\">périodes de temps</link> pour plus d'informations sur le fonctionnement de celles-ci et sur les problèmes pouvant survenir en cas d'utilisation incorrecte de celles-ci."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2453
 msgid "This directive is used to specify the short name of the <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">time period</link> during which the contact can be notified about service problems or recoveries.  You can think of this as an <quote>on call</quote> time for service notifications for the contact.  Read the documentation on <link linkend=\"thebasics-timeperiods\">time periods</link> for more information on how this works and potential problems that may result from improper use."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser le nom court d'une <link linkend=\"configuringnagios-objectdefinitions-timeperiod\">période de temps</link> pendant laquelle un contact peut être notifié des problèmes de services et des retours à la normale. Vous pouvez penser à ceci comme une heure <quote>d'appel</quote> du contact pour les notifications de services. Lisez la documentation sur les <link linkend=\"thebasics-timeperiods\">périodes de temps</link> pour plus d'informations sur le fonctionnement de celles-ci et sur les problèmes pouvant survenir en cas d'utilisation incorrecte de celles-ci."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2467
 msgid "This directive is used to define a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-command\">commands</link> used to notify the contact of a <emphasis>host</emphasis> problem or recovery. Multiple notification commands should be separated by commas. All notification commands are executed when the contact needs to be notified. The maximum amount of time that a notification command can run is controlled by the <link linkend=\"configuringnagios-configmain-notification_timeout\">notification_timeout</link> option."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser les <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-command\">commandes</link> à utiliser pour notifier le contact des problèmes d'<emphasis>hôtes</emphasis> et des retours à la normale. Plusieurs notifications peuvent être séparés par des virgules. Toutes les commandes de notification sont exécutées quand les contacts ont besoin d'être notifiés. Le durée maximale d'exécution de la commande est contrôlée par l'option <link linkend=\"configuringnagios-configmain-notification_timeout\">notification_timeout</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2481
 msgid "This directive is used to define the host states for which notifications can be sent out to this contact. Valid options are a combination of one or more of the following:"
-msgstr ""
+msgstr "Cette variable est utilisée pour définir les états d'hôtes pour lesquels des notifications peuvent être envoyées à ce contact. Les options valides sont une combinaison d'un ou de plusieurs des états suivants :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2484
@@ -2228,7 +2228,7 @@ msgstr "s = envoi de notifications quand un hôte ou service entre ou sort de p�
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2498
 msgid "This directive is used to define the service states for which notifications can be sent out to this contact. Valid options are a combination of one or more of the following:"
-msgstr ""
+msgstr "Cette variable est utilisée pour définir les états de services pour lesquels des notifications peuvent être envoyées à ce contact. Les options valides sont une combinaison d'un ou de plusieurs des états suivants :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2501
@@ -2263,27 +2263,27 @@ msgstr "n = (none) : Le contact ne recevra aucun type de notifications de servic
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2516
 msgid "This directive is used to define a list of the <emphasis>short names</emphasis> of the <link linkend=\"configuringnagios-objectdefinitions-command\">commands</link> used to notify the contact of a <emphasis>service</emphasis> problem or recovery. Multiple notification commands should be separated by commas. All notification commands are executed when the contact needs to be notified. The maximum amount of time that a notification command can run is controlled by the <link linkend=\"configuringnagios-configmain-notification_timeout\">notification_timeout</link> option."
-msgstr ""
+msgstr "Cette variable est utilisée pour préciser les <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-command\">commandes</link> à utiliser pour notifier le contact des problèmes de<emphasis>services</emphasis> et des retours à la normale. Plusieurs notifications peuvent être séparés par des virgules. Toutes les commandes de notification sont exécutées quand les contacts ont besoin d'être notifiés. Le durée maximale d'exécution de la commande est contrôlée par l'option <link linkend=\"configuringnagios-configmain-notification_timeout\">notification_timeout</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2531
 msgid "This directive is used to define an email address for the contact. Depending on how you configure your notification commands, it can be used to sendout an alert email to the contact.  Under the right circumstances, the $CONTACTEMAIL$ <link linkend=\"thebasics-macros\">macro</link> will contain this value."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une adresse email pour le contact. En fonction de la façon dont vous avez configuré les commandes de notifications, cela peut être utilisé pour envoyer une alerte par email au contact. Dans les bonnes circonstances, la <link linkend=\"thebasics-macros\">macro</link> $CONTACTEMAIL$ contiendra cette valeur."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2543
 msgid "This directive is used to define a pager number for the contact. It can also be an email address to a pager gateway (i.e. <ulink url=\"mailto:pagejoe@pagenet.com\">pagejoe@pagenet.com</ulink>).  Depending on how you configure your notification commands, it can be used to send out an alert page to the contact. Under the right circumstances, the $CONTACTPAGER$ <link linkend=\"thebasics-macros\">macro</link> will contain this value."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une adresse de pager pour le contact. Cela peut également être une adresse email de passerelle mail/pager (par exemple <ulink url=\"mailto:pagejoe@pagenet.com\">pagejoe@pagenet.com</ulink>). En fonction de la façon dont vous avez configuré les commandes de notifications, cela peut être utilisé pour envoyer une alerte par pager au contact. Dans les bonnes circonstances, la <link linkend=\"thebasics-macros\">macro</link> $CONTACTPAGER$ contiendra cette valeur."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2556
 msgid "Address directives are used to define additional <quote>addresses</quote> for the contact. These addresses can be anything - cell phone numbers, instant messaging addresses, etc. Depending on how you configure your notification commands, they can be used to send out an alert o the contact. Up to six addresses can be defined using these directives (<emphasis>address1</emphasis> through <emphasis>address6</emphasis>). The $CONTACTADDRESS<emphasis>x</emphasis>$ <link linkend=\"thebasics-macros\">macro</link> will contain this value."
-msgstr ""
+msgstr "Les variables <varname>Address</varname> sont utilisées pour définir des <quote>adresses</quote> supplémentaires pour le contact. Ces adresses peuvent être n'importe quoi - numéro de téléphone mobile, adresse de messagerie instantanée, etc... En fonction de la façon dont vous avez configuré les commandes de notifications, cela peut être utilisé pour envoyer une alerte au contact. Il est possible de définir jusqu'à six adresses en utilisant ces variables (<emphasis>address1</emphasis> jusqu'à <emphasis>address6</emphasis>). La <link linkend=\"thebasics-macros\">macro</link> $CONTACTADDRESS<emphasis>x</emphasis>$ contiendra cette valeur."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2569
 msgid "This directive is used to determine whether or not the contact can submit <link linkend=\"advancedtopics-extcommands\">external commands</link> to Nagios from the CGIs.  Values:"
-msgstr ""
+msgstr "Cette variable est utilisée pour déterminer si le contact peut ou non exécuter des <link linkend=\"advancedtopics-extcommands\">commandes externes</link> à Nagios depuis les CGIs. Valeurs :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para><itemizedlist><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2573
@@ -2298,12 +2298,12 @@ msgstr "1 = autoriser le contact à soumettre des commandes."
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2584
 msgid "This directive is used to determine whether or not status-related information about the contact is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value :"
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les informations relatives aux états du contact sont conservées ou non après redémarrage du programme. C'est seulement utile si vous avez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur :"
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2600
 msgid "This directive is used to determine whether or not non-status information about the contact is retained across program restarts. This is only useful if you have enabled state retention using the <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link> directive. Value :"
-msgstr ""
+msgstr "Cette variable est utlisée pour déterminer si les informations différentes des états du contact sont conservées après redémarrage du programme. C'est seulement utile si vous avez activé la rétention d'états en utilisant la variable <link linkend=\"configuringnagios-configmain-retain_state_information\">retain_state_information</link>. Valeur :"
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2616
@@ -2313,7 +2313,7 @@ msgstr "<anchor id=\"configuringnagios-objectdefinitions-contactgroup\" />Défin
 # type: Content of: <chapter><section><section><section><para>
 #: ConfiguringNagios/objectdefinitions.xml:2621
 msgid "A contact group definition is used to group one or more <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> together for the purpose of sending out alert/recovery <link linkend=\"thebasics-notifications\">notifications</link>."
-msgstr ""
+msgstr "Une définition de groupe de contacts est utilisée pour grouper un ou plusieurs <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> ensemble de façon à envoyer les <link linkend=\"thebasics-notifications\">notifications</link> pour problèmes et retours à la normale."
 
 # type: Content of: <chapter><section><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2627
@@ -2376,22 +2376,22 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2692
 msgid "This directive is a short name used to identify the contact group."
-msgstr ""
+msgstr "Cette variable est un nom court utilisé pour identifier le groupe de contacts."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2700
 msgid "This directive is used to define a longer name or description used to identify the contact group."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom long ou une description identifiant le groupe de contacts."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2710
 msgid "This directive is used to define a list of the <emphasis>short names</emphasis> of <link linkend=\"configuringnagios-objectdefinitions-contact\">contacts</link> that should be included in this group. Multiple contact names should be separated by commas. This directive may be used as an alternative to (or in addition to) using the <emphasis>contactgroups</emphasis> directive in <link linkend=\"configuringnagios-objectdefinitions-contact\">contact</link> definitions."
-msgstr ""
+msgstr "C'est une liste de <emphasis>noms courts</emphasis> de <link linkend=\"configuringnagios-objectdefinitions-contact\">contact</link> qui doivent faire partie de ce groupe. Plusieurs noms de contacts peuvent être séparés par des virgules. Cette variable peut être utilisée comme une alternative (ou en complément) à la variable <emphasis>contactgroups</emphasis> dans les <link linkend=\"configuringnagios-objectdefinitions-contact\">définitions de contact</link>."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2724
 msgid "This optional directive can be used to include contacts from other <quote>sub</quote> contact groups in this contact group. Specify a comma-delimited list of short names of other contact groups whose members should be included in this group."
-msgstr ""
+msgstr "Cette variable optionnelle peut être utilisée pour inclure des contacts depuis des <quote>sous</quote>-groupes dans ce groupe de contacts. Précisez une liste séparée par des virgules de noms courts d'autres groupes de contacts à inclure dans ce groupe."
 
 # type: Content of: <chapter><section><section><title>
 #: ConfiguringNagios/objectdefinitions.xml:2735
@@ -2560,7 +2560,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2870
 msgid "This directive is a longer name or description used to identify the time period."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir un nom long ou une description identifiant la période de temps."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:2878
@@ -3316,7 +3316,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4155
 msgid "This variable is used to define an optional URL that can be used to provide more information about the host. If you specify an URL, you will see a link that says <quote><guimenu>Extra Host Notes</guimenu></quote> in the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGI (when you are viewing information about the specified host). Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e. <emphasis>/cgi-bin/nagios/</emphasis>).  This can be very useful if you want to make detailed information on the host, emergency contact methods, etc. available to other support staff."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des informations supplémentaires sur l'hôte. Si vous précisez une URL, vous verrez un lien indiquant <quote><guimenu>Extra Service Notes</guimenu></quote> dans le CGI <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> (quand vous regardez les informations de l'hôte). N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez mettre à disposition d'autres équipes de support les informations détaillées d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc..."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4171
@@ -3412,7 +3412,7 @@ msgstr ""
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4421
 msgid "This directive is used to define an optional URL that can be used to provide more information about the service. If you specify an URL, you will see a link that says <quote><guimenu>Extra Service Notes</guimenu></quote> in the <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> CGI (when you are viewing information about the specified service). Any valid URL can be used. If you plan on using relative paths, the base path will the the same as what is used to access the CGIs (i.e.  <emphasis>/cgi-bin/nagios/</emphasis>). This can be very useful if you want to make detailed information on the service, emergency contact methods, etc. available to other support staff."
-msgstr ""
+msgstr "Cette variable est utilisée pour définir une URL optionnelle fournissant des informations supplémentaires sur le service. Si vous précisez une URL, vous verrez un lien indiquant <quote><guimenu>Extra Service Notes</guimenu></quote> dans le CGI <link linkend=\"thebasics-cgis-extinfo_cgi\">extended information</link> (quand vous regardez les informations du service). N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base sera le même que celui utilisé pour accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez mettre à disposition d'autres équipes de support les informations détaillées d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc..."
 
 # type: Content of: <chapter><section><section><section><variablelist><varlistentry><listitem><para>
 #: ConfiguringNagios/objectdefinitions.xml:4437
