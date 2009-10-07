@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="thebasics-hostchecks" xreflabel="Host Checks">
@@ -50,7 +50,7 @@ redevenu à la normale et fonctionne suite à un redémarrage.</para>
 		<para>Les contrôles à la demande des hôtes sont auss effectués dans le cadre de la
 logique <link linkend="thebasics-networkreachability">d'accessibilité de
 l'hôte via le réseau</link>. Nagios est conçu pour détecter les coupures
-réseau aussi rapidement  possible, en distinguant un état DOWN d'un état
+réseau aussi rapidement possible, en distinguant un état DOWN d'un état
 UNREACHABLE pour l'hôte. Ce sont deux états très différents et qui peuvent
 aider rapidement un adminuistrateur à localiser la l'origine de la coupure
 réseau.</para>
@@ -134,7 +134,7 @@ differents:</para>
 		<para>Les contrôles d'hôte sont réalisés par les <link
 linkend="thebasics-plugins">plugins</link>, qui retournent un état OK,
 WARNING, UNKNOWN, ou CRITICAL. Comment Nagios traduit-il le code de retour
-des plugins en états d'hôte  UP, DOWN, ou UNREACHABLE? Voyons cela..</para>
+des plugins en états d'hôte UP, DOWN, ou UNREACHABLE? Voyons cela..</para>
 		<para>Le tableau ci-dessous montre à quoi correspondent les codes de retour des
 plugin en état d'hôte préalables. Certains post-traitement (qui sont décrits
 plus loin) sont fait et peuvent changer l'état final de l'hôte.</para>

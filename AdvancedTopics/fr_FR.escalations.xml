@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-escalations" xreflabel="Notification Escalations">
@@ -116,7 +116,7 @@ des problèmes après que les deux premières notifications de service aient
 été envoyées. Le groupe de contact managers apparaît d'abord dans la
 définition d'escalade la "plus basse" - il reçoit sa première notification
 lorsque la troisième notification de problème est envoyée. Nous voulons que
-le groupe managers  continue de recevoir des notifications si le problème
+le groupe managers continue de recevoir des notifications si le problème
 persiste après cinq notifications, il fait donc partie de la "plus haute"
 définition d'escalade.</para>
 	</section>
@@ -153,7 +153,7 @@ recoupent. Prenons l'exemple suivant :</para>
 
 		<itemizedlist>
 			<listitem>
-				<para>Les groupes de contact nt-admins et managers  reçoivent la troisième
+				<para>Les groupes de contact nt-admins et managers reçoivent la troisième
 notification</para>
 			</listitem>
 
@@ -287,7 +287,7 @@ d'hôte ou le service seront supprimées. Prenez cet exemple :</para>
 
 		<programlisting>
 		define serviceescalation{
-		       host_name               webserver
+		      host_name               webserver
 		        service_description     HTTP
 		        first_notification      3
 		        last_notification       5

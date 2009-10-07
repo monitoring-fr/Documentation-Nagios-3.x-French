@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-redundancy" xreflabel="Redundant and Failover Network Monitoring">
@@ -228,14 +228,14 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 				                # We should now become the master host and take
 				                # over the responsibilities of monitoring the
 				                # network, so enable notifications...
-		  /usr/local/nagios/libexec/eventhandlers/enable_notifications
+		 /usr/local/nagios/libexec/eventhandlers/enable_notifications
 				                ;;
 				        UP)
 				                # The master host has recovered!
 				                # We should go back to being the slave host and
 				                # let the master host do the monitoring, so
 				                # disable notifications...
-		  /usr/local/nagios/libexec/eventhandlers/disable_notifications
+		 /usr/local/nagios/libexec/eventhandlers/disable_notifications
 				                ;;
 				        esac
 				        ;;
@@ -254,7 +254,7 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 				                # We should now become the master host and
 				                # take over the responsibility of monitoring
 				                # the network, so enable notifications...
-		  /usr/local/nagios/libexec/eventhandlers/enable_notifications
+		 /usr/local/nagios/libexec/eventhandlers/enable_notifications
 				                ;;
 				        WARNING)
 				        UNKNOWN)
@@ -268,7 +268,7 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 				                # The master Nagios process running again!
 				                # We should go back to being the slave host,
 				                # so disable notifications...
-		  /usr/local/nagios/libexec/eventhandlers/disable_notifications
+		 /usr/local/nagios/libexec/eventhandlers/disable_notifications
 				                ;;
 				        esac
 				        ;;

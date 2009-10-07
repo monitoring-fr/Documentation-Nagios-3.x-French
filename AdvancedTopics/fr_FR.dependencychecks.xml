@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-dependencychecks" xreflabel="Read more">
@@ -29,7 +29,7 @@ Nagios ainsi que les relations parents/enfants et les dépendances.</para>
 		<para>L'hôte <emphasis>Switch2</emphasis> dans cet exemple vient juste de changer
 d'état de UP vers un état problématique. Nagios a besoin de déterminer si
 l'hôtes est DOWN ou UNREACHABLE. Il va donc lanczer des contrôles parallèles
-des hôtes parents  (<emphasis>Firewall1</emphasis>) et enfants
+des hôtes parents (<emphasis>Firewall1</emphasis>) et enfants
 (<emphasis>Comp1</emphasis>, <emphasis>Comp2</emphasis>, and
 <emphasis>Switch3</emphasis>) de <emphasis>Switch2</emphasis>. C'est le
 fonctionnement normal de la logique d'<link
@@ -48,11 +48,11 @@ cette logique de dépendances.</para>
 		<para>
 		<informalfigure>
 		<mediaobject>
-	          <imageobject>
-	            <imagedata fileref="images/predictive-dependency-checks.png" format="PNG"/>
-	          </imageobject>
-	        </mediaobject>
-	    </informalfigure>
+	     <imageobject>
+	      <imagedata fileref="images/predictive-dependency-checks.png" format="PNG"/>
+	     </imageobject>
+	    </mediaobject>
+	  </informalfigure>
 		</para>
 		<para>C'est comme ça que fonctionne les contrôles prédictifs de
 dépendances. Plutôt simple, non?</para>

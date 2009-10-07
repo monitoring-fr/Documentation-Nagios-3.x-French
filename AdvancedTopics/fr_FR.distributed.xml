@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-distributed" xreflabel="Distributed Monitoring">
@@ -33,11 +33,11 @@ aux éléments du diagramme quand j'expliquerai les choses... </para>
 		<para>
 		<informalfigure>
 		<mediaobject>
-	          <imageobject>
-	            <imagedata fileref="images/distributed.png" format="PNG"/>
-	          </imageobject>
-	        </mediaobject>
-	    </informalfigure>
+	     <imageobject>
+	      <imagedata fileref="images/distributed.png" format="PNG"/>
+	     </imageobject>
+	    </mediaobject>
+	  </informalfigure>
 		</para>
 	</section>
 	<section>
@@ -199,7 +199,7 @@ ressemble à ceci : </para>
 		</programlisting>
 		<para>Le script ci-dessus suppose que vous avez le programme send_nsca et son
 fichier de configuration ((<filename>send_nsca.cfg</filename>) placés
-respectivement dans les répertoires  <filename
+respectivement dans les répertoires <filename
 class="directory">/usr/local/nagios/bin/</filename> et <filename
 class="directory">/usr/local/nagios/etc/</filename>.</para>
 		<para>C'est tout ! Nous venons de configurer avec succès un hôte distant sur
@@ -369,9 +369,9 @@ sont <quote>figés</quote>, Nagos exécutera la commande spécifiée dans
 <varname>check_command</varname> dans la définition du service, vérifiant
 ainsi activement ce service.</para>
 		<para>N'oubliez pas que vous devez définir l'option
-<varname>check_command</varname>  dans la définition des services, pour
+<varname>check_command</varname> dans la définition des services, pour
 pouvoir tester activement l'état d'un service depuis le serveur
-central. Dans des conditions normales, cette commande check_command  ne sera
+central. Dans des conditions normales, cette commande check_command ne sera
 pas exécutée (parce que les test actifs auront été désactivés globalement au
 niveau du programme, ou pour des services spécifiques). A partir du moment
 ou le contrôle de validité des données est activé, Nagios exécutera cette

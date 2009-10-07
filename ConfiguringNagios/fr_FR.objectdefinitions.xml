@@ -2,17 +2,17 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="configuringnagios-objectdefinitions" xreflabel="Object Definitions">
-  <title>Object Definitions</title>
+ <title>Object Definitions</title>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para>Une des fonctionnalités du format de configuration des objets de Nagios est
+  <para>Une des fonctionnalités du format de configuration des objets de Nagios est
 qu evous pouvez créer des définitions d'objets qui héritent leurs propriétés
 d'autres objets de configuration. Une explication sur le fonctionnement de
 l'héritage peut être trouvé <link
@@ -23,30 +23,30 @@ permet une maintenance des définitions d'objets beaucoup plus facile que
 sans. Lisez aussi les <link linkend="advancedtopics-objecttricks">trucs et
 astuces pour les objets</link> qui offrent des raccourcis pour des tâches de
 configuration qui seraient autrement ingrates.
-    </para>
-    
-    <note>
-      <para>When creating and/or editing configuration files, keep the following in
+  </para>
+  
+  <note>
+   <para>When creating and/or editing configuration files, keep the following in
 mind:</para>
 
-    <orderedlist>
-      <listitem>
-        <para>Les lignes qui commencent par le caractère
+  <orderedlist>
+   <listitem>
+    <para>Les lignes qui commencent par le caractère
 '<computeroutput>#</computeroutput>' sont des commentaires et ne sont pas
 traitées</para>
-      </listitem>
-      <listitem>
-        <para>Les noms de variables sont sensibles à la casse</para>
-      </listitem>
-    </orderedlist>
-    </note>
-  </section>
+   </listitem>
+   <listitem>
+    <para>Les noms de variables sont sensibles à la casse</para>
+   </listitem>
+  </orderedlist>
+  </note>
+ </section>
 
-  <section>
-    <title><anchor id="configuringnagios-objectdefinitions-retention_notes" />Notes sur
+ <section>
+  <title><anchor id="configuringnagios-objectdefinitions-retention_notes" />Notes sur
 la rétention</title>
 
-    <para>Il est important de noter que plusieurs variables dans les définitions
+  <para>Il est important de noter que plusieurs variables dans les définitions
 d'hôtes, de services et de contacts peuvent ne pas être prise en compte par
 Nagios quand vous les changez dans les fichiers de configuration. Les objets
 de configuration concernés sont indiqués par une astérisque (<link
@@ -61,33 +61,33 @@ soit changée pendant l'exécution du programme par une <link
 linkend="configuringnagios-configmain-check_external_commands">commande
 externe</link>.</para>
 
-    <para>Une façon de contourner le problème est de désactiver la rétention des
+  <para>Une façon de contourner le problème est de désactiver la rétention des
 informations différentes de l'état en utilisant la variable
 <varname>retain_nonstatus_information</varname> dans les définitions
 d'hôtes, de services et de contacts. Désactiver cette variable permettra à
 Nagios de prendre les valeurs de vos fichiers de configuration comme valeurs
 initiales plutôt que du fichier de rétention d'états au moment du
 (re)démarrage.
-    </para>
-  </section>
+  </para>
+ </section>
 
-  <section>
-    <title>Fichiers exemple de configuration</title>
+ <section>
+  <title>Fichiers exemple de configuration</title>
 
-    <note>
-      <para>Des exemples de fichiers de configuration sont installés dans le répertoire
+  <note>
+   <para>Des exemples de fichiers de configuration sont installés dans le répertoire
 <filename class="directory">/usr/local/nagios/etc/</filename> quand vous
 suivez le<link linkend="gettingstarted-quickstart">guide d'installation
 rapide</link>.
-      </para>
-    </note>
-  </section>
+   </para>
+  </note>
+ </section>
 
-  <section>
-    <title>Types d'objets</title>
+ <section>
+  <title>Types d'objets</title>
 
-    <para>
-    <link linkend="configuringnagios-objectdefinitions-host">Définitions
+  <para>
+  <link linkend="configuringnagios-objectdefinitions-host">Définitions
 d'hôtes</link> <link
 linkend="configuringnagios-objectdefinitions-hostgroup">Définitions de
 groupes d'hôtes</link> <link
@@ -102,7 +102,7 @@ groupes de contacts</link> <link
 linkend="configuringnagios-objectdefinitions-timeperiod">Définitions de
 périodes de temps</link> <link
 linkend="configuringnagios-objectdefinitions-command">Définitions de
-commandes</link>  <link
+commandes</link> <link
 linkend="configuringnagios-objectdefinitions-servicedependency">Définitions
 de dépendances de services</link> <link
 linkend="configuringnagios-objectdefinitions-serviceescalation">Définitions
@@ -115,287 +115,287 @@ linkend="configuringnagios-objectdefinitions-hostextinfo">Définitions
 d'informations étendues d'hôtes</link> <link
 linkend="configuringnagios-objectdefinitions-serviceextinfo">Définitions
 d'informations étendues de services</link>
-    </para>
+  </para>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-host" />Définition d'hôte</title>
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-host" />Définition d'hôte</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Une définition d'hôte est utilisé pour définir un serveur physique, une
+    <para>Une définition d'hôte est utilisé pour définir un serveur physique, une
 station de travail, un composant, etc... qui est installé sur votre réseau.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define host{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define host{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>alias</para></entry>
-                <entry><para><emphasis>alias</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>alias</para></entry>
+        <entry><para><emphasis>alias</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>display_name</para></entry>
-                <entry><para><emphasis>display_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>display_name</para></entry>
+        <entry><para><emphasis>display_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>address</para></entry>
-                <entry><para><emphasis>address</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>address</para></entry>
+        <entry><para><emphasis>address</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>parents</para></entry>
-                <entry ><para><emphasis>host_names</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>parents</para></entry>
+        <entry ><para><emphasis>host_names</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroups</para></entry>
-                <entry><para><emphasis>hostgroup_names</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroups</para></entry>
+        <entry><para><emphasis>hostgroup_names</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_command</para></entry>
-                <entry><para><emphasis>command_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>check_command</para></entry>
+        <entry><para><emphasis>command_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>initial_state</para></entry>
-                <entry><para>[o,d,u]</para></entry>
-              </row>
+       <row>
+        <entry><para>initial_state</para></entry>
+        <entry><para>[o,d,u]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>max_check_attempts</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>max_check_attempts</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>check_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retry_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>retry_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>active_checks_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>active_checks_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>passive_checks_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>passive_checks_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_period</para></entry>
-                <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>check_period</para></entry>
+        <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>obsess_over_host</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>obsess_over_host</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_freshness</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>check_freshness</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>freshness_threshold</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>freshness_threshold</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>event_handler</para></entry>
-                <entry><para><emphasis>command_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>event_handler</para></entry>
+        <entry><para><emphasis>command_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>event_handler_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>event_handler_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>low_flap_threshold</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>low_flap_threshold</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>high_flap_threshold</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>high_flap_threshold</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>flap_detection_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>flap_detection_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>flap_detection_options</para></entry>
-                <entry><para>[o,d,u]</para></entry>
-              </row>
+       <row>
+        <entry><para>flap_detection_options</para></entry>
+        <entry><para>[o,d,u]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>process_perf_data</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>process_perf_data</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retain_status_information</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>retain_status_information</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retain_nonstatus_information</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>retain_nonstatus_information</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>contacts</para></entry>
-                <entry><para><emphasis>contacts</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contacts</para></entry>
+        <entry><para><emphasis>contacts</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contact_groups</para></entry>
-                <entry><para><emphasis>contact_groups</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contact_groups</para></entry>
+        <entry><para><emphasis>contact_groups</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>first_notification_delay</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>first_notification_delay</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_period</para></entry>
-                <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notification_period</para></entry>
+        <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_options</para></entry>
-                <entry><para>[d,u,r,f,s]</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_options</para></entry>
+        <entry><para>[d,u,r,f,s]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notifications_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>notifications_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>stalking_options</para></entry>
-                <entry><para>[o,d,u]</para></entry>
-              </row>
+       <row>
+        <entry><para>stalking_options</para></entry>
+        <entry><para>[o,d,u]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes</para></entry>
-                <entry><para><emphasis>note_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes</para></entry>
+        <entry><para><emphasis>note_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>action_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>action_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image_alt</para></entry>
-                <entry><para><emphasis>alt_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image_alt</para></entry>
+        <entry><para><emphasis>alt_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>vrml_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>vrml_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>statusmap_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>statusmap_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>2d_coords</para></entry>
-                <entry><para><emphasis>x_coord,y_coord</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>2d_coords</para></entry>
+        <entry><para><emphasis>x_coord,y_coord</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>3d_coords</para></entry>
-                <entry><para><emphasis>x_coord,y_coord,z_coord</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>3d_coords</para></entry>
+        <entry><para><emphasis>x_coord,y_coord,z_coord</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <para>
+    <para>
 	<programlisting>
 define host{
-      host_name                      bogus-router
-      alias                          Bogus Router #1
-      address                        192.168.1.254
-      parents                        server-backbone
-      check_command                  check-host-alive
-      check_interval                 5
-      retry_interval                 1
-      max_check_attempts             5
-      check_period                   24x7
-      process_perf_data              0
-      retain_nonstatus_information   0
-      contact_groups                 router-admins
-      notification_interval          30
-      notification_period            24x7
-      notification_options           d,u,r
+   host_name           bogus-router
+   alias             Bogus Router #1
+   address            192.168.1.254
+   parents            server-backbone
+   check_command         check-host-alive
+   check_interval         5
+   retry_interval         1
+   max_check_attempts       5
+   check_period          24x7
+   process_perf_data       0
+   retain_nonstatus_information  0
+   contact_groups         router-admins
+   notification_interval     30
+   notification_period      24x7
+   notification_options      d,u,r
 }
 	</programlisting></para>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 	<varlistentry>
@@ -449,7 +449,7 @@ erreur parce que les plugins seront incapbles de résoudre le nom de l'hôte.</p
 dans l'interface web pour cet hôte. Si non précisée, la valeur par défaut
 est prise depuis la variable <emphasis>host_name</emphasis>.</para><note><para>Les CGIs actuels n'utilise pas cette option, mais les futurs versions de
 l'interface le feront.
-               </para></note>
+        </para></note>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -489,7 +489,7 @@ comme alternative (ou en complément) à la variable
 <emphasis>members</emphasis> des définitions de <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupes
 d'hôtes</link>.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -519,7 +519,7 @@ linkend="configuringnagios-configmain-host_check_timeout">host_check_timeout</li
 		<listitem>
 		<para>Par défaut, Nagios part du prinicipe que tous les hôtes sont dans un état UP
 au démarrage. Vous pouvez préciser l'état intitial souhaité de l'hôte avec
-cette variable. Les options valables sont :  <emphasis
+cette variable. Les options valables sont : <emphasis
 role="strong">o</emphasis> = UP, <emphasis role="strong">d</emphasis> =
 DOWN, et <emphasis role="bold">u</emphasis> = UNREACHABLE.</para>
 		</listitem>
@@ -536,7 +536,7 @@ alerte sans réessayer de contrôler l'hôte.</para><note><para>Si vous ne souha
 placer cette variable à une valeure minimale de 1. Pour court-circuiter le
 contrôle de l'hôte, laissez simplement vide l'option
 <varname>check_command</varname>.
-               </para></note>
+        </para></note>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -584,7 +584,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		<para>Cette variable est utilisée pour définir si les contrôles actifs (soit
 réguliers soit à la demande) sont possibles pour cet hôte. Valeurs : 0 =
 contrôles d'hôte actif désactivés, 1 = contrôles d'hôte actif activés.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -724,7 +724,7 @@ détection d'oscillations</link>. Les options valides sont une combinaison
 d'un ou plusieurs états parmi les suivants : <emphasis
 role="bold">o</emphasis> = états UP, <emphasis role="bold">d</emphasis> =
 états DOWN, <emphasis role="bold">u</emphasis> = états UNREACHABLE.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -737,7 +737,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 performance est activé ou non pour l'hôte. Valeurs : 0 = traitement des
 données de performance désactivé, 1 = traitement des données de performance
 activé.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -766,7 +766,7 @@ variable <link
 linkend="configuringnagios-configmain-retain_state_information">retain_state_information</link>.
 Valeur : 0 = rétention des données différentes des états désactivé, 1 =
 rétention des données différentes des états activé.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -812,7 +812,7 @@ de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
 mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les
 contacts des problèmes pour cet hôte - une seule notification de problème
 sera envoyée.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -840,7 +840,7 @@ temps</link> pendant lesquelles les notifications d'événements sont envoyées
 aux contacts de cet hôte. Si cet hôte passe en état down, inaccessible ou
 qu'il revient à la normale hors d'une période de temps précisée, aucune
 notification ne sera envoyée.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -859,7 +859,7 @@ arrête d'<link linkend="advancedtopics-flapping">osciller</link>, et
 <emphasis role="strong">s</emphasis> = envois de notifications quand une
 <link linkend="advancedtopics-downtime">période de maintenance
 planifiée</link> commence ou finit.<informalexample><para>
-                Si vous mettez <emphasis role="strong">d,r</emphasis> dans ce champ, les
+        Si vous mettez <emphasis role="strong">d,r</emphasis> dans ce champ, les
 notifications seront seulement envoyées quand l'hôte passera en état DOWN et
 quand il sortira de cet état DOWN (retour à la normale).</para></informalexample>
 		</para>
@@ -889,7 +889,7 @@ role="bold">d</emphasis> = mémorisation des états DOWN et <emphasis
 role="strong">u</emphasis> = mémorisation des états UNREACHABLE. Plus
 d'informations sur la mémorisation d'états peut être trouvée <link
 linkend="advancedtopics-stalking">ici</link>.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -932,7 +932,7 @@ regardez les informations de l'hôte) qui renverra vers l'URL précisée
 ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser
 des chemins relatifs, le chemin de base sera le même que celui utilisé pour
 accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -947,7 +947,7 @@ format 40x40 pixels. Les images des hôtes sont censées se trouver dans le
 sous-répertoire <emphasis role="strong">logos/</emphasis> de votre dossier
 d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -976,7 +976,7 @@ images des hôtes sont censées se trouver dans le sous-répertoire <emphasis
 role="strong">logos/</emphasis> de votre dossier d'images HTML (par exemple
 <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1002,7 +1002,7 @@ le CGI de carte d'états. Les images des hôtes sont censées se trouver dans
 le sous-répertoire <emphasis role="strong">logos/</emphasis> de votre
 dossier d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1024,7 +1024,7 @@ supérieur gauche de l'icône de l'hôte à dessiner.</para><note><para>Ne vous 
 ici. Le CGI va automatiquement calculer les dimensions maximales de l'image
 qu'il créée en se basant sur les plus grandes valeurs x et y que vous avez
 précisé.
-               </para></note>
+        </para></note>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1052,100 +1052,100 @@ que vous utilisez sont le centre du cube de l'hôte.</para>
 	-->
 </variablelist>
 	
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-hostgroup" />Définition de
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-hostgroup" />Définition de
 groupe d'hôtes</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs
+    <para>Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs
 hôtes ensemble de façon à simplifier la configuration avec les <link
 linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
 ou pour des besoins de visualisation dans les <link
 linkend="thebasics-cgis">CGIs</link>.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define hostgroup{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define hostgroup{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>alias</para></entry>
-                <entry><para><emphasis>alias</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>alias</para></entry>
+        <entry><para><emphasis>alias</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>members</para></entry>
-                <entry><para><emphasis>hosts</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>members</para></entry>
+        <entry><para><emphasis>hosts</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroup_members</para></entry>
-                <entry><para><emphasis>hostgroups</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroup_members</para></entry>
+        <entry><para><emphasis>hostgroups</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes</para></entry>
-                <entry><para><emphasis>note_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes</para></entry>
+        <entry><para><emphasis>note_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>action_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>action_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"
-               ><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"
+        ><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
 	<programlisting>
 define hostgroup{
-      hostgroup_name          novell-servers
-      alias                   Novell Servers
-      members                 netware1,netware2,netware3,netware4
+   hostgroup_name     novell-servers
+   alias          Novell Servers
+   members         netware1,netware2,netware3,netware4
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 	
 	<variablelist>
 	<varlistentry>
@@ -1155,7 +1155,7 @@ define hostgroup{
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom court à utiliser pour
 identifier le groupe d'hôtes.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1242,270 +1242,270 @@ utilisé pour accéder aux CGIs (par exemple
 		</listitem>
 	</varlistentry>
 	</variablelist>
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-service" />Définition de
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-service" />Définition de
 service</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Une définition de service est utilisée pour identifier un
+    <para>Une définition de service est utilisée pour identifier un
 <quote>service</quote> qui fonctionne sur cet hôte. le terme
 <quote>service</quote> est utilisé de façon générale. Cela peut désigner un
 service qui fonctionne sur l'hôte (POP, &protocol-smtp;, &protocol-http;,
 etc.) ou tout autre type de métrique associé à l'hôte (réponse au ping,
 nombre d'utilisateurs connectés, espace disque dur libre, etc...). Les
 différents arguments d'une définition de service sont précisés ci-dessous.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define service{</para></entry>
+      <tbody>
+       <row>
+        <entry><para>define service{</para></entry>
 
-                <entry></entry>
-              </row>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_description</para></entry>
-                <entry><para><emphasis>service_description</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>service_description</para></entry>
+        <entry><para><emphasis>service_description</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>display_name</para></entry>
-                <entry><para><emphasis>display_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>display_name</para></entry>
+        <entry><para><emphasis>display_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>servicegroups</para></entry>
-                <entry><para>servicegroup_names</para></entry>
-              </row>
+       <row>
+        <entry><para>servicegroups</para></entry>
+        <entry><para>servicegroup_names</para></entry>
+       </row>
 
-              <row>
-                <entry><para>is_volatile</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>is_volatile</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_command</para></entry>
-                <entry><para><emphasis>command_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>check_command</para></entry>
+        <entry><para><emphasis>command_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>initial_state</para></entry>
-                <entry><para>[o,w,u,c]</para></entry>
-              </row>
+       <row>
+        <entry><para>initial_state</para></entry>
+        <entry><para>[o,w,u,c]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>max_check_attempts</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>max_check_attempts</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>check_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retry_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>retry_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>active_checks_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>active_checks_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>passive_checks_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>passive_checks_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_period</para></entry>
-                <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>check_period</para></entry>
+        <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>obsess_over_service</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>obsess_over_service</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>check_freshness</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>check_freshness</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>freshness_threshold</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>freshness_threshold</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>event_handler</para></entry>
-                <entry><para><emphasis>command_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>event_handler</para></entry>
+        <entry><para><emphasis>command_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>event_handler_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>event_handler_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>low_flap_threshold</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>low_flap_threshold</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>high_flap_threshold</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>high_flap_threshold</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>flap_detection_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>flap_detection_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>flap_detection_options</para></entry>
-                <entry><para>[o,w,c,u]</para></entry>
-              </row>
+       <row>
+        <entry><para>flap_detection_options</para></entry>
+        <entry><para>[o,w,c,u]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>process_perf_data</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>process_perf_data</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retain_status_information</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>retain_status_information</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retain_nonstatus_information</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>retain_nonstatus_information</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>first_notification_delay</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>first_notification_delay</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_period</para></entry>
-                <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notification_period</para></entry>
+        <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_options</para></entry>
-                <entry><para>[w,u,c,r,f,s]</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_options</para></entry>
+        <entry><para>[w,u,c,r,f,s]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notifications_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>notifications_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>contacts</para></entry>
-                <entry><para><emphasis>contacts</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contacts</para></entry>
+        <entry><para><emphasis>contacts</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contact_groups</para></entry>
-                <entry><para><emphasis>contact_groups</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contact_groups</para></entry>
+        <entry><para><emphasis>contact_groups</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>stalking_options</para></entry>
-                <entry><para>[o,w,u,c]</para></entry>
-              </row>
+       <row>
+        <entry><para>stalking_options</para></entry>
+        <entry><para>[o,w,u,c]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes</para></entry>
-                <entry><para><emphasis>note_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes</para></entry>
+        <entry><para><emphasis>note_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>action_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>action_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image_alt</para></entry>
-                <entry><para><emphasis>alt_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image_alt</para></entry>
+        <entry><para><emphasis>alt_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>
+    <programlisting>
 define service{
-      host_name               linux-server
-      service_description     check-disk-sda1
-      check_command           check-disk!/dev/sda1
-      max_check_attempts      5
-      check_interval          5
-      retry_interval          3
-      check_period            24x7
-      notification_interval   30
-      notification_period     24x7
-      notification_options    w,c,r
-      contact_groups          linux-admins
+   host_name        linux-server
+   service_description   check-disk-sda1
+   check_command      check-disk!/dev/sda1
+   max_check_attempts   5
+   check_interval     5
+   retry_interval     3
+   check_period      24x7
+   notification_interval  30
+   notification_period   24x7
+   notification_options  w,c,r
+   contact_groups     linux-admins
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables : </title>
+   <section>
+    <title>Description des variables : </title>
 
 	<variablelist>
 	<varlistentry>
@@ -1518,7 +1518,7 @@ de(s) l'<link
 linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
 le service <quote>tourne</quote> ou avec lequel il est associé. Plusieurs
 hôtes doivent être séparés par des virgules.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1532,7 +1532,7 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
 d'hôtes</link> sur lequel le service <quote>tourne</quote> ou avec lequel il
 est associé. Plusieurs groupes d'hôtes doivent être séparés par des
 virgules.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1546,7 +1546,7 @@ et guillements doivent être proscrits). Deux services associés à un même
 hôte ne peuvent pas avoir la même description. Les services sont uniquement
 identifiés par leurs variables <emphasis>host_name</emphasis> et
 <emphasis>service_description</emphasis>.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1575,7 +1575,7 @@ utilisée comme alternative à la variable <emphasis>members</emphasis> des
 définitions de <link
 linkend="configuringnagios-objectdefinitions-servicegroup">groupes de
 services</link>.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1589,7 +1589,7 @@ comme <quote>volatile</quote>. Les services ne sont normalement
 volatiles et en quoi ils différent des services normaux peut être trouvée
 <link linkend="advancedtopics-volatileservices">ici</link>. Valeur : 0 =
 service non volatile, 1 = service volatile.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1724,7 +1724,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		<para>Cette variable est utilisée pour déterminer si les contrôles de ce service
 seront ou non <quote>obsessed</quote> en utilisant la commande <link
 linkend="configuringnagios-configmain-ocsp_command">ocsp_command</link>.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1740,7 +1740,7 @@ ou non pour ce service. Valeurs :
 		<listitem><para>0 = disable freshness checks</para></listitem>
 		<listitem><para>1 = enable freshness checks</para></listitem>
 		</itemizedlist>
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1751,7 +1751,7 @@ ou non pour ce service. Valeurs :
 		<para>Cette variable est utilisée pour définir le seuil de fraîcheur (en secondes)
 de ce service. Si vous mettez cette valeur à 0, Nagios va automatiquement
 déterminer un seuil de fraîcheur à utiliser.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1856,7 +1856,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		</term>
 		<listitem>
 		<para>Cette variable est utlisée pour déterminer si le traitement des données de
-performance est activé ou non pour ce service. Valeurs :  
+performance est activé ou non pour ce service. Valeurs : 
 		<itemizedlist>
 		<listitem><para>0 = traitement des données de performance désactivé</para></listitem>
 		<listitem><para>1 = traitement des données de performance activé</para></listitem>
@@ -1914,7 +1914,7 @@ de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
 mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les
 contacts des problèmes pour cet hôte - une seule notification de problème
 sera envoyée.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1975,7 +1975,7 @@ changement d'état possible.</para></listitem>
 	
 		<informalexample>
 		<para>
-                Si vous précisez<emphasis role="strong">w,r</emphasis>dans ce champ, les
+        Si vous précisez<emphasis role="strong">w,r</emphasis>dans ce champ, les
 notifications seront envoyées uniquement quand le service passera en état
 WARNING ou qu'il sortira de cet état WARNING.
 		</para>
@@ -2041,12 +2041,12 @@ suivants :
 		<itemizedlist>
 		<listitem><para>o = mémorisation sur états OK</para></listitem>
 		<listitem><para>w = mémorisation sur états WARNING</para></listitem>
-                <listitem><para>u = mémorisation sur états UNKNOWN</para></listitem>
+        <listitem><para>u = mémorisation sur états UNKNOWN</para></listitem>
 		<listitem><para>c = mémorisation sur états CRITICAL</para></listitem>
 		</itemizedlist>
 		Plus d'informations sur la mémorisation d'états peut être trouvée <link
 linkend="advancedtopics-stalking">ici</link>.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2091,7 +2091,7 @@ regardez les informations du service) qui renverra vers l'URL précisée
 ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser
 des chemins relatifs, le chemin de base sera le même que celui utilisé pour
 accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2126,100 +2126,100 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
 		</listitem>
 	</varlistentry>
 	</variablelist>
-        
-      </section>
-    </section>
+    
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-servicegroup" />Définition
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-servicegroup" />Définition
 de groupe de services</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs
+    <para>Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs
 services ensemble de façon à simplifier la configuration avec les <link
 linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
 ou pour des besoins de visualisation dans les <link
 linkend="thebasics-cgis">CGIs</link>.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define servicegroup{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define servicegroup{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>servicegroup_name</para></entry>
-                <entry><para><emphasis>servicegroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>servicegroup_name</para></entry>
+        <entry><para><emphasis>servicegroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>alias</para></entry>
-                <entry><para><emphasis>alias</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>alias</para></entry>
+        <entry><para><emphasis>alias</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>members</para></entry>
-                <entry><para><emphasis>services</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>members</para></entry>
+        <entry><para><emphasis>services</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>servicegroup_members</para></entry>
-                <entry><para><emphasis>servicegroups</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>servicegroup_members</para></entry>
+        <entry><para><emphasis>servicegroups</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes</para></entry>
-                <entry><para><emphasis>note_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes</para></entry>
+        <entry><para><emphasis>note_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>action_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>action_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>        
+    <programlisting>    
 define servicegroup{
-      servicegroup_name       dbservices
-      alias                   Database Services
-      members                 ms1,SQL Server,ms1,SQL Serverc Agent,ms1,SQL DTC
+   servicegroup_name    dbservices
+   alias          Database Services
+   members         ms1,SQL Server,ms1,SQL Serverc Agent,ms1,SQL DTC
 }
 </programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables : </title>
+   <section>
+    <title>Description des variables : </title>
 	<variablelist>
 		<varlistentry>
 		<term>
@@ -2228,7 +2228,7 @@ define servicegroup{
 		<listitem>
 		<para>Cette variable est utilisée pour définir un nom court pour identifier le
 groupe de services.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2325,158 +2325,158 @@ que celui utilisé pour accéder aux CGIs (par exemple
 	</variablelist>
 
 	</section>
-    </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-contact" />Définition de
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-contact" />Définition de
 contact</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>La définition de contact est utilisée pour identifer quelqu'un qui doit être
+    <para>La définition de contact est utilisée pour identifer quelqu'un qui doit être
 contacté dans le cas de problèmes sur votre réseau. Les différents arguments
 d'une définition de contact sont décrits ci-dessou.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define contact{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define contact{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>contact_name</para></entry>
-                <entry><para><emphasis>contact_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contact_name</para></entry>
+        <entry><para><emphasis>contact_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>alias</para></entry>
-                <entry><para><emphasis>alias</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>alias</para></entry>
+        <entry><para><emphasis>alias</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contactgroups</para></entry>
-                <entry><para><emphasis>contactgroup_names</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contactgroups</para></entry>
+        <entry><para><emphasis>contactgroup_names</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>host_notifications_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>host_notifications_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_notifications_enabled</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>service_notifications_enabled</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>host_notification_period</para></entry>
-                <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_notification_period</para></entry>
+        <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_notification_period</para></entry>
-                <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>service_notification_period</para></entry>
+        <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>host_notification_options</para></entry>
-                <entry><para>[d,u,r,f,s,n]</para></entry>
-              </row>
+       <row>
+        <entry><para>host_notification_options</para></entry>
+        <entry><para>[d,u,r,f,s,n]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_notification_options</para></entry>
-                <entry><para>[w,u,c,r,f,s,n]</para></entry>
-              </row>
+       <row>
+        <entry><para>service_notification_options</para></entry>
+        <entry><para>[w,u,c,r,f,s,n]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>host_notification_commands</para></entry>
-                <entry><para><emphasis>command_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_notification_commands</para></entry>
+        <entry><para><emphasis>command_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_notification_commands</para></entry>
-                <entry><para><emphasis>command_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>service_notification_commands</para></entry>
+        <entry><para><emphasis>command_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>email</para></entry>
-                <entry><para><emphasis>email_address</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>email</para></entry>
+        <entry><para><emphasis>email_address</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>pager</para></entry>
-                <entry><para><emphasis>pager_number ou pager_email_gateway</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>pager</para></entry>
+        <entry><para><emphasis>pager_number ou pager_email_gateway</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>address<emphasis>x</emphasis></para></entry>
-                <entry><para><emphasis>additional_contact_address</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>address<emphasis>x</emphasis></para></entry>
+        <entry><para><emphasis>additional_contact_address</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>can_submit_commands</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>can_submit_commands</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retain_status_information</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>retain_status_information</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>retain_nonstatus_information</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>retain_nonstatus_information</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>
+    <programlisting>
 define contact{
-      contact_name                    jdoe
-      alias                           John Doe
-      host_notifications_enabled      1
-      service_notifications_enabled   1
-      service_notification_period     24x7
-      host_notification_period        24x7
-      service_notification_options    w,u,c,r
-      host_notification_options       d,u,r
-      service_notification_commands   notify-by-email
-      host_notification_commands      host-notify-by-email
-      email                           jdoe@localhost.localdomain
-      pager                           555-5555@pagergateway.localhost.localdomain
-      address1                        xxxxx.xyyy@icq.com
-      address2                        555-555-5555
-      can_submit_commands             1
+   contact_name          jdoe
+   alias              John Doe
+   host_notifications_enabled   1
+   service_notifications_enabled  1
+   service_notification_period   24x7
+   host_notification_period    24x7
+   service_notification_options  w,u,c,r
+   host_notification_options    d,u,r
+   service_notification_commands  notify-by-email
+   host_notification_commands   host-notify-by-email
+   email              jdoe@localhost.localdomain
+   pager              555-5555@pagergateway.localhost.localdomain
+   address1            xxxxx.xyyy@icq.com
+   address2            555-555-5555
+   can_submit_commands       1
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 	<varlistentry>
@@ -2503,7 +2503,7 @@ identifiant le contact. Dans les bonnes circonstances, la <link
 linkend="thebasics-macros">macro</link> $CONTACTNAME$ contiendra cette
 valeur. Si non précisée, la variable <emphasis>contact_name</emphasis> sera
 utilisé comme alias.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2535,7 +2535,7 @@ normale. Valeurs :
 		<listitem><para>0 = Envois des notifications désactivés</para></listitem>
 		<listitem><para>1 = Envois des notifications activés</para></listitem>
 		</itemizedlist>
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2550,7 +2550,7 @@ normale. Valeurs :
 		<listitem><para>0 = Envois des notifications désactivés</para></listitem>
 		<listitem><para>1 = Envois des notifications activés</para></listitem>
 		</itemizedlist>
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2567,7 +2567,7 @@ d'hôtes. Lisez la documentation sur les <link
 linkend="thebasics-timeperiods">périodes de temps</link> pour plus
 d'informations sur le fonctionnement de celles-ci et sur les problèmes
 pouvant survenir en cas d'utilisation incorrecte de celles-ci.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2584,7 +2584,7 @@ services. Lisez la documentation sur les <link
 linkend="thebasics-timeperiods">périodes de temps</link> pour plus
 d'informations sur le fonctionnement de celles-ci et sur les problèmes
 pouvant survenir en cas d'utilisation incorrecte de celles-ci.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2617,7 +2617,7 @@ une combinaison d'un ou de plusieurs des états suivants :
 		<listitem><para>r = notification quand un hôte retourne à la normale (états UP)</para></listitem>
 		<listitem><para>f = notification quand un hôte commence ou s'arrête d'<link
 linkend="advancedtopics-flapping">osciller</link>,</para></listitem>
-                <listitem><para>s = envoi de notifications quand un hôte ou service entre ou sort de période
+        <listitem><para>s = envoi de notifications quand un hôte ou service entre ou sort de période
 de <link linkend="advancedtopics-downtime">maintenance planifiée</link>. Si
 vous précisez <emphasis role="bold">n</emphasis> (null) comme option, le
 contact ne recevra aucun type de notifications d'hôtes.</para></listitem>
@@ -2636,11 +2636,11 @@ sont une combinaison d'un ou de plusieurs des états suivants :
 		<itemizedlist>
 		<listitem><para>w = notification sur états WARNING de service</para></listitem>
 		<listitem><para>u = notification sur états UNKNOWN de service</para></listitem>
-                <listitem><para>c = notification sur états CRITICAL de service</para></listitem>
+        <listitem><para>c = notification sur états CRITICAL de service</para></listitem>
 		<listitem><para>r = notification sur états OK</para></listitem>
 		<listitem><para>f = notification quand le service commence et s'arrête d'<link
 linkend="advancedtopics-flapping">osciller</link>.</para></listitem>
-                <listitem><para>n = (none) : Le contact ne recevra aucun type de notifications de services</para></listitem>
+        <listitem><para>n = (none) : Le contact ne recevra aucun type de notifications de services</para></listitem>
 		</itemizedlist>
 		</para>
 		</listitem>
@@ -2756,90 +2756,90 @@ linkend="configuringnagios-configmain-retain_state_information">retain_state_inf
 Valeur :
 		<itemizedlist>
 		<listitem><para>0 = rétention des données autres que celles d'états désactivée</para></listitem>
-                <listitem><para>1 = rétention des données autres que celles d'états activée</para></listitem>
+        <listitem><para>1 = rétention des données autres que celles d'états activée</para></listitem>
 		</itemizedlist>
 		</para>
 		</listitem>
 	</varlistentry>
 	</variablelist>
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-contactgroup" />Définition
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-contactgroup" />Définition
 de groupe de contacts</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Une définition de groupe de contacts est utilisée pour grouper un ou
+    <para>Une définition de groupe de contacts est utilisée pour grouper un ou
 plusieurs <link
 linkend="configuringnagios-objectdefinitions-contact">contacts</link>
 ensemble de façon à envoyer les <link
 linkend="thebasics-notifications">notifications</link> pour problèmes et
 retours à la normale.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de définition</title>
+   <section>
+    <title>Format de définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define contactgroup{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define contactgroup{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>contactgroup_name</para></entry>
-                <entry><para><emphasis>contactgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contactgroup_name</para></entry>
+        <entry><para><emphasis>contactgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>alias</para></entry>
-                <entry><para><emphasis>alias</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>alias</para></entry>
+        <entry><para><emphasis>alias</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>members</para></entry>
-                <entry><para><emphasis>contacts</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>members</para></entry>
+        <entry><para><emphasis>contacts</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contactgroup_members</para></entry>
-                <entry><para><emphasis>contactgroups</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contactgroup_members</para></entry>
+        <entry><para><emphasis>contactgroups</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition :</title>
+   <section>
+    <title>Exemple de définition :</title>
 
-        <programlisting>        
+    <programlisting>    
 define contactgroup{
-      contactgroup_name       novell-admins
-      alias                   Novell Administrators
-      members                 jdoe,rtobert,tzach
+   contactgroup_name    novell-admins
+   alias          Novell Administrators
+   members         jdoe,rtobert,tzach
 }</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables : </title>
+   <section>
+    <title>Description des variables : </title>
 
 	<variablelist>
 	<varlistentry>
@@ -2890,16 +2890,16 @@ contacts à inclure dans ce groupe.
 		</listitem>
 	</varlistentry>
 	</variablelist>
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-timeperiod" xreflabel="Time
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-timeperiod" xreflabel="Time
 Period Definition" />Définition de période de temps</title>
 
-      <section>
-        <title>Description</title>
-        <para>
+   <section>
+    <title>Description</title>
+    <para>
 	Une période de temps est une liste de plages horaires comprises sur
 plusieurs jours qui sont considérées comme <quote>valides</quote> pour les
 notifications et les contrôles de services. Cela consiste en plages horaires
@@ -2908,115 +2908,115 @@ la semaine finie. Différents types d'exceptions aux heurs normales de la
 semaine sont supportées : jours de la semaine en particulier, jours de mois
 généraux à tous le smois, jours de certains mois et dates de calendrier.
 	</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define timeperiod{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define timeperiod{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>timeperiod_name</para></entry>
-                <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>timeperiod_name</para></entry>
+        <entry><para><emphasis>timeperiod_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>alias</para></entry>
-                <entry><para><emphasis>alias</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>alias</para></entry>
+        <entry><para><emphasis>alias</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>[weekday]</para></entry>
-                <entry><para><emphasis>timeranges</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>[weekday]</para></entry>
+        <entry><para><emphasis>timeranges</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>[exception]</para></entry>
-                <entry><para><emphasis>timeranges</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>[exception]</para></entry>
+        <entry><para><emphasis>timeranges</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>exclusion</para></entry>
-                <entry><para>[<emphasis>timeperiod1,timeperiod2,...,timeperiodn</emphasis>]</para></entry>
-              </row>
+       <row>
+        <entry><para>exclusion</para></entry>
+        <entry><para>[<emphasis>timeperiod1,timeperiod2,...,timeperiodn</emphasis>]</para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemples de définitions</title>
+   <section>
+    <title>Exemples de définitions</title>
 
-                <programlisting>
+        <programlisting>
 define timeperiod{
-      timeperiod_name         nonworkhours
-      alias                   Non-Work Hours
-      sunday                  00:00-24:00              ; Every Sunday of every week
-      monday                  00:00-09:00,17:00-24:00  ; Every Monday of every week
-      tuesday                 00:00-09:00,17:00-24:00  ; Every Tuesday of every week
-      wednesday               00:00-09:00,17:00-24:00  ; Every Wednesday of every week
-      thursday                00:00-09:00,17:00-24:00  ; Every Thursday of every week
-      friday                  00:00-09:00,17:00-24:00  ; Every Friday of every week
-      saturday                00:00-24:00              ; Every Saturday of every week
+   timeperiod_name     nonworkhours
+   alias          Non-Work Hours
+   sunday         00:00-24:00       ; Every Sunday of every week
+   monday         00:00-09:00,17:00-24:00 ; Every Monday of every week
+   tuesday         00:00-09:00,17:00-24:00 ; Every Tuesday of every week
+   wednesday        00:00-09:00,17:00-24:00 ; Every Wednesday of every week
+   thursday        00:00-09:00,17:00-24:00 ; Every Thursday of every week
+   friday         00:00-09:00,17:00-24:00 ; Every Friday of every week
+   saturday        00:00-24:00       ; Every Saturday of every week
 }
 
 define timeperiod{
-      timeperiod_name         misc-single-days
-      alias                   Misc Single Days
-      1999-01-28              00:00-24:00              ; January 28th, 1999
-      monday 3                00:00-24:00              ; 3rd Monday of every month
-      day 2                   00:00-24:00              ; 2nd day of every month
-      february 10             00:00-24:00              ; February 10th of every year
-      february -1             00:00-24:00              ; Last day in February of every year
-      friday -2               00:00-24:00              ; 2nd to last Friday of every month
-      thursday -1 november    00:00-24:00              ; Last Thursday in November of every year
+   timeperiod_name     misc-single-days
+   alias          Misc Single Days
+   1999-01-28       00:00-24:00       ; January 28th, 1999
+   monday 3        00:00-24:00       ; 3rd Monday of every month
+   day 2          00:00-24:00       ; 2nd day of every month
+   february 10       00:00-24:00       ; February 10th of every year
+   february -1       00:00-24:00       ; Last day in February of every year
+   friday -2        00:00-24:00       ; 2nd to last Friday of every month
+   thursday -1 november  00:00-24:00       ; Last Thursday in November of every year
 }
 
 define timeperiod{
-      timeperiod_name                 misc-date-ranges
-      alias                           Misc Date Ranges
-      2007-01-01 - 2008-02-01         00:00-24:00      ; January 1st, 2007 to February 1st, 2008
-      monday 3 - thursday 4           00:00-24:00      ; 3rd Monday to 4th Thursday of every month
-      day 1 - 15                      00:00-24:00      ; 1st to 15th day of every month
-      day 20 - -1                     00:00-24:00      ; 20th to the last day of every month
-      july 10 - 15                    00:00-24:00      ; July 10th to July 15th of every year
-      april 10 - may 15               00:00-24:00      ; April 10th to May 15th of every year
-      tuesday 1 april - friday 2 may  00:00-24:00      ; 1st Tuesday in April to 2nd Friday in May of every year
+   timeperiod_name         misc-date-ranges
+   alias              Misc Date Ranges
+   2007-01-01 - 2008-02-01     00:00-24:00   ; January 1st, 2007 to February 1st, 2008
+   monday 3 - thursday 4      00:00-24:00   ; 3rd Monday to 4th Thursday of every month
+   day 1 - 15           00:00-24:00   ; 1st to 15th day of every month
+   day 20 - -1           00:00-24:00   ; 20th to the last day of every month
+   july 10 - 15          00:00-24:00   ; July 10th to July 15th of every year
+   april 10 - may 15        00:00-24:00   ; April 10th to May 15th of every year
+   tuesday 1 april - friday 2 may 00:00-24:00   ; 1st Tuesday in April to 2nd Friday in May of every year
 }
 
 define timeperiod{
-      timeperiod_name                      misc-skip-ranges
-      alias                                Misc Skip Ranges
-      2007-01-01 - 2008-02-01 / 3          00:00-24:00    ; Every 3 days from January 1st, 2007 to February 1st, 2008
-      2008-04-01 / 7                       00:00-24:00    ; Every 7 days from April 1st, 2008 (continuing forever)
-      monday 3 - thursday 4 / 2            00:00-24:00    ; Every other day from 3rd Monday to 4th Thursday of every month
-      day 1 - 15 / 5                       00:00-24:00    ; Every 5 days from the 1st to the 15th day of every month
-      july 10 - 15 / 2                     00:00-24:00    ; Every other day from July 10th to July 15th of every year
-      tuesday 1 april - friday 2 may / 6   00:00-24:00    ; Every 6 days from the 1st Tuesday in April to the 2nd Friday in May of every year
+   timeperiod_name           misc-skip-ranges
+   alias                Misc Skip Ranges
+   2007-01-01 - 2008-02-01 / 3     00:00-24:00  ; Every 3 days from January 1st, 2007 to February 1st, 2008
+   2008-04-01 / 7            00:00-24:00  ; Every 7 days from April 1st, 2008 (continuing forever)
+   monday 3 - thursday 4 / 2      00:00-24:00  ; Every other day from 3rd Monday to 4th Thursday of every month
+   day 1 - 15 / 5            00:00-24:00  ; Every 5 days from the 1st to the 15th day of every month
+   july 10 - 15 / 2           00:00-24:00  ; Every other day from July 10th to July 15th of every year
+   tuesday 1 april - friday 2 may / 6  00:00-24:00  ; Every 6 days from the 1st Tuesday in April to the 2nd Friday in May of every year
 }
 </programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 		<varlistentry>
@@ -3093,17 +3093,17 @@ séparant par des virgules.
 		</varlistentry>
 	</variablelist>
 	
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-command" />Définition de
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-command" />Définition de
 commande</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Une définition de commande n'est rien d'autre que ça. Elle définit une
+    <para>Une définition de commande n'est rien d'autre que ça. Elle définit une
 commande. les commandes qui peuvent être définies sont les contrôles de
 services, les notifications de services, les gestionnaires d'événements de
 services, les contrôles d'hôtes, les notifications d'hôtes et les
@@ -3114,59 +3114,59 @@ dans le contexte où sera utilisée la commande. Plus d'informations sur les
 macros disponibles et quand elles sont <quote>valides</quote> peut être
 trouvé <link linkend="thebasics-macros">ici</link>. Les différents arguments
 d'une définition de commande sont indiqués ci-dessous.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define command{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define command{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>command_name</para></entry>
-                <entry><para><emphasis>command_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>command_name</para></entry>
+        <entry><para><emphasis>command_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>command_line</para></entry>
-                <entry><para><emphasis>command_line</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>command_line</para></entry>
+        <entry><para><emphasis>command_line</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2"
-                namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2"
+        namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>        
+    <programlisting>    
 define command{
-        command_name   check_pop
-        command_line   /usr/local/nagios/libexec/check_pop -H $HOSTADDRESS$    
+    command_name  check_pop
+    command_line  /usr/local/nagios/libexec/check_pop -H $HOSTADDRESS$    
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 	<varlistentry>
@@ -3198,7 +3198,7 @@ d'événements</link>. Avant que la commande ne soit exécutée, toutes les
 <link linkend="thebasics-macros">macros</link> valides sont remplacées par
 leurs valeurs respectives. Regardez la documentation des macros pour
 déterminer quand vous pouvez utiliser différentes macros. Notez que la ligne
-de commande n'est  <emphasis>pas</emphasis> entourée par des
+de commande n'est <emphasis>pas</emphasis> entourée par des
 guillemets. Également à noter que si vous souhaitez passer le signe ($) sur
 la ligne de commande, vous devez le protéger avec un autre signe dollar.
 		</para>
@@ -3229,17 +3229,17 @@ documentation sur les <link linkend="thebasics-macros">macros</link>.
 		</listitem>
 	</varlistentry>
 	</variablelist>
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-servicedependency"
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-servicedependency"
 />Définition de dépendance de service</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Les dépendances de services sont une fonctionnalité avancée de Nagios qui
+    <para>Les dépendances de services sont une fonctionnalité avancée de Nagios qui
 permet de supprimer des notifications et des contrôles actifs de services en
 se basant sur l'état d'un ou de plusieurs autres services. Les dépendances
 de services sont optionnelles et sont principalement destinées aux
@@ -3248,101 +3248,101 @@ complexes. Plus d'informations sur le focntionnement des dépendances de
 services (à lire absolument!) peut être trouvée <link
 linkend="advancedtopics-dependencies">ici</link>.
 	</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note><para>Les variables indiquées en rouge sont obligatoires alors que celles en
+    <note><para>Les variables indiquées en rouge sont obligatoires alors que celles en
 noires sont optionnelles. De toute façon, vous devez préciser au moins un
 type de critère pour que la définition soit d'une quelconque utilité.</para></note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define servicedependency{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define servicedependency{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>dependent_host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>dependent_host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>dependent_hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>dependent_hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>dependent_service_description</para></entry>
-                <entry><para><emphasis>service_description</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>dependent_service_description</para></entry>
+        <entry><para><emphasis>service_description</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_description</para></entry>
-                <entry><para><emphasis>service_description</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>service_description</para></entry>
+        <entry><para><emphasis>service_description</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>inherits_parent</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>inherits_parent</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>execution_failure_criteria</para></entry>
-                <entry><para>[o,w,u,c,p,n]</para></entry>
-              </row>
+       <row>
+        <entry><para>execution_failure_criteria</para></entry>
+        <entry><para>[o,w,u,c,p,n]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_failure_criteria</para></entry>
-                <entry><para>[o,w,u,c,p,n]</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_failure_criteria</para></entry>
+        <entry><para>[o,w,u,c,p,n]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>dependency_period</para></entry>
-                <entry><para>timeperiod_name</para></entry>
-              </row>
+       <row>
+        <entry><para>dependency_period</para></entry>
+        <entry><para>timeperiod_name</para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>
+    <programlisting>
 define servicedependency{
-      host_name                       WWW1
-      service_description             Apache Web Server
-      dependent_host_name             WWW1
-      dependent_service_description   Main Web Site
-      execution_failure_criteria      n
-      notification_failure_criteria   w,u,c
+   host_name            WWW1
+   service_description       Apache Web Server
+   dependent_host_name       WWW1
+   dependent_service_description  Main Web Site
+   execution_failure_criteria   n
+   notification_failure_criteria  w,u,c
 }
 </programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 	<varlistentry>
@@ -3521,116 +3521,116 @@ temps.</para>
 		</listitem>
 	</varlistentry>
 	</variablelist>
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-serviceescalation"
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-serviceescalation"
 />Définition d'escalade de service</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Les escalades de services sont complètement optionnelles et sont utilisées
+    <para>Les escalades de services sont complètement optionnelles et sont utilisées
 pour escalader les notifications d'un service particulier. Plus
 d'informations sur le fonctionnement des escalades peut être trouvé <link
 linkend="advancedtopics-escalations">ici</link>.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define serviceescalation{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define serviceescalation{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_description</para></entry>
-                <entry><para><emphasis>service_description</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>service_description</para></entry>
+        <entry><para><emphasis>service_description</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contacts</para></entry>
-                <entry><para><emphasis>contacts</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contacts</para></entry>
+        <entry><para><emphasis>contacts</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contact_groups</para></entry>
-               <entry><para><emphasis>contactgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contact_groups</para></entry>
+        <entry><para><emphasis>contactgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>first_notification</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>first_notification</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>last_notification</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>last_notification</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>escalation_period</para></entry>
-                <entry><para>timeperiod_name</para></entry>
-              </row>
+       <row>
+        <entry><para>escalation_period</para></entry>
+        <entry><para>timeperiod_name</para></entry>
+       </row>
 
-              <row>
-                <entry><para>escalation_options</para></entry>
-                <entry><para>[w,u,c,r]</para></entry>
-              </row>
+       <row>
+        <entry><para>escalation_options</para></entry>
+        <entry><para>[w,u,c,r]</para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>
+    <programlisting>
 define serviceescalation{
-      host_name               nt-3
-      service_description     Processor Load
-      first_notification      4
-      last_notification       0
-      notification_interval   30
-      contact_groups          all-nt-admins,themanagers
+   host_name        nt-3
+   service_description   Processor Load
+   first_notification   4
+   last_notification    0
+   notification_interval  30
+   contact_groups     all-nt-admins,themanagers
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 	<varlistentry>
@@ -3717,7 +3717,7 @@ quelques personnes et que vous ne souhaitez pas configurer des <link
 linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
 contacts</link>. Vous devez préciser au moins un contact ou un groupe de
 contacts dans chaque définition d'escalade de service.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -3789,105 +3789,105 @@ l'esaclade sera seulement utilisée quand le service es ten état WARNING.</para
 	</varlistentry>
 	</variablelist>
 	</section>
-    </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-hostdependency"
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-hostdependency"
 />Définitions de dépendance d'hôte</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Les dépendances de services sont une fonctionnalité avancée de Nagios qui
+    <para>Les dépendances de services sont une fonctionnalité avancée de Nagios qui
 permet de supprimer des notifications et des contrôles actifs d'hôtes en se
 basant sur l'état d'un ou de plusieurs autres hôtes. Les dépendances d'hôtes
 sont optionnelles et sont principalement destinées aux utilisateurs avancés
 qui ont des installations de supervision complexes. Plus d'informations sur
 le focntionnement des dépendances de services (à lire absolument!) peut être
 trouvée <link linkend="advancedtopics-dependencies">ici</link>.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define hostdependency{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define hostdependency{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>dependent_host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>dependent_host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>dependent_hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>dependent_hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>inherits_parent</para></entry>
-                <entry><para>[0/1]</para></entry>
-              </row>
+       <row>
+        <entry><para>inherits_parent</para></entry>
+        <entry><para>[0/1]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>execution_failure_criteria</para></entry>
-                <entry><para>[o,d,u,p,n]</para></entry>
-              </row>
+       <row>
+        <entry><para>execution_failure_criteria</para></entry>
+        <entry><para>[o,d,u,p,n]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_failure_criteria</para></entry>
-                <entry><para>[o,d,u,p,n]</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_failure_criteria</para></entry>
+        <entry><para>[o,d,u,p,n]</para></entry>
+       </row>
 
-              <row>
-                <entry><para>dependency_period</para></entry>
-                <entry><para>timeperiod_name</para></entry>
-              </row>
+       <row>
+        <entry><para>dependency_period</para></entry>
+        <entry><para>timeperiod_name</para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>
+    <programlisting>
 define hostdependency{
-      host_name                       WWW1
-      dependent_host_name             DBASE1
-      notification_failure_criteria   d,u
+   host_name            WWW1
+   dependent_host_name       DBASE1
+   notification_failure_criteria  d,u
 }
-      </programlisting>
-      </section>
+   </programlisting>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 	<varlistentry>
@@ -3911,7 +3911,7 @@ virgules.
 		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupes
-d'hôtes</link>  <emphasis>dépendants</emphasis>. Plusieurs groupes d'hôtes
+d'hôtes</link> <emphasis>dépendants</emphasis>. Plusieurs groupes d'hôtes
 peuvent être séparés par des virgules. La variable
 <varname>dependent_hostgroup_name</varname> peut être utilisé à la place ou
 en conjonction avec la variable <varname>dependent_host_name</varname>.</para>
@@ -3937,7 +3937,7 @@ on dépend</emphasis> (aussi appelé hôte maître). Plusieurs hôtes peuvent
 		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupes
-d'hôtes</link>  <emphasis>dont on dépend</emphasis> (aussi appelé hôte
+d'hôtes</link> <emphasis>dont on dépend</emphasis> (aussi appelé hôte
 maître). Plusieurs groupes d'hôtes peuvent être séparés par des virgules. La
 variable <varname>hostgroup_name</varname> peut être utilisé à la place ou
 en conjonction avec la variable <varname>host_name</varname>.</para>
@@ -3952,7 +3952,7 @@ en conjonction avec la variable <varname>host_name</varname>.</para>
 <emphasis>dont on dépend</emphasis> (aussi appelé hôte maître). En d'autres
 termes, si l'hôte maître est dépendant de plusieurs autres hôtes et qu'une
 des ces dépendances échoue, alors cette dépendance échouera également.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -3977,12 +3977,12 @@ exemple l'hôte n'a pas encore été contrôlé)</para></listitem>
 n'échouera jamais et les contrôles de l'hôte dépendant seront toujours faits
 activement (si d'autres conditions permettent de le faire).</para></listitem>
 		</itemizedlist>
-                <informalexample><para>Si vous précisez <emphasis role="strong">u,d</emphasis> dans ce champ,
+        <informalexample><para>Si vous précisez <emphasis role="strong">u,d</emphasis> dans ce champ,
 l'hôte <emphasis>dépendant</emphasis> ne sera pas contrôlé activement si
 l'hôte <emphasis>maître</emphasis> est dans un des états UNREACHABLE ou
 DOWN.
 		</para></informalexample>
-                </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4027,110 +4027,110 @@ temps.</para>
 	</varlistentry>
 	</variablelist>
 
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-hostescalation" />Définition
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-hostescalation" />Définition
 d'escalade d'hôte</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Les escalades d'hôtes sont complètement optionnelles et sont utilisées pour
+    <para>Les escalades d'hôtes sont complètement optionnelles et sont utilisées pour
 escalader les notifications d'un hôte particulier. Plus d'informations sur
 le fonctionnement des escalades peut être trouvé <link
 linkend="advancedtopics-escalations">ici</link>.</para>
-      </section>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note>
-          <para>Les variables en rouge sont requises alors que celles en noir sont
+    <note>
+     <para>Les variables en rouge sont requises alors que celles en noir sont
 optionnelles.</para>
-        </note>
+    </note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define hostescalation{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define hostescalation{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>hostgroup_name</para></entry>
-                <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>hostgroup_name</para></entry>
+        <entry><para><emphasis>hostgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contacts</para></entry>
-                <entry><para><emphasis>contacts</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contacts</para></entry>
+        <entry><para><emphasis>contacts</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>contact_groups</para></entry>
-                <entry><para><emphasis>contactgroup_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>contact_groups</para></entry>
+        <entry><para><emphasis>contactgroup_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>first_notification</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>first_notification</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>last_notification</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>last_notification</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>notification_interval</para></entry>
-                <entry><para>#</para></entry>
-              </row>
+       <row>
+        <entry><para>notification_interval</para></entry>
+        <entry><para>#</para></entry>
+       </row>
 
-              <row>
-                <entry><para>escalation_period</para></entry>
-                <entry><para>timeperiod_name</para></entry>
-              </row>
+       <row>
+        <entry><para>escalation_period</para></entry>
+        <entry><para>timeperiod_name</para></entry>
+       </row>
 
-              <row>
-                <entry><para>escalation_options</para></entry>
-                <entry><para>[d,u,r]</para></entry>
-              </row>
+       <row>
+        <entry><para>escalation_options</para></entry>
+        <entry><para>[d,u,r]</para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>
+    <programlisting>
 define hostescalation{
-        host_name               router-34
-        first_notification      5
-        last_notification       8
-        notification_interval   60
-        contact_groups          all-router-admins
+    host_name        router-34
+    first_notification   5
+    last_notification    8
+    notification_interval  60
+    contact_groups     all-router-admins
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Description des variables</title>
+   <section>
+    <title>Description des variables</title>
 
 	<variablelist>
 	<varlistentry>
@@ -4154,7 +4154,7 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
 d'hôtes</link> aqeules doit s'appliquer cette escalade. Plusieurs groupes
 d'hôte speuvent être séparés par des virgules. Si utilisé, l'escalade
 s'appliquera à tous les hôtes membres des groupes d'hôtes spécifiés.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4196,7 +4196,7 @@ quelques personnes et que vous ne souhaitez pas configurer des <link
 linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
 contacts</link>. Vous devez préciser au moins un contact ou un groupe de
 contacts dans chaque définition d'escalade d'hôte.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4263,22 +4263,22 @@ normale)</para></listitem>
 l'escalade sera seulement utilisée quand l'hôte est dans un état DOWN.
 		</para>
 		</informalexample>
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	</variablelist>
 
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-hostextinfo" />Définition
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-hostextinfo" />Définition
 des informations étendues d'hôtes</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Les entrées d'informations étendues d'hôtes sont utilisées à la base pour
+    <para>Les entrées d'informations étendues d'hôtes sont utilisées à la base pour
 améliorer les vues des CGIs <link
 linkend="thebasics-cgis-status_cgi">status</link>, <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>, <link
@@ -4286,114 +4286,114 @@ linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link> et <link
 linkend="thebasics-cgis-extinfo_cgi">extinfo</link>. Elles n'ont aucun effet
 sur la supervision et sont complètement optionnelles.</para>
 
-        <tip>
-          <para>Depuis Nagios 3.x, toutes les variables contenues dans les définitions
+    <tip>
+     <para>Depuis Nagios 3.x, toutes les variables contenues dans les définitions
 d'informations étendues d'hôte sont aussi disponibles dans les <link
 linkend="configuringnagios-objectdefinitions-host">définitions
 d'hôtes</link>. Vous pouvez choisir de définir ces variables sous vos
 définitions d'hôtes si cela rend votre configuration plus simple. Des
 définitions d'informations étendues d'hôte séparées continueront à être
 supportées pour conserver la compatibilité avec les anciennes versions.</para>
-        </tip>
-      </section>
+    </tip>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note><para>Les variables en rouge sont obligatoires alors que celles en noires sont
+    <note><para>Les variables en rouge sont obligatoires alors que celles en noires sont
 optionnelles. Cependant, vous devez au moins préciser une variable
 optionnelle dans chaque définition pour que ce soit d'une quelconque
 utilité.</para></note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define hostextinfo{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define hostextinfo{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes</para></entry>
-                <entry><para><emphasis>note_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes</para></entry>
+        <entry><para><emphasis>note_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>action_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>action_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image_alt</para></entry>
-                <entry><para><emphasis>alt_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image_alt</para></entry>
+        <entry><para><emphasis>alt_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>vrml_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>vrml_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>statusmap_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>statusmap_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>2d_coords</para></entry>
-                <entry><para><emphasis>x_coord,y_coord</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>2d_coords</para></entry>
+        <entry><para><emphasis>x_coord,y_coord</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>3d_coords</para></entry>
-                <entry><para><emphasis>x_coord,y_coord,z_coord</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>3d_coords</para></entry>
+        <entry><para><emphasis>x_coord,y_coord,z_coord</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition :</title>
+   <section>
+    <title>Exemple de définition :</title>
 
-        <programlisting>
+    <programlisting>
 define hostextinfo{
-        host_name       netware1
-        notes           This is the primary Netware file server
-        notes_url       http://webserver.localhost.localdomain/hostinfo.pl?host=netware1
-        icon_image      novell40.png
-        icon_image_alt  IntranetWare 4.11
-        vrml_image      novell40.png
-        statusmap_image novell40.gd2
-        2d_coords       100,250
-        3d_coords       100.0,50.0,75.0
+    host_name    netware1
+    notes      This is the primary Netware file server
+    notes_url    http://webserver.localhost.localdomain/hostinfo.pl?host=netware1
+    icon_image   novell40.png
+    icon_image_alt IntranetWare 4.11
+    vrml_image   novell40.png
+    statusmap_image novell40.gd2
+    2d_coords    100,250
+    3d_coords    100.0,50.0,75.0
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Descriptions de variable</title>
+   <section>
+    <title>Descriptions de variable</title>
 
 	<variablelist>
 	<varlistentry>
@@ -4465,7 +4465,7 @@ des hôtes sont censées se trouver dans le sous-répertoire <emphasis
 role="strong">logos/</emphasis> de votre dossier d'images HTML (par exemple
 <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4523,7 +4523,7 @@ le CGI de carte d'états. Les images des hôtes sont censées se trouver dans
 le sous-répertoire <emphasis role="strong">logos/</emphasis> de votre
 dossier d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4546,7 +4546,7 @@ supérieur gauche de l'icône de l'hôte à dessiner.</para>
 ici. Le CGI va automatiquement calculer les dimensions maximales de l'image
 qu'il créée en se basant sur les plus grandes valeurs x et y que vous avez
 précisé.
-               </para></note>
+        </para></note>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4565,112 +4565,112 @@ que vous utilisez sont le centre du cube de l'hôte.</para>
 	</varlistentry>
 	</variablelist>
 	
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title><anchor id="configuringnagios-objectdefinitions-serviceextinfo" />Définition
+  <section>
+   <title><anchor id="configuringnagios-objectdefinitions-serviceextinfo" />Définition
 des informations étendues de services</title>
 
-      <section>
-        <title>Description</title>
+   <section>
+    <title>Description</title>
 
-        <para>Les entrées d'informations étendues de services sont utilisées à la base
+    <para>Les entrées d'informations étendues de services sont utilisées à la base
 pour améliorer les vues des CGIs <link
 linkend="thebasics-cgis-status_cgi">status</link> et <link
 linkend="thebasics-cgis-extinfo_cgi">extinfo</link>. Elles n'ont aucun effet
 sur la supervision et sont complètement optionnelles.</para>
 
-        <tip>
-          <para>Depuis Nagios 3.x, toutes les variables contenues dans les définitions
+    <tip>
+     <para>Depuis Nagios 3.x, toutes les variables contenues dans les définitions
 d'informations étendues de service sont aussi disponibles dans les <link
 linkend="configuringnagios-objectdefinitions-service">définitions de
 services</link>. Vous pouvez choisir de définir ces variables sous vos
 définitions de services si cela rend votre configuration plus simple. Des
 définitions d'informations étendues de service séparées continueront à être
 supportées pour conserver la compatibilité avec les anciennes versions.</para>
-        </tip>
-      </section>
+    </tip>
+   </section>
 
-      <section>
-        <title>Format de la définition</title>
+   <section>
+    <title>Format de la définition</title>
 
-        <note><para>Les variables en rouge sont obligatoires alors que celles en noires sont
+    <note><para>Les variables en rouge sont obligatoires alors que celles en noires sont
 optionnelles. Cependant, vous devez au moins préciser une variable
 optionnelle dans chaque définition pour que ce soit d'une quelconque
 utilité.</para></note>
 
-        <informaltable frame="none">
-          <tgroup cols="2">
-            <colspec colname="col_1" />
-            <colspec colname="col_2" />
+    <informaltable frame="none">
+     <tgroup cols="2">
+      <colspec colname="col_1" />
+      <colspec colname="col_2" />
 
-            <tbody>
-              <row>
-                <entry><para>define serviceextinfo{</para></entry>
-                <entry></entry>
-              </row>
+      <tbody>
+       <row>
+        <entry><para>define serviceextinfo{</para></entry>
+        <entry></entry>
+       </row>
 
-              <row>
-                <entry><para>host_name</para></entry>
-                <entry><para><emphasis>host_name</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>host_name</para></entry>
+        <entry><para><emphasis>host_name</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>service_description</para></entry>
-                <entry><para><emphasis>service_description</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>service_description</para></entry>
+        <entry><para><emphasis>service_description</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes</para></entry>
-                <entry><para><emphasis>note_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes</para></entry>
+        <entry><para><emphasis>note_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>notes_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>notes_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>action_url</para></entry>
-                <entry><para><emphasis>url</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>action_url</para></entry>
+        <entry><para><emphasis>url</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image</para></entry>
-                <entry><para><emphasis>image_file</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image</para></entry>
+        <entry><para><emphasis>image_file</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry><para>icon_image_alt</para></entry>
-                <entry><para><emphasis>alt_string</emphasis></para></entry>
-              </row>
+       <row>
+        <entry><para>icon_image_alt</para></entry>
+        <entry><para><emphasis>alt_string</emphasis></para></entry>
+       </row>
 
-              <row>
-                <entry nameend="col_2" namest="col_1"><para>}</para></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
-      </section>
+       <row>
+        <entry nameend="col_2" namest="col_1"><para>}</para></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </informaltable>
+   </section>
 
-      <section>
-        <title>Exemple de définition</title>
+   <section>
+    <title>Exemple de définition</title>
 
-        <programlisting>
+    <programlisting>
 define serviceextinfo{
-        host_name               linux2
-        service_description     Log Anomalies
-        notes                   Security-related log anomalies on secondary Linux server
-        notes_url               http://webserver.localhost.localdomain/serviceinfo.pl?host=linux2&amp;service=Log+Anomalies
-        icon_image              security.png
-        icon_image_alt          Security-Related Alerts
+    host_name        linux2
+    service_description   Log Anomalies
+    notes          Security-related log anomalies on secondary Linux server
+    notes_url        http://webserver.localhost.localdomain/serviceinfo.pl?host=linux2&amp;service=Log+Anomalies
+    icon_image       security.png
+    icon_image_alt     Security-Related Alerts
 }
 	</programlisting>
-      </section>
+   </section>
 
-      <section>
-        <title>Descriptions de variable</title>
+   <section>
+    <title>Descriptions de variable</title>
 
 	<variablelist>
 	<varlistentry>
@@ -4682,7 +4682,7 @@ define serviceextinfo{
 court</emphasis> du <link
 linkend="configuringnagios-objectdefinitions-service">service</link> auquel
 associées les données.
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4753,7 +4753,7 @@ format 40x40 pixels. Les images des hôtes sont censées se trouver dans le
 sous-répertoire <emphasis role="strong">logos/</emphasis> de votre dossier
 d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
-               </para>
+        </para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4770,8 +4770,8 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.</para>
 		</listitem>
 	</varlistentry>
 	</variablelist>
-      </section>
-    </section>
+   </section>
   </section>
+ </section>
 </chapter>
 

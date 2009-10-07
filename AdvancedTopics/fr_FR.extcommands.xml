@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-extcommands" xreflabel="External Commands">
@@ -17,10 +17,10 @@ aspects de ses fonctions de supervision suivant les commandes qu'il reçoit.</pa
 	<section>
 		<title>Autoriser les commandes externes</title>
 		<para><informalfigure><mediaobject>
-	      <imageobject>
-	        <imagedata fileref="images/externalcommands.png" format="PNG"/>
-	      </imageobject>
-	    </mediaobject></informalfigure>Par défaut, Nagios® ne contrôle, ni ne traite les commandes externes. Si
+	   <imageobject>
+	    <imagedata fileref="images/externalcommands.png" format="PNG"/>
+	   </imageobject>
+	  </mediaobject></informalfigure>Par défaut, Nagios® ne contrôle, ni ne traite les commandes externes. Si
 vous voulez autoriser le traitement des commandes externes, il faut
 effectuer les actions suivantes…</para>
 		<itemizedlist>
@@ -75,9 +75,9 @@ commentaires aux hôtes et services, etc.</para>
 linkend="configuringnagios-configmain-command_file">fichier de
 commande</link> suivent le format suivant :</para>
 		<programlisting>[time] command_id;command_arguments</programlisting>
-		<para>…où time est l'heure (au format <option>time_t</option>  à laquelle l'application externe ou le CGI a envoyé la commande externe au
+		<para>…où time est l'heure (au format <option>time_t</option> à laquelle l'application externe ou le CGI a envoyé la commande externe au
 fichier de commande. Certaines des commandes disponibles sont décrites dans
-le tableau ci-dessous, ainsi que leur  <option>command_id et une description de leurs </option> 
+le tableau ci-dessous, ainsi que leur <option>command_id et une description de leurs </option> 
 		et <option>command_arguments.</option> Les arguments dépendent de la commande qui sera soumisse à Nagios.</para>
 		<para>Un listing complet des commandes externes qui peuvent être utilisées (ainsi
 que des exemples d'utilisation) sont en ligne à l'adresse suivante:</para>

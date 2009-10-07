@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-perfdata" xreflabel="Performance Data">
@@ -43,7 +43,7 @@ peut comprendre des choses comme la latence d'un contrôle de service
 (i.e. Combien "de retard" a un contrôle de service par rapport à l'horaire
 planifié d'exécution) et le nombre de secondes qu'il aura fallut pour
 exécuter un contrôle d'hôte ou des service. Ce type de données de
-performance sont valables pour tous les contrôles qui sont effectués.  Les
+performance sont valables pour tous les contrôles qui sont effectués. Les
 <link linkend="thebasics-macros">macros</link> <link
 linkend="thebasics-macrolist-hostexecutiontime">$HOSTEXECUTIONTIME$</link>
 et <link
@@ -115,7 +115,7 @@ dans les macros $HOSTPERFDATA$ ou $SERVICEPERFDATA$ </para>
 		</orderedlist>
 
 		<para>Dans l'exemple ci-dessus, la macro $HOSTOUTPUT$ ou $SERVICEOUTPUT$
-contiendra  <emphasis>"PING ok - Packet loss = 0%, RTA = 0.80 ms"</emphasis>
+contiendra <emphasis>"PING ok - Packet loss = 0%, RTA = 0.80 ms"</emphasis>
 (sans les guillemets) et la macro $HOSTPERFDATA$ ou $SERVICEPERFDATA$
 contiendra <emphasis>"percent_packet_loss=0, rta=0.80"</emphasis> (sans les
 guillemets).</para>
@@ -214,7 +214,7 @@ pourrait ressembler à ceci:</para>
 avez besoin de changer les modes en "write" ou "non-blocking read/write"
 (utile lors d'écriture via 'pipe'), vous pouvez utiliser les options <link
 linkend="configuringnagios-configmain-host_perfdata_file_mode">host_perfdata_file_mode</link>
-et  <link
+et <link
 linkend="configuringnagios-configmain-service_perfdata_file_mode">service_perfdata_file_mode</link>.</para>
 
 		<para>En outre, vous pouvez avoir Nagios qui exécute périodiquement des commandes

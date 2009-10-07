@@ -2,109 +2,109 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="about">
-  <title>À propos de Nagios</title>
+ <title>À propos de Nagios</title>
 
-  <section>
-    <title><anchor id="whatis" />Qu'est-ce que c'est?</title>
+ <section>
+  <title><anchor id="whatis" />Qu'est-ce que c'est?</title>
 
-    <para>Nagios est application de supervison système et réseau. Il contrôle les
+  <para>Nagios est application de supervison système et réseau. Il contrôle les
 hôtes et services que vous spécifiez et émet des alertes quand les choses
 vont mal ou qu'elle revienent à la normale.</para>
 
-    <para>Nagios a été développé pour fonctionner sur <ulink
+  <para>Nagios a été développé pour fonctionner sur <ulink
 url="http://www.linux.com/">Linux</ulink>, mais devrait fonctionner sur la
 plupart des systèmes unix.</para>
 
-    <para>Parmi ses fonctionallités, Nagios inclut:</para>
+  <para>Parmi ses fonctionallités, Nagios inclut:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Surveillance des services réseaux (&protocol-smtp;, &protocol-pop3;,
+  <itemizedlist>
+   <listitem>
+    <para>Surveillance des services réseaux (&protocol-smtp;, &protocol-pop3;,
 &protocol-http;, &protocol-ntp;, PING, etc.)</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Surveillance des ressources des hôtes (charge processeur, utilisation des
+   <listitem>
+    <para>Surveillance des ressources des hôtes (charge processeur, utilisation des
 disques, etc.)</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Système simple de plugins permettant aux utilisateurs de développer
+   <listitem>
+    <para>Système simple de plugins permettant aux utilisateurs de développer
 facilement leurs propres vérifications de services</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Contrôles parallèles des services</para>
-      </listitem>
+   <listitem>
+    <para>Contrôles parallèles des services</para>
+   </listitem>
 
-      <listitem>
-        <para>Possibilité de définir la hiérarchie du réseau en utilisant des hôtes
+   <listitem>
+    <para>Possibilité de définir la hiérarchie du réseau en utilisant des hôtes
 <quote>parents</quote>, ce qui permet la détection et la distinction entre
 les hôtes qui sont à l'arrêt et ceux qui sont injoignables. </para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Notifications des contacts quand un hôte ou un service a un problème et
+   <listitem>
+    <para>Notifications des contacts quand un hôte ou un service a un problème et
 quand celui-ci est résolu (via email, pager, sms, ou par tout autre méthode
 définie par l'utilisateur) </para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>La capacité de définir des gestionnaires d'événements déclenchés lors
+   <listitem>
+    <para>La capacité de définir des gestionnaires d'événements déclenchés lors
 d'événements sur les hôtes afin de résoudre les problèmes de façon proactive</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>La rotation automatique des fichiers journaux</para>
-      </listitem>
+   <listitem>
+    <para>La rotation automatique des fichiers journaux</para>
+   </listitem>
 
-      <listitem>
-        <para>Le support pour implémenter des serveurs de supervision redondants</para>
-      </listitem>
+   <listitem>
+    <para>Le support pour implémenter des serveurs de supervision redondants</para>
+   </listitem>
 
-      <listitem>
-        <para>Une interface web optionnelle permettant de voir l'état courant du réseau,
+   <listitem>
+    <para>Une interface web optionnelle permettant de voir l'état courant du réseau,
 l'historique des notifications et problèmes, le fichier journal, etc.</para>
-      </listitem>
-    </itemizedlist>
-  </section>
+   </listitem>
+  </itemizedlist>
+ </section>
 
-  <section>
-    <title><anchor id="about-requirements" />Pré-requis au niveau du système</title>
+ <section>
+  <title><anchor id="about-requirements" />Pré-requis au niveau du système</title>
 
-    <para>Le seul pré-requis pour le fonctionnement de Nagios est une machine
+  <para>Le seul pré-requis pour le fonctionnement de Nagios est une machine
 fonctionnant sous Linux (ou une variante Unix) et un compilateur C - si vous
 désirez le compiler vous-même -. Il faudra également que TCP/IP soit
 configuré, car la plupart des vérifications de services seront faites par le
 réseau. </para>
 
-    <para>Vous n'êtes pas obligé d'utiliser les CGIs inclus avec Nagios. Toutefois, si
+  <para>Vous n'êtes pas obligé d'utiliser les CGIs inclus avec Nagios. Toutefois, si
 vous décidez à les utiliser, vous devrez avoir les composants logiciels
 suivants installés... </para>
 
-    <orderedlist>
-      <listitem>
-        <para>Un serveur web (de préférence <ulink
+  <orderedlist>
+   <listitem>
+    <para>Un serveur web (de préférence <ulink
 url="http://www.apache.org/">Apache</ulink>)</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>La librairie GD de Thomas Boutell en version 1.6.3 ou supérieure (requis par
+   <listitem>
+    <para>La librairie GD de Thomas Boutell en version 1.6.3 ou supérieure (requis par
 les CGIs <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link> et
 <link linkend="thebasics-cgis-trends_cgi">trends</link>)</para>
-      </listitem>
-    </orderedlist>
-  </section>
+   </listitem>
+  </orderedlist>
+ </section>
 
-  <section>
-    <title><anchor id="about-licensing" />Licence</title>
+ <section>
+  <title><anchor id="about-licensing" />Licence</title>
 
-    <para>Nagios est licencié sous les termes de la version 2 de la <ulink
+  <para>Nagios est licencié sous les termes de la version 2 de la <ulink
 url="http://www.gnu.org/copyleft/gpl.html">GNU General Public
 License</ulink> comme publiée par la <ulink url="http://www.fsf.org/">Free
 Software Foundation</ulink>. Cela vous donne la permission légale de copier,
@@ -113,31 +113,31 @@ reporter au fichier 'LICENSE' de la distribution Nagios ou à la <ulink
 url="http://www.gnu.org/copyleft/gpl.html">version en ligne</ulink> pour
 plus de détails.</para>
 
-    <para>Nagios est fourni TEL QUE sans AUCUNE GARANTIE D'AUCUNE SORTE, sans même une
+  <para>Nagios est fourni TEL QUE sans AUCUNE GARANTIE D'AUCUNE SORTE, sans même une
 garantie implicite de COMMERCIABILITE ou DE CONFORMITE A UNE UTILISATION
 PARTICULIERE.</para>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="about-acknowledgements" />Remerciements</title>
+ <section>
+  <title><anchor id="about-acknowledgements" />Remerciements</title>
 
-    <para>Beaucoup de monde a contribué à Nagios, soit en signalant des bugs, soit en
+  <para>Beaucoup de monde a contribué à Nagios, soit en signalant des bugs, soit en
 suggérant des améliorations, soit en écrivant des plugins, etc. Une liste de
 quelques-uns des nombreux contributeurs au développement de Nagios se trouve
 sur <ulink url="&url-nagios;">&url-nagios;</ulink>.</para>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="about-downloading" />Téléchargment de la dernière version</title>
+ <section>
+  <title><anchor id="about-downloading" />Téléchargment de la dernière version</title>
 
-    <para>Vous pouvez vérifer la sortie de nouvelles versions de Nagios sur <ulink
+  <para>Vous pouvez vérifer la sortie de nouvelles versions de Nagios sur <ulink
 url="&url-nagios;">&url-nagios;</ulink>.</para>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="about-support" />Support</title>
+ <section>
+  <title><anchor id="about-support" />Support</title>
 
-    <para><ulink url="&url-nagios;support/">Options de support</ulink></para>
-  </section>
+  <para><ulink url="&url-nagios;support/">Options de support</ulink></para>
+ </section>
 </chapter>
 

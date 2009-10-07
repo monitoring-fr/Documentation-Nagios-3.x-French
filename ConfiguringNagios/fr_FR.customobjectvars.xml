@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="configuringnagios-customobjectvars" xreflabel="Custom Object Variables">
@@ -63,29 +63,29 @@ macros</link>
 personnalisées dans différents types de définitions d'objets</para>
 		<programlisting>
 define host{
-   host_name       linuxserver
-   _mac_address    00:06:5B:A6:AD:AA ; &lt;-- Custom MAC_ADDRESS variable
-   _rack_number    R32               ; &lt;-- Custom RACK_NUMBER variable
+  host_name    linuxserver
+  _mac_address  00:06:5B:A6:AD:AA ; &lt;-- Custom MAC_ADDRESS variable
+  _rack_number  R32        ; &lt;-- Custom RACK_NUMBER variable
 ...
 }
 		</programlisting>
 
 		<programlisting>
 define service{
-   host_name        linuxserver
-   description      Memory Usage
-   _SNMP_community  public         ; &lt;-- Custom SNMP_COMMUNITY variable
-   _TechContact     Jane Doe       ; &lt;-- Custom TECHCONTACT variable
-   ....
+  host_name    linuxserver
+  description   Memory Usage
+  _SNMP_community public     ; &lt;-- Custom SNMP_COMMUNITY variable
+  _TechContact   Jane Doe    ; &lt;-- Custom TECHCONTACT variable
+  ....
 }
 		</programlisting>
 
 		<programlisting>
 define contact{
-   contact_name    john
-   _AIM_username   john16        ; &lt;-- Custom AIM_USERNAME variable
-   _YahooID        john32        ; &lt;-- Custom YAHOOID variable
-   ...
+  contact_name  john
+  _AIM_username  john16    ; &lt;-- Custom AIM_USERNAME variable
+  _YahooID    john32    ; &lt;-- Custom YAHOOID variable
+  ...
 }
 		</programlisting>
 	</section>

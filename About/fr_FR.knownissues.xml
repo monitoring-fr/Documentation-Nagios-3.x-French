@@ -2,29 +2,29 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="about-knowissues" xreflabel="Known Issues">
-  <title>Problèmes connus</title>
+ <title>Problèmes connus</title>
 
-  <section>
-    <title><anchor id="knownissue" />Problème connus</title>
+ <section>
+  <title><anchor id="knownissue" />Problème connus</title>
 
-    <orderedlist>
-      <listitem>
-        <para>Période de temps</para>
-        <para>Exclusions dans les contrôles d'hôtes/services - Il y a un problème dans la logique d'ordonnancement qui survient quand vous souhaitez utiliser des périodes de temps utilisant des directives d'exclusion.
+  <orderedlist>
+   <listitem>
+    <para>Période de temps</para>
+    <para>Exclusions dans les contrôles d'hôtes/services - Il y a un problème dans la logique d'ordonnancement qui survient quand vous souhaitez utiliser des périodes de temps utilisant des directives d'exclusion.
 Le problème survient quand Nagios Core essaye de réordonnancer le prochain contrôle.
 Dans ce cas, la logique d'ordonnancement est suceptible d'ordonnancer de façon incorrecte le prochain contrôle en le positionnant beaucoup plus loin dans le futur qu'il ne devrait l'être.
 Dans les faits, il court-circuite la logique d'exclusion; alors qu'il devrait pouvoir placer le contrôle plus tôt en utilisant les exceptions. Solution de contournement imparfaite :
 N'utilisez pas de périodes de temps qui excluent d'autres périodes de temps pour vos plages de contrôle des hôtes/services.
 Un correctif est en cours préparation, et sera certainements inclus daan la version 3.4.x.</para>
-      </listitem>
+   </listitem>
 
-     
-    </orderedlist>
-  </section>
+   
+  </orderedlist>
+ </section>
 </chapter>
 

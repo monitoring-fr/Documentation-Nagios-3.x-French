@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-dependencies" xreflabel="Host and Service Dependencies">
@@ -69,11 +69,11 @@ réalise.</para>
 		<para>
 		<informalfigure>
 		<mediaobject>
-	          <imageobject>
-	            <imagedata fileref="images/service-dependencies.png" format="PNG"/>
-	          </imageobject>
-	        </mediaobject>
-	    </informalfigure>
+	     <imageobject>
+	      <imagedata fileref="images/service-dependencies.png" format="PNG"/>
+	     </imageobject>
+	    </mediaobject>
+	  </informalfigure>
 		</para>
 		<para>Dans l'exemple ci-dessus, les définitions de dépendance du <emphasis>Service
 F</emphasis> sur <emphasis>l'hôte C</emphasis> seraient écrites comme ceci :</para>
@@ -225,19 +225,19 @@ dépendant du Service E. Toutefois, il n'hérite pas automatiquement des
 dépendances du Service E sur le Service B et le Service C. Pour rendre le
 Service F dépendant du Service C, nous avons dû ajouter une autre définition
 de dépendance. Il n'y a pas de définition de dépendance pour le Service B,
-donc le Service F n'est pas  dépendant du Service B.</para>
+donc le Service F n'est pas dépendant du Service B.</para>
 		<para>Si vous voulez rendre les dépendances de service héritables, utilisez le
 paramètre inherits_parent dans la définition de la <link
 linkend="configuringnagios-objectdefinitions-servicedependency">dépendance
 du service</link>. Quand ce paramètre est activé, il indique que la
-dépendance hérite des dépendances du service dont elle dépend  (également
+dépendance hérite des dépendances du service dont elle dépend (également
 appelé le service maître). En d'autres termes, si le service maître dépend
 d'autres services et qu'une de ces dépendances est en échec, la dépendance
 sera aussi en échec.</para>
 		<para>Dans l'exemple ci-dessus, imaginez que vous vouliez ajouter une nouvelle
 dépendance au service F qui le rende dépendant du service A. Vous pourriez
 créer une nouvelle définition de dépendance qui indique le service F comme
-le service dépendant et le service A comme le service maître  (c'est-à-dire
+le service dépendant et le service A comme le service maître (c'est-à-dire
 le service dont il est dépendant). Vous pourriez également modifier la
 définition de dépendance des services D et F de la manière suivante :</para>
 		<programlisting>
@@ -299,11 +299,11 @@ dépendances de notifications d'hôtes.</para>
 		<para>
 		<informalfigure>
 		<mediaobject>
-	          <imageobject>
-	            <imagedata fileref="images/host-dependencies.png" format="PNG"/>
-	          </imageobject>
-	        </mediaobject>
-	    </informalfigure>
+	     <imageobject>
+	      <imagedata fileref="images/host-dependencies.png" format="PNG"/>
+	     </imageobject>
+	    </mediaobject>
+	  </informalfigure>
 		</para>
 		<para>Dans l'image ci-dessus, les définitions de dépendances pour l'hôte C
 devraient être définies ainsi:</para>

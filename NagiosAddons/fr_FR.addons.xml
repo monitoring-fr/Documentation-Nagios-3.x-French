@@ -2,72 +2,72 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="nagiosaddons-addons" xreflabel="Nagios Addons">
-  <title>Addons Nagios</title>
+ <title>Addons Nagios</title>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para>Il existe beaucoup d'<quote>addons</quote> disponibles pour Nagios. Les
+  <para>Il existe beaucoup d'<quote>addons</quote> disponibles pour Nagios. Les
 addons peuvent être utilisés pour étendre les fonctionnalités de Nagios ou
 pour l'intégrer à d'autres applications.</para>
 
-    <para>Des addons sont disponibles pour:</para>
+  <para>Des addons sont disponibles pour:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Gérer les fichiers de configuration au travers de l'interface web</para>
-      </listitem>
+  <itemizedlist>
+   <listitem>
+    <para>Gérer les fichiers de configuration au travers de l'interface web</para>
+   </listitem>
 
-      <listitem>
-        <para>Superviser des hôtes distants (*NIX, Windows, etc.)</para>
-      </listitem>
+   <listitem>
+    <para>Superviser des hôtes distants (*NIX, Windows, etc.)</para>
+   </listitem>
 
-      <listitem>
-        <para>Soumettre des contrôles passifs depuis un hôte distant</para>
-      </listitem>
+   <listitem>
+    <para>Soumettre des contrôles passifs depuis un hôte distant</para>
+   </listitem>
 
-      <listitem>
-        <para>Simplifier/étendre la logique de notification</para>
-      </listitem>
+   <listitem>
+    <para>Simplifier/étendre la logique de notification</para>
+   </listitem>
 
-      <listitem>
-        <para>...et bien plus encore</para>
-      </listitem>
-    </itemizedlist>
+   <listitem>
+    <para>...et bien plus encore</para>
+   </listitem>
+  </itemizedlist>
 
-    <para>Vous pouvez trouver beaucoup d'addons pour Nagios en visitant:</para>
+  <para>Vous pouvez trouver beaucoup d'addons pour Nagios en visitant:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para><ulink url="&url-nagios;">Nagios.org</ulink></para>
-      </listitem>
+  <itemizedlist>
+   <listitem>
+    <para><ulink url="&url-nagios;">Nagios.org</ulink></para>
+   </listitem>
 
-      <listitem>
-        <para><ulink url="http://www.sourceforge.net/">SourceForge.net</ulink></para>
-      </listitem>
+   <listitem>
+    <para><ulink url="http://www.sourceforge.net/">SourceForge.net</ulink></para>
+   </listitem>
 
-      <listitem>
-        <para><ulink url="&url-nagiosexchange;/">NagiosExchange.org</ulink></para>
-      </listitem>
-    </itemizedlist>
+   <listitem>
+    <para><ulink url="&url-nagiosexchange;/">NagiosExchange.org</ulink></para>
+   </listitem>
+  </itemizedlist>
 
-    <para>Je vous vous faire une brève introduction à quelques addons que j'ai
+  <para>Je vous vous faire une brève introduction à quelques addons que j'ai
 développé pour Nagios...</para>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="nagiosaddons-addons-nrpe" xreflabel="NRPE daemon" />&name-nrpe;</title>
+ <section>
+  <title><anchor id="nagiosaddons-addons-nrpe" xreflabel="NRPE daemon" />&name-nrpe;</title>
 
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/nrpe.png" format="PNG"/>
-        </imageobject>
-      </mediaobject></informalfigure>&name-nrpe; est un addon qui permet d'exécuter des <link
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/nrpe.png" format="PNG"/>
+    </imageobject>
+   </mediaobject></informalfigure>&name-nrpe; est un addon qui permet d'exécuter des <link
 linkend="thebasics-plugins">plugins</link> sur des hôtes distants de type
 Linux/Unix. C'est utile quand vous avez besoin des ressources/attributs
 locaux comme l'utilisation disque, la charge CPU, l'utilisation mémoire,
@@ -76,44 +76,44 @@ plugin &plugin-byssh; même si celui-ci impose une charge CPU plus importante
 sur le serveur de supervision, surtout si vous supervisez des centaines ou
 des milliers d'hôtes.</para>
 
-    <para>L'addon &name-nrpe; et sa documentation peuvent trouvés sur <ulink
+  <para>L'addon &name-nrpe; et sa documentation peuvent trouvés sur <ulink
 url="&url-nagios;">&url-nagios;</ulink>.</para>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="nagiosaddons-addons-nsca" xreflabel="NSCA daemon" />&name-nsca;</title>
+ <section>
+  <title><anchor id="nagiosaddons-addons-nsca" xreflabel="NSCA daemon" />&name-nsca;</title>
 
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/nsca.png" format="PNG"/>
-        </imageobject>
-      </mediaobject></informalfigure>&name-nsca; est un addon qui permet d'envoyer les résultats de <link
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/nsca.png" format="PNG"/>
+    </imageobject>
+   </mediaobject></informalfigure>&name-nsca; est un addon qui permet d'envoyer les résultats de <link
 linkend="thebasics-passivechecks">contrôles passifs</link> provenant d'hôtes
 distants de type Linux/Unix au démon Nagios qui fonctionne sur le serveur de
 supervision. C'est très utile dans les <link
 linkend="advancedtopics-distributed">environnements distribués</link> et les
 <link linkend="advancedtopics-redundancy">environnements redondés</link>.</para>
 
-    <para>L'addon &name-nrpe; et sa documentation peuvent trouvés sur <ulink
+  <para>L'addon &name-nrpe; et sa documentation peuvent trouvés sur <ulink
 url="&url-nagios;">&url-nagios;</ulink>. 
-    </para>
-  </section>
+  </para>
+ </section>
 
-  <section>
-    <title><anchor id="nagiosaddons-addons-ndoutils" />NDOUtils</title>
+ <section>
+  <title><anchor id="nagiosaddons-addons-ndoutils" />NDOUtils</title>
 
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/ndoutils.png" />
-        </imageobject>
-      </mediaobject></informalfigure>NDOUtils est un addon qui permet de stocker toutes les informations d'états
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/ndoutils.png" />
+    </imageobject>
+   </mediaobject></informalfigure>NDOUtils est un addon qui permet de stocker toutes les informations d'états
 de Nagios dans une base MySQL. Plusieurs instances de Nagios peuvent stocker
 leurs informlations dans une base centrale pour faire du reporting
 centralisé. Cela a de grandes chances d'être utilisé dans le futur pour la
 nouvelle interface web PHP de Nagios.</para>
 
-    <para>NDOUtils et sa documentation peuvent être trouvés sur <ulink
+  <para>NDOUtils et sa documentation peuvent être trouvés sur <ulink
 url="&url-nagios;">&url-nagios;</ulink>.</para>
-  </section>
+ </section>
 </chapter>
 

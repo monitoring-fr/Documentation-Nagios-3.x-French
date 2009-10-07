@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="thebasics-macrolist" xreflabel="Standard Macros in Nagios">
@@ -7206,7 +7206,7 @@ façons d'utiliser cette macro :</para>
 								<orderedlist>
 									<listitem>
 										<para>$NEXTVALIDTIME:24x7$ renvoie la prochaine heure valide - depuis et en
-incluant l'heure courante  - dans la période de temps <quote>24x7</quote>.</para>
+incluant l'heure courante - dans la période de temps <quote>24x7</quote>.</para>
 									</listitem>
 									<listitem>
 										<para>$NEXTVALIDTIME:24x7:timestamp$ renvoie la prochaine heure valide - depuis et
@@ -7388,7 +7388,7 @@ linkend="thebasics-macrolist-timet">$TIMET$</link>.</para>
 									<anchor id="thebasics-macrolist-eventstarttime"/>$EVENTSTARTTIME$</para>
 							</entry>
 							<entry>
-								<para>Moment au format time_t (secondes écoulées depuis l'époque UNIX) où  Nagios
+								<para>Moment au format time_t (secondes écoulées depuis l'époque UNIX) où Nagios
 a commencé à traiter les événements (contrôles, etc). Vous pouvez déduire le
 nombre de secondes qui ont été nécessaires au démarrage de Nagios en
 soustrayant $PROCESSSTARTTIME$ de $EVENTSTARTTIME$.</para>

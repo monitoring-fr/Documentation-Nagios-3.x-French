@@ -2,23 +2,23 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.docbook.org/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="securityandperformancetuning-cgisecurity" xreflabel="Enhanced CGI Security and Authentication">
-  <title>Sécurité de CGI Améliorée et Authentification</title>
+ <title>Sécurité de CGI Améliorée et Authentification</title>
 
-    <section>
-      <title>Introduction</title>
+  <section>
+   <title>Introduction</title>
 
-      <para><inlinemediaobject> <imageobject> <imagedata fileref="images/security.png"
+   <para><inlinemediaobject> <imageobject> <imagedata fileref="images/security.png"
 format="PNG"/> </imageobject> </inlinemediaobject> Cette page est destinée à
 être une introduction pour l'implémentation d'un niveau d'authentification
 et de sécurité de serveur plus ardue concentrée autour de l'interface web
 CGI.</para>
 
-      <para>Il y a de nombreuses façons de personnaliser la sécurité de son serveur de
+   <para>Il y a de nombreuses façons de personnaliser la sécurité de son serveur de
 Supervision et l'environnement Nagios. Ce qui va venir ne doit pas être pris
 comme la finalité de toute approche à la sécurité. Au lieu de
 cela,considérez ce qui suit comme une introduction à certaines des
@@ -27,14 +27,14 @@ système. Comme toujours, vous devrez faire vos recherches et utiliser les
 meilleures techniques disponibles. Traitez votre serveur de Supervision
 comme si c'était l'élément le plus important dans votre réseau et vous en
 serez récompensés.</para>
-    </section>
+  </section>
 
-    <section>
-      <title>Techniques Supplémentaires</title>
+  <section>
+   <title>Techniques Supplémentaires</title>
 
-      <itemizedlist>
-        <listitem>
-          <para><emphasis role="bold">Authentification plus ardue utilisant la technoligie
+   <itemizedlist>
+    <listitem>
+     <para><emphasis role="bold">Authentification plus ardue utilisant la technoligie
 Digest</emphasis>. En suivant <link linkend="gettingstarted-quickstart">Le
 guide de démarrage rapide</link>, il y a de grandes chances pour que vous
 utilisiez les <ulink
@@ -46,89 +46,89 @@ url="&url-apache-docs;2.2/mod/mod_auth_digest.html">technologie
 Digest</ulink> pour votre authentification s'avére plus sécurisé car elle
 s'appuie sur un principe de cryptage de clé MD5 lors du passage des
 requêtes.</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>Forcé <acronym>TLS</acronym>/<acronym>SSL</acronym> pour la totalité de votre protocole Web. Apache fournit <ulink
+    <listitem>
+     <para>Forcé <acronym>TLS</acronym>/<acronym>SSL</acronym> pour la totalité de votre protocole Web. Apache fournit <ulink
 url="&url-wikipedia;Transport_Layer_Security"><acronym>TLS</acronym>/<acronym>SSL</acronym></ulink> par le module <ulink
 url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink>. <acronym>TLS</acronym>/<acronym>SSL</acronym> fournit un tunnel sécurisé entre le client et le serveur ce qui prévient le
 fait d'écouter indiscrètement et de tripoter la cryptographie
 publickey/privatekey.</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para><emphasis role="bold">Brider le contrôle des accès apache</emphasis>. Pour
+    <listitem>
+     <para><emphasis role="bold">Brider le contrôle des accès apache</emphasis>. Pour
 appliquer cette bride à l'accès Nagios à votre adresse IP, plage d'adresse
 IP, ou sous-réseaux. Si vous avez besoin d'un accès extérieur à votre
 réseau, vous pouvez utilisez <acronym>VPN</acronym> ou des tunnels &protocol-ssh;</para>
-        </listitem>
-      </itemizedlist>
+    </listitem>
+   </itemizedlist>
 
-      <section>
-        <title>L'implantation de l'authentification Digest</title>
+   <section>
+    <title>L'implantation de l'authentification Digest</title>
 
-        <para>L'implémentation de l'authentification Digest est simple. Vous devez créer
+    <para>L'implémentation de l'authentification Digest est simple. Vous devez créer
 un nouveau type de mot de passe en utilisant l'outil <ulink
 url="&url-apache-docs;2.2/programs/htdigest.html">'htdigest'</ulink>, puis
 modifiez la configuration apache pour Nagios (par défaut
 <filename>/etc/httpd/conf.d/nagios.conf</filename>).</para>
 
-        <para>Créer un nouveau mot de passe en utilisant l'outil <ulink
+    <para>Créer un nouveau mot de passe en utilisant l'outil <ulink
 url="&url-apache-docs;2.2/programs/htdigest.html">'htdigest'</ulink>. </para>
 
-        <screen><prompt>linux:~ # </prompt><userinput>htdigest -c /usr/local/nagios/etc/.digest_pw "Nagios Access" nagiosadmin</userinput></screen>
+    <screen><prompt>linux:~ # </prompt><userinput>htdigest -c /usr/local/nagios/etc/.digest_pw "Nagios Access" nagiosadmin</userinput></screen>
 
-        <para>Ensuite, éditer le fichier de configuration apache pour Nagios (typiquement
+    <para>Ensuite, éditer le fichier de configuration apache pour Nagios (typiquement
 <filename>/etc/httpd/conf.d/nagios.conf</filename>) en utilisant l'exemple
 suivant.</para>
 
-        <programlisting>
+    <programlisting>
 	## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
 	ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
 	&lt;Directory "/usr/local/nagios/sbin"&gt;
-	   Options ExecCGI
-	   AllowOverride None
-	   Order allow,deny
-	   Allow from all
-	   AuthType Digest
-	   AuthName "Nagios Access"
-	   AuthUserFile /usr/local/nagios/etc/.digest_pw
-	   Require valid-user
+	  Options ExecCGI
+	  AllowOverride None
+	  Order allow,deny
+	  Allow from all
+	  AuthType Digest
+	  AuthName "Nagios Access"
+	  AuthUserFile /usr/local/nagios/etc/.digest_pw
+	  Require valid-user
 	&lt;/Directory&gt;
 
 	Alias /nagios "/usr/local/nagios/share"
 	&lt;Directory "/usr/local/nagios/share"&gt;
-	   Options None
-	   AllowOverride None
-	   Order allow,deny
-	   Allow from all
-	   AuthType Digest
-	   AuthName "Nagios Access"
-	   AuthUserFile /usr/local/nagios/etc/.digest_pw
-	   Require valid-user
+	  Options None
+	  AllowOverride None
+	  Order allow,deny
+	  Allow from all
+	  AuthType Digest
+	  AuthName "Nagios Access"
+	  AuthUserFile /usr/local/nagios/etc/.digest_pw
+	  Require valid-user
 	&lt;/Directory&gt;
 	## END APACHE CONFIG SNIPPETS
 </programlisting>
 
-        <para>Ensuite, redémarrer le service apache pour que la nouvelle configuration
+    <para>Ensuite, redémarrer le service apache pour que la nouvelle configuration
 soit pris en compte.</para>
 
-        <screen><prompt>linux:~ # </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
-      </section>
+    <screen><prompt>linux:~ # </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
+   </section>
 
-      <section>
-        <title>Forcé l'implémentation <acronym>TLS</acronym>/<acronym>SSL</acronym></title>
+   <section>
+    <title>Forcé l'implémentation <acronym>TLS</acronym>/<acronym>SSL</acronym></title>
 
-        <para>Vérifiez que vous avez installé apache et openssl. Par défaut, le <ulink
+    <para>Vérifiez que vous avez installé apache et openssl. Par défaut, le <ulink
 url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink> doit être
 supporté. Si vous rencontrez encore des problèmes, vous pouvez vous référer
 à l'aide d'Apache <ulink url="&url-apache-docs;2.0/ssl"><acronym>TLS</acronym>/<acronym>SSL</acronym>
-        Documentation sur l'encryptation</ulink>.</para>
+    Documentation sur l'encryptation</ulink>.</para>
 
-        <para>Ensuite, vérifiez que <acronym>TLS</acronym>/<acronym>SSL</acronym> support fonctionne en visitant l'interface nagios en utilisant le
+    <para>Ensuite, vérifiez que <acronym>TLS</acronym>/<acronym>SSL</acronym> support fonctionne en visitant l'interface nagios en utilisant le
 &protocol-https; (https://your.domain/nagios). Si ça fonctionne, vous pouvez
 passer à l'étape suivante qui consistera à forcer la connexion en
-&protocol-https; et de bloquer toutes connexion via le  &protocol-http; à
+&protocol-https; et de bloquer toutes connexion via le &protocol-http; à
 l'interface Web Nagios. Si vous rencontrez des problèmes, visitez les pages
 d'apache sur la <acronym>TLS</acronym>/<acronym>SSL</acronym> <ulink url="&url-apache-docs;2.0/ssl">Documentation de
 Cryptage</ulink>et<ulink url="http://www.google.com">Google</ulink> pour des
@@ -139,34 +139,34 @@ configuration apache pour nagios (par défaut
 <filename class="directory">sbin</filename> et <filename
 class="directory">share</filename>.</para>
 
-        <programlisting>
+    <programlisting>
 			## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
 			ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
 			&lt;Directory "/usr/local/nagios/sbin"&gt;
-			   ...
-			   SSLRequireSSL
-			   ...
+			  ...
+			  SSLRequireSSL
+			  ...
 			&lt;/Directory&gt;
 
 			Alias /nagios "/usr/local/nagios/share"
 			&lt;Directory "/usr/local/nagios/share"&gt;
-			   ...
-			   SSLRequireSSL
-			   ...
+			  ...
+			  SSLRequireSSL
+			  ...
 			&lt;/Directory&gt;
 			## END APACHE CONFIG SNIPPETS
 	</programlisting>
 
-        <para>Redémarrage du service Apache pour que la nouvelle configuration prenne
+    <para>Redémarrage du service Apache pour que la nouvelle configuration prenne
 effet.</para>
 
-        <screen><prompt>linux:~ # </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
-      </section>
+    <screen><prompt>linux:~ # </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
+   </section>
 
-      <section>
-        <title>Implémentation de verrous de sous-réseaux IP</title>
+   <section>
+    <title>Implémentation de verrous de sous-réseaux IP</title>
 
-        <para>L'exemple suivant nous montre comment bloquer l'accès des CGI Nagios à
+    <para>L'exemple suivant nous montre comment bloquer l'accès des CGI Nagios à
 certaines adresses IP, plages d'adresses ou sous-réseaux en utilisant le
 <ulink url="&url-apache-docs;2.2/howto/access.html">contrôle des accès
 Apache</ulink>. Modifiez le fichier de configuration apache pour Nagios (par
@@ -174,73 +174,73 @@ défaut <filename>/etc/httpd/conf.d/nagios.conf</filename>) en utilisant les
 directives <varname>Allow</varname>, <varname>Deny</varname>, et
 <varname>Order</varname> en s'appuyant sur l'exemple ci-dessous.</para>
 
-        <programlisting>
+    <programlisting>
 			## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
 			ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
 			&lt;Directory "/usr/local/nagios/sbin"&gt;
-			   ...
-			   AllowOverride None
-			   Order deny,allow
-			   Deny from all
-			   Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
-			   Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
-			   Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
-			   ...
+			  ...
+			  AllowOverride None
+			  Order deny,allow
+			  Deny from all
+			  Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
+			  Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
+			  Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
+			  ...
 			&lt;/Directory&gt;
 
 			Alias /nagios "/usr/local/nagios/share"
 			&lt;Directory "/usr/local/nagios/share"&gt;
-			   ...
-			   AllowOverride None
-			   Order deny,allow
-			   Deny from all
-			   Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
-			   Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
-			   Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
-			   ...
+			  ...
+			  AllowOverride None
+			  Order deny,allow
+			  Deny from all
+			  Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
+			  Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
+			  Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
+			  ...
 			&lt;/Directory&gt;
 			## END APACHE CONFIG SNIPPET
 	</programlisting>
-      </section>
-    </section>
+   </section>
+  </section>
 
-    <section>
-      <title>Notes importantes</title>
+  <section>
+   <title>Notes importantes</title>
 
-      <itemizedlist>
-        <listitem>
-          <para><emphasis role="bold">Digest Authentication sends data in the clear but not
+   <itemizedlist>
+    <listitem>
+     <para><emphasis role="bold">Digest Authentication sends data in the clear but not
 your username and password</emphasis>.</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para><emphasis role="bold">L'authentification par Digest n'est pas totalement
+    <listitem>
+     <para><emphasis role="bold">L'authentification par Digest n'est pas totalement
 compatible avec l'authentification de base</emphasis>.</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para><emphasis role="bold"><acronym>TLS</acronym>/<acronym>SSL</acronym> a le potentiel pour  <quote><ulink
+    <listitem>
+     <para><emphasis role="bold"><acronym>TLS</acronym>/<acronym>SSL</acronym> a le potentiel pour <quote><ulink
 url="&url-wikipedia;Man-in-the-middle_attack">man-in-the-middle
-attacks</ulink></quote></emphasis>. <acronym>MITM</acronym> attaques sont vulnérable si l'attaquant est obligé de s'imisser  entre le
+attacks</ulink></quote></emphasis>. <acronym>MITM</acronym> attaques sont vulnérable si l'attaquant est obligé de s'imisser entre le
 serveur et le client tout comme une attaque par "Phishing", l'ISP monitoring
-ou  <acronym>LAN</acronym> un certificat de pare-feu arrivant à expiration. Lire ci-dessus la
+ou <acronym>LAN</acronym> un certificat de pare-feu arrivant à expiration. Lire ci-dessus la
 vérification des certificats !</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para><emphasis role="bold">Le contrôle d'accès apache seulement le protocole
+    <listitem>
+     <para><emphasis role="bold">Le contrôle d'accès apache seulement le protocole
 &protocol-http;/&protocol-https;</emphasis>. Veuillez vous référer à <ulink
 url="http://www.netfilter.org/projects/iptables/index.html">IPtables</ulink>
 pour verrouiller votre système avec des règles de pare-feu.</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para><emphasis role="bold">Très important, la sécurité est un domaine en
+    <listitem>
+     <para><emphasis role="bold">Très important, la sécurité est un domaine en
 perpétuel mouvement et demande de se réserver du temps pour la recherche et
 développement</emphasis>! Peut-être en vous inscrivant aux newsletters comme
 "<ulink url="http://www.grc.com/securitynow.htm">Security Now!</ulink>".</para>
-        </listitem>
-      </itemizedlist>
-    </section>
+    </listitem>
+   </itemizedlist>
+  </section>
 </chapter>
 

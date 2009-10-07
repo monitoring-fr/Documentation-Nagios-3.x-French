@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="securityandperformancetuning-nagiostats" xreflabel="Using The Nagiostats Utility">
@@ -20,13 +20,13 @@ format compatible avec MRTG soit dans un format intelligible. </para>
 	</section>
 	<section>
 		<title>Instructions d'utilisation</title>
-		<para>Vous pouvez lancer l'utilitaire nagiostats avec l'option  <option>--help</option> 
+		<para>Vous pouvez lancer l'utilitaire nagiostats avec l'option <option>--help</option> 
 		pour avoir les informations d'utilisation.</para>
 	</section>
 	<section>
 		<title>Affichage intelligible</title>
 		<para>Pour une utilisation normale, lancez l'utilitaire
-<command>nagiostats</command> avec l'argument  <option>-c</option> pour sépcifier  l'emplacement de votre fichier de configuration principal
+<command>nagiostats</command> avec l'argument <option>-c</option> pour sépcifier l'emplacement de votre fichier de configuration principal
 comme ceci:<userinput>[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -c
 /usr/local/nagios/etc/nagios.cfg</userinput>
 		</para>
@@ -104,7 +104,7 @@ cette mesure particulière.</para>
 		<title>Intégration à MRTG</title>
 		<para>Vous pouvez utiliser l'outil nagiostat pour afficher diverses mesures de
 Nagios avec MRTG (ou tout autre programme compatible). Pour cela, lancez
-<command>nagiostats</command> en utilisant les arguments  <option>--mrtg</option> et <option>et --data</option> L' <option>et --data</option> option --data est utilisée pour spécifier que les statistiques sont
+<command>nagiostats</command> en utilisant les arguments <option>--mrtg</option> et <option>et --data</option> L' <option>et --data</option> option --data est utilisée pour spécifier que les statistiques sont
 destinées à être représentées graphiquement. Les valeurs possibles pour <option>et --data</option> l'option --data sont listées en lançant l'utilitaire
 <command>nagiostats</command> avec l'option <option>--help</option> --help.</para>
 		<note><para>Les informations pour utiliser l'utilitaire <command>nagiostats</command>

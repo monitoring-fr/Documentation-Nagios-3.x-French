@@ -2,86 +2,86 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="gettingstarted-monitoring-linux" xreflabel="Monitoring Linux/Unix machines">
-  <title>Supervision des machines Linux/Unix</title>
+ <title>Supervision des machines Linux/Unix</title>
 
-  <abstract>
-    <para>Ce document décrit la façon dont vous pouvez superviser les attributs et
+ <abstract>
+  <para>Ce document décrit la façon dont vous pouvez superviser les attributs et
 services "privés" de serveurs Linux/UNIX comme:</para>
 
-    <para><itemizedlist>
-        <listitem>
-          <para>Charge CPU</para>
-        </listitem>
+  <para><itemizedlist>
+    <listitem>
+     <para>Charge CPU</para>
+    </listitem>
 
-        <listitem>
-          <para>Memory usage</para>
-        </listitem>
+    <listitem>
+     <para>Memory usage</para>
+    </listitem>
 
-        <listitem>
-          <para>Utilisation disque</para>
-        </listitem>
+    <listitem>
+     <para>Utilisation disque</para>
+    </listitem>
 
-        <listitem>
-          <para>Utilisateurs connectés</para>
-        </listitem>
+    <listitem>
+     <para>Utilisateurs connectés</para>
+    </listitem>
 
-        <listitem>
-          <para>Processus en cours d'exécution</para>
-        </listitem>
+    <listitem>
+     <para>Processus en cours d'exécution</para>
+    </listitem>
 
-        <listitem>
-          <para>etc.</para>
-        </listitem>
-      </itemizedlist></para>
-  </abstract>
-  <section>
-    <title>Introduction</title>
+    <listitem>
+     <para>etc.</para>
+    </listitem>
+   </itemizedlist></para>
+ </abstract>
+ <section>
+  <title>Introduction</title>
 
-    <para>Les services rendus publiques qui sont fournis par des serveurs Linux
+  <para>Les services rendus publiques qui sont fournis par des serveurs Linux
 (&protocol-http;, &protocol-ftp;, &protocol-ssh;, &protocol-smtp;, etc.)
 peuvent être supervisés de façon simple en suivant la documentation sur
 <link linkend="gettingstarted-monitoring-publicservices">la supervision des
 services publiques disponibles.</link>.</para>
-    <note>
-      <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
+  <note>
+   <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
 le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
 exemples de configuration ci-dessous font référence aux objets de
 configuration définis dans les fichiers d'exemples
 (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
 etc.) qui ont été installé si vous avez suivi le guide rapide.</para>
-    </note>
-  </section>
-  <section>
-    <title>Vue globale</title>
-    <note>
-      <para>[Ce document n'a pas été terminé. Je vous recommande de lire la
+  </note>
+ </section>
+ <section>
+  <title>Vue globale</title>
+  <note>
+   <para>[Ce document n'a pas été terminé. Je vous recommande de lire la
 documentation sur le <link linkend="nagiosaddons-addons-nrpe">addon
 &name-nrpe;</link> pour les instructions sur la façon de superviser des
 serveurs distants Linux/Unix.]</para>
-    </note>
-    <para>Il y a plusieurs façons de superviser les attributs ou des serveurs distants
+  </note>
+  <para>Il y a plusieurs façons de superviser les attributs ou des serveurs distants
 Linux/Unix. Une est d'utiliser des clés partagées &protocol-ssh; et le
 plugin &plugin-byssh; pour exécuter de splugins sur les serveurs
 distants. Cette méthode n'est pas abordée ici, mais peut amener une grande
 charge sur le serveur de supervision si vous superviser des centaines ou
 milliers de services. La charge de travail supplémentaire pour
 créer/détruire les connexions &protocol-ssh; est la cause de ceci.</para>
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/nrpe.png" format="PNG"/>
-        </imageobject>
-      </mediaobject></informalfigure></para>
-    <para>Una autre façon commune de superviser des hôtes distants Linux/Unix est
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/nrpe.png" format="PNG"/>
+    </imageobject>
+   </mediaobject></informalfigure></para>
+  <para>Una autre façon commune de superviser des hôtes distants Linux/Unix est
 d'utiliser l' <link linkend="nagiosaddons-addons-nrpe">addon
 &name-nrpe;</link>. &name-nrpe; vous permet d'exécuter des plugins sur les
 hôtes distants Linux/Unix. C'est utile si vous devez superviser les
 attributs/ressources locaux comme l'utilisation disque, la charge CPU,
 l'utilisation mémoire, etc. sur une hôte distant.</para>
-  </section>
+ </section>
 </chapter>
 

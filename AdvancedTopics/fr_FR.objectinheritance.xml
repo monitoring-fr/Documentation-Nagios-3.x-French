@@ -2,54 +2,54 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-objectinheritance" xreflabel="Object Inheritance">
-  <title>Object Inheritance</title>
+ <title>Object Inheritance</title>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para>Cette documentation essaye d'expliquer l'hétiage d'objet et comment il peut
+  <para>Cette documentation essaye d'expliquer l'hétiage d'objet et comment il peut
 être utilisé dans vos <link
 linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.</para>
 
-    <para>Si vous êtes perdu dans le fonctionnent des récurrence et des héritage après
+  <para>Si vous êtes perdu dans le fonctionnent des récurrence et des héritage après
 avoir lu ça, aller voir le ficher de configuration d'un objet simple proposé
 par la distribution Nagios. Si ça ne vous aide toujours pas, laissez un
 message mail à la liste de diffusion <emphasis>nagios-users</emphasis> avec
 une description <emphasis>détaillé</emphasis> de votre problème.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Les bases</title>
+ <section>
+  <title>Les bases</title>
 
-    <para>Il y a trois variable qui affectent la recursion et l'héritatge qui sont
+  <para>Il y a trois variable qui affectent la recursion et l'héritatge qui sont
 présent dans toutes les définitions d'objet. Elles sont indiquées en rouge
 ci-dessous</para>
 
-    <programlisting>        define someobjecttype{
+  <programlisting>        define someobjecttype{
 		                object-specific variables ...
 		                name            template_name
 		                use             name_of_template_to_use
 		                register        [0/1]
 		                }</programlisting>
 
-    <para>La première variable est <varname>name</varname>. C'est le nom du "gabarit"
+  <para>La première variable est <varname>name</varname>. C'est le nom du "gabarit"
 qui peut être référencé dans d'autre définition d'objet, de manière à ce
 qu'ils héritent des propriétés/variables de cet objet. </para>
 
-    <para>La deuxième variable est <varname>use</varname>. C'est ici que vous
+  <para>La deuxième variable est <varname>use</varname>. C'est ici que vous
 spécifiez le nom des objets gabarit dont vous voulez héritez les
 propriétés/variables. Le nom que vous spécifiez dans cette variable doit
 être défini dans un autre gabarit d'objet nommé. (En utilisant la variable
 nom) </para>
 
-    <para>La troisième variable est <varname>register</varname>. Cette variable est
+  <para>La troisième variable est <varname>register</varname>. Cette variable est
 utilisée pour indiquer si la définition de l'objet doit être "Prise en
-compte"  par Nagios ou non. Par défaut, toutes les défintions d'objet sont
+compte" par Nagios ou non. Par défaut, toutes les défintions d'objet sont
 prise en compte. Si vous utilisez une définition d'objet partiel comme
 gabarit, vous voulez éviter qu'il soit prise en compte (Un exemple de ce
 mécanisme sera présentez plus loin). Les valeurs acceptées sont les
@@ -58,19 +58,19 @@ prendre en compte la définition de l'objet (Comportement par défaut). Cette
 variable n'est pas héritée, toutes definition d'objet (partiel) utilisé
 comme gabarits doivent explicitement avoir la directive
 <varname>register</varname> à 0. Celà évite d'avoir à surcharger une
-directective <varname>register</varname>  héritée avec la valeur 1 pour tous
+directective <varname>register</varname> héritée avec la valeur 1 pour tous
 les objets qui doivent être pris en compte. </para>
-  </section>
+ </section>
 
-  <section>
-    <title>Variables locales vs Variables héritées</title>
+ <section>
+  <title>Variables locales vs Variables héritées</title>
 
-    <para>Une chose importante à comprendre avec l'héritage c'est que les variable
+  <para>Une chose importante à comprendre avec l'héritage c'est que les variable
 <quote>local</quote> ont toujours autorité sur les variables définies dans
 un gabarit d'objet. Regardez l'exemple suivant avec deux définition d'hotes
 (toutes les variables nécessaire n'ont pas été indiqué)</para>
 
-    <programlisting>       define host{
+  <programlisting>       define host{
 		                host_name               bighost1
 		                check_command           check-host-alive
 		                notification_options    d,u,r
@@ -84,21 +84,21 @@ un gabarit d'objet. Regardez l'exemple suivant avec deux définition d'hotes
 		                use                     hosttemplate1
 		                }</programlisting>
 
-    <para>Vous remarquerez que la définition de l'hôte <emphasis>bighost1</emphasis> a
+  <para>Vous remarquerez que la définition de l'hôte <emphasis>bighost1</emphasis> a
 été défini comme ayant <emphasis>hosttemplate1</emphasis> comme nom de
 gabarit. La définition de l'hôte <emphasis>bighost2</emphasis> utilise la
 définition de <emphasis>bighost1</emphasis> comme gabarit. Une fois que
 Nagios traite les données, le resultat de la déinition de l'hôte
 <emphasis>bighost2</emphasis> sera équivalent à cette définition :</para>
 
-    <programlisting>        define host{
+  <programlisting>        define host{
 		                host_name               bighost2
 		                check_command           check-host-alive
 		                notification_options    d,u,r
 		                max_check_attempts      3
 		                }</programlisting>
 
-    <para>Vous pouvez voir que les variables <varname>check_command</varname> et
+  <para>Vous pouvez voir que les variables <varname>check_command</varname> et
 <varname>notification_options</varname> sont héritées du gabarit.( où l'hôte
 <emphasis>bighost1</emphasis> a été défini). Cependant, les variables
 <emphasis>host_name</emphasis> et <emphasis>max_check_attempts</emphasis>
@@ -107,21 +107,21 @@ localement. N'oubliez pas que les variables définies localement surchargent
 les variables qui devraient normalement être héritées du gabarit. C'est un
 concept assez facile à comprendre. </para>
 
-    <tip>
-      <para>Si vous voulez qu'une vaiable chaine local soit concaténé avec la valeur
+  <tip>
+   <para>Si vous voulez qu'une vaiable chaine local soit concaténé avec la valeur
 d'une chaine héritée, vous pouvez le faire. Pour plus de renseignements sur
 comment réaliser ça, lisez <link
 linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.</para>
-    </tip>
-  </section>
+  </tip>
+ </section>
 
-  <section>
-    <title>Enchainement d'héritage</title>
+ <section>
+  <title>Enchainement d'héritage</title>
 
-    <para>Les objets peuvent hériter des propriétés/variables de multiples niveaux des
+  <para>Les objets peuvent hériter des propriétés/variables de multiples niveaux des
 gabarits objets. Regarder l'exemple suivant : </para>
 
-    <programlisting>        define host{
+  <programlisting>        define host{
 		                host_name               bighost1
 		                check_command           check-host-alive
 		                notification_options    d,u,r
@@ -141,14 +141,14 @@ gabarits objets. Regarder l'exemple suivant : </para>
 		                use                     hosttemplate2
 		                }</programlisting>
 
-    <para>Vous remarquerez que la définition de l'hôte <emphasis>bighost3</emphasis>
+  <para>Vous remarquerez que la définition de l'hôte <emphasis>bighost3</emphasis>
 hérite de variables de la définition de l'hôte
 <emphasis>bighost2</emphasis>, qui lui-même hérite de variables de la
 définition de l'hôte <emphasis>bighost1</emphasis>. Une fois que Nagios a
 traité ces données de configuration, le resultat de la définition de ces
 hôtes est équivalent à : </para>
 
-    <programlisting>        define host{
+  <programlisting>        define host{
 		                host_name               bighost1
 		                check_command           check-host-alive
 		                notification_options    d,u,r
@@ -169,15 +169,15 @@ hôtes est équivalent à : </para>
 		                max_check_attempts      3
 		                }</programlisting>
 
-    <para>Il n'y a pas de limite de <quote>profondeur</quote> d'héritage, mais vous
+  <para>Il n'y a pas de limite de <quote>profondeur</quote> d'héritage, mais vous
 voudrez probabliment vous limitez à au plus quelques niveaux, de façon à
 garder votre santé mental. </para>
-  </section>
+ </section>
 
-  <section>
-    <title>Utiliser des définitions incomplète d'objet comme gabarit</title>
+ <section>
+  <title>Utiliser des définitions incomplète d'objet comme gabarit</title>
 
-    <para>Il est possible d'utiliser une définition incomplète d'object comme gabarit
+  <para>Il est possible d'utiliser une définition incomplète d'object comme gabarit
 afin de les utiliser dans d'autres définitions d'objets. Par définition
 "incomplète", je veux dire que toutes les variables requises pour l'objet
 n'ont pas été mises dans la définition de l'objet. Celà peut paraitre
@@ -186,7 +186,7 @@ fait recommandé de les utiliser. Pourquoi? Et bien ils servent d'ensemble
 par défaut afin d'être utilisé dans d'autre définition d'objets. Regarder
 l'exemple suivant : </para>
 
-    <programlisting>        define host{
+  <programlisting>        define host{
 		                check_command           check-host-alive
 		                notification_options    d,u,r
 		                max_check_attempts      5
@@ -206,14 +206,14 @@ l'exemple suivant : </para>
 		                use                     generichosthosttemplate
 		                }</programlisting>
 
-    <para>Notez que la 1er définition d'hotes est incomplète car il manque le variable
-requise  <varname>host_name</varname>. Nous n'avons pas besoin de définir un
+  <para>Notez que la 1er définition d'hotes est incomplète car il manque le variable
+requise <varname>host_name</varname>. Nous n'avons pas besoin de définir un
 nom d'hôte car nous voulons juste utiliser cette définition comme un gabarit
 d'hôte générique. Afin de prévenir cette defintion d'être "registered" par
 nagios comme un hôte normal, nous devons définir la variable
-<varname>register</varname>  à 0. </para>
+<varname>register</varname> à 0. </para>
 
-    <para>La définition des hôtes <emphasis>bighost1</emphasis> et
+  <para>La définition des hôtes <emphasis>bighost1</emphasis> et
 <emphasis>bighost2</emphasis> héritent leurs valeurs de la définition d'hôte
 générique. La seule variable que nous avons choisi de surcharger est la
 variable <varname>address</varname>. Celà veut dire que les deux hôtes
@@ -222,7 +222,7 @@ auront exactement les mêmes propriétés, à l'exeption de leurs variables
 Nagios aura traiter les données de configuration de l'exemple, les
 définitions d'hôtes résultants seront la même chose que si nous spécifions : </para>
 
-    <programlisting>        define host{
+  <programlisting>        define host{
 		                host_name               bighost1
 		                address                 192.168.1.3
 		                check_command           check-host-alive
@@ -238,21 +238,21 @@ définitions d'hôtes résultants seront la même chose que si nous spécifions 
 		                max_check_attempts      5
 		                }</programlisting>
 
-    <para>Enfin, utiliser une définition de gabarit pour les variables par défaut vous
+  <para>Enfin, utiliser une définition de gabarit pour les variables par défaut vous
 fera gagner beaucoup de temps. Celà vous évitera aussi beaucoup de maux de
 tête ultérieurs si vous voulez changer la valeur par défaut d'une variable
 pour un grand nombre d'hôtes. </para>
-  </section>
+ </section>
 
-  <section>
-    <title>Custom Object Variables</title>
+ <section>
+  <title>Custom Object Variables</title>
 
-    <para>Toutes <link linkend="configuringnagios-customobjectvars">variables objet
+  <para>Toutes <link linkend="configuringnagios-customobjectvars">variables objet
 pesonnalisées</link> que vous définisez dans vos definitions de gabarit
 d'hôtes, de services ou de contacts sea hérité comme n'importe quelle autre
 variable standard. Regardez l'exemple suivant : </para>
 
-    <programlisting>       define host{
+  <programlisting>       define host{
 		                _customvar1             somevalue  ; &lt;-- Custom host variable
 		                _snmp_community         public  ; &lt;-- Custom host variable
 		                name                    generichosttemplate
@@ -265,32 +265,32 @@ variable standard. Regardez l'exemple suivant : </para>
 		                use                     generichosthosttemplate
 		                }</programlisting>
 
-    <para>l'hôte <emphasis>bighost1</emphasis> va hérité de la variable personnalisée
+  <para>l'hôte <emphasis>bighost1</emphasis> va hérité de la variable personnalisée
 de l'hôte <varname>_customvar1</varname> et
 <varname>_snmp_community</varname>, aussi bien que de leur valeurs
 respectives de la définition du <emphasis>generichosttemplate</emphasis>. Le
 résultat effectif est une définition pour<emphasis>bighost1</emphasis> qui
 ressemble à ça : </para>
 
-    <programlisting>         define host{
+  <programlisting>         define host{
 		                host_name               bighost1
 		                address                 192.168.1.3
 		                _customvar1             somevalue
 		                _snmp_community         public
 		                }</programlisting>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="advancedtopics-objectinheritance-cancel_string" />Annulation de
+ <section>
+  <title><anchor id="advancedtopics-objectinheritance-cancel_string" />Annulation de
 l'héritage de la valeu de la chaine</title>
 
-    <para>Dans certain cas, vous ne voulez pas que votre défintion d'hôte, service ou
+  <para>Dans certain cas, vous ne voulez pas que votre défintion d'hôte, service ou
 contact hérite de la valeur d'une variable du gabarit qu'il référence. Dans
 ce cas, vous pouvez spécifier<emphasis
 role="bold"><quote>null</quote></emphasis> (sans les quotes) comme valeur
 pour cette variable. Regardez l'exemple suivant : </para>
 
-    <programlisting>        define host{
+  <programlisting>        define host{
 		                event_handler           my-event-handler-command
 		                name                    generichosttemplate
 		                register                        0
@@ -303,33 +303,33 @@ pour cette variable. Regardez l'exemple suivant : </para>
 		                use                     generichosthosttemplate
 		                }</programlisting>
 
-    <para>Dans ce cas, l'hôte <emphasis>bighost1</emphasis> n'héritera pas de la
+  <para>Dans ce cas, l'hôte <emphasis>bighost1</emphasis> n'héritera pas de la
 valeur de la variable <varname>event_handler</varname> qui est définie dans
 <emphasis>generichosttemplate</emphasis>. Le résultat effective de la
 définition de <emphasis>bighost1</emphasis> est : </para>
 
-    <programlisting>        define host{
+  <programlisting>        define host{
 		                host_name               bighost1
 		                address                 192.168.1.3
 		                }</programlisting>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="advancedtopics-objectinheritance-add_string" />Héritage additive
+ <section>
+  <title><anchor id="advancedtopics-objectinheritance-add_string" />Héritage additive
 de la valeur de la chaine</title>
 
-    <para>Nagios donne la préférence aux variables locales au lieu des valeurs
+  <para>Nagios donne la préférence aux variables locales au lieu des valeurs
 héritées par leurs templates. Dans la pluspart des cas, les valeurs locales
 des variables surchargent celles définies dans les gabarits. Dans certains
 cas, il peut être judicieux d'autoriser Nagios d'utiliser la valeur locale
 et héritée de la variable ensemble. </para>
 
-    <para>Cette  "héritage additif " peut être réaliser en rajoutant devant la valeur
+  <para>Cette "héritage additif " peut être réaliser en rajoutant devant la valeur
 de la variable local un signe plus (+). Cette fonctionnalité est uniquement
 accessible pour les variables standards (non-personnels) qui contiennent des
 valeurs sous forme de chaine. Regardez l'exemple suivant : </para>
 
-    <programlisting>define host{
+  <programlisting>define host{
 	                hostgroups              all-servers
 	                name                    generichosttemplate
 	                register                        0
@@ -341,154 +341,154 @@ valeurs sous forme de chaine. Regardez l'exemple suivant : </para>
 	                use                    generichosthosttemplate
 	                }</programlisting>
 
-    <para>Dans ce cas, l'hôte <emphasis>linuxserver1</emphasis> va ajouter la valeur
+  <para>Dans ce cas, l'hôte <emphasis>linuxserver1</emphasis> va ajouter la valeur
 de sa variable <varname>hostgroups</varname> local, à celui du
 <emphasis>generichosttemplate</emphasis>. Le résultat effectif de la
-définition de  <emphasis>linuxserver1</emphasis> est le suivant : </para>
+définition de <emphasis>linuxserver1</emphasis> est le suivant : </para>
 
-    <programlisting>define host{
+  <programlisting>define host{
 	                host_name                       linuxserver1
 	                hostgroups        all-servers,linux-servers,web-servers
 	                }</programlisting>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="advancedtopics-objectinheritance-implied_inheritance" />Héritage
+ <section>
+  <title><anchor id="advancedtopics-objectinheritance-implied_inheritance" />Héritage
 implicite</title>
 
-    <para>Normalement vous devez soit explicitement spécifier la valeur de la variable
+  <para>Normalement vous devez soit explicitement spécifier la valeur de la variable
 dans la définition d'un objet, ou bien l'hériter d'un gabarit. Il existe
 quelques exceptions à cette règle, où Nagios assumera que vous voulez
 utiliser une valeur qui vient en fait d'un objet lié. Par exemple,la valeurs
 de certaines variables de service vont être copiée de l'hôte auquel le
 service est associé si vous ne lui spécifiez pas le contraire. </para>
 
-    <para>Les tableaux suivants listent les variables d'objet qui seront implicitement
+  <para>Les tableaux suivants listent les variables d'objet qui seront implicitement
 héritées par des objets liés, si vous spécifiez pas explicitement leurs
 valeurs dans votre définition d'objet ou dans son gabarit. </para>
 
-    <informaltable>
-    <tgroup cols="3">
-      <colspec colname="col_0" />
+  <informaltable>
+  <tgroup cols="3">
+   <colspec colname="col_0" />
 
-      <colspec colname="col_1" />
+   <colspec colname="col_1" />
 
-      <colspec colname="col_2" />
+   <colspec colname="col_2" />
 
-      <thead>
-        <row rowsep="1">
-          <entry colsep="1" rowsep="1"><para>Object Type</para></entry>
+   <thead>
+    <row rowsep="1">
+     <entry colsep="1" rowsep="1"><para>Object Type</para></entry>
 
-          <entry colsep="1" rowsep="1"><para>Variable Objet</para></entry>
+     <entry colsep="1" rowsep="1"><para>Variable Objet</para></entry>
 
-          <entry colsep="1" rowsep="1"><para>Source implicite</para></entry>
-        </row>
+     <entry colsep="1" rowsep="1"><para>Source implicite</para></entry>
+    </row>
 		</thead>
 		<tbody>
-        <row rowsep="1">
-          <entry colsep="1" morerows="2" nameend="col_0"
-          namest="col_0" rowsep="1"><para><emphasis role="bold">Services</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1" morerows="2" nameend="col_0"
+     namest="col_0" rowsep="1"><para><emphasis role="bold">Services</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>contact_groups</emphasis></para></entry>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>contact_groups</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>contact_groups</emphasis> dans la définition d'hôtes associée</para></entry>
-        </row>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>contact_groups</emphasis> dans la définition d'hôtes associée</para></entry>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_interval</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_interval</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_interval</emphasis> in the associated host definition</para></entry>
-        </row>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_interval</emphasis> in the associated host definition</para></entry>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_period</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_period</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_period</emphasis> dans la définition d'hôtes associée</para></entry>
-        </row>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_period</emphasis> dans la définition d'hôtes associée</para></entry>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1" morerows="2" nameend="col_0"
-          namest="col_0" rowsep="1"><para><emphasis role="bold">Escalade d'hôtes</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1" morerows="2" nameend="col_0"
+     namest="col_0" rowsep="1"><para><emphasis role="bold">Escalade d'hôtes</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>contact_groups</emphasis></para></entry>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>contact_groups</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>contact_groups</emphasis> dans la définition d'hôtes associée</para></entry>
-        </row>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>contact_groups</emphasis> dans la définition d'hôtes associée</para></entry>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_interval</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_interval</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_interval</emphasis> in the associated host definition</para></entry>
-        </row>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_interval</emphasis> in the associated host definition</para></entry>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>escalation_period</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>escalation_period</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_period</emphasis> dans la définition d'hôtes associée</para></entry>
-        </row>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_period</emphasis> dans la définition d'hôtes associée</para></entry>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1" morerows="2" nameend="col_0"
-          namest="col_0" rowsep="1"><para><emphasis role="bold">Escalade de Services</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1" morerows="2" nameend="col_0"
+     namest="col_0" rowsep="1"><para><emphasis role="bold">Escalade de Services</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>contact_groups</emphasis></para></entry>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>contact_groups</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>contact_groups</emphasis>dans la définition de services associée</para></entry>
-        </row>
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>contact_groups</emphasis>dans la définition de services associée</para></entry>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_interval</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_interval</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_interval</emphasis> dans la définition de services
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_interval</emphasis> dans la définition de services
 associée</para></entry>
-        </row>
+    </row>
 
-        <row rowsep="1">
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>escalation_period</emphasis></para></entry>
+    <row rowsep="1">
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>escalation_period</emphasis></para></entry>
 
-          <entry colsep="1"
-          rowsep="1"><para><emphasis>notification_period</emphasis> dans la définition de services
+     <entry colsep="1"
+     rowsep="1"><para><emphasis>notification_period</emphasis> dans la définition de services
 associée</para></entry>
-        </row>
-      </tbody>
-    </tgroup>
-  </informaltable>
-  </section>
+    </row>
+   </tbody>
+  </tgroup>
+ </informaltable>
+ </section>
 
-  <section>
-    <title><anchor id="advancedtopics-objectinheritance-impliedescalations" /> Héritage
+ <section>
+  <title><anchor id="advancedtopics-objectinheritance-impliedescalations" /> Héritage
 Implicite/Additive dans les escalades</title>
 
-    <para>La superposition de défintion d'hôte et de service peuvent utiliser une
+  <para>La superposition de défintion d'hôte et de service peuvent utiliser une
 règle spécial qui combine les fonctionnalités de l'héritage implicite et
 explicite. Si la superposition 1) n'hérite pas la valeurs de leurs directive
 <varname>contact_groups</varname> ou <varname>contacts</varname> d'un autre
 gabarit et 2) leurs directives <varname>contact_groups</varname> or
 <varname>contacts</varname> commencent avec un signe (+), alors les valeurs
 des directive <varname>contact_groups</varname> or
-<varname>contacts</varname> de  leurs défintions d'hôte ou service seront
+<varname>contacts</varname> de leurs défintions d'hôte ou service seront
 utilisé avec une logique d'héritage additive. </para>
 
-    <para>Perdu ? Voici un exemple :</para>
+  <para>Perdu ? Voici un exemple :</para>
 
-    <programlisting>define host{
+  <programlisting>define host{
 	        name            linux-server
 	        contact_groups  linux-admins
 	        ...
@@ -500,56 +500,56 @@ utilisé avec une logique d'héritage additive. </para>
 	        ...
 	        }</programlisting>
 
-    <para>C'est un équivalent beaucoup plus simple que : </para>
+  <para>C'est un équivalent beaucoup plus simple que : </para>
 
-    <programlisting>define hostescalation{
+  <programlisting>define hostescalation{
 	        host_name               linux-server
 	        contact_groups  linux-admins,management
 	        ...
 	        }</programlisting>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="advancedtopics-objectinheritance-multiple_templates" />Multiples
+ <section>
+  <title><anchor id="advancedtopics-objectinheritance-multiple_templates" />Multiples
 sources d'héritage</title>
 
-    <para>Jusqu'à maintenant, tous les exemples d'héritage présentait  l'héritage de
+  <para>Jusqu'à maintenant, tous les exemples d'héritage présentait l'héritage de
 variables/valeurs à partir d'une seul source. Vous pouvez aussi hériter des
-variables/valeurs de sources multiples  pour réaliser des configurations
+variables/valeurs de sources multiples pour réaliser des configurations
 plus complexe, comme celà est présentées en dessous. </para>
 
-    <informaltable frame="all">
-      <tgroup cols="2">
-        <tbody>
-          <row>
-            <entry><para># Generic host template</para> <programlisting>define host{
-	        name                  	generic-host
+  <informaltable frame="all">
+   <tgroup cols="2">
+    <tbody>
+     <row>
+      <entry><para># Generic host template</para> <programlisting>define host{
+	        name                 	generic-host
 	        active_checks_enabled 	1
 	        check_interval          10 
-                ...
+          ...
         	register                0
         	}</programlisting> <para># Development web server template</para><programlisting>define host{       
-            name                    development-server       
-            check_interval          15  
-            notification_options    d,u,r
+      name                    development-server       
+      check_interval          15  
+      notification_options    d,u,r
         	...
-            register                        0    
-              }</programlisting> <para># Development web server</para>
-            <programlisting>define host{
-	        use                    generic-host,development-server
-	        host_name              devweb1
+          register                        0    
+        }</programlisting> <para># Development web server</para>
+      <programlisting>define host{
+	        use                   generic-host,development-server
+	        host_name            devweb1
 	       ...     
-            }</programlisting></entry>
+      }</programlisting></entry>
 
-            <entry><para> <inlinemediaobject> <imageobject> <imagedata
+      <entry><para> <inlinemediaobject> <imageobject> <imagedata
 fileref="images/multiple-templates1.png" format="PNG"/> </imageobject>
 </inlinemediaobject></para></entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
+     </row>
+    </tbody>
+   </tgroup>
+  </informaltable>
 
-    <para>Dans l'exemple ci-dessous, <varname>devweb1</varname> hérite de
+  <para>Dans l'exemple ci-dessous, <varname>devweb1</varname> hérite de
 variables/valeurs provenant de deux sources :
 <varname>generic-host</varname> et
 <varname>development-server</varname>. Vous noterez qu'une variable
@@ -560,21 +560,21 @@ directives de <varname>devweb1</varname>, sa valeur pour la variable
 <varname>devweb1</varname>. Après l'héritage, la définition effective de
 <varname>devweb1</varname> est la suivante : </para>
 
-    <para># Development web server</para>
+  <para># Development web server</para>
 
-    <programlisting>define host{
+  <programlisting>define host{
 	        host_name               devweb1
 	        active_checks_enabled   1
 	        check_interval          10
 	        notification_options    d,u,r
 	        ...
 	        }</programlisting>
-  </section>
+ </section>
 
-  <section>
-    <title>Priorité avec des sources d'héritage multiple</title>
+ <section>
+  <title>Priorité avec des sources d'héritage multiple</title>
 
-    <para>Quand vous utilisez de multiples sources d'héritage, il est très important
+  <para>Quand vous utilisez de multiples sources d'héritage, il est très important
 de savoir comment Nagios gère les variables qui sont définies dans ces
 sources multiples. Dans ces cas, Nagios utilisera les variables/valeurs de
 la première source qui est spécifié dans la directive à utiliser. Puisque
@@ -582,12 +582,12 @@ les sources d'héritage peuvent elles-même hériter de variables/valeurs
 provement d'une ou plusieurs sources, il peut devenir très compliqué de
 trouver quelle paire de variable/valeur aura la priorité. </para>
 
-    <informaltable frame="all">
-      <tgroup cols="2">
-        <tbody>
-          <row>
-            <entry><para>Regardez la définition d'hôte suivant qui se réfère à trois gabarits. </para><para># Development web server
-            <programlisting>define host{
+  <informaltable frame="all">
+   <tgroup cols="2">
+    <tbody>
+     <row>
+      <entry><para>Regardez la définition d'hôte suivant qui se réfère à trois gabarits. </para><para># Development web server
+      <programlisting>define host{
         use        1, 4, 8
         host_name  devweb1
 		...	
@@ -596,13 +596,13 @@ plusieurs autre gabarits, les règles de priorité sont montrées à droite. </p
 les choses fonctionnent dans une situation d'héritage complexe comme
 celle-ci :-)</para></entry>
 
-            <entry><para> <inlinemediaobject> <imageobject> <imagedata
+      <entry><para> <inlinemediaobject> <imageobject> <imagedata
 fileref="images/multiple-templates2.png" format="PNG"/> </imageobject>
 </inlinemediaobject></para></entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
-  </section>
+     </row>
+    </tbody>
+   </tgroup>
+  </informaltable>
+ </section>
 </chapter>
 

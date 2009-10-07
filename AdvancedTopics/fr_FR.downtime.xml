@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-downtime" xreflabel="Scheduled Downtime">
@@ -73,7 +73,7 @@ voulez peut-être programmer une maintenance déclanchés pour tous les hôtes
 	<section>
 		<title>Comment les maintenances programmées affectent les notifications</title>
 		<para>Quand un hôte ou un service est dans une période de maitenance programmée,
-Nagios n'autorisera pas l'envoi de notifcations  pour cet hôte ou
+Nagios n'autorisera pas l'envoi de notifcations pour cet hôte ou
 service. Cependant une notification de "DOWNTIMESTART" sera envoyé pour cet
 hôte ou service, qui sert à indiquer aux administrateurs qu'ils ne
 receveront plus d'alerte pour cet hôte/service.</para>
@@ -83,7 +83,7 @@ l'envoit des notifications pour l'hôte ou le service.. Une notification de
 maintenance programmée est terminé, et qu'ils receveront les alertes de
 nouveau. </para>
 		<para>Si une maintenance programmée est annulé prématurément (avant qu'il expire)
-une notification de  "DOWNTIMECANCELLED" sera envoyé aux administrateurs
+une notification de "DOWNTIMECANCELLED" sera envoyé aux administrateurs
 concernés. </para>
 	</section>
 	<section>
@@ -119,7 +119,7 @@ le mardi matin. </para>
 			</listitem>
 		</orderedlist>
 		<para>Si vous programmez des periodes de maintenance qui se superposent pour un
-hôte ou un service (Dans ce cas les periodes étaient  7:40pm-9:30pm et
+hôte ou un service (Dans ce cas les periodes étaient 7:40pm-9:30pm et
 9:20pm-1:30am), Nagios attendra jusqu'à la fin de la dernière periode avant
 d'autoriser de nouveau l'envoi des notifications pour cet hôte ou
 service. Dans cette exemple, les notifications aurait été supprimées pour

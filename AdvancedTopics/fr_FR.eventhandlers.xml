@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-eventhandlers" xreflabel="Event Handlers">
@@ -11,7 +11,7 @@
 	<section>
 		<title>Introduction</title>
 		<para>
-		        <inlinemediaobject> <imageobject> <imagedata
+		    <inlinemediaobject> <imageobject> <imagedata
 fileref="images/eventhandlers.png" format="PNG"/> </imageobject>
 </inlinemediaobject> Les gestionnaires d'événements sont des commandes
 optionnelles qui sont exécutées à chaque fois qu'un changement d'état d'un
@@ -78,7 +78,7 @@ linkend="thebasics-statetypes">ici</link>.</para>
 			</listitem>
 		</itemizedlist>
 		<para>Les gestionnaires d'événements globaux sont exécutés à chaque changement
-d'état d'hôte ou de service, immédiatement avant  d'exécuter n'importe quel
+d'état d'hôte ou de service, immédiatement avant d'exécuter n'importe quel
 gestionnaire d'événements spécifique d'hôte ou de service. Vous pouvez
 préciser les commandes de gestionnaires d'événements globaux en utilisant
 les options <link
@@ -98,14 +98,14 @@ l'exécution du gestionnaire global (optionnel) d'hôtes et de services.</para>
 	<section>
 		<title>Activation des gestionnaires d'événements</title>
 		<para>Les gestionnaires d'événements peuvent être activés et désactivés au niveau
-général du programme en utilisant  <link
+général du programme en utilisant <link
 linkend="configuringnagios-configmain-enable_event_handlers">enable_event_handlers</link>
 dans votre fichier de configuration principal.</para>
 		<para>Les gestionnaires d'événements spécifiques aux hôtes et services peuvent
 être activés et désactivés en utilisant les directives
 <varname>event_handler_enabled</varname> dans vos définitions d'<link
 linkend="configuringnagios-objectdefinitions-host">hôtes</link> et de <link
-linkend="configuringnagios-objectdefinitions-service">services</link>.  Les
+linkend="configuringnagios-objectdefinitions-service">services</link>. Les
 gestionnaires d'événements spécifiques aux hôtes et services ne peuvent pas
 être exécutés si l'option globale <link
 linkend="configuringnagios-configmain-enable_event_handlers">enable_event_handlers</link>

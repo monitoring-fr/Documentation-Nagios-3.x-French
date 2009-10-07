@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-objecttricks" xreflabel="Time-Saving Tricks For Object Definitions">
@@ -104,9 +104,9 @@ HOSTN. Toutes les instances du service SOMESERVICE devraient être identiques
 d'essais, la même période de notification).</para>
 			<programlisting>
 define service{
-    host_name                HOST1,HOST2,HOST3,...,HOSTN
-    service_description      SOMESERVICE
-    other service directives ...
+  host_name        HOST1,HOST2,HOST3,...,HOSTN
+  service_description   SOMESERVICE
+  other service directives ...
 }
 			</programlisting>
 		</section>
@@ -123,9 +123,9 @@ SOMESERVICE seront identiques (c.-à-d. auront la même commande de contrôle,
 le même nombre maximum d'essais, la même période de notification, etc.). </para>
 			<programlisting>
 define service{
-    hostgroup_name          HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN
-    service_description     SOMESERVICE
-    other service directives ...
+  hostgroup_name     HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN
+  service_description   SOMESERVICE
+  other service directives ...
 }
 			</programlisting>
 		</section>
@@ -140,9 +140,9 @@ SOMESERVICE seront identiques (c.-à-d. auront la même commande de contrôle,
 le même nombre maximum d'essais, la même période de notification, etc.). </para>
 			<programlisting>
 define service{
-    host_name               *
-    service_description     SOMESERVICE
-    other service directives ...
+  host_name        *
+  service_description   SOMESERVICE
+  other service directives ...
 }
 			</programlisting>
 		</section>
@@ -153,10 +153,10 @@ d'hôtes, mais désirez exclure certains hôtes de la définition, vous pouvez
 le faire en précédant l'hôte ou le groupe d'hôte du symbole !.</para>
 			<programlisting>
 define service{
-    host_name             HOST1,HOST2,!HOST3,!HOST4,...,HOSTN
-    hostgroup_name        HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN
-    service_description   SOMESERVICE
-    other service directives ...
+  host_name       HOST1,HOST2,!HOST3,!HOST4,...,HOSTN
+  hostgroup_name    HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN
+  service_description  SOMESERVICE
+  other service directives ...
 }
 			</programlisting>
 		</section>
@@ -178,9 +178,9 @@ créer une escalade pour les services appelés SOMESERVICE sur les hôtes HOST1
 notification, etc.). .</para>
 			<programlisting>
 define serviceescalation{
-    host_name               HOST1,HOST2,HOST3,...,HOSTN
-    service_description     SOMESERVICE
-    other escalation directives ...
+  host_name        HOST1,HOST2,HOST3,...,HOSTN
+  service_description   SOMESERVICE
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -196,9 +196,9 @@ service seront identiques (c.-à-d. auront le même groupe de contact, le même
 intervalle de notification, etc.). </para>
 			<programlisting>
 define serviceescalation{
-    hostgroup_name          HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN
-    service_description     SOMESERVICE
-    other escalation directives ...
+  hostgroup_name     HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN
+  service_description   SOMESERVICE
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -215,9 +215,9 @@ identiques (c.-à-d. auront le même groupe de contact, le même intervalle de
 notification, etc.). </para>
 			<programlisting>
 define serviceescalation{
-    host_name               *
-    service_description     SOMESERVICE
-    other escalation directives ...
+  host_name        *
+  service_description   SOMESERVICE
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -229,10 +229,10 @@ définition, vous pouvez le faire en précédant l'hôte ou le groupe d'hôte du
 symbole !.</para>
 			<programlisting>
 define serviceescalation{
-    host_name             HOST1,HOST2,!HOST3,!HOST4,...,HOSTN
-    hostgroup_name        HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN
-    service_description   SOMESERVICE
-    other escalation directives ...
+  host_name       HOST1,HOST2,!HOST3,!HOST4,...,HOSTN
+  hostgroup_name    HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN
+  service_description  SOMESERVICE
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -253,9 +253,9 @@ va créer une escalade de service pour tous les services définis dans vos
 fichiers de configuration.</para>
 			<programlisting>
 define serviceescalation{
-    host_name               HOST1
-    service_description     *
-    other escalation directives ...
+  host_name        HOST1
+  service_description   *
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -271,9 +271,9 @@ les instances de l'escalade de service seront identiques (c.-à-d. auront le
 même groupe de contact, le même intervalle de notification, etc.). </para>
 			<programlisting>
 define serviceescalation{
-    host_name               HOST1
-    service_description     SERVICE1,SERVICE2,...,SERVICEN
-    other escalation directives ...
+  host_name        HOST1
+  service_description   SERVICE1,SERVICE2,...,SERVICEN
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -288,8 +288,8 @@ seront identiques (c.-à-d. auront le même groupe de contact, le même
 intervalle de notification, etc.). </para>
 			<programlisting>
 define serviceescalation{
-    servicegroup_name          SERVICEGROUP1,SERVICEGROUP2,...,SERVICEGROUPN
-    other escalation directives ...
+  servicegroup_name     SERVICEGROUP1,SERVICEGROUP2,...,SERVICEGROUPN
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -312,11 +312,11 @@ seront identiques, mis à part les noms d'hôtes (c.-à-d. auront le même
 critère d'échec de notification, etc.). </para>
 			<programlisting>
 define servicedependency{
-    host_name                       HOST1,HOST2
-    service_description             SERVICE1
-    dependent_host_name             HOST3,HOST4
-    dependent_service_description   SERVICE2
-    other dependency directives ...
+  host_name            HOST1,HOST2
+  service_description       SERVICE1
+  dependent_host_name       HOST3,HOST4
+  dependent_service_description  SERVICE2
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -336,11 +336,11 @@ dépendance de service seront identiques, mis à part les noms d'hôtes
 (c.-à-d. auront le même critère d'échec de notification, etc.). </para>
 			<programlisting>
 define servicedependency{
-    hostgroup_name                  HOSTGROUP1,HOSTGROUP2
-    service_description             SERVICE1
-    dependent_hostgroup_name        HOSTGROUP3,HOSTGROUP4
-    dependent_service_description   SERVICE2
-    other dependency directives ...
+  hostgroup_name         HOSTGROUP1,HOSTGROUP2
+  service_description       SERVICE1
+  dependent_hostgroup_name    HOSTGROUP3,HOSTGROUP4
+  dependent_service_description  SERVICE2
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -348,18 +348,18 @@ define servicedependency{
 			<title>Tous les services d'un même hôte :</title>
 			<para>Si vous voulez créer des dépendances de service pour tous les services
 assignés à un hôte précis, vous pouvez utiliser un caractère de remplacement
-dans les paramètres  <varname>service_description</varname> et/ou
+dans les paramètres <varname>service_description</varname> et/ou
 <varname>dependent_service_description</varname>. Dans l'exemple ci-dessous,
 tous les services de l'hôte HOST2 seront dépendants de tous les services de
 l'hôte HOST1. Toutes les instances de la dépendance de service seront
 identiques (c.-à-d. auront le même critère d'échec de notification, etc.). </para>
 			<programlisting>
 define servicedependency{
-    host_name                       HOST1
-    service_description             *
-    dependent_host_name             HOST2
-    dependent_service_description   *
-    other dependency directives ...
+  host_name            HOST1
+  service_description       *
+  dependent_host_name       HOST2
+  dependent_service_description  *
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -371,11 +371,11 @@ service dans les paramètres <varname>service_description</varname> et/ou
 <varname>dependent_service_description</varname> comme suit : </para>
 			<programlisting>
 define servicedependency{
-    host_name                       HOST1
-    service_description             SERVICE1,SERVICE2,...,SERVICEN
-    dependent_host_name             HOST2
-    dependent_service_description   SERVICE1,SERVICE2,...,SERVICEN
-    other dependency directives ...
+  host_name            HOST1
+  service_description       SERVICE1,SERVICE2,...,SERVICEN
+  dependent_host_name       HOST2
+  dependent_service_description  SERVICE1,SERVICE2,...,SERVICEN
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -387,9 +387,9 @@ paramètres <varname>servicegroup_name</varname> et/ou
 <varname>dependent_servicegroup_name</varname> comme suit : </para>
 			<programlisting>
 define servicedependency{
-    servicegroup_name               SERVICEGROUP1,SERVICEGROUP2,...,SERVICEGROUPN
-    dependent_servicegroup_name     SERVICEGROUP3,SERVICEGROUP4,...SERVICEGROUPN
-    other dependency directives ...
+  servicegroup_name        SERVICEGROUP1,SERVICEGROUP2,...,SERVICEGROUPN
+  dependent_servicegroup_name   SERVICEGROUP3,SERVICEGROUP4,...SERVICEGROUPN
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -400,7 +400,7 @@ sur le même hôte :</title>
 			<para>Si vous voulez créer des dépendances de service pour plusieurs services
 dépendants de services sur le même hôte, laissez les paramètres
 <varname>dependent_host_name</varname> et
-<varname>dependent_hostgroup_name</varname> vides.  L'exemple ci-dessous
+<varname>dependent_hostgroup_name</varname> vides. L'exemple ci-dessous
 part du principe que les hôtes HOST1 et HOST2 ont un minimum de quatre
 services associés avec eux : SERVICE1, SERVICE2, SERVICE3, et SERVICE4. Dans
 cet exemple, SERVICE3 et SERVICE4 sur HOST1 seront dépendants à la fois de
@@ -408,10 +408,10 @@ SERVICE1 et SERVICE2 sur HOST1. De façon identique, SERVICE3 et SERVICE4 sur
 HOST2 seront dépendants à la fois de SERVICE1 et SERVICE2 sur HOST2.</para>
 			<programlisting>
 define servicedependency{
-    host_name                       HOST1,HOST2
-    service_description             SERVICE1,SERVICE2
-    dependent_service_description   SERVICE3,SERVICE4
-    other dependency directives ...
+  host_name            HOST1,HOST2
+  service_description       SERVICE1,SERVICE2
+  dependent_service_description  SERVICE3,SERVICE4
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -431,8 +431,8 @@ de l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de
 contacts, le même intervalle de notification, etc.). </para>
 			<programlisting>
 define hostescalation{
-    host_name              HOST1,HOST2,HOST3,...,HOSTN
-    other escalation directives ...
+  host_name       HOST1,HOST2,HOST3,...,HOSTN
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -447,8 +447,8 @@ HOSTGROUPN. Toutes les instances de l'escalade d'hôte seront identiques
 notification, etc.). </para>
 			<programlisting>
 define hostescalation{
-    hostgroup_name            HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN
-    other escalation directives ...
+  hostgroup_name      HOSTGROUP1,HOSTGROUP2,...,HOSTGROUPN
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -463,8 +463,8 @@ l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de
 contacts, le même intervalle de notification, etc.). </para>
 			<programlisting>
 define hostescalation{
-    host_name               *
-    other escalation directives ...
+  host_name        *
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -475,9 +475,9 @@ groupes d'hôtes, mais désirez exclure certains hôtes de la définition, vous
 pouvez le faire en précédant l'hôte ou le groupe d'hôte du symbole !.</para>
 			<programlisting>
 define hostescalation{
-    host_name             HOST1,HOST2,!HOST3,!HOST4,...,HOSTN
-    hostgroup_name        HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN
-    other escalation directives ...
+  host_name       HOST1,HOST2,!HOST3,!HOST4,...,HOSTN
+  hostgroup_name    HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,...,HOSTGROUPN
+  other escalation directives ...
 }
 			</programlisting>
 		</section>
@@ -500,9 +500,9 @@ l'exception des noms d'hôtes (c.-à-d. auront le même critère d'échec de
 notification, etc.). </para>
 			<programlisting>
 define hostdependency{
-    host_name               HOST1,HOST2
-    dependent_host_name     HOST3,HOST4,HOST5
-    other dependency directives ...
+  host_name        HOST1,HOST2
+  dependent_host_name   HOST3,HOST4,HOST5
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -518,9 +518,9 @@ instances de la dépendance d'hôte seront identiques, à l'exception des noms
 d'hôtes (c.-à-d. auront le même critère d'échec de notification, etc.). </para>
 			<programlisting>
 define hostdependency{
-    hostgroup_name                  HOSTGROUP1,HOSTGROUP2
-    dependent_hostgroup_name        HOSTGROUP3,HOSTGROUP4
-    other dependency directives ...
+  hostgroup_name         HOSTGROUP1,HOSTGROUP2
+  dependent_hostgroup_name    HOSTGROUP3,HOSTGROUP4
+  other dependency directives ...
 }
 			</programlisting>
 		</section>
@@ -537,9 +537,9 @@ ci-dessous créera un groupe d'hôtes appelé HOSTGROUP1 contenant tous les
 hôtes définis dans vos fichiers de configuration. </para>
 			<programlisting>
 define hostgroup{
-    hostgroup_name          HOSTGROUP1
-    members                 *
-    other hostgroup directives ...
+  hostgroup_name     HOSTGROUP1
+  members         *
+  other hostgroup directives ...
 }
 			</programlisting>
 		</section>

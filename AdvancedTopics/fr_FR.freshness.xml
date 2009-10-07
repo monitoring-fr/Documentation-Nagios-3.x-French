@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-freshness" xreflabel="Service and Host Freshness Checks">
@@ -16,7 +16,7 @@ services. Cette fonctionnalité est utile pour vous assurer que des contrôles
 passifs sont reçus à la fréquence que vous souhaitez.</para>
 		<para>Le but du contrôle de <quote>fraîcheur</quote> est de s'assurer que les
 contrôles d'hôte et de service sont soumis régulièrement de <link
-linkend="thebasics-passivechecks">manière passive</link>.  Ceci est très
+linkend="thebasics-passivechecks">manière passive</link>. Ceci est très
 utile dans les environnements de supervision <link
 linkend="advancedtopics-distributed">distribué</link> ou <link
 linkend="advancedtopics-redundancy">hautement disponible</link>.</para>
@@ -24,7 +24,7 @@ linkend="advancedtopics-redundancy">hautement disponible</link>.</para>
 	<section>
 		<title>Comment fonctionne le contrôle de la fraîcheur ?</title>
 		<para>
-			        <inlinemediaobject> <imageobject> <imagedata fileref="images/freshness.png"
+			    <inlinemediaobject> <imageobject> <imagedata fileref="images/freshness.png"
 format="PNG"/> </imageobject> </inlinemediaobject> Nagios contrôle
 régulièrement la "fraîcheur" des résultats de tous les services dont le
 contrôle de fraîcheur est activé.</para>
@@ -133,15 +133,15 @@ utilisant des contrôles passifs. Le contrôle de fraîcheur est activé et le
 seuil de fraîcheur a été positionné à 26 heures. C'est un peu plus de 24
 heures parce que la durée des travaux de sauvegarde varie selon les jours
 (en fonction du volume de données à sauvegarder, de l'encombrement du
-réseau, etc.). La  <code>no-backup-report</code> commande est exécutée seulement si les résultats du service sont considérés
-comme périmés. La définition de la  <code>no-backup-report</code> commande pourrait ressembler à ceci...</para>
+réseau, etc.). La <code>no-backup-report</code> commande est exécutée seulement si les résultats du service sont considérés
+comme périmés. La définition de la <code>no-backup-report</code> commande pourrait ressembler à ceci...</para>
 		<programlisting>define command{
 		        command_name    no-backup-report
 		        command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Results of backup job were not reported!"
 		        }</programlisting>
-		<para>Si Nagios détecte que les résultats du service sont périmés, il va lancer la  
+		<para>Si Nagios détecte que les résultats du service sont périmés, il va lancer la 
 		<code>no-backup-report</code> commande comme un contrôle actif de service. Cela exécute le plugin
-&plugin-dummy;  qui retourne un état critique à Nagios. Le service passe en
+&plugin-dummy; qui retourne un état critique à Nagios. Le service passe en
 état critique (s'il n'y était pas déjà) et quelqu'un sera probablement
 notifié du problème.</para>
 	</section>

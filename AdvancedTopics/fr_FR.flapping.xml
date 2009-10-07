@@ -2,29 +2,29 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-flapping"
-         xreflabel="Detection and Handling of State Flapping">
-  <title>Détection et gestion de l'oscillation d'état</title>
+     xreflabel="Detection and Handling of State Flapping">
+ <title>Détection et gestion de l'oscillation d'état</title>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para>Nagios® supporte la détection optionnelle des hôtes et des services qui
+  <para>Nagios® supporte la détection optionnelle des hôtes et des services qui
 "oscillent" [NdT: ou bagotent]. L'oscillation intervient quand un service ou
 un hôte change d'état trop fréquemment, provoquant une tempête de
 notifications de problèmes et de rétablissement. L'oscillation peut être
 l'indice de problèmes de configuration (i.e. des seuils positionnés trop
 bas) ou de vrais problèmes sur le réseau.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Comment la détection d'oscillation fonctionne-t-elle ?</title>
+ <section>
+  <title>Comment la détection d'oscillation fonctionne-t-elle ?</title>
 
-    <para>Avant d'aller plus loin, permettez-moi de signaler qu'implémenter la
+  <para>Avant d'aller plus loin, permettez-moi de signaler qu'implémenter la
 détection de l'oscillation a été assez difficile. Comment déterminer ce que
 "trop fréquemment" veut dire concernant les changements d'état de tel hôte
 ou service ? La première fois que je me suis penché sur la détection de
@@ -34,59 +34,59 @@ qui pourrait être une solution raisonnable. Les méthodes utilisées par
 Nagios® pour détecter l'oscillation de l'état des hôtes et des services sont
 décrites ci-dessous…</para>
 
-    <para>Chaque fois d'un contrôle de service résulte dans un état hard ou un état de
+  <para>Chaque fois d'un contrôle de service résulte dans un état hard ou un état de
 rétablissement soft, Nagios® contrôle si le service a commencé ou arrêté
 d'osciller.</para>
 
-    <itemizedlist>
-      <listitem>
-        <para> Il le fait en stockant les 21 derniers résultats de contrôle de service
+  <itemizedlist>
+   <listitem>
+    <para> Il le fait en stockant les 21 derniers résultats de contrôle de service
 dans un tableau. Les résultats les plus récents écrasent les anciens dans le
 tableau.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Le contenu du tableau d'historique des états est parcouru (depuis le plus
+   <listitem>
+    <para>Le contenu du tableau d'historique des états est parcouru (depuis le plus
 ancien résultat jusqu'au plus récent) pour déterminer le pourcentage total
 de changements d'état survenus durant les 21 derniers contrôles du service.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>En utilisant des pourcentages d'états de changements pour déterminer des
+   <listitem>
+    <para>En utilisant des pourcentages d'états de changements pour déterminer des
 changements états transitoires pour les hôtes et services </para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>En comprant la valeur du pourcentage aux seuils d'oscillations inférieurs et
+   <listitem>
+    <para>En comprant la valeur du pourcentage aux seuils d'oscillations inférieurs et
 supérieurs</para>
-      </listitem>
-    </itemizedlist>
+   </listitem>
+  </itemizedlist>
 
-    <para>Un hôte ou un service est déclaré comme oscillant lorsque son pourcentage
+  <para>Un hôte ou un service est déclaré comme oscillant lorsque son pourcentage
 dépasse la valeur du seuil supérieur d'oscillation.</para>
 
-    <para>Un hôte ou un service est déclaré comme normal lorsque son pourcentage est
+  <para>Un hôte ou un service est déclaré comme normal lorsque son pourcentage est
 descendu en dessous de la valeur du seuil inférieur d'oscillation.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Exemple</title>
+ <section>
+  <title>Exemple</title>
 
-    <para>Laissez vous décrire plus en détail le fonctionnement de la détection
+  <para>Laissez vous décrire plus en détail le fonctionnement de la détection
 d'oscillation avec les services...</para>
 
-    <para>L'image suivante montre un tableau chronologique d'états de service. Les
+  <para>L'image suivante montre un tableau chronologique d'états de service. Les
 états OK sont en vert, les WARNING en jaune, les CRITICAL en rouge, et les
 UNKNOWN en orange. Des flèches bleues marquent les moments où des
 changements d'états sont survenus.</para>
 
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/statetransitions.png" format="PNG"/>
-        </imageobject>
-      </mediaobject></informalfigure></para>
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/statetransitions.png" format="PNG"/>
+    </imageobject>
+   </mediaobject></informalfigure></para>
 
-    <para>Le contenu du tableau d'historique des états est parcouru (depuis le plus
+  <para>Le contenu du tableau d'historique des états est parcouru (depuis le plus
 ancien résultat jusqu'au plus récent) pour déterminer le pourcentage total
 de changements d'état survenus durant les 21 derniers contrôles du
 service. Un changement d'état survient quand un état archivé est différent
@@ -94,14 +94,14 @@ de l'état archivé qui le précède immédiatement dans le tableau. Comme nous
 conservons les résultats des 21 derniers contrôles de service dans le
 tableau, il y a 20 changements d'état possibles.</para>
 
-    <para>La détection d'oscillation utilise une logique qui est basé sur un
+  <para>La détection d'oscillation utilise une logique qui est basé sur un
 pourcentage de changement d'état pour le service. C'est une mesure de
 variation du service. Les services qui ne changent jamais d'état auront 0%
 de changement, quant aux services qui n'arrêteront pas de changer d'état, il
 approcheront du 100%. Bons nombres de services auront un pourcentage se
 situant entre ces 2 valeurs. </para>
 
-    <para>Il paraît évident que les changements d'état les plus récent ont plus de
+  <para>Il paraît évident que les changements d'état les plus récent ont plus de
 poids que les anciens, si bien qu'il nous faut recalculer le pourcentage
 total de changements d'état du service selon une espèce de courbe… Pour
 simplifier, j'ai décidé d'utiliser un rapport linéaire entre le temps et la
@@ -112,13 +112,13 @@ suivante montre combien le poids des changements d'état récents est
 supérieur à celui des anciens lors du calcul du pourcentage total de
 changements d'état d'un service particulier. </para>
 
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/statetransitions2.png" format="PNG"/>
-        </imageobject>
-      </mediaobject></informalfigure></para>
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/statetransitions2.png" format="PNG"/>
+    </imageobject>
+   </mediaobject></informalfigure></para>
 
-    <para>Prenons un rapide exemple de détection de l'oscillation. L'image ci-dessus
+  <para>Prenons un rapide exemple de détection de l'oscillation. L'image ci-dessus
 montre le tableau d'historique des résultats de contrôle d'un service
 particulier. Les résultats les plus anciens sont à gauche et les plus
 récents à droite. Nous voyons dans cet exemple qu'il y a eu au total 7
@@ -126,233 +126,233 @@ changements d'état (en t3, t4, t5, t9, t12, t16, et t19). Sans pondération
 des changements d'état en fonction du temps, cela nous donnerait un total de
 35% de changements d'état:</para>
 
-    <para>(7 changements d'état / un maximum possible de 20) * 100 = 35%</para>
+  <para>(7 changements d'état / un maximum possible de 20) * 100 = 35%</para>
 
-    <para> Quand on applique la pondération en fonction du moment d'apparition, le
+  <para> Quand on applique la pondération en fonction du moment d'apparition, le
 pourcentage est de moins de 35%. C'est logique dans la mesure où la plupart
 des changements d'états sont plutôt anciens. Disons que le pourcentage
 pondéré est finalement de 31%…</para>
 
-    <para>Ainsi donc, que signifient 31% de changements d'états ?</para>
+  <para>Ainsi donc, que signifient 31% de changements d'états ?</para>
 
-    <itemizedlist>
-      <listitem>
-        <para> Hé bien, si le service n'oscillait pas auparavant et que 31% est supérieur
+  <itemizedlist>
+   <listitem>
+    <para> Hé bien, si le service n'oscillait pas auparavant et que 31% est supérieur
 ou égal à la valeur spécifiée par le paramètre high_service_flap_threshold
 de la définition du service, Nagios® considère que le service vient de
 commencer à osciller.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Si le service oscillait  auparavant et que 31% est inférieur ou égal à la
-valeur spécifiée par le paramètre low_service_flap_threshold  de la
+   <listitem>
+    <para>Si le service oscillait auparavant et que 31% est inférieur ou égal à la
+valeur spécifiée par le paramètre low_service_flap_threshold de la
 définition du service, Nagios® considère que le service vient de s'arrêter
 d'osciller.</para>
-      </listitem>
-    </itemizedlist>
+   </listitem>
+  </itemizedlist>
 
-    <para>Si aucune de ces deux conditions n'est remplie, Nagios® ne fait rien de plus
+  <para>Si aucune de ces deux conditions n'est remplie, Nagios® ne fait rien de plus
 concernant le service, car soit il n'oscille pas, soit il oscille toujours…</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Détection de l'oscillation pour les services</title>
+ <section>
+  <title>Détection de l'oscillation pour les services</title>
 
-    <para>Nagios regarde si le service est en état d'oscillation avant d'exécuter un
+  <para>Nagios regarde si le service est en état d'oscillation avant d'exécuter un
 côntrôle (actif comme passif).</para>
 
-    <para>Le principe pour la détection d'oscillation des services fonctionnent de la
+  <para>Le principe pour la détection d'oscillation des services fonctionnent de la
 manière qu'expliqué ci-dessus.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Détection de l'oscillation d'hôte</title>
+ <section>
+  <title>Détection de l'oscillation d'hôte</title>
 
-    <para>La détection de l'oscillation d'hôte fonctionne de manière similaire à la
+  <para>La détection de l'oscillation d'hôte fonctionne de manière similaire à la
 détection d'oscillation de service, avec une différence importante : Nagios®
 essaiera de déterminer: si un hôte oscille à chaque contrôle de l'état de
 l'hôte et à chaque contrôle d'un service associé à cet hôte. </para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Si un hôte est contrôlé (activement ou passivement)</para>
-      </listitem>
+  <itemizedlist>
+   <listitem>
+    <para>Si un hôte est contrôlé (activement ou passivement)</para>
+   </listitem>
 
-      <listitem>
-        <para>L'oscillation d'un hôte sera contrôlée si son état a changé depuis la
+   <listitem>
+    <para>L'oscillation d'un hôte sera contrôlée si son état a changé depuis la
 dernière détection d'oscillation de cet hôte ou si son état n'a pas changé,
 mais qu'au moins x temps s'est écoulé depuis la dernière détection
 d'oscillation. Ce temps xest égal à la moyenne des intervalles de contrôles
 de tous les services associés avec l'hôte.</para>
-      </listitem>
-    </itemizedlist>
+   </listitem>
+  </itemizedlist>
 
-    <para>Pourquoi cela ? Hé bien, parce qu'avec les services, nous savons que
+  <para>Pourquoi cela ? Hé bien, parce qu'avec les services, nous savons que
 l'intervalle minimal de temps entre deux détections d'oscillation
 consécutives sera égal à l'intervalle de contrôle du service. Avec les
 hôtes, nous n'avons pas d'intervalle de contrôle, du fait que les hôtes ne
 sont pas supervisés de manière régulière. Ils ne sont contrôlés que lorsque
 c'est nécessaire. C'est la meilleure méthode que j'ai pu imaginer pour
 déterminer la fréquence de la détection d'oscillation d'un hôte…</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Seuils de détection de l'oscillation</title>
+ <section>
+  <title>Seuils de détection de l'oscillation</title>
 
-    <para>Nagios utilise plusieurs variables pour déterminer le pourcentage de
+  <para>Nagios utilise plusieurs variables pour déterminer le pourcentage de
 changement d'état fixer aux seuils de la détection d'oscillation. Tant pour
 les hôtes que pour les services, il y a des seuils supérieurs et inférieurs
 globaux et spécifiques que vous pouvez configurer. Nagios utilisera les
 seuils globaux par défaut si vous n'en spécifiez aucun.</para>
 
-    <para>La tableau ci-dessous montre les variables globales et spécifiques pour les
+  <para>La tableau ci-dessous montre les variables globales et spécifiques pour les
 hôtes et services afin de gérer les seuils de détection. </para>
 
-    <informaltable frame="all">
-      <tgroup cols="3">
-        <thead>
-          <row>
-            <entry><para>Object Type</para></entry>
+  <informaltable frame="all">
+   <tgroup cols="3">
+    <thead>
+     <row>
+      <entry><para>Object Type</para></entry>
 
-            <entry><para>Variables Globales</para></entry>
+      <entry><para>Variables Globales</para></entry>
 
-            <entry><para>Variables spécifiques aux objets</para></entry>
-          </row>
+      <entry><para>Variables spécifiques aux objets</para></entry>
+     </row>
 		</thead>
 		<tbody>
-          <row>
-            <entry><para>Hôte</para></entry>
+     <row>
+      <entry><para>Hôte</para></entry>
 
-            <entry><para> <link
+      <entry><para> <link
 linkend="configuringnagios-configmain-low_host_flap_threshold">low_host_flap_threshold</link>
 <link
 linkend="configuringnagios-configmain-high_host_flap_threshold">high_host_flap_threshold</link>
-            </para></entry>
+      </para></entry>
 
-            <entry><para> <link
+      <entry><para> <link
 linkend="configuringnagios-objectdefinitions-host">low_flap_threshold</link>
 <link
 linkend="configuringnagios-objectdefinitions-host">high_flap_threshold</link>
-            </para></entry>
-          </row>
+      </para></entry>
+     </row>
 
-          <row>
-            <entry><para>Service</para></entry>
+     <row>
+      <entry><para>Service</para></entry>
 
-            <entry><para> <link
+      <entry><para> <link
 linkend="configuringnagios-configmain-low_service_flap_threshold">low_service_flap_threshold</link>
 <link
 linkend="configuringnagios-configmain-high_service_flap_threshold">high_service_flap_threshold</link>
-            </para></entry>
+      </para></entry>
 
-            <entry><para> <link
+      <entry><para> <link
 linkend="configuringnagios-objectdefinitions-service">low_flap_threshold</link>
 <link
 linkend="configuringnagios-objectdefinitions-service">high_flap_threshold</link>
-            </para></entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
-  </section>
+      </para></entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </informaltable>
+ </section>
 
-  <section>
-    <title>Les états utilisés pour la détection de l'oscillation</title>
+ <section>
+  <title>Les états utilisés pour la détection de l'oscillation</title>
 
-    <para>Normalement Nagios scrutera les résultats des 21 derniers contrôles d'un
+  <para>Normalement Nagios scrutera les résultats des 21 derniers contrôles d'un
 hôte ou d'un service, sans tenir compte du résultat de contrôle (état hôte /
 service), pour l'utilisation dans la logique de détection de l'oscillation.</para>
 
-    <tip>
-      <para>Nous pouvons exclure certains hôtes ou services à l'algorithme de de
+  <tip>
+   <para>Nous pouvons exclure certains hôtes ou services à l'algorithme de de
 l'oscillation en utilisant la directive
 <varname>flap_detection_options</varname> dans la définition de l'hôte ou du
 service. Cette option vous permet de préciser pour quel états d'hôte ou
 service (i.e. "UP, "DOWN", "OK, "CRITICAL") vous voulez utilisez la
 détection d'oscillation. Si vous n'utilisez pas cette directive, la règle
 par défaut sera appliquée pour tous.</para>
-    </tip>
-  </section>
+  </tip>
+ </section>
 
-  <section>
-    <title>Gestion de l'oscillation</title>
+ <section>
+  <title>Gestion de l'oscillation</title>
 
-    <para>Quand un service ou un hôte commence à osciller, Nagios® fait:</para>
+  <para>Quand un service ou un hôte commence à osciller, Nagios® fait:</para>
 
-    <orderedlist>
-      <listitem>
-        <para>Il journalise un message indiquant que le service ou l'hôte oscille.</para>
-      </listitem>
+  <orderedlist>
+   <listitem>
+    <para>Il journalise un message indiquant que le service ou l'hôte oscille.</para>
+   </listitem>
 
-      <listitem>
-        <para>il ajoute un commentaire non persistant à l'hôte ou au service indiquant
+   <listitem>
+    <para>il ajoute un commentaire non persistant à l'hôte ou au service indiquant
 qu'il oscille.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Il envoie une notification de démarrage de l'état d'oscillation aux
+   <listitem>
+    <para>Il envoie une notification de démarrage de l'état d'oscillation aux
 contacts.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Il supprime les notifications pour le service ou l'hôte concerné (c'est l'un
+   <listitem>
+    <para>Il supprime les notifications pour le service ou l'hôte concerné (c'est l'un
 des filtre de <link linkend="thebasics-notifications">l'algorithme de
 notification</link>)</para>
-      </listitem>
-    </orderedlist>
+   </listitem>
+  </orderedlist>
 
-    <para>Quand un service ou un hôte s'arrête d'osciller, Nagios® fait les chose
+  <para>Quand un service ou un hôte s'arrête d'osciller, Nagios® fait les chose
 suivantes:</para>
 
-    <orderedlist>
-      <listitem>
-        <para>Il journalise un message indiquant que le service ou l'hôte n'oscille plus.</para>
-      </listitem>
+  <orderedlist>
+   <listitem>
+    <para>Il journalise un message indiquant que le service ou l'hôte n'oscille plus.</para>
+   </listitem>
 
-      <listitem>
-        <para>Il supprime le commentaire qui avait été ajouté au service ou à l'hôte
+   <listitem>
+    <para>Il supprime le commentaire qui avait été ajouté au service ou à l'hôte
 lorsqu'il avait commencé à osciller</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Il envoie une notification de "retour à l'état normal" de l'hôte ou du
+   <listitem>
+    <para>Il envoie une notification de "retour à l'état normal" de l'hôte ou du
 service aux contacts.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Il lève le blocage des notifications sur le service ou l'hôte concerné (les
+   <listitem>
+    <para>Il lève le blocage des notifications sur le service ou l'hôte concerné (les
 notifications restant assujetties à <link
 linkend="thebasics-notifications">l'algorithme de notification</link>)</para>
-      </listitem>
-    </orderedlist>
-  </section>
+   </listitem>
+  </orderedlist>
+ </section>
 
-  <section>
-    <title>Activation de la détection d'oscillation</title>
+ <section>
+  <title>Activation de la détection d'oscillation</title>
 
-    <para>Dans l'ordre, pour activer la détection d'oscillation dans Nagios, il faut
+  <para>Dans l'ordre, pour activer la détection d'oscillation dans Nagios, il faut
 faire:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Passer la directive <link
+  <itemizedlist>
+   <listitem>
+    <para>Passer la directive <link
 linkend="configuringnagios-configmain-enable_flap_detection">enable_flap_detection</link>
 à 1</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Passer la directive <varname>flap_detection_enabled</varname> dans la
+   <listitem>
+    <para>Passer la directive <varname>flap_detection_enabled</varname> dans la
 définition de votre hôte ou service à 1</para>
-      </listitem>
-    </itemizedlist>
+   </listitem>
+  </itemizedlist>
 
-    <para>Si vous voulez désactiver de manière générale cette option, passez la
+  <para>Si vous voulez désactiver de manière générale cette option, passez la
 directive <link
 linkend="configuringnagios-configmain-enable_flap_detection">enable_flap_detection</link>
 à 0.</para>
 
-    <para>Si vou voulez désactiver cette option pour quelques hôtes ou services,
+  <para>Si vou voulez désactiver cette option pour quelques hôtes ou services,
 utilisez la directive <varname>flap_detection_enabled</varname> dans la
 définition de vos hôtes et services pour faire ça.</para>
-  </section>
+ </section>
 </chapter>

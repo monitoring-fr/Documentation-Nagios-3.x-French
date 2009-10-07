@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-oncallrotation" xreflabel="On-Call Rotations">
@@ -59,17 +59,17 @@ les nuits de la semaine tout en excluant les dates qu'il aura définit pour
 ces vacances:</para>
 		<programlisting>define timeperiod{
 		        timeperiod_name       john-oncall
-		        monday                00:00-24:00
-		        tuesday               00:00-24:00
+		        monday             00:00-24:00
+		        tuesday            00:00-24:00
 		        wednesday             00:00-24:00
 		        thursday              00:00-24:00
-		        friday                00:00-24:00
-		        exclude               holidays         ; Exclude holiday dates/times defined elsewhere
+		        friday             00:00-24:00
+		        exclude            holidays       ; Exclude holiday dates/times defined elsewhere
 		        }</programlisting>
 		<para>Nous pouvons référencer cette période de temps dans la définition du contact
 John:</para>
 		<programlisting>define contact{
-		        contact_name                        john
+		        contact_name                  john
 		        ...
 		        host_notification_period            john-oncall
 		        service_notification_period         john-oncall
@@ -79,17 +79,17 @@ incluant le week-end et les dates définies dans la période de temps
 "holidays":</para>
 		<programlisting>define timeperiod{
 		        timeperiod_name         bob-oncall
-		        friday                  00:00-24:00
+		        friday              00:00-24:00
 		        saturday                00:00-24:00
-		        use                     holidays        ; Also include holiday date/times defined elsewhere
+		        use                 holidays        ; Also include holiday date/times defined elsewhere
 		        }</programlisting>
 		<para>Nous pouvons référencer cette période de temps dans la définition du contact
 Bob:</para>
 		<programlisting>define contact{
-		        contact_name                       bob
+		        contact_name                  bob
 		        ...
 		        host_notification_period           bob-oncall
-		        service_notification_period        bob-oncall
+		        service_notification_period       bob-oncall
 		        }</programlisting>
 	</section>
 	<section>
@@ -189,17 +189,17 @@ planifié ces vacances. Bob prendra les notifications when John sera absent.</pa
 excluant ces jours de repos: </para>
 		<programlisting>define timeperiod{
 			        timeperiod_name         john-oncall
-			        monday                  00:00-24:00
-			        tuesday                 00:00-24:00
+			        monday              00:00-24:00
+			        tuesday             00:00-24:00
 			        wednesday               00:00-24:00
 			        thursday                00:00-24:00
-			        friday                  00:00-24:00
-			        exclude                 john-out-of-office     ; Exclude dates/times John is out
+			        friday              00:00-24:00
+			        exclude            john-out-of-office     ; Exclude dates/times John is out
 			        }</programlisting>
 		<para>Nous pouvons référencer cette période de temps dans la définition du contact
 John:</para>
 		<programlisting>define contact{
-			        contact_name                      john
+			        contact_name                 john
 			        ...
 			        host_notification_period          john-oncall
 			        service_notification_period       john-oncall
@@ -208,14 +208,14 @@ John:</para>
 les dates d'absence de John:</para>
 		<programlisting>define timeperiod{
 			        timeperod_name     bob-oncall
-			        use                john-out-of-office      ; Include holiday date/times that John is out
+			        use              john-out-of-office      ; Include holiday date/times that John is out
 			        }</programlisting>
 		<para>Nous pouvons référencer cette période de temps dans la définition du contact
 Bob:</para>
 		<programlisting>define contact{
-			        contact_name                      bob
+			        contact_name                 bob
 			        ...
-			        host_notification_period          bob-oncall
+			        host_notification_period         bob-oncall
 			        service_notification_period       bob-oncall
 			        }</programlisting>
 	</section>

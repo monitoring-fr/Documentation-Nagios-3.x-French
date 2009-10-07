@@ -2,100 +2,100 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="runningnagios-startstop" xreflabel="Starting and Stopping Nagios">
-  <title>Démarrer et Arrêter Nagios</title>
+ <title>Démarrer et Arrêter Nagios</title>
 
-  <para>Il y a plus d'une façon de démarrer, arrêter et redémarrer Nagios. Voici
+ <para>Il y a plus d'une façon de démarrer, arrêter et redémarrer Nagios. Voici
 quelques-unes des plus communes ...
-  </para>
+ </para>
 
-  <tip><para>Soyez toujours sûrs d'avoir <xref linkend="runningnagios-verifyconfig"/>
+ <tip><para>Soyez toujours sûrs d'avoir <xref linkend="runningnagios-verifyconfig"/>
 avant de (re)démarrer Nagios.</para></tip>
 
-  <section>
-    <title>Démarrer Nagios</title>
+ <section>
+  <title>Démarrer Nagios</title>
 
-    <orderedlist>
-      <listitem>
-        <para>Init Script: Le moyen le plus facile pour démarrer Nagios est d'utiliser
+  <orderedlist>
+   <listitem>
+    <para>Init Script: Le moyen le plus facile pour démarrer Nagios est d'utiliser
 l'init script comme ceci:</para>
-    <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios start</userinput></screen>
-      </listitem>
+  <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios start</userinput></screen>
+   </listitem>
 
-      <listitem>
-        <para>Manuellement: Vous pouvez démarrer le démon Nagios manuellement avec
+   <listitem>
+    <para>Manuellement: Vous pouvez démarrer le démon Nagios manuellement avec
 l'option <option>-d</option>
-        command line option like so:</para>
-                        <screen><prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg</userinput></screen>
-      </listitem>
-    </orderedlist>
-  </section>
+    command line option like so:</para>
+            <screen><prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg</userinput></screen>
+   </listitem>
+  </orderedlist>
+ </section>
 
-  <section>
-    <title>Restarting Nagios</title>
+ <section>
+  <title>Restarting Nagios</title>
 
-    <para>Redémarer/recharger sert necessairement lorsque vous modifiez vos fichiers
+  <para>Redémarer/recharger sert necessairement lorsque vous modifiez vos fichiers
 de configuration et que vous voulez que ces changements prennent effet.</para>
 
-    <orderedlist>
-      <listitem>
-        <para>Init Script: Le moyen le plus facile pour redémarrer le démon Nagios est
+  <orderedlist>
+   <listitem>
+    <para>Init Script: Le moyen le plus facile pour redémarrer le démon Nagios est
 d'utiliser l'init script comme ceci:</para>
-                        <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios reload</userinput></screen>
-      </listitem>
+            <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios reload</userinput></screen>
+   </listitem>
 
-      <listitem>
-        <para>L'interface Web: Vous pouvez redémarrer Nagios au travers de l'interface web
+   <listitem>
+    <para>L'interface Web: Vous pouvez redémarrer Nagios au travers de l'interface web
 en cliquant sur le lien <guimenu>Process Info</guimenu> et de choisir
 l'option <guimenuitem>Restart the Nagios process</guimenuitem>:
-        <screenshot>
-        <mediaobject>
-      <imageobject>
-        <imagedata fileref="images/stoprestart.png" format="PNG"/>
-      </imageobject>
-    </mediaobject></screenshot></para>
-      </listitem>
+    <screenshot>
+    <mediaobject>
+   <imageobject>
+    <imagedata fileref="images/stoprestart.png" format="PNG"/>
+   </imageobject>
+  </mediaobject></screenshot></para>
+   </listitem>
 
-      <listitem>
-        <para>Manuellement: Vous pouvez redémarrer le processus Nagios en lui envoyant un
+   <listitem>
+    <para>Manuellement: Vous pouvez redémarrer le processus Nagios en lui envoyant un
 signal SIGHUP comme ceci:</para>
-                        <screen><prompt>linux:~ # </prompt><userinput>kill -HUP &lt;nagios_pid&gt;</userinput></screen>
-      </listitem>
-    </orderedlist>
-  </section>
+            <screen><prompt>linux:~ # </prompt><userinput>kill -HUP &lt;nagios_pid&gt;</userinput></screen>
+   </listitem>
+  </orderedlist>
+ </section>
 
-  <section>
-    <title>Arrêter Nagios</title>
+ <section>
+  <title>Arrêter Nagios</title>
 
-    <orderedlist>
-      <listitem>
-        <para>Init Script: Le moyen le plus facile pour arrêter le démon Nagios est
+  <orderedlist>
+   <listitem>
+    <para>Init Script: Le moyen le plus facile pour arrêter le démon Nagios est
 d'utiliser l'init script comme ceci:</para>
 
-                <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios stop</userinput></screen>
-      </listitem>
+        <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios stop</userinput></screen>
+   </listitem>
 
-      <listitem>
-        <para>L'interface Web: Vous pouvez arrêter Nagios via l'interface web en cliquant
+   <listitem>
+    <para>L'interface Web: Vous pouvez arrêter Nagios via l'interface web en cliquant
 sur le lien <guimenu>Process Info</guimenu> et en choisissant l'option
 <guimenuitem>Shutdown the Nagios process</guimenuitem>:
-                    <screenshot><mediaobject>
-      <imageobject>
-        <imagedata fileref="images/stoprestart.png" format="PNG"/>
-      </imageobject>
-    </mediaobject></screenshot></para>
-      </listitem>
+          <screenshot><mediaobject>
+   <imageobject>
+    <imagedata fileref="images/stoprestart.png" format="PNG"/>
+   </imageobject>
+  </mediaobject></screenshot></para>
+   </listitem>
 
-      <listitem>
-        <para>Manuellement: Vous pouvez arrêter le processus Nagios en lui envoyant un
+   <listitem>
+    <para>Manuellement: Vous pouvez arrêter le processus Nagios en lui envoyant un
 signal SIGTERM comme ceci:</para>
-        <screen><prompt>linux:~ # </prompt><userinput>kill &lt;nagios_pid&gt;</userinput></screen>
-      </listitem>
-    </orderedlist>
-  </section>
+    <screen><prompt>linux:~ # </prompt><userinput>kill &lt;nagios_pid&gt;</userinput></screen>
+   </listitem>
+  </orderedlist>
+ </section>
 </chapter>
 

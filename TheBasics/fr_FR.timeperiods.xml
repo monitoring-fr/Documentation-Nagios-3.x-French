@@ -2,19 +2,19 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="thebasics-timeperiods" xreflabel="Time Periods">
-  <title>Time Periods</title>
+ <title>Time Periods</title>
 <abstract>
-  <para>Ou... <quote>Est-Ce Le Bon Moment?</quote></para>
+ <para>Ou... <quote>Est-Ce Le Bon Moment?</quote></para>
 </abstract>
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para><inlinemediaobject> <imageobject> <imagedata
+  <para><inlinemediaobject> <imageobject> <imagedata
 fileref="images/objects-timeperiods.png" format="PNG"/> </imageobject>
 </inlinemediaobject> Les directives concernant les <link
 linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
@@ -22,29 +22,29 @@ vous permettent de maîtriser le fonctionnement logique des différents
 aspects de la supervsion et de la notification. Par exemple, vous pouvez
 restreindre:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Quand les contrôles d'hôtes et de services planifiés peuvent être effectués</para>
-      </listitem>
+  <itemizedlist>
+   <listitem>
+    <para>Quand les contrôles d'hôtes et de services planifiés peuvent être effectués</para>
+   </listitem>
 
-      <listitem>
-        <para>Quand les notifications peuvent être envoyées</para>
-      </listitem>
+   <listitem>
+    <para>Quand les notifications peuvent être envoyées</para>
+   </listitem>
 
-      <listitem>
-        <para>Quand les escalades de notification peuvent être utilisées</para>
-      </listitem>
+   <listitem>
+    <para>Quand les escalades de notification peuvent être utilisées</para>
+   </listitem>
 
-      <listitem>
-        <para>Quand les dépendances sont valides</para>
-      </listitem>
-    </itemizedlist>
-  </section>
+   <listitem>
+    <para>Quand les dépendances sont valides</para>
+   </listitem>
+  </itemizedlist>
+ </section>
 
-  <section>
-    <title>Les priorités dans les Périodes</title>
+ <section>
+  <title>Les priorités dans les Périodes</title>
 
-    <para>Les Périodes <link
+  <para>Les Périodes <link
 linkend="configuringnagios-objectdefinitions-timeperiod">definitions</link>
 peuvent contenir différent types de directives, incluant les jours de la
 semaine, certains jours dans le mois, et des dates précises du
@@ -53,51 +53,51 @@ et peuvent passer outre les autres définitions de périodes. L'ordre des
 priorités pour les différents type de diretives (dans l'ordre décroissant)
 est le suivant:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Une date précise dans le calendrier (01/01/2008)</para>
-      </listitem>
+  <itemizedlist>
+   <listitem>
+    <para>Une date précise dans le calendrier (01/01/2008)</para>
+   </listitem>
 
-      <listitem>
-        <para>Une date spécifique dans un mois quelconque (1er Janvier)</para>
-      </listitem>
+   <listitem>
+    <para>Une date spécifique dans un mois quelconque (1er Janvier)</para>
+   </listitem>
 
-      <listitem>
-        <para>Une date générique mensuelle (tous les 15 du mois)</para>
-      </listitem>
+   <listitem>
+    <para>Une date générique mensuelle (tous les 15 du mois)</para>
+   </listitem>
 
-      <listitem>
-        <para>Un jour d'un mois spécifique (le 2ème Mardi de Décembre)</para>
-      </listitem>
+   <listitem>
+    <para>Un jour d'un mois spécifique (le 2ème Mardi de Décembre)</para>
+   </listitem>
 
-      <listitem>
-        <para>Un jour spécifique mensuel (3ème Lundi de chaque mois)</para>
-      </listitem>
+   <listitem>
+    <para>Un jour spécifique mensuel (3ème Lundi de chaque mois)</para>
+   </listitem>
 
-      <listitem>
-        <para>Un jour dans la semaine (le Mardi)</para>
-      </listitem>
-    </itemizedlist>
+   <listitem>
+    <para>Un jour dans la semaine (le Mardi)</para>
+   </listitem>
+  </itemizedlist>
 
-    <para>Des exemples de directives concernant les Périodes peuvent sont accéssibles
+  <para>Des exemples de directives concernant les Périodes peuvent sont accéssibles
 <link linkend="configuringnagios-objectdefinitions-timeperiod">ici</link>.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Comment Les Periodes Fonctionnent Avec Les Contrôles Des Hôtes Et Des
+ <section>
+  <title>Comment Les Periodes Fonctionnent Avec Les Contrôles Des Hôtes Et Des
 Services</title>
 
-    <para>Les définitions des hôtes et des services ont une directive optionnelle
+  <para>Les définitions des hôtes et des services ont une directive optionnelle
 <varname>check_period</varname> qui vous permet de spécifier la période qui
 sera utilisée pour restreindre les moments où les contrôles actifs des hôtes
 ou des services devront être effectués .</para>
 
-    <para>Si vous n'utilisez pas la directive <varname>check_period </varname> pour
+  <para>Si vous n'utilisez pas la directive <varname>check_period </varname> pour
 spécifier une période, Nagios sera capable de planifier les contrôles
 actiffs des hôtes et services aussi souvent qu'il en aura besoin. Il s'agit
 essentiellement d'une periode de surveillance de type 24x7.</para>
 
-    <para>Spécifier une plage horaires dans la directive
+  <para>Spécifier une plage horaires dans la directive
 <varname>check_period</varname> vous permet de restreindre Nagios à
 planifier les contrôles actifs réguliers des hôtes ou des services. Quand
 Nagios va tenter de replanifier un contrôle d'hôte ou de service, il va
@@ -107,40 +107,40 @@ contrôle pourqu'elle coincide avec la prochaine heure <quote>valide</quote>
 dans la plage horaire spécifiée. Ce qui signifie que l'hôte ou le service ne
 sera contrôlé à nouveau que dans plusieurs heures, jours, semaines, etc...</para>
 
-    <note><para>Les contrôles à la demande et les contrôles passifs ne sont pas réstreints
+  <note><para>Les contrôles à la demande et les contrôles passifs ne sont pas réstreints
 par la plage horaire spécifiée dans la directive
 <varname>check_period</varname>. Seuls des contrôles réguliers actifs sont
 concernés.</para></note>
 
-    <para>Sauf si vous avez une bonne raison de ne pas le faire, je vous conseille de
+  <para>Sauf si vous avez une bonne raison de ne pas le faire, je vous conseille de
 surveiller tous les hôtes et les services en utilisant des plages horaires
 qui couvrent une période de temps 24x7. Si vous ne le faites pas, vous
 pouvez rencontrer certains problèmes au cours de ces périodes de
 "non-contrôle" (lorsque l'on ne se trouve pas dans un la plage horaire
 définie):</para>
 
-    <orderedlist>
-      <listitem>
-        <para>Le statut de l'hôte ou du service apparaîtra inchangé tout au long de la
+  <orderedlist>
+   <listitem>
+    <para>Le statut de l'hôte ou du service apparaîtra inchangé tout au long de la
 période de non-contrôle.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Les contacts ne seront pas re-notifiés des problèmes avec un hôte ou un
+   <listitem>
+    <para>Les contacts ne seront pas re-notifiés des problèmes avec un hôte ou un
 service durant une période de non-contrôle.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Si un hôte ou un service redevient OK pendant une période de non-contrôle,
+   <listitem>
+    <para>Si un hôte ou un service redevient OK pendant une période de non-contrôle,
 les contacts ne seront pas immédiatement notifiés du retour à normale.</para>
-      </listitem>
-    </orderedlist>
-  </section>
+   </listitem>
+  </orderedlist>
+ </section>
 
-  <section>
-    <title>Comment Fonctionnent Les Périodes Avec Les Contacts de Notifications</title>
+ <section>
+  <title>Comment Fonctionnent Les Périodes Avec Les Contacts de Notifications</title>
 
-    <para>En spécifiant une période à la directive
+  <para>En spécifiant une période à la directive
 <varname>notification_period</varname> d'une définition d'un hôte ou d'un
 service, vous pouvez contrôler quand Nagios est autorisé à envoyé des
 notifications concernant des problèmes ou des retours à la normale pour cet
@@ -150,7 +150,7 @@ Nagios s'assure que l'heure actuelle est bien comprise dans la plage horaire
 alors Nagios essayera de notifier chaque contact du problème ou du retour à
 la normale.</para>
 
-    <para>Vous pouvez aussi utiliser les périodes pour contrôler quand seront envoyées
+  <para>Vous pouvez aussi utiliser les périodes pour contrôler quand seront envoyées
 les notifications individuellement à chaque contact. En utilisant les
 directives <varname>service_notification_period</varname> and
 <varname>host_notification_period</varname> dans <link
@@ -160,14 +160,14 @@ mesure" pour chaque contact. Les contacts recevront les notifications pour
 les hôtes et les services seulement pendant la plage horaire que vous leur
 aurez specifié.</para>
 
-    <para>Des exemples de création de définition de plages horaires sur mesure sont
+  <para>Des exemples de création de définition de plages horaires sur mesure sont
 disponibles <xref linkend="advancedtopics-oncallrotation" />ici.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Comment Fonctionnent Les Périodes Avec Les Escalades de Notification</title>
+ <section>
+  <title>Comment Fonctionnent Les Périodes Avec Les Escalades de Notification</title>
 
-    <para>Les <xref linkend="advancedtopics-escalations" /> escalades de notification
+  <para>Les <xref linkend="advancedtopics-escalations" /> escalades de notification
 des hôtes et services ont une directive optionnelle nommée
 <varname>escalation_period</varname> qui vous permet de spécifier une plage
 horaire où l'escalade sera valide et pourra être utilisée. Si vous
@@ -176,12 +176,12 @@ définition de l'escalalde, l'escalade sera considérée comme valide tout le
 temps. Si vous spécifiez une plage horaire pour la directive
 <varname>escalation_period</varname>, Nagios utilisera définition de
 l'escalade seulement pendant cette plage horaire.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Comment Fonctionnent Les Périodes Avec Les Dépendances</title>
+ <section>
+  <title>Comment Fonctionnent Les Périodes Avec Les Dépendances</title>
 
-    <para>Les <xref linkend="advancedtopics-dependencies" /> dépendances d'hôtes et de
+  <para>Les <xref linkend="advancedtopics-dependencies" /> dépendances d'hôtes et de
 services ont une directive optionnelle nommée
 <varname>dependency_period</varname> qui vous permet de spécifier une plage
 horaire où la dépendance sera valide et pourra être utilisée. Si vous
@@ -190,5 +190,5 @@ définition de la dépendance, la dépendance pourra être utilisée n'importe
 quand. Si vous spécifiez une plage horaire pour la directive
 <varname>dependency_period</varname>, Nagios utilisera définition de la
 dépendance seulement pendant cette plage horaire.</para>
-  </section>
+ </section>
 </chapter>

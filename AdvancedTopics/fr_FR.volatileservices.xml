@@ -2,156 +2,156 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-volatileservices" xreflabel="Volatile Services">
-  <title>Services volatiles</title>
+ <title>Services volatiles</title>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para>Nagios a la capacité de faire la distinction entre les services
+  <para>Nagios a la capacité de faire la distinction entre les services
 <quote>normaux</quote> et les services <quote>volatiles</quote>. L'option
 is_volatil de chaque définition de service vous permet de spécifier si ou
 non un service spécifique est volatile. Pour la plupart des gens, la
 majorité des services supervisés sera de type non-volatile (par
 ex. <quote>normal</quote>). Toutefois, des services volatiles peuvent se
 révéler très utiles lorsqu'ils sont bien utilisés... </para>
-  </section>
+ </section>
 
-  <section>
-    <title>A quoi servent-ils ?</title>
+ <section>
+  <title>A quoi servent-ils ?</title>
 
-    <para>Les services volatiles sont utiles pour superviser...</para>
+  <para>Les services volatiles sont utiles pour superviser...</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>des choses qui se remettent automatiquement en état <quote>OK</quote> chaque
+  <itemizedlist>
+   <listitem>
+    <para>des choses qui se remettent automatiquement en état <quote>OK</quote> chaque
 fois qu'ils sont contrôlés</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>des événements comme les alertes de sécurité qui réclament de l'attention à
+   <listitem>
+    <para>des événements comme les alertes de sécurité qui réclament de l'attention à
 chaque problème (et pas seulement la première fois) </para>
-      </listitem>
-    </itemizedlist>
-  </section>
+   </listitem>
+  </itemizedlist>
+ </section>
 
-  <section>
-    <title>Qu'est-ce que les services volatiles ont de si particulier ?</title>
+ <section>
+  <title>Qu'est-ce que les services volatiles ont de si particulier ?</title>
 
-    <para>Les services volatiles diffèrent des services <quote>normaux</quote> de
+  <para>Les services volatiles diffèrent des services <quote>normaux</quote> de
 trois façons importantes. Chaque fois qu'ils sont contrôlés quand ils sont
 dans un état <link linkend="thebasics-statetypes">hard</link> non-OK, et que
 le contrôle retourne un état non-OK (par ex. aucun changement d'état n'a eu
 lieu)...</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>l'état non-OK du service est journalisé</para>
-      </listitem>
+  <itemizedlist>
+   <listitem>
+    <para>l'état non-OK du service est journalisé</para>
+   </listitem>
 
-      <listitem>
-        <para>les contacts reçoivent notification du problème (si c'est <link
+   <listitem>
+    <para>les contacts reçoivent notification du problème (si c'est <link
 linkend="thebasics-notifications">ce qui doit être fait</link>).</para>
 
-        <note>
-          <para>Les intervalles de notifications sont ignorés pour les services volatiles.</para>
-        </note>
-      </listitem>
+    <note>
+     <para>Les intervalles de notifications sont ignorés pour les services volatiles.</para>
+    </note>
+   </listitem>
 
-      <listitem>
-        <para>le <link linkend="advancedtopics-eventhandlers">gestionnaire
+   <listitem>
+    <para>le <link linkend="advancedtopics-eventhandlers">gestionnaire
 d'événements</link> du service est lancé (s'il a été défini) </para>
-      </listitem>
-    </itemizedlist>
+   </listitem>
+  </itemizedlist>
 
-    <para>Ces événements ne se produisent normalement que lorsque des services sont
+  <para>Ces événements ne se produisent normalement que lorsque des services sont
 dans un état non-OK et qu'un changement d'état hard vient de se produire. En
 d'autre termes, ils ne se produisent que la première fois que le service
 passe dans un état non-OK. Si des contrôles ultérieurs du service conduisent
 au même état non-OK, il n'y a aucun changement d'état hard et aucun des
 événements mentionnés ne se reproduit. </para>
 
-    <tip>
-      <para>Si vous ête seulement intéressé par la journalisation (logging), vous
+  <tip>
+   <para>Si vous ête seulement intéressé par la journalisation (logging), vous
 devriez plutôt utiliser les options de <link
 linkend="advancedtopics-stalking">stalking</link>.</para>
-    </tip>
-  </section>
+  </tip>
+ </section>
 
-  <section>
-    <title>La puissance de deux</title>
+ <section>
+  <title>La puissance de deux</title>
 
-    <para>Si vous combinez les fonctionnalités des services volatiles avec les <link
+  <para>Si vous combinez les fonctionnalités des services volatiles avec les <link
 linkend="thebasics-passivechecks">contrôles passifs de service</link>, vous
 pouvez faire des choses très utiles. Par exemple, gérer des traps
 &protocol-snmp;, des alertes de sécurité, etc.</para>
 
-    <para>Que diriez-vous d'un exemple ?... Disons que vous exécutiez le produit
+  <para>Que diriez-vous d'un exemple ?... Disons que vous exécutiez le produit
 <ulink url="&url-sourceforge-projects;sentrytools/">PortSentry</ulink> pour
 scanner les ports de votre machine et les intrus potentiels. Si vous voulez
 que Nagios soit averti des scans de ports, vous pouvez mettre en place ce
 qui suit...</para>
 
-    <section>
-      <title>Configuration de Nagios</title>
+  <section>
+   <title>Configuration de Nagios</title>
 
-      <itemizedlist>
-        <listitem>
-          <para>Créez un service appelé Port Scans et associez-le avec l'hôte sur lequel
+   <itemizedlist>
+    <listitem>
+     <para>Créez un service appelé Port Scans et associez-le avec l'hôte sur lequel
 tourne PortSentry. </para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>Mettez l'option <varname>max_check_attempts</varname> de la définition du
+    <listitem>
+     <para>Mettez l'option <varname>max_check_attempts</varname> de la définition du
 service à 1. Ceci dira à Nagios de passer immédiatement le service en <link
 linkend="thebasics-statetypes">état hard</link> quand un état non-OK est
 retourné. </para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>Mettez l'option <varname>active_checks_enabled</varname> à 0 dans la
+    <listitem>
+     <para>Mettez l'option <varname>active_checks_enabled</varname> à 0 dans la
 définition du service. Cela évite que Nagios ne contrôle activement le
 service.</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>Mettez l'option <varname>passive_checks_enabled</varname> à 1 dans la
+    <listitem>
+     <para>Mettez l'option <varname>passive_checks_enabled</varname> à 1 dans la
 définition du service. Cela active les contrôles passifs pour le service.</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>Mettez l'option <varname>is_volatile</varname> à 1 dans la définition du
+    <listitem>
+     <para>Mettez l'option <varname>is_volatile</varname> à 1 dans la définition du
 service.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
+    </listitem>
+   </itemizedlist>
+  </section>
 
-    <section>
-      <title>Configuration de PortSentry</title>
+  <section>
+   <title>Configuration de PortSentry</title>
 
-      <para>Modifiez votre fichier de configuration de PortSentry
+   <para>Modifiez votre fichier de configuration de PortSentry
 (<filename>portsentry.conf</filename>), et définissez une commande pour la
 directive KILL_RUN_CMD comme suit :</para>
 
-      <programlisting>KILL_RUN_CMD="/usr/local/Nagios/libexec/eventhandlers/submit_check_result <replaceable>host_name</replaceable> 'Port Scans' 2 'Port scan from host $TARGET$ on port $PORT$.  Host has been firewalled.'"</programlisting>
+   <programlisting>KILL_RUN_CMD="/usr/local/Nagios/libexec/eventhandlers/submit_check_result <replaceable>host_name</replaceable> 'Port Scans' 2 'Port scan from host $TARGET$ on port $PORT$.  Host has been firewalled.'"</programlisting>
 
-      <para>Assurez-vous de remplacer host_name avec le nom court de l'hôte avec lequel
+   <para>Assurez-vous de remplacer host_name avec le nom court de l'hôte avec lequel
 le service est associé.</para>
-    </section>
+  </section>
 
-    <section>
-      <title>Script de scan de port</title>
+  <section>
+   <title>Script de scan de port</title>
 
-      <para>Créez un script Shell dans le répertoire <filename
+   <para>Créez un script Shell dans le répertoire <filename
 class="directory">/usr/local/nagios/libexec/eventhandlers</filename> que
 vous appelez <command>submit_check_result</command>. Le contenu de ce script
 shell devrait ressembler à ceci... </para>
 
-      <programlisting>#!/bin/sh
+   <programlisting>#!/bin/sh
 
 		# Write a command to the Nagios command file to cause
 		# it to process a service check result
@@ -169,32 +169,32 @@ shell devrait ressembler à ceci... </para>
 		# append the command to the end of the command file
 		`$echocmd $cmdline &gt;&gt; $CommandFile`</programlisting>
 
-      <para>Que va t'il se passer quand PortSentry détectera un scan de ports sur la
+   <para>Que va t'il se passer quand PortSentry détectera un scan de ports sur la
 machine dans le futur ?</para>
 
-      <itemizedlist>
-        <listitem>
-          <para>PortSentry bloque l'hôte au niveau pare-feu (C'est une fonction du logiciel
+   <itemizedlist>
+    <listitem>
+     <para>PortSentry bloque l'hôte au niveau pare-feu (C'est une fonction du logiciel
 PortSentry=</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>PortSentry exécute le script shell <command>submit_check_result</command>
+    <listitem>
+     <para>PortSentry exécute le script shell <command>submit_check_result</command>
 pour envoyer le résultat de ce contrôle passif à Nagios</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>Nagios lit le fichier de commande externe et voit le contrôle passif de
+    <listitem>
+     <para>Nagios lit le fichier de commande externe et voit le contrôle passif de
 service soumis par PortSentry</para>
-        </listitem>
+    </listitem>
 
-        <listitem>
-          <para>Nagios passe le service Port Scans en état CRITICAL, et envoie des
+    <listitem>
+     <para>Nagios passe le service Port Scans en état CRITICAL, et envoie des
 notifications aux contacts</para>
-        </listitem>
-      </itemizedlist>
+    </listitem>
+   </itemizedlist>
 
-      <para>Plutôt sympa, non ?</para>
-    </section>
+   <para>Plutôt sympa, non ?</para>
   </section>
+ </section>
 </chapter>

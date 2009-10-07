@@ -2,22 +2,22 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="integrationwithothersoftware-int-tcpwrappers"
-         xreflabel="TCP Wrappers Integration">
-  <title>Intégration d'un TCP Wrapper</title>
+     xreflabel="TCP Wrappers Integration">
+ <title>Intégration d'un TCP Wrapper</title>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/tcpwrappers.png" />
-        </imageobject>
-      </mediaobject></informalfigure>Cet exemple explique comment générer aisément des alertes dans Nagios® pour
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/tcpwrappers.png" />
+    </imageobject>
+   </mediaobject></informalfigure>Cet exemple explique comment générer aisément des alertes dans Nagios® pour
 des connexions rejetées par un TCP wrapper (encapsuleur TCP). Ces
 explications supposent que l'hôte pour lequel vous générez ces alertes
 (i.e. l'hôte sur lequel vous utilisez le TCP wrappers) n'est pas le même
@@ -27,103 +27,103 @@ modifications à l'exemple que je vous propose. Je suppose également que vous
 avez installé le daemon nsca sur la machine de surpervision et le client
 nsca (send_nsca) sur la machine qui génère les alertes TCP wrappers.</para>
 
-    <para>Il y a quelques pré-requis à savoir :</para>
+  <para>Il y a quelques pré-requis à savoir :</para>
 
-    <orderedlist>
-      <listitem>
-        <para>Vous êtes maintenant familiariser avec <xref
+  <orderedlist>
+   <listitem>
+    <para>Vous êtes maintenant familiariser avec <xref
 linkend="thebasics-passivechecks" /> et comment les utiliser.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Vous êtes maintenant familiariser avec <xref
+   <listitem>
+    <para>Vous êtes maintenant familiariser avec <xref
 linkend="advancedtopics-volatileservices" /> et comment les utiliser.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>L'hôte avec lequel vous allez générer des alertes est une machine distance
+   <listitem>
+    <para>L'hôte avec lequel vous allez générer des alertes est une machine distance
 que l'on appellera firestorm. Si vous voulez générer les alertes TCP Wrapper
 sur le même hôte que votre serveur de supervision, il faudra adapter à vos
 besoins les exemples ci-dessous.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Vous avez installé <xref linkend="nagiosaddons-addons-nsca" /> sur votre
+   <listitem>
+    <para>Vous avez installé <xref linkend="nagiosaddons-addons-nsca" /> sur votre
 serveur de supervision et le client &name-nsca;
 (<command>send_nsca</command>) sur la machine distance qui enverra des
 alertes TCP Wrapper.</para>
-      </listitem>
-    </orderedlist>
-  </section>
+   </listitem>
+  </orderedlist>
+ </section>
 
-  <section>
-    <title>Définition du Service</title>
+ <section>
+  <title>Définition du Service</title>
 
-    <para>Si vous ne l'avez pas encore fait, créez une <link
+  <para>Si vous ne l'avez pas encore fait, créez une <link
 linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
 pour l'hôte à superviser (firestorm).</para>
 
-    <para>Tout d'abord vous devez définir un service dans votre fichier de
+  <para>Tout d'abord vous devez définir un service dans votre fichier de
 configuration des objets pour les alertes du TCP wrapper. En supposant que
 l'hôte émettant les alertes s'appelle firestorm, un exemple de définition
 pourrait ressembler à quelque chose comme ça :</para>
 
 		<programlisting>define service{
-            host_name                       firestorm
-            service_description             TCP Wrappers
-            is_volatile                     1
-            active_checks_enabled           0
-            passive_checks_enabled          1
-            max_check_attempts              1
-            check_command                   check_none
-            ...
-            }</programlisting>
+          host_name                       firestorm
+          service_description             TCP Wrappers
+          is_volatile                     1
+          active_checks_enabled           0
+          passive_checks_enabled          1
+          max_check_attempts              1
+          check_command                   check_none
+          ...
+          }</programlisting>
 
 
-    <para>Il est important de noter que</para>
+  <para>Il est important de noter que</para>
 
-    <orderedlist>
-      <listitem>
-        <para>le service à l'option volatile activée. Cette option est activée parce que
+  <orderedlist>
+   <listitem>
+    <para>le service à l'option volatile activée. Cette option est activée parce que
 nous voulons qu'une notification soit générée pour toutes les alertes
 survenant. .</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Notez également que les contrôles actifs sont désactivés pour ce service,
+   <listitem>
+    <para>Notez également que les contrôles actifs sont désactivés pour ce service,
 alors que les contrôles passifs sont activés</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Le <varname>max_check_attempts</varname> à 1 signifie que ce service enverra
+   <listitem>
+    <para>Le <varname>max_check_attempts</varname> à 1 signifie que ce service enverra
 des alertes dès son premier changement d'état.</para>
-      </listitem>
-    </orderedlist>
-  </section>
+   </listitem>
+  </orderedlist>
+ </section>
 
-  <section>
-    <title>Configuration du TCP Wrapper</title>
+ <section>
+  <title>Configuration du TCP Wrapper</title>
 
-    <para>Maintenant, il faut modifier le fichier /etc/hosts.deny  sur la machine
+  <para>Maintenant, il faut modifier le fichier /etc/hosts.deny sur la machine
 firestorm. Pour que l'encapsuleur TCP envoie une alerte à chaque connexion
 refusée, vous devez ajouter une ligne de ce type:</para>
 
-    <programlisting>ALL: ALL: RFC931: twist (/usr/local/nagios/libexec/eventhandlers/handle_tcp_wrapper %h %d)&amp;</programlisting>
+  <programlisting>ALL: ALL: RFC931: twist (/usr/local/nagios/libexec/eventhandlers/handle_tcp_wrapper %h %d)&amp;</programlisting>
 
-    <para>Cette ligne suppose qu'il existe un script appellé handle_tcp_wrapper dans
+  <para>Cette ligne suppose qu'il existe un script appellé handle_tcp_wrapper dans
 le répertoire /usr/local/nagios/libexec/eventhandlers/ sur firestorm. Le
 répertoire et le nom du script peuvent être changés comme vous le voulez.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Ecriture du Script</title>
+ <section>
+  <title>Ecriture du Script</title>
 
-    <para>La dernière chose à faire est d'écrire le script handle_tcp_wrapper sur
+  <para>La dernière chose à faire est d'écrire le script handle_tcp_wrapper sur
 firestorm qui enverra les alertes à l'hôte de supervision. Cela donnera
 quelque chose qui ressemblera à ça :</para>
 
-    <programlisting>
-    	#!/bin/sh
+  <programlisting>
+  	#!/bin/sh
 	/usr/local/nagios/libexec/eventhandlers/submit_check_result firestorm "TCP Wrappers" 2 "Denied $2-$1" &gt; /dev/null 2&gt; /dev/null
 	</programlisting>
 	<para>Notez que le script handle_tcp_wrapper appelle le script submit_check_result
@@ -142,18 +142,18 @@ pour spécifier l'emplacement du programme send_nsca sur firestorm):
 
 /bin/echo -e "$1\t$2\t$3\t$4\n" | /usr/local/nagios/bin/send_nsca monitor -c /usr/local/nagios/etc/send_nsca.cfg
 	</programlisting>
-  </section>
+ </section>
 
-  <section>
-    <title>Finition</title>
+ <section>
+  <title>Finition</title>
 
-    <para>Maintenant que vous avez configure tout ce dont vous avez besoin, vous devez
+  <para>Maintenant que vous avez configure tout ce dont vous avez besoin, vous devez
 redémarrer le processus inetd sur firestorm et redémarrer Nagios® sur votre
 serveur de supervision. C'est tout ! Quand le TCP wrapper sur firestorm
 refusera une connexion, vous devriez recevoir des alertes via Nagios®. Cela
 ressemblera à ça : <computeroutput>Denied
 sshd2-sdn-ar-002mnminnP321.dialsprint.net</computeroutput>
-    </para>
-  </section>
+  </para>
+ </section>
 </chapter>
 

@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-cachedchecks" xreflabel="Cached Checks">
@@ -60,10 +60,10 @@ amélioration de performance et chacun devrait y voir un avantage.</para></note>
 		<para>
 		<informalfigure>
 			<mediaobject>
-		          <imageobject>
-		            <imagedata fileref="images/cachedchecks.png" format="PNG"/>
-		          </imageobject>
-		        </mediaobject>
+		     <imageobject>
+		      <imagedata fileref="images/cachedchecks.png" format="PNG"/>
+		     </imageobject>
+		    </mediaobject>
 		</informalfigure>
 		Quand Nagios a besoin d'exécuter un contrôle d'hôte ou de service à la
 demande, il déterminera s'il peut utilisé un résultat de contrôle se
@@ -112,7 +112,7 @@ pâtir.</para>
 services, même si les résultats des contrôlés mémorisés peuvent s'avérer
 obsolète. Nagios travaillera seulement avec les renseignements incorrects
 pour une période courte. Les périodes même courtes de renseignements de
-statut douteux peuvent s'avérer  nuisante pour les administrateurs car il
+statut douteux peuvent s'avérer nuisante pour les administrateurs car il
 est possible qu'ils recevront des notifications pour des problèmes qui n'ont
 pas existé très longtemps.</para>
 		<para>Il y a pas de valeur par défaut pour le cycle de mise en cache des contrôles
@@ -170,11 +170,11 @@ linkend="thebasics-hostchecks">ici</link>.</para>
 		<para>
 		<informalfigure>
 		<mediaobject>
-	          <imageobject>
-	            <imagedata fileref="images/cachedcheckgraphs.png" format="PNG"/>
-	          </imageobject>
-	        </mediaobject>
-	    </informalfigure>
+	     <imageobject>
+	      <imagedata fileref="images/cachedcheckgraphs.png" format="PNG"/>
+	     </imageobject>
+	    </mediaobject>
+	  </informalfigure>
 		La bonne méthode pour déterminer votre valeur de l'option du cycle de mise
 en cache des contrôles est de comparer le nombre de contrôle à la volée que
 Nagios exécute par rapport au nombre de contrôle mémorisé

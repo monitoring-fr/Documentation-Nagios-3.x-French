@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="configuringnagios-configcgi" xreflabel="CGI Configuration File Options">
@@ -523,7 +523,7 @@ global aux commandes des services</title>
 			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
 virgules, qui peuvent envoyer des commandes à tous les services via le <link
 linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Ils ne sont pas non
-plus  automatiquement autorisés à envoyer des commandes aux hôtes. Les
+plus automatiquement autorisés à envoyer des commandes aux hôtes. Les
 utilisateurs de cette liste ne sont pas automatiquement autorisés à voir
 l'état ou la configuration de tous les services. Si vous voulez que des
 utilisateurs puissent aussi voir ces informations, il faut les ajouter à la
@@ -792,7 +792,7 @@ monde des états: valeur par défaut</title>
 				</tgroup>
 			</informaltable>
 			<para>Cette option définit la méthode utilisée par défaut pour dessiner le monde
-VRML avec le  <link linkend="thebasics-cgis-statuswrl_cgi">CGI concerné
+VRML avec le <link linkend="thebasics-cgis-statuswrl_cgi">CGI concerné
 (Statusvrml)</link>. Les options autorisées sont:</para>
 			<informaltable frame="all">
 				<tgroup cols="2">

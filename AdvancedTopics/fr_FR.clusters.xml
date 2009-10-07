@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="advancedtopics-clusters" xreflabel="Monitoring Service and Host Clusters">
@@ -90,12 +90,12 @@ url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug
 	</section>
 	<section>
 		<title>Supervision de clusters de services</title>
-		<para>Disons que vous avez trois serveurs  &protocol-dns; qui apportent une
+		<para>Disons que vous avez trois serveurs &protocol-dns; qui apportent une
 redondance de services sur votre réseau. Premièrement, vous avez besoin de
 superviser chacun des trois serveurs &protocol-dns; individuellement avant
 de pouvoir les superviser en tant que cluster. Je pars du principe que vous
 avez trois services séparés (tous appelés <quote>Service
-&protocol-dns;</quote>) associés à vos hôtes  &protocol-dns; (appelés
+&protocol-dns;</quote>) associés à vos hôtes &protocol-dns; (appelés
 <quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>).</para>
 		<para>Pour pouvoir superviser ces services en tant que cluster, vous devez créer
 un nouveau service <quote>cluster</quote>. Cependant, avant de faire ça,
@@ -137,7 +137,7 @@ fonctionne Nagios tombe, Nagios ne fonctionne plus, il n'y a donc plus grand
 chose à faire (à moins d'avoir mis en place une <link
 linkend="advancedtopics-redundancy">redondance de vos serveurs de
 supervision</link>)...</para>
-		<para>Qu'importe, partons du principe que vous avez une  <code>check_host_cluster</code> commande définie comme suit:</para>
+		<para>Qu'importe, partons du principe que vous avez une <code>check_host_cluster</code> commande définie comme suit:</para>
 		<programlisting>define command{
 	command_name    check_host_cluster
 	command_line    /usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$

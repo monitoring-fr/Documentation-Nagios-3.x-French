@@ -2,32 +2,32 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="securityandperformancetuning-tuning"
-         xreflabel="Tuning Nagios For Maximum Performance">
-  <title>Régler Nagios pour des performances maximales</title>
+     xreflabel="Tuning Nagios For Maximum Performance">
+ <title>Régler Nagios pour des performances maximales</title>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para><inlinemediaobject> <imageobject> <imagedata fileref="images/tuning.png"
+  <para><inlinemediaobject> <imageobject> <imagedata fileref="images/tuning.png"
 format="PNG"/> </imageobject> </inlinemediaobject> Vous avez finalement
 réussi à installer et lancer Nagios et souhaitez savoir comment le régler
 plus finement. Régler Nagios pour améliorer ses performances peut être
 nécessaire quand vous commencez à superviser un grand nombre (&gt; 1000)
 d'hôtes et services. Voici quelques trucs et astuces pour optimiser
 Nagios...</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Trucs et astuces d'optimisation:</title>
+ <section>
+  <title>Trucs et astuces d'optimisation:</title>
 
-    <orderedlist>
-      <listitem>
-        <para>Graphez les statistiques de performance collectées avec
+  <orderedlist>
+   <listitem>
+    <para>Graphez les statistiques de performance collectées avec
 <productname>MRTG</productname>. Vous devriez en effet grapher les quelques
 statistiques importantes produites avec <productname>MRTG</productname> pour
 garder des traces de comment votre installation de Nagios se comporte dans
@@ -36,19 +36,19 @@ l'affectent. Cela devient vraiment, vraiment, vraiment utile quand il s'agit
 d'optimiser les performances d'une installation Nagios. Les informations sur
 la façon de le faire se trouvent <link
 linkend="securityandperformancetuning-mrtggraphs" >ici</link>.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Utilisez les trucs et astuces pour les installations de grande
+   <listitem>
+    <para>Utilisez les trucs et astuces pour les installations de grande
 dimension. Activer l'option <link
 linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link>
 peut vous donner de meilleures performances. Lisez plus d'informations sur
 ce que fait cette option <link
 linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Désactivez les macros d'environnement. Les macros sont normalement mises à
+   <listitem>
+    <para>Désactivez les macros d'environnement. Les macros sont normalement mises à
 disposition des commandes, contrôles, notifications, etc comme variables
 d'environnement. Cela peut devenir un problème sur une installation Nagios
 de grande dimension parce que cela consomme plus de mémoire et (plus
@@ -59,10 +59,10 @@ n'avez alors pas besoin de cette fonctionnalité. Vous pouvez empêcher de
 rendre les macros disponibles comme variables d'environnement en utilisant
 l'option <link
 linkend="configuringnagios-configmain-enable_environment_macros">enable_environment_macros</link>.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Fréquence de consolidation des résultats de contrôle. La variable <link
+   <listitem>
+    <para>Fréquence de consolidation des résultats de contrôle. La variable <link
 linkend="configuringnagios-configmain-check_result_reaper_frequency">check_result_reaper_frequency</link>
 détermine la fréquence à laquelle Nagios doit vérifier la présence de
 résultats de contrôles d'hôtes et de services qui doivent être traités. Le
@@ -71,10 +71,10 @@ variable temps maximum de consolidation (voir ci-dessous). Si votre
 fréquence de consolidation est trop élevée (pas assez fréquente), vous
 pourriez voir apparaître des latences importantes dans les contrôles d'hôtes
 et de services.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Temps maximum de consolidation. La variable <link
+   <listitem>
+    <para>Temps maximum de consolidation. La variable <link
 linkend="configuringnagios-configmain-max_check_result_reaper_time">max_check_result_reaper_time</link>
 détermine le temps maximum que le démon Nagios peut passer à traiter les
 résultats de contrôles d'hôtes et de services avant de pouvoir faire autre
@@ -85,20 +85,20 @@ d'hôtes et de services. Si vous rencontrez des problèmes de latences
 nouvelle fois, vous devriez grapher les <link
 linkend="securityandperformancetuning-mrtggraphs">statistiques avec
 MRTG</link> pour pouvoir prendre cette décision.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Ajuster la taille du tampon. Vous pouvez avoir à régler la valeur de
+   <listitem>
+    <para>Ajuster la taille du tampon. Vous pouvez avoir à régler la valeur de
 l'option <link
 linkend="configuringnagios-configmain-external_command_buffer_slots">external_command_buffer_slots</link>.
 Grapher les statistiques liées au tampon avec <link
 linkend="securityandperformancetuning-mrtggraphs">MRTG</link> (voir au
 dessus) est critique pour pouvoir déterminer les valeurs à utiliser pour
 cette option.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Vérifiez la latence des services pour déterminer la meilleure valeur pour le
+   <listitem>
+    <para>Vérifiez la latence des services pour déterminer la meilleure valeur pour le
 nombre maximal de contrôles en parallèle. Nagios peut restreindre le nombre
 maximal de contrôles de service exécutés en parallèle à la valeur que vous
 spécifiez dans le paramètre <link
@@ -118,10 +118,10 @@ lancé avec le paramètre -s. Continuez à augmenter cette valeur tant que la
 latence moyenne pour vos services reste assez basse. Vous trouverez plus
 d'informations sur l'ordonnancement des contrôles de service <link
 linkend="advancedtopics-checkscheduling">ici</link>.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Utilisez des contrôles passifs à chaque fois que c'est possible. La
+   <listitem>
+    <para>Utilisez des contrôles passifs à chaque fois que c'est possible. La
 surcharge induite par le traitement des résultats des <link
 linkend="thebasics-passivechecks">contrôles passifs</link> de service est
 bien moindre que celle des contrôles actifs <quote>normaux</quote>, donc
@@ -130,10 +130,10 @@ services. Notez que les contrôles passifs de service ne sont réellement
 utiles que si une application externe réalise une partie de la supervision
 ou produit des rapports ; si c'est Nagios qui réalise tout le travail, ceci
 ne changera rien.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Evitez l'utilisation des plugins interprétés. L'utilisation de plugins
+   <listitem>
+    <para>Evitez l'utilisation des plugins interprétés. L'utilisation de plugins
 compilés (C/C++, etc.) réduira significativement la charge de votre hôte de
 supervision par rapport aux scripts interprétés (Perl, etc.). Si les scripts
 Perl ou autres sont faciles à écrire et fonctionnent bien, le fait qu'ils
@@ -143,18 +143,18 @@ nombreux contrôles de service. Si vous souhaitez utiliser des plugins Perl,
 essayez de les compiler en vrais exécutables grâce à perlcc(1) (un
 utilitaire qui fait partie de la distribution Perl standard) ou essayez de
 compiler Nagios avec un interpréteur Perl intégré (voir ci-dessous).</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Utilisez l'interpréteur Perl intégré. Si vous utilisez de nombreux scripts
+   <listitem>
+    <para>Utilisez l'interpréteur Perl intégré. Si vous utilisez de nombreux scripts
 Perl pour les contrôles de service, etc., vous vous apercevrez sans doute
 qu'en compilant Nagios avec un <link
 linkend="advancedtopics-embeddedperl">interpréteur Perl intégré</link> vous
 accélérez les traitements.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Optimisez les commandes de contrôle d'hôte. Si vous contrôlez l'état des
+   <listitem>
+    <para>Optimisez les commandes de contrôle d'hôte. Si vous contrôlez l'état des
 hôtes avec le plugin &plugin-ping;, vous vous apercevrez que ces contrôles
 se font bien plus vite en les éclatant. Plutôt que de spécifier une valeur
 de 1 pour le paramétre max_attempts dans la définition de l'hôte et de dire
@@ -168,10 +168,10 @@ les hôtes lents à répondre peuvent être considérés comme hors service), ma
 vous aurez des contrôles d'hôte plus rapides si vous l'utilisez. Vous pouvez
 aussi utiliser un plugin plus rapide (c.-à-d. &plugin-fping;) dans le
 paramètre host_check_command plutôt que &plugin-ping;.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Planifiez une vérification régulière des hôtes. La planification régulière
+   <listitem>
+    <para>Planifiez une vérification régulière des hôtes. La planification régulière
 de contrôles d'hôtes peut donner un gain de performance à Nagios. Cela est
 dû à la façon dont la logique de cache des contrôles fonctionne (voir
 ci-dessous). Avant Nagios 3, la planification régulière des contrôles
@@ -181,10 +181,10 @@ comme les services. Pour planifier des contrôles réguliers pour un hôte,
 mettez la directive check_interval de la <link
 linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
 à une valeur supérieure à 0.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Activer le cache pour les contrôles d'hôtes. À compter de Nagios 3, les
+   <listitem>
+    <para>Activer le cache pour les contrôles d'hôtes. À compter de Nagios 3, les
 contrôles d'hôtes à la demande peuvent bénéficier de cache. Les contrôles
 d'hôtes à la demande sont déclenchés quand Nagios détecte un changement
 d'état sur un service. Ces contrôles sont exécutés parce que Nagios veut
@@ -197,10 +197,10 @@ le cache des contrôles d'hôtes, vous devez ordonnancer des contrôles
 réguliers de vos hôtes (voir plus haut). Plus d'informations sur le cache
 pour les contrôles d'hôtes peut être trouvé <link
 linkend="advancedtopics-cachedchecks">ici</link>.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>N'utilisez pas le contrôle agressif des hôtes. Sauf si Nagios a du mal à
+   <listitem>
+    <para>N'utilisez pas le contrôle agressif des hôtes. Sauf si Nagios a du mal à
 identifier les rétablissements d'hôte, je recommanderais de ne pas activer
 le paramètre <link
 linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressive_host_checking</link>.
@@ -214,17 +214,17 @@ peut ne pas voir que l'hôte s'est rétabli. Certains utilisateurs peuvent
 avoir besoin d'activer cette option, mais ce n'est pas le cas pour la
 majorité, et je recommanderais de ne pas l'utiliser si vous n'en avez pas
 expressément besoin...</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Augmentez l'intervalle de vérification des commandes externes. Si vous gérez
+   <listitem>
+    <para>Augmentez l'intervalle de vérification des commandes externes. Si vous gérez
 beaucoup de commandes externes (p. ex. des vérifications passives dans une
 <link linkend="advancedtopics-distributed">supervision distribuée</link>),
 vous devrez probablement affecter -1 au paramètre <link
 linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link>.
 Cela forcera Nagios à vérifier les commandes externes aussi souvent que
 possible. C'est important parce que la plupart des systèmes ont une petite
-taille de  <link
+taille de <link
 linkend="configuringnagios-configmain-external_command_buffer_slots">tampon
 pour les tubes de redirections</link> [NdT : pipe] (c.-à-d. 4 Ko). Les
 tampons sont utilisés pour conserver les commandes externes lues depuis le
@@ -240,18 +240,18 @@ comme décrit <link
 linkend="securityandperformancetuning-mrtggraphs">ici</link> de façon à voir
 la consommation moyenne du tampon pour les tubes de redirections de votre
 installation Nagios.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Optimisez le matériel pour des performances maximales.</para><note><para>Les performances matériels ne devraient pas poser problème sauf si:</para>
+   <listitem>
+    <para>Optimisez le matériel pour des performances maximales.</para><note><para>Les performances matériels ne devraient pas poser problème sauf si:</para>
 
-        <orderedlist>
-          <listitem>
-            <para>Vous supervisez des milliers de services</para>
-          </listitem>
+    <orderedlist>
+     <listitem>
+      <para>Vous supervisez des milliers de services</para>
+     </listitem>
 
-          <listitem>
-            <para>Vous faîtes beaucoup de post traitement de données de performance, etc. La
+     <listitem>
+      <para>Vous faîtes beaucoup de post traitement de données de performance, etc. La
 configuration matérielle va affecter directement les performances de votre
 système d'exploitation, et donc celles de Nagios. L'amélioration principale
 que vous puissiez réaliser concerne les disques durs. La vitesse du
@@ -265,10 +265,10 @@ Linux n'essaient pas d'optimiser les accès au disque. Si vous ne changez pas
 les paramètres d'accès au disque (en utilisant un utilitaire comme
 <command>hdparm</command>), vous perdrez beaucoup des fonctionnalités
 améliorant la vitesse des nouveaux disques IDE. </para>
-          </listitem>
-        </orderedlist>
-        </note>
-      </listitem>
+     </listitem>
     </orderedlist>
-  </section>
+    </note>
+   </listitem>
+  </orderedlist>
+ </section>
 </chapter>

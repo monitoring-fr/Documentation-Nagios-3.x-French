@@ -2,8 +2,8 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="development-pluginapi" xreflabel="Nagios Plugin API">
@@ -116,7 +116,7 @@ linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressi
 est activée, les codes de retour 1 donneront un état DOWN ou UNREACHABLE
 pour l'hôte. Sinon, les codes de retour 1 donneront un état UP pour
 l'hôte. Le processus par lequel Nagios détermine si une machine est DOWN ou
-UNREACHABLE est traité  <link
+UNREACHABLE est traité <link
 linkend="thebasics-networkreachability">ici</link>.</para></note>
 	</section>
 	<section>
@@ -167,7 +167,7 @@ données de performance, comme suit:</para>
 		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
 rouge de la première ligne du message de sortie du plugin (à gauche du
 séparateur 'pipe') sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link> .  Les
+linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link> . Les
 parties oranges de la première ligne et suivantes seront concaténées (avec
 des espaces) et seront stockées dans la macro <link
 linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> . Les

@@ -2,75 +2,75 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="gettingstarted-monitoring-routers" xreflabel="Monitoring routers/switches">
-  <title>Supervision des routeurs et des switchs.</title>
+ <title>Supervision des routeurs et des switchs.</title>
 
-  <abstract>
-    <para>Ce document décrit la façon don tvous pouvez superviser des routeurs et
+ <abstract>
+  <para>Ce document décrit la façon don tvous pouvez superviser des routeurs et
 switchs réseaux. Quelques switchs et hubs bon marché <quote>non
 manageables</quote> n'ont pas <acronym>IP</acronym> adresses et sont invisibles sur votre réseau, il n'y a donc aucun moyen de
 les superviser. Les routeurs et switches plus chers ont une adresse assignée
 et peuvent donc être supervisés en les pingant ou en utilisant
 &protocol-snmp; pour interroger les informations de statut.</para>
-  </abstract>
+ </abstract>
 
-  <section>
-    <title>Introduction</title>
+ <section>
+  <title>Introduction</title>
 
-    <para><inlinemediaobject> <imageobject> <imagedata fileref="images/switch.png"
+  <para><inlinemediaobject> <imageobject> <imagedata fileref="images/switch.png"
 format="PNG"/> </imageobject> </inlinemediaobject></para>
 
-    <para>Je vais décrire la façon dont vous pouvez superviser les choses suivantes
+  <para>Je vais décrire la façon dont vous pouvez superviser les choses suivantes
 sur vos switchs, hubs et routeurs:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Paquet perdu, temps moyen de parcours (round trip average)</para>
-      </listitem>
+  <itemizedlist>
+   <listitem>
+    <para>Paquet perdu, temps moyen de parcours (round trip average)</para>
+   </listitem>
 
-      <listitem>
-        <para>Information d'état &protocol-snmp;</para>
-      </listitem>
+   <listitem>
+    <para>Information d'état &protocol-snmp;</para>
+   </listitem>
 
-      <listitem>
-        <para>Trafic / bande passante consommée</para>
-      </listitem>
-    </itemizedlist>
+   <listitem>
+    <para>Trafic / bande passante consommée</para>
+   </listitem>
+  </itemizedlist>
 
-    <note>
-      <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
+  <note>
+   <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
 le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
 exemples de configuration ci-dessous font référence aux objets de
 configuration définis dans les fichiers d'exemples
 (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
 etc.) qui ont été installé si vous avez suivi le guide rapide.</para>
-    </note>
-  </section>
+  </note>
+ </section>
 
-  <section>
-    <title>Vue globale</title>
+ <section>
+  <title>Vue globale</title>
 
-    <para><informalfigure><mediaobject>
-        <imageobject>
-          <imagedata fileref="images/monitoring-routers.png" format="PNG"/>
-        </imageobject>
-      </mediaobject></informalfigure></para>
+  <para><informalfigure><mediaobject>
+    <imageobject>
+     <imagedata fileref="images/monitoring-routers.png" format="PNG"/>
+    </imageobject>
+   </mediaobject></informalfigure></para>
 
-    <para>La supervision des switchs et routeurs peut au choix être simple ou plus
+  <para>La supervision des switchs et routeurs peut au choix être simple ou plus
 évoluée suivant le type d'équipements que vous souhaitez superviser. Dans le
 cas où ce sont des composants critiques de votre infrastrcuture, vous
 voudrez sans aucun doute les superviser d'une façon au moins basique.</para>
 
-    <para>Les switchs et les routeurs peuvent facilement être supervisés en les
+  <para>Les switchs et les routeurs peuvent facilement être supervisés en les
 <quote>pingant</quote> pour déterminer le nombre de paquets perdus, <acronym>RTA</acronym>, etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser
 l'état des ports, etc. avec le plugin &plugin-snmp; et la bande passante
-avec  &plugin-mrtgtraf; plugin (si vous utilisez <application><acronym>MRTG</acronym></application>).</para>
+avec &plugin-mrtgtraf; plugin (si vous utilisez <application><acronym>MRTG</acronym></application>).</para>
 
-    <para>Le plugin &plugin-snmp; sera compilé et installé seulement si vous avez les
+  <para>Le plugin &plugin-snmp; sera compilé et installé seulement si vous avez les
 paquets <application>net-snmp</application> et
 <application>net-snmp-utils</application> installés sur votre
 système. Assurez-vous que le plugin soit présent dans <filename
@@ -79,54 +79,54 @@ continuer. Si ce n'est pas le cas, installez
 <application>net-snmp</application>,
 <application>net-snmp-utils</application> et recompilez/réinstallez les
 plugins Nagios.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Étapes</title>
+ <section>
+  <title>Étapes</title>
 
-    <para>Il y a plusieurs étapes à suivre pour pouvoir superviser un nouveau routeur
+  <para>Il y a plusieurs étapes à suivre pour pouvoir superviser un nouveau routeur
 ou switch. Les voici:</para>
 
-    <procedure>
-      <step>
-        <para>Perform first-time prerequisites</para>
-      </step>
+  <procedure>
+   <step>
+    <para>Perform first-time prerequisites</para>
+   </step>
 
-      <step>
-        <para>Créez de nouvelles définitions d'hôte et service pour la supervision du
+   <step>
+    <para>Créez de nouvelles définitions d'hôte et service pour la supervision du
 périphérique.</para>
-      </step>
+   </step>
 
-      <step>
-        <para>Redémarrez le démon Nagios</para>
-      </step>
-    </procedure>
-  </section>
+   <step>
+    <para>Redémarrez le démon Nagios</para>
+   </step>
+  </procedure>
+ </section>
 
-  <section>
-    <title>Ce qui est déjà fait pour vous</title>
+ <section>
+  <title>Ce qui est déjà fait pour vous</title>
 
-    <para>To make your life a bit easier, a few configuration tasks have already been
+  <para>To make your life a bit easier, a few configuration tasks have already been
 done for you:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>Deux définitions de commandes (<emphasis>check_snmp</emphasis> et
+  <itemizedlist>
+   <listitem>
+    <para>Deux définitions de commandes (<emphasis>check_snmp</emphasis> et
 <emphasis>check_local_mrtgtraf</emphasis>) ont été ajoutées au fichier
 <filename>commands.cfg</filename>. Elles vous permettent d'utiliser les
 plugins &plugin-snmp; et &plugin-mrtgtraf; pour superviser les routeurs
 réseaux.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>Un gabarit d'hôte de type switch  (nommé
+   <listitem>
+    <para>Un gabarit d'hôte de type switch (nommé
 <emphasis>generic-switch</emphasis>) a déjà été créé dans le fichier
 <filename>templates.cfg</filename>. Cela vous permet de rajouter des
 définitions d'hôtes de type routeur/switch de façon simple.</para>
-      </listitem>
-    </itemizedlist>
+   </listitem>
+  </itemizedlist>
 
-    <para>Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans
+  <para>Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans
 le répertoire <filename
 class="directory">/usr/local/nagios/etc/objects/</filename>. Vous pouvez
 modifier les définitions de ceux-ci ou en créez de nouvelles pour répondre
@@ -135,27 +135,27 @@ d'avoir une meilleure connaissance de la configuration de Nagios avant de le
 faire. Pour le moment, contentez-vous de suivre les directions précisées
 ci-dessous et vous pourrez superviser vos routeurs/switchs réseaux en un
 rien de temps.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Pré-requis</title>
+ <section>
+  <title>Pré-requis</title>
 
-    <para>La première fois que vous configurez Nagios pour superviser un switch
+  <para>La première fois que vous configurez Nagios pour superviser un switch
 réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez
 à le faire que pour le *premier* switch à superviser.</para>
 
-    <para>Edit the main Nagios config file.</para>
+  <para>Edit the main Nagios config file.</para>
 
-    <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
+  <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
-    <para>Remove the leading pound (#) sign from the following line in the main
+  <para>Remove the leading pound (#) sign from the following line in the main
 configuration file:</para>
 
-    <programlisting>#cfg_file=/usr/local/nagios/etc/objects/switch.cfg</programlisting>
+  <programlisting>#cfg_file=/usr/local/nagios/etc/objects/switch.cfg</programlisting>
 
-    <para>Enregistrez le fichier et quittez.</para>
+  <para>Enregistrez le fichier et quittez.</para>
 
-    <para>Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier
+  <para>Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier
 <filename>/usr/local/nagios/etc/objects/switch.cfg</filename> pour y trouver
 des définitions d'objets additionnels. C'est là que vous ajouterez des
 définitions pour les routeurs et les switchs. Ce fichier de configuration
@@ -163,20 +163,20 @@ contient déjà un exemple de definitions d'hôte et de service. Pour le
 *premier* routeur/switch que vous supervisez, vous pouvez simplement
 modifier les définitions d'exemple d'hôte et de service dans ce fichier
 plutôt que d'en créer de nouvelles.</para>
-  </section>
+ </section>
 
-  <section>
-    <title>Configuration de Nagios</title>
+ <section>
+  <title>Configuration de Nagios</title>
 
-    <para>Vous allez devoir créer quelques <link
+  <para>Vous allez devoir créer quelques <link
 linkend="configuringnagios-objectdefinitions">définitions d'objets</link>
 pour pouvoir superviser un nouveau routeur/switch.</para>
 
-    <para>Éditez le fichier <filename>switch.cfg</filename>.</para>
+  <para>Éditez le fichier <filename>switch.cfg</filename>.</para>
 
-    <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/switch.cfg</userinput></screen>
+  <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/switch.cfg</userinput></screen>
 
-    <para>Ajouter une nouvelle définition d'<link
+  <para>Ajouter une nouvelle définition d'<link
 linkend="configuringnagios-objectdefinitions-host">hôte</link> pour le
 switch que vous souhaitez superviser. Si c'est le *premier* que vous
 supervisez, vous pouvez simplement modifier l'exemple de définition d'hôte
@@ -184,38 +184,38 @@ dans <filename>switch.cfg</filename>. Remplacez les champs
 <varname>host_name</varname>, <varname>alias</varname>, et
 <varname>address</varname> par les valeurs appropriées pour votre switch.</para>
 
-    <programlisting>
+  <programlisting>
 define host{
-    use        generic-switch         ; Inherit default values from a template
-    host_name  linksys-srw224p        ; The name we're giving to this switch
-    alias      Linksys SRW224P Switch ; A longer name associated with the switch
-    address    192.168.1.253          ; IP address of the switch
-    hostgroups allhosts,switches      ; Host groups this switch is associated with
-    }
+  use    generic-switch     ; Inherit default values from a template
+  host_name linksys-srw224p    ; The name we're giving to this switch
+  alias   Linksys SRW224P Switch ; A longer name associated with the switch
+  address  192.168.1.253     ; IP address of the switch
+  hostgroups allhosts,switches   ; Host groups this switch is associated with
+  }
 </programlisting>
-  </section>
+ </section>
 
-  <section>
-    <title>Supervision des services</title>
+ <section>
+  <title>Supervision des services</title>
 
-    <para>Vous pouvez ajouter maintenant quelques définitions de services (dans le
+  <para>Vous pouvez ajouter maintenant quelques définitions de services (dans le
 même fichier de configuration) pour superviser différents aspects de votre
 switch. Si c'est le *premier* switch que vous supervisez, vous pouvez
 simplement modifier l'exemple de définition d'hôte dans
 <filename>switch.cfg</filename>.</para>
 
-    <note>
-      <para>Remplacez <quote><replaceable>linksys-srw224p</replaceable></quote> dans les
+  <note>
+   <para>Remplacez <quote><replaceable>linksys-srw224p</replaceable></quote> dans les
 exemples de définitions ci-dessous par le nom que vous avez renseigné dans
 la directive <varname>host_name</varname> que vous venez d'ajouter dans la
 définition d'hôte.</para>
-    </note>
-  </section>
+  </note>
+ </section>
 
-  <section>
-    <title>Supervision des paquets perdus et de la RTA</title>
+ <section>
+  <title>Supervision des paquets perdus et de la RTA</title>
 
-    <para>Ajoutez cette définition de service pour pouvoir superviser les paquets
+  <para>Ajoutez cette définition de service pour pouvoir superviser les paquets
 perdus et le temps moyen de réponse entre le serveur Nagios et le switch
 toutes les 5 minutes en condition normale.</para>
 <programlistingco>
@@ -230,12 +230,12 @@ toutes les 5 minutes en condition normale.</para>
 
 <programlisting>
 define service{
-   use                    generic-service
-   host_name              linksys-srw224p
-   service_description    PING
-   check_command          check_ping!200.0,20%!600.0,60%
-   normal_check_interval  5
-   retry_check_interval   1
+  use          generic-service
+  host_name       linksys-srw224p
+  service_description  PING
+  check_command     check_ping!200.0,20%!600.0,60%
+  normal_check_interval 5
+  retry_check_interval  1
 }
 </programlisting>
 <calloutlist>
@@ -262,99 +262,99 @@ soit déterminé</para>
 </programlistingco>
 
 
-    <para>Le service sera:</para>
+  <para>Le service sera:</para>
 
-    <itemizedlist>
-      <listitem>
-        <para>CRITICAL si le temps de réponse moyen (<acronym>RTA</acronym>) est plus élevé que 600 millisecondes ou que le nombre de paquets perdus
+  <itemizedlist>
+   <listitem>
+    <para>CRITICAL si le temps de réponse moyen (<acronym>RTA</acronym>) est plus élevé que 600 millisecondes ou que le nombre de paquets perdus
 est égal ou supérieur à 60%</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>WARNING si le <acronym>RTA</acronym> est supérieur à 200 ms ou que le nombre de paquets perdus est égal ou
+   <listitem>
+    <para>WARNING si le <acronym>RTA</acronym> est supérieur à 200 ms ou que le nombre de paquets perdus est égal ou
 supérieur à 20% </para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para>OK si le <acronym>RTA</acronym> est inférieur à 200 ms et que le nombre de paquets perdus est inférieur à
+   <listitem>
+    <para>OK si le <acronym>RTA</acronym> est inférieur à 200 ms et que le nombre de paquets perdus est inférieur à
 20%</para>
-      </listitem>
-    </itemizedlist>
-  </section>
+   </listitem>
+  </itemizedlist>
+ </section>
 
-  <section>
-    <title>Supervision de l'information d'état SNMP</title>
+ <section>
+  <title>Supervision de l'information d'état SNMP</title>
 
-    <para>Si votre switch ou routeur supporte &protocol-snmp;, vous pouvez superviser
+  <para>Si votre switch ou routeur supporte &protocol-snmp;, vous pouvez superviser
 un tas d'information en utilisant le plugin &plugin-snmp;. Sinon, sautez
 cette section.</para>
 
-    <para>Ajoutez la définition de service suivante pour superviser le temps écoulé
+  <para>Ajoutez la définition de service suivante pour superviser le temps écoulé
 depuis la mise sous tension de votre switch.</para>
 
-    <programlisting>
+  <programlisting>
 define service{
-    use                  generic-service ; Inherit values from a template
-    host_name            linksys-srw224p
-    service_description  Uptime
-    check_command        check_snmp!-C public -o sysUpTime.0
-    }
+  use         generic-service ; Inherit values from a template
+  host_name      linksys-srw224p
+  service_description Uptime
+  check_command    check_snmp!-C public -o sysUpTime.0
+  }
 </programlisting>
 
-    <para>Dans la directive <varname>check_command</varname> de la définition de
+  <para>Dans la directive <varname>check_command</varname> de la définition de
 service ci-dessus, le <option>-C public</option> indique au plugin que le nom de communauté &protocol-snmp; à utiliser est
 <varname>public</varname> et que <computeroutput>-o
 sysUpTime.0</computeroutput> indique que l' <acronym>OID</acronym> doit être contrôlé.</para>
 
-    <para>Si vous souhaitez vous assurer qu'un port/interface particulier du switch
+  <para>Si vous souhaitez vous assurer qu'un port/interface particulier du switch
 est dans un état up, vous pouvez ajouter une définition de service comme
 celle-ci:</para>
 
-    <programlisting>
+  <programlisting>
 define service{
-    use                 generic-service ; Inherit values from a template
-    host_name           linksys-srw224p
-    service_description Port 1 Link Status
-    check_command       check_snmp!-C public -o ifOperStatus.1 -r 1 -m RFC1213-MIB
-    }
+  use         generic-service ; Inherit values from a template
+  host_name      linksys-srw224p
+  service_description Port 1 Link Status
+  check_command    check_snmp!-C public -o ifOperStatus.1 -r 1 -m RFC1213-MIB
+  }
 </programlisting>
 
-    <para>
-    Dans l'exemple ci-dessus, <computeroutput>-o ifOperStatus.1</computeroutput>
+  <para>
+  Dans l'exemple ci-dessus, <computeroutput>-o ifOperStatus.1</computeroutput>
 fait référence à <acronym>OID</acronym> pour l'état opérationnel du port 1 sur le switch.
-    </para>
-    <para>
-    The <option>-r 1</option> indique au plugin &plugin-snmp; de retourner un état OK si
+  </para>
+  <para>
+  The <option>-r 1</option> indique au plugin &plugin-snmp; de retourner un état OK si
 <computeroutput>1</computeroutput> est trouvé dans la réponse
 &protocol-snmp; (1 indique que le port est "up") et CRITICAL sinon.
-    </para>
-    <para>
-    The <option>-m RFC1213-MIB</option> est optionnel et indique
-    <acronym>MIB</acronym> qui sont installés sur votre système peuvent aider à accélérer les choses.</para>
+  </para>
+  <para>
+  The <option>-m RFC1213-MIB</option> est optionnel et indique
+  <acronym>MIB</acronym> qui sont installés sur votre système peuvent aider à accélérer les choses.</para>
 
-    <para>Voilà pour l'exemple de supervision avec &protocol-snmp;. Il y a des
+  <para>Voilà pour l'exemple de supervision avec &protocol-snmp;. Il y a des
 millions de choses qui peuvent être supervisées par &protocol-snmp;, aussi
 est-ce à vous décider ce que dont vous avez besoin et ce que vous souhaitez
 superviser. Bonne chance!</para>
 
-    <tip>
-      <para>Vous pouvez trouver les <acronym>OID</acronym>s qui peuvent supervisés sur un switch en exécutant la commande suivante
+  <tip>
+   <para>Vous pouvez trouver les <acronym>OID</acronym>s qui peuvent supervisés sur un switch en exécutant la commande suivante
 (remplacez <emphasis>192.168.1.253</emphasis> par l'adresse IP de votre
-switch):  <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command></para>
-    </tip>
-  </section>
+switch): <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command></para>
+  </tip>
+ </section>
 
-  <section>
-    <title>Supervision de la bande passante/trafic</title>
+ <section>
+  <title>Supervision de la bande passante/trafic</title>
 
-    <para>Si vous supervisez l'usage de la bande passante de vos switchs et routeurs
-en utilisant  <ulink
+  <para>Si vous supervisez l'usage de la bande passante de vos switchs et routeurs
+en utilisant <ulink
 url="http://oss.oetiker.ch/mrtg/"><application>MRTG</application></ulink>,
 vous pouvez utiliser Nagios pour alerter quand les valeurs dépassent un
 seuil que vous spécifiez. Le plugin &plugin-mrtgtraf; (inclus dans la
 distribution de splugins Nagios) vous permet de le faire.</para>
 
-    <para>Vous aurez besoin que le plugin &plugin-mrtgtraf; connaisse l'emplacement du
+  <para>Vous aurez besoin que le plugin &plugin-mrtgtraf; connaisse l'emplacement du
 fichier où <application>MRTG</application> stockes ses données, ainsi que
 les seuils, etc. Dans mon exemple, je supervise un des ports d'un switch
 Linksys. Le fichier de log de <application>MRTG</application> est stocké
@@ -362,46 +362,46 @@ dans <filename>/var/lib/mrtg/192.168.1.253_1.log</filename>. Voici la
 définition de service que j'utilise pour superviser les données de bande
 passante stockées dans ce fichier... </para>
 
-    <programlisting>
+  <programlisting>
 define service{
-   use                 generic-service ; Inherit values from a template
-   host_name           linksys-srw224p
-   service_description Port 1 Bandwidth Usage
-   check_command       check_local_mrtgtraf!/var/lib/mrtg/192.168.1.253_1.log!AVG!1000000,2000000!5000000,5000000!10
+  use         generic-service ; Inherit values from a template
+  host_name      linksys-srw224p
+  service_description Port 1 Bandwidth Usage
+  check_command    check_local_mrtgtraf!/var/lib/mrtg/192.168.1.253_1.log!AVG!1000000,2000000!5000000,5000000!10
 }
 </programlisting>
 
-    <para>Dans l'exemple ci-dessus, l'option
+  <para>Dans l'exemple ci-dessus, l'option
 <filename>/var/lib/mrtg/192.168.1.253_1.log</filename> passée à la commande
 <emphasis>check_local_mrtgtraf</emphasis> indique au plugin dans quel
 fichier de log <application>MRTG</application> il doit aller lire.
-    </para>
-    <para>
-    The <acronym>AVG</acronym> option indique qu'il doit utiliser des statistiques basées sur la moyene de
+  </para>
+  <para>
+  The <acronym>AVG</acronym> option indique qu'il doit utiliser des statistiques basées sur la moyene de
 la bande passante. Les <option>1000000,2000000</option>
-    options sont les seuils de warning (en bytes) pour le taux de trafic
+  options sont les seuils de warning (en bytes) pour le taux de trafic
 entrant.
-    </para>
-    <para>
-    The <option>5000000,5000000</option> sont des seuils critiques (en bytes) pour le taux de trafic sortant. L' <option>10</option> option indique au plugin de renvoyer un état CRITICAL si le fichier de log
+  </para>
+  <para>
+  The <option>5000000,5000000</option> sont des seuils critiques (en bytes) pour le taux de trafic sortant. L' <option>10</option> option indique au plugin de renvoyer un état CRITICAL si le fichier de log
 <application>MRTG</application> est plus vieux que 10 minutes (il devrait
 être mis à jour toutes les 5 minutes).</para>
 
-    <para>Save the file.</para>
-  </section>
+  <para>Save the file.</para>
+ </section>
 
-  <section>
-        <title>Redémarrage de Nagios</title>
+ <section>
+    <title>Redémarrage de Nagios</title>
 
-    <para>Une fois que vous avez ajouté les nouvelles définitions d'hôte et de service
+  <para>Une fois que vous avez ajouté les nouvelles définitions d'hôte et de service
 dans le fichier <filename>switch.cfg</filename>, vous êtes prêt à démarrer
 la supervision d'un routeur/switch. Pour cela, vous aurez besoin de <link
 linkend="runningnagios-verifyconfig">vérifier votre configuration</link> et
 <link linkend="runningnagios-startstop">redémarrez Nagios</link>.</para>
 
-    <para>If the verification process produces any errors messages, fix your
+  <para>If the verification process produces any errors messages, fix your
 configuration file before continuing. Make sure that you don't (re)start
 Nagios until the verification process completes without any errors!</para>
-  </section>
+ </section>
 </chapter>
 

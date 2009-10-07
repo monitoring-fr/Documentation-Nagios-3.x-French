@@ -2,23 +2,23 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
 "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
-  <!ENTITY % all.entities SYSTEM "../all-entities.ent">
-  %all.entities;
+ <!ENTITY % all.entities SYSTEM "../all-entities.ent">
+ %all.entities;
 ]
 >
 <chapter id="securityandperformancetuning-security"
-         xreflabel="Security Considerations">
-  <title>Considérations sur la sécurité</title>
+     xreflabel="Security Considerations">
+ <title>Considérations sur la sécurité</title>
 
-  <section>
-    <title><anchor id="securityandperformancetuning-security-intro" />Introduction</title>
+ <section>
+  <title><anchor id="securityandperformancetuning-security-intro" />Introduction</title>
 
-    <para><inlinemediaobject> <imageobject> <imagedata fileref="images/security.png"
+  <para><inlinemediaobject> <imageobject> <imagedata fileref="images/security.png"
 format="PNG"/> </imageobject> </inlinemediaobject> Ce paragraphe est un
 rapide survol des éléments que vous devez conserver à l'esprit au moment
 d'installer Nagios, afin que l'installation soit sécurisée.</para>
 
-    <para>Vous devriez considérer votre serveur de supervision comme un porte dérobée
+  <para>Vous devriez considérer votre serveur de supervision comme un porte dérobée
 de vos autres systèmes. Dans certains cas, le serveur Nagios a besoin d'être
 autorisé à traverser des pares-feu pour pouvoir contrôler des serveurs
 distants. Dans la plupart des cas, il est autorisé à interroger ces serveurs
@@ -31,7 +31,7 @@ avant de rebondir sur les autres. Ceci est particulièrmeent vrai dans le cas
 où vous utilisez des clés partagées &protocol-ssh; pour superviser les
 systèmes distants.</para>
 
-    <para>Si un intrus a la possibilité de soumettre des résultats de contrôles ou des
+  <para>Si un intrus a la possibilité de soumettre des résultats de contrôles ou des
 commandes externes au démon Nagios, il a la possibilité de soumettre des
 données de supervision erronées, de vous rendre fou avec des notifications
 erronées, ou de faire en sorte que des gestionnaires d'événements soient
@@ -39,7 +39,7 @@ déclenchés. Si vous avez des scripts de gestion d'événements qui redémarren
 des services, allumage et extinction électrique, etc. cela peut devenir
 problématique.</para>
 
-    <para>Un autre champ de possibilités pour les intrus est de sniffer les données de
+  <para>Un autre champ de possibilités pour les intrus est de sniffer les données de
 supervision (information d'état) au moment où elle transite sur le
 réseau. Si les canaux de communication ne sont pas chiffrés, les attaquants
 peuvent accéder à des informations importantes en regardant vos informations
@@ -50,17 +50,17 @@ comparaison du nombre d'utilisateurs connectés dessus. L'attaquant est donc
 en mesure de déterminer le meilleur moment pour compromettre un système et
 utiliser ses ressources (CPU, etc.) sans être découvert.</para>
 
-    <para>Voici quelques trucs pour vous aider à garder vos systèmes sécurisés quand
+  <para>Voici quelques trucs pour vous aider à garder vos systèmes sécurisés quand
 vous implémentez une solution de supervision basée sur Nagios...</para>
-  </section>
+ </section>
 
-  <section>
-    <title><anchor id="securityandperformancetuning-security-bestpractices"
+ <section>
+  <title><anchor id="securityandperformancetuning-security-bestpractices"
 />Meilleures pratiques</title>
 
-    <orderedlist>
-      <listitem>
-        <para><emphasis role="bold">Utilisez un serveur de supervision
+  <orderedlist>
+   <listitem>
+    <para><emphasis role="bold">Utilisez un serveur de supervision
 dédié</emphasis>. Je vous recommande d'installer Nagios sur un serveur dédié
 à la supervision (et à d'autres tâches d'administration
 éventuellement). Protégez votre serveur de supervision comme si c'était l'un
@@ -72,18 +72,18 @@ utilisateurs sur votre serveur de supervision peut représenter un risque de
 sécurité. Gardez à l'esprit qu'il est plus facile d'obtenir des privilèges
 root au travers d'un trou de sécurité quand vous avez un compte local est
 disponible sur une machine.
-        <informalfigure>
-        <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/security3.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </informalfigure>
+    <informalfigure>
+    <mediaobject>
+      <imageobject>
+       <imagedata fileref="images/security3.png" format="PNG"/>
+      </imageobject>
+     </mediaobject>
+    </informalfigure>
 		</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Ne pas faire fonctionner Nagios en tant que
+   <listitem>
+    <para><emphasis role="bold">Ne pas faire fonctionner Nagios en tant que
 Root!</emphasis>. Il n'est pas nécessaire d'être root pour faire fonctionner
 Nagios, alors ne le faîtes pas. Vous pouvez obliger Nagios à abandonner des
 privilèges après le lancement et à fonctionner avec les droits d'un autre
@@ -95,10 +95,10 @@ le fichier principal de configuration. Si vous avez besoin d'exécuter des
 gestionnaires d'événements ou des plugins qui requièrent des accès root,
 vous pouvez essayer d'utiliser <ulink
 url="http://www.courtesan.com/sudo/sudo.html">sudo</ulink>.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Vérouillez le répertoire des résultats de
+   <listitem>
+    <para><emphasis role="bold">Vérouillez le répertoire des résultats de
 contrôle</emphasis>. Assurez-vous que seul l'utilisateur nagios à le doirt
 de lecture/écriture sur le <link
 linkend="configuringnagios-configmain-check_result_path">répertoire des
@@ -107,10 +107,10 @@ sont capables d'écrire dans ce répertoire, ils peuvent potentiellement
 envoyer des résultats de contrôles erronées au démon Nagios. Cela pourrait
 vous valoir quelques désagréments comme des notifications erronées ou des
 problèmes de sécurité (gestionnaires d'événements déclenchés).</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Vérrouillez le fichier des commandes
+   <listitem>
+    <para><emphasis role="bold">Vérrouillez le fichier des commandes
 externes</emphasis>. Si vous activez les <link
 linkend="advancedtopics-extcommands">commandes externes</link>, assurez-vous
 d'avoir les permissions appropriées sur le répertoire <filename
@@ -122,15 +122,15 @@ la supervision et aux tâches d'administration qui n'a pas de comptes
 publics, cela devrait aller. Si vous l'avez installé sur une machine
 publique ou multi-utilisateurs (pas recommandé), autoriser l'utilisateur du
 serveur web peut être un problème de sécurité. Après tout, vous ne souhaitez
-pas que n'importe quel utilisateur du système  puisse contrôler Nagios à
+pas que n'importe quel utilisateur du système puisse contrôler Nagios à
 partir du fichier des commandes externes. Dans ce cas, je vous suggère de
 donner les droits uniquement à l'utilisateur nagios et d'utiliser quelque
 chose comme <ulink url="http://cgiwrap.sourceforge.net/">CGIWrap</ulink>
 pour faire fonctionner les CGIs avec l'utilisateur nagios plutôt que nobody.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Authentification requise pour les CGIs</emphasis>. Je
+   <listitem>
+    <para><emphasis role="bold">Authentification requise pour les CGIs</emphasis>. Je
 vous recommande fortement de protéger l'accès aux CGI par une
 authentification. Ceci fait, lisez la documentation sur les droits par
 défaut dont disposent les contacts autorisés et n'accordez
@@ -145,27 +145,27 @@ moindre commande dans le <link
 linkend="configuringnagios-configmain-command_file">fichier des commandes
 externes</link>. De toutes façons, vous ne souhaitez pas que tout le monde
 puisse contrôler vôtre Nagios ? </para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Implémentez les mesure renforcées de sécurité des
+   <listitem>
+    <para><emphasis role="bold">Implémentez les mesure renforcées de sécurité des
 GCIs</emphasis>. Je vous recommande chaudement de considérer
 l'implémentation des mesures de sécurité pour les CGIs comme indiqué <link
 linkend="securityandperformancetuning-cgisecurity">ici</link>. Ces mesures
 peuvent aider à s'assurer que l'utilisateur/mot de passe que vous utilisez
 pour accéder à l'interface web de Nagios ne puissent intercepter par de
 tierces parties.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Utilisez les chemins complets dans la définition des
+   <listitem>
+    <para><emphasis role="bold">Utilisez les chemins complets dans la définition des
 commandes</emphasis>. Lorsque vous définissez des commandes, assurez-vous
 d'avoir bien précisé le chemin d'accès complet de tous les scripts ou
 binaires que vous exécutez.</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Cachez les informations sensibles à l'aide des macros
+   <listitem>
+    <para><emphasis role="bold">Cachez les informations sensibles à l'aide des macros
 <varname>$USERn$</varname></emphasis>. Les CGI parcourent le <link
 linkend="configuringnagios-configmain">fichier de configuration
 principal</link> et le(s) <link
@@ -173,35 +173,35 @@ linkend="configuringnagios-configobject">fichier(s) de configuration des
 objets</link>, n'y laissez donc pas d'informations sensibles (noms
 d'utilisateur, mots de passe, etc...). Si vous avez besoin de préciser un
 mot de passe ou un nom d'utilisateur dans une définition de commande,
-utilisez  <code>$USERn$</code> <link linkend="thebasics-macros">macro pour le cacher</link>. <code>$USERn$</code>
-        Les macros $USERn$ sont définies dans un ou plusieurs <link
+utilisez <code>$USERn$</code> <link linkend="thebasics-macros">macro pour le cacher</link>. <code>$USERn$</code>
+    Les macros $USERn$ sont définies dans un ou plusieurs <link
 linkend="configuringnagios-configmain-resource_file">fichiers de
 ressources</link>. Les CGIs ne parcourant pas les fichiers de ressources,
 vous pouvez leur donner des permissions beaucoup plus restrictives (600 ou
 660). Consultez le fichier <filename>resource.cfg</filename> dans la
 distribution de base de Nagios, il vous donnera un exemple de d?finition de
 la macro $USERn$. </para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Éliminez les caractères dangereux des
+   <listitem>
+    <para><emphasis role="bold">Éliminez les caractères dangereux des
 macros</emphasis>. Utilisez la directive <link
 linkend="configuringnagios-configmain-illegal_macro_output_chars">illegal_macro_output_chars</link>
 pour filtrer les caractères dangereux 
-        <code>$HOSTOUTPUT$</code>, <code>$SERVICEOUTPUT$</code>,
-        <code>$HOSTPERFDATA$</code>, et <code>$SERVICEPERFDATA$</code> des chaînes issues des macros $OUTPUT$ et $PERFDATA$ avant qu'elles ne
+    <code>$HOSTOUTPUT$</code>, <code>$SERVICEOUTPUT$</code>,
+    <code>$HOSTPERFDATA$</code>, et <code>$SERVICEPERFDATA$</code> des chaînes issues des macros $OUTPUT$ et $PERFDATA$ avant qu'elles ne
 soient utilisées pour des notifications, etc. Des caractères dangereux
 peuvent être tout caractère qui peut être interprété par un shell, ouvrant
 ainsi un trou de sécurité. Un bon exemple est la présence de la quote
-inverse (`) dans $OUTPUT$  <code>$HOSTOUTPUT$</code>,
-        <code>$SERVICEOUTPUT$</code>, <code>$HOSTPERFDATA$</code>, et/ou
-        <code>$SERVICEPERFDATA$</code> $PERFDATA$, qui pourrait permettre à un attaquant d'exécuter un commande
+inverse (`) dans $OUTPUT$ <code>$HOSTOUTPUT$</code>,
+    <code>$SERVICEOUTPUT$</code>, <code>$HOSTPERFDATA$</code>, et/ou
+    <code>$SERVICEPERFDATA$</code> $PERFDATA$, qui pourrait permettre à un attaquant d'exécuter un commande
 arbitraire comme l'utilisateur nagios (une autre bonne raison pour ne pas
 exécuter Nagios comme l'utilisateur root). </para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Sécurisez l'accès aux agents
+   <listitem>
+    <para><emphasis role="bold">Sécurisez l'accès aux agents
 distants</emphasis>. Assurez-vous d'avoir verrouiller l'accès aux agents
 (&name-nrpe;, NSClient, &protocol-snmp;, etc.) sur les sytèmes distants en
 utilisant des pares-feu, des listes d'accès, etc. Vous ne voulez pas que
@@ -209,33 +209,33 @@ n'importe qui soit capable d'interroger vos système sur leurs états. Cette
 information peut être utilisé par un attaquant pour exécuter des
 gestionnaires d'événements distants ou pour déterminer une fenêtre de temps
 pour une attaque discrète.
-        <informalfigure>
-        <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/security1.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-          </informalfigure>
+    <informalfigure>
+    <mediaobject>
+      <imageobject>
+       <imagedata fileref="images/security1.png" format="PNG"/>
+      </imageobject>
+     </mediaobject>
+     </informalfigure>
 		</para>
-      </listitem>
+   </listitem>
 
-      <listitem>
-        <para><emphasis role="bold">Sécurisez vos canaux de
+   <listitem>
+    <para><emphasis role="bold">Sécurisez vos canaux de
 communication</emphasis>. Assurez-vous d'avoir chiffré les canaux de
 communication entre vos différents serveurs Nagios et entre Nagios et les
 agents de supervision quand cela est possible. Vous ne voulez pas que
 quelqu'un puisse sniffer les informations d'états lorsqu'elle transite sur
 le réseau. Cette information peut être utilisé par un attaquant pour
 déterminer une fenêtre de temps pour une attaque discrète.
-        <informalfigure>
+    <informalfigure>
 		<mediaobject>
-            <imageobject>
-              <imagedata fileref="images/security2.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-          </informalfigure>
+      <imageobject>
+       <imagedata fileref="images/security2.png" format="PNG"/>
+      </imageobject>
+     </mediaobject>
+     </informalfigure>
 		</para>
-      </listitem>
-    </orderedlist>
-  </section>
+   </listitem>
+  </orderedlist>
+ </section>
 </chapter>
