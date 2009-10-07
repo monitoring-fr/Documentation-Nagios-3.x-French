@@ -6,15 +6,14 @@
  %all.entities;
 ]
 >
-<chapter id="configuringnagios-cgiauth"
-     xreflabel="Authentication and Authorization in The CGIs">
+<chapter id="configuringnagios-cgiauth" xreflabel="Authentication and Authorization in The CGIs">
  <title>Authentification et autorisations dans les CGI</title>
 
  <section>
   <title>Introduction</title>
-
+  
   <para>Cette documentation décrit la façon dont les CGI de Nagios décident de qui a
-le droit de voir les informations de configurations et de d'états et de qui
+le droit de voir les informations de configurations et d'états et de qui
 a le droit de soumettre des commandes au démon Nagios depuis l'interface
 web.</para>
  </section>
@@ -34,8 +33,7 @@ serveur web a donné accès à l'interface web de Nagios.</para>
 
    <listitem>
     <para>Un contact authentifié est un utilisateur authentifié dont le nom correspond
-à celui d'une <link
-linkend="configuringnagios-objectdefinitions-contact">définition de
+à celui d'une <link linkend="configuringnagios-objectdefinitions-contact">définition de
 contact</link> du fichier de configuration. </para>
    </listitem>
   </itemizedlist>
@@ -46,7 +44,7 @@ contact</link> du fichier de configuration. </para>
 utilisateurs authentifiés </title>
 
   <para>En partant du principe que vous avez configuré votre serveur web comme
-décrit dans le <link linkend="gettingstarted-quickstart">guide démarrage
+décrit dans le <link linkend="gettingstarted-quickstart">guide de démarrage
 rapide</link>, celui-ci devrait vous demander de vous authentifier avant de
 pouvoir accéder aux CGI de Nagios.</para>
 
@@ -58,31 +56,32 @@ utiliser la commande suivante pour ajouter de nouveaux utilisateurs capables
 de s'authentifier aux CGI. Remplacez &lt;username&gt; par le nom
 d'utilisateur que vous souhaitez ajouter. Dans la plupart des cas, le nom
 d'utilisateur devrait correspondre au nom court du <link
-linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.<screen><prompt>linux:~ # </prompt><userinput>htpasswd /usr/local/nagios/etc/htpasswd.users <replaceable>&lt;username&gt;</replaceable></userinput></screen>
+linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.
+<screen><prompt>linux:~ # </prompt><userinput>htpasswd /usr/local/nagios/etc/htpasswd.users <replaceable>&lt;username&gt;</replaceable></userinput></screen>
   </para>
  </section>
 
  <section>
   <title><anchor id="configuringnagios-cgiauth-enable_cgi_auth" />Activer
-l'authentification/l'autorisation dans les CGI</title>
+l'authentification/autorisation dans les CGI</title>
 
   <para>Maintenant il s'agit de s'assurer que les CGI sont configurés pour filtrer
 les informations et les commandes auxquelles les utilisateurs peuvent
 accéder. Pour cela la variable <link
 linkend="configuringnagios-configcgi-use_authentication">use_authentication</link>
 du fichier de configuration des <link
-linkend="configuringnagios-configcgi">CGI</link> doit être positionnée à une
+linkend="configuringnagios-configcgi">CGIs</link> doit être positionnée à une
 valeur différente de zéro. Par exemple: </para>
 
   <programlisting>use_authentication=1</programlisting>
 
-  <para>Voilà, la fonctionnalité d'authentification/d'autorisation de base est
+  <para>Voilà, la fonctionnalité d'authentification/autorisation de base est
 activée dans les CGI.</para>
  </section>
 
  <section>
   <title><anchor id="configuringnagios-cgiauth-default_rights" />Droits d'accès par
-défaut aux informations des CGI</title>
+défaut aux informations des CGIs</title>
 
   <para>Quelles sont les droits d'accès aux CGI par défaut quand la fonctionnalité
 d'authentification/autorisation est activée ?</para>
@@ -91,7 +90,7 @@ d'authentification/autorisation est activée ?</para>
    <tgroup cols="3">
     <thead>
      <row>
-      <entry><para>Données des CGI</para></entry>
+      <entry><para>Données des CGIs</para></entry>
 
       <entry><para>Contacts authentifiés<link
 linkend="configuringnagios-cgiauth-definitions">*</link>
@@ -128,7 +127,7 @@ linkend="configuringnagios-cgiauth-definitions">*</link>
      </row>
 
      <row>
-      <entry><para>Host Notifications</para></entry>
+      <entry><para>Notifications des hôtes</para></entry>
 
       <entry><para>Oui</para></entry>
 
@@ -168,7 +167,7 @@ linkend="configuringnagios-cgiauth-definitions">*</link>
      </row>
 
      <row>
-      <entry><para>Service Notifications</para></entry>
+      <entry><para>Notifications des services</para></entry>
 
       <entry><para>Oui</para></entry>
 
@@ -210,7 +209,7 @@ linkend="configuringnagios-cgiauth-definitions">*</link>
    </tgroup>
   </informaltable>
 
-  <para>Les Contacts authentifiés<link
+  <para>Les contacts authentifiés<link
 linkend="configuringnagios-cgiauth-definitions">*</link> ont les droits
 suivants sur chaque service dont ils sont un contact (mais pas sur ceux dont
 ils ne sont pas un contact)... </para>
@@ -233,7 +232,7 @@ ils ne sont pas un contact)... </para>
    </listitem>
   </itemizedlist>
 
-  <para>Les Contacts authentifiés<link
+  <para>Les contacts authentifiés<link
 linkend="configuringnagios-cgiauth-definitions">*</link> ont les droits
 suivants sur chaque hôte dont ils sont un contact (mais pas sur ceux dont
 ils ne sont pas un contact)...</para>
@@ -306,10 +305,10 @@ utilisateurs) comme décrit ci-dessous...</para>
 
  <section>
   <title><anchor id="configuringnagios-cgiauth-additional_rights" />Donner des droits
-d'accès supplémentaires aux informations des CGI</title>
+d'accès supplémentaires aux informations des CGIs</title>
 
   <para>Vous pouvez donner aux contacts authentifiés et autres utilisateurs
-authentifiés des droits d'accès à d'autres informations des CGI en les
+authentifiés des droits d'accès à d'autres informations des CGIs en les
 ajoutant à diverses variables d'autorisation dans le <link
 linkend="configuringnagios-configcgi">fichier de configuration des
 CGI</link>. Je m'aperçois que ces variables ne permettent pas d'être très
@@ -367,7 +366,7 @@ pour toutes les commandes aux services</link></para>
   <title><anchor id="configuringnagios-cgiauth-cgi_auth_requirements" />Autorisations
 requises par les CGI</title>
 
-  <para>Si les droits d'accès aux diverses informations des CGI ne vous paraissent
+  <para>Si les droits d'accès aux diverses informations des CGIs ne vous paraissent
 pas clairs, lisez la section Autorisations requises de chaque CGI qui se
 trouve <link linkend="thebasics-cgis">ici</link>.</para>
  </section>
@@ -376,11 +375,11 @@ trouve <link linkend="thebasics-cgis">ici</link>.</para>
   <title><anchor id="configuringnagios-cgiauth-secure_web_servers" />Authentification
 sur des serveurs web sécurisés</title>
 
-  <para>Si votre serveur web se trouve dans un domaine sécurisé (i.e., derrière un
+  <para>Si votre serveur web se trouve dans un domaine sécurisé (par exemple derrière un
 firewall) ou si vous utilisez SSL, vous pouvez définir un utilisateur par
 défaut pour accéder aux CGI. C'est le rôle de la variable <link
 linkend="configuringnagios-configcgi-default_user_name">default_user_name</link>
-du<link linkend="configuringnagios-configcgi">fichier de configuration des
+du <link linkend="configuringnagios-configcgi">fichier de configuration des
 CGI</link>. En définissant un nom d'utilisateur par défaut, vous pouvez
 autoriser les utilisateurs à accéder aux CGI sans qu'ils ne s'authentifient
 auprès du serveur web. Ceci vous permet d'éviter d'utiliser
