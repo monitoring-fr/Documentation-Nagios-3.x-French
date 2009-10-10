@@ -7,9 +7,9 @@
 ]
 >
 <chapter id="thebasics-timeperiods" xreflabel="Time Periods">
- <title>Time Periods</title>
+ <title>Les périodes de temps</title>
 <abstract>
- <para>Ou... <quote>Est-Ce Le Bon Moment?</quote></para>
+ <para>Ou... <quote>Est-ce le bon moment?</quote></para>
 </abstract>
  <section>
   <title>Introduction</title>
@@ -42,9 +42,9 @@ restreindre:</para>
  </section>
 
  <section>
-  <title>Les priorités dans les Périodes</title>
+  <title>Les priorités dans les périodes de temps</title>
 
-  <para>Les Périodes <link
+  <para>Les périodes de temps<link
 linkend="configuringnagios-objectdefinitions-timeperiod">definitions</link>
 peuvent contenir différent types de directives, incluant les jours de la
 semaine, certains jours dans le mois, et des dates précises du
@@ -84,8 +84,8 @@ est le suivant:</para>
  </section>
 
  <section>
-  <title>Comment Les Periodes Fonctionnent Avec Les Contrôles Des Hôtes Et Des
-Services</title>
+  <title>Comment les périodes de temps fonctionnent avec les contrôles des hôtes et des
+services</title>
 
   <para>Les définitions des hôtes et des services ont une directive optionnelle
 <varname>check_period</varname> qui vous permet de spécifier la période qui
@@ -138,7 +138,7 @@ les contacts ne seront pas immédiatement notifiés du retour à normale.</para>
  </section>
 
  <section>
-  <title>Comment Fonctionnent Les Périodes Avec Les Contacts de Notifications</title>
+  <title>Comment fonctionnent les périodes de temps avec les contacts de notifications</title>
 
   <para>En spécifiant une période à la directive
 <varname>notification_period</varname> d'une définition d'un hôte ou d'un
@@ -165,7 +165,7 @@ disponibles <xref linkend="advancedtopics-oncallrotation" />ici.</para>
  </section>
 
  <section>
-  <title>Comment Fonctionnent Les Périodes Avec Les Escalades de Notification</title>
+  <title>Comment fonctionnent les périodes de temps avec les escalades de notification</title>
 
   <para>Les <xref linkend="advancedtopics-escalations" /> escalades de notification
 des hôtes et services ont une directive optionnelle nommée
@@ -179,7 +179,7 @@ l'escalade seulement pendant cette plage horaire.</para>
  </section>
 
  <section>
-  <title>Comment Fonctionnent Les Périodes Avec Les Dépendances</title>
+  <title>Comment fonctionnent les périodes de temps avec les dépendances</title>
 
   <para>Les <xref linkend="advancedtopics-dependencies" /> dépendances d'hôtes et de
 services ont une directive optionnelle nommée
