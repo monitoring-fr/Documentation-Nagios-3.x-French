@@ -13,7 +13,7 @@
  <section>
   <title>Introduction</title>
 
-  <para>Nagios® supporte la détection optionnelle des hôtes et des services qui
+  <para>Nagios supporte la détection optionnelle des hôtes et des services qui
 "oscillent" [NdT: ou bagotent]. L'oscillation intervient quand un service ou
 un hôte change d'état trop fréquemment, provoquant une tempête de
 notifications de problèmes et de rétablissement. L'oscillation peut être
@@ -31,11 +31,11 @@ ou service ? La première fois que je me suis penché sur la détection de
 l'oscillation, j'ai cherché des informations sur la façon dont on peut ou
 doit procéder. Voyant que je n'en trouvais pas, j'ai décidé de définir ce
 qui pourrait être une solution raisonnable. Les méthodes utilisées par
-Nagios® pour détecter l'oscillation de l'état des hôtes et des services sont
+Nagios pour détecter l'oscillation de l'état des hôtes et des services sont
 décrites ci-dessous…</para>
 
   <para>Chaque fois d'un contrôle de service résulte dans un état hard ou un état de
-rétablissement soft, Nagios® contrôle si le service a commencé ou arrêté
+rétablissement soft, Nagios contrôle si le service a commencé ou arrêté
 d'osciller.</para>
 
   <itemizedlist>
@@ -139,19 +139,19 @@ pondéré est finalement de 31%…</para>
    <listitem>
     <para> Hé bien, si le service n'oscillait pas auparavant et que 31% est supérieur
 ou égal à la valeur spécifiée par le paramètre high_service_flap_threshold
-de la définition du service, Nagios® considère que le service vient de
+de la définition du service, Nagios considère que le service vient de
 commencer à osciller.</para>
    </listitem>
 
    <listitem>
     <para>Si le service oscillait auparavant et que 31% est inférieur ou égal à la
 valeur spécifiée par le paramètre low_service_flap_threshold de la
-définition du service, Nagios® considère que le service vient de s'arrêter
+définition du service, Nagios considère que le service vient de s'arrêter
 d'osciller.</para>
    </listitem>
   </itemizedlist>
 
-  <para>Si aucune de ces deux conditions n'est remplie, Nagios® ne fait rien de plus
+  <para>Si aucune de ces deux conditions n'est remplie, Nagios ne fait rien de plus
 concernant le service, car soit il n'oscille pas, soit il oscille toujours…</para>
  </section>
 
@@ -169,7 +169,7 @@ manière qu'expliqué ci-dessus.</para>
   <title>Détection de l'oscillation d'hôte</title>
 
   <para>La détection de l'oscillation d'hôte fonctionne de manière similaire à la
-détection d'oscillation de service, avec une différence importante : Nagios®
+détection d'oscillation de service, avec une différence importante : Nagios
 essaiera de déterminer: si un hôte oscille à chaque contrôle de l'état de
 l'hôte et à chaque contrôle d'un service associé à cet hôte. </para>
 
@@ -277,7 +277,7 @@ par défaut sera appliquée pour tous.</para>
  <section>
   <title>Gestion de l'oscillation</title>
 
-  <para>Quand un service ou un hôte commence à osciller, Nagios® fait:</para>
+  <para>Quand un service ou un hôte commence à osciller, Nagios fait:</para>
 
   <orderedlist>
    <listitem>
@@ -301,7 +301,7 @@ notification</link>)</para>
    </listitem>
   </orderedlist>
 
-  <para>Quand un service ou un hôte s'arrête d'osciller, Nagios® fait les chose
+  <para>Quand un service ou un hôte s'arrête d'osciller, Nagios fait les chose
 suivantes:</para>
 
   <orderedlist>

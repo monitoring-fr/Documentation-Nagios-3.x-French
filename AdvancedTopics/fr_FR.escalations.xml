@@ -14,7 +14,7 @@
 		<para>
 			<inlinemediaobject> <imageobject> <imagedata
 fileref="images/objects-contacts.png" format="PNG"/> </imageobject>
-</inlinemediaobject>Nagios® supporte l'escalade optionelle des notifications
+</inlinemediaobject>Nagios supporte l'escalade optionelle des notifications
 envoyées aux contacts pour des services ou hôtes. Je vais en expliquer
 rapidement le fonctionnement, bien que cela se comprenne facilement…
 L'escalade pour les notifications d'hôtes et de services est possible par la
@@ -247,9 +247,9 @@ spécifié dans la seconde définition d'escalade.</para>
 
 		<para>Comme il est possible d'avoir des définitions d'escalade qui se chevauchent
 pour un groupe d'hôtes ou un service donné, et comme un hôte peut être
-membre de plusieurs groupes d'hôtes, Nagios® doit décider quel intervalle de
+membre de plusieurs groupes d'hôtes, Nagios doit décider quel intervalle de
 notification utiliser quand des définitions d'escalade se chevauchent. Dans
-tous les cas de chevauchement, Nagios® choisira l'intervalle de notification
+tous les cas de chevauchement, Nagios choisira l'intervalle de notification
 le plus court. Prenez l'exemple suvant :</para>
 
 		<programlisting>
@@ -275,12 +275,12 @@ le plus court. Prenez l'exemple suvant :</para>
 		</programlisting>
 
 		<para>Nous voyons que les deux définitions d'escalade se chevauchent sur les 4ème
-et 5ème notifications. Pour ces notifications, Nagios® utilisera un
+et 5ème notifications. Pour ces notifications, Nagios utilisera un
 intervalle de notification de 45 minutes, car c'est le plus petit intervalle
 présent dans les définitions d'escalade valides de ces notifications.</para>
 
 		<para>Une dernière remarque à propos des intervalles de notification concerne les
-intervalles de 0. Un intervalle de 0 signifie que Nagios® ne doit émettre
+intervalles de 0. Un intervalle de 0 signifie que Nagios ne doit émettre
 une notification que pour la première notification valide durant cette
 définition d'escalade. Toutes les notifications suivantes pour le groupe
 d'hôte ou le service seront supprimées. Prenez cet exemple :</para>

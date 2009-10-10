@@ -17,12 +17,12 @@
     <imageobject>
      <imagedata fileref="images/tcpwrappers.png" />
     </imageobject>
-   </mediaobject></informalfigure>Cet exemple explique comment générer aisément des alertes dans Nagios® pour
+   </mediaobject></informalfigure>Cet exemple explique comment générer aisément des alertes dans Nagios pour
 des connexions rejetées par un TCP wrapper (encapsuleur TCP). Ces
 explications supposent que l'hôte pour lequel vous générez ces alertes
 (i.e. l'hôte sur lequel vous utilisez le TCP wrappers) n'est pas le même
-hôte que celui sur lequel Nagios® est installé. Si vous souhaitez générer
-des alertes sur l'hôte Nagios®, vous aurez besoin de faire quelques
+hôte que celui sur lequel Nagios est installé. Si vous souhaitez générer
+des alertes sur l'hôte Nagios, vous aurez besoin de faire quelques
 modifications à l'exemple que je vous propose. Je suppose également que vous
 avez installé le daemon nsca sur la machine de surpervision et le client
 nsca (send_nsca) sur la machine qui génère les alertes TCP wrappers.</para>
@@ -148,9 +148,9 @@ pour spécifier l'emplacement du programme send_nsca sur firestorm):
   <title>Finition</title>
 
   <para>Maintenant que vous avez configure tout ce dont vous avez besoin, vous devez
-redémarrer le processus inetd sur firestorm et redémarrer Nagios® sur votre
+redémarrer le processus inetd sur firestorm et redémarrer Nagios sur votre
 serveur de supervision. C'est tout ! Quand le TCP wrapper sur firestorm
-refusera une connexion, vous devriez recevoir des alertes via Nagios®. Cela
+refusera une connexion, vous devriez recevoir des alertes via Nagios. Cela
 ressemblera à ça : <computeroutput>Denied
 sshd2-sdn-ar-002mnminnP321.dialsprint.net</computeroutput>
   </para>

@@ -10,16 +10,16 @@
 	<title>Utilisation des macros dans les commandes</title>
 	<section>
 		<title>Macros</title>
-		<para>Une des fonctionalités disponibles dans Nagios® est la possibilité
+		<para>Une des fonctionalités disponibles dans Nagios est la possibilité
 d'utiliser des macros [NdT: macro-commandes] dans les définitions de
-commandes. Avant d'exécuter une commande, Nagios® remplacera toutes les
+commandes. Avant d'exécuter une commande, Nagios remplacera toutes les
 macros dans celle-ci par les valeurs correspondantes. Cela vous permet de
 définir quelques commandes génériques que vous manipulerez à votre guise.</para>
 	</section>
 	<section>
 		<title>Substitution des macros</title>
 		<para>Avant qu'une commande (contrôles d'hôte et de service, notifications,
-gestionnaires d'événements, etc.) soit exécutée, Nagios® va remplacer toutes
+gestionnaires d'événements, etc.) soit exécutée, Nagios va remplacer toutes
 les macros qu'il trouvera dans la définition de la commande par les valeurs
 correspondantes.</para>
 		<para>Certaines macros peuvent contenir elles-mêmes d'autres macros. Ceux-ci
@@ -258,9 +258,9 @@ linkend="thebasics-macrolist-serviceackcomment">$SERVICEACKCOMMENT$</link>
 	</section>
 	<section>
 		<title>Macros et variables d'environnement</title>
-		<para>A partir de la version 2.0 de Nagios®, la plupart des macros sont
+		<para>A partir de la version 2.0 de Nagios, la plupart des macros sont
 disponibles sous forme de variables d'environnement. Cela signifie que les
-scripts lancés par Nagios® (c.-à-d. les commandes de contrôle de service et
+scripts lancés par Nagios (c.-à-d. les commandes de contrôle de service et
 d'hôte, les commandes de notification, etc.) peuvent faire référence à ces
 macros directement en tant que variables d'environnement standard. Pour des
 raisons de sécurité et de bon sens, <link

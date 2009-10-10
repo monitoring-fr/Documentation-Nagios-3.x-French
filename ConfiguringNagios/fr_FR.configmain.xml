@@ -268,9 +268,9 @@ chemins d'accès). Les CGI ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
 protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de
 ressources en ajoutant des directives resource_file
-   <code>resource_file</code> au fichier de configuration principal - Nagios® les traitera
+   <code>resource_file</code> au fichier de configuration principal - Nagios les traitera
 tous. Référez-vous au fichier resource.cfg d'exemple situé à la racine de la
-distribution de Nagios®, pour voir comment utiliser les macros $USERn$. <code>$USERn$</code> .</para>
+distribution de Nagios, pour voir comment utiliser les macros $USERn$. <code>$USERn$</code> .</para>
   </section>
 
   <section>
@@ -297,7 +297,7 @@ File"/>Fichier temporaire</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est un fichier que Nagios® crée périodiquement durant la mise à jour des
+   <para>C'est un fichier que Nagios crée périodiquement durant la mise à jour des
 commentaires de données, des données d'état etc… Il est supprimé quand il
 n'est plus nécessaire.</para>
   </section>
@@ -358,13 +358,13 @@ id="configuringnagios-configmain-status_file" xreflabel="Status File"
     </tgroup>
    </informaltable>
 
-   <para>C'est le fichier utilisé par Nagios®, pour stocker l'état courant de tous
+   <para>C'est le fichier utilisé par Nagios, pour stocker l'état courant de tous
 les services supervisés. L'état de tous les hôtes associés avec ces
 services, est également enregistré dans ce fichier. Ce fichier est utilisé
 par le CGI d'état pour afficher l'état courant de la supervision dans
 l'interface web. Les CGI doivent avoir le droit d'accéder en lecture à ce
 fichier, pour fonctionner correctement. Ce fichier est supprimé à l'arrêt de
-Nagios®, et recréé au démarrage.</para>
+Nagios, et recréé au démarrage.</para>
   </section>
 
   <section>
@@ -392,7 +392,7 @@ agrégés</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette variable, détermine la fréquence (en secondes), à laquelle Nagios®
+   <para>Cette variable, détermine la fréquence (en secondes), à laquelle Nagios
 mettra à jour les données d'état dans le <xref
 linkend="configuringnagios-configmain-status_file" />. L'intervalle minimal
 est de une secondes.</para>
@@ -400,7 +400,7 @@ est de une secondes.</para>
 
   <section>
    <title><anchor id="configuringnagios-configmain-nagios_user" xreflabel="Nagios
-User"/>Nagios®</title>
+User"/>Nagios</title>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -423,14 +423,14 @@ User"/>Nagios®</title>
    </informaltable>
 
    <para>Ceci détermine quel utilisateur doit être le propriétaire du processus de
-Nagios®. Après le démarrage du programme, et avant toute supervision,
-Nagios® abandonnera ses privilèges effectifs, et se lancera sous cet
+Nagios. Après le démarrage du programme, et avant toute supervision,
+Nagios abandonnera ses privilèges effectifs, et se lancera sous cet
 utilisateur. Vous pouvez donner un nom d'utilisateur ou un UID.</para>
   </section>
 
   <section>
    <title><anchor id="configuringnagios-configmain-nagios_group" xreflabel="Nagios
-Group" />Groupe de Nagios®</title>
+Group" />Groupe de Nagios</title>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -453,8 +453,8 @@ Group" />Groupe de Nagios®</title>
    </informaltable>
 
    <para>Ceci détermine quel groupe doit être propriétaire du processus de
-Nagios®. Après le démarrage du programme, et avant toute supervision,
-Nagios® abandonnera ses privilèges effectifs et se lancera sous ce
+Nagios. Après le démarrage du programme, et avant toute supervision,
+Nagios abandonnera ses privilèges effectifs et se lancera sous ce
 groupe. Vous pouvez donner un nom de groupe ou un GID.</para>
   </section>
 
@@ -482,13 +482,13 @@ xreflabel="Notifications Option" />Option des notifications</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® envoie ou non une notification quand il
-(re)démarre. Si cette option est désactivée, Nagios® n'enverra aucune
+   <para>Cette option détermine si Nagios envoie ou non une notification quand il
+(re)démarre. Si cette option est désactivée, Nagios n'enverra aucune
 notification, quel que soit l'hôte ou le service.</para>
 
    <note>
     <para>Note : si vous avez activé la <xref
-linkend="configuringnagios-configmain-retain_state_information" />, Nagios®
+linkend="configuringnagios-configmain-retain_state_information" />, Nagios
 ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur
 connue (telle qu'elle est stockée dans le <xref
 linkend="configuringnagios-configmain-state_retention_file" />), à moins que
@@ -538,8 +538,8 @@ contrôles de service</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine, si Nagios® effectuera les contrôles des services
-lorsqu'il (re)démarrera. Si cette option est désactivée, Nagios®
+   <para>Cette option détermine, si Nagios effectuera les contrôles des services
+lorsqu'il (re)démarrera. Si cette option est désactivée, Nagios
 n'effectuera aucun contrôle de service, et restera dans un mode <quote>de
 sommeil</quote> (il peut quand même recevoir les <link
 linkend="thebasics-passivechecks">contrôles passifs</link> à moins qu'ils ne
@@ -548,7 +548,7 @@ de supervision de secours, comme l'explique la documentation sur la <link
 linkend="advancedtopics-redundancy">redondance</link>, ou pour mettre en
 place un environnement de supervision <link
 linkend="advancedtopics-distributed">répartie</link>. Note : si vous avez
-activé la mémorisation d'état, Nagios® ignorera ce paramètre au
+activé la mémorisation d'état, Nagios ignorera ce paramètre au
 (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est
 stockée dans le fichier de mémorisation d'état), à moins que vous ne
 désactiviez l'option use_retained_program_state. Si vous voulez changer
@@ -559,7 +559,7 @@ possibles de cette variable sont :</para>
 
    <note>
     <para>Note : si vous avez activé la <xref
-linkend="configuringnagios-configmain-retain_state_information" />, Nagios®
+linkend="configuringnagios-configmain-retain_state_information" />, Nagios
 ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur
 connue (telle qu'elle est stockée dans le <xref
 linkend="configuringnagios-configmain-state_retention_file" />), à moins que
@@ -611,11 +611,11 @@ des contrôles passifs de service
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® accepte les <link
+   <para>Cette option détermine si Nagios accepte les <link
 linkend="thebasics-passivechecks">contrôles passifs de service</link> quand
-il (re)démarrera. Si cette option est désactivée, Nagios® n'acceptera aucun
+il (re)démarrera. Si cette option est désactivée, Nagios n'acceptera aucun
 contrôle passif de service. Note : si vous avez activé la mémorisation
-d'état, Nagios® ignorera ce paramètre au (re)démarrage et utilisera sa
+d'état, Nagios ignorera ce paramètre au (re)démarrage et utilisera sa
 dernière valeur connue (telle qu'elle est stockée dans le fichier de
 mémorisation d'état), à moins que vous ne désactiviez l'option
 use_retained_program_state. Si vous voulez changer cette variable alors que
@@ -626,7 +626,7 @@ cette variable sont :</para>
 
    <note>
     <para>Note : si vous avez activé la <xref
-linkend="configuringnagios-configmain-retain_state_information" />, Nagios®
+linkend="configuringnagios-configmain-retain_state_information" />, Nagios
 ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur
 connue (telle qu'elle est stockée dans le <xref
 linkend="configuringnagios-configmain-state_retention_file" />), à moins que
@@ -677,9 +677,9 @@ d'hôtes
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® effectuera les contrôles des hôtes - à la
+   <para>Cette option détermine si Nagios effectuera les contrôles des hôtes - à la
 demande ou de manière régulière - lorsqu'il (re)démarrera. Si cette option
-est désactivée, Nagios® n'effectuera aucun contrôle sur les hôtes et restera
+est désactivée, Nagios n'effectuera aucun contrôle sur les hôtes et restera
 dans un mode <link linkend="thebasics-passivechecks">de sommeil</link> (il
 peut quand même recevoir les contrôles passifs d'hôtes à moins qu'ils ne
 soient désactivés). Cette option est surtout utile pour définir des serveurs
@@ -687,7 +687,7 @@ de supervision de secours, comme l'explique la documentation sur la <link
 linkend="advancedtopics-redundancy">redondance</link>, ou pour mettre en
 place un environnement de supervision <link
 linkend="advancedtopics-distributed">répartie</link>. Note : si vous avez
-activé la mémorisation d'état, Nagios® ignorera ce paramètre au
+activé la mémorisation d'état, Nagios ignorera ce paramètre au
 (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est
 stockée dans le fichier de mémorisation d'état), à moins que vous ne
 désactiviez l'option use_retained_program_state. Si vous voulez changer
@@ -698,7 +698,7 @@ possibles de cette variable sont :</para>
 
    <note>
     <para>Note : si vous avez activé la <xref
-linkend="configuringnagios-configmain-retain_state_information" />, Nagios®
+linkend="configuringnagios-configmain-retain_state_information" />, Nagios
 ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur
 connue (telle qu'elle est stockée dans le <xref
 linkend="configuringnagios-configmain-state_retention_file" />), à moins que
@@ -749,11 +749,11 @@ contrôles passifs d'hôte</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® accepte les <link
+   <para>Cette option détermine si Nagios accepte les <link
 linkend="thebasics-passivechecks">contrôles passifs d'hôte</link> quand il
-(re)démarrera. Si cette option est désactivée, Nagios® n'acceptera aucun
+(re)démarrera. Si cette option est désactivée, Nagios n'acceptera aucun
 contrôle passif d'hôte. Note : si vous avez activé la mémorisation d'état,
-Nagios® ignorera ce paramètre au (re)démarrage, et utilisera sa dernière
+Nagios ignorera ce paramètre au (re)démarrage, et utilisera sa dernière
 valeur connue (telle qu'elle est stockée dans le fichier de mémorisation
 d'état), à moins que vous ne désactiviez l'option
 use_retained_program_state. Si vous voulez changer cette variable alors que
@@ -764,7 +764,7 @@ de cette variable sont :</para>
 
    <note>
     <para>Note : si vous avez activé la <xref
-linkend="configuringnagios-configmain-retain_state_information" />, Nagios®
+linkend="configuringnagios-configmain-retain_state_information" />, Nagios
 ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur
 connue (telle qu'elle est stockée dans le <xref
 linkend="configuringnagios-configmain-state_retention_file" />), à moins que
@@ -813,11 +813,11 @@ xreflabel="Event Handler Option" />Option de gestion d'événement</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® activera les <link
+   <para>Cette option détermine si Nagios activera les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événement</link>
-quand il (re)démarrera. Si cette option est désactivée, Nagios® ne lancera
+quand il (re)démarrera. Si cette option est désactivée, Nagios ne lancera
 aucun gestionnaire d'événement lié aux hôtes ou aux services. Note : si vous
-avez activé la mémorisation d'état, Nagios® ignorera ce paramètre au
+avez activé la mémorisation d'état, Nagios ignorera ce paramètre au
 (re)démarrage, et utilisera sa dernière valeur connue (telle qu'elle est
 stockée dans le fichier de mémorisation d'état), à moins que vous ne
 désactiviez l'option use_retained_program_state. Si vous voulez changer
@@ -828,7 +828,7 @@ possibles de cette variable sont :</para>
 
    <note>
     <para>Note : si vous avez activé la <xref
-linkend="configuringnagios-configmain-retain_state_information" />, Nagios®
+linkend="configuringnagios-configmain-retain_state_information" />, Nagios
 ignorera ce paramètre au (re)démarrage, et utilisera sa dernière valeur
 connue (telle qu'elle est stockée dans le <xref
 linkend="configuringnagios-configmain-state_retention_file" />), à moins que
@@ -876,7 +876,7 @@ Rotation Method" />Méthode de rotation du journal</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est la méthode de rotation que vous voulez que Nagios® utilise pour le
+   <para>C'est la méthode de rotation que vous voulez que Nagios utilise pour le
 fichier journal. Les valeurs possibles de cette variable sont :</para>
 
    <itemizedlist>
@@ -930,7 +930,7 @@ Archive Path" />Chemin d'accès aux archives du journal</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le répertoire où Nagios® doit enregistrer les fichiers journaux ayant
+   <para>C'est le répertoire où Nagios doit enregistrer les fichiers journaux ayant
 fait l'objet d'une rotation. Cette option est ignorée si vous n'avez pas
 activé la <xref linkend="configuringnagios-configmain-log_rotation_method"
 />.</para>
@@ -961,12 +961,12 @@ externes</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® va vérifier le contenu du <xref
+   <para>Cette option détermine si Nagios va vérifier le contenu du <xref
 linkend="configuringnagios-configmain-command_file" /> à la recherche de
 commandes à exécuter. Cette option doit être activée si vous avez prévu
 d'utiliser le <link linkend="thebasics-cgis">CGI de commande</link> pour
 envoyer des commandes via l'interface web. Des programmes tiers peuvent
-également envoyer des commandes à Nagios® en écrivant dans le fichier de
+également envoyer des commandes à Nagios en écrivant dans le fichier de
 commande, sous réserve que les droits nécessaires à l'accès au fichier ait
 été donnés, comme le souligne cette FAQ. Vous trouverez plus d'informations
 sur les commandes externes <link
@@ -1018,8 +1018,8 @@ défaut de 60, ce nombre représente des minutes.</para>
 
    <note>
     <para>Note : en mettant cette valeur à <emphasis role="bold">-1</emphasis>,
-Nagios® contrôlera les commandes externes aussi souvent que possible. Chaque
-fois que Nagios® contrôle les commandes externes, il lit et traite toutes
+Nagios contrôlera les commandes externes aussi souvent que possible. Chaque
+fois que Nagios contrôle les commandes externes, il lit et traite toutes
 les commandes présentes dans le <xref
 linkend="configuringnagios-configmain-command_file" /> avant de passer à
 d'autres tâches. Vous trouverez plus d'informations sur les commandes
@@ -1051,12 +1051,12 @@ Command File" />Fichier de commandes externes</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le fichier que Nagios® lit à la recherche de commandes externes. Le
+   <para>C'est le fichier que Nagios lit à la recherche de commandes externes. Le
 <link linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> écrit les
 commandes dans ce fichier. Des programmes tiers peuvent écrire dans ce
 fichier sous réserve qu'ils aient les droits d'accès comme il est décrit
 ici. Le fichier de commandes externes est implémenté sous forme d'un tube
-nommé [named pipe] (FIFO), qui est créé quand Nagios® démarre et supprimé
+nommé [named pipe] (FIFO), qui est créé quand Nagios démarre et supprimé
 lorsqu'il s'arrête. Pour plus d'informations sur les commandes externes,
 lisez <link linkend="advancedtopics-extcommands">ceci</link>.</para>
   </section>
@@ -1130,9 +1130,9 @@ File"/>Fichier verrou</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est l'emplacement du fichier verrou qu'utilise Nagios® quand il est lancé
+   <para>C'est l'emplacement du fichier verrou qu'utilise Nagios quand il est lancé
 en tant que démon (i.e. démarré avec l'argument 
-   <option>-d</option> ). Ce fichier contient l'identifiant du processus (<acronym>PID</acronym>) de Nagios®.</para>
+   <option>-d</option> ). Ce fichier contient l'identifiant du processus (<acronym>PID</acronym>) de Nagios.</para>
   </section>
 
   <section>
@@ -1159,11 +1159,11 @@ xreflabel="State Retention Option" />Option de mémorisation de l'état</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® doit mémoriser l'état des hôtes et des
+   <para>Cette option détermine si Nagios doit mémoriser l'état des hôtes et des
 services entre deux démarrages. Si vous activez cette option, vous devez
 donnez une valeur à la variable <xref
 linkend="configuringnagios-configmain-state_retention_file" />. Une fois
-l'option activée, Nagios® enregistrera toutes les informations concernant
+l'option activée, Nagios enregistrera toutes les informations concernant
 l'état des hôtes et des services avant de s'arrêter (ou de redémarrer) et il
 relira les informations d'état préalablement enregistrées quand il
 redémarrera.</para>
@@ -1203,11 +1203,11 @@ xreflabel="State Retention File" />Fichier de mémorisation de l'état</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le fichier utilisé par Nagios® pour mémoriser l'état des hôtes et des
-services entre les redémarrages. Au démarrage, Nagios® positionnera l'état
+   <para>C'est le fichier utilisé par Nagios pour mémoriser l'état des hôtes et des
+services entre les redémarrages. Au démarrage, Nagios positionnera l'état
 initial des services et des hôtes à partir des informations contenues dans
 ce fichier, puis commencera la supervision. Ce fichier est supprimé dès sa
-lecture effectuée. Pour que Nagios® mémorise l'état des hôtes et des
+lecture effectuée. Pour que Nagios mémorise l'état des hôtes et des
 services, vous devez activer l'option de <xref
 linkend="configuringnagios-configmain-retain_state_information" />.</para>
   </section>
@@ -1237,9 +1237,9 @@ jour des états mémorisés</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette variable détermine la fréquence (en minutes) à laquelle Nagios® va
+   <para>Cette variable détermine la fréquence (en minutes) à laquelle Nagios va
 automatiquement sauvegarder les données de mémorisation en situation
-normale. Si vous donnez une valeur de 0, Nagios® ne sauvegardera pas les
+normale. Si vous donnez une valeur de 0, Nagios ne sauvegardera pas les
 données mémorisées à intervalles réguliers, mais avant de s'arrêter ou de
 redémarrer. Si vous avez désactivé la mémorisation des états (grâce à
 l'option <xref
@@ -1272,7 +1272,7 @@ xreflabel="Use Retained Program State Option" />Option d'utilisation des
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® positionnera diverses variables d'état du
+   <para>Cette option détermine si Nagios positionnera diverses variables d'état du
 programme à partir des valeurs enregistrées dans le fichier de
 mémorisation. Parmi ces variables d'état du programme, normalement
 sauvegardées par delà les redémarrages du programme si la mémorisation
@@ -1322,11 +1322,11 @@ xreflabel="Use Retained Scheduling Info Option" />Option d'utilisation des
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® va garder les informations
+   <para>Cette option détermine si Nagios va garder les informations
 d'ordonnancement (prochain lancement de vérification pour chaque service),
 lorsqu'il redémarre. Si vous ajoutez un grand nombre (ou pourcentage) de
 services ou d'hôtes, je vous recommande de désactiver cette option lorsque
-vous redémarrez Nagios®, car ceci peut biaiser la répartition initiale des
+vous redémarrez Nagios, car ceci peut biaiser la répartition initiale des
 services. Dans le cas contraire, vous voudrez probablement laisser cette
 option active.</para>
 
@@ -1576,10 +1576,10 @@ tentatives de contrôle de service</title>
 
    <para>Cette option détermine si les tentatives répétées de contrôle d'un service
 sont journalisées. Ces tentatives ont lieu lorsqu'un service retourne un
-état différent de OK, mais que vous avez configuré Nagios® pour essayer plus
+état différent de OK, mais que vous avez configuré Nagios pour essayer plus
 d'une fois avant de considérer cela comme une erreur. Les services dans
 cette situation sont dits en état "soft". La journalisation des tentatives
-de contrôle permet de déboguer Nagios® ou de tester les <link
+de contrôle permet de déboguer Nagios ou de tester les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</para>
 
    <itemizedlist>
@@ -1620,7 +1620,7 @@ contrôle d'hôte</title>
 
    <para>Cette option détermine si les tentatives répétées de contrôle d'un hôte sont
 journalisées. La journalisation des tentatives de contrôle permet de
-déboguer Nagios® ou de tester les <link
+déboguer Nagios ou de tester les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</para>
 
    <itemizedlist>
@@ -1664,7 +1664,7 @@ linkend="advancedtopics-eventhandlers">gestions d'événements</link> liés aux
 hôtes ou aux services sont journalisées. Les gestionnaires d'événements sont
 des commandes optionnelles qu'on peut lancer lors du changement d'état d'un
 hôte ou d'un service. La journalisation des gestions d'événements permet de
-déboguer Nagios® ou de tester les scripts de gestion d'événements.</para>
+déboguer Nagios ou de tester les scripts de gestion d'événements.</para>
 
    <itemizedlist>
     <listitem>
@@ -1702,7 +1702,7 @@ xreflabel="Initial States Logging Option"/>Option de journalisation des
     </tgroup>
    </informaltable>
 
-   <para>Cette variable détermine si Nagios® forcera la journalisation de tous les
+   <para>Cette variable détermine si Nagios forcera la journalisation de tous les
 états initiaux des hôtes et des services, même si leur état est OK. Les
 états initiaux ne sont normalement journalisés que s'il y a un problème lors
 du premier contrôle. Cette option peut se révéler utile si vous utilisez une
@@ -1745,7 +1745,7 @@ commandes externes</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette variable détermine si Nagios® journalisera les <link
+   <para>Cette variable détermine si Nagios journalisera les <link
 linkend="advancedtopics-extcommands">commandes externes</link> reçues via le
 fichier des <xref linkend="configuringnagios-configmain-command_file" />.</para>
 
@@ -1792,7 +1792,7 @@ contrôles passifs</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette variable détermine si Nagios® journalisera les <link
+   <para>Cette variable détermine si Nagios journalisera les <link
 linkend="thebasics-passivechecks">contrôles passifs d'hôte ou de
 service</link> reçus via le <link
 linkend="configuringnagios-configmain-command_file">fichier de commandes
@@ -1911,9 +1911,9 @@ Sleep Time"/>Temps de sommeil entre les contrôles</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre de secondes pendant lequel Nagios® va sommeiller avant de
+   <para>C'est le nombre de secondes pendant lequel Nagios va sommeiller avant de
 vérifier si le prochain contrôle de service ou d'hôte en file d'attente doit
-être exécuté. Notez que Nagios® ne s'endormira qu'après avoir "liquidé" les
+être exécuté. Notez que Nagios ne s'endormira qu'après avoir "liquidé" les
 contrôles de services en retard dans la file.</para>
   </section>
 
@@ -1944,7 +1944,7 @@ inter-contrôles de services</title>
 
    <para>Cette option détermine comment les contrôles de service sont initialement
 <quote>répartis</quote> dans la file d'attente. L'option de calcul
-<quote>débrouillard</quote> [smart] du délai (par défaut), demande à Nagios®
+<quote>débrouillard</quote> [smart] du délai (par défaut), demande à Nagios
 de calculer un intervalle moyen entre les contrôles, et d'ordonnancer les
 contrôles initiaux de tous les services à cet intervalle, ce qui permet
 d'éviter les pics d'utilisation du processeur. Il n'est pas recommandé
@@ -2005,7 +2005,7 @@ contrôles initiaux de services</title>
    </informaltable>
 
    <para>Cette option détermine le temps maximum (en minutes) entre le démarrage de
-Nagios® et la vérification de tous les services qui sont ordonnancés
+Nagios et la vérification de tous les services qui sont ordonnancés
 régulièrement. Cette option va automatiquement ajuster le <link
 linkend="configuringnagios-configmain-service_inter_check_delay_method">délai
 inter-contrôles de services</link> (si nécessaire) pour s'assurer que les
@@ -2049,12 +2049,12 @@ retrouver bombardés de contrôles si l'entrelacement n'est pas activé. Ceci
 peut entrainer l'échec de contrôles ou des résultats incorrects si l'hôte
 distant est surchargé de requêtes. Mettre une valeur de 1 est équivalent à
 ne pas entrelacer les contrôles de service (c'est le mode de fonctionnement
-des versions de Nagios® antérieures à la version 0.0.5). Mettez une valeur
+des versions de Nagios antérieures à la version 0.0.5). Mettez une valeur
 de s (débrouillard)[smart]) pour que le calcul du facteur d'entrelacement
 soit automatique, à moins que vous ayez une bonne raison de la changer. Le
 meilleur moyen de comprendre le fonctionnement du facteur d'entrelacement
 est d'observer le <link linkend="thebasics-cgis-status_cgi">CGI
-d'état</link> (vue détaillée) au moment où Nagios® vient de démarrer. Vous
+d'état</link> (vue détaillée) au moment où Nagios vient de démarrer. Vous
 verrez comment les contrôles sont faits au fur et à mesure que les résultats
 apparaissent. Vous trouverez plus d'informations sur l'entrelacement <link
 linkend="advancedtopics-checkscheduling-service_interleaving">ici</link>.</para>
@@ -2102,7 +2102,7 @@ de service simultanés</title>
 tourner en parallèle à un instant donné. Une valeur de 1 empêche la
 parallélisation. Une valeur de 0 (par défaut) n'impose aucune restriction
 sur le nombre de contrôles simultanés. Vous ajusterez cette valeur en
-fonction des capacités de la machine sur laquelle tourne Nagios®, car elle
+fonction des capacités de la machine sur laquelle tourne Nagios, car elle
 impacte directement la charge du système (processeur, mémoire, etc.). Vous
 trouverez plus d'informations sur le nombre de contrôles de services que
 vous devriez autoriser <link
@@ -2276,7 +2276,7 @@ d'hôtes</title>
    <para>Cette option détermine comment les contrôles d'hôtes (pour les hôtes qui
 sont régulièrement contrôlés) sont initialement <quote>répartis</quote> dans
 la file d'attente. L'option de calcul <quote>débrouillard</quote> [smart] du
-délai (par défaut) demande à Nagios® de calculer un intervalle moyen entre
+délai (par défaut) demande à Nagios de calculer un intervalle moyen entre
 les contrôles et d'ordonnancer les contrôles initiaux de tous les services à
 cet intervalle, ce qui permet d'éviter les pics d'utilisation du
 processeur. Il n'est pas recommandé d'utiliser la méthode "sans délai" [no
@@ -2334,7 +2334,7 @@ contrôles initiaux d'hôtes</title>
    </informaltable>
 
    <para>Cette option détermine le temps maximum (en minutes) entre le démarrage de
-Nagios® et la vérification de tous les hôtes qui sont contrôlés
+Nagios et la vérification de tous les hôtes qui sont contrôlés
 régulièrement. Cette option va automatiquement ajuster le <link
 linkend="configuringnagios-configmain-host_inter_check_delay_method">délai
 inter-contrôles d'hôtes</link> (si nécessaire) pour s'assurer que les
@@ -2405,7 +2405,7 @@ xreflabel="Auto-Rescheduling Option"/>Option de réordonnancement automatique</t
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® va essayer de ré ordonnancer
+   <para>Cette option détermine si Nagios va essayer de ré ordonnancer
 automatiquement les services de vérification actifs des hôtes et services
 pour les lisser dans le temps. Ceci peut aider à distribuer la charge sur le
 serveur de surveillance car il va essayer de conserver un delta de temps
@@ -2477,7 +2477,7 @@ automatique</title>
    </informaltable>
 
    <para>Cette option détermine la <quote>fenêtre</quote> de temps (en seconde) sur
-laquelle Nagios® va porter le réordonnancement automatique. Seules les
+laquelle Nagios va porter le réordonnancement automatique. Seules les
 vérifications d'hôtes et de services qui doivent avoir lieu durant les
 prochaines N secondes seront affectées par le réordonnancement. Cette option
 n'a d'effet que si l'<xref
@@ -2515,12 +2515,12 @@ hôtes</title>
    </informaltable>
 
    <para>[NdT] : cette option comporte deux "g" à "aggressive" depuis la version
-2. Elle n'en comprenait qu'un auparavant.Nagios® essaye d'être plus malin
+2. Elle n'en comprenait qu'un auparavant.Nagios essaye d'être plus malin
 dans la façon et le moment de contrôler l'état des hôtes. En général,
-désactiver cette option permet à Nagios® d'être un peu plus malin et de
+désactiver cette option permet à Nagios d'être un peu plus malin et de
 faire les contrôles plus vite. Activer cette option revient à ralentir le
 contrôle des hôtes, mais peut améliorer la sûreté de fonctionnement. A moins
-que Nagios® ne parvienne pas à détecter le rétablissement d'un de vos hôtes,
+que Nagios ne parvienne pas à détecter le rétablissement d'un de vos hôtes,
 je vous suggère de ne pas activer cette option.</para>
 
    <itemizedlist>
@@ -2973,11 +2973,11 @@ d'un service ou d'un hôte[flap]</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® essaiera de détecter les hôtes et les
+   <para>Cette option détermine si Nagios essaiera de détecter les hôtes et les
 services qui oscillent [ou <quote>bagotent, yoyotent de la touffe</quote> en
 bon argot]. L'oscillation apparaît lorsqu'un hôte ou un service change
 d'état trop fréquemment, causant l'émission d'une montagne de
-notifications. Quand Nagios® détecte qu'un hôte ou un service oscille, il
+notifications. Quand Nagios détecte qu'un hôte ou un service oscille, il
 supprime temporairement les notifications pour cet hôte/service jusqu'à ce
 qu'il arrête d'osciller.</para><caution><para>La détection de l'oscillation est encore au stade expérimental, utilisez
 donc cette fonctionnalité avec prudence ! Pour plus d'informations sur la
@@ -2985,7 +2985,7 @@ détection et la gestion des oscillations, lisez <link
 linkend="advancedtopics-flapping">ceci</link>.</para></caution>
    <note><para> Note : si vous avez activé la <link
 linkend="configuringnagios-configmain-retain_state_information">mémorisation
-d'état</link>, Nagios® ignorera cette option à son (re)démarrage et
+d'état</link>, Nagios ignorera cette option à son (re)démarrage et
 utilisera la dernière valeur connue (telle qu'elle est enregistrée dans le
 <link linkend="configuringnagios-configmain-state_retention_file">fichier de
 mémorisation des états</link>), à moins que vous ne désactiviez l'option
@@ -3157,10 +3157,10 @@ services</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® utilisera les informations d'état "soft"
+   <para>Cette option détermine si Nagios utilisera les informations d'état "soft"
 des services lors du contrôle des <link
 linkend="advancedtopics-dependencies">dépendances de service</link>. En
-temps normal, Nagios® n'utilise que le dernier état "hard" du service lors
+temps normal, Nagios n'utilise que le dernier état "hard" du service lors
 du contrôle des dépendances. Si vous voulez utiliser le tout dernier état
 (que ce soit un <link linkend="thebasics-statetypes">état de type</link>
 hard ou soft), activez cette option.</para>
@@ -3201,7 +3201,7 @@ service</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre maximal de secondes pendant lequel Nagios® laissera tourner
+   <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 un contrôle de service. Si le contrôle dépasse cette limite, il est tué et
 un état CRITICAL est retourné. Une erreur de dépassement de délai est
 également journalisée.</para>
@@ -3211,7 +3211,7 @@ vraiment. Elle est là comme dernier rempart, pour tuer les plugins qui se
 comportent mal, ou ne se sont pas terminés correctement. Il faut la
 positionner à une valeur haute (quelque chose comme 60s), de manière à ce
 que tout contrôle ait le temps de se terminer avant cette limite. Si le
-contrôle du service prend plus de temps pour s'exécuter, Nagios® le tuera,
+contrôle du service prend plus de temps pour s'exécuter, Nagios le tuera,
 pensant que c'est un processus ayant des problèmes d'exécution.</para>
   </section>
 
@@ -3239,7 +3239,7 @@ Check Timeout"/>Dépassement de délai du contrôle d'hôte</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre maximal de secondes pendant lesquelles Nagios® laissera
+   <para>C'est le nombre maximal de secondes pendant lesquelles Nagios laissera
 tourner un contrôle d'hôte. Si le contrôle dépasse cette limite, il est tué
 et un état CRITICAL est retourné, et l'hôte sera supposé être dans l'état
 DOWN. Une erreur de dépassement de délai est également journalisée.</para>
@@ -3249,7 +3249,7 @@ vraiment. Elle est là comme dernier rempart, pour tuer les plugin qui se
 comportent mal ou ne se sont pas terminés correctement. Il faut la
 positionner à une valeur haute (quelque chose comme 60s), de manière à ce
 que tout contrôle ait le temps de se terminer avant cette limite. Si le
-contrôle de l'hôte prend plus de temps pour s'exécuter, Nagios® le tuera,
+contrôle de l'hôte prend plus de temps pour s'exécuter, Nagios le tuera,
 pensant que c'est un processus ayant des problèmes d'exécution.</para>
   </section>
 
@@ -3278,7 +3278,7 @@ gestionnaire d'événement</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre maximal de secondes pendant lequel Nagios® laissera tourner
+   <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 un gestionnaire d'événement. Si un gestionnaire d'événement dépasse cette
 limite il sera tué et une alerte sera journalisée.</para>
 
@@ -3288,7 +3288,7 @@ les plugins qui se comportent mal ou ne se sont pas terminés
 correctement. Il faut le positionner à une valeur haute (quelque chose comme
 60s), de manière à ce que tout contrôle ait le temps de se terminer avant
 cette limite. Si le contrôle du gestionnaire d'événement prend plus de temps
-pour s'exécuter, Nagios® le tuera, pensant que c'est un processus ayant des
+pour s'exécuter, Nagios le tuera, pensant que c'est un processus ayant des
 problèmes d'exécution.</para>
   </section>
 
@@ -3316,7 +3316,7 @@ xreflabel="Notification Timeout"/>Dépassement de délai de notification</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre maximal de secondes pendant lequel Nagios® laissera tourner
+   <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 une commande de notification. Si une commande de notification dépasse cette
 limite elle sera tuée et une alerte sera journalisée.</para>
 
@@ -3326,7 +3326,7 @@ option fait vraiment. Elle est là comme dernier rempart, pour tuer les
 plugins qui se comporte mal ou ne se sont pas terminés correctement. Il faut
 le positionner à une valeur haute (quelque chose comme 60s), de manière à ce
 que tout contrôle ait le temps de se terminer avant cette limite. Si la
-notification prend plus de temps pour s'exécuter, Nagios® la tuera, pensant
+notification prend plus de temps pour s'exécuter, Nagios la tuera, pensant
 que c'est un processus ayant des problèmes d'exécution.</para>
   </section>
 
@@ -3355,7 +3355,7 @@ de remontée de contrôle de service</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre maximal de secondes pendant lequel Nagios® laissera tourner
+   <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 une <link linkend="configuringnagios-configmain-ocsp_command">commande de
 remontée de contrôle de service</link>. Si une commande dépasse cette
 limite, elle sera tuée et une alerte sera journalisée.</para>
@@ -3386,7 +3386,7 @@ remontée de contrôle d'hôte</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre maximal de secondes pendant lequel Nagios® laissera tourner
+   <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 une <xref linkend="configuringnagios-configmain-ochp_command" />. Si une
 commande dépasse cette limite, elle sera tuée et une alerte sera
 journalisée.</para>
@@ -3417,7 +3417,7 @@ de la commande de traitement des données liées aux performances</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est le nombre maximal de secondes pendant lequel Nagios® laissera tourner
+   <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 une commande de <link
 linkend="configuringnagios-configmain-host_perfdata_file_processing_command">traitement
 des données liées aux performance d'un hôte</link> ou de <link
@@ -3451,7 +3451,7 @@ service</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette variable détermine si Nagios® remontera les résultats de contrôles de
+   <para>Cette variable détermine si Nagios remontera les résultats de contrôles de
 service et lancera la <link
 linkend="configuringnagios-configmain-ocsp_command">commande de remontée de
 contrôle de service</link> que vous avez définie. Je sais que c'est un drôle
@@ -3541,7 +3541,7 @@ xreflabel="Obsess Over Hosts Option" />Option de remontée de contrôle d'hôte<
     </tgroup>
    </informaltable>
 
-   <para>Cette variable détermine si Nagios® remontera les résultats de contrôles
+   <para>Cette variable détermine si Nagios remontera les résultats de contrôles
 d'hôtes et lancera la <link
 linkend="configuringnagios-configmain-ochp_command">commande de remontée de
 contrôle d'hôte</link> que vous avez définie. Je sais que c'est un drôle de
@@ -3630,7 +3630,7 @@ données liées aux performances</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette valeur détermine si Nagios® traitera les données liées aux <link
+   <para>Cette valeur détermine si Nagios traitera les données liées aux <link
 linkend="advancedtopics-perfdata">performances</link> des contrôles d'hôtes
 et de services.</para>
 
@@ -4142,7 +4142,7 @@ réordonnancé dans la file d'événements. Cela peut causer l'arrêt des
 contrôles du service. Normalement, c'est un phénomène très rare - il peut se
 produire si un utilisateur ou un processus extérieur a tué le processus
 utilisé pour exécuter le contrôle de service.</simpara>
-   <simpara>Si cette option est activée et que Nagios® s'aperçoit qu'un résultat de
+   <simpara>Si cette option est activée et que Nagios s'aperçoit qu'un résultat de
 contrôle de service particulier ne revient pas, il journalisera un message
 d'erreur, et réordonnancera le contrôle de service. Si vous constatez que
 certains contrôles de service semblent n'être jamais réordonnancés, activez
@@ -4194,7 +4194,7 @@ réordonnancé dans la file d'événements. Cela peut causer l'arrêt des
 contrôles de l'hôte. Normalement, c'est un phénomène très rare - il peut se
 produire si un utilisateur ou un processus extérieur a tué le processus
 utilisé pour exécuter le contrôle de l'hôte.</simpara>
-   <simpara>Si cette option est activée et que Nagios® s'aperçoit qu'un résultat de
+   <simpara>Si cette option est activée et que Nagios s'aperçoit qu'un résultat de
 contrôle de l'hôte particulier ne revient pas, il journalisera un message
 d'erreur, et réordonnancera le contrôle de l'hôte. Si vous constatez que
 certains contrôles de l'hôte semblent n'être jamais réordonnancés, activez
@@ -4237,7 +4237,7 @@ validité des données d'un service</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® va contrôler ou non périodiquement la
+   <para>Cette option détermine si Nagios va contrôler ou non périodiquement la
 validité des données d'un service. L'activation de cette option aide à
 contrôler que les <link linkend="thebasics-passivechecks">contrôles de
 service passifs</link> sont reçus en temps et en heure. On peut trouver plus
@@ -4314,7 +4314,7 @@ validité des données d'un hôte</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios® va contrôler ou non périodiquement la
+   <para>Cette option détermine si Nagios va contrôler ou non périodiquement la
 validité des données d'un hôte. L'activation de cette option aide à
 contrôler que les <link linkend="thebasics-passivechecks">contrôles passifs
 des hôtes</link> sont reçus en temps et en heure. On peut trouver plus
@@ -4483,7 +4483,7 @@ Format"/>Format de la date</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option spécifie le format de date que Nagios® utilisera dans
+   <para>Cette option spécifie le format de date que Nagios utilisera dans
 l'interface web. Les options possibles sont :</para>
 
    <informaltable frame="all">
@@ -4609,7 +4609,7 @@ noms d'objets</title>
    </informaltable>
 
    <para>Cette option vous permet de spécifier quels sont les caractères illégaux
-dans les noms d'objets, tels qu'hôtes, services et autres. Nagios® vous
+dans les noms d'objets, tels qu'hôtes, services et autres. Nagios vous
 autorisera la plupart des caractères dans les définitions d'objets, mais je
 recommande de ne pas utiliser les caractères ci-dessus. Le faire vous expose
 à des problèmes dans l'interface web, les notifications de commandes, etc.</para>
@@ -4774,7 +4774,7 @@ xreflabel="Administrator Email Address"/>Adresse email de l'administrateur</titl
    </informaltable>
 
    <para>C'est l'adresse mail de l'administrateur local de la machine (i.e. celle sur
-laquelle Nagios® tourne). Cette valeur peut être utilisée dans les commandes
+laquelle Nagios tourne). Cette valeur peut être utilisée dans les commandes
 de notification grâce à la <link linkend="thebasics-macros">macro</link>
 <varname>$ADMINEMAIL$</varname>.</para>
   </section>
@@ -4804,7 +4804,7 @@ xreflabel="Administrator Pager"/>Pager de l'administrateur</title>
    </informaltable>
 
    <para>C'est le numéro du pager (ou la passerelle pager-email) de l'administrateur
-de la machine locale (i.e. celle sur laquelle Nagios® tourne). Le numéro ou
+de la machine locale (i.e. celle sur laquelle Nagios tourne). Le numéro ou
 l'adresse de pager peut être utilisé dans les commandes de notification
 grâce à la <link linkend="thebasics-macros">macro</link>
 <varname>$ADMINPAGER$ </varname>.</para>

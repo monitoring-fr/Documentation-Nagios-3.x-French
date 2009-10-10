@@ -10,7 +10,7 @@
 	<title>External Commands</title>
 	<section>
 		<title>Introduction</title>
-		<para>Nagios® peut traiter des commandes d'applications externes (y compris les
+		<para>Nagios peut traiter des commandes d'applications externes (y compris les
 CGIs, voir CGI de commande à titre d'exemple) et modifier de nombreux
 aspects de ses fonctions de supervision suivant les commandes qu'il reçoit.</para>
 	</section>
@@ -20,7 +20,7 @@ aspects de ses fonctions de supervision suivant les commandes qu'il reçoit.</pa
 	   <imageobject>
 	    <imagedata fileref="images/externalcommands.png" format="PNG"/>
 	   </imageobject>
-	  </mediaobject></informalfigure>Par défaut, Nagios® ne contrôle, ni ne traite les commandes externes. Si
+	  </mediaobject></informalfigure>Par défaut, Nagios ne contrôle, ni ne traite les commandes externes. Si
 vous voulez autoriser le traitement des commandes externes, il faut
 effectuer les actions suivantes…</para>
 		<itemizedlist>
@@ -44,7 +44,7 @@ fichiers de commandes. Des détails sur la manière de faire cela se trouvent
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Quand Nagios® contrôle-t-il les commandes externes ?</title>
+		<title>Quand Nagios contrôle-t-il les commandes externes ?</title>
 		<itemizedlist>
 			<listitem>
 				<para>A intervalles réguliers précisés par l'option <link
@@ -56,14 +56,14 @@ du fichier de configuration principal.</para>
 linkend="advancedtopics-eventhandlers">gestionnaires d'évènements</link>
 soient exécutés. Cela s'effectue en plus du cycle régulier des contrôles de
 commandes externes et sert à fournir une action immédiate si un gestionnaire
-d'événement soumet des commandes à Nagios®.</para>
+d'événement soumet des commandes à Nagios.</para>
 			</listitem>
 		</itemizedlist>
 	</section>
 	<section>
 		<title>L'utilisation des commandes externes</title>
 		<para>Les commandes externes peuvent être utilisées pour mener à bien un certain
-nombre de choses pendant que Nagios® fonctionne. A titre d'exemple, ce qui
+nombre de choses pendant que Nagios fonctionne. A titre d'exemple, ce qui
 peut être effectué comprend : la désactivation temporaire des notifications
 pour les services et les hôtes, la désactivation temporaire des tests de
 service, l'obligation de contrôler immédiatement un service, l'ajout de
