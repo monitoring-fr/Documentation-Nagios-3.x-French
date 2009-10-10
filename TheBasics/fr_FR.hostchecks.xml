@@ -7,18 +7,18 @@
 ]
 >
 <chapter id="thebasics-hostchecks" xreflabel="Host Checks">
-	<title>Host Checks</title>
+	<title>Les contrôles d'hôtes</title>
 	<section>
 		<title>Introduction</title>
 		<para>Le fonctionnement de base des contrôles d'hôte est décrit ci-après...</para>
 	</section>
 	<section>
-		<title>Quand Sont Effectués Les Contrôles D'Hôtes ?</title>
+		<title>Quand sont effectués les contrôles d'hôtes ?</title>
 		<para>Les hôtes sont contrôlés par le démon Nagios:</para>
 		<itemizedlist>
 			<listitem>
-				<para>A intervalles réguliers, tel que défini par les options check_interval et
-retry_interval dans vos <link
+				<para>A intervalles réguliers, tel que défini par les options <varname>check_interval</varname> et
+<varname>retry_interval</varname> dans vos <link
 linkend="configuringnagios-objectdefinitions-host">définitions
 d'hôtes</link>.</para>
 			</listitem>
@@ -54,13 +54,13 @@ réseau aussi rapidement possible, en distinguant un état DOWN d'un état
 UNREACHABLE pour l'hôte. Ce sont deux états très différents et qui peuvent
 aider rapidement un adminuistrateur à localiser la l'origine de la coupure
 réseau.</para>
-		<para>Les contrôles à le demande peuvent aussi être effectués dans le cadre de la
+		<para>Les contrôles à la demande peuvent aussi être effectués dans le cadre de la
 logique <link linkend="advancedtopics-dependencychecks">des contrôles en
 prévision des dépendances des hôtes</link>. Ces contrôles permettent
 d'assurer que la logique de dépendance soit la plus précise que possible.</para>
 	</section>
 	<section>
-		<title>Les Contrôles D'Hôtes Mis En Cache</title>
+		<title>Les contrôles d'hôtes mis en cache</title>
 		<para>Les performances des contrôles d'hôte à la demande peuvent être améliorées
 en implémenant l'utilisation des contrôles mis en cache, qui permettent à
 Nagios de ne pas exécuter un contrôle d'hôte s'il détermine qu'il a un
@@ -69,7 +69,7 @@ sur les contrôles mis en cache peuvent être trouvés <link
 linkend="advancedtopics-cachedchecks">ici</link>.</para>
 	</section>
 	<section>
-		<title>Dependencies and Checks</title>
+		<title>Les contrôles et les dépendances</title>
 		<para>Vous pouvez définir des <link
 linkend="configuringnagios-objectdefinitions-hostdependency">dépendances
 d'hôtes</link> qui empêchent Nagios de contrôler le statut d'un hôte
@@ -78,7 +78,7 @@ sur les dépendances peuvent être trouvées <link
 linkend="advancedtopics-dependencies">ici</link>.</para>
 	</section>
 	<section>
-		<title>Parallélisation des Contrôles d'Hôte</title>
+		<title>Parallélisation des contrôles d'hôtes</title>
 		<para>Les contrôles d'hôtes planifiés sont lancés en parallèle. Quand Nagios a
 besoin de procéder un un contrôle d'hôte planifié, il lancera le contrôle de
 l'hôte et reviendra à son travail initial (contrôle des services,
@@ -114,7 +114,7 @@ raison, Je vous recommande de toujours utiliser une valeur supérieure à 1
 pour la directive max_check_attempts dans vos définitions d'hôtes.</para></note>
 	</section>
 	<section>
-		<title>Les Etats d'Un Hôte</title>
+		<title>Les états d'un hôte</title>
 		<para>Les hôtes qui sont contrôlés peuvent être dans un des trois états
 differents:</para>
 		<itemizedlist>
@@ -130,7 +130,7 @@ differents:</para>
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Determmination de l'Etat d'Un Hôte</title>
+		<title>Détermmination de l'état d'un hôte</title>
 		<para>Les contrôles d'hôte sont réalisés par les <link
 linkend="thebasics-plugins">plugins</link>, qui retournent un état OK,
 WARNING, UNKNOWN, ou CRITICAL. Comment Nagios traduit-il le code de retour
@@ -244,7 +244,7 @@ DOWN et UNREACHABLE peuvent être trouvées <link
 linkend="thebasics-networkreachability">ici</link>.</para>
 	</section>
 	<section>
-		<title>Changements d'Etat d'Hôte</title>
+		<title>Changements d'états d'un hôte</title>
 		<para>Comme vous probablement conscients, les hôtes ne restent pas toujours dans
 un état. Des choses arrivent, des patches sont appliqués, et les serveurs
 ont besoins d'être redémarrés. Quand Nagios contrôle les statuts des hôtes,

@@ -7,19 +7,19 @@
 ]
 >
 <chapter id="thebasics-servicechecks" xreflabel="Service Checks">
-	<title>Service Checks</title>
+	<title>Les contrôles de services</title>
 	<section>
 		<title>Introduction</title>
-		<para>Le fonctionnement basique des contrôles de service est ddécrit ici...</para>
+		<para>Le fonctionnement basique des contrôles de service est décrit ici...</para>
 	</section>
 	<section>
-		<title>Quand Les Contrôles De Services Sont-Ils Réalisés ?</title>
+		<title>Quand les contrôles de services sont-ils réalisés ?</title>
 		<para>Les services sont contrôlés par le démon Nagios:</para>
 		<itemizedlist>
 			<listitem>
-				<para>At regular intervals, as defined by the <code>check_interval</code>
-				et <code>retry_interval</code> dans vos <link
-linkend="configuringnagios-objectdefinitions-service">definitions de
+				<para>À intervalles réguliers, comme définit par la variable <varname>check_interval</varname>
+				et <varname>retry_interval</varname> dans vos <link
+linkend="configuringnagios-objectdefinitions-service">définitions de
 service</link>.</para>
 			</listitem>
 			<listitem>
@@ -36,7 +36,7 @@ les dépendances de service, Nagios ne réalisear aucun contrôle de service à
 la demande</para>
 	</section>
 	<section>
-		<title>Les Contrôles De Service Mis En Cache</title>
+		<title>Les contrôles de service mis en cache</title>
 		<para>La performance des contrôles de service à la demande peut être
 considérablement améliorée par la mise en oeuvre de l'utilisation des
 contrôles mis en cache, ce qui permet à Nagios de renoncer à l'exécution
@@ -48,7 +48,7 @@ de service</link>. Plus d'informations sur les contrôles mis en cache
 peuvent être trouvés <link linkend="advancedtopics-cachedchecks">ici</link>.</para>
 	</section>
 	<section>
-		<title>Dependencies and Checks</title>
+		<title>Les contrôles et les dépendances</title>
 		<para>Vous pouvez préciser <link
 linkend="configuringnagios-objectdefinitions-servicedependency">l'exécution
 des dépendances de service</link> qui empêche Nagios de vérifier les statuts
@@ -57,7 +57,7 @@ services. Plus d'information sur les dépendances sont disponibles <link
 linkend="advancedtopics-dependencies">ici</link>.</para>
 	</section>
 	<section>
-		<title>Parallelisation Des Contrôles De Services</title>
+		<title>Parallélisation des contrôles de services</title>
 		<para>Les contrôles de services planifiés sont effecués en parallèle. Lorsque
 Nagios a besoin d'effectuer un contrôle de service planifié, il lancera le
 contrôle du service et reviendra ensuite à d'autres tâches (exécution de
@@ -74,7 +74,7 @@ l'exécution d'un contrôle de service à la demande s'il peut utiliser les
 résultats du contrôle de service qu'il a en cache sont relativement récent.</para>
 	</section>
 	<section>
-		<title>Etats Des Services</title>
+		<title>États des services</title>
 		<para>Les services qui ont été contrôlés peuvent avoir un des quatre états:</para>
 		<itemizedlist>
 			<listitem>
@@ -92,7 +92,7 @@ résultats du contrôle de service qu'il a en cache sont relativement récent.</
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Determinination De L'Etat Du Service</title>
+		<title>Détermination de l'état du service</title>
 		<para>Les contrôles de service sont par des <link
 linkend="thebasics-plugins">plugins</link>, qui renvoyer un état OK,
 WARNING, UNKNOWN, ou CRITICAL. Ces états issus des plugins sont directement
@@ -100,13 +100,13 @@ traduits en états de service. Par exemple, un plugin qui renvoie un état
 WARNING donnera au service un état WARNING.</para>
 	</section>
 	<section>
-		<title>Changements D'Etats Des Services</title>
+		<title>Changements d'états des services</title>
 		<para>Quand Nagios contrôle le statut des services, il sera capable de détecter
 lorsqu'un service change entre les états OK, WARNING, UNKNOWN, et CRITICAL
 et prendra les mesures appropriées. De ces changements d'état en résultent
 des <link linkend="thebasics-statetypes">types d'état</link> (HARD or SOFT),
 qui peuvent déclencher des <link
-linkend="advancedtopics-eventhandlers">gestionnaires d'événement</link> et
+linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link> et
 l'envoi de <link linkend="thebasics-notifications">notifications</link>. Les
 changements d'états de service peuvent également déclencher à la demande des
 <link linkend="thebasics-hostchecks">contrôles d'hôtes</link>. Détecter et
