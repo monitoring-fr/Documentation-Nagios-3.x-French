@@ -16,7 +16,7 @@ services "privés" de machines Windows comme:</para>
 
   <para><itemizedlist>
     <listitem>
-     <para>Memory usage</para>
+     <para>Utilisation mémoire</para>
     </listitem>
 
     <listitem>
@@ -116,8 +116,7 @@ machine Windows</para>
  <section>
   <title>Ce qui est déjà fait pour vous</title>
 
-  <para>To make your life a bit easier, a few configuration tasks have already been
-done for you:</para>
+  <para>Pour vous rendre la vie un peu plus facile, quelques tâches de configuration ont déjà été faites pour vous :</para>
 
   <itemizedlist>
    <listitem>
@@ -151,12 +150,11 @@ temps.</para>
 Windows, vous avez un peu plus de travail à faire. Souvenez-vous, vous
 n'avez à le faire que pour la *première* machine Windows à superviser.</para>
 
-  <para>Edit the main Nagios config file.</para>
+  <para>Éditez le fichier de configuration principal de Nagios.</para>
 
   <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
-  <para>Remove the leading pound (#) sign from the following line in the main
-configuration file:</para>
+  <para>Supprimez le signe (#) du début de la ligne suivante du fichier de configuration principal :</para>
 
   <programlisting>#cfg_file=/usr/local/nagios/etc/objects/windows.cfg</programlisting>
 

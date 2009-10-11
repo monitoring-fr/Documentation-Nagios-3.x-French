@@ -7,7 +7,7 @@
 ]
 >
 <chapter id="runningnagios-startstop" xreflabel="Starting and Stopping Nagios">
- <title>Démarrer et Arrêter Nagios</title>
+ <title>Démarrage et Arrêt de Nagios</title>
 
  <para>Il y a plus d'une façon de démarrer, arrêter et redémarrer Nagios. Voici
 quelques-unes des plus communes ...
@@ -17,7 +17,7 @@ quelques-unes des plus communes ...
 avant de (re)démarrer Nagios.</para></tip>
 
  <section>
-  <title>Démarrer Nagios</title>
+  <title>Démarrage de Nagios</title>
 
   <orderedlist>
    <listitem>
@@ -36,21 +36,21 @@ l'option <option>-d</option>
  </section>
 
  <section>
-  <title>Restarting Nagios</title>
+  <title>Redémarrage de Nagios</title>
 
-  <para>Redémarer/recharger sert necessairement lorsque vous modifiez vos fichiers
+  <para>Redémarrer/recharger est nécessaire lorsque vous modifiez vos fichiers
 de configuration et que vous voulez que ces changements prennent effet.</para>
 
   <orderedlist>
    <listitem>
     <para>Init Script: Le moyen le plus facile pour redémarrer le démon Nagios est
-d'utiliser l'init script comme ceci:</para>
+d'utiliser le script de démarrage comme ceci:</para>
             <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios reload</userinput></screen>
    </listitem>
 
    <listitem>
     <para>L'interface Web: Vous pouvez redémarrer Nagios au travers de l'interface web
-en cliquant sur le lien <guimenu>Process Info</guimenu> et de choisir
+en cliquant sur le lien <guimenu>Process Info</guimenu> et en choisissant
 l'option <guimenuitem>Restart the Nagios process</guimenuitem>:
     <screenshot>
     <mediaobject>
@@ -69,12 +69,12 @@ signal SIGHUP comme ceci:</para>
  </section>
 
  <section>
-  <title>Arrêter Nagios</title>
+  <title>Arrêt de Nagios</title>
 
   <orderedlist>
    <listitem>
-    <para>Init Script: Le moyen le plus facile pour arrêter le démon Nagios est
-d'utiliser l'init script comme ceci:</para>
+    <para>Script de démarrage: Le moyen le plus facile pour arrêter le démon Nagios est
+d'utiliser le script de démarrage comme ceci:</para>
 
         <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios stop</userinput></screen>
    </listitem>

@@ -129,13 +129,12 @@ l'imprimante</para>
  <section>
   <title>Ce qui est déjà fait pour vous</title>
 
-  <para>To make your life a bit easier, a few configuration tasks have already been
-done for you:</para>
+  <para>Pour vous rendre la vie un peu plus facile, quelques tâches de configuration ont déjà été faites pour vous :</para>
 
   <itemizedlist>
    <listitem>
     <para>Une définition de commande <emphasis>check_hpjd</emphasis> a déjà été créé
-dans le fichier <filename>commands.cfg</filename> file. Cela permet
+dans le fichier <filename>commands.cfg</filename>. Cela permet
 d'utiliser le plugin &plugin-hpjd; pour superviser des imprimantes réseaux.</para>
    </listitem>
 
@@ -165,12 +164,11 @@ temps.</para>
 réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez
 à le faire que pour la *première* imprimante à superviser.</para>
 
-  <para>Edit the main Nagios config file.</para>
+  <para>Éditez le fichier de configuration principal de Nagios.</para>
 
   <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
-  <para>Remove the leading pound (#) sign from the following line in the main
-configuration file:</para>
+  <para>Supprimez le signe (#) du début de la ligne suivante du fichier de configuration principal :</para>
 
   <programlisting>
 #cfg_file=/usr/local/nagios/etc/objects/printer.cfg
