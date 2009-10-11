@@ -112,7 +112,7 @@ imprimante réseau. Les voici:</para>
 
   <procedure>
    <step>
-    <para>Perform first-time prerequisites</para>
+    <para>Procéder aux pré-requis nécessaires la première fois</para>
    </step>
 
    <step>
@@ -263,7 +263,7 @@ define service{
 }
 </programlisting>
 
-  <para>Save the file.</para>
+  <para>Enregistrez le fichier.</para>
  </section>
 
  <section>
@@ -275,8 +275,7 @@ supervision de l'imprimante. Pour cela, vous aurez besoin de <link
 linkend="runningnagios-verifyconfig">vérifier votre configuration</link> et
 de <link linkend="runningnagios-startstop">redémarrer Nagios</link>.</para>
 
-  <para>If the verification process produces any errors messages, fix your
-configuration file before continuing. Make sure that you don't (re)start
-Nagios until the verification process completes without any errors!</para>
+  <para>Si le prcocessus de vérification porduit n'importe quel message d'erreur, réglez d'abord vos problèmes de configuration avant de continuer.
+  Assurez-vous de ne pas redémarrer Nagios avant que le processus de vérification ne se déroule sans erreur!</para>
  </section>
 </chapter>
