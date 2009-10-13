@@ -10,7 +10,7 @@
  <title>Quoi de neuf dans Nagios 3</title>
 
  <important>
- <para>Assurez vous de lire la documentation et la <acronym>FAQ</acronym>sur <ulink url="&url-nagios;">nagios.org</ulink> avant de poser des
+ <para>Assurez vous de lire la documentation et la <acronym>FAQ</acronym> sur <ulink url="&url-nagios;">nagios.org</ulink> avant de poser des
 questions sur les mailing lists.
  </para>
  </important>
@@ -37,7 +37,7 @@ racine de la distribution basée sur les sources.
 doucement dans la réécriture de la plupart de la documentation. Cela va
 prendre du temps, car (1) il y a beaucoup de documentation et (2) écrire de
 la documentation n'est pas mon passe temps favori. Il faut s'attendre à ce
-que certaines portions de la documentation n'évolues pas pendant un bon
+que certaines portions de la documentation n'évoluent pas pendant un bon
 moment. J'espère que les modifications que je réalise vont clarifier et
 rendre plus abordables certaines choses pour les nouveaux utilisateurs et
 les utilisateurs occasionnels de Nagios.</para>
@@ -84,7 +84,7 @@ les utilisateurs occasionnels de Nagios.</para>
 <varname>$LASTSERVICEPROBLEMID$</varname>,
 <varname>$LASTHOSSTATE$</varname>, <varname>$LASTHOSTSTATEID$</varname>,
 <varname>$LASTSERVICESTATE$</varname>,
-<varname>$LASTSERVICESTATEID$</varname>. Deux macros de temps "à la demande"
+<varname>$LASTSERVICESTATEID$</varname>. Deux macros de temps <quote>à la demande</quote>
 on également été ajoutées: <varname>$ISVALIDTIME:$</varname> et
 <varname>$NEXTVALIDTIME:$</varname>.</para>
  </listitem>
@@ -99,7 +99,7 @@ des nouvelles macros <varname>$HOSTNOTIFICATIONNUMBER$</varname> et
  <listitem>
  <para><emphasis role="bold">Modifications</emphasis> - Les macros
 <varname>$HOSTNOTES$</varname> et <varname>$SERVICENOTES$</varname>
-contiennent maintenant elle même des macros, celles ci sont:
+contiennent maintenant elles-mêmes des macros, celles-ci sont:
 <varname>$HOSTNOTESURL$</varname>, <varname>$HOSTACTIONURL$</varname>,
 <varname>$SERVICENOTESURL$</varname> et
 <varname>$SERVICEACTIONURL$</varname>.</para>
@@ -107,7 +107,7 @@ contiennent maintenant elle même des macros, celles ci sont:
 
  <listitem>
  <para>Les macros sont normalement disponibles comme variables d'environnement
-quand les check, gestionnaires d'évennement, notifications et autres
+quand les contrôles, gestionnaires d'événements, notifications et autres
 commandes sont executées. Ceci est plutôt consommateur de ressources CPU
 dans des installations larges de Nagios, vous devriez alors désactiver cette
 fonctionnalité à l'aide de l'option <link
@@ -115,8 +115,7 @@ linkend="configuringnagios-configmain-enable_environment_macros">enable_environm
  </listitem>
 
  <listitem>
- <para>Des informations sur les macros peuvent être trouvées <link
-linkend="thebasics-macros">ici</link>.</para>
+ <para>Des informations sur les macros peuvent être trouvées <link linkend="thebasics-macros">ici</link>.</para>
  </listitem>
  </itemizedlist>
  </section>
@@ -126,14 +125,13 @@ linkend="thebasics-macros">ici</link>.</para>
 
  <itemizedlist>
  <listitem>
- <para>Les entrées <link linkend="advancedtopics-downtime">Arrêt programmé</link>
-ne sont plus stockées dans leur propre fichier fichier de configuration
-(Précedemment définis par la directive <varname>downtime_file</varname> dans
-le fichier de configuration principal). Les entrées d'arrêt programmés
+ <para>Les entrées d'<link linkend="advancedtopics-downtime">arrêts programmés</link>
+ne sont plus stockées dans leur propre fichier de configuration
+(précédemment définies par la directive <varname>downtime_file</varname> dans
+le fichier de configuration principal). Les entrées d'arrêts programmés
 courants et retenus sont maintenant stockées respectivement dans les
 fichiers <link linkend="configuringnagios-configmain-status_file">status
-file</link> et <link
-linkend="configuringnagios-configmain-state_retention_file">retention
+file</link> et <link linkend="configuringnagios-configmain-state_retention_file">retention
 file</link>.</para>
  </listitem>
  </itemizedlist>
@@ -148,26 +146,24 @@ file</link>.</para>
 propre fichier (précedemment spécifié à l'aide d'une directive
 <varname>comment_file</varname> dans le fichier de configuration
 principal). Les commentaires courant et retenus sont maintenant stockés
-respectivement dans <link
-linkend="configuringnagios-configmain-status_file">le fichier status</link>
-et <link linkend="configuringnagios-configmain-state_retention_file">le
-fichier retention</link>.</para>
+respectivement dans <link linkend="configuringnagios-configmain-status_file">le fichier statut</link>
+et <link linkend="configuringnagios-configmain-state_retention_file">le fichier de rétention</link>.</para>
  </listitem>
  <listitem>
- <para>Les commentaires d'acquitement qui sont marqués comme non persistent sont
+ <para>Les commentaires d'acquittement qui sont marqués comme non persistents sont
 maintenant supprimmés quand l'acquitement est enlevé. Ils étaient
-précedemment automatiquement supprimés au redemarage de nagios, ce qui
-n'était pas ideal.</para>
+précédemment automatiquement supprimés au redémarage de nagios, ce qui
+n'était pas idéal.</para>
  </listitem>
  </itemizedlist>
  </section>
 
  <section>
- <title>Etat de conservation des données</title>
+ <title>État de conservation des données</title>
 
  <itemizedlist>
  <listitem>
- <para>Les informations d'état des contacts individuels sont dorénavant retenus à
+ <para>Les informations d'état des contacts individuels sont dorénavant conservées à
 chaque redémarage.</para>
  </listitem>
  
@@ -218,13 +214,12 @@ d'oscillation (par défaut tous les états sont utilisés).</para>
  </listitem>
  
 	<listitem>
- <para>L'historique des pourcentages de changement d'état sont maintenant conservés
-même si la detection d'oscillation est desactivée.</para>
+ <para>L'historique des pourcentages de changement d'état est maintenant conservé même si la détection d'oscillation est desactivée.</para>
  </listitem>
  
 	<listitem>
  <para>Les oscillations sont immédiatement vérifiées sur les hôtes et les services
-quand la detection d'oscillation est activée globalement.</para>
+quand la détection d'oscillation est activée globalement.</para>
  </listitem>
  
 	<listitem>
@@ -246,7 +241,7 @@ trouvées <link linkend="advancedtopics-flapping">ici</link>.</para>
  <listitem>
  <para>Ajout d'une nouvelle commande externe, <command>PROCESS_FILE</command>,
 permettant le traitement de commandes externes placées dans un
-fichier. Utile pour traiter de larges quantitées de check passifs retournant
+fichier. Utile pour traiter de larges quantitées de contrôles passifs retournant
 de grandes quantitées de données, ou pour scripter des commandes. De plus
 amples informations peuvent être trouvées <ulink
 url="&url-nagios;developerinfo/externalcommands/commandinfo.php?command_id=131">ici</ulink>.
@@ -282,7 +277,7 @@ les fichiers de <link
 linkend="configuringnagios-configmain-status_file">statut</link> et de
 <link
 linkend="configuringnagios-configmain-state_retention_file">rétention</link>,
-bien que celles-ci ne soient pas traitées par les cgi.</para>
+bien que celles-ci ne soient pas traitées par les CGIs.</para>
  </listitem>
  </itemizedlist>
  </section>
@@ -603,7 +598,7 @@ la place. Vous pouvez trouver plus d'informations sur cette fonctionnalité
  <itemizedlist>
  <listitem>
  <para>Les contrôles d'hôtes sont désormais parallélisés! Les contrôles d'hôtes
-était effectuée en série, ce qui impliquait un holdup majeur en termes de
+étaient effectués en série, ce qui impliquait un holdup majeur en termes de
 performance. Plus maintenant! (<link linkend="thebasics-hostchecks">En
 savoir plus</link>)</para>
  </listitem>
@@ -618,7 +613,7 @@ avant de faire un nouvel essai de contrôle sur l'hôte. ;-)</para>
  <listitem>
  <para>Les contrôles d'hôtes réguliers ne grèvent plus les performances. En fait,
 ils peuvent aider à améliorer les performances grâce à la nouvelle logique
-de mise en cache des contrôles (vois dessous).</para>
+de mise en cache des contrôles (voir ci-dessous).</para>
  </listitem>
 
  <listitem>
@@ -727,7 +722,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">here</link> and
 
  <itemizedlist>
  <listitem>
- <para>Mis à jour <acronym>NEB</acronym> <acronym>L'API</acronym> version</para>
+ <para>Mis à jour de la version de l'<acronym>L'API</acronym> <acronym>NEB</acronym></para>
  </listitem>
 
  <listitem>
