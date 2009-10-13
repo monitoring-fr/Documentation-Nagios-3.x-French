@@ -7,12 +7,12 @@
 ]
 >
 <chapter id="configuringnagios-cgiauth" xreflabel="Authentication and Authorization in The CGIs">
- <title>Authentification et autorisations dans les CGI</title>
+ <title>Authentification et autorisations dans les CGIs</title>
 
  <section>
   <title>Introduction</title>
   
-  <para>Cette documentation décrit la façon dont les CGI de Nagios décident de qui a
+  <para>Cette documentation décrit la façon dont les CGIs de Nagios décident de qui a
 le droit de voir les informations de configurations et d'états et de qui
 a le droit de soumettre des commandes au démon Nagios depuis l'interface
 web.</para>
@@ -46,14 +46,14 @@ utilisateurs authentifiés </title>
   <para>En partant du principe que vous avez configuré votre serveur web comme
 décrit dans le <link linkend="gettingstarted-quickstart">guide de démarrage
 rapide</link>, celui-ci devrait vous demander de vous authentifier avant de
-pouvoir accéder aux CGI de Nagios.</para>
+pouvoir accéder aux CGIs de Nagios.</para>
 
   <para>Au fur et à mesure que vous allez ajouter de nouveaux <link
 linkend="configuringnagios-objectdefinitions-contact">contacts</link> pour
 recevoir des notifications d'hôtes et de services, vous souhaiterez
 certainement leur donner accès à l'interface web de Nagios. Vous pouvez
 utiliser la commande suivante pour ajouter de nouveaux utilisateurs capables
-de s'authentifier aux CGI. Remplacez &lt;username&gt; par le nom
+de s'authentifier aux CGIs. Remplacez &lt;username&gt; par le nom
 d'utilisateur que vous souhaitez ajouter. Dans la plupart des cas, le nom
 d'utilisateur devrait correspondre au nom court du <link
 linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.
@@ -63,9 +63,9 @@ linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.
 
  <section>
   <title><anchor id="configuringnagios-cgiauth-enable_cgi_auth" />Activer
-l'authentification/autorisation dans les CGI</title>
+l'authentification/autorisation dans les CGIs</title>
 
-  <para>Maintenant il s'agit de s'assurer que les CGI sont configurés pour filtrer
+  <para>Maintenant il s'agit de s'assurer que les CGIs sont configurés pour filtrer
 les informations et les commandes auxquelles les utilisateurs peuvent
 accéder. Pour cela la variable <link
 linkend="configuringnagios-configcgi-use_authentication">use_authentication</link>
@@ -76,14 +76,14 @@ valeur différente de zéro. Par exemple: </para>
   <programlisting>use_authentication=1</programlisting>
 
   <para>Voilà, la fonctionnalité d'authentification/autorisation de base est
-activée dans les CGI.</para>
+activée dans les CGIs.</para>
  </section>
 
  <section>
   <title><anchor id="configuringnagios-cgiauth-default_rights" />Droits d'accès par
 défaut aux informations des CGIs</title>
 
-  <para>Quelles sont les droits d'accès aux CGI par défaut quand la fonctionnalité
+  <para>Quelles sont les droits d'accès aux CGIs par défaut quand la fonctionnalité
 d'authentification/autorisation est activée ?</para>
 
   <informaltable frame="all">
@@ -311,7 +311,7 @@ d'accès supplémentaires aux informations des CGIs</title>
 authentifiés des droits d'accès à d'autres informations des CGIs en les
 ajoutant à diverses variables d'autorisation dans le <link
 linkend="configuringnagios-configcgi">fichier de configuration des
-CGI</link>. Je m'aperçois que ces variables ne permettent pas d'être très
+CGIs</link>. Je m'aperçois que ces variables ne permettent pas d'être très
 précis dans les autorisations, mais c'est mieux que rien. </para>
 
   <para>Des droits supplémentaires peuvent être accordés aux utilisateurs en les
@@ -364,7 +364,7 @@ pour toutes les commandes aux services</link></para>
 
  <section>
   <title><anchor id="configuringnagios-cgiauth-cgi_auth_requirements" />Autorisations
-requises par les CGI</title>
+requises par les CGIs</title>
 
   <para>Si les droits d'accès aux diverses informations des CGIs ne vous paraissent
 pas clairs, lisez la section Autorisations requises de chaque CGI qui se
@@ -377,11 +377,11 @@ sur des serveurs web sécurisés</title>
 
   <para>Si votre serveur web se trouve dans un domaine sécurisé (par exemple derrière un
 firewall) ou si vous utilisez SSL, vous pouvez définir un utilisateur par
-défaut pour accéder aux CGI. C'est le rôle de la variable <link
+défaut pour accéder aux CGIs. C'est le rôle de la variable <link
 linkend="configuringnagios-configcgi-default_user_name">default_user_name</link>
 du <link linkend="configuringnagios-configcgi">fichier de configuration des
-CGI</link>. En définissant un nom d'utilisateur par défaut, vous pouvez
-autoriser les utilisateurs à accéder aux CGI sans qu'ils ne s'authentifient
+CGIs</link>. En définissant un nom d'utilisateur par défaut, vous pouvez
+autoriser les utilisateurs à accéder aux CGIs sans qu'ils ne s'authentifient
 auprès du serveur web. Ceci vous permet d'éviter d'utiliser
 l'authentification web de base, qui transmet les mots de passe en clair sur
 Internet.</para>
@@ -389,7 +389,7 @@ Internet.</para>
   <important>
    <para>Ne définissez pas d'utilisateur par défaut, à moins que vous n'utilisiez un
 serveur web sécurisé et que vous soyez sûr que les utilisateurs qui accèdent
-aux CGI ont été authentifiés d'une manière ou d'une autre ! Si vous utilisez
+aux CGIs ont été authentifiés d'une manière ou d'une autre ! Si vous utilisez
 cette variable, un utilisateur non authentifié héritera des droits de cet
 utilisateur par défaut !</para>
   </important>

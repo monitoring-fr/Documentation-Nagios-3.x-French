@@ -7,13 +7,13 @@
 ]
 >
 <chapter id="advancedtopics-cgiincludes" xreflabel="Custom CGI Headers and Footers">
-	<title>Personnalisation de l'en-tête et du pied de page des CGI</title>
+	<title>Personnalisation de l'en-tête et du pied de page des CGIs</title>
 	<section>
 		<title>Introduction</title>
 		<para>Si vous êtes amené à faire des installations personnalisées de Nagios, vous
 pourriez avoir envie d'avoir un en-tête et/ou un pied de page personnalisés
 à l'affichage des résultats des <link
-linkend="thebasics-cgis">CGI</link>. Ceci est particulièrement utile pour
+linkend="thebasics-cgis">CGIs</link>. Ceci est particulièrement utile pour
 l'utilisateur final concernant l'affichage des informations de contact du
 support, etc.</para>
 		<para>Il est important de tenir compte du fait que, à moins d'être exécutables,
@@ -25,18 +25,18 @@ qu'un navigateur web peut comprendre (HTML, JavaScript, etc.).</para>
 		<para>Si les en-têtes et pieds de page personnalisés sont exécutables, alors les
 fichiers sont exécutés et leur sortie est affichée à l'utilisateur : ils
 doivent donc afficher du code HTML valide. Cette fonctionnalité permet
-d'utiliser vos propres CGI pour ajouter des données à l'affichage de
+d'utiliser vos propres CGIs pour ajouter des données à l'affichage de
 Nagios. Ceci a été utilisé pour insérer des graphiques de rrdtool en
 utilisant ddraw et des menu de commande dans la fenêtre d'affichage de
 Nagios. Ces en-têtes et pieds de page exécutables disposent du même
-environnement que les CGI natives : vous pouvez donc disposer des
+environnement que les CGIs natives : vous pouvez donc disposer des
 informations sur la requête HTTP, sur l'utilisateur authentifié etc... pour
 afficher les informations adéquates.</para>
 	</section>
 	<section>
 		<title>How Does It Work?</title>
 		<para>Vous pouvez inclure les en-têtes et pieds de page personnalisés dans le
-résultat des CGI en fournissant des fichiers HTML avec un nom approprié dans
+résultat des CGIs en fournissant des fichiers HTML avec un nom approprié dans
 le sous-répertoire <filename class="directory">ssi/</filename> du répertoire
 HTML de Nagios (p.ex. <filename
 class="directory">/usr/local/nagios/share/ssi</filename>).</para>
@@ -51,10 +51,10 @@ de page personnalisés sont inclus avant la balise de fermeture
 <filename>common-header.ssi</filename> et
 <filename>common-footer.ssi</filename>, respectivement. Si ces fichiers
 existent, ils seront inclus dans le résultat de l'exécution de toutes les
-CGI.</para>
+CGIs.</para>
 			</listitem>
 			<listitem>
-				<para>En-têtes/pieds de page de CGI spécifiques. Ces fichiers devraient être
+				<para>En-têtes/pieds de page de CGIs spécifiques. Ces fichiers devraient être
 nommés dans le format <filename>NOMCGI-header.ssi</filename> et
 <filename>NOMCGI-footer.ssi</filename>, où CGINAME est le nom physique du
 CGI sans l'extension .cgi. Par exemple, l'en-tête et le bas de page pour le

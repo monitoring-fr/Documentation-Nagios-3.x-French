@@ -131,15 +131,15 @@ pour faire fonctionner les CGIs avec l'utilisateur nagios plutôt que nobody.</p
 
    <listitem>
     <para><emphasis role="bold">Authentification requise pour les CGIs</emphasis>. Je
-vous recommande fortement de protéger l'accès aux CGI par une
+vous recommande fortement de protéger l'accès aux CGIs par une
 authentification. Ceci fait, lisez la documentation sur les droits par
 défaut dont disposent les contacts autorisés et n'accordez
 qu'exceptionnellement une autorisation à des contacts spécifiques. Les
 instructions pour la configuration des droits se trouvent <link
 linkend="configuringnagios-cgiauth">ici</link>. Si vous désactivez
-l'authentification préalable à l'accès aux CGI par la commande <link
+l'authentification préalable à l'accès aux CGIs par la commande <link
 linkend="configuringnagios-configcgi-use_authentication">use_authentication</link>
-dans le fichier de configuration des CGI, le <link
+dans le fichier de configuration des CGIs, le <link
 linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> refusera d'écrire la
 moindre commande dans le <link
 linkend="configuringnagios-configmain-command_file">fichier des commandes
@@ -166,7 +166,7 @@ binaires que vous exécutez.</para>
 
    <listitem>
     <para><emphasis role="bold">Cachez les informations sensibles à l'aide des macros
-<varname>$USERn$</varname></emphasis>. Les CGI parcourent le <link
+<varname>$USERn$</varname></emphasis>. Les CGIs parcourent le <link
 linkend="configuringnagios-configmain">fichier de configuration
 principal</link> et le(s) <link
 linkend="configuringnagios-configobject">fichier(s) de configuration des

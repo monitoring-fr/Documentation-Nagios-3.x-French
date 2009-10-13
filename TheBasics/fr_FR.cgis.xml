@@ -14,12 +14,12 @@
 
   <para>Vous trouverez ici une description de l'ensemble des CGIs de Nagios ainsi
 que les autorisations nécessaires pour accéder à chacun d'eux. Par défaut,
-les CGI ne fonctionnent que si vous vous êtes authentifiés auprès du serveur
+les CGIs ne fonctionnent que si vous vous êtes authentifiés auprès du serveur
 web et que vous êtes autorisés à accéder aux informations demandées. Pour
 plus d'informations sur la configuration des autorisations de votre serveur
-web et des CGI, lisez les sections <link
+web et des CGIs, lisez les sections <link
 linkend="configuringnagios-cgiauth">Installer l'interface web et
-Authentification et autorisations dans les CGI</link>.</para>
+Authentification et autorisations dans les CGIs</link>.</para>
  </section>
 
  <section>
@@ -524,7 +524,7 @@ information de configuration.</para>
 Nagios. Bien que ce CGI accepte plusieurs arguments, mieux vaut ne pas s'y
 essayer. La plupart changent selon les révisions de Nagios. Utilisez plutôt
 les <link linkend="thebasics-cgis-extinfo_cgi">informations complémentaires
-des CGI</link> comme point de départ pour envoyer des commandes. </para>
+des CGIs</link> comme point de départ pour envoyer des commandes. </para>
       <para>Autorisation requises :</para> <itemizedlist>
         <listitem>
          <para>Vous devez être <link
@@ -555,7 +555,7 @@ les hôtes et services dont vous êtes un contact.</para>
         <listitem>
          <para>Si vous avez choisi de ne pas <link
 linkend="configuringnagios-configcgi-use_authentication">utiliser
-l'authentification</link> dans les CGI, ce CGI ne permettra à personne
+l'authentification</link> dans les CGIs, ce CGI ne permettra à personne
 d'envoyer des commandes à Nagios, et ce dans votre propre intérêt. Je
 suggère dans ce cas de supprimer le CGI. </para>
         </listitem>

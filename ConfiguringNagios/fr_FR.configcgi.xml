@@ -7,7 +7,7 @@
 ]
 >
 <chapter id="configuringnagios-configcgi" xreflabel="CGI Configuration File Options">
-	<title>Options du fichier de configuration des CGI</title>
+	<title>Options du fichier de configuration des CGIs</title>
 		<note>
 		<para>When creating and/or editing configuration files, keep the following in
 mind:</para>
@@ -27,7 +27,7 @@ pas d'espace avant le nom</para>
 		</note>
 		<section>
 		<title>Exemple de configuration</title>
-		<tip><para>Un exemple de fichier de configuration pour les CGI
+		<tip><para>Un exemple de fichier de configuration pour les CGIs
 (<filename>/usr/local/nagios/etc/cgi.cfg</filename>) est créé pour vous
 quand vous suivez le <link linkend="gettingstarted-quickstart">guide rapide
 d'installation</link>.
@@ -35,13 +35,13 @@ d'installation</link>.
 	</section>
 	<section>
 		<title>Emplacement du fichier de configuration</title>
-		<para>Par défaut, Nagios s'attend à trouver le fichier de configuration des CGI
+		<para>Par défaut, Nagios s'attend à trouver le fichier de configuration des CGIs
 sous le nom <filename>cgi.cfg</filename> dans le répertoire de configuration
 avec le <link linkend="configuringnagios-configmain">fichier de
 configuration principal</link>. Si vous changez le nom ou l'emplacement du
 fichier, vous devez configurer Apache pour qu'il passe une variable
 d'environnement nommée <varname>NAGIOS_CGI_CONFIG</varname> (contenant
-l'emplacement correct du fichier) aux CGI de Nagios. Voir la configuration
+l'emplacement correct du fichier) aux CGIs de Nagios. Voir la configuration
 d'Apache pour plus de détails.</para>
 	</section>
 	<section>
@@ -78,7 +78,7 @@ fichier de configuration principal</title>
 			</informaltable>
 			<para>Cette option détermine le chemin d'accès à votre <link
 linkend="configuringnagios-configmain">fichier de configuration
-principal</link>. Les CGI doivent savoir où trouver ce fichier pour
+principal</link>. Les CGIs doivent savoir où trouver ce fichier pour
 récupérer les informations de configuration, l'état courant des hôtes et des
 services, etc.</para>
 		</section>
@@ -113,7 +113,7 @@ physique aux fichiers HTML</title>
 			</informaltable>
 			<para>C'est le chemin du répertoire physique de votre serveur où sont stockés les
 fichiers HTML de Nagios. Nagios suppose que la documentation et les images
-(utilisées par les CGI) sont stockées dans des sous-répertoires nommés
+(utilisées par les CGIs) sont stockées dans des sous-répertoires nommés
 respectivement <filename class="directory">docs/</filename> et <filename
 class="directory">images/</filename>.</para>
 		</section>
@@ -181,16 +181,16 @@ l'authentification</title>
 					</tbody>
 				</tgroup>
 			</informaltable>
-			<para>Cette option détermine si les CGI utiliseront l'authentification et les
+			<para>Cette option détermine si les CGIs utiliseront l'authentification et les
 autorisations pour déterminer les informations et les commandes auxquelles
 les utilisateurs auront accès. Je vous recommande vivement d'utiliser
-l'authentification dans les CGI. Si vous choisissez de ne pas le faire,
+l'authentification dans les CGIs. Si vous choisissez de ne pas le faire,
 assurez-vous de supprimer le <link linkend="thebasics-cgis-cmd_cgi">CGI de
 commande</link> pour empêcher les utilisateurs non autorisés d'envoyer des
 commandes à Nagios. Ce CGI ne devrait pas envoyer de commandes à Nagios si
 l'authentification est désactivée, mais deux précautions valent mieux
 qu'une. Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations dans les CGI <link
+l'authentification et les autorisations dans les CGIs <link
 linkend="configuringnagios-cgiauth">ici</link>.</para>
 			<itemizedlist>
 				<listitem>
@@ -231,15 +231,15 @@ d'utilisateur par défaut</title>
 				</tgroup>
 			</informaltable>
 			<para>Cette variable définit un nom d'utilisateur par défaut pour accéder aux
-CGI. Ainsi les utilisateurs d'un domaine sécurisé (i.e., derrière un
-firewall) peuvent accéder aux CGI sans avoir à s'authentifier auprès du
+CGIs. Ainsi les utilisateurs d'un domaine sécurisé (i.e., derrière un
+firewall) peuvent accéder aux CGIs sans avoir à s'authentifier auprès du
 serveur web. Vous pouvez choisir cette fonctionnalité pour éviter le recours
 à l'authentification de base si vous n'utilisez pas un serveur web sécurisé,
 car l'authentification de base transmet les mots de passe en clair sur
 Internet.</para>
 			<important><para>Ne définissez pas un utilisateur par défaut à moins que vous n'utilisiez un
 serveur web sécurisé et que vous soyez sûr que tous ceux qui ont accès aux
-CGI ont été authentifiés d'une manière ou d'une autre ! Si vous définissez
+CGIs ont été authentifiés d'une manière ou d'une autre ! Si vous définissez
 cette variable, ceux qui ne se sont pas authentifiés auprès du serveur web
 hériteront de tous les droits que vous donnez à cet utilisateur !</para></important>
 		</section>
@@ -275,13 +275,13 @@ aux informations sur le système et le processus</title>
 			</informaltable>
 			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
 virgules, qui peuvent voir les informations sur le système et le processus
-dans les CGI d'informations complémentaires. Les utilisateurs de cette liste
+dans les CGIs d'informations complémentaires. Les utilisateurs de cette liste
 ne sont pas automatiquement autorisés à passer des commandes
 système/processus. Si vous voulez que des utilisateurs puissent aussi passer
 ces commandes, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_system_commands">authorized_for_system_commands</link>.
 Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des CGI <link
+l'authentification et les autorisations des CGIs <link
 linkend="configuringnagios-cgiauth">ici</link>.</para>
 		</section>
 		<section>
@@ -403,7 +403,7 @@ services. Si vous voulez que des utilisateurs puissent aussi envoyer des
 commandes, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_host_commands">authorized_for_all_host_commands</link>.
 Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des CGI <link
+l'authentification et les autorisations des CGIs <link
 linkend="configuringnagios-cgiauth">ici</link>.</para>
 		</section>
 		<section>
@@ -446,7 +446,7 @@ hôtes ou services. Si vous voulez que des utilisateurs puissent voir ces
 informations aussi, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized_for_all_hosts</link>.
 Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des CGI <link
+l'authentification et les autorisations des CGIs <link
 linkend="configuringnagios-cgiauth">ici</link>.</para>
 		</section>
 		<section>
@@ -487,7 +487,7 @@ tous les services. Si vous voulez que des utilisateurs puissent aussi
 envoyer des commandes, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_service_commands">authorized_for_all_service_commands</link>.
 Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des CGI <link
+l'authentification et les autorisations des CGIs <link
 linkend="configuringnagios-cgiauth">ici</link>.</para>
 		</section>
 		<section>
@@ -530,7 +530,7 @@ utilisateurs puissent aussi voir ces informations, il faut les ajouter à la
 variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">authorized_for_all_services</link>.
 Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des CGI <link
+l'authentification et les autorisations des CGIs <link
 linkend="configuringnagios-cgiauth">ici</link>.</para>
 		</section>
 		<section>
@@ -846,7 +846,7 @@ VRML avec le <link linkend="thebasics-cgis-statuswrl_cgi">CGI concerné
 		<section>
 			<title>
 				<anchor id="configuringnagios-configcgi-refresh_rate"/>Fréquence de
-rafraîchissement des CGI</title>
+rafraîchissement des CGIs</title>
 			
 			<informaltable frame="all">
 				<tgroup cols="2">
@@ -1094,7 +1094,7 @@ d'intégration Splunk</title>
 			</informaltable>
 			<para>Cette option détermine si la fonctionnalité d'intégration avec Splunk est
 activée dans l'interface web. Si activée, il vous sera présenté un lien
-<quote>Splunk It</quote> à divers endroits dans les CGI (fichier journal,
+<quote>Splunk It</quote> à divers endroits dans les CGIs (fichier journal,
 historique d'alerte, détail d'hôte/service, etc). Utile si vous essayez de
 rechercher pourquoi un problème particulier est survenu. Pour plus
 d'informations sur Splunk, visitez <ulink
@@ -1129,7 +1129,7 @@ url="http://www.splunk.com/">http://www.splunk.com/</ulink>.</para>
 				</tgroup>
 			</informaltable>
 			<para>Cette option est utilisée pour définir l'URL de base de votre interface
-Splunk. Cet URL est utilisé par les CGI pour créer les liens si l'option
+Splunk. Cet URL est utilisé par les CGIs pour créer les liens si l'option
 <link
 linkend="configuringnagios-configcgi-enable_splunk_integration">enable_splunk_integration</link>
 est activée.</para>

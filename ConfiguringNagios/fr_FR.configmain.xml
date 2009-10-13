@@ -192,10 +192,10 @@ xreflabel="Object Cache File"/>Fichier de cache des objets</title>
    <para>Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui
 contiendra une copie en <link linkend="configuringnagios-configobject">cache
 des définitions des objets</link>. Ce fichier cache est (re)créé à chaque
-(re)démarrage de Nagios et est utilisé par les CGI. Il permet d'accélérer le
-cache des fichiers de configuration pour les CGI, et vous permet de modifier
+(re)démarrage de Nagios et est utilisé par les CGIs. Il permet d'accélérer le
+cache des fichiers de configuration pour les CGIs, et vous permet de modifier
 les fichiers de configuration des objets, pendant que Nagios tourne, sans
-que l'affichage des CGI soit modifié.</para>
+que l'affichage des CGIs soit modifié.</para>
   </section>
 
   <section>
@@ -262,7 +262,7 @@ type $USERn$.
    <code>$USERn$</code> <xref linkend="thebasics-macros" />. 
    <code>$USERn$</code> Les macros $USERn$ permettent de stocker des noms d'utilisateurs, des mots
 de passe, et les éléments couramment utilisés dans les commandes (comme les
-chemins d'accès). Les CGI ne lisent pas les fichiers de ressources, si bien
+chemins d'accès). Les CGIs ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
 protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de
 ressources en ajoutant des directives resource_file
@@ -360,7 +360,7 @@ id="configuringnagios-configmain-status_file" xreflabel="Status File"
 les services supervisés. L'état de tous les hôtes associés avec ces
 services, est également enregistré dans ce fichier. Ce fichier est utilisé
 par le CGI d'état pour afficher l'état courant de la supervision dans
-l'interface web. Les CGI doivent avoir le droit d'accéder en lecture à ce
+l'interface web. Les CGIs doivent avoir le droit d'accéder en lecture à ce
 fichier, pour fonctionner correctement. Ce fichier est supprimé à l'arrêt de
 Nagios, et recréé au démarrage.</para>
   </section>
