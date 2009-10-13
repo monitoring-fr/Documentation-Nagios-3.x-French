@@ -259,8 +259,7 @@ File"/>Fichier de ressources</title>
 
    <para>Le fichier de ressources optionnel qui contient des définitions de macros du
 type $USERn$.
-   <code>$USERn$</code> <xref linkend="thebasics-macros" />. 
-   <code>$USERn$</code> Les macros $USERn$ permettent de stocker des noms d'utilisateurs, des mots
+   <code>$USERn$</code> Les <link linkend="thebasics-macros">macros</link> $USERn$ permettent de stocker des noms d'utilisateurs, des mots
 de passe, et les éléments couramment utilisés dans les commandes (comme les
 chemins d'accès). Les CGIs ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
@@ -324,7 +323,7 @@ Path"/>Répertoire temporaire</title>
     </tgroup>
    </informaltable>
 
-   <para>C'est un répertoire que Nagios peut utiliser comme espace "scratch" pour
+   <para>C'est un répertoire que Nagios peut utiliser comme espace <quote>scratch</quote> pour
 créer des fichiers temporaires utilisés durant le processus de
 supervision. Vous pouvez exécuter <command>tmpwatch</command>, ou un outil
 similaire sur ce réperoire pour effacer les fichiers plus vieux de 24
@@ -930,8 +929,9 @@ Archive Path" />Chemin d'accès aux archives du journal</title>
 
    <para>C'est le répertoire où Nagios doit enregistrer les fichiers journaux ayant
 fait l'objet d'une rotation. Cette option est ignorée si vous n'avez pas
-activé la <xref linkend="configuringnagios-configmain-log_rotation_method"
-/>.</para>
+activé la <link
+linkend="configuringnagios-configmain-log_rotation_method">rotation du
+journal</link>.</para>
   </section>
 
   <section>
@@ -1006,9 +1006,9 @@ des commandes externes</title>
     </tgroup>
    </informaltable>
 
-   <para>Si vous spécifiez un nombre suivi d'un "s" (par exemple 30s), c'est le
+   <para>Si vous spécifiez un nombre suivi d'un <quote>s</quote> (par exemple 30s), c'est le
 nombre de secondes qui séparera deux contrôles de commandes externes. Si
-vous ne mettez pas de "s", c''est le nombre d'<quote>unités de temps</quote>
+vous ne mettez pas de <quote>s</quote>, c''est le nombre d'<quote>unités de temps</quote>
 à laisser entre deux contrôles de commandes externes. Si vous n'avez pas
 modifié la valeur de la<xref
 linkend="configuringnagios-configmain-interval_length" /> qui est par
@@ -1745,7 +1745,8 @@ commandes externes</title>
 
    <para>Cette variable détermine si Nagios journalisera les <link
 linkend="advancedtopics-extcommands">commandes externes</link> reçues via le
-fichier des <xref linkend="configuringnagios-configmain-command_file" />.</para>
+fichier des <link linkend="configuringnagios-configmain-command_file">des
+commandes externes</link>.</para>
 
    <note>
     <para>Note : cette option ne détermine pas si les <link
@@ -3385,7 +3386,8 @@ remontée de contrôle d'hôte</title>
    </informaltable>
 
    <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
-une <xref linkend="configuringnagios-configmain-ochp_command" />. Si une
+une <link
+linkend="configuringnagios-configmain-ochp_command">ochp_command</link>. Si une
 commande dépasse cette limite, elle sera tuée et une alerte sera
 journalisée.</para>
   </section>
@@ -4932,8 +4934,8 @@ File"/>Fichier de débogage</title>
 
    <para>Cette option détermine si oui ou pas Nagios peut écrire des informations de
 débogage. La précision des informations que Nagios écrit dépend des options
-<xref linkend="configuringnagios-configmain-debug_level" /> et <xref
-linkend="configuringnagios-configmain-debug_verbosity" />. Vous pouvez
+<link linkend="configuringnagios-configmain-debug_level">debug_level</link> et <link
+linkend="configuringnagios-configmain-debug_verbosity">debug_verbosity</link>. Vous pouvez
 automatique gérer la rotation du fichier de débogage en fonction de sa
 taille en utilisant l'option <xref
 linkend="configuringnagios-configmain-max_debug_file_size" /></para>
@@ -5031,7 +5033,9 @@ Verbosity"/>La verbosité du mode de débogage</title>
    </informaltable>
 
    <para>Cette option détermine la quantité d'information de débogage que Nagios doit
-écrire dans le <xref linkend="configuringnagios-configmain-debug_file" />.</para>
+écrire dans le <link
+linkend="configuringnagios-configmain-debug_file">fichier de
+débogage</link>.</para>
 
    <itemizedlist>
     <listitem>

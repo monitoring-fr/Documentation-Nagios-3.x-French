@@ -44,8 +44,7 @@ restreindre:</para>
  <section>
   <title>Les priorités dans les périodes de temps</title>
 
-  <para>Les périodes de temps<link
-linkend="configuringnagios-objectdefinitions-timeperiod">definitions</link>
+  <para>Les périodes de temps<link linkend="configuringnagios-objectdefinitions-timeperiod">definitions</link>
 peuvent contenir différent types de directives, incluant les jours de la
 semaine, certains jours dans le mois, et des dates précises du
 calendrier. Les différents types de directives ont des priorités différentes
@@ -161,14 +160,13 @@ les hôtes et les services seulement pendant la plage horaire que vous leur
 aurez specifié.</para>
 
   <para>Des exemples de création de définition de plages horaires sur mesure sont
-disponibles <xref linkend="advancedtopics-oncallrotation" />ici.</para>
+disponibles <link linkend="advancedtopics-oncallrotation">ici</link>.</para>
  </section>
 
  <section>
   <title>Comment fonctionnent les périodes de temps avec les escalades de notification</title>
 
-  <para>Les <xref linkend="advancedtopics-escalations" /> escalades de notification
-des hôtes et services ont une directive optionnelle nommée
+  <para>Les <link linkend="advancedtopics-escalations">escalades de notification</link> des hôtes et services ont une directive optionnelle nommée
 <varname>escalation_period</varname> qui vous permet de spécifier une plage
 horaire où l'escalade sera valide et pourra être utilisée. Si vous
 n'utilisez pas la directive <varname>escalation_period</varname> dans la
@@ -181,8 +179,8 @@ l'escalade seulement pendant cette plage horaire.</para>
  <section>
   <title>Comment fonctionnent les périodes de temps avec les dépendances</title>
 
-  <para>Les <xref linkend="advancedtopics-dependencies" /> dépendances d'hôtes et de
-services ont une directive optionnelle nommée
+  <para>Les <link linkend="advancedtopics-dependencies">dépendances d'hôtes et de
+services</link> ont une directive optionnelle nommée
 <varname>dependency_period</varname> qui vous permet de spécifier une plage
 horaire où la dépendance sera valide et pourra être utilisée. Si vous
 n'utilisez pas la directive <varname>dependency_period</varname> dans la

@@ -12,7 +12,7 @@
 
  <abstract>
   <para>Ce document décrit la façon dont vous pouvez superviser les attributs et
-services "privés" de machines Windows comme:</para>
+services <quote>privés</quote> de machines Windows comme:</para>
 
   <para><itemizedlist>
     <listitem>
@@ -271,7 +271,7 @@ l'intérieur.</para>
    </step>
 
    <step>
-    <para>Suucès! Le serveur Windows peut désormais être ajouté à la configuration de
+    <para>Succès! Le serveur Windows peut désormais être ajouté à la configuration de
 Nagios...</para>
    </step>
   </procedure>
@@ -429,7 +429,7 @@ fichier <filename>commands.cfg</filename> pour édition.</para>
 
   <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/commands.cfg</userinput></screen>
 
-  <para>Modifiez la définition de la commande &plugin-nt; pour inclure l'argument "<option>-s</option> &lt;PASSWORD&gt;" (où PASSWORD es tle mot de passe précisé sur la machine
+  <para>Modifiez la définition de la commande &plugin-nt; pour inclure l'argument <quote><option>-s</option> &lt;PASSWORD&gt;</quote> (où PASSWORD est le mot de passe précisé sur la machine
 Windows) comme suit:</para>
 
   <programlisting>

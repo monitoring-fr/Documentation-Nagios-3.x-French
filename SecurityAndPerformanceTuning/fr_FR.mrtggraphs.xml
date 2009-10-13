@@ -8,16 +8,15 @@
 >
 <chapter id="securityandperformancetuning-mrtggraphs"
      xreflabel="Graphing Performance Info With MRTG">
- <title>Grapher Les Informations De Performance Avec MRTG</title>
+ <title>Grapher les informations de performance avec MRTG</title>
 
  <section>
   <title>Introduction</title>
 
-  <para>L'utilitaire <xref linkend="securityandperformancetuning-nagiostats"
-/>nagiostats vous permet de grapher divers statisques de performance dans le
+  <para>L'utilitaire <link
+linkend="securityandperformancetuning-nagiostats">nagiostats</link> vous permet de grapher divers statisques de performance dans le
 temps en utilisant <ulink
-url="http://oss.oetiker.ch/mrtg/">MRTG</ulink>. Ceci est important car il
-peut vous aider à:</para>
+url="http://oss.oetiker.ch/mrtg/">MRTG</ulink>. Ceci est important car il peut vous aider à:</para>
 
   <itemizedlist>
    <listitem>
@@ -36,7 +35,7 @@ de Nagios</para>
  </section>
 
  <section>
-  <title>Exemple de Configuration MRTG</title>
+  <title>Exemple de configuration MRTG</title>
 
   <para>Un fichier d'exemple de configuration MRTG pour grapher quelques
 statistiques Nagios de performance peut être trouvé dans le fichier
@@ -51,7 +50,7 @@ avoir des nouveaux graphiques, la prochaine fois que MRTG fonctionnera.</para>
  </section>
 
  <section>
-  <title>Exemples De Graphs:</title>
+  <title>Exemples de graphiques</title>
 
   <para>Je vais décrire ce que quelques-uns des graphiques MRTG signifient et à quoi
 ils peuvent être utilisés...</para>
@@ -64,16 +63,17 @@ ils peuvent être utilisés...</para>
 actifs d'hôtes (réguliers et sur demande) ont eu lieu au cours du
 temps. Utiles pour la compréhension:</para> <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-hostchecks" /> Des contrôles d'hôte</para>
+         <para><link
+linkend="thebasics-hostchecks">Des contrôles d'hôte</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="advancedtopics-dependencychecks" />Des contrôles de
-prédiction de dépendance d'hôte</para>
+         <para><link linkend="advancedtopics-dependencychecks">Des contrôles de
+prédiction de dépendance d'hôte</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="advancedtopics-cachedchecks" />Des contrôles mis en cache</para>
+         <para><link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -87,16 +87,16 @@ fileref="images/mrtg-activehostchecks.png" format="PNG"/> </imageobject>
 contrôles des services actifs (réguliers et sur demande) ont eu lieu au
 cours du temps. Utiles pour la compréhension:</para> <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-servicechecks" />Des contrôles de service</para>
+         <para><link linkend="thebasics-servicechecks">Des contrôles de service</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="advancedtopics-dependencychecks" />Des contrôles de
-prédiction de dépendance de service</para>
+         <para><link linkend="advancedtopics-dependencychecks">Des contrôles de
+prédiction de dépendance de service</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="advancedtopics-cachedchecks" />Des contrôles mis en cache</para>
+         <para><link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -110,12 +110,12 @@ fileref="images/mrtg-activeservicechecks.png" format="PNG"/> </imageobject>
 comment les contrôles d'hôtes et de services mis en cache ont eu lieu dans
 le temps. Utiles pour la compréhension:</para> <itemizedlist>
         <listitem>
-         <para><xref linkend="advancedtopics-cachedchecks" />Des contrôles mis en cache</para>
+         <para><link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="advancedtopics-dependencychecks" />Des contrôles de
-prédiction de dépendance d'hôte et de service</para>
+         <para><link linkend="advancedtopics-dependencychecks">Des contrôles de
+prédiction de dépendance d'hôte et de service</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -129,7 +129,7 @@ fileref="images/mrtg-cachedchecks.png" format="PNG"/> </imageobject>
 contrôles des services passifs ont eu lieu au cours du temps. Utiles pour la
 compréhension:</para> <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-passivechecks" />Des contrôles passifs</para>
+         <para><link linkend="thebasics-passivechecks">Des contrôles passifs</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -144,7 +144,7 @@ nombre total de) d'hôte et de services ont été contrôlés activement dans le
 temps. Utiles pour la compréhension:</para>
       <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-activechecks" />Des contrôles actifs</para>
+         <para><link linkend="thebasics-activechecks">Des contrôles actifs</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -159,7 +159,7 @@ nombre total de) d'hôte et de services ont été contrôlés passivement dans l
 temps. Utiles pour la compréhension:</para>
       <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-passivechecks" />Des contrôles passifs</para>
+         <para><link linkend="thebasics-passivechecks">Des contrôles passifs</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -173,12 +173,12 @@ fileref="images/mrtg-passivelychecked.png" format="PNG"/> </imageobject>
 montre la latence moyenne et le temps moyen de l'exécution d'un contrôle de
 service dans le temps. Utiles pour la compréhension:</para> <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-servicechecks" />Des contrôles de service</para>
+         <para><link linkend="thebasics-servicechecks">Des contrôles de service</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="securityandperformancetuning-tuning" />De l'optimisation des
-performances</para>
+         <para><link linkend="securityandperformancetuning-tuning">De l'optimisation des
+performances</link></para>
         </listitem>
        </itemizedlist> <para>Une forte latence persistente peut être l'indication qu'une ou plusieurs des
 variables suivantes a/ont besoin d'être modifiée(s):</para> <itemizedlist>
@@ -210,7 +210,7 @@ services au cours du temps, ventilés par les services qui ont été contrôlés
 en dernier activement ou passivement. Utiles pour la compréhension:</para>
       <itemizedlist>
         <listitem>
-         <para><xref linkend="advancedtopics-flapping" />Détection d'oscillation</para>
+         <para><link linkend="advancedtopics-flapping">Détection d'oscillation</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -224,12 +224,12 @@ fileref="images/mrtg-servicestatechange.png" format="PNG"/> </imageobject>
 montre la latence moyenne et le temps moyen de l'exécution d'un contrôle
 d'hôte dans le temps. Utiles pour la compréhension:</para> <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-hostchecks" /> Des contrôles d'hôte</para>
+         <para><link linkend="thebasics-hostchecks"> Des contrôles d'hôte</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="securityandperformancetuning-tuning" />De l'optimisation des
-performances</para>
+         <para><link linkend="securityandperformancetuning-tuning">De l'optimisation des
+performances</link></para>
         </listitem>
        </itemizedlist> <para>Une forte latence persistente peut être l'indication qu'une ou plusieurs des
 variables suivantes a/ont besoin d'être modifiée(s):</para> <itemizedlist>
@@ -261,7 +261,7 @@ hôtes au cours du temps, ventilés par les hôtes qui ont été contrôlés en
 dernier activement ou passivement. Utiles pour la compréhension:</para>
       <itemizedlist>
         <listitem>
-         <para><xref linkend="advancedtopics-flapping" />Flap detection</para>
+         <para><link linkend="advancedtopics-flapping">Flap detection</link></para>
         </listitem>
        </itemizedlist></entry>
 
@@ -278,16 +278,16 @@ architecture de supervision distribuée), ce graphique semble rester vide. La
 supervision des commandes externes peut être utile pour la cromprehension
 des impacts de:</para> <itemizedlist>
         <listitem>
-         <para><xref linkend="thebasics-passivechecks" />Des contrôles passifs</para>
+         <para><link linkend="thebasics-passivechecks">Des contrôles passifs</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="advancedtopics-distributed" />La supervision distribuée</para>
+         <para><link linkend="advancedtopics-distributed">La supervision distribuée</link></para>
         </listitem>
 
         <listitem>
-         <para><xref linkend="advancedtopics-redundancy" />Redondance/Basculement en cas de
-panne de la supervision</para>
+         <para><link linkend="advancedtopics-redundancy">Redondance/Basculement en cas de
+panne de la supervision</link></para>
         </listitem>
        </itemizedlist></entry>
 

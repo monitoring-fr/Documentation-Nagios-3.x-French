@@ -189,7 +189,7 @@ peut vous fournir ce plugin. Cette <option>--help</option> syntaxe fonctionne av
   <para>Une définition plus avancée pour superviser le service &protocol-http; est
 donnée ci-dessous. Cette définition de service va vérifier que l'adresse URI
 /download/index.php contient la chaîne de caractères
-"latest-version.tar.gz". Une erreur sera produite si la chaîne n'est pas
+<quote>latest-version.tar.gz</quote>. Une erreur sera produite si la chaîne n'est pas
 trouvée, si l'URI n'est pas valable, ou si le serveur web met plus de 5
 secondes à répondre.</para>
 
@@ -328,7 +328,7 @@ secondes.</para>
   <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
 vérifier le serveur &protocol-smtp; et générer une alerte si le serveur ne
 répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
-la chaîne de caractères "mygreatmailserver.com".</para>
+la chaîne de caractères <quote>mygreatmailserver.com</quote>.</para>
 
   <programlisting>
 define service{
@@ -374,7 +374,7 @@ secondes.</para>
   <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
 vérifier le serveur &protocol-pop3; et générer une alerte si le serveur ne
 répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
-la chaîne de caractères "mygreatmailserver.com".</para>
+la chaîne de caractères <quote>mygreatmailserver.com</quote>.</para>
 
   <programlisting>
 define service{
@@ -420,7 +420,7 @@ secondes.</para>
   <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
 vérifier le service &protocol-imap4; et générer une alerte si le serveur ne
 répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
-la chaîne de caractères "mygreatmailserver.com".</para>
+la chaîne de caractères <quote>mygreatmailserver.com</quote>.</para>
 
   <programlisting>
 define service{
