@@ -12,7 +12,7 @@
 <xsl:param name="make.year.ranges" select="1"/>
 <xsl:param name="doc.layout">coverpage toc frontmatter mainmatter index </xsl:param>
 <xsl:param name="draft.mode">yes</xsl:param>
-<xsl:param name="draft.watermark">1</xsl:param>
+<xsl:param name="draft.watermark">0</xsl:param>
 <xsl:param name="imagedata.default.scale">pagebound</xsl:param>
 
 <!-- How to handle the tag linking. Avoids hyphenation in the link,

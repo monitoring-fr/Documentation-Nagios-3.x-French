@@ -245,10 +245,10 @@ pour un grand nombre d'hôtes. </para>
  </section>
 
  <section>
-  <title>Custom Object Variables</title>
+  <title>Variables personnalisées d'objet</title>
 
-  <para>Toutes <link linkend="configuringnagios-customobjectvars">variables objet
-pesonnalisées</link> que vous définisez dans vos definitions de gabarit
+  <para>Toutes les <link linkend="configuringnagios-customobjectvars">variables pesonnalisées 
+d'objet</link> que vous définisez dans vos définitions de gabarit
 d'hôtes, de services ou de contacts sea hérité comme n'importe quelle autre
 variable standard. Regardez l'exemple suivant : </para>
 
@@ -286,8 +286,7 @@ l'héritage de la valeu de la chaine</title>
 
   <para>Dans certain cas, vous ne voulez pas que votre défintion d'hôte, service ou
 contact hérite de la valeur d'une variable du gabarit qu'il référence. Dans
-ce cas, vous pouvez spécifier<emphasis
-role="bold"><quote>null</quote></emphasis> (sans les quotes) comme valeur
+ce cas, vous pouvez spécifier<quote><emphasis role="bold">null</emphasis></quote> (sans les quotes) comme valeur
 pour cette variable. Regardez l'exemple suivant : </para>
 
   <programlisting>        define host{

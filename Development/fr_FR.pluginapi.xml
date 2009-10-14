@@ -7,7 +7,7 @@
 ]
 >
 <chapter id="development-pluginapi" xreflabel="Nagios Plugin API">
-	<title>API Pour Les Plugins Nagios</title>
+	<title>API pour les plugins Nagios</title>
 	<section>
 		<title>Autres Ressources</title>
 		<para>Si vous cherchez à écrire vos propres plugins pour Nagios, soyez sûrs
@@ -120,7 +120,7 @@ UNREACHABLE est traité <link
 linkend="thebasics-networkreachability">ici</link>.</para></note>
 	</section>
 	<section>
-		<title>Spécifications Pour La Sortie Du Plugin</title>
+		<title>Spécifications pour la sortie du plugin</title>
 		<para>Au minimum, les plugins doivent retourner au moins du texte en sortie. A
 partir de Nagios 3, les plugins peuvent optionnellement retourner plusieurs
 lignes de texte en sortie. Les plugins peuvent aussi retourner
@@ -135,7 +135,7 @@ séparées du texte en utilisant le symbole 'pipe' ou 'tube' ( | ). Les lignes
 supplémentaires de texte de sorties (ici en bleu) sont aussi optionnelles.</para>
 	</section>
 	<section>
-		<title>Exemples De Sorties De Plugin</title>
+		<title>Exemples de sorties de plugin</title>
 		<para>Voyons quelques exemples de sorties de plugin possibles…</para>
 		<para><emphasis role="bold">Cas 1: Une ligne en sortie (texte
 seulement)</emphasis></para><para>Imaginons que notre plugin ne retourne qu'une seule ligne de texte en
@@ -237,7 +237,7 @@ ligne que les suivantes (comme montré si dessous)</para>
 		</itemizedlist>
 	</section>
 	<section>
-		<title>Restriction De Longueur De Message De Sortie De Plugin</title>
+		<title>Restriction de longueur de message de sortie de plugin</title>
 		<para>Nagios ne lira que les premiers 4KB des données qui seront retournées par le
 plugin. Ceci dans le but d'empêcher les plugins à déverser des Mégas ou des
 Gigas de données à Nagios. Cette limite de 4KB est assez facile à modifier
