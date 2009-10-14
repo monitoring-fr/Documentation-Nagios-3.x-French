@@ -124,7 +124,7 @@ paramètres obligatoires ont été omis)… </para>
 		        passive_checks_enabled  1               ; passive checks are enabled (this is how results are reported)
 		        check_freshness         1
 		        freshness_threshold     93600           ; 26 hour threshold, since backups may not always finish at the same time
-		        check_command           no-backup-report        ; this command is run only if the service results are <quote>stale</quote>
+		        check_command           no-backup-report        ; this command is run only if the service results are "stale"
 		        …other options…
 		        }</programlisting>
 		<para>Notez que les contrôles actifs sont désactivés pour ce service. En effet les
