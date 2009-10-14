@@ -525,19 +525,19 @@ plus complexe, comme celà est présentées en dessous. </para>
 	        name                 	generic-host
 	        active_checks_enabled 	1
 	        check_interval          10 
-          …
+          ...
         	register                0
         	}</programlisting> <para># Development web server template</para><programlisting>define host{       
       name                    development-server       
       check_interval          15  
       notification_options    d,u,r
-        	…
+        	...
           register                        0    
         }</programlisting> <para># Development web server</para>
       <programlisting>define host{
 	        use                   generic-host,development-server
 	        host_name            devweb1
-	       …     
+	       ...     
       }</programlisting></entry>
 
       <entry><para> <inlinemediaobject> <imageobject> <imagedata
@@ -589,7 +589,7 @@ trouver quelle paire de variable/valeur aura la priorité. </para>
       <programlisting>define host{
         use        1, 4, 8
         host_name  devweb1
-		…	
+		...	
 		        }</programlisting></para><para>Si certains des gabarits héritent eux-même de variables/valeurs de un ou
 plusieurs autre gabarits, les règles de priorité sont montrées à droite. </para><para>Tests, essais et erreurs vous aideront à mieux comprendre exactement comment
 les choses fonctionnent dans une situation d'héritage complexe comme
