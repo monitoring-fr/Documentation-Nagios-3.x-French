@@ -123,7 +123,7 @@ d'informations étendues de services</link>
     <title>Description</title>
 
     <para>Une définition d'hôte est utilisé pour définir un serveur physique, une
-station de travail, un composant, etc... qui est installé sur votre réseau.</para>
+station de travail, un composant, etc… qui est installé sur votre réseau.</para>
    </section>
 
    <section>
@@ -459,14 +459,14 @@ l'interface le feront.
 		<para>Cette variable est utilisée pour définir une liste séparée par des virgules
 de noms courts représentant les hôtes <quote>parents</quote> de cet hôte en
 particulier. Les hôtes parents sont typiquement des routeurs, des parefeus,
-etc... qui se trouvent sur la route entre le serveur de supervision et les
-hôtes à superviser. Un routeur, switch, etc... qui se trouve le plus près de
+etc… qui se trouvent sur la route entre le serveur de supervision et les
+hôtes à superviser. Un routeur, switch, etc… qui se trouve le plus près de
 l'hôte à superviser est considéré comme le <quote>parent</quote> de cet
 hôte. Lisez le document <quote>Déterminer l'état et l'accessibilité du
 réseau des hôtes</quote> situé <link
 linkend="thebasics-networkreachability">ici</link> pour plus
 d'informations. Si l'hôte appartient au même segment réseau que le serveur
-de supervision (sans routeur intermédiaire, etc...), alors l'hôte est
+de supervision (sans routeur intermédiaire, etc…), alors l'hôte est
 considéré comme membre du réseau local et il n'aura pas d'hôte
 parent. Laissez cette valeur vide si l'hôte n'a pas d'hôte parent (par
 exemple si il est sur le même segment réseau que le serveur Nagios). L'ordre
@@ -916,7 +916,7 @@ relatifs, le chemin de base sera le même que celui utilisé pour accéder aux
 CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
 vous souhaitez mettre à disposition d'autres équipes de support les
 informations détaillées d'un hôte, les moyens de contacts à utiliser en cas
-d'urgence, etc...</para>
+d'urgence, etc…</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1034,7 +1034,7 @@ précisé.
 		<para>Cette variable est utilisée pour définir les coordonnées de l'hôte à
 utiliser dans le CGI <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
-peuvent être des nombres positifs ou négatifs. Le daprt du dessin est
+peuvent être des nombres positifs ou négatifs. Le départ du dessin est
 (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5
 unités de chaque côté (les textes rennent un plus d'espace). Les coordonnées
 que vous utilisez sont le centre du cube de l'hôte.</para>
@@ -1220,7 +1220,7 @@ utiliser des chemins relatifs, le chemin de base sera le même que celui
 utilisé pour accéder aux CGIs (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
-d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc...
+d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…
 		</para>
 		</listitem>
 	</varlistentry>
@@ -1256,7 +1256,7 @@ service</title>
 <quote>service</quote> est utilisé de façon générale. Cela peut désigner un
 service qui fonctionne sur l'hôte (POP, &protocol-smtp;, &protocol-http;,
 etc.) ou tout autre type de métrique associé à l'hôte (réponse au ping,
-nombre d'utilisateurs connectés, espace disque dur libre, etc...). Les
+nombre d'utilisateurs connectés, espace disque dur libre, etc…). Les
 différents arguments d'une définition de service sont précisés ci-dessous.</para>
    </section>
 
@@ -2074,7 +2074,7 @@ relatifs, le chemin de base sera le même que celui utilisé pour accéder aux
 CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
 vous souhaitez mettre à disposition d'autres équipes de support les
 informations détaillées d'un service, les moyens de contacts à utiliser en
-cas d'urgence, etc...
+cas d'urgence, etc…
 		</para>
 		</listitem>
 	</varlistentry>
@@ -2257,7 +2257,7 @@ service</link>. Le format de la variable <varname>member</varname> est le
 suivant (notez qu ele nom d el'hôte doit précéder le nom/description du
 service) :
 		<programlisting>
-members=&lt;host1&gt;,&lt;service1&gt;,&lt;host2&gt;,&lt;service2&gt;,...,&lt;host<emphasis>n</emphasis>&gt;,&lt;service<emphasis>n</emphasis>&gt;
+members=&lt;host1&gt;,&lt;service1&gt;,&lt;host2&gt;,&lt;service2&gt;,…,&lt;host<emphasis>n</emphasis>&gt;,&lt;service<emphasis>n</emphasis>&gt;
 		</programlisting>
 		</para>
 		</listitem>
@@ -2301,7 +2301,7 @@ utiliser des chemins relatifs, le chemin de base sera le même que celui
 utilisé pour accéder aux CGIs (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
-d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc...
+d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…
 		</para>
 		</listitem>
 	</varlistentry>
@@ -2700,7 +2700,7 @@ $CONTACTPAGER$ contiendra cette valeur.
 		<para>Les variables <varname>Address</varname> sont utilisées pour définir des
 <quote>adresses</quote> supplémentaires pour le contact. Ces adresses
 peuvent être n'importe quoi - numéro de téléphone mobile, adresse de
-messagerie instantanée, etc... En fonction de la façon dont vous avez
+messagerie instantanée, etc… En fonction de la façon dont vous avez
 configuré les commandes de notifications, cela peut être utilisé pour
 envoyer une alerte au contact. Il est possible de définir jusqu'à six
 adresses en utilisant ces variables (<emphasis>address1</emphasis> jusqu'à
@@ -2950,7 +2950,7 @@ optionnelles.</para>
 
        <row>
         <entry><para>exclusion</para></entry>
-        <entry><para>[<emphasis>timeperiod1,timeperiod2,...,timeperiodn</emphasis>]</para></entry>
+        <entry><para>[<emphasis>timeperiod1,timeperiod2,…,timeperiodn</emphasis>]</para></entry>
        </row>
 
        <row>
@@ -3220,7 +3220,7 @@ $ARGn$</link> dans la variable <emphasis>command_line</emphasis> de la
 définition de commande et ensuite séparer chaque argument du nom de la
 commande (et pour séparer chaque argument) avec le symbole du point
 d'exclamation (!) dans les variables de définitions (commande de contrôle
-d'hôte, commande de gestionnaire d'événements, etc...) qui référencent cette
+d'hôte, commande de gestionnaire d'événements, etc…) qui référencent cette
 commande. Plus d'informations su rla façon dont sont traités les arguments
 de commande au moment de leur exécution peut être trouvé dans la
 documentation sur les <link linkend="thebasics-macros">macros</link>.
@@ -3395,7 +3395,7 @@ linkend="configuringnagios-objectdefinitions-service">service</link>
 		<listitem>
 		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> d'<link
-linkend="configuringnagios-objectdefinitions-host">hôte()s</link> sur lequel
+linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
 <quote>tourne</quote> le service <emphasis>dont on dépend</emphasis> (aussi
 appelé service maître) où avec lequel il est associé. Plusieurs hôtes
 peuvent être séparés par des virgules.
@@ -4432,7 +4432,7 @@ utiliser des chemins relatifs, le chemin de base sera le même que celui
 utilisé pour accéder aux CGIs (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
-d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc...</para>
+d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4556,7 +4556,7 @@ précisé.
 		<para>Cette variable est utilisée pour définir les coordonnées de l'hôte à
 utiliser dans le CGI <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
-peuvent être des nombres positifs ou négatifs. Le daprt du dessin est
+peuvent être des nombres positifs ou négatifs. Le départ du dessin est
 (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5
 unités de chaque côté (les textes rennent un plus d'espace). Les coordonnées
 que vous utilisez sont le centre du cube de l'hôte.</para>
@@ -4721,7 +4721,7 @@ utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base
 sera le même que celui utilisé pour accéder aux CGIs (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
-d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc...</para>
+d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>

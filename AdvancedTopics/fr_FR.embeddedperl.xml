@@ -35,7 +35,7 @@ s'applique aux autres types de scripts Perl que vous pourriez utiliser pour
 les autres types de commandes (ex scripts de notifications, scripts de
 gestion d'événements, etc.).</para></tip>
 		<para>Stephen Davies a été le premier contributeur du code de l'interpéteur Perl
-intégré il y a plusieurs années. Stanley Hopcroft a été la première personne
+intégré il y a plusieurs années. <personname><firstname>Stanley</firstname><surname>Hopcroft</surname></personname> a été la première personne
 impliquée à améliorer le code de l'interpréteur Perl intégré et a commenté
 les avantages et désavantages de son utilisation. Il a également donné
 plusieurs indices utiles pour écrire des plugins Perl qui fonctionnent
@@ -149,7 +149,7 @@ faut relancer le script de configuration (configure) avec le paramètre <option>
 les scripts compilés, ajoutez également le paramètre <option>--with-perlcache.</option>
 		Par exemple : </para>
 		<screen>
-		<prompt>linux:~ # </prompt><userinput>./configure --enable-embedded-perl --with-perlcache otheroptions...</userinput>
+		<prompt>linux:~ # </prompt><userinput>./configure --enable-embedded-perl --with-perlcache otheroptions…</userinput>
 		</screen>
 		<para>Une fois que vous avez relancé le script de configuration avec les nouvelles
 options, n'oubliez pas de recompiler Nagios.</para>
@@ -162,7 +162,7 @@ est particulièrement utile si vous avez des problèmes à faire fonctionner
 des scripts Perl avec l'interpréteur Perl.</para>
 		<para>Pour préciser de façon explicite à Nagios d'utiliser ou pas l'interpréteur
 Perl intégré pour un script Perl particulier, ajoutez une des entrées
-suivantes dans votre script/plugin Perl...</para>
+suivantes dans votre script/plugin Perl…</para>
 		<para>Pour indiquer à Nagios d'utiliser l'interpréteur Perl pour un script
 particulier, ajoutez cette ligne au script Perl : </para>
 		<programlisting># nagios: +epn</programlisting>

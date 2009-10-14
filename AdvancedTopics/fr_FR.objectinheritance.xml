@@ -31,13 +31,13 @@ présent dans toutes les définitions d'objet. Elles sont indiquées en rouge
 ci-dessous</para>
 
   <programlisting>        define someobjecttype{
-		                object-specific variables ...
+		                object-specific variables …
 		                name            template_name
 		                use             name_of_template_to_use
 		                register        [0/1]
 		                }</programlisting>
 
-  <para>La première variable est <varname>name</varname>. C'est le nom du "gabarit"
+  <para>La première variable est <varname>name</varname>. C'est le nom du <quote>gabarit</quote>
 qui peut être référencé dans d'autre définition d'objet, de manière à ce
 qu'ils héritent des propriétés/variables de cet objet. </para>
 
@@ -48,8 +48,8 @@ propriétés/variables. Le nom que vous spécifiez dans cette variable doit
 nom) </para>
 
   <para>La troisième variable est <varname>register</varname>. Cette variable est
-utilisée pour indiquer si la définition de l'objet doit être "Prise en
-compte" par Nagios ou non. Par défaut, toutes les défintions d'objet sont
+utilisée pour indiquer si la définition de l'objet doit être <quote>Prise en
+compte</quote> par Nagios ou non. Par défaut, toutes les défintions d'objet sont
 prise en compte. Si vous utilisez une définition d'objet partiel comme
 gabarit, vous voulez éviter qu'il soit prise en compte (Un exemple de ce
 mécanisme sera présentez plus loin). Les valeurs acceptées sont les
@@ -179,7 +179,7 @@ garder votre santé mental. </para>
 
   <para>Il est possible d'utiliser une définition incomplète d'object comme gabarit
 afin de les utiliser dans d'autres définitions d'objets. Par définition
-"incomplète", je veux dire que toutes les variables requises pour l'objet
+<quote>incomplète</quote>, je veux dire que toutes les variables requises pour l'objet
 n'ont pas été mises dans la définition de l'objet. Celà peut paraitre
 bizarre d'utiliser des définitions incomplètes comme gabarit, mais c'est en
 fait recommandé de les utiliser. Pourquoi? Et bien ils servent d'ensemble
@@ -209,7 +209,7 @@ l'exemple suivant : </para>
   <para>Notez que la 1er définition d'hotes est incomplète car il manque le variable
 requise <varname>host_name</varname>. Nous n'avons pas besoin de définir un
 nom d'hôte car nous voulons juste utiliser cette définition comme un gabarit
-d'hôte générique. Afin de prévenir cette defintion d'être "registered" par
+d'hôte générique. Afin de prévenir cette defintion d'être <quote>registered</quote> par
 nagios comme un hôte normal, nous devons définir la variable
 <varname>register</varname> à 0. </para>
 
@@ -324,7 +324,7 @@ des variables surchargent celles définies dans les gabarits. Dans certains
 cas, il peut être judicieux d'autoriser Nagios d'utiliser la valeur locale
 et héritée de la variable ensemble. </para>
 
-  <para>Cette "héritage additif " peut être réaliser en rajoutant devant la valeur
+  <para>Cette <quote>héritage additif</quote> peut être réalisé en rajoutant devant la valeur
 de la variable local un signe plus (+). Cette fonctionnalité est uniquement
 accessible pour les variables standards (non-personnels) qui contiennent des
 valeurs sous forme de chaine. Regardez l'exemple suivant : </para>
@@ -491,13 +491,13 @@ utilisé avec une logique d'héritage additive. </para>
   <programlisting>define host{
 	        name            linux-server
 	        contact_groups  linux-admins
-	        ...
+	        …
 	        }
 
 	define hostescalation{
 	        host_name               linux-server
 	        contact_groups  +management
-	        ...
+	        …
 	        }</programlisting>
 
   <para>C'est un équivalent beaucoup plus simple que : </para>
@@ -505,7 +505,7 @@ utilisé avec une logique d'héritage additive. </para>
   <programlisting>define hostescalation{
 	        host_name               linux-server
 	        contact_groups  linux-admins,management
-	        ...
+	        …
 	        }</programlisting>
  </section>
 
@@ -526,19 +526,19 @@ plus complexe, comme celà est présentées en dessous. </para>
 	        name                 	generic-host
 	        active_checks_enabled 	1
 	        check_interval          10 
-          ...
+          …
         	register                0
         	}</programlisting> <para># Development web server template</para><programlisting>define host{       
       name                    development-server       
       check_interval          15  
       notification_options    d,u,r
-        	...
+        	…
           register                        0    
         }</programlisting> <para># Development web server</para>
       <programlisting>define host{
 	        use                   generic-host,development-server
 	        host_name            devweb1
-	       ...     
+	       …     
       }</programlisting></entry>
 
       <entry><para> <inlinemediaobject> <imageobject> <imagedata
@@ -567,7 +567,7 @@ directives de <varname>devweb1</varname>, sa valeur pour la variable
 	        active_checks_enabled   1
 	        check_interval          10
 	        notification_options    d,u,r
-	        ...
+	        …
 	        }</programlisting>
  </section>
 
@@ -590,7 +590,7 @@ trouver quelle paire de variable/valeur aura la priorité. </para>
       <programlisting>define host{
         use        1, 4, 8
         host_name  devweb1
-		...	
+		…	
 		        }</programlisting></para><para>Si certains des gabarits héritent eux-même de variables/valeurs de un ou
 plusieurs autre gabarits, les règles de priorité sont montrées à droite. </para><para>Tests, essais et erreurs vous aideront à mieux comprendre exactement comment
 les choses fonctionnent dans une situation d'héritage complexe comme

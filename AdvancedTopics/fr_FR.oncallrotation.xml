@@ -24,7 +24,7 @@ promenez à 9h le matin suivant.</para>
 		<para>Pour ces administrateurs chanceux qui peuvent se partager la responsabilité
 de répondre aux alertes, les astreintes à la demande est souvent le choix
 judicieux. Plusieurs administrateurs vont alternativement gérer les
-notifications les week-end, les nuits, les vacances, ect...</para>
+notifications les week-end, les nuits, les vacances, ect…</para>
 		<para>Nous allons vous montrer comment créer des définitions de <link
 linkend="thebasics-timeperiods">période de temps</link> pour vous faciliter
 le plus possible la rotation de l'astreinte. Ces définitions ne pourront pas
@@ -39,7 +39,7 @@ votre planning d'entreprise.</para>
 Nagios. John recoit toutes les notifications de la semaine (et les nuits de
 la semaine) - excepté les vancances - et Bob quant à lui gérera celle du
 week-end et des vacances. Bonne pioche Bob! Nous allons voir comment définir
-ce type astreinte en utilisant les périodes de temps...</para>
+ce type astreinte en utilisant les périodes de temps…</para>
 		<para>Premièrement, définissons les périodes de temps pour les vances:</para>
 		<programlisting>define timeperiod{
 		        name    holidays
@@ -70,13 +70,13 @@ ces vacances:</para>
 John:</para>
 		<programlisting>define contact{
 		        contact_name                  john
-		        ...
+		        …
 		        host_notification_period            john-oncall
 		        service_notification_period         john-oncall
 		        }</programlisting>
 		<para>Définissons une nouvelle période de temps pour les astreintes de Bob
 incluant le week-end et les dates définies dans la période de temps
-"holidays":</para>
+<quote>holidays</quote>:</para>
 		<programlisting>define timeperiod{
 		        timeperiod_name         bob-oncall
 		        friday              00:00-24:00
@@ -87,7 +87,7 @@ incluant le week-end et les dates définies dans la période de temps
 Bob:</para>
 		<programlisting>define contact{
 		        contact_name                  bob
-		        ...
+		        …
 		        host_notification_period           bob-oncall
 		        service_notification_period       bob-oncall
 		        }</programlisting>
@@ -113,13 +113,13 @@ n'en reçoit pas. Son astreinte commencera donc le lendemain (2 aout 2007).</par
 définition des contacts John et Bob:</para>
 		<programlisting>define contact{
 		        contact_name            john
-		        ...
+		        …
 		        host_notification_period                john-oncall
 		        service_notification_period             john-oncall
 		        }
 		define contact{
 		        contact_name            bob
-		        ...
+		        …
 		        host_notification_period                bob-oncall
 		        service_notification_period             bob-oncall
 		        }</programlisting>
@@ -128,7 +128,7 @@ définition des contacts John et Bob:</para>
 		<title>Scénario 3: Semaines alternées</title>
 		<para>Dans ce scénario, les astreintes de John et Bob sont alternées par
 semaine. John débute son astreinte du dimanche jusqu'au samedi d'après, et
-Bob prend le relais la semaine suivante pendant 7 jours ... Ainsi de suite.</para>
+Bob prend le relais la semaine suivante pendant 7 jours … Ainsi de suite.</para>
 		<para>Nous allons définir l'astreinte de John. Admettons que nous sommes le
 dimanche 29 juillet 2007 et John doit débuter son astreinte cette semaine
 (débute aujourd'hui), la définition ressemblerait à ceci:</para>
@@ -158,13 +158,13 @@ d'après (le 5 aout 2007).</para>
 définition des contacts John et Bob:</para>
 		<programlisting>define contact{
 		        contact_name            john
-		        ...
+		        …
 		        host_notification_period                john-oncall
 		        service_notification_period             john-oncall
 		        }
 		define contact{
 		        contact_name            bob
-		        ...
+		        …
 		        host_notification_period                bob-oncall
 		        service_notification_period             bob-oncall
 		        }</programlisting>
@@ -200,7 +200,7 @@ excluant ces jours de repos: </para>
 John:</para>
 		<programlisting>define contact{
 			        contact_name                 john
-			        ...
+			        …
 			        host_notification_period          john-oncall
 			        service_notification_period       john-oncall
 			        }</programlisting>
@@ -214,7 +214,7 @@ les dates d'absence de John:</para>
 Bob:</para>
 		<programlisting>define contact{
 			        contact_name                 bob
-			        ...
+			        …
 			        host_notification_period         bob-oncall
 			        service_notification_period       bob-oncall
 			        }</programlisting>

@@ -9,7 +9,7 @@
 <chapter id="gettingstarted-quickstart-ubuntu" xreflabel="Ubuntu quickstart">
  <title>Guide rapide &name-ubuntu;</title>
 
- <abstract>
+ <note>
 
 
   <para>Ce guide est prévu pour vous fournir les instructions simples sur la façon
@@ -21,7 +21,7 @@ qui fonctionneront pour 95% des utilisateurs qui veulent démarrer.</para>
   <para>Ces instructions ont été écrite en se basant sur une installation standard
 de la distribution &name-fedora; 6.10 (desktop). Elles devraient fonctionner
 également pour &name-ubuntu; 7.10.</para>
- </abstract>
+ </note>
 
  <section>
   <title>Ce que vous allez obtenir</title>
@@ -182,7 +182,7 @@ des commandes externes.</para>
 <prompt>linux:~ # </prompt><userinput>make install-commandmode</userinput>
 </screen>
 
-  <para>Ne démarrez pas Nagios maintenant - Il y a encore beaucoup à faire avant...</para>
+  <para>Ne démarrez pas Nagios maintenant - Il y a encore beaucoup à faire avant…</para>
  </section>
 
  <section>
@@ -192,7 +192,7 @@ des commandes externes.</para>
 configuration</link> ont été installé dans le répertoire <filename
 class="directory">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple
 devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à
-modifier avant de pouvoir commencer...</para>
+modifier avant de pouvoir commencer…</para>
 
   <para>Éditez le fichier de configuration
 <filename>/usr/local/nagios/etc/objects/contacts.cfg</filename> avec votre

@@ -56,7 +56,7 @@ class="directory">/usr/local/nagios/etc/</filename>.
  <section>
   <title>Variables du fichier de configuration</title>
 
-  <para>Vous allez trouver ci-dessous la description de chacune des options du fichier principal de configuration de Nagios...</para>
+  <para>Vous allez trouver ci-dessous la description de chacune des options du fichier principal de configuration de Nagios…</para>
 
   <section>
    <title><anchor id="configuringnagios-configmain-log_file" xreflabel="Log
@@ -118,7 +118,7 @@ cfg_file=/usr/local/nagios/etc/commands.cfg</literallayout></para></listitem>
 linkend="configuringnagios-configobject">fichier de configuration des
 objets</link> que Nagios doit utiliser pour la supervision. Ce fichier
 contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes
-de contacts, services, commandes etc... Vous pouvez éclater votre fichier de
+de contacts, services, commandes etc… Vous pouvez éclater votre fichier de
 configuration des objets en plusieurs fichiers que vous inclurez, pour leur
 traitement,
    <code>cfg_file=</code> en ajoutant une directive cfg_file= pour chacun d'eux.</para>
@@ -159,7 +159,7 @@ objets</title>
 linkend="configuringnagios-configobject">fichier de configuration des
 objets</link> que Nagios doit utiliser pour la supervision. Ce fichier
 contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes
-de contacts, services, commandes etc... Vous pouvez éclater votre fichier de
+de contacts, services, commandes etc… Vous pouvez éclater votre fichier de
 configuration des objets en plusieurs fichiers que vous inclurez, pour leur
 traitement, en ajoutant une directive <programlisting> cfg_file=</programlisting> pour chacun d'eux.</para>
   </section>
@@ -501,11 +501,11 @@ valeurs possibles de cette variable sont :</para>
 
     <itemizedlist>
      <listitem>
-      <para>0 = Disable notifications</para>
+      <para>0 = Notifications désactivées</para>
      </listitem>
 
      <listitem>
-      <para>1 = Enable notifications (default)</para>
+      <para>1 = Notifications activées (défaut)</para>
      </listitem>
     </itemizedlist>
   </section>
@@ -572,11 +572,11 @@ valeurs possibles de cette variable sont :</para>
 
     <itemizedlist>
      <listitem>
-      <para>0 = Don't execute service checks</para>
+      <para>0 = Ne pas exécuter les contrôles de services</para>
      </listitem>
 
      <listitem>
-      <para>1 = Execute service checks (default)</para>
+      <para>1 = Exécuter les contrôles de services (défaut)</para>
      </listitem>
     </itemizedlist>
   </section>
@@ -638,11 +638,11 @@ valeurs possibles de cette variable sont :</para>
    </note>
     <itemizedlist>
      <listitem>
-      <para>0 = Don't accept passive service checks</para>
+      <para>0 = Ne pas accepter les contrôles passifs de services</para>
      </listitem>
 
      <listitem>
-      <para>1 = Accept passive service checks (default)</para>
+      <para>1 = Accepter les contrôles passifs de services (défaut)</para>
      </listitem>
     </itemizedlist>
   </section>
@@ -712,11 +712,11 @@ valeurs possibles de cette variable sont :</para>
 
     <itemizedlist>
      <listitem>
-      <para>0 = Don't execute host checks</para>
+      <para>0 = Ne pas exécuter les contrôles d'hôtes</para>
      </listitem>
 
      <listitem>
-      <para>1 = Execute host checks (default)</para>
+      <para>1 = Exécuter les contrôles d'hôtes (défaut)</para>
      </listitem>
     </itemizedlist>
   </section>
@@ -776,11 +776,11 @@ valeurs possibles de cette variable sont :</para></note>
 
     <itemizedlist>
      <listitem>
-      <para>0 = Don't accept passive host checks</para>
+      <para>0 = Ne pas accepter les contrôles passifs d'hôtes</para>
      </listitem>
 
      <listitem>
-      <para>1 = Accept passive host checks (default)</para>
+      <para>1 = Accepter les contrôles passifs d'hôtes (défaut)</para>
      </listitem>
     </itemizedlist>
    
@@ -840,11 +840,11 @@ valeurs possibles de cette variable sont :</para></note>
 
     <itemizedlist>
      <listitem>
-      <para>0 = Disable event handlers</para>
+      <para>0 = Gestionnaire d'événements désactivé</para>
      </listitem>
 
      <listitem>
-      <para>1 = Enable event handlers (default)</para>
+      <para>1 = Gestionnaire d'événements activé (défaut)</para>
      </listitem>
     </itemizedlist>
   </section>
@@ -972,11 +972,11 @@ linkend="advancedtopics-extcommands">ici</link>.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't check external commands</para>
+     <para>0 = Ne pas vérifier les commandes externes</para>
     </listitem>
 
     <listitem>
-     <para>1 = Check external commands (default)</para>
+     <para>1 = Vérifier les commandes externes (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -1168,11 +1168,11 @@ redémarrera.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't retain state information</para>
+     <para>0 = Ne pas conserver les informations de statuts</para>
     </listitem>
 
     <listitem>
-     <para>1 = Retain state information (default)</para>
+     <para>1 = Conserver les informations de statuts (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -1286,11 +1286,11 @@ option est sans effet.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't use retained program state</para>
+     <para>0 = Ne pas conserver les informations de statuts de programme</para>
     </listitem>
 
     <listitem>
-     <para>1 = Use retained program state (default)</para>
+     <para>1 = Conserver les informations de statuts de programme (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -1330,11 +1330,11 @@ option active.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't use retained scheduling info</para>
+     <para>0 = Ne pas conserver les informations d'ordonnancement</para>
     </listitem>
 
     <listitem>
-     <para>1 = Use retained scheduling info (default)</para>
+     <para>1 = Conserver les informations d'ordonnancement (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -1576,7 +1576,7 @@ tentatives de contrôle de service</title>
 sont journalisées. Ces tentatives ont lieu lorsqu'un service retourne un
 état différent de OK, mais que vous avez configuré Nagios pour essayer plus
 d'une fois avant de considérer cela comme une erreur. Les services dans
-cette situation sont dits en état "soft". La journalisation des tentatives
+cette situation sont dits en état <quote>soft</quote>. La journalisation des tentatives
 de contrôle permet de déboguer Nagios ou de tester les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</para>
 
@@ -1709,11 +1709,11 @@ terme pour les hôtes et services.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't log initial states (default)</para>
+     <para>0 = Ne pas journaliser les états initiaux (défaut)</para>
     </listitem>
 
     <listitem>
-     <para>1 = Log initial states</para>
+     <para>1 = Journaliser les états initiaux</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -1757,11 +1757,11 @@ journalisation des contrôles passifs de service.</para>
    </note>
     <itemizedlist>
      <listitem>
-      <para>0 = Don't log external commands</para>
+      <para>0 = Ne pas journaliser les commandes externes</para>
      </listitem>
 
      <listitem>
-      <para>1 = Log external commands (default)</para>
+      <para>1 = Journaliser les commandes externes (défaut)</para>
      </listitem>
     </itemizedlist>
   </section>
@@ -1803,11 +1803,11 @@ journal de trop grossir.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't log passive checks</para>
+     <para>0 = Ne pas journaliser les contrôles passifs</para>
     </listitem>
 
     <listitem>
-     <para>1 = Log passive checks (default)</para>
+     <para>1 = Journaliser les contrôles passifs (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -1912,7 +1912,7 @@ Sleep Time"/>Temps de sommeil entre les contrôles</title>
 
    <para>C'est le nombre de secondes pendant lequel Nagios va sommeiller avant de
 vérifier si le prochain contrôle de service ou d'hôte en file d'attente doit
-être exécuté. Notez que Nagios ne s'endormira qu'après avoir "liquidé" les
+être exécuté. Notez que Nagios ne s'endormira qu'après avoir <quote>liquidé</quote> les
 contrôles de services en retard dans la file.</para>
   </section>
 
@@ -1947,7 +1947,7 @@ inter-contrôles de services</title>
 de calculer un intervalle moyen entre les contrôles, et d'ordonnancer les
 contrôles initiaux de tous les services à cet intervalle, ce qui permet
 d'éviter les pics d'utilisation du processeur. Il n'est pas recommandé
-d'utiliser la méthode "sans délai" [no delay] à moins que vous ne vouliez
+d'utiliser la méthode <quote>sans délai</quote> [no delay] à moins que vous ne vouliez
 tester la parallélisation des contrôles de service. En effet, cette méthode
 ordonnance tous les contrôles en même temps. L'exécution de tous les
 contrôles en parallèle va provoquer d'importants pics d'utilisation du
@@ -1963,12 +1963,12 @@ les contrôles maintenant (i.e. en même temps !)</para>
     </listitem>
 
     <listitem>
-     <para>d = Utiliser un délai "irréfléchi" [dumb] d'1 seconde entre les contrôles de
+     <para>d = Utiliser un délai <quote>irréfléchi</quote> [dumb] d'1 seconde entre les contrôles de
 service</para>
     </listitem>
 
     <listitem>
-     <para>s = Utiliser un calcul de délai "débrouillard" [smart] pour répartir
+     <para>s = Utiliser un calcul de délai <quote>débrouillard</quote> [smart] pour répartir
 également les contrôles de service (par défaut)</para>
     </listitem>
 
@@ -2167,12 +2167,12 @@ maximum de consolidation des résultats de contrôle</title>
 
    <para>Cette option vous permet de contrôler le temps maximum en secondes que doit
 prendre une consolidation des résultats de contrôles d'hôte et de
-service. Les évènements de consolidation traitent les résultats de contrôle
+service. Les événements de consolidation traitent les résultats de contrôle
 d'hôtes et de services qui sont terminés. Si il y a une grande quantité de
-résultats à traiter, les évènements de collecte peuvent mettre beaucoup de
+résultats à traiter, les événements de collecte peuvent mettre beaucoup de
 temps à se terminer, ce qui décale d'autant l'exécution de nouveaux
 contrôles d'hôtes et de services. Cette variable vous permet de limiter le
-temps que prend un évènement de consolidation avant de rendre la main à
+temps que prend un événement de consolidation avant de rendre la main à
 Nagios pour d'autres traitements de la logique de supervision.</para>
   </section>
 
@@ -2278,7 +2278,7 @@ la file d'attente. L'option de calcul <quote>débrouillard</quote> [smart] du
 délai (par défaut) demande à Nagios de calculer un intervalle moyen entre
 les contrôles et d'ordonnancer les contrôles initiaux de tous les services à
 cet intervalle, ce qui permet d'éviter les pics d'utilisation du
-processeur. Il n'est pas recommandé d'utiliser la méthode "sans délai" [no
+processeur. Il n'est pas recommandé d'utiliser la méthode <quote>sans délai</quote> [no
 delay]. En effet, cette méthode ordonnance tous les contrôles en même
 temps. Vous obtiendrez plus d'informations sur la façon dont cette variable
 affecte l'ordonnancement des contrôles d'hôte <link
@@ -2292,7 +2292,7 @@ les contrôles maintenant (i.e. en même temps !)</para>
     </listitem>
 
     <listitem>
-     <para>d = Utiliser un délai "irréfléchi" [dumb] d'1 seconde entre les contrôles
+     <para>d = Utiliser un délai <quote>irréfléchi</quote> [dumb] d'1 seconde entre les contrôles
 d'hôte</para>
     </listitem>
 
@@ -2374,8 +2374,8 @@ utilisée dans la file d'ordonnancement, les re-notifications, etc. Les
 configuration des objets pour déterminer la fréquence d'exécution des
 contrôles de service, la fréquence de re-notification d'un contact, etc.</para>
 
-   <important><para>Important : La valeur par défaut de cette variable est 60, ce qui veut dire
-qu'une "unité de temps" de 1 dans le fichier de configuration des hôtes vaut
+   <important><para>La valeur par défaut de cette variable est 60, ce qui veut dire
+qu'une <quote>unité de temps</quote> de 1 dans le fichier de configuration des hôtes vaut
 60 secondes (1 minute). Je n'ai pas vraiment testé d'autres valeurs pour
 cette variable, donc vous la modifierez à vos risques et périls !</para></important>
   </section>
@@ -2513,7 +2513,7 @@ hôtes</title>
     </tgroup>
    </informaltable>
 
-   <para>[NdT] : cette option comporte deux "g" à "aggressive" depuis la version
+   <para>[NdT] : cette option comporte deux <quote>g</quote> à <quote>aggressive</quote> depuis la version
 2. Elle n'en comprenait qu'un auparavant.Nagios essaye d'être plus malin
 dans la façon et le moment de contrôler l'état des hôtes. En général,
 désactiver cette option permet à Nagios d'être un peu plus malin et de
@@ -2524,11 +2524,11 @@ je vous suggère de ne pas activer cette option.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't use aggressive host checking (default)</para>
+     <para>0 = Contrôle aggressif d'hôte désactivé (défaut)</para>
     </listitem>
 
     <listitem>
-     <para>1 = Use aggressive host checking</para>
+     <para>1 = Contrôle aggressif d'hôte activé</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -2567,7 +2567,7 @@ linkend="advancedtopics-passivestatetranslation">ici</link>.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Désactiver la traduction (default)</para>
+     <para>0 = Désactiver la traduction (défaut)</para>
     </listitem>
 
     <listitem>
@@ -2686,7 +2686,7 @@ contrôle prédictif de dépendance de service</title>
    </informaltable>
 
    <para>Cette option détermine si Nagios exécutera ou non des contrôles prédictifs
-sur les services dépendant (comme définit dans <link
+sur les services dépendants (comme défini dans <link
 linkend="advancedtopics-dependencies">dépendance de service</link>) d'un
 service particulier quand celui ci change d'état. Les contrôles prédictifs
 permettent de s'assurer que la logique de dépendance est aussi précise que
@@ -2733,7 +2733,7 @@ xreflabel="Cached Host Check Horizon"/>Cached Host Check Horizon</title>
 précédent contrôle d'hôte soit considéré comme courant. Le cache d'état
 d'hôtes (du point de vue des contrôles d'hôtes qui ont été effectués plus
 récemment que le temps spécifié par cette valeur) peut améliorer
-considérablement les performances pour les contrôle d'hôtes. Une valeur trop
+considérablement les performances pour les contrôles d'hôtes. Une valeur trop
 élevée pour cette option peut se traduire par des états d'hôtes
 (temporairement) éronné, alors qu'une valeur trop basse se traduira par un
 écroulement des performances pour les contrôles d'hôtes. Utiliser la valeur
@@ -2888,7 +2888,7 @@ enfant en double</title>
    </informaltable>
 
    <para>Cette option détermine si nagios doit forker ou non en double les processus
-enfants quand il execute des contrôle d'hôte et de service. Par défaut,
+enfants quand il exécute des contrôle d'hôte et de service. Par défaut,
 Nagios fork en double. Cependant, si l'option <link
 linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link> est
 activée, il ne fera qu'un fork. En déclarant cette option dans vortre
@@ -2932,17 +2932,17 @@ xreflabel="Environment Macros Option"/>Environment Macros Option</title>
    <para>Cette option détermine si oui ou non le démon Nagios peut considérer toutes
 les <link linkend="thebasics-macrolist">macros</link> standard comme des
 variables d'environnements pour vos contrôles, notifications, déclencheur
-d'évènement, etc ... Dans de grand périmètre de production, ceci peut être
+d'événement, etc … Dans de grand périmètre de production, ceci peut être
 problématique car une utilisation mémoire et CPU supplémentaire est utile
 pour convertir ces macros en variables d'environnements.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't make macros available as environment variables</para>
+     <para>0 = Ne pas rendre les macros disponibles comme variables d'environnement</para>
     </listitem>
 
     <listitem>
-     <para>1 = Make macros available as environment variables (default)</para>
+     <para>1 = Rendre les macros disponibles comme variables d'environnement (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -2999,11 +2999,11 @@ l'interface web.</para></note>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't enable flap detection (default)</para>
+     <para>0 = Ne pas activer la détection d'oscillation (défaut)</para>
     </listitem>
 
     <listitem>
-     <para>1 = Enable flap detection</para>
+     <para>1 = Activer la détection d'oscillation</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -3133,7 +3133,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section>
    <title><anchor id="configuringnagios-configmain-soft_state_dependencies"
-xreflabel="Soft State Dependencies Option"/>Option de dépendance "Soft" des
+xreflabel="Soft State Dependencies Option"/>Option de dépendance <quote>soft</quote> des
 services</title>
 
    <informaltable frame="none" rowsep="0" colsep="0">
@@ -3156,21 +3156,21 @@ services</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si Nagios utilisera les informations d'état "soft"
+   <para>Cette option détermine si Nagios utilisera les informations d'état <quote>soft</quote>
 des services lors du contrôle des <link
 linkend="advancedtopics-dependencies">dépendances de service</link>. En
-temps normal, Nagios n'utilise que le dernier état "hard" du service lors
+temps normal, Nagios n'utilise que le dernier état <quote>hard</quote> du service lors
 du contrôle des dépendances. Si vous voulez utiliser le tout dernier état
 (que ce soit un <link linkend="thebasics-statetypes">état de type</link>
 hard ou soft), activez cette option.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't use soft state dependencies (default)</para>
+     <para>0 = Ne pas utiliser les états soft de dépendances (défaut)</para>
     </listitem>
 
     <listitem>
-     <para>1 = Use soft state dependencies</para>
+     <para>1 = Utiliser les états soft de dépendances</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -3455,7 +3455,7 @@ service</title>
 service et lancera la <link
 linkend="configuringnagios-configmain-ocsp_command">commande de remontée de
 contrôle de service</link> que vous avez définie. Je sais que c'est un drôle
-de nom [en anglais "obsessive compulsive service processor"], mais c'est
+de nom [en anglais <quote>obsessive compulsive service processor</quote>], mais c'est
 tout ce qui m'est venu à l'esprit. Cette option est utile dans le cadre de
 la <link linkend="advancedtopics-distributed">supervision
 répartie</link>. Si vous ne faites pas de supervision répartie, n'activez
@@ -3463,11 +3463,11 @@ pas cette option.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't obsess over services (default)</para>
+     <para>0 = Ne pas obsess sur les services (défaut)</para>
     </listitem>
 
     <listitem>
-     <para>1 = Obsess over services</para>
+     <para>1 = Obsess sur les services</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -3545,18 +3545,18 @@ xreflabel="Obsess Over Hosts Option" />Option de remontée de contrôle d'hôte<
 d'hôtes et lancera la <link
 linkend="configuringnagios-configmain-ochp_command">commande de remontée de
 contrôle d'hôte</link> que vous avez définie. Je sais que c'est un drôle de
-nom [en anglais "obsessive compulsive host processor"], mais c'est tout ce
+nom [en anglais <quote>obsessive compulsive host processor</quote>], mais c'est tout ce
 qui m'est venu à l'esprit. Cette option est utile dans le cadre de la <link
 linkend="advancedtopics-distributed">supervision répartie</link>. Si vous ne
 faites pas de supervision répartie, n'activez pas cette option.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't obsess over hosts (default)</para>
+     <para>0 = Ne pas obsess sur les hôtes (défaut)</para>
     </listitem>
 
     <listitem>
-     <para>1 = Obsess over hosts</para>
+     <para>1 = Obsess sur les hôtes</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -3636,11 +3636,11 @@ et de services.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't process performance data (default)</para>
+     <para>0 = Ne pas traiter les données de performance (défaut)</para>
     </listitem>
 
     <listitem>
-     <para>1 = Process performance data</para>
+     <para>1 = Traiter les données de performance</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -4151,11 +4151,11 @@ services orphelins.</simpara>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't check for orphaned service checks</para>
+     <para>0 = Ne pas contrôler les contrôles de services orphelins</para>
     </listitem>
 
     <listitem>
-     <para>1 = Check for orphaned service checks (default)</para>
+     <para>1 = Ccontrôler les contrôles de services orphelins (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -4203,11 +4203,11 @@ hôtes orphelins.</simpara>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't check for orphaned host checks</para>
+     <para>0 = Ne pas contrôler les contrôles d'hôtes orphelins</para>
     </listitem>
 
     <listitem>
-     <para>1 = Check for orphaned host checks (default)</para>
+     <para>1 = Contrôler les contrôles d'hôtes orphelins (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -4246,11 +4246,11 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't check service freshness</para>
+     <para>0 = Ne pas contrôler la validité des services</para>
     </listitem>
 
     <listitem>
-     <para>1 = Check service freshness (default)</para>
+     <para>1 = Contrôler la validité des services (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -4323,11 +4323,11 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
    <itemizedlist>
     <listitem>
-     <para>0 = Don't check host freshness</para>
+     <para>0 = Ne pas contrôler la validité des hôtes</para>
     </listitem>
 
     <listitem>
-     <para>1 = Check host freshness (default)</para>
+     <para>1 = Contrôler la validité des hôtes (défaut)</para>
     </listitem>
    </itemizedlist>
   </section>
@@ -4576,7 +4576,7 @@ concernant les CGIs comme dans l'exemple suivant:</para>
    <programlisting>
    &lt;Directory "/usr/local/nagios/sbin/"&gt;
    SetEnv TZ "US/Mountain"
-   ...
+   …
    &lt;/Directory&gt;
    </programlisting>
    </para>
@@ -4596,7 +4596,7 @@ noms d'objets</title>
       <row>
        <entry><para>Format:</para></entry>
 
-       <entry><para><programlisting>illegal_object_name_chars=&lt;chars...&gt;</programlisting></para></entry>
+       <entry><para><programlisting>illegal_object_name_chars=&lt;chars…&gt;</programlisting></para></entry>
       </row>
 
       <row>
@@ -4628,7 +4628,7 @@ sortie des macros</title>
       <row>
        <entry><para>Format:</para></entry>
 
-       <entry><para><programlisting>illegal_macro_output_chars=&lt;chars...&gt;</programlisting></para></entry>
+       <entry><para><programlisting>illegal_macro_output_chars=&lt;chars…&gt;</programlisting></para></entry>
       </row>
 
       <row>
@@ -4732,7 +4732,7 @@ systématique par expressions rationnelles</title>
 va déterminer quand les directives vont être traitées comme des expressions
 rationnelles :  * Si cette option est désactivée (par défaut), les
 directives seront traitées comme des expression rationnelles uniquement si
-elles contiennent un *, ?, +, ou un \ ...  * Si cette option est activée,
+elles contiennent un *, ?, +, ou un \ …  * Si cette option est activée,
 toutes les directives seront traitées comme des expressions
 rationnelles. Faîtes très attention lorsque vous activez cette option !Pour
 plus d'information, lisez <link
@@ -4812,7 +4812,7 @@ grâce à la <link linkend="thebasics-macros">macro</link>
 
   <section>
    <title><anchor id="configuringnagios-configmain-event_broker_options"
-xreflabel="Event Broker Options"/>Options du courtier d'évènement</title>
+xreflabel="Event Broker Options"/>Options du courtier d'événement</title>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4835,8 +4835,8 @@ xreflabel="Event Broker Options"/>Options du courtier d'évènement</title>
    </informaltable>
 
    <para>Cette option contrôle que les données (si plusieurs) seront envoyées au
-<quote>courtier d'évènement</quote> et, ensuite, chargées dans le module du
-courtier d'évènement.Il s'agit d'une option avancée. Dans le doute, ne
+<quote>courtier d'événement</quote> et, ensuite, chargées dans le module du
+courtier d'événement.Il s'agit d'une option avancée. Dans le doute, ne
 transportez rien (si vous n'utilisez aucun modules) ou choisissez de tout
 transporter (si vous utilisez des modules). Les valeurs possible sont les
 suivantes:</para>
@@ -4860,7 +4860,7 @@ suivantes:</para>
 
   <section>
    <title><anchor id="configuringnagios-configmain-broker_module" xreflabel="Event
-Broker Modules"/>Les Modules évènementiels</title>
+Broker Modules"/>Les Modules événementiels</title>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4883,7 +4883,7 @@ Broker Modules"/>Les Modules évènementiels</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette directive est utilisé particulièrement pour que le module évènementiel
+   <para>Cette directive est utilisé particulièrement pour que le module événementiel
 soit chargé au démarrage de Nagios. On peut utiliser plusieurs de ces mêmes
 directive si l'on veut en charger plusieurs. Les arguments passés au module
 seront séparés par un espace.</para>
@@ -4891,7 +4891,7 @@ seront séparés par un espace.</para>
    <warning><para>Ne PAS écraser les modules pendant qu'ils sont utilisés par Nagios ou Nagios
 plantera en affichant des SEGFAULT. C'est un bogue/limite de la fonction
 <function>dlopen()</function>, du noyau, et/ou du filesystem. Et peut-être
-de Nagios...</para></warning>
+de Nagios…</para></warning>
 
    <para>La manière la plus sûre de mettre à jour un module est l'une des méthodes
 suivantes:</para>
@@ -4902,7 +4902,7 @@ suivantes:</para>
     </listitem>
 
     <listitem>
-     <para>Durant que Nagios tourne... Effacez le fichier original du module, mettre à
+     <para>Durant que Nagios tourne… Effacez le fichier original du module, mettre à
 la place le nouveau fichier, redémarrez Nagios</para>
     </listitem>
    </itemizedlist>
@@ -4991,7 +4991,7 @@ sont les suivantes:</para>
     </listitem>
 
     <listitem>
-     <para>8 = Les informations liées au planification des évènements</para>
+     <para>8 = Les informations liées au planification des événements</para>
     </listitem>
 
     <listitem>
@@ -5003,7 +5003,7 @@ sont les suivantes:</para>
     </listitem>
 
     <listitem>
-     <para>64 = Les informations liées au courtier d'évènement</para>
+     <para>64 = Les informations liées au courtier d'événement</para>
     </listitem>
    </itemizedlist>
   </section>

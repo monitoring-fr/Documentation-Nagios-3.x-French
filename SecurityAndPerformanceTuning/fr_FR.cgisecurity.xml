@@ -40,7 +40,7 @@ guide de démarrage rapide</link>, il y a de grandes chances pour que vous
 utilisiez les <ulink
 url="&url-apache-docs;2.2/mod/mod_auth_basic.html">fondamentaux
 d'authentification Apache</ulink>. L'authentification basique envoie en
-"texte clair" le nom d'utilisateur et le mot de passe de connexion avec
+<quote>texte clair</quote> le nom d'utilisateur et le mot de passe de connexion avec
 chacune des requêtes http. Considérez que d'utiliser la <ulink
 url="&url-apache-docs;2.2/mod/mod_auth_digest.html">technologie
 Digest</ulink> pour votre authentification s'avére plus sécurisé car elle
@@ -143,16 +143,16 @@ class="directory">share</filename>.</para>
 			## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
 			ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
 			&lt;Directory "/usr/local/nagios/sbin"&gt;
-			  ...
+			  …
 			  SSLRequireSSL
-			  ...
+			  …
 			&lt;/Directory&gt;
 
 			Alias /nagios "/usr/local/nagios/share"
 			&lt;Directory "/usr/local/nagios/share"&gt;
-			  ...
+			  …
 			  SSLRequireSSL
-			  ...
+			  …
 			&lt;/Directory&gt;
 			## END APACHE CONFIG SNIPPETS
 	</programlisting>
@@ -178,26 +178,26 @@ directives <varname>Allow</varname>, <varname>Deny</varname>, et
 			## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
 			ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
 			&lt;Directory "/usr/local/nagios/sbin"&gt;
-			  ...
+			  …
 			  AllowOverride None
 			  Order deny,allow
 			  Deny from all
 			  Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
 			  Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
 			  Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
-			  ...
+			  …
 			&lt;/Directory&gt;
 
 			Alias /nagios "/usr/local/nagios/share"
 			&lt;Directory "/usr/local/nagios/share"&gt;
-			  ...
+			  …
 			  AllowOverride None
 			  Order deny,allow
 			  Deny from all
 			  Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
 			  Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
 			  Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
-			  ...
+			  …
 			&lt;/Directory&gt;
 			## END APACHE CONFIG SNIPPET
 	</programlisting>
@@ -222,7 +222,7 @@ compatible avec l'authentification de base</emphasis>.</para>
      <para><emphasis role="bold"><acronym>TLS</acronym>/<acronym>SSL</acronym> a le potentiel pour <quote><ulink
 url="&url-wikipedia;Man-in-the-middle_attack">man-in-the-middle
 attacks</ulink></quote></emphasis>. <acronym>MITM</acronym> attaques sont vulnérable si l'attaquant est obligé de s'imisser entre le
-serveur et le client tout comme une attaque par "Phishing", l'ISP monitoring
+serveur et le client tout comme une attaque par <quote>Phishing</quote>, l'ISP monitoring
 ou <acronym>LAN</acronym> un certificat de pare-feu arrivant à expiration. Lire ci-dessus la
 vérification des certificats !</para>
     </listitem>
@@ -238,7 +238,7 @@ pour verrouiller votre système avec des règles de pare-feu.</para>
      <para><emphasis role="bold">Très important, la sécurité est un domaine en
 perpétuel mouvement et demande de se réserver du temps pour la recherche et
 développement</emphasis>! Peut-être en vous inscrivant aux newsletters comme
-"<ulink url="http://www.grc.com/securitynow.htm">Security Now!</ulink>".</para>
+<quote><ulink url="http://www.grc.com/securitynow.htm">Security Now!</ulink></quote>.</para>
     </listitem>
    </itemizedlist>
   </section>

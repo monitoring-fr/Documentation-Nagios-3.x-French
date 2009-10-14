@@ -9,14 +9,14 @@
 <chapter id="gettingstarted-monitoring-routers" xreflabel="Monitoring routers/switches">
  <title>Supervision des routeurs et des switchs.</title>
 
- <abstract>
+ <note>
   <para>Ce document décrit la façon don tvous pouvez superviser des routeurs et
 switchs réseaux. Quelques switchs et hubs bon marché <quote>non
 manageables</quote> n'ont pas <acronym>IP</acronym> adresses et sont invisibles sur votre réseau, il n'y a donc aucun moyen de
 les superviser. Les routeurs et switches plus chers ont une adresse assignée
 et peuvent donc être supervisés en les pingant ou en utilisant
 &protocol-snmp; pour interroger les informations de statut.</para>
- </abstract>
+ </note>
 
  <section>
   <title>Introduction</title>
@@ -357,7 +357,7 @@ les seuils, etc. Dans mon exemple, je supervise un des ports d'un switch
 Linksys. Le fichier de log de <application>MRTG</application> est stocké
 dans <filename>/var/lib/mrtg/192.168.1.253_1.log</filename>. Voici la
 définition de service que j'utilise pour superviser les données de bande
-passante stockées dans ce fichier... </para>
+passante stockées dans ce fichier… </para>
 
   <programlisting>
 define service{

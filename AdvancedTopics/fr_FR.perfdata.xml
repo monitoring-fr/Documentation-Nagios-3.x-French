@@ -18,7 +18,7 @@ performance en plus des données normales de statut, ce qui vous permet ainsi
 de tranférer ces données de performances vers une application externe pour y
 être traitées. Une description des différents type de données de
 performance, ainsi que des informations sur la façon de traiter ces données
-sont décrites ci-dessous...</para>
+sont décrites ci-dessous…</para>
 	</section>
 
 	<section>
@@ -40,8 +40,8 @@ obtenues à partir de Nagios:</para>
 		<para>Les données de performance relative à un contrôle sont des données internes
 relatives à l'exécution courante d'un contrôle de l'hôte ou du service. Cela
 peut comprendre des choses comme la latence d'un contrôle de service
-(i.e. Combien "de retard" a un contrôle de service par rapport à l'horaire
-planifié d'exécution) et le nombre de secondes qu'il aura fallut pour
+(par exemple combien <quote>de retard</quote> a un contrôle de service par rapport à l'horaire
+planifié d'exécution) et le nombre de secondes qu'il aura fallu pour
 exécuter un contrôle d'hôte ou des service. Ce type de données de
 performance sont valables pour tous les contrôles qui sont effectués. Les
 <link linkend="thebasics-macros">macros</link> <link
@@ -59,7 +59,7 @@ contrôle régulier d'un hôte ou d'un service.</para>
 plugin utilisé pour contrôler l'hôte ou le service. Les données spécifiques
 d'un plugin peuvent contenir des choses comme le pourcentage de paquets
 perdus, l'espace disque restant, la charge processeur, le nombre
-d'utilisateurs connectés, etc... - en fait, tout type de données que le
+d'utilisateurs connectés, etc… - en fait, tout type de données que le
 plugin contrôle quand il est exécuté. Les données de performance spécifiques
 au plugin sont facultatives et ne sont pas forcement disponibles avec tous
 les plugins. Les données de performances spécifiques au plugin (si
@@ -115,9 +115,9 @@ dans les macros $HOSTPERFDATA$ ou $SERVICEPERFDATA$ </para>
 		</orderedlist>
 
 		<para>Dans l'exemple ci-dessus, la macro $HOSTOUTPUT$ ou $SERVICEOUTPUT$
-contiendra <emphasis>"PING ok - Packet loss = 0%, RTA = 0.80 ms"</emphasis>
+contiendra <emphasis><quote>PING ok - Packet loss = 0%, RTA = 0.80 ms</quote></emphasis>
 (sans les guillemets) et la macro $HOSTPERFDATA$ ou $SERVICEPERFDATA$
-contiendra <emphasis>"percent_packet_loss=0, rta=0.80"</emphasis> (sans les
+contiendra <emphasis><quote>percent_packet_loss=0, rta=0.80</quote></emphasis> (sans les
 guillemets).</para>
 
 		<para>Plusieurs lignes de données de performance (comme pour le texte normal de
@@ -130,7 +130,7 @@ plugins</link>.</para>
 plugins, du coup il ne sait pas vraiment à quoi elles ressemblent. Il n'y a
 pas vraiment de limites inhérentes au format ou au contenu des données de
 performance. Toutefois, si vous utilisez un module externe pour traiter les
-données de performance (i.e. PerfParse), le module attend que le plugin
+données de performance (par exemple PerfParse), le module attend que le plugin
 renvoie les données de performance dans un format spécifique. Vérifiez la
 documentation du module pour plus d'information. </para>
 		</note>
@@ -210,8 +210,8 @@ pourrait ressembler à ceci:</para>
 
 		<programlisting>service_perfdata_file_template=[SERVICEPERFDATA]\t$TIMET$\t$HOSTNAME$\t$SERVICEDESC$\t$SERVICEEXECUTIONTIME$\t$SERVICELATENCY$\t$SERVICEOUTPUT$\t$SERVICEPERFDATA$</programlisting>
 
-		<para>Par défaut, les fichiers texte seront ouverts en mode "append" . Si vous
-avez besoin de changer les modes en "write" ou "non-blocking read/write"
+		<para>Par défaut, les fichiers texte seront ouverts en mode <quote>append</quote>. Si vous
+avez besoin de changer les modes en <quote>write</quote> ou <quote>non-blocking read/write</quote>
 (utile lors d'écriture via 'pipe'), vous pouvez utiliser les options <link
 linkend="configuringnagios-configmain-host_perfdata_file_mode">host_perfdata_file_mode</link>
 et <link

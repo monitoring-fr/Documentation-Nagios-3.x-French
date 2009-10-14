@@ -174,13 +174,13 @@ de gestionnaire d'événement pour la définition du service
 max_check_attempts du service une valeur supérieure ou égale à 4 (i.e le
 service est contrôlé 4 fois avant qu'on ne considère qu'il a un réel
 problème). Un exemple de définition (avec uniquement les champs concernés)
-ressemblerait à ceci ... </para>
+ressemblerait à ceci … </para>
 		<programlisting>define service{
 		        host_name               somehost
 		        service_description     HTTP
 		        max_check_attempts      4
 		        event_handler           restart-httpd
-		        ...
+		        …
 		        }</programlisting>
 		<para>Une fois que le service a été défini avec un gestionnaire d'événement, nous
 devons définir le gestionnaire d'événement comme une commande. Un exemple de
@@ -205,21 +205,21 @@ le fichier
 			# What state is the HTTP service in?
 			case "$1" in
 			OK)
-			        # The service just came back up, so don't do anything...
+			        # The service just came back up, so don't do anything…
 			        ;;
 			WARNING)
-			        # We don't really care about warning states, since the service is probably still running...
+			        # We don't really care about warning states, since the service is probably still running…
 			        ;;
 			UNKNOWN)
-			        # We don't know what might be causing an unknown error, so don't do anything...
+			        # We don't know what might be causing an unknown error, so don't do anything…
 			        ;;
 			CRITICAL)
-			        # Aha!  The HTTP service appears to have a problem - perhaps we should restart the server...
+			        # Aha!  The HTTP service appears to have a problem - perhaps we should restart the server…
 			        # Is this a "soft" or a "hard" state?
 			        case "$2" in
 
 			        # We're in a "soft" state, meaning that Nagios is in the middle of retrying the
-			        # check before it turns into a "hard" state and contacts get notified...
+			        # check before it turns into a "hard" state and contacts get notified…
 			        SOFT)
 
 			                # What check attempt are we on?  We don't want to restart the web server on the first
@@ -233,7 +233,7 @@ le fichier
 			                # result in a "soft" recovery.  If that happens no one gets notified because we
 			                # fixed the problem!
 			                3)
-			                        echo -n "Restarting HTTP service (3rd soft critical state)..."
+			                        echo -n "Restarting HTTP service (3rd soft critical state)…"
 			                        # Call the init script to restart the HTTPD server
 			                        /etc/rc.d/init.d/httpd restart
 			                        ;;
@@ -246,7 +246,7 @@ le fichier
 			        # Note: Contacts have already been notified of a problem with the service at this
 			        # point (unless you disabled notifications for this service)
 			        HARD)
-			                echo -n "Restarting HTTP service..."
+			                echo -n "Restarting HTTP service…"
 			                # Call the init script to restart the HTTPD server
 			                /etc/rc.d/init.d/httpd restart
 			                ;;

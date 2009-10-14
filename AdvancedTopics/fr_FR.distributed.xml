@@ -12,7 +12,7 @@
 		<title>Introduction</title>
 		<para>Nagios peut être configuré pour supporter la supervision distribuée des
 services et ressources du réseau. Je vais essayer d'expliquer brièvement
-comment cela peut être fait... </para>
+comment cela peut être fait… </para>
 	</section>
 	<section>
 		<title>Buts</title>
@@ -29,7 +29,7 @@ des milliers d'hôtes (et plusieurs fois cette valeur en termes de services)
 		<title>Diagramme de référence</title>
 		<para>Le diagramme ci-dessous devrait vous aider à vous faire une idée du
 fonctionnement de la supervision distribuée avec Nagios. Je ferai référence
-aux éléments du diagramme quand j'expliquerai les choses... </para>
+aux éléments du diagramme quand j'expliquerai les choses… </para>
 		<para>
 		<informalfigure>
 		<mediaobject>
@@ -47,7 +47,7 @@ a des différences entre la configuration du serveur central et celle des
 serveurs distribués. Je vous montrerai comment configurer ces deux types de
 serveurs et j'expliquerai les effets des changements sur la supervision en
 général. A l'intention des débutants, décrivons d'abord l'utilité des
-différents serveurs... </para>
+différents serveurs… </para>
 		<para>Le rôle d'un serveur distribué est de contrôler tous les services définis
 pour une grappe [cluster] d'hôtes. J'utilise ce terme <quote>grappe</quote>
 de manière inappropriée : il désigne simplement un groupe d'hôtes de votre
@@ -61,7 +61,7 @@ simplifiée de Nagios. Il n'est pas besoin d'installer l'interface web,
 d'envoyer des notifications, de faire tourner les scripts de gestionnaires
 d'événements ou de faire autre chose que l'exécution des contrôles de
 service si vous ne le souhaitez pas. De plus amples explications relatives à
-la configuration du serveur distribué suivront... </para>
+la configuration du serveur distribué suivront… </para>
 		<para>Le but du serveur central est d'écouter simplement les résultats des
 contrôles de service d'un ou de plusieurs serveurs distribués. Même si les
 services sont occasionnellement contrôlés activement par le serveur central,
@@ -305,9 +305,9 @@ pour l'ensemble du logiciel, soit l'option
 surveillé par un serveur distribué. Cela assure que les contrôles de service
 actifs ne sont jamais exécutés en temps normal. Les services continueront à
 être ordonnancés à leur intervalle de contrôle normal (3 minutes, 5 minutes,
-etc...), mais ils ne seront jamais exécutés. Cette boucle de ré
+etc…), mais ils ne seront jamais exécutés. Cette boucle de ré
 ordonnancement continuera aussi longtemps que Nagios tourne. Je vais
-expliquer bientôt pourquoi ce type de fonctionnement... </para>
+expliquer bientôt pourquoi ce type de fonctionnement… </para>
 		<para>Et voilà ! Facile, non ?</para>
 	</section>
 	<section>
@@ -320,7 +320,7 @@ d'autre pour fournir les données supervisées. Que se passe-t-il si l'hôte
 distant qui envoie les résultats s'effondre ou devient injoignable ? Si
 Nagios ne contrôle pas activement les services de cet hôte, comment
 saura-t-il qu'il y a un problème ?</para>
-		<para>Heureusement, il y a une façon de gérer ces types de problèmes...</para>
+		<para>Heureusement, il y a une façon de gérer ces types de problèmes…</para>
 	</section>
 	<section>
 		<title>Le contrôle de validité des données</title>
@@ -346,7 +346,7 @@ checking)</para>
 			<listitem>
 				<para>L'option <varname>freshness_threshold</varname> dans la définition des
 services doit être positionné à une valeur qui indique le niveau de validité
-([NdT] : la traduction littérale est la "fraîcheur", mais il ne me semble
+([NdT] : la traduction littérale est la <quote>fraîcheur</quote>, mais il ne me semble
 pas adapté) des données (telles que fournies par les serveurs distribués).</para>
 			</listitem>
 			<listitem>
@@ -384,7 +384,7 @@ douloureux), vous pouvez simplement définir toutes les options
 état critique. Voici un exemple : supposons que vous ayez défini une
 commande <varname>service-fige</varname> et utilisez cette commande dans
 l'option <varname>check_command</varname> de vos services. Elle pourrait
-ressembler à cela .....</para>
+ressembler à cela …..</para>
 		<programlisting>
 		define command{
 			command_name    service-fige

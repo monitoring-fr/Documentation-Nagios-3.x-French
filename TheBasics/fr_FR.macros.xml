@@ -41,7 +41,7 @@ suivante :
 		        host_name               linuxbox
 		        address         192.168.1.2
 		        check_command   check_ping
-		        ...
+		        …
 		        }
 		       
 		define command{
@@ -69,12 +69,12 @@ d'exclamation (!) comme ceci :</para>
 		        host_name               linuxbox
 		        service_description     PING
 		        check_command   check_ping!200.0,80%!400.0,40%
-		        ...
+		        …
 		        }
 		</programlisting>
 		<para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
 paramètres (auxquels on fait référence par les macros $ARGn$). La macro
-$ARG1$ vaudra "200.0,80%" et $ARG2$ <code>$ARG2$</code> vaudra "400.0,40%" (sans les guillemets). Supposons que nous utilisons la
+$ARG1$ vaudra <quote>200.0,80%</quote> et $ARG2$ <code>$ARG2$</code> vaudra <quote>400.0,40%</quote> (sans les guillemets). Supposons que nous utilisons la
 définition d'hôte ci-dessus et une commande check_ping définie comme ceci :</para>
 		<programlisting>
 		define command{
@@ -94,12 +94,12 @@ devront aussi être espacés avec un backslash.</para></tip></para>
 		<para>Normalement, quand vous utilisez des macros d'hôte ou de service dans les
 définitions de commandes, elles font référence aux valeurs de l'hôte ou du
 service pour lequel s'exécute la commande. Par exemple, si la commande de
-contrôle d'un hôte s'exécute pour l'hôte appelé "linuxbox", toutes les
+contrôle d'un hôte s'exécute pour l'hôte appelé <quote>linuxbox</quote>, toutes les
 macros d'hôte listées dans le tableau ci-après font référence aux valeurs de
-cet hôte ("linuxbox").</para>
+cet hôte (<quote>linuxbox</quote>).</para>
 		<para>Si vous souhaitez faire référence aux valeurs d'un autre hôte ou service
 dans une commande (pour lequel ne s'exécute pas la commande), vous pouvez
-utiliser ce qu'on appellle des macros "à la demande". Les macros à la
+utiliser ce qu'on appellle des macros <quote>à la demande</quote>. Les macros à la
 demande ressemblent aux macros normales, mis à part qu'elle contiennent
 l'identifiant de l'hôte ou du service où aller chercher leur valeur. Voici
 la syntaxe de base pour les macros à la demande :</para>
@@ -179,13 +179,13 @@ variable personnalisée est appelée comme suit :</para>
 			</listitem>
 		</itemizedlist>
 		<para>Prenez la définition d'hôte suivante avec une variable personnalisée appelée
-"<code>_MACADDRESS</code>"...</para>
+<quote><code>_MACADDRESS</code></quote>…</para>
 		<programlisting>
 		define host{
 		        host_name               linuxbox
 		        address         192.168.1.1
 		        _MACADDRESS     00:01:02:03:04:05
-		        ...
+		        …
 		        }
 		</programlisting>
 		<para>The <code>_MACADDRESS</code> serait disponible dans une macro appelée <code>$_HOSTMACADDRESS$</code>. Plus d'information sur les variables personnalisées d'objets et comment
@@ -269,10 +269,10 @@ service à la demande ne sont pas disponibles comme variables
 d'environnement.</para>
 		<para>Les variables d'environnement qui contiennent des macros sont nommées comme
 les macros correspondantes (listées <link
-linkend="thebasics-macrolist">ici</link>), avec le préfixe "NAGIOS_". Par
+linkend="thebasics-macrolist">ici</link>), avec le préfixe <quote>NAGIOS_</quote>. Par
 exemple, la macro <link
 linkend="thebasics-macrolist-hostname">$HOSTNAME$</link> est disponible à
-travers la variable d'environnement nommée "NAGIOS_HOSTNAME".</para>
+travers la variable d'environnement nommée <quote>NAGIOS_HOSTNAME</quote>.</para>
 	</section>
 	<section>
 		<title>Validité des macros</title>

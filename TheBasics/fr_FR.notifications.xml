@@ -28,7 +28,7 @@ linkend="advancedtopics-escalations">ici</link>.</para>
 
   <para>La décision d'émettre des notifications est prise dans le cadre du contrôle
 de service et du contrôle d'hôte. Les notifications d'hôte et de service ont
-lieu dans les cas suivants ...</para>
+lieu dans les cas suivants …</para>
 
   <itemizedlist>
    <listitem>
@@ -68,7 +68,7 @@ signifie pas que des contacts vont la recevoir. Il y a plusieurs filtres
 qu'une notification doit traverser avant d'être jugée valable pour
 l'émission. Même alors, des contacts peuvent ne pas la recevoir si leurs
 filtres de notification ne le permettent pas. Voyons en détail les filtres à
-traverser... </para>
+traverser… </para>
  </section>
 
  <section>
@@ -80,7 +80,7 @@ non. Ceci est spécifié par le paramétre <link
 linkend="configuringnagios-configmain-enable_notifications">enable_notifications<code>enable_notifications</code></link> du fichier de configuration principal, mais peut être modifié en
 cours d'exécution via l'interface web. Si les notifications sont désactivées
 de manière globale, aucune notification ne sera envoyée - point final. Si
-elles sont activées, il y a encore d'autres tests à réussir... </para>
+elles sont activées, il y a encore d'autres tests à réussir… </para>
  </section>
 
  <section>
@@ -110,13 +110,13 @@ notifications doivent être envoyées quand l'hôte s'arrête [NdT: état DOWN],
 devient inaccessible [UNREACHABLE], ou se rétablit [RECOVERY]. Si la
 notification d'hôte ou de service est bloquée par ces paramétres, personne
 n'est notifié. Dans le cas contraire, la notification est passée au filtre
-suivant...</para>
+suivant…</para>
 
   <note>
    <para>Les notifications concernant les rétablissement d'hôtes et de services ne
 sont émises que si une notification a été envoyée à l'apparition du
 problème. Cela n'a pas de sens de recevoir une notification de
-rétablissement pour un problème dont vous n'aviez pas connaissance... </para>
+rétablissement pour un problème dont vous n'aviez pas connaissance… </para>
   </note>
 
   <para>Le quatrième filtre des notifications d'hôte et de service à traverser
@@ -125,7 +125,7 @@ paramétre &lt;<code>notification_period</code>notification_period&gt; qui spéc
 notification valides pour cet hôte ou service. Si le moment où la
 notification apparaît n'est pas dans une plage valide de la période
 spécifiée, personne n'est contacté. Dans le cas contraire, la notification
-est passée au filtre suivant...</para>
+est passée au filtre suivant…</para>
 
   <note>
    <para>Si le filtre de période n'est pas traversé, Nagios réordonnancera la
@@ -146,7 +146,7 @@ temps écoulé depuis la dernière notification est insuffisant, personne n'est
 contacté. Si un temps suffisant s'est écoulé, ou si les deux conditions de
 ce filtre n'ont pas été réunies, la notification sera émise ! Le fait
 qu'elle parvienne ou non aux contacts individuels relève d'un autre jeu de
-filtres... </para>
+filtres… </para>
  </section>
 
  <section>
@@ -173,13 +173,13 @@ déterminent si les notifications de service peuvent être émises pour les
 être émises lorsqu'un hôte passe dans les états DOWN, UNREACHABLE, ou
 RECOVERY. Si la notification d'hôte ou de service ne remplit pas ces
 conditions, les contacts ne recevront pas de notification. Dans le cas
-contraire, la notification est passée au prochain filtre...</para>
+contraire, la notification est passée au prochain filtre…</para>
 
   <note>
    <para>Les notifications concernant les rétablissement d'hôtes et de services ne
 sont émises que si une notification a été envoyée à l'apparition du
 problème. Cela n'a pas de sens de recevoir une notification de
-rétablissement pour un problème dont vous n'aviez pas connaissance... </para>
+rétablissement pour un problème dont vous n'aviez pas connaissance… </para>
   </note>
 
   <para>Le dernier filtre à passer pour chaque contact concerne la période. Chaque
@@ -359,7 +359,7 @@ notification possibles :</para>
    </listitem>
 
    <listitem>
-    <para>etc...</para>
+    <para>etc…</para>
    </listitem>
   </itemizedlist>
 
@@ -373,7 +373,7 @@ notification via un modem quand un problème arrive. De cette façon, vous
 n'êtes pas dépendant de l'email pour émettre des notifications (gardez à
 l'esprit que l'email peut *ne pas* fonctionner s'il y a des problèmes
 réseau). Je n'ai pas personnellement essayé ces applications, mais certains
-m'ont dit l'avoir fait avec succès...</para>
+m'ont dit l'avoir fait avec succès…</para>
 
   <itemizedlist>
    <listitem>

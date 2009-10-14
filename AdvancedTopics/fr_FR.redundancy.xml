@@ -84,19 +84,19 @@ segments réseau, etc.</para>
 			<title>Buts</title>
 			
 			<para>Le but de ce type d’implémentation de redondance est simple. Les hôtes
-"maître" et "esclave" surveillent les mêmes systèmes et services sur le
-réseau. Dans des circonstances normales, le système "maître" prendra en
+<quote>maître</quote> et <quote>esclave</quote> surveillent les mêmes systèmes et services sur le
+réseau. Dans des circonstances normales, le système <quote>maître</quote> prendra en
 charge l’envoi des notifications aux contacts concernant les problèmes
-détectés. Nous voulons que système "esclave" fasse fonctionner Nagios et
+détectés. Nous voulons que système <quote>esclave</quote> fasse fonctionner Nagios et
 prenne en charge la notification des problèmes si:</para>
 			
 			<orderedlist>
 				<listitem>
-					<para>Soit le système "Maître" faisant fonctionner Nagios ne répond plus</para>
+					<para>Soit le système <quote>Maître</quote> faisant fonctionner Nagios ne répond plus</para>
 				</listitem>
 				
 				<listitem>
-					<para>Soit le processus Nagios sur le système "Maître" arrête de fonctionner.</para>
+					<para>Soit le processus Nagios sur le système <quote>Maître</quote> arrête de fonctionner.</para>
 				</listitem>
 			</orderedlist>
 		</section>
@@ -107,8 +107,8 @@ prenne en charge la notification des problèmes si:</para>
 			<para>Le diagramme ci-dessous montre une configuration réseau très simple. Pour ce
 scénario, je vais supposer que les systèmes A et E font tourner tous deux
 Nagios et surveillent tous les systèmes que l’on y voit. Le système A sera
-considéré comme étant le système "maître" et le système E sera considéré
-comme étant "l’esclave". </para>
+considéré comme étant le système <quote>maître</quote> et le système E sera considéré
+comme étant <quote>l’esclave</quote>. </para>
 			
 			<informaltable frame="all">
 				<tgroup cols="1">
@@ -219,7 +219,7 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 			<para>Gestionnaire d’Evènement de système (handle-master-host-event):</para>
 				
 			<programlisting>#!/bin/sh
-				# Only take action on hard host states...
+				# Only take action on hard host states…
 				case "$2" in
 				HARD)
 				        case "$1" in
@@ -227,14 +227,14 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 				                # The master host has gone down!
 				                # We should now become the master host and take
 				                # over the responsibilities of monitoring the
-				                # network, so enable notifications...
+				                # network, so enable notifications…
 		 /usr/local/nagios/libexec/eventhandlers/enable_notifications
 				                ;;
 				        UP)
 				                # The master host has recovered!
 				                # We should go back to being the slave host and
 				                # let the master host do the monitoring, so
-				                # disable notifications...
+				                # disable notifications…
 		 /usr/local/nagios/libexec/eventhandlers/disable_notifications
 				                ;;
 				        esac
@@ -245,7 +245,7 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 			<para>Gestionnaire d’Evènements de Service (handle-master-proc-event):</para>
 				
 			<programlisting>#!/bin/sh
-				# Only take action on hard service states...
+				# Only take action on hard service states…
 				case "$2" in
 				HARD)
 				        case "$1" in
@@ -253,7 +253,7 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 				                # The master Nagios process is not running!
 				                # We should now become the master host and
 				                # take over the responsibility of monitoring
-				                # the network, so enable notifications...
+				                # the network, so enable notifications…
 		 /usr/local/nagios/libexec/eventhandlers/enable_notifications
 				                ;;
 				        WARNING)
@@ -262,12 +262,12 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 				                # be running.. We won't do anything here, but
 				                # to be on the safe side you may decide you
 				                # want the slave host to become the master in
-				                # these situations...
+				                # these situations…
 				                ;;
 				        OK)
 				                # The master Nagios process running again!
 				                # We should go back to being the slave host,
-				                # so disable notifications...
+				                # so disable notifications…
 		 /usr/local/nagios/libexec/eventhandlers/disable_notifications
 				                ;;
 				        esac
@@ -418,7 +418,7 @@ des problèmes.</para>
 			<para>Le temps où aucun système ne surveille est assez difficile à
 déterminer. Toutefois, cette période peut être minimisée en augmentant la
 fréquence de vérification (sur le système E) du processus Nagios sur le
-système A. Le reste est une question de chance, mais le temps de "blackout"
+système A. Le reste est une question de chance, mais le temps de <quote>blackout</quote>
 total ne devrait pas être trop mauvais.</para>
 
 		

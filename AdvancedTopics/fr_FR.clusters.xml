@@ -13,7 +13,7 @@
 		<para>Plusieurs personnes ont demandé comment il est possible de superviser des
 clusters d'hôtes ou de services, aussi ai-je décidé d'écrire une petite
 documentation sur comment le faire. C'est plutôt simple aussi ne
-devriez-vous pas avoir de problème de compréhension...</para>
+devriez-vous pas avoir de problème de compréhension…</para>
 		<para>Premièrement, nous devons définri ce que nous entendons par
 <quote>cluster</quote>. La façon la plus simple pour comprendre est de
 prendere un exemple. Disons que votre organisation possède cinq serveurs qui
@@ -83,7 +83,7 @@ contrôle du statut global du cluster.</para></important>
 	<title>Utilisation du plugin check_cluster</title><para>Le plugin &plugin-cluster; est étudié pour rapporter l'état général d'un
 cluster d'hôtes ou de services en contrôlant individuellement l'état de
 chacun des éléments composant le cluster. </para>
-		<para>Plus à venir... Le plugin &plugin-cluster; peut être trouvé dans le
+		<para>Plus à venir… Le plugin &plugin-cluster; peut être trouvé dans le
 répertoire <filename class="directory">contrib</filename> de la distribution
 des Plugins Nagios à l'adresse <ulink
 url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug/</ulink>.</para>
@@ -113,9 +113,9 @@ un état non-OK et une alerte WARNING si un seul des services est dans un
 état non-OK. Si tous les services faisant parti du cluster sont OK, le
 contrôle du cluster renvoie également un état OK.</para>
 		<programlisting>define service{
-	...
+	…
 	check_command   check_service_cluster!"DNS Cluster"!1!2!$SERVICESTATEID:host1:DNS Service$,$SERVICESTATEID:host2:DNS Service$,$SERVICESTATEID:host3:DNS Service$
-	...
+	…
 	}</programlisting>
 		<para>Il est important de noter que nous passons une liste séparée par des
 virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
@@ -136,7 +136,7 @@ avec l'hôte sur lequel Nagios fonctionne. Après tout, si l'hôte sur lequel
 fonctionne Nagios tombe, Nagios ne fonctionne plus, il n'y a donc plus grand
 chose à faire (à moins d'avoir mis en place une <link
 linkend="advancedtopics-redundancy">redondance de vos serveurs de
-supervision</link>)...</para>
+supervision</link>)…</para>
 		<para>Qu'importe, partons du principe que vous avez une <code>check_host_cluster</code> commande définie comme suit:</para>
 		<programlisting>define command{
 	command_name    check_host_cluster
@@ -149,9 +149,9 @@ n'est pas UP et une alerte critical si deux sont non UP, la définition de
 servie à utiliser pour contrôler le cluster d'hôtes pourrait ressembler à
 celle-ci:</para>
 		<programlisting>define service{
-       ...
+       …
        check_command   check_host_cluster!"Super Host Cluster"!1!2!$HOSTSTATEID:host1$,$HOSTSTATEID:host2$,$HOSTSTATEID:host3$
-       ...
+       …
         }</programlisting>
 		<para>Il est important de noter que nous passons une liste séparée par des
 virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état

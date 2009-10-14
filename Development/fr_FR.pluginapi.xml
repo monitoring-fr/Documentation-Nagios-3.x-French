@@ -127,8 +127,8 @@ lignes de texte en sortie. Les plugins peuvent aussi retourner
 optionnellement des données de performance qui pourront être traitées par
 une applicaiotn externe. Le format basique pour la sortie d'un plugin est
 décrit ci-dessous:</para>
-		<para>TEXT OUTPUT | OPTIONAL PERFDATALONG TEXT LINE 1LONG TEXT LINE 2...LONG TEXT
-LINE N | PERFDATA LINE 2PERFDATA LINE 3...PERFDATA LINE N</para>
+		<para>TEXT OUTPUT | OPTIONAL PERFDATALONG TEXT LINE 1LONG TEXT LINE 2…LONG TEXT
+LINE N | PERFDATA LINE 2PERFDATA LINE 3…PERFDATA LINE N</para>
 		<para>Les données de performance (ici en orange) sont optionnelles. Si un plugin
 renvoie des données de performance dans sa sortie, elles doivent être
 séparées du texte en utilisant le symbole 'pipe' ou 'tube' ( | ). Les lignes
@@ -136,7 +136,7 @@ supplémentaires de texte de sorties (ici en bleu) sont aussi optionnelles.</par
 	</section>
 	<section>
 		<title>Exemples De Sorties De Plugin</title>
-		<para>Voyons quelques exemples de sorties de plugin possibles...</para>
+		<para>Voyons quelques exemples de sorties de plugin possibles…</para>
 		<para><emphasis role="bold">Cas 1: Une ligne en sortie (texte
 seulement)</emphasis></para><para>Imaginons que notre plugin ne retourne qu'une seule ligne de texte en
 sortie, cela ressemblerait à ceci:</para>
@@ -257,10 +257,10 @@ trouvées <link linkend="thebasics-plugins">ici</link>.</para>
 	<section>
 		<title>Plugins Perl</title>
 		<para>Nagios peut utiliser en option un <link
-linkend="advancedtopics-embeddedperl">interpreteur Perl embarqué</link> qui
+linkend="advancedtopics-embeddedperl">interpréteur Perl intégré</link> qui
 peut accélérer l'exécution des plugins codés en Perl. Plus d'informations
 sur le développement des plugins en Perl utilisant l'interpréteur Perl
-embarqué disponibles <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
+intégré disponibles <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
 	</section>
 </chapter>
 

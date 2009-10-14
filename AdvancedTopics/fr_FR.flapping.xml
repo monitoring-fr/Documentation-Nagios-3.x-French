@@ -14,7 +14,7 @@
   <title>Introduction</title>
 
   <para>Nagios supporte la détection optionnelle des hôtes et des services qui
-"oscillent" [NdT: ou bagotent]. L'oscillation intervient quand un service ou
+<quote>oscillent</quote> [NdT: ou bagotent]. L'oscillation intervient quand un service ou
 un hôte change d'état trop fréquemment, provoquant une tempête de
 notifications de problèmes et de rétablissement. L'oscillation peut être
 l'indice de problèmes de configuration (i.e. des seuils positionnés trop
@@ -26,7 +26,7 @@ bas) ou de vrais problèmes sur le réseau.</para>
 
   <para>Avant d'aller plus loin, permettez-moi de signaler qu'implémenter la
 détection de l'oscillation a été assez difficile. Comment déterminer ce que
-"trop fréquemment" veut dire concernant les changements d'état de tel hôte
+<quote>trop fréquemment</quote> veut dire concernant les changements d'état de tel hôte
 ou service ? La première fois que je me suis penché sur la détection de
 l'oscillation, j'ai cherché des informations sur la façon dont on peut ou
 doit procéder. Voyant que je n'en trouvais pas, j'ai décidé de définir ce
@@ -73,7 +73,7 @@ descendu en dessous de la valeur du seuil inférieur d'oscillation.</para>
   <title>Exemple</title>
 
   <para>Laissez vous décrire plus en détail le fonctionnement de la détection
-d'oscillation avec les services...</para>
+d'oscillation avec les services…</para>
 
   <para>L'image suivante montre un tableau chronologique d'états de service. Les
 états OK sont en vert, les WARNING en jaune, les CRITICAL en rouge, et les
@@ -268,7 +268,7 @@ service), pour l'utilisation dans la logique de détection de l'oscillation.</pa
 l'oscillation en utilisant la directive
 <varname>flap_detection_options</varname> dans la définition de l'hôte ou du
 service. Cette option vous permet de préciser pour quel états d'hôte ou
-service (i.e. "UP, "DOWN", "OK, "CRITICAL") vous voulez utilisez la
+service (par exemple <quote>UP</quote>, <quote>DOWN</quote>, <quote>OK</quote>, <quote>CRITICAL</quote>) vous voulez utilisez la
 détection d'oscillation. Si vous n'utilisez pas cette directive, la règle
 par défaut sera appliquée pour tous.</para>
   </tip>
@@ -315,7 +315,7 @@ lorsqu'il avait commencé à osciller</para>
    </listitem>
 
    <listitem>
-    <para>Il envoie une notification de "retour à l'état normal" de l'hôte ou du
+    <para>Il envoie une notification de <quote>retour à l'état normal</quote> de l'hôte ou du
 service aux contacts.</para>
    </listitem>
 

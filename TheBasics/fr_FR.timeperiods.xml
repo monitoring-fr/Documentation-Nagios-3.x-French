@@ -8,9 +8,9 @@
 >
 <chapter id="thebasics-timeperiods" xreflabel="Time Periods">
  <title>Les périodes de temps</title>
-<abstract>
- <para>Ou... <quote>Est-ce le bon moment?</quote></para>
-</abstract>
+<note>
+ <para>Ou… <quote>Est-ce le bon moment?</quote></para>
+</note>
  <section>
   <title>Introduction</title>
 
@@ -104,7 +104,7 @@ s'assurer que le prochain contrôle tombe bien dans la plage horaire
 définie. Si ce n'est pas le cas, Nagios va ajuster l'heure du prochain
 contrôle pourqu'elle coincide avec la prochaine heure <quote>valide</quote>
 dans la plage horaire spécifiée. Ce qui signifie que l'hôte ou le service ne
-sera contrôlé à nouveau que dans plusieurs heures, jours, semaines, etc...</para>
+sera contrôlé à nouveau que dans plusieurs heures, jours, semaines, etc…</para>
 
   <note><para>Les contrôles à la demande et les contrôles passifs ne sont pas réstreints
 par la plage horaire spécifiée dans la directive
@@ -115,7 +115,7 @@ concernés.</para></note>
 surveiller tous les hôtes et les services en utilisant des plages horaires
 qui couvrent une période de temps 24x7. Si vous ne le faites pas, vous
 pouvez rencontrer certains problèmes au cours de ces périodes de
-"non-contrôle" (lorsque l'on ne se trouve pas dans un la plage horaire
+<quote>non-contrôle</quote> (lorsque l'on ne se trouve pas dans un la plage horaire
 définie):</para>
 
   <orderedlist>
@@ -154,8 +154,8 @@ les notifications individuellement à chaque contact. En utilisant les
 directives <varname>service_notification_period</varname> and
 <varname>host_notification_period</varname> dans <link
 linkend="configuringnagios-objectdefinitions-contact">la définition d'un
-contact</link>, vous serez en mesure de définir une plage horaire "sur
-mesure" pour chaque contact. Les contacts recevront les notifications pour
+contact</link>, vous serez en mesure de définir une plage horaire <quote>sur
+mesure</quote> pour chaque contact. Les contacts recevront les notifications pour
 les hôtes et les services seulement pendant la plage horaire que vous leur
 aurez specifié.</para>
 

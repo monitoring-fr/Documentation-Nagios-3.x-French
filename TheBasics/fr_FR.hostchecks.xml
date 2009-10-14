@@ -10,7 +10,7 @@
 	<title>Les contrôles d'hôtes</title>
 	<section>
 		<title>Introduction</title>
-		<para>Le fonctionnement de base des contrôles d'hôte est décrit ci-après...</para>
+		<para>Le fonctionnement de base des contrôles d'hôte est décrit ci-après…</para>
 	</section>
 	<section>
 		<title>Quand sont effectués les contrôles d'hôtes ?</title>
@@ -82,12 +82,12 @@ linkend="advancedtopics-dependencies">ici</link>.</para>
 		<para>Les contrôles d'hôtes planifiés sont lancés en parallèle. Quand Nagios a
 besoin de procéder un un contrôle d'hôte planifié, il lancera le contrôle de
 l'hôte et reviendra à son travail initial (contrôle des services,
-etc...). Le contrôle de l'hôte est lancé dans un processus enfant qui a été
+etc…). Le contrôle de l'hôte est lancé dans un processus enfant qui a été
 dupliqué à partir du démon principal de Nagios. Quand le contrôle d'hôte est
 terminé, le processus enfant informe le processus Nagios principal (son
 parent) du résultat. Le processus principal de Nagios gère le résultat qu'il
 a reçu et prends les mesures appropriées (lancement des gestionnaires
-d'événements, envois des notifications, etc...).</para>
+d'événements, envois des notifications, etc…).</para>
 		<para>Les contrôles à la demande sont également exécutés en parallèle si
 nécessaire. Comme mentionné précédement, Nagios peut renoncer à l'exécution
 d'un contrôle à la demande s'il peut utiliser un résultat relativement
@@ -101,7 +101,7 @@ utilisent la logique <link
 linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
 contrôles secondaires qui sont lancés sont généralement lancés en
 parallèle. Cependant, il y a une grosse exception dont vous devez être au
-courant, car elle peut avoir un effet négatif sur la performance...</para>
+courant, car elle peut avoir un effet négatif sur la performance…</para>
 		<note><para>Les hôtes qui ont leur variable <varname>max_check_attempts</varname>
 positionnée à 1 peuvent causer de sérieux problèmes de performance. La
 raison? Si Nagios a besoin de déterminer leur vrai état en utilisant la

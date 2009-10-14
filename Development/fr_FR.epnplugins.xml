@@ -13,7 +13,7 @@
  <section>
   <title>Introduction</title>
 
-  <para>Stanley Hopcroft a beaucoup travaillé sur l'interpréteur Perl intégré et a
+  <para><personname><firstname>Stanley</firstname><surname>Hopcroft</surname></personname> a beaucoup travaillé sur l'interpréteur Perl intégré et a
 commenté les avantages et désavantages de son utilisation. Il a également
 donné plusieurs trucs utiles pour écrire des plugins Perl qui fonctionnent
 correctement avec l'interpréteur intégré. La majeure partie de cette
@@ -138,7 +138,7 @@ remplacement</ulink> est une des solutions suivantes :
 par exemple :</para><programlisting><![CDATA[remplacez ceci        par 
 
 	my $x = 1 ;          my $x = 1 ;
-	sub a { .. Process $x ... }  $a_cr = sub { ... Process $x ... } ;
+	sub a { .. Process $x … }  $a_cr = sub { … Process $x … } ;
 	.               .
 	.               .
 	a ;              &$a_cr ;
@@ -239,7 +239,7 @@ affichées en rouge : </para>
 				#
 				# Copyright Notice: GPL
 				#
-				... rest of plugin code goes here (it was removed for brevity) ...
+				… rest of plugin code goes here (it was removed for brevity) …
 				}
 				</programlisting>
    </listitem>

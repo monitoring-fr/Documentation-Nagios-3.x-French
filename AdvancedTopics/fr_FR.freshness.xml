@@ -26,7 +26,7 @@ linkend="advancedtopics-redundancy">hautement disponible</link>.</para>
 		<para>
 			    <inlinemediaobject> <imageobject> <imagedata fileref="images/freshness.png"
 format="PNG"/> </imageobject> </inlinemediaobject> Nagios contrôle
-régulièrement la "fraîcheur" des résultats de tous les services dont le
+régulièrement la <quote>fraîcheur</quote> des résultats de tous les services dont le
 contrôle de fraîcheur est activé.</para>
 		<itemizedlist>
 			<listitem>
@@ -56,7 +56,7 @@ secondes (1 minute).</para>
 	</section>
 	<section>
 		<title>Activer le contrôle de la fraîcheur</title>
-		<para>Voici ce dont vous avez besoin pour activer le contrôle de la fraîcheur...</para>
+		<para>Voici ce dont vous avez besoin pour activer le contrôle de la fraîcheur…</para>
 		<itemizedlist>
 			<listitem>
 				<para>Activez le contrôle de fraîcheur par les paramètres <link
@@ -114,9 +114,9 @@ contrôles passifs. Pour vous assurer que l'état des travaux de sauvegarde
 est bien remonté chaque jour, vous activerez le contrôle de fraîcheur pour
 ce service. Si le script externe ne soumet pas les resultats du travail de
 sauvegarde, vous pouvez faire en sorte que Nagios simule un résultat
-critique de la manière suivante...</para>
+critique de la manière suivante…</para>
 		<para>Voici ce à quoi la définition du service pourrait ressembler (certains
-paramètres obligatoires ont été omis)... </para>
+paramètres obligatoires ont été omis)… </para>
 		<programlisting>define service{
 		        host_name               backup-server
 		        service_description     ArcServe Backup Job
@@ -125,7 +125,7 @@ paramètres obligatoires ont été omis)... </para>
 		        check_freshness         1
 		        freshness_threshold     93600           ; 26 hour threshold, since backups may not always finish at the same time
 		        check_command           no-backup-report        ; this command is run only if the service results are <quote>stale</quote>
-		        ...other options...
+		        …other options…
 		        }</programlisting>
 		<para>Notez que les contrôles actifs sont désactivés pour ce service. En effet les
 résultats du service sont uniquement fournis par une application externe, en
@@ -134,7 +134,7 @@ seuil de fraîcheur a été positionné à 26 heures. C'est un peu plus de 24
 heures parce que la durée des travaux de sauvegarde varie selon les jours
 (en fonction du volume de données à sauvegarder, de l'encombrement du
 réseau, etc.). La <code>no-backup-report</code> commande est exécutée seulement si les résultats du service sont considérés
-comme périmés. La définition de la <code>no-backup-report</code> commande pourrait ressembler à ceci...</para>
+comme périmés. La définition de la <code>no-backup-report</code> commande pourrait ressembler à ceci…</para>
 		<programlisting>define command{
 		        command_name    no-backup-report
 		        command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Results of backup job were not reported!"

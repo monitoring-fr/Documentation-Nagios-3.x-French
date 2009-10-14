@@ -35,10 +35,10 @@ mal, hein?</para>
 		<para>Quand vous programmerez une maitenance pour un hôte ou un service à travers
 l'interface web, il vous sera demandé si la maintenance est fixe ou
 flexible. Voilà une explication sur les différence entre les maintenance
-"fixe" et "flexible" :</para>
-		<para>les maintenance "fixe" commencent et finissent à l'heure exacte de début et
-de fin que vous avez programmée. Bon, ça c'était facile...</para>
-		<para>La maintenance "Flexible" est utilisé pour les périodes où vous savez que
+<quote>fixe</quote> et <quote>flexible</quote> :</para>
+		<para>les maintenance <quote>fixe</quote> commencent et finissent à l'heure exacte de début et
+de fin que vous avez programmée. Bon, ça c'était facile…</para>
+		<para>La maintenance <quote>Flexible</quote> est utilisé pour les périodes où vous savez que
 l'hôte ou le service sera arrêté pour X minutes (ou heures), mais vous ne
 savez pas exactement quand celà commencera. Quand vous programmez une
 maintenance flexible, Nagios va commencer la maintenance programmée dans
@@ -59,7 +59,7 @@ pas!</para>
 	<section>
 		<title>Maintenance déclanchée</title>
 		<para>Quand vous programmez une maintenance pour un hôte ou un service, vous avez
-l'option de faire une maintenance "triggered". Vous vous demandez ce qu'est
+l'option de faire une maintenance <quote>triggered</quote>. Vous vous demandez ce qu'est
 une maintenance déclenchés (triggered). Avec des maintenances déclenchéss,
 le début d'une maintenance est déclenché par le début d'une autre
 maintenance d'un hôte ou d'un service. C'est extrêmement utile si vous
@@ -74,23 +74,23 @@ voulez peut-être programmer une maintenance déclanchés pour tous les hôtes
 		<title>Comment les maintenances programmées affectent les notifications</title>
 		<para>Quand un hôte ou un service est dans une période de maitenance programmée,
 Nagios n'autorisera pas l'envoi de notifcations pour cet hôte ou
-service. Cependant une notification de "DOWNTIMESTART" sera envoyé pour cet
+service. Cependant une notification de <quote>DOWNTIMESTART</quote> sera envoyé pour cet
 hôte ou service, qui sert à indiquer aux administrateurs qu'ils ne
 receveront plus d'alerte pour cet hôte/service.</para>
 		<para>Quand une maintenance programmée est finie, Nagios va autorisé de nouveau
 l'envoit des notifications pour l'hôte ou le service.. Une notification de
-"DOWNTIMEEND" sera envoyé pour notifier aux adiminstrateurs que la
+<quote>DOWNTIMEEND</quote> sera envoyé pour notifier aux adiminstrateurs que la
 maintenance programmée est terminé, et qu'ils receveront les alertes de
 nouveau. </para>
 		<para>Si une maintenance programmée est annulé prématurément (avant qu'il expire)
-une notification de "DOWNTIMECANCELLED" sera envoyé aux administrateurs
+une notification de <quote>DOWNTIMECANCELLED</quote> sera envoyé aux administrateurs
 concernés. </para>
 	</section>
 	<section>
 		<title>Maintenances programmées qui se superposent</title>
-		<para>Je préfère appeller ça le syndrome du "Oh merde, ça ne marche pas". Vous
+		<para>Je préfère appeller ça le syndrome du <quote>Oh merde, ça ne marche pas</quote>. Vous
 savez de quoi je parle. Vous arrêtez un serveur pour faire une mise à jour
-de "routine", et vous vous rendez-compte plus tard que les driver de l'OS ne
+de <quote>routine</quote>, et vous vous rendez-compte plus tard que les driver de l'OS ne
 marche pas, que les RAID array ont explosé ou que l'image disque à échoué et
 que vous avez un disque inutile. La moral de l'histoire est qu'une opération
 de routine peut parfois prendre trois à quatre fois plus de temps que vous

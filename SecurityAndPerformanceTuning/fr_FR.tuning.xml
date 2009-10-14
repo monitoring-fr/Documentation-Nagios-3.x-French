@@ -19,7 +19,7 @@ réussi à installer et lancer Nagios et souhaitez savoir comment le régler
 plus finement. Régler Nagios pour améliorer ses performances peut être
 nécessaire quand vous commencez à superviser un grand nombre (&gt; 1000)
 d'hôtes et services. Voici quelques trucs et astuces pour optimiser
-Nagios...</para>
+Nagios…</para>
  </section>
 
  <section>
@@ -209,11 +209,11 @@ vite, accélérant le traitement des résultats de contrôles de
 service. Cependant, les rétablissements d'hôtes peuvent être manqués en
 certaines circonstances lorsque l'option est désactivée. Par exemple, si un
 hôte se rétablit et que tous les services associés à cet hôte restent dans
-un état non-OK (et ne "bagotent" pas entre différents états non-OK), Nagios
+un état non-OK (et ne <quote>bagotent</quote> pas entre différents états non-OK), Nagios
 peut ne pas voir que l'hôte s'est rétabli. Certains utilisateurs peuvent
 avoir besoin d'activer cette option, mais ce n'est pas le cas pour la
 majorité, et je recommanderais de ne pas l'utiliser si vous n'en avez pas
-expressément besoin...</para>
+expressément besoin…</para>
    </listitem>
 
    <listitem>

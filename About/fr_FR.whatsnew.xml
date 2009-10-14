@@ -108,7 +108,7 @@ contiennent maintenant elles-mêmes des macros, celles-ci sont:
  <listitem>
  <para>Les macros sont normalement disponibles comme variables d'environnement
 quand les contrôles, gestionnaires d'événements, notifications et autres
-commandes sont executées. Ceci est plutôt consommateur de ressources CPU
+commandes sont exécutées. Ceci est plutôt consommateur de ressources CPU
 dans des installations larges de Nagios, vous devriez alors désactiver cette
 fonctionnalité à l'aide de l'option <link
 linkend="configuringnagios-configmain-enable_environment_macros">enable_environment_macros</link>.</para>
@@ -143,7 +143,7 @@ file</link>.</para>
  <itemizedlist>
  <listitem>
  <para>Les commentaires de services et d'hôtes ne sont plus stockés dans leur
-propre fichier (précedemment spécifié à l'aide d'une directive
+propre fichier (précédemment spécifié à l'aide d'une directive
 <varname>comment_file</varname> dans le fichier de configuration
 principal). Les commentaires courant et retenus sont maintenant stockés
 respectivement dans <link linkend="configuringnagios-configmain-status_file">le fichier statut</link>
@@ -151,8 +151,8 @@ et <link linkend="configuringnagios-configmain-state_retention_file">le fichier 
  </listitem>
  <listitem>
  <para>Les commentaires d'acquittement qui sont marqués comme non persistents sont
-maintenant supprimmés quand l'acquitement est enlevé. Ils étaient
-précédemment automatiquement supprimés au redémarage de nagios, ce qui
+maintenant supprimmés quand l'acquittement est enlevé. Ils étaient
+précédemment automatiquement supprimés au redémmarage de nagios, ce qui
 n'était pas idéal.</para>
  </listitem>
  </itemizedlist>
@@ -164,7 +164,7 @@ n'était pas idéal.</para>
  <itemizedlist>
  <listitem>
  <para>Les informations d'état des contacts individuels sont dorénavant conservées à
-chaque redémarage.</para>
+chaque redémarrage.</para>
  </listitem>
  
 	<listitem>
@@ -197,7 +197,7 @@ linkend="configuringnagios-configmain-retained_contact_host_attribute_mask">reta
 et <link
 linkend="configuringnagios-configmain-retained_contact_service_attribute_mask">retained_contact_service_attribute_mask</link>
 afin de contrôler quels attributs de contact sont conservés entre chaque
-redemarage. </para>
+redémmarage. </para>
  </listitem>
  </itemizedlist>
  </section>
@@ -283,7 +283,7 @@ bien que celles-ci ne soient pas traitées par les CGIs.</para>
  </section>
 
  <section>
- <title>Perl embarqué</title>
+ <title>Perl intégré</title>
 
  <itemizedlist>
  <listitem>
@@ -291,14 +291,14 @@ bien que celles-ci ne soient pas traitées par les CGIs.</para>
 linkend="configuringnagios-configmain-enable_embedded_perl">enable_embedded_perl</link>
 et <link
 linkend="configuringnagios-configmain-use_embedded_perl_implicitly">use_embedded_perl_implicitly</link>
-afin de contrôler l'utilisation de l'interpréteur Perl embarqué.</para>
+afin de contrôler l'utilisation de l'interpréteur Perl intégré.</para>
  </listitem>
 
  <listitem>
  <para>Les scripts/plugins Perl peuvent maintenant explicitement signaler à Nagios
 si ils devraient, ou pas, être exécutés par l'interpréteur Perl
-embarqué. Cela est utile si vous avez des scripts qui ne fonctionnent pas
-bien avec l'interpréteur Perl embarqué.</para>
+intégré. Cela est utile si vous avez des scripts qui ne fonctionnent pas
+bien avec l'interpréteur Perl intégré.</para>
  </listitem>
 
  <listitem>

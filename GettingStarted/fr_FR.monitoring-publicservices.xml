@@ -8,7 +8,7 @@
 >
 <chapter id="gettingstarted-monitoring-publicservices" xreflabel="Monitoring publicly available services (HTTP, FTP, SSH, etc.)">
  <title>Supervision des services publiquement disponibles</title>
- <abstract>
+ <note>
   <para>Ce document décrit la façon de superviser des services, applications et
 protocoles rendus disponibles publiquement. Par <quote>public</quote>
 j'entends les services qui sont accessibles à travers le réseau - que ce
@@ -18,7 +18,7 @@ de services incluent &protocol-http;, &protocol-pop3;, &protocol-imap;,
 que ce que vous utilisez probablement au quotidien. Ces services et
 applications, ainsi que les protocoles sous-jacents, peuvent en général être
 supervisés avec Nagios sans nécessiter d'accès spéciaux.</para>
- </abstract>
+ </note>
  <section>
   <title>Introduction</title>
   <para>Les services privés, à l'opposé, ne peuvent pas être supervisés par Nagios
@@ -87,7 +87,7 @@ linkend="development-pluginapi">développement de plugins</link> pour plus
 d'information.</para>
   <para>Je vais passer en revue la supervision de services basiques que vous aurez
 probablement à faire tôt au tard. Chacun de ces services peut être supervisé
-en utilisant un des plugins compris dans la ditribution Nagios. Allons-y...</para>
+en utilisant un des plugins compris dans la ditribution Nagios. Allons-y…</para>
  </section>
  <section>
   <title>Création d'une définition d'hôte</title>

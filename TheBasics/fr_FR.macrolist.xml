@@ -36,12 +36,12 @@ commandes que Nagios identifie et traite différemment. Ce sont les suivantes
 				</listitem>
 				<listitem>
 					<para>Les <link linkend="advancedtopics-eventhandlers">gestionnaires
-d'évènements</link> de service et/ou le gestionnaire global d'évènements de
+d'événements</link> de service et/ou le gestionnaire global d'événements de
 service</para>
 				</listitem>
 				<listitem>
 					<para>Les <link linkend="advancedtopics-eventhandlers">gestionnaires
-d'évènements</link> d'hôte et/ou le gestionnaire global d'évènements d'hôte </para>
+d'événements</link> d'hôte et/ou le gestionnaire global d'événements d'hôte </para>
 				</listitem>
 				<listitem>
 					<para>
@@ -5582,7 +5582,7 @@ d'hôte a été tenté le nombre de fois maximum défini.</para>
 								<para>Le nombre d'essais de contrôle d'hôte actuel. Par exemple, si c'est la
 seconde fois que l'hôte est contrôlé, ce sera le nombre 2. Le nombre actuel
 d'essai n'est réellement utile que pour l'écriture de gestionnaires
-d'évènements d'hôte pour des états <quote>SOFT</quote>, qui agiraient de
+d'événements d'hôte pour des états <quote>SOFT</quote>, qui agiraient de
 manière spécifique selon le nombre de tentatives.</para>
 							</entry>
 						</row>
@@ -6151,7 +6151,7 @@ de service a été tenté le nombre de fois maximum défini.</para>
 								<para>Le nombre actuel d'essais de contrôle du service. Par exemple, si c'est la
 seconde fois que le service est contrôlé, ce sera le nombre deux. Le nombre
 actuel d'essai n'est réellement utile que pour l'écriture de gestionnaires
-d'évènements d'hôte pour des états <quote>SOFT</quote>, qui agiraient de
+d'événements d'hôte pour des états <quote>SOFT</quote>, qui agiraient de
 manière spécifique selon le nombre de tentatives.</para>
 							</entry>
 						</row>
@@ -6162,7 +6162,7 @@ manière spécifique selon le nombre de tentatives.</para>
 							</entry>
 							<entry>
 								<para>Le nombre maximum d'essais de contrôle du service actuel. Utile pour
-l'écriture de gestionnaires d'évènements d'hôte pour des états
+l'écriture de gestionnaires d'événements d'hôte pour des états
 <quote>SOFT</quote>, qui agiraient de manière spécifique selon le nombre de
 tentatives de contrôle de service.</para>
 							</entry>
@@ -6389,7 +6389,7 @@ le service a été vu dans l'état CRITICAL pour la dernière fois.</para>
 							</entry>
 							<entry>
 								<para>La première ligne du texte en sortie du dernier contrôle de service
-(p. ex. "Ping OK").</para>
+(p. ex. <quote>Ping OK</quote>).</para>
 							</entry>
 						</row>
 						<row>
@@ -6399,7 +6399,7 @@ le service a été vu dans l'état CRITICAL pour la dernière fois.</para>
 							</entry>
 							<entry>
 								<para>Le texte complet (en plus de la première ligne) en sortie du dernier
-contrôle de service (p. ex. "Ping OK").</para>
+contrôle de service (p. ex. <quote>Ping OK</quote>).</para>
 							</entry>
 						</row>
 						<row>
@@ -7423,7 +7423,7 @@ linkend="configuringnagios-configmain-admin_pager">admin_pager</link>.</para>
 							</entry>
 							<entry>
 								<para>Le nième paramétre passé à la commande (notification, gestionnaire
-d'évènement, contrôle de service, etc.). Nagios gère jusqu'à 32 macros de
+d'événement, contrôle de service, etc.). Nagios gère jusqu'à 32 macros de
 paramétre (de $ARG1$ à $ARG32$).</para>
 							</entry>
 						</row>
@@ -7459,7 +7459,7 @@ encore déterminées). </para>
 			<para>
 				<anchor id="thebasics-macrolist-note3"/> 3 Quand des macros d'hôte sont
 utilisées dans des commandes relatives à un service (c.-à-d. les
-notifications de service, les gestionnaires d'évènements, etc.) elles font
+notifications de service, les gestionnaires d'événements, etc.) elles font
 référence à l'hôte auquel est associé le service. </para>
 			<para>
 				<anchor id="thebasics-macrolist-note4"/> 4 Quand les macros récapitulatives
