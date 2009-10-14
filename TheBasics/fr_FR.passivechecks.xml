@@ -43,7 +43,7 @@ cas des passifs, cet acheminement est géré par une application externe.</para>
   <itemizedlist>
    <listitem>
     <para>asynchrones par nature et ne peuvent donc pas être contrôlés activement de
-manière fiable (p.ex. les traps &protocol-snmp;, les alertes de sécurité, etc.)</para>
+manière fiable (p.ex. les interruptions SNMP, les alertes de sécurité, etc.)</para>
    </listitem>
 
    <listitem>
@@ -53,7 +53,7 @@ l'hôte supportant Nagios</para>
   </itemizedlist>
 
   <para>Les exemples de services asynchrones qui se prêtent à être contrôlés
-passivement incluent les &protocol-snmp; traps et alertes de sécurité. Vous
+passivement incluent les interruptions &protocol-snmp; et alertes de sécurité. Vous
 ne savez jamais à quels moments une faille de sécurité peut être franchit,
 donc il n'est pas réalisable de contrôler leur statut toutes les deux ou
 trois minutes.</para>
@@ -72,7 +72,7 @@ linkend="advancedtopics-redundancy">redondante</link></para>
      <imagedata fileref="images/passivechecks.png" format="PNG"/>
     </imageobject>
    </mediaobject>
-   </informalfigure>Ci-dessous, le fonctionnement des contrôles passifs en plus détaillé ...</para>
+   </informalfigure>Ci-dessous, le fonctionnement des contrôles passifs en plus détaillé …</para>
 
   <orderedlist>
    <listitem>
@@ -93,10 +93,10 @@ les résultats des contrôles actifs que passifs.</para>
 
    <listitem>
     <para>Nagios va exécuter périodiquement un <link
-linkend="configuringnagios-configmain-check_result_reaper_frequency">évènement
+linkend="configuringnagios-configmain-check_result_reaper_frequency">événement
 collecteur de résultat</link> et scanner la queue. Chaque résultats de
 services trouvés sont traités de la même manière qu'il soit actif ou
-passif. Nagios enverra les notifications, alertes de log, ect... en fonction
+passif. Nagios enverra les notifications, alertes de log, ect… en fonction
 du résultat des contrôles.</para>
    </listitem>
   </orderedlist>
@@ -141,7 +141,7 @@ PROCESS_SERVICE_CHECK_RESULT dans le fichier de commande externe.</para>
 
   <para>Le format de la commande ressemble à ce qui suit: <code>[&lt;timestamp&gt;]
   PROCESS_SERVICE_CHECK_RESULT;&lt;host_name&gt;;&lt;svc_description&gt;;&lt;return_code&gt;;&lt;plugin_output&gt;</code>
-  ou...</para>
+  ou…</para>
 
   <itemizedlist>
    <listitem>
@@ -189,7 +189,7 @@ PROCESS_HOST_CHECK_RESULT dans le fichier de commande externe.</para>
 
   <para>Le format de la commande ressemble à ce qui suit:
   <code>[&lt;timestamp&gt;]PROCESS_HOST_CHECK_RESULT;&lt;host_name&gt;;&lt;host_status&gt;;&lt;plugin_output&gt;</code>
-  ou...</para>
+  ou…</para>
 
   <itemizedlist>
    <listitem>
@@ -231,7 +231,7 @@ linkend="advancedtopics-distributed"> supervision dite distribuée</link>
 dans laquelle vous avez des liens d'hôtes pères/fils complexes.</para>
 
   <para>Vous pouvez dire à nagios de traduire un résultat de contrôle passif
-DOWN/UNREACHABLE par votre "propre" état en utilisant la variable <link
+DOWN/UNREACHABLE par votre <quote>propre</quote> état en utilisant la variable <link
 linkend="configuringnagios-configmain-translate_passive_host_checks"><code>translate_passive_host_checks</code></link>. Vous trouverez plus d'information sur son fonctionnement <link
 linkend="advancedtopics-passivestatetranslation">ici</link>.</para>
 
@@ -250,7 +250,7 @@ linkend="configuringnagios-configmain-passive_host_checks_are_soft"><code>passiv
     </imageobject>
    </mediaobject></informalfigure>Si une application demeurant sur le même serveur que Nagios veut envoyer un
 résultat de contrôle passif d'hôte ou de service, vous pouvez simplement
-écrire en mode "append" directement dans le fichier de commandes
+écrire en mode <quote>append</quote> directement dans le fichier de commandes
 externes. Contrairement, une application sur un hôte distant ne peut pas le
 faire aussi simplement.</para>
 
