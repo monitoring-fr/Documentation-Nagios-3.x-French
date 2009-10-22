@@ -18,7 +18,7 @@ questions sur les mailing lists.
  <section>
  <title>Historique des changements</title>
 
- <para>L'historique des changement de Nagios peut être trouvé en ligne sur <ulink
+ <para>L'historique des changements de Nagios peut être trouvé en ligne sur <ulink
 url="&url-nagios;development/changelog.php">&url-nagios;development/changelog.php</ulink>
 ou dans le fichier <emphasis role="strong">Changelog</emphasis> situé à la
 racine de la distribution basée sur les sources.
@@ -50,7 +50,7 @@ les utilisateurs occasionnels de Nagios.</para>
 
  <itemizedlist>
  <listitem>
- <para><emphasis role="bold">Nouvelles macros</emphasis> - De nouvelles macros on
+ <para><emphasis role="bold">Nouvelles macros</emphasis> - De nouvelles macros ont
 été ajoutées: <varname>$TEMPPATH$</varname>,
 <varname>$LONGHOSTOUTPUT$</varname>, <varname>$LONGSERVICEOUTPUT$</varname>,
 <varname>$HOSTNOTIFICATIONID$</varname>,
@@ -85,13 +85,13 @@ les utilisateurs occasionnels de Nagios.</para>
 <varname>$LASTHOSSTATE$</varname>, <varname>$LASTHOSTSTATEID$</varname>,
 <varname>$LASTSERVICESTATE$</varname>,
 <varname>$LASTSERVICESTATEID$</varname>. Deux macros de temps <quote>à la demande</quote>
-on également été ajoutées: <varname>$ISVALIDTIME:$</varname> et
+ont également été ajoutées: <varname>$ISVALIDTIME:$</varname> et
 <varname>$NEXTVALIDTIME:$</varname>.</para>
  </listitem>
 
  <listitem>
- <para><emphasis role="bold">Macros supprimées</emphasis> - L'ancienne macros
-<varname>$NOTIFICATIONNUMBER$</varname> macro à été désaprouvée au bénéfice
+ <para><emphasis role="bold">Macros supprimées</emphasis> - L'ancienne macro
+<varname>$NOTIFICATIONNUMBER$</varname> macro a été désapprouvée au bénéfice
 des nouvelles macros <varname>$HOSTNOTIFICATIONNUMBER$</varname> et
 <varname>$SERVICENOTIFICATIONNUMBER$</varname>.</para>
  </listitem>
@@ -109,7 +109,7 @@ contiennent maintenant elles-mêmes des macros, celles-ci sont:
  <para>Les macros sont normalement disponibles comme variables d'environnement
 quand les contrôles, gestionnaires d'événements, notifications et autres
 commandes sont exécutées. Ceci est plutôt consommateur de ressources CPU
-dans des installations larges de Nagios, vous devriez alors désactiver cette
+dans des installations larges de Nagios, vous devrez alors désactiver cette
 fonctionnalité à l'aide de l'option <link
 linkend="configuringnagios-configmain-enable_environment_macros">enable_environment_macros</link>.</para>
  </listitem>
@@ -169,7 +169,7 @@ chaque redémarrage.</para>
  
 	<listitem>
  <para>Les ID de commentaires et de mise en maintenance sont maintenant conservés
-entre les redémarrages et devrait être uniques tant que les données de
+entre les redémarrages et doivent être uniques tant que les données de
 rétention ne sont pas supprimées ou ignorées</para>
  </listitem>
  
@@ -179,7 +179,7 @@ linkend="configuringnagios-configmain-retained_host_attribute_mask">retained_hos
 et <link
 linkend="configuringnagios-configmain-retained_service_attribute_mask">retained_service_attribute_mask</link>
 permettant de contrôler quels attributs d'hôte/service sont conservés entre
-les redémarrages.</para>
+chaque redémarrage.</para>
  </listitem>
  
 	<listitem>
@@ -187,8 +187,8 @@ les redémarrages.</para>
 linkend="configuringnagios-configmain-retained_process_host_attribute_mask">retained_process_host_attribute_mask</link>
 et <link
 linkend="configuringnagios-configmain-retained_process_service_attribute_mask">retained_process_service_attribute_mask</link>
-aafin de controller quels attributs de processus sont conservés entre les
-redémarrages.</para>
+aafin de controller quels attributs de processus sont conservés entre chaque
+redémarrage.</para>
  </listitem>
  
 	<listitem>
@@ -208,8 +208,8 @@ redémmarage. </para>
  <itemizedlist>
  <listitem>
  <para>Ajout de la directive <varname>flap_detection_options</varname> aux
-définitions d'hôte et de service vous permettant de spécifier quel états
-d'hôte/service devraient être utilisés par la logique de détection
+définitions d'hôte et de service vous permettant de spécifier quels états
+d'hôte/service doivent être utilisés par la logique de détection
 d'oscillation (par défaut tous les états sont utilisés).</para>
  </listitem>
  
@@ -241,8 +241,8 @@ trouvées <link linkend="advancedtopics-flapping">ici</link>.</para>
  <listitem>
  <para>Ajout d'une nouvelle commande externe, <command>PROCESS_FILE</command>,
 permettant le traitement de commandes externes placées dans un
-fichier. Utile pour traiter de larges quantitées de contrôles passifs retournant
-de grandes quantitées de données, ou pour scripter des commandes. De plus
+fichier. Utile pour traiter de larges quantités de contrôles passifs retournant
+de grandes quantités de données, ou pour scripter des commandes. De plus
 amples informations peuvent être trouvées <ulink
 url="&url-nagios;developerinfo/externalcommands/commandinfo.php?command_id=131">ici</ulink>.
 	 </para>
@@ -271,7 +271,7 @@ défaut.</para>
 
  <itemizedlist>
  <listitem>
- <para>Les Informations d'état de contact (Horaire de dernières notification,
+ <para>Les informations d'état de contact (Horaire de dernières notification,
 notification activées/désactivées, etc.) sont maintenant sauvegardées dans
 les fichiers de <link
 linkend="configuringnagios-configmain-status_file">statut</link> et de
@@ -296,7 +296,7 @@ afin de contrôler l'utilisation de l'interpréteur Perl intégré.</para>
 
  <listitem>
  <para>Les scripts/plugins Perl peuvent maintenant explicitement signaler à Nagios
-si ils devraient, ou pas, être exécutés par l'interpréteur Perl
+s'ils doivent, ou pas, être exécutés par l'interpréteur Perl
 intégré. Cela est utile si vous avez des scripts qui ne fonctionnent pas
 bien avec l'interpréteur Perl intégré.</para>
  </listitem>
@@ -329,11 +329,11 @@ pour les commandes adaptative de monitoring</para>
 
  <itemizedlist>
  <listitem>
- <para>L'option <varname>first_notification_delay</varname> à été rajoutée à la
+ <para>L'option <varname>first_notification_delay</varname> a été rajoutée à la
 définition des hôtes et des services afin d'introduire un délai entre le
-moment ou un problème survient sur un hôte/service et le moment ou la
-première notification est envoyée. Dans les versions précédentes vous deviez
-utiliser des configuration complexes avec des escalades pour réaliser
+moment où un problème survient sur un hôte/service et le moment où la
+première notification est envoyée. Dans les versions précédentes, vous deviez
+utiliser des configurations complexes avec des escalades pour réaliser
 cela. Cette fonctionnalité est maintenant accessible au commun des mortels. </para>
  </listitem>
 
@@ -347,7 +347,7 @@ service ou globalement. Dans ce cas, la macro
 
  <listitem>
  <para>Les notifications peuvent maintenant être envoyées lors de l'entrée/sortie
-dans une période de maintenance planifiée et est annulé pour les hôtes et
+dans une période de maintenance planifiée et sont annuléies pour les hôtes et
 services. La macro <varname>$NOTIFICATIONTYPE$</varname> sera positionnée
 respectivement sur <quote>DOWNTIMESTART</quote>, <quote>DOWNTIMEEND</quote>,
 ou <quote>DOWNTIMECANCELLED</quote>. Pour recevoir des notifications sur les
@@ -381,7 +381,7 @@ d'information ici.</link>)
 serviceextinfo) ont été abondonnées. Toutes les valeurs des définitions
 étendues ont été intégrées dans les définitions d'hôte et de service. Nagios
 3 continuera de lire et de traiter les anciennes définitions étendues, mais
-journalisera un warning. Les version futures de Nagios (4.x et postérieures)
+journalisera un warning. Les versions futures de Nagios (4.x et postérieures)
 ne supporteront plus des définitions étendues séparées.</para>
  </listitem>
 
@@ -437,7 +437,7 @@ role="strong">+</emphasis> ou <emphasis role="strong">\.</emphasis>.</para>
  </listitem>
 
  <listitem>
- <para>Une nouvelle variable <varname>initial_state</varname> a été ajoutées aux
+ <para>Une nouvelle variable <varname>initial_state</varname> a été ajoutée aux
 définitions d'hôtes et de services, de façon à préciser à Nagios que les
 hôtes/services doivent démarrer dans un état spécifique plutôt que UP ou OK
 (qui reste le comportement par défaut).</para>
@@ -529,8 +529,8 @@ de vitesse sur les grandes installations.</para>
 linkend="configuringnagios-configmain-external_command_buffer_slots">external_command_buffer_slots</link>
 a été ajoutée pour permettre de facilement dimensionner Nagios dans de
 grandes installations. Pour obtenir les meilleurs résultats, vous devriez
-utiliser <link linkend="securityandperformancetuning-mrtggraphs">MRTG pour
-grapher</link> l'usage que fait Nagios des slots de buffer dans le temps.</para>
+utiliser <link linkend="securityandperformancetuning-mrtggraphs">MRTG</link> pour
+grapher l'usage que fait Nagios des slots de buffer dans le temps.</para>
  </listitem>
  </itemizedlist>
  </section>
@@ -583,7 +583,7 @@ que possible.</para>
 
  <listitem>
  <para>Un nouvelle fonctionnalité de cache pour les contrôles de services a été
-implémentée qui peut significativement améliorer les performances pour pas
+implémentée ce qui peut significativement améliorer les performances pour pas
 mal de monde. Plutôt que d'exécuter un plugin pour contrôler l'état d'un
 service, Nagios peut souvent utiliser un résultat de contrôle mis en cache à
 la place. Vous pouvez trouver plus d'informations sur cette fonctionnalité
@@ -636,7 +636,7 @@ savoir plus</link>)</para>
 
  <listitem>
  <para>Un nouvelle fonctionnalité de cache pour les contrôles d'hôte a été
-implémentée qui peut significativement améliorer les performances pour pas
+implémentée ce qui peut significativement améliorer les performances pour pas
 mal de monde. Plutôt que d'exécuter un plugin pour contrôler l'état d'un
 hôte, Nagios peut souvent utiliser un résultat de contrôle mis en cache à la
 place. Vous pouvez trouver plus d'informations sur cette fonctionnalité
@@ -722,7 +722,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">here</link> and
 
  <itemizedlist>
  <listitem>
- <para>Mis à jour de la version de l'<acronym>L'API</acronym> <acronym>NEB</acronym></para>
+ <para>Mise à jour de la version de <acronym>L'API</acronym> <acronym>NEB</acronym></para>
  </listitem>
 
  <listitem>
@@ -761,7 +761,7 @@ et service dans le CGI extinfo.</para>
 
  <listitem>
  <para>Ajout des options d'intégration de <ulink url="&url-splunk;">Splunk</ulink>
-dans plusieurs CGIs. L'intégration est contrôlé par les options <link
+dans plusieurs CGIs. L'intégration est contrôlée par les options <link
 linkend="configuringnagios-configcgi-enable_splunk_integration">enable_splunk_integration</link>
 et <link linkend="configuringnagios-configcgi-splunk_url">splunk_url</link>
 du fichier de configuration des CGIs.</para>
@@ -795,9 +795,9 @@ script de configuration ont été enlevées.</para>
  </listitem>
 
  <listitem>
- <para>Les informations de débugage peuvent désormais être écrite dans un fichier
-journal séparé, qui est automatiquement renouvelée dès que sa taille atteint
-une limite défini par l'utilisateur. Cela devrait grandement faciliter le
+ <para>Les informations de débugage peuvent désormais être écrites dans un fichier
+journal séparé, qui est automatiquement renouvelé dès que sa taille atteint
+une limite définie par l'utilisateur. Cela devrait grandement faciliter le
 debugage puisqu'il n'y a plus besoin de recompiler Nagios. Le support
 complet de ce mode a été ajouté pendant le début de la phase de
 développement, aussi n'est-il peut-être pas complet quand vous allez
@@ -856,7 +856,7 @@ ajoutées. Ceci inclut <varname>$HOSTGROUPNAMES$</varname>,
  <para><emphasis role="strong">Fréquence de reaper</emphasis> - L'ancienne variable
 <varname>service_reaper_frequency</varname> a été renommé en <link
 linkend="configuringnagios-configmain-check_result_reaper_frequency">check_result_reaper_frequency</link>
-puisque désormais également utilisée pour traiter les résultats de contrôles
+puisqu'elle est désormais également utilisée pour traiter les résultats de contrôles
 d'hôtes.</para>
  </listitem>
 
@@ -864,7 +864,7 @@ d'hôtes.</para>
  <para><emphasis role="bold">Temps maximal de reaper</emphasis> - Une nouvelle
 variable <link
 linkend="configuringnagios-configmain-max_check_result_reaper_time">max_check_result_reaper_time</link>
-a été ajouté pour limiter le temps d'exécution d'un événement reaper.
+a été ajoutée pour limiter le temps d'exécution d'un événement reaper.
 	 </para>
  </listitem>
 
@@ -885,7 +885,7 @@ utiliser dans vos arguments de commandes</para>
 
  <listitem>
  <para><emphasis role="bold">Sortie de commandes système multi-lignes</emphasis> -
-Nagios va maintenant lire plusieurs lignes de sorite pour les commande
+Nagios va maintenant lire plusieurs lignes de sorite pour les commandes
 système qu'il exécute (scripts de notification, etc.); et ce jusqu'à
 4K. C'est la même limite que le message retour de plugin mentionné plus
 tôt. Les sorties de commandes système ne sont pas directement traitées par
@@ -893,7 +893,7 @@ Nagios, mais le support en est assuré.</para>
  </listitem>
 
  <listitem>
- <para><emphasis role="bold">Meilleur information de planification</emphasis> - Des
+ <para><emphasis role="bold">Meilleure information de planification</emphasis> - Des
 informations plus précises sont données quand Nagios est exécuté avec le <option>-s</option>
 	 argument de ligne de commande. Cette information peut être utilisée pour
 <link linkend="securityandperformancetuning-faststartup">réduire</link> le
@@ -901,10 +901,10 @@ temps de (re)démarrage de Nagios.</para>
  </listitem>
 
  <listitem>
- <para><emphasis role="bold">Mises à jour agrégée du fichier d'état</emphasis> -
+ <para><emphasis role="bold">Mises à jour agrégées du fichier d'état</emphasis> -
 L'ancienne option <varname>aggregate_status_updates</varname> a été
-enlevé. Toutes les mises à jour du fichier de statut sont maintenant
-agrégées a un intervalle minimum de 1 seconde.</para>
+enlevée. Toutes les mises à jour du fichier de statut sont maintenant
+agrégées à un intervalle minimum de 1 seconde.</para>
  </listitem>
 
  <listitem>
@@ -915,7 +915,7 @@ performance</emphasis> - Un nouveau <quote><option>p</option></quote> </para>
  <listitem>
  <para><emphasis role="bold">Décalage de fuseau horaire</emphasis> - Une nouvelle
 option, <link
-linkend="configuringnagios-configmain-use_timezone">use_timezone</link>, à
+linkend="configuringnagios-configmain-use_timezone">use_timezone</link>, a
 été ajoutée afin de vous permettre de démarrer des instances de nagios
 situées dans des fuseaux horaires autres que le fuseau local.</para>
  </listitem>
