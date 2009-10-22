@@ -20,10 +20,8 @@ Le problème survient quand Nagios Core essaye de réordonnancer le prochain con
 Dans ce cas, la logique d'ordonnancement est suceptible d'ordonnancer de façon incorrecte le prochain contrôle en le positionnant beaucoup plus loin dans le futur qu'il ne devrait l'être.
 Dans les faits, il court-circuite la logique d'exclusion; alors qu'il devrait pouvoir placer le contrôle plus tôt en utilisant les exceptions. Solution de contournement imparfaite :
 N'utilisez pas de périodes de temps qui excluent d'autres périodes de temps pour vos plages de contrôle des hôtes/services.
-Un correctif est en cours préparation, et sera certainements inclus daan la version 3.4.x.</para>
+Un correctif est en cours préparation, et sera certainement inclus dans la version 3.4.x.</para>
    </listitem>
-
-   
   </orderedlist>
  </section>
 </chapter>
