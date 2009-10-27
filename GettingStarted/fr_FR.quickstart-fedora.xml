@@ -19,7 +19,7 @@ qui fonctionneront pour 95% des utilisateurs qui veulent démarrer.
   </para>
 
   <para>
-  Ces instructions ont été écrite en se basant sur une installation standard
+  Ces instructions ont été écrites en se basant sur une installation standard
 de la distribution &name-fedora; Core 6.
   </para>
  </note>
@@ -82,7 +82,7 @@ l'installation
 
   <para>
   Vous pouvez utiliser <command>yum</command> pour installer ces paquets en
-utilisant la commande suivante (en tant que root):
+utilisant les commandes suivantes (en tant que root):
   </para>
 
   <screen>
@@ -188,7 +188,7 @@ faire&hellip;</para>
   <title>Personnalisation de la configuration</title>
 
   <para>Les exemples de <link linkend="configuringnagios-config">fichiers de
-configuration</link> ont été installé dans le répertoire <filename
+configuration</link> ont été installés dans le répertoire <filename
 class="directory">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple
 devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à
 modifier avant de pouvoir commencer…</para>
@@ -216,13 +216,13 @@ souhaitez utiliser pour recevoir les alertes.</para>
 
   <para>Créez un compte nagiosadmin pour la connexion à l'interface web de
 Nagios. Souvenez-vous du mot de passe que vous avez attribué à ce
-compte&nbsp;-&nbsp;Vous aure besoin plus tard.</para>
+compte&nbsp;-&nbsp;Vous en aurez besoin plus tard.</para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</userinput>
 </screen>
 
-  <para>Redémmarez Apache pour que les nouveaux réglages prennent effet.</para>
+  <para>Redémarrez Apache pour que les nouveaux réglages prennent effet.</para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>service httpd restart</userinput>
@@ -315,7 +315,7 @@ url="&url-nagios-community;">&url-nagios-community;</ulink>.</para>
   <title>Connexion à l'interface Web</title>
 
   <para>Vous devriez maintenant pouvoir vous connecter à l'interface web de Nagios à
-l'adresse ci-dessous.Il vous sera demandé un nom d'utilisateur (nagiosadmin)
+l'adresse ci-dessous. Il vous sera demandé un nom d'utilisateur (nagiosadmin)
 et le mot de passe que vous avez spécifié plus tôt.</para>
 
   <para>http://localhost/nagios/</para>
