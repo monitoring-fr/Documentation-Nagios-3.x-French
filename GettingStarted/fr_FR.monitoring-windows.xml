@@ -44,11 +44,11 @@ services <quote>privés</quote> de machines Windows comme:</para>
  <section>
   <title>Introduction</title>
 
-  <para>Les services rendus publiques qui sont fournis par des machines Windows
+  <para>Les services rendus publics qui sont fournis par des machines Windows
 (&protocol-http;, &protocol-ftp;, &protocol-pop3;, etc.) peuvent être
 supervisés de façon simple en suivant la documentation sur <link
 linkend="gettingstarted-monitoring-publicservices">la supervision des
-services publiques disponibles.</link>.</para>
+services publics disponibles</link>.</para>
 
   <note>
    <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
@@ -154,7 +154,7 @@ n'avez à le faire que pour la *première* machine Windows à superviser.</para>
 
   <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
-  <para>Supprimez le signe (#) du début de la ligne suivante du fichier de configuration principal :</para>
+  <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
 
   <programlisting>#cfg_file=/usr/local/nagios/etc/objects/windows.cfg</programlisting>
 
@@ -215,7 +215,7 @@ suivante ('SysTray' est sensible à la casse):</para>
 
    <step>
     <para>Ouvrez le gestionnaire des services et assurez-vous que le service
-NSClientpp est autorisé à interagir avec le bureau (regardez la tabulation
+NSClientpp est autorisé à interagir avec le bureau (regardez sous l'onglet
 'Log On' du gestionnaire de services). Cochez la case correspondante si ce
 n'est déjà fait.</para>
 
@@ -229,7 +229,7 @@ n'est déjà fait.</para>
    </step>
 
    <step>
-    <para>Éditez le fichier <filename>NSC.INI file</filename> (situé dans le
+    <para>Éditez le fichier <filename>NSC.INI</filename> (situé dans le
 répertoire <filename class="directory">C:\NSClient++</filename>) et
 effectuez les changements suivants:</para>
 
@@ -271,7 +271,7 @@ l'intérieur.</para>
    </step>
 
    <step>
-    <para>Succès! Le serveur Windows peut désormais être ajouté à la configuration de
+    <para>Bravo! Le serveur Windows peut désormais être ajouté à la configuration de
 Nagios…</para>
    </step>
   </procedure>
@@ -323,7 +323,7 @@ la directive de la définition de l'hôte que vous venez d'ajouter.</para>
   <para>Ajoutez la définition de service suivante pour contrôler la version du addon
 NSClient++ tournant sur le serveur Windows. Cela devient utile quand il
 s'agit de mettre à jour des serveurs Windows vers une nouvelle version du
-addon, en vous permettant de déterminer quelles sont les machines WIndows
+addon, en vous permettant de déterminer quelles sont les machines Windows
 nécessitant une mise à jour vers la dernière version de NSClient++.</para>
 
   <programlisting>
@@ -439,7 +439,7 @@ define command{
   }
 </programlisting>
 
-  <para>Save the file.</para>
+  <para>Enregistrez le fichier de configuration.</para>
  </section>
 
  <section>
