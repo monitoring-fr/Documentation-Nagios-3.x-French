@@ -12,8 +12,8 @@
  <note>
   <para>Ce document décrit la façon don tvous pouvez superviser des routeurs et
 switchs réseaux. Quelques switchs et hubs bon marché <quote>non
-manageables</quote> n'ont pas <acronym>IP</acronym> adresses et sont invisibles sur votre réseau, il n'y a donc aucun moyen de
-les superviser. Les routeurs et switches plus chers ont une adresse assignée
+manageables</quote> n'ont pas d'adresse <acronym>IP</acronym> et sont invisibles sur votre réseau, il n'y a donc aucun moyen de
+les superviser. Les routeurs et switchs plus chers ont une adresse assignée
 et peuvent donc être supervisés en les pingant ou en utilisant
 &protocol-snmp; pour interroger les informations de statut.</para>
  </note>
@@ -146,7 +146,7 @@ réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez
 
   <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
-  <para>Supprimez le signe (#) du début de la ligne suivante du fichier de configuration principal :</para>
+  <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
 
   <programlisting>#cfg_file=/usr/local/nagios/etc/objects/switch.cfg</programlisting>
 
@@ -214,7 +214,7 @@ définition d'hôte.</para>
 
   <para>Ajoutez cette définition de service pour pouvoir superviser les paquets
 perdus et le temps moyen de réponse entre le serveur Nagios et le switch
-toutes les 5 minutes en condition normale.</para>
+toutes les 5 minutes en conditions normales.</para>
 <programlistingco>
 	<areaspec>
 	<area id="gettingstarted-monitoring-routers-ex-plrta-use" coords='3 65'/>
@@ -249,7 +249,7 @@ define service{
 <para>La commande à utiliser pour superviser le service</para>
 </callout>
 <callout arearefs="gettingstarted-monitoring-routers-ex-plrta-normal_check_interval">
-<para>Contrôle le service toutes les 5 minutes en condition normale</para>
+<para>Contrôle le service toutes les 5 minutes en conditions normales</para>
 </callout>
 <callout arearefs="gettingstarted-monitoring-routers-ex-plrta-retry_check_interval">
 <para>Recontrôle le service toutes les minutes jusqu'à ce que son état final/hard
@@ -321,13 +321,13 @@ define service{
 fait référence à <acronym>OID</acronym> pour l'état opérationnel du port 1 sur le switch.
   </para>
   <para>
-  The <option>-r 1</option> indique au plugin &plugin-snmp; de retourner un état OK si
+  L'option <option>-r 1</option> indique au plugin &plugin-snmp; de retourner un état OK si
 <computeroutput>1</computeroutput> est trouvé dans la réponse
 &protocol-snmp; (1 indique que le port est <quote>up</quote>) et CRITICAL sinon.
   </para>
   <para>
-  The <option>-m RFC1213-MIB</option> est optionnel et indique
-  <acronym>MIB</acronym> qui sont installés sur votre système peuvent aider à accélérer les choses.</para>
+  L'option <option>-m RFC1213-MIB</option> est optionnel et indique la 
+  <acronym>MIB</acronym> à utiliser parmi celles installées sur votre système et peut aider à accélérer les choses.</para>
 
   <para>Voilà pour l'exemple de supervision avec &protocol-snmp;. Il y a des
 millions de choses qui peuvent être supervisées par &protocol-snmp;, aussi
@@ -374,13 +374,13 @@ define service{
 fichier de log <application>MRTG</application> il doit aller lire.
   </para>
   <para>
-  The <acronym>AVG</acronym> option indique qu'il doit utiliser des statistiques basées sur la moyene de
-la bande passante. Les <option>1000000,2000000</option>
-  options sont les seuils de warning (en bytes) pour le taux de trafic
+  L'option <acronym>AVG</acronym> indique qu'il doit utiliser des statistiques basées sur la moyene de
+la bande passante. Les arguments <option>1000000,2000000</option>
+  sont les seuils de warning (en bytes) pour le taux de trafic
 entrant.
   </para>
   <para>
-  The <option>5000000,5000000</option> sont des seuils critiques (en bytes) pour le taux de trafic sortant. L' <option>10</option> option indique au plugin de renvoyer un état CRITICAL si le fichier de log
+  Les arguments <option>5000000,5000000</option> sont des seuils critiques (en bytes) pour le taux de trafic sortant. L' <option>10</option> option indique au plugin de renvoyer un état CRITICAL si le fichier de log
 <application>MRTG</application> est plus vieux que 10 minutes (il devrait
 être mis à jour toutes les 5 minutes).</para>
 
