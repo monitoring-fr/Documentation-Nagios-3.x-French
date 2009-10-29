@@ -46,7 +46,7 @@ services <quote>privés</quote> de serveurs Linux/UNIX comme:</para>
 (&protocol-http;, &protocol-ftp;, &protocol-ssh;, &protocol-smtp;, etc.)
 peuvent être supervisés de façon simple en suivant la documentation sur
 <link linkend="gettingstarted-monitoring-publicservices">la supervision des
-services publiques disponibles.</link>.</para>
+services publics disponibles</link>.</para>
   <note>
    <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
 le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
@@ -76,7 +76,7 @@ créer/détruire les connexions &protocol-ssh; est la cause de ceci.</para>
      <imagedata fileref="images/nrpe.png" format="PNG"/>
     </imageobject>
    </mediaobject></informalfigure></para>
-  <para>Una autre façon commune de superviser des hôtes distants Linux/Unix est
+  <para>Une autre façon commune de superviser des hôtes distants Linux/Unix est
 d'utiliser l' <link linkend="nagiosaddons-addons-nrpe">addon
 &name-nrpe;</link>. &name-nrpe; vous permet d'exécuter des plugins sur les
 hôtes distants Linux/Unix. C'est utile si vous devez superviser les
