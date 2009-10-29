@@ -29,7 +29,7 @@ informations sur les processus, etc. Ces services privés ou attributs
 d'hôtes ne sont en général pas exposés à un client externe. Cette situation
 requiert qu'un agent intermédiaire de supervision soit installé sur chacun
 des hôtes dont vous avez besoin de superviser ce type d'informations. Plus
-d'information sur la supervison des services privés attachés à des hôtes de
+d'information sur la supervision des services privés attachés à des hôtes de
 différents types peut être trouvée dans la documentation à:</para>
   <itemizedlist>
    <listitem>
@@ -63,13 +63,13 @@ le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
 exemples de configuration ci-dessous font référence aux objets de
 configuration définis dans les fichiers d'exemples
 (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
-etc.) qui ont été installé si vous avez suivi le guide rapide.</para>
+etc.) qui ont été installés si vous avez suivi le guide rapide.</para>
   </note>
  </section>
  <section>
   <title>Plugins pour la supervision des services</title>
   <para>Quand vous avez besoin de superviser un services, application, protocole
-particulier, les chances sont grandes q'un <link
+particulier, les chances sont grandes qu'un <link
 linkend="thebasics-plugins">plugin</link> existe pour le faire. La
 distribution officielle des plugins Nagios fournit des plugins qui peuvent
 être utilisés pour contrôler une grande variété de services et
@@ -84,7 +84,7 @@ dont vous avez besoin, vous pouvez toujours écrire le vôtre. Les plugins
 sont faciles à écrire, ne vous laissez donc pas effrayer par cette
 idée. Lisez la documentation sur le <link
 linkend="development-pluginapi">développement de plugins</link> pour plus
-d'information.</para>
+d'informations.</para>
   <para>Je vais passer en revue la supervision de services basiques que vous aurez
 probablement à faire tôt au tard. Chacun de ces services peut être supervisé
 en utilisant un des plugins compris dans la ditribution Nagios. Allons-y…</para>
@@ -117,10 +117,10 @@ define host{
   }
 </programlisting>
 
-  <para>Maintenant qu'une définition d'hôte a été ajouté pour l'hôte à superviser,
+  <para>Maintenant qu'une définition d'hôte a été ajoutée pour l'hôte à superviser,
 nous pouvons commencer à définir les services qui doivent être
 contrôlés. Comme pour la définition de l'hôte, les définitions de services
-poeuvent être mises dans n'importe quel fichier de configuration.</para>
+peuvent être mises dans n'importe quel fichier de configuration.</para>
  </section>
 
  <section>
@@ -147,7 +147,7 @@ ci-dessous.</para>
 - que ce soit le vôtre ou celui de quelqu'un d'autre. Le plugin
 &plugin-http; est juste fait pour ça. Il fonctionne avec le protocole
 &protocol-http; et peut superviser un temps de réponse, des codes d'erreurs,
-des chaînes de caractère dans la réponse HTML, des certificats de serveurs,
+des chaînes de caractères dans la réponse HTML, des certificats de serveurs,
 et beaucoup plus encore.</para>
 
   <para>Le fichier <filename>commands.cfg</filename> contient une définition de
@@ -183,7 +183,7 @@ dont vous avez besoin pour une supervision basique. Plutôt simple, non ?</para>
    <para>Pour des possibilités plus avancées de supervision, utilisez le plugin
 &plugin-http; manuellement avec
    <option>--help</option> comme argument de la lligne de commande pour voir toutes les options que
-peut vous fournir ce plugin. Cette <option>--help</option> syntaxe fonctionne avec tous les plugins couverts par cette documentation. </para>
+peut vous fournir ce plugin. Cette syntaxe <option>--help</option> fonctionne avec tous les plugins couverts par cette documentation. </para>
   </tip>
 
   <para>Une définition plus avancée pour superviser le service &protocol-http; est
