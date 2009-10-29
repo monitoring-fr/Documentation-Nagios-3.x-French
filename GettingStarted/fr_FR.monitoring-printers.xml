@@ -66,7 +66,7 @@ détecter les états suivants de l'imprimante:</para>
    </listitem>
 
    <listitem>
-    <para>and more…</para>
+    <para>Et bien d'autres…</para>
    </listitem>
   </itemizedlist>
 
@@ -76,7 +76,7 @@ le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
 exemples de configuration ci-dessous font référence aux objets de
 configuration définis dans les fichiers d'exemples
 (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
-etc.) qui ont été installé si vous avez suivi le guide rapide.</para>
+etc.) qui ont été installés si vous avez suivi le guide rapide.</para>
   </note>
  </section>
 
@@ -139,7 +139,7 @@ d'utiliser le plugin &plugin-hpjd; pour superviser des imprimantes réseaux.</pa
    </listitem>
 
    <listitem>
-    <para>Un gabarit d'hôte de type switch (nommé
+    <para>Un gabarit d'hôte de type imprimante (nommé
 <emphasis>generic-printer</emphasis>) a déjà été créé dans le fichier
 <filename>templates.cfg</filename>. Cela vous permet de rajouter des
 définitions d'hôtes de type imprimante de façon simple.</para>
@@ -168,7 +168,7 @@ réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez
 
   <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
-  <para>Supprimez le signe (#) du début de la ligne suivante du fichier de configuration principal :</para>
+  <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
 
   <programlisting>
 #cfg_file=/usr/local/nagios/etc/objects/printer.cfg
@@ -235,7 +235,7 @@ définition d'hôte.</para>
   <para>Ajoutez cette définition de service pour pouvoir superviser l'état de
 l'imprimante. Le service utilise le plugin &plugin-hpjd; pour vérifier
 l'état de l'imprimante toutes les 10 minutes par défaut. La communauté
-&protocol-snmp; utilisée dans cet exemple pour interrgoer l'imprimante est
+&protocol-snmp; utilisée dans cet exemple pour interroger l'imprimante est
 <quote>public</quote>.</para>
 
   <programlisting>
