@@ -619,7 +619,7 @@ défini dans la directive <link
 linkend="configuringnagios-configcgi-physical_html_path">physical_html_path</link>.</para>
 			<note><para>Cette image peut être au format GIF, JPEG, PNG, ou GD2. Cependant, le format
 GD2 (de préférence en format non compressé) est recommandé, en raison de la
-faible charge <acronym>CPU</acronym> requise quand le &acronym-cgi; génère l'image.</para></note>
+faible charge &acronym-cpu; requise quand le &acronym-cgi; génère l'image.</para></note>
 		</section>
 		<section>
 			<title>
@@ -957,7 +957,7 @@ class="directory">/usr/local/nagios/share/media</filename>).</para>
 				</tgroup>
 			</informaltable>
 			<para>Cette option définit quelle syntaxe doit être utilisée quand on veut tester
-un hôte avec ping à travers l'interface <acronym>WAP</acronym> en utilisant le <link linkend="thebasics-cgis-statuswml_cgi">&acronym-cgi;
+un hôte avec ping à travers l'interface &acronym-wap; en utilisant le <link linkend="thebasics-cgis-statuswml_cgi">&acronym-cgi;
 statuswml</link>. Vous devez inclure le chemin complet vers le fichier
 binaire exécutable de ping, ainsi que les paramètres passés à la
 commande. La macro &macro-hostaddress; est remplacée par

@@ -12,7 +12,7 @@
  <note>
   <para>Ce document décrit la façon don tvous pouvez superviser des routeurs et
 switchs réseaux. Quelques switchs et hubs bon marché <quote>non
-manageables</quote> n'ont pas d'adresse <acronym>IP</acronym> et sont invisibles sur votre réseau, il n'y a donc aucun moyen de
+manageables</quote> n'ont pas d'adresse &acronym-ip; et sont invisibles sur votre réseau, il n'y a donc aucun moyen de
 les superviser. Les routeurs et switchs plus chers ont une adresse assignée
 et peuvent donc être supervisés en les pingant ou en utilisant
 &protocol-snmp; pour interroger les informations de statut.</para>
@@ -66,9 +66,9 @@ cas où ce sont des composants critiques de votre infrastrcuture, vous
 voudrez sans aucun doute les superviser d'une façon au moins basique.</para>
 
   <para>Les switchs et les routeurs peuvent facilement être supervisés en les
-<quote>pingant</quote> pour déterminer le nombre de paquets perdus, <acronym>RTA</acronym>, etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser
+<quote>pingant</quote> pour déterminer le nombre de paquets perdus, &acronym-rta;, etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser
 l'état des ports, etc. avec le plugin &plugin-snmp; et la bande passante
-avec &plugin-mrtgtraf; plugin (si vous utilisez <application><acronym>MRTG</acronym></application>).</para>
+avec &plugin-mrtgtraf; plugin (si vous utilisez &acronym-mrtg;).</para>
 
   <para>Le plugin &plugin-snmp; sera compilé et installé seulement si vous avez les
 paquets <application>net-snmp</application> et
@@ -263,17 +263,17 @@ soit déterminé</para>
 
   <itemizedlist>
    <listitem>
-    <para>CRITICAL si le temps de réponse moyen (<acronym>RTA</acronym>) est plus élevé que 600 millisecondes ou que le nombre de paquets perdus
+    <para>CRITICAL si le temps de réponse moyen (&acronym-rta;) est plus élevé que 600 millisecondes ou que le nombre de paquets perdus
 est égal ou supérieur à 60%</para>
    </listitem>
 
    <listitem>
-    <para>WARNING si le <acronym>RTA</acronym> est supérieur à 200 ms ou que le nombre de paquets perdus est égal ou
+    <para>WARNING si le &acronym-rta; est supérieur à 200 ms ou que le nombre de paquets perdus est égal ou
 supérieur à 20% </para>
    </listitem>
 
    <listitem>
-    <para>OK si le <acronym>RTA</acronym> est inférieur à 200 ms et que le nombre de paquets perdus est inférieur à
+    <para>OK si le &acronym-rta; est inférieur à 200 ms et que le nombre de paquets perdus est inférieur à
 20%</para>
    </listitem>
   </itemizedlist>
@@ -301,7 +301,7 @@ define service{
   <para>Dans la directive <varname>check_command</varname> de la définition de
 service ci-dessus, le <option>-C public</option> indique au plugin que le nom de communauté &protocol-snmp; à utiliser est
 <varname>public</varname> et que <computeroutput>-o
-sysUpTime.0</computeroutput> indique que l' <acronym>OID</acronym> doit être contrôlé.</para>
+sysUpTime.0</computeroutput> indique que l' &acronym-oid; doit être contrôlé.</para>
 
   <para>Si vous souhaitez vous assurer qu'un port/interface particulier du switch
 est dans un état up, vous pouvez ajouter une définition de service comme
@@ -318,7 +318,7 @@ define service{
 
   <para>
   Dans l'exemple ci-dessus, <computeroutput>-o ifOperStatus.1</computeroutput>
-fait référence à <acronym>OID</acronym> pour l'état opérationnel du port 1 sur le switch.
+fait référence à &acronym-oid; pour l'état opérationnel du port 1 sur le switch.
   </para>
   <para>
   L'option <option>-r 1</option> indique au plugin &plugin-snmp; de retourner un état OK si
@@ -327,7 +327,7 @@ fait référence à <acronym>OID</acronym> pour l'état opérationnel du port 1 
   </para>
   <para>
   L'option <option>-m RFC1213-MIB</option> est optionnel et indique la 
-  <acronym>MIB</acronym> à utiliser parmi celles installées sur votre système et peut aider à accélérer les choses.</para>
+  &acronym-mib; à utiliser parmi celles installées sur votre système et peut aider à accélérer les choses.</para>
 
   <para>Voilà pour l'exemple de supervision avec &protocol-snmp;. Il y a des
 millions de choses qui peuvent être supervisées par &protocol-snmp;, aussi
@@ -335,7 +335,7 @@ est-ce à vous décider ce que dont vous avez besoin et ce que vous souhaitez
 superviser. Bonne chance!</para>
 
   <tip>
-   <para>Vous pouvez trouver les <acronym>OID</acronym>s qui peuvent supervisés sur un switch en exécutant la commande suivante
+   <para>Vous pouvez trouver les &acronym-oid;s qui peuvent supervisés sur un switch en exécutant la commande suivante
 (remplacez <emphasis>192.168.1.253</emphasis> par l'adresse IP de votre
 switch): <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command></para>
   </tip>
@@ -346,15 +346,15 @@ switch): <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command></para
 
   <para>Si vous supervisez l'usage de la bande passante de vos switchs et routeurs
 en utilisant <ulink
-url="http://oss.oetiker.ch/mrtg/"><application>MRTG</application></ulink>,
+url="http://oss.oetiker.ch/mrtg/"><application>&acronym-mrtg;</application></ulink>,
 vous pouvez utiliser Nagios pour alerter quand les valeurs dépassent un
 seuil que vous spécifiez. Le plugin &plugin-mrtgtraf; (inclus dans la
 distribution de splugins Nagios) vous permet de le faire.</para>
 
   <para>Vous aurez besoin que le plugin &plugin-mrtgtraf; connaisse l'emplacement du
-fichier où <application>MRTG</application> stockes ses données, ainsi que
+fichier où &acronym-mrtg; stockes ses données, ainsi que
 les seuils, etc. Dans mon exemple, je supervise un des ports d'un switch
-Linksys. Le fichier de log de <application>MRTG</application> est stocké
+Linksys. Le fichier de log de &acronym-mrtg; est stocké
 dans <filename>/var/lib/mrtg/192.168.1.253_1.log</filename>. Voici la
 définition de service que j'utilise pour superviser les données de bande
 passante stockées dans ce fichier… </para>
@@ -371,17 +371,17 @@ define service{
   <para>Dans l'exemple ci-dessus, l'option
 <filename>/var/lib/mrtg/192.168.1.253_1.log</filename> passée à la commande
 <emphasis>check_local_mrtgtraf</emphasis> indique au plugin dans quel
-fichier de log <application>MRTG</application> il doit aller lire.
+fichier de log &acronym-mrtg; il doit aller lire.
   </para>
   <para>
-  L'option <acronym>AVG</acronym> indique qu'il doit utiliser des statistiques basées sur la moyene de
+  L'option &acronym-avg; indique qu'il doit utiliser des statistiques basées sur la moyene de
 la bande passante. Les arguments <option>1000000,2000000</option>
   sont les seuils de warning (en bytes) pour le taux de trafic
 entrant.
   </para>
   <para>
   Les arguments <option>5000000,5000000</option> sont des seuils critiques (en bytes) pour le taux de trafic sortant. L' <option>10</option> option indique au plugin de renvoyer un état CRITICAL si le fichier de log
-<application>MRTG</application> est plus vieux que 10 minutes (il devrait
+&acronym-mrtg; est plus vieux que 10 minutes (il devrait
 être mis à jour toutes les 5 minutes).</para>
 
   <para>Enregistrez le fichier.</para>

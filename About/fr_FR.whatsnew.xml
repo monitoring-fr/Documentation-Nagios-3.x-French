@@ -10,7 +10,7 @@
  <title>Quoi de neuf dans Nagios 3</title>
 
  <important>
- <para>Assurez vous de lire la documentation et la <acronym>FAQ</acronym> sur <ulink url="&url-nagios;">nagios.org</ulink> avant de poser des
+ <para>Assurez vous de lire la documentation et la &acronym-faq; sur <ulink url="&url-nagios;">nagios.org</ulink> avant de poser des
 questions sur les mailing lists.
  </para>
  </important>
@@ -108,7 +108,7 @@ contiennent maintenant elles-mêmes des macros, celles-ci sont:
  <listitem>
  <para>Les macros sont normalement disponibles comme variables d'environnement
 quand les contrôles, gestionnaires d'événements, notifications et autres
-commandes sont exécutées. Ceci est plutôt consommateur de ressources <acronym>CPU</acronym>. 
+commandes sont exécutées. Ceci est plutôt consommateur de ressources &acronym-cpu;. 
 Dans les installations où Nagios gère un nombre important d'hôtes et de services, vous devrez alors désactiver cette
 fonctionnalité à l'aide de l'option <link
 linkend="configuringnagios-configmain-enable_environment_macros">enable_environment_macros</link>.</para>
@@ -251,7 +251,7 @@ url="&url-nagios;developerinfo/externalcommands/commandinfo.php?command_id=131">
  <listitem>
  <para>Les commandes personnalisées doivent maintenant être soumises par Nagios. Les
 noms des commandes personnalisées sont préfixées par un underscore (_) et ne
-sont pas traitées en interne par le démon Nagios. Elle devraient, malgré tout, être traitées par un module <acronym>NEB</acronym> chargé. </para>
+sont pas traitées en interne par le démon Nagios. Elle devraient, malgré tout, être traitées par un module &acronym-neb; chargé. </para>
  </listitem>
 
  <listitem>
@@ -528,7 +528,7 @@ de vitesse sur les installations comprenant de nombreux hôtes et services.</par
 linkend="configuringnagios-configmain-external_command_buffer_slots">external_command_buffer_slots</link>
 a été ajoutée pour permettre de facilement dimensionner Nagios dans des 
 installations comprenant de nombreux hôtes et services. Pour obtenir les meilleurs résultats, vous devriez
-utiliser <link linkend="securityandperformancetuning-mrtggraphs">MRTG</link> pour
+utiliser <link linkend="securityandperformancetuning-mrtggraphs">&acronym-mrtg;</link> pour
 grapher l'usage que fait Nagios des slots de buffer dans le temps.</para>
  </listitem>
  </itemizedlist>
@@ -540,7 +540,7 @@ grapher l'usage que fait Nagios des slots de buffer dans le temps.</para>
  <itemizedlist>
  <listitem>
  <para>Le message retour d'un plugin peut désormais être multi-ligne pour les
-contrôles d'hôtes et de services. Hourra! L'<acronym>API</acronym> a été mise à jour pour supporter plusieurs lignes tout en conservant une
+contrôles d'hôtes et de services. Hourra! L'&acronym-api; a été mise à jour pour supporter plusieurs lignes tout en conservant une
 compatibilité antérieure avec les plugins plus anciens. Les lignes
 supplémentaires de message (après la première ligne) sont maintenant
 stockées dans les nouvelles macros <varname>$LONGHOSTOUTPUT$</varname> et
@@ -721,7 +721,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">ici</link> et
 
  <itemizedlist>
  <listitem>
- <para>Mise à jour de la version de <acronym>L'API</acronym> <acronym>NEB</acronym></para>
+ <para>Mise à jour de la version de l'&acronym-api; &acronym-neb;</para>
  </listitem>
 
  <listitem>

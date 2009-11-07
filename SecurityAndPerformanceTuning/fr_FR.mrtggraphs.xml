@@ -16,7 +16,7 @@
   <para>L'utilitaire <link
 linkend="securityandperformancetuning-nagiostats">nagiostats</link> vous permet de grapher divers statisques de performance dans le
 temps en utilisant <ulink
-url="http://oss.oetiker.ch/mrtg/">MRTG</ulink>. Ceci est important car il peut vous aider à:</para>
+url="http://oss.oetiker.ch/mrtg/">&acronym-mrtg;</ulink>. Ceci est important car il peut vous aider à:</para>
 
   <itemizedlist>
    <listitem>
@@ -37,7 +37,7 @@ de Nagios</para>
  <section>
   <title>Exemple de configuration MRTG</title>
 
-  <para>Un fichier d'exemple de configuration MRTG pour grapher quelques
+  <para>Un fichier d'exemple de configuration &acronym-mrtg; pour grapher quelques
 statistiques Nagios de performance peut être trouvé dans le fichier
 <filename>mrtg.cfg</filename> situé dans le sous-répertoire <filename
 class="directory">sample-config/</filename> du package Nagios. Vous pouvez
@@ -45,14 +45,14 @@ créer des graphs d'autres informations de performance si vous voulez - Les
 exemples vous donnent juste un bon point de départ.</para>
 
   <para>Une fois que vous aurez copié ces exemples d'entrées dans votre fichier de
-configuration MRTG (<filename>/etc/mrtg/mrtg.cfg</filename>), vous devriez
-avoir des nouveaux graphiques, la prochaine fois que MRTG fonctionnera.</para>
+configuration &acronym-mrtg; (<filename>/etc/mrtg/mrtg.cfg</filename>), vous devriez
+avoir des nouveaux graphiques, la prochaine fois que &acronym-mrtg; fonctionnera.</para>
  </section>
 
  <section>
   <title>Exemples de graphiques</title>
 
-  <para>Je vais décrire ce que quelques-uns des graphiques MRTG signifient et à quoi
+  <para>Je vais décrire ce que quelques-uns des graphiques &acronym-mrtg; signifient et à quoi
 ils peuvent être utilisés…</para>
 
   <informaltable frame="all">

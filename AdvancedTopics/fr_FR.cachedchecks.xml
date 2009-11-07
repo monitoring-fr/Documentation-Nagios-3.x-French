@@ -152,7 +152,7 @@ devez:</para>
 				<para>Planifier régulièrement des contrôles de vos hôtes</para>
 			</listitem>
 			<listitem>
-				<para>Utilisez MRTG pour grapher les statistiques des 1) contrôles à la demande et
+				<para>Utilisez &acronym-mrtg; pour grapher les statistiques des 1) contrôles à la demande et
 2) des contrôles mémorisés</para>
 			</listitem>
 			<listitem>
@@ -182,8 +182,8 @@ Nagios exécute par rapport au nombre de contrôle mémorisé
 linkend="securityandperformancetuning-nagiostats">nagiostats</link> peut
 réaliser ces statistiques sur les controles mémorisés, lesquelles vous
 pouvez grapher avec <link
-linkend="securityandperformancetuning-mrtggraphs">MRTG</link>. L'exemple de
-graph MRTG suivant compare les contrôles mémorisés et les contrôles à la
+linkend="securityandperformancetuning-mrtggraphs">&acronym-mrtg;</link>. L'exemple de
+graph &acronym-mrtg; suivant compare les contrôles mémorisés et les contrôles à la
 demande.</para>
 		<para>L'installation de la supervision qui a réalisé les graphs ci-dessus avait:</para>
 		<itemizedlist>
@@ -200,7 +200,7 @@ linkend="configuringnagios-configmain-cached_host_check_horizon">cached_host_che
 réglée à 15 secondes</para>
 			</listitem>
 		</itemizedlist>
-		<para>Le premier graph MRTG nous montre le nombre de contrôle régulier d'hôte
+		<para>Le premier graph &acronym-mrtg; nous montre le nombre de contrôle régulier d'hôte
 comparé à celui que le contrôle mémorisés a produit. Dans cette exemple, en
 moyenne, nous avons 53 contrôles qui sont réalisés toutes les 5 minutes. 9
 entres eux sont des contrôles à la demande.</para>
@@ -221,7 +221,7 @@ de contrôle d'hôte et de service sont réalisé par exécution d'un plugin
 comparé à ceux utilisé avec les résultats de contrôle mis en cache. Utilisez
 cette information pour ajuster à votre environnement, la valeur de vos
 variables du cycle de mise en cache des contrôles. Continuez à superviser
-avec des graphs MRTG pour voir l'évolution en fonction de vos
+avec des graphs &acronym-mrtg; pour voir l'évolution en fonction de vos
 changements. Répetez l'opération si nécessaire.</para>
 	</section>
 </chapter>

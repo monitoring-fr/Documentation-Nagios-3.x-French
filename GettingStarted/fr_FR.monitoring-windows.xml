@@ -20,7 +20,7 @@ services <quote>privés</quote> de machines Windows comme:</para>
     </listitem>
 
     <listitem>
-     <para>Charge <acronym>CPU</acronym></para>
+     <para>Charge &acronym-cpu;</para>
     </listitem>
 
     <listitem>
@@ -347,17 +347,17 @@ define service{
   }
 </programlisting>
 
-  <para>Ajoutez la définition de service suivante pour superviser la charge <acronym>CPU</acronym> du
-serveur Windows et générer une alerte CRITICAL si la charge <acronym>CPU</acronym> des 5
+  <para>Ajoutez la définition de service suivante pour superviser la charge &acronym-cpu; du
+serveur Windows et générer une alerte CRITICAL si la charge &acronym-cpu; des 5
 dernières minutes est égale à 90% ou plus ou une alerte WARNING si la charge
-<acronym>CPU</acronym> des 5 dernières minutes est égale à 80% ou plus.</para>
+&acronym-cpu; des 5 dernières minutes est égale à 80% ou plus.</para>
 
   <programlisting>
 define service{
   use     generic-service
   host_name      winserver
-  service_description <acronym>CPU</acronym> Load
-  check_command    check_nt!<acronym>CPU</acronym>LOAD!-l 5,80,90
+  service_description &acronym-cpu; Load
+  check_command    check_nt!&acronym-cpu;LOAD!-l 5,80,90
   }
 </programlisting>
 

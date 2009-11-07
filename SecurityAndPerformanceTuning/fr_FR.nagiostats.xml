@@ -16,7 +16,7 @@ de Nagios. L'utilitaire <command>nagiostats</command> vous permet d'obtenir
 diverses informations sur le processus Nagios qui peuvent être très utiles
 lors de <link linkend="securityandperformancetuning-tuning">l'optimisation
 des performances</link>. Vous pouvez obtenir les informations soit dans un
-format compatible avec MRTG soit dans un format intelligible. </para>
+format compatible avec &acronym-mrtg; soit dans un format intelligible. </para>
 	</section>
 	<section>
 		<title>Instructions d'utilisation</title>
@@ -103,12 +103,12 @@ cette mesure particulière.</para>
 	<section>
 		<title>Intégration à MRTG</title>
 		<para>Vous pouvez utiliser l'outil nagiostat pour afficher diverses mesures de
-Nagios avec MRTG (ou tout autre programme compatible). Pour cela, lancez
+Nagios avec &acronym-mrtg; (ou tout autre programme compatible). Pour cela, lancez
 <command>nagiostats</command> en utilisant les arguments <option>--mrtg</option> et <option>et --data</option> L' <option>et --data</option> option --data est utilisée pour spécifier que les statistiques sont
 destinées à être représentées graphiquement. Les valeurs possibles pour <option>et --data</option> l'option --data sont listées en lançant l'utilitaire
 <command>nagiostats</command> avec l'option <option>--help</option> --help.</para>
 		<note><para>Les informations pour utiliser l'utilitaire <command>nagiostats</command>
-pour générer des graphiques MRTG des statistiques de performance de Nagios
+pour générer des graphiques &acronym-mrtg; des statistiques de performance de Nagios
 peuvent être <link
 linkend="securityandperformancetuning-mrtggraphs">ici</link>.</para></note>
 	</section>

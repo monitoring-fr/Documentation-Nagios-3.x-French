@@ -1098,7 +1098,7 @@ tampon. Pour des installations où vous avez besoin de traiter un nombre
 important de contrôles passifs (comme dans les <link
 linkend="advancedtopics-distributed">environnements distribués</link>), vous
 aurez peut-être besoin d'augmenter ce nombre. Vous devriez considérer
-l'utilisation de MRTG pour grapher l'usage que fait Nagios des tampons de
+l'utilisation de &acronym-mrtg; pour grapher l'usage que fait Nagios des tampons de
 commande externe. Vous pouvez en apprendre davantage sur la façon de
 configurer les graphes <link
 linkend="securityandperformancetuning-mrtggraphs">ici</link>.</para>
@@ -1130,7 +1130,7 @@ File"/>Fichier verrou</title>
 
    <para>C'est l'emplacement du fichier verrou qu'utilise Nagios quand il est lancé
 en tant que démon (i.e. démarré avec l'argument 
-   <option>-d</option> ). Ce fichier contient l'identifiant du processus (<acronym>PID</acronym>) de Nagios.</para>
+   <option>-d</option> ). Ce fichier contient l'identifiant du processus (&acronym-pid;) de Nagios.</para>
   </section>
 
   <section>
@@ -2933,7 +2933,7 @@ xreflabel="Environment Macros Option"/>Environment Macros Option</title>
 les <link linkend="thebasics-macrolist">macros</link> standard comme des
 variables d'environnements pour vos contrôles, notifications, déclencheur
 d'événement, etc … Dans de grand périmètre de production, ceci peut être
-problématique car une utilisation mémoire et <acronym>CPU</acronym> supplémentaire est utile
+problématique car une utilisation mémoire et &acronym-cpu; supplémentaire est utile
 pour convertir ces macros en variables d'environnements.</para>
 
    <itemizedlist>

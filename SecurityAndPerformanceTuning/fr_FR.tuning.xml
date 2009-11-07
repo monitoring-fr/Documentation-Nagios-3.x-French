@@ -28,8 +28,8 @@ Nagios…</para>
   <orderedlist>
    <listitem>
     <para>Graphez les statistiques de performance collectées avec
-<productname>MRTG</productname>. Vous devriez en effet grapher les quelques
-statistiques importantes produites avec <productname>MRTG</productname> pour
+&acronym-mrtg;. Vous devriez en effet grapher les quelques
+statistiques importantes produites avec &acronym-mrtg; pour
 garder des traces de comment votre installation de Nagios se comporte dans
 le temps au niveau charge et de comment les changements de configuration
 l'affectent. Cela devient vraiment, vraiment, vraiment utile quand il s'agit
@@ -52,7 +52,7 @@ linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
 disposition des commandes, contrôles, notifications, etc comme variables
 d'environnement. Cela peut devenir un problème sur une installation Nagios
 de grande dimension parce que cela consomme plus de mémoire et (plus
-important) plus de <acronym>CPU</acronym>. Si vos scripts n'ont pas besoin d'avoir accès aux
+important) plus de &acronym-cpu;. Si vos scripts n'ont pas besoin d'avoir accès aux
 macros comme variables d'environnement (vous pouvez passer par exemple
 toutes les macros nécessaires en argument de la ligne de commande), vous
 n'avez alors pas besoin de cette fonctionnalité. Vous pouvez empêcher de
@@ -84,7 +84,7 @@ d'hôtes et de services. Si vous rencontrez des problèmes de latences
 élevées, ajustez cette variable et vérifiez le résultat de vos réglages. Une
 nouvelle fois, vous devriez grapher les <link
 linkend="securityandperformancetuning-mrtggraphs">statistiques avec
-MRTG</link> pour pouvoir prendre cette décision.</para>
+&acronym-mrtg;</link> pour pouvoir prendre cette décision.</para>
    </listitem>
 
    <listitem>
@@ -92,7 +92,7 @@ MRTG</link> pour pouvoir prendre cette décision.</para>
 l'option <link
 linkend="configuringnagios-configmain-external_command_buffer_slots">external_command_buffer_slots</link>.
 Grapher les statistiques liées au tampon avec <link
-linkend="securityandperformancetuning-mrtggraphs">MRTG</link> (voir au
+linkend="securityandperformancetuning-mrtggraphs">&acronym-mrtg;</link> (voir au
 dessus) est critique pour pouvoir déterminer les valeurs à utiliser pour
 cette option.</para>
    </listitem>
@@ -235,7 +235,7 @@ passifs, vous pouvez aboutir à une situation où le tampon est toujours
 plein. Le résultat est que les processus enfant (scripts externes, démon
 &name-nsca;, etc.)sont bloqués quand ils essayent d'écrire dans le fichier
 de commandes externes. Je vous recommande fortement de grapher le tampon
-pour les tubes de redirections en utilisant MRTG et l'utilitaire nagiostats
+pour les tubes de redirections en utilisant &acronym-mrtg; et l'utilitaire nagiostats
 comme décrit <link
 linkend="securityandperformancetuning-mrtggraphs">ici</link> de façon à voir
 la consommation moyenne du tampon pour les tubes de redirections de votre
