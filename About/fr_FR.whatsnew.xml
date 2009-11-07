@@ -20,7 +20,7 @@ questions sur les mailing lists.
 
  <para>L'historique des changements de Nagios peut être trouvé en ligne sur <ulink
 url="&url-nagios;development/changelog.php">&url-nagios;development/changelog.php</ulink>
-ou dans le fichier <emphasis role="strong">Changelog</emphasis> situé à la
+ou dans le fichier <emphasis role="bold">Changelog</emphasis> situé à la
 racine de la distribution basée sur les sources.
  </para>
  </section>
@@ -51,8 +51,8 @@ les utilisateurs occasionnels de Nagios.</para>
  <itemizedlist>
  <listitem>
  <para><emphasis role="bold">Nouvelles macros</emphasis> - De nouvelles macros ont
-été ajoutées: <varname>$TEMPPATH$</varname>,
-<varname>$LONGHOSTOUTPUT$</varname>, <varname>$LONGSERVICEOUTPUT$</varname>,
+été ajoutées: &macro-temppath;,
+&macro-longhostoutput;, &macro-longserviceoutput;,
 <varname>$HOSTNOTIFICATIONID$</varname>,
 <varname>$SERVICENOTIFICATIONID$</varname>,
 <varname>$HOSTEVENTID$</varname>, <varname>$SERVICEEVENTID$</varname>,
@@ -431,8 +431,8 @@ l'option de configuration <link
 linkend="configuringnagios-configmain-use_regexp_matching">use_regexp_matching</link>.
 Les expressions régulières de base sont seulement utilisées dans certaines
 variables de définitions d'objets qui contiennent <emphasis
-role="strong">*</emphasis>, <emphasis role="strong">?</emphasis>, <emphasis
-role="strong">+</emphasis> ou <emphasis role="strong">\.</emphasis>.</para>
+role="strong">*</emphasis>, <emphasis role="bold">?</emphasis>, <emphasis
+role="strong">+</emphasis> ou <emphasis role="bold">\.</emphasis>.</para>
  </listitem>
 
  <listitem>
@@ -850,7 +850,7 @@ ajoutées. Ceci inclut <varname>$HOSTGROUPNAMES$</varname>,
  </listitem>
 
  <listitem>
- <para><emphasis role="strong">Fréquence de reaper</emphasis> - L'ancienne variable
+ <para><emphasis role="bold">Fréquence de reaper</emphasis> - L'ancienne variable
 <varname>service_reaper_frequency</varname> a été renommée en <link
 linkend="configuringnagios-configmain-check_result_reaper_frequency">check_result_reaper_frequency</link>
 puisqu'elle est désormais également utilisée pour traiter les résultats de contrôles

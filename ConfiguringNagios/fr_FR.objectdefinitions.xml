@@ -519,7 +519,7 @@ linkend="configuringnagios-configmain-host_check_timeout">host_check_timeout</li
 		<para>Par défaut, Nagios part du prinicipe que tous les hôtes sont dans un état UP
 au démarrage. Vous pouvez préciser l'état intitial souhaité de l'hôte avec
 cette variable. Les options valables sont : <emphasis
-role="strong">o</emphasis> = UP, <emphasis role="strong">d</emphasis> =
+role="strong">o</emphasis> = UP, <emphasis role="bold">d</emphasis> =
 DOWN, et <emphasis role="bold">u</emphasis> = UNREACHABLE.</para>
 		</listitem>
 	</varlistentry>
@@ -849,16 +849,16 @@ notification ne sera envoyée.
 		<listitem>
 		<para>Cette variable est utilisée pour déterminer quand les notifications pour un
 hôte doivent être envoyées. Les options valides sont une combinaison d'un ou
-de plusieurs des états suivants : <emphasis role="strong">d</emphasis> =
+de plusieurs des états suivants : <emphasis role="bold">d</emphasis> =
 envois de notifications sur état DOWN, <emphasis role="bold">u</emphasis> =
 envois de notifications sur état UNREACHABLE, <emphasis
 role="strong">r</emphasis> = envois de notifications sur état OK, <emphasis
 role="bold">f</emphasis> = envois de notification quand un hôte commence ou
 arrête d'<link linkend="advancedtopics-flapping">osciller</link>, et
-<emphasis role="strong">s</emphasis> = envois de notifications quand une
+<emphasis role="bold">s</emphasis> = envois de notifications quand une
 <link linkend="advancedtopics-downtime">période de maintenance
 planifiée</link> commence ou finit.<informalexample><para>
-        Si vous mettez <emphasis role="strong">d,r</emphasis> dans ce champ, les
+        Si vous mettez <emphasis role="bold">d,r</emphasis> dans ce champ, les
 notifications seront seulement envoyées quand l'hôte passera en état DOWN et
 quand il sortira de cet état DOWN (retour à la normale).</para></informalexample>
 		</para>
@@ -943,7 +943,7 @@ accéder aux &acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
 PNG ou JPG à associer à l'hôte. Cette image sera affichée dans plusieurs
 endroits des &acronym-cgi;s. Le rendu de l'image sera maximal si celle-ci est au
 format 40x40 pixels. Les images des hôtes sont censées se trouver dans le
-sous-répertoire <emphasis role="strong">logos/</emphasis> de votre dossier
+sous-répertoire <emphasis role="bold">logos/</emphasis> de votre dossier
 d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
         </para>
@@ -988,17 +988,17 @@ l'hôte dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
 utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
-temps CPU en calcul (comme c'est le cas avec les autres formats) quand vous
+temps <acronym>CPU</acronym> en calcul (comme c'est le cas avec les autres formats) quand vous
 générez la carte d'états. Le simages GD2 peuvent être créées à partir
 d'image PNG en utilisant l'utilitaire <emphasis
 role="bold">pngtogd2</emphasis> fourni avec la <ulink
 url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format
 GD2 doivent être créées dans un format <emphasis>non compressé</emphasis>
-toujours pour minimiser la charge CPU au moment de charger la carte
+toujours pour minimiser la charge <acronym>CPU</acronym> au moment de charger la carte
 réseau. Le rendu d el'image sera maximal si vous utilisez une taille de
 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas
 le &acronym-cgi; de carte d'états. Les images des hôtes sont censées se trouver dans
-le sous-répertoire <emphasis role="strong">logos/</emphasis> de votre
+le sous-répertoire <emphasis role="bold">logos/</emphasis> de votre
 dossier d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
         </para>
@@ -1840,7 +1840,7 @@ utilisés pour la <link linkend="advancedtopics-flapping">logique de
 détection d'oscillations</link>. Les options valides sont une combinaison
 d'un ou plusieurs états parmi les suivants :
 		<itemizedlist>
-		<listitem><para><emphasis role="strong">o</emphasis> = états OK</para></listitem>
+		<listitem><para><emphasis role="bold">o</emphasis> = états OK</para></listitem>
 		<listitem><para><emphasis role="bold">w</emphasis> = états WARNING</para></listitem>
 		<listitem><para><emphasis role="bold">c</emphasis> = états CRITICAL</para></listitem>
 		<listitem><para><emphasis role="bold">u</emphasis> = états UNKNOWN.</para></listitem>
@@ -1953,17 +1953,17 @@ couverture d'une période de temps.
 service doivent être envoyées. Le soptions valides sont une combinaison de
 l'un ou plusieurs des états suivants :
 		<itemizedlist>
-		<listitem><para><emphasis role="strong">w</emphasis> = envois de notifications sur état
+		<listitem><para><emphasis role="bold">w</emphasis> = envois de notifications sur état
 WARNING</para></listitem> 
 		<listitem><para><emphasis role="bold">u</emphasis> = envois de notifications sur état
 UNKNOWN</para></listitem> 
-		<listitem><para><emphasis role="strong">c</emphasis> = envois de notifications sur état
+		<listitem><para><emphasis role="bold">c</emphasis> = envois de notifications sur état
 CRITICAL</para></listitem>
 		<listitem><para><emphasis role="bold">r</emphasis> = envois de notifications sur état OK</para></listitem>
-		<listitem><para><emphasis role="strong">f</emphasis> = envois de notifications quand le
+		<listitem><para><emphasis role="bold">f</emphasis> = envois de notifications quand le
 service commence ou s'arrête d'<link
 linkend="advancedtopics-flapping">osciller</link></para></listitem>
-		<listitem><para><emphasis role="strong">s</emphasis> = envois de notifications quand une
+		<listitem><para><emphasis role="bold">s</emphasis> = envois de notifications quand une
 <link linkend="advancedtopics-downtime">période de maintenance
 planifiée</link> commence ou se termine</para></listitem> 
 		<listitem><para><emphasis role="bold">n</emphasis> (none) en option, aucune notification ne
@@ -1974,7 +1974,7 @@ changement d'état possible.</para></listitem>
 	
 		<informalexample>
 		<para>
-        Si vous précisez<emphasis role="strong">w,r</emphasis>dans ce champ, les
+        Si vous précisez<emphasis role="bold">w,r</emphasis>dans ce champ, les
 notifications seront envoyées uniquement quand le service passera en état
 WARNING ou qu'il sortira de cet état WARNING.
 		</para>
@@ -3456,17 +3456,17 @@ sera pas contrôlé activement. Les options valides sont une combinaison d'un
 ou de plusieurs des état suivants (les options multiples sont séparées par
 des virgules). 
 		<itemizedlist>
-		<listitem><para><emphasis role="strong">o</emphasis> = erreur sur état OK</para></listitem>
-		<listitem><para><emphasis role="strong">w</emphasis> = erreur sur état WARNING</para></listitem>
-		<listitem><para><emphasis role="strong">u</emphasis> = erreur sur état UNKNOWN</para></listitem>
-		<listitem><para><emphasis role="strong">c</emphasis> = erreur sur état CRITICAL</para></listitem>
-		<listitem><para><emphasis role="strong">p</emphasis> = erreur sur état d'attente (par
+		<listitem><para><emphasis role="bold">o</emphasis> = erreur sur état OK</para></listitem>
+		<listitem><para><emphasis role="bold">w</emphasis> = erreur sur état WARNING</para></listitem>
+		<listitem><para><emphasis role="bold">u</emphasis> = erreur sur état UNKNOWN</para></listitem>
+		<listitem><para><emphasis role="bold">c</emphasis> = erreur sur état CRITICAL</para></listitem>
+		<listitem><para><emphasis role="bold">p</emphasis> = erreur sur état d'attente (par
 exemple le service n'a pas encore été vérifié).</para></listitem> 
-		<listitem><para><emphasis role="strong">n</emphasis> (none) : la dépendance d'exécution
+		<listitem><para><emphasis role="bold">n</emphasis> (none) : la dépendance d'exécution
 n'échouera jamais et les contrôles du service dépendant seront toujours
 faits activement (si d'autres conditions permettent de le faire).</para></listitem> 
 		</itemizedlist>
-		<informalexample><para>Si vous précisez <emphasis role="strong">o,c,u</emphasis> dans ce champ, le
+		<informalexample><para>Si vous précisez <emphasis role="bold">o,c,u</emphasis> dans ce champ, le
 service <emphasis>dépendant</emphasis> ne sera pas contrôlé activement si le
 service <emphasis>maître</emphasis> est dans un des états OK, CRITICAL ou
 UNKNOWN.
@@ -3487,13 +3487,13 @@ précisons, les notifications pour le service <emphasis>dépendants</emphasis>
 ne seront pas envoyées aux contacts. Les options valides sont une
 combinaison d'un ou de plusieurs des état suivants :
 		<itemizedlist>
-		<listitem><para><emphasis role="strong">o</emphasis> = erreur sur état OK</para></listitem>
-		<listitem><para><emphasis role="strong">w</emphasis> = erreur sur état WARNING</para></listitem>
-		<listitem><para><emphasis role="strong">u</emphasis> = erreur sur état UNKNOWN</para></listitem>
-		<listitem><para><emphasis role="strong">c</emphasis> = erreur sur état CRITICAL</para></listitem>
-		<listitem><para><emphasis role="strong">p</emphasis> = erreur sur état d'attente (par
+		<listitem><para><emphasis role="bold">o</emphasis> = erreur sur état OK</para></listitem>
+		<listitem><para><emphasis role="bold">w</emphasis> = erreur sur état WARNING</para></listitem>
+		<listitem><para><emphasis role="bold">u</emphasis> = erreur sur état UNKNOWN</para></listitem>
+		<listitem><para><emphasis role="bold">c</emphasis> = erreur sur état CRITICAL</para></listitem>
+		<listitem><para><emphasis role="bold">p</emphasis> = erreur sur état d'attente (par
 exemple le service n'a pas encore été vérifié).</para></listitem>
-		<listitem><para> <emphasis role="strong">n</emphasis> (none) : la dépendance de notification
+		<listitem><para> <emphasis role="bold">n</emphasis> (none) : la dépendance de notification
 n'échouera jamais et les notifications du service dépendant seront toujours
 envoyées.</para></listitem>
 		</itemizedlist>
@@ -3775,11 +3775,11 @@ l'escalade est considérée comme valide pendant l'ensemble des états du
 service. Les options valides osnt une combinaison de l'un ou de plusieurs de
 ces états : 
 		<itemizedlist>
-		<listitem><para><emphasis role="strong">r</emphasis> = escalade sur un état OK (retour à la
+		<listitem><para><emphasis role="bold">r</emphasis> = escalade sur un état OK (retour à la
 normale)</para></listitem>
-		<listitem><para><emphasis role="strong">w</emphasis> = escalade sur un état WARNING</para></listitem>
-		<listitem><para><emphasis role="strong">u</emphasis> = escalade sur un état UNKNOWN</para></listitem>
-		<listitem><para><emphasis role="strong">c</emphasis> = escalade sur un état CRITICAL </para></listitem>
+		<listitem><para><emphasis role="bold">w</emphasis> = escalade sur un état WARNING</para></listitem>
+		<listitem><para><emphasis role="bold">u</emphasis> = escalade sur un état UNKNOWN</para></listitem>
+		<listitem><para><emphasis role="bold">c</emphasis> = escalade sur un état CRITICAL </para></listitem>
 		</itemizedlist>
 		<informalexample><para>Si vous précisez <emphasis role="bold">w</emphasis> dans ce champ,
 l'esaclade sera seulement utilisée quand le service es ten état WARNING.</para></informalexample>
@@ -3967,16 +3967,16 @@ contrôlé activement. Les options valides sont une combinaison d'un ou de
 plusieurs des état suivants (les options multiples sont séparées par des
 virgules).
 		<itemizedlist>
-		<listitem><para><emphasis role="strong">o</emphasis> = erreur sur un état UP</para></listitem>
-		<listitem><para><emphasis role="strong">d</emphasis> = erreur sur un état DOWN</para></listitem>
-		<listitem><para><emphasis role="strong">u</emphasis> = erreur sur un état UNREACHABLE</para></listitem>
+		<listitem><para><emphasis role="bold">o</emphasis> = erreur sur un état UP</para></listitem>
+		<listitem><para><emphasis role="bold">d</emphasis> = erreur sur un état DOWN</para></listitem>
+		<listitem><para><emphasis role="bold">u</emphasis> = erreur sur un état UNREACHABLE</para></listitem>
 		<listitem><para><emphasis role="bold">p</emphasis> = erreur sur un état d'attente (par
 exemple l'hôte n'a pas encore été contrôlé)</para></listitem>
-		<listitem><para><emphasis role="strong">n</emphasis> (none) : la dépendance d'exécution
+		<listitem><para><emphasis role="bold">n</emphasis> (none) : la dépendance d'exécution
 n'échouera jamais et les contrôles de l'hôte dépendant seront toujours faits
 activement (si d'autres conditions permettent de le faire).</para></listitem>
 		</itemizedlist>
-        <informalexample><para>Si vous précisez <emphasis role="strong">u,d</emphasis> dans ce champ,
+        <informalexample><para>Si vous précisez <emphasis role="bold">u,d</emphasis> dans ce champ,
 l'hôte <emphasis>dépendant</emphasis> ne sera pas contrôlé activement si
 l'hôte <emphasis>maître</emphasis> est dans un des états UNREACHABLE ou
 DOWN.
@@ -3997,12 +3997,12 @@ d'erreur que nous précisons, les notifications pour l'hôte
 options valides sont une combinaison d'un ou de plusieurs des état suivants
 :
 		<itemizedlist>
-		<listitem><para><emphasis role="strong">o</emphasis> = erreur sur un état UP</para></listitem>
-		<listitem><para><emphasis role="strong">d</emphasis> = erreur sur un état DOWN</para></listitem>
-		<listitem><para><emphasis role="strong">u</emphasis> = erreur sur un état UNREACHABLE</para></listitem>
-		<listitem><para><emphasis role="strong">p</emphasis> = erreur sur un état d'attente (par
+		<listitem><para><emphasis role="bold">o</emphasis> = erreur sur un état UP</para></listitem>
+		<listitem><para><emphasis role="bold">d</emphasis> = erreur sur un état DOWN</para></listitem>
+		<listitem><para><emphasis role="bold">u</emphasis> = erreur sur un état UNREACHABLE</para></listitem>
+		<listitem><para><emphasis role="bold">p</emphasis> = erreur sur un état d'attente (par
 exemple l'hôte n'a pas encore été contrôlé)</para></listitem>
-		<listitem><para><emphasis role="strong">n</emphasis> (none) : la dépendance de notification
+		<listitem><para><emphasis role="bold">n</emphasis> (none) : la dépendance de notification
 n'échouera jamais et les notifications de l'hôte dépendant seront toujours
 envoyées.</para></listitem>
 		</itemizedlist>
@@ -4253,12 +4253,12 @@ valides osnt une combinaison de l'un ou de plusieurs de ces états :
 		<itemizedlist>
 		<listitem><para><emphasis role="bold">r</emphasis> = escalade sur un état UP (retour à la
 normale)</para></listitem>
-		<listitem><para><emphasis role="strong">d</emphasis> = escalade sur un état DOWN</para></listitem>
-		<listitem><para><emphasis role="strong">u</emphasis> = escalade sur un état UNREACHABLE</para></listitem>
+		<listitem><para><emphasis role="bold">d</emphasis> = escalade sur un état DOWN</para></listitem>
+		<listitem><para><emphasis role="bold">u</emphasis> = escalade sur un état UNREACHABLE</para></listitem>
 		</itemizedlist>
 		<informalexample>
 		<para>
-		Si vous précisez <emphasis role="strong">d</emphasis> dans ce champ,
+		Si vous précisez <emphasis role="bold">d</emphasis> dans ce champ,
 l'escalade sera seulement utilisée quand l'hôte est dans un état DOWN.
 		</para>
 		</informalexample>
@@ -4509,17 +4509,17 @@ l'hôte dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
 utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
-temps CPU en calcul (comme c'est le cas avec les autres formats) quand vous
+temps <acronym>CPU</acronym> en calcul (comme c'est le cas avec les autres formats) quand vous
 générez la carte d'états. Le simages GD2 peuvent être créées à partir
 d'image PNG en utilisant l'utilitaire <emphasis
 role="bold">pngtogd2</emphasis> fourni avec la <ulink
 url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format
 GD2 doivent être créées dans un format <emphasis>non compressé</emphasis>
-toujours pour minimiser la charge CPU au moment de charger la carte
+toujours pour minimiser la charge <acronym>CPU</acronym> au moment de charger la carte
 réseau. Le rendu d el'image sera maximal si vous utilisez une taille de
 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas
 le &acronym-cgi; de carte d'états. Les images des hôtes sont censées se trouver dans
-le sous-répertoire <emphasis role="strong">logos/</emphasis> de votre
+le sous-répertoire <emphasis role="bold">logos/</emphasis> de votre
 dossier d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
         </para>
@@ -4749,7 +4749,7 @@ sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
 PNG ou JPG à associer à l'hôte. Cette image sera affichée dans plusieurs
 endroits des &acronym-cgi;s. Le rendu de l'image sera maximal si celle-ci est au
 format 40x40 pixels. Les images des hôtes sont censées se trouver dans le
-sous-répertoire <emphasis role="strong">logos/</emphasis> de votre dossier
+sous-répertoire <emphasis role="bold">logos/</emphasis> de votre dossier
 d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
         </para>
