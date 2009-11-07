@@ -605,7 +605,7 @@ savoir plus</link>)</para>
  <listitem>
  <para>Les réessais de contrôles d'hôtes sont maintenant gérés comme ceux
 des services. Tout ça pour dire que les définitions d'hôtes ont une nouvelle
-variable <varname>retry_interval</varname> qui précise le temps à attendre
+variable &directive-retry_interval; qui précise le temps à attendre
 avant de faire un nouvel essai de contrôle sur l'hôte. ;-)</para>
  </listitem>
 
@@ -916,7 +916,7 @@ Ce nouveau mode ouvre un fichier en lecture/écriture non exclusive, ce qui est 
  <listitem>
  <para><emphasis role="bold">Décalage de fuseau horaire</emphasis> - Une nouvelle
 option, <link
-linkend="configuringnagios-configmain-use_timezone">use_timezone</link>, a
+linkend="configuringnagios-configmain-use_timezone"><varname>use_timezone</varname></link>, a
 été ajoutée afin de vous permettre de démarrer des instances de nagios
 situées dans des fuseaux horaires autres que le fuseau local.</para>
  </listitem>
