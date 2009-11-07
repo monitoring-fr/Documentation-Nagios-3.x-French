@@ -192,10 +192,10 @@ xreflabel="Object Cache File"/>Fichier de cache des objets</title>
    <para>Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui
 contiendra une copie en <link linkend="configuringnagios-configobject">cache
 des définitions des objets</link>. Ce fichier cache est (re)créé à chaque
-(re)démarrage de Nagios et est utilisé par les CGIs. Il permet d'accélérer le
-cache des fichiers de configuration pour les CGIs, et vous permet de modifier
+(re)démarrage de Nagios et est utilisé par les &acronym-cgi;s. Il permet d'accélérer le
+cache des fichiers de configuration pour les &acronym-cgi;s, et vous permet de modifier
 les fichiers de configuration des objets, pendant que Nagios tourne, sans
-que l'affichage des CGIs soit modifié.</para>
+que l'affichage des &acronym-cgi;s soit modifié.</para>
   </section>
 
   <section>
@@ -261,7 +261,7 @@ File"/>Fichier de ressources</title>
 type $USERn$.
    <code>$USERn$</code> Les <link linkend="thebasics-macros">macros</link> $USERn$ permettent de stocker des noms d'utilisateurs, des mots
 de passe, et les éléments couramment utilisés dans les commandes (comme les
-chemins d'accès). Les CGIs ne lisent pas les fichiers de ressources, si bien
+chemins d'accès). Les &acronym-cgi;s ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
 protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de
 ressources en ajoutant des directives resource_file
@@ -358,8 +358,8 @@ id="configuringnagios-configmain-status_file" xreflabel="Status File"
    <para>C'est le fichier utilisé par Nagios, pour stocker l'état courant de tous
 les services supervisés. L'état de tous les hôtes associés avec ces
 services, est également enregistré dans ce fichier. Ce fichier est utilisé
-par le CGI d'état pour afficher l'état courant de la supervision dans
-l'interface web. Les CGIs doivent avoir le droit d'accéder en lecture à ce
+par le &acronym-cgi; d'état pour afficher l'état courant de la supervision dans
+l'interface web. Les &acronym-cgi;s doivent avoir le droit d'accéder en lecture à ce
 fichier, pour fonctionner correctement. Ce fichier est supprimé à l'arrêt de
 Nagios, et recréé au démarrage.</para>
   </section>
@@ -962,7 +962,7 @@ externes</title>
    <para>Cette option détermine si Nagios va vérifier le contenu du <xref
 linkend="configuringnagios-configmain-command_file" /> à la recherche de
 commandes à exécuter. Cette option doit être activée si vous avez prévu
-d'utiliser le <link linkend="thebasics-cgis">CGI de commande</link> pour
+d'utiliser le <link linkend="thebasics-cgis">&acronym-cgi; de commande</link> pour
 envoyer des commandes via l'interface web. Des programmes tiers peuvent
 également envoyer des commandes à Nagios en écrivant dans le fichier de
 commande, sous réserve que les droits nécessaires à l'accès au fichier ait
@@ -1050,7 +1050,7 @@ Command File" />Fichier de commandes externes</title>
    </informaltable>
 
    <para>C'est le fichier que Nagios lit à la recherche de commandes externes. Le
-<link linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> écrit les
+<link linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link> écrit les
 commandes dans ce fichier. Des programmes tiers peuvent écrire dans ce
 fichier sous réserve qu'ils aient les droits d'accès comme il est décrit
 ici. Le fichier de commandes externes est implémenté sous forme d'un tube
@@ -2052,7 +2052,7 @@ des versions de Nagios antérieures à la version 0.0.5). Mettez une valeur
 de s (débrouillard)[smart]) pour que le calcul du facteur d'entrelacement
 soit automatique, à moins que vous ayez une bonne raison de la changer. Le
 meilleur moyen de comprendre le fonctionnement du facteur d'entrelacement
-est d'observer le <link linkend="thebasics-cgis-status_cgi">CGI
+est d'observer le <link linkend="thebasics-cgis-status_cgi">&acronym-cgi;
 d'état</link> (vue détaillée) au moment où Nagios vient de démarrer. Vous
 verrez comment les contrôles sont faits au fur et à mesure que les résultats
 apparaissent. Vous trouverez plus d'informations sur l'entrelacement <link
@@ -4569,7 +4569,7 @@ défaut.</para>
    <note>
     <para>Si vous utilisez cette option de plage horaire personnalisé, vous allez
 devoir modifier des directives dans les fichier de configurations d'Apache
-concernant les CGIs comme dans l'exemple suivant:</para>
+concernant les &acronym-cgi;s comme dans l'exemple suivant:</para>
    </note>
 
    <para>

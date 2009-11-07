@@ -32,7 +32,7 @@ rapide</link>.			</para>
 		
 		<para>Le fichier de configuration principal contient un certain nombre de
 directives qui affectent la manière dont Nagios fonctionne. Ce fichier est
-lu par le processus Nagios et par les <acronym>CGIs</acronym>. C'est ici que commence vos aventures de configuration.
+lu par le processus Nagios et par les &acronym-cgi;. C'est ici que commence vos aventures de configuration.
 		</para>
 		
 		<para>La documentation du fichier de configuration principal se trouve <link
@@ -51,7 +51,7 @@ linkend="configuringnagios-configmain">ici</link>.
 		Les fichiers des ressources sont utilisés pour stocker les macros définies
 par les utilisateurs. L'avantage de ces fichiers est de pouvoir y mettre des
 données sensibles de configuration (comme des mots de passe) qui ne seront
-pas accessibles à travers les CGIs.
+pas accessibles à travers les &acronym-cgi;s.
 		</para>
 		
 		<para>Vous pouvez définir un ou plusieurs fichiers optionnels de ressources avec
@@ -86,14 +86,14 @@ linkend="configuringnagios-configobject">ici</link>.
 	<section>
 		<title>Fichier de configuration des CGIs</title>
 		
-		<para>Le fichier de configuration des CGIs contient un certain nombre de
+		<para>Le fichier de configuration des &acronym-cgi;s contient un certain nombre de
 directives qui affectent le mode de fonctionnement des <link
-linkend="thebasics-cgis">CGIs</link>. Il contient également une référence au
-fichier de configuration principal, de façon à ce que les CGIs sachent
+linkend="thebasics-cgis">&acronym-cgi;s</link>. Il contient également une référence au
+fichier de configuration principal, de façon à ce que les &acronym-cgi;s sachent
 comment est configuré Nagios et où trouver les objets de configuration.
 		</para>
 		
-		<para>La documentation du fichier de configuration des CGIs se trouve <link
+		<para>La documentation du fichier de configuration des &acronym-cgi;s se trouve <link
 linkend="configuringnagios-configcgi">ici</link>. </para>
 	</section>
 </chapter>

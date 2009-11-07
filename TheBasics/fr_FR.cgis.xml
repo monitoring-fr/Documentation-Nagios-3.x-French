@@ -12,14 +12,14 @@
  <section>
   <title>Introduction</title>
 
-  <para>Vous trouverez ici une description de l'ensemble des CGIs de Nagios ainsi
+  <para>Vous trouverez ici une description de l'ensemble des &acronym-cgi;s de Nagios ainsi
 que les autorisations nécessaires pour accéder à chacun d'eux. Par défaut,
-les CGIs ne fonctionnent que si vous vous êtes authentifiés auprès du serveur
+les &acronym-cgi;s ne fonctionnent que si vous vous êtes authentifiés auprès du serveur
 web et que vous êtes autorisés à accéder aux informations demandées. Pour
 plus d'informations sur la configuration des autorisations de votre serveur
-web et des CGIs, lisez les sections <link
+web et des &acronym-cgi;s, lisez les sections <link
 linkend="configuringnagios-cgiauth">Installer l'interface web et
-Authentification et autorisations dans les CGIs</link>.</para>
+Authentification et autorisations dans les &acronym-cgi;s</link>.</para>
  </section>
 
  <section>
@@ -81,8 +81,8 @@ Authentification et autorisations dans les CGIs</link>.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : C'est le CGI le plus important de Nagios. Il vous permet de
-voir l'état de tous les hôtes et de tous les services supervisés. Le CGI
+      <entry><para>Description : C'est le &acronym-cgi; le plus important de Nagios. Il vous permet de
+voir l'état de tous les hôtes et de tous les services supervisés. Le &acronym-cgi;
 d'état peut produire deux types principaux d'affichage - un aperçu de l'état
 de tous les groupes d'hôtes (ou d'un groupe particulier) et une vue
 détaillée de tous les services (ou de ceux associés à un hôte particulier).</para>
@@ -143,14 +143,14 @@ les services dont vous êtes un contact. </para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Ce CGI crée une carte de tous les hôtes que vous avez défini dans votre
+      <entry><para>Ce &acronym-cgi; crée une carte de tous les hôtes que vous avez défini dans votre
 réseau. Il utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de
 Thomas Boutell (version 1.6.3 ou plus) pour créer une image au format PNG de
 l'agencement de votre réseau. Les coordonnées utilisées pour dessiner chaque
 hôte (ainsi que les jolies icônes facultatives) sont extraites des
 définitions d' <link
 linkend="configuringnagios-objectdefinitions-host">hôtes</link>. Si vous
-souhaitez plutôt laisser le CGI dessiner automatiquement les coordonnées
+souhaitez plutôt laisser le &acronym-cgi; dessiner automatiquement les coordonnées
 pour vous, utilisez la directive <link
 linkend="configuringnagios-configcgi-default_statusmap_layout">default_statusmap_layout</link>
 pour spécifier l'algorithme à utiliser.</para> <para>Autorisation requises :</para>
@@ -208,7 +208,7 @@ vous ne pouvez pas voir les dépendances entre les hôtes… </para></note></ent
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description: Ce CGI gère <acronym>WAP</acronym> l'interface WAP d'accès aux informations sur l'état du réseau. Si vous avez <acronym>WAP</acronym>un appareil WAP (i.e. un téléphone portable compatible Internet), vous
+      <entry><para>Description: Ce &acronym-cgi; gère <acronym>WAP</acronym> l'interface WAP d'accès aux informations sur l'état du réseau. Si vous avez <acronym>WAP</acronym>un appareil WAP (i.e. un téléphone portable compatible Internet), vous
 pouvez accéder aux informations d'état alors que vous êtes en
 déplacement. Les vues disponibles comprennent le résumé par groupe d'hôtes,
 l'aperçu par groupe d'hôtes, le détail d'un hôte, le détail d'un service,
@@ -279,12 +279,12 @@ tous les hôtes et services dont vous êtes un contact.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI crée une modélisation en 3D utilisant le langage VRML
+      <entry><para>Description : Ce &acronym-cgi; crée une modélisation en 3D utilisant le langage VRML
 de tous les hôtes définis dans votre réseau. Les coordonnées utilisées pour
 dessiner les hôtes (ainsi que les jolies textures) sont extraites des
 définitions d'<link
 linkend="configuringnagios-objectdefinitions-host">hôtes</link>. Si vous
-souhaitez plutôt laisser le CGI dessiner automatiquement les coordonnées
+souhaitez plutôt laisser le &acronym-cgi; dessiner automatiquement les coordonnées
 pour vous, utilisez la directive <link
 linkend="configuringnagios-configcgi-default_statusmap_layout">default_statusmap_layout</link>
 pour spécifier l'algorithme à utiliser. Il vous faudra un navigateur VRML
@@ -347,7 +347,7 @@ vous ne pouvez pas voir les dépendances entre les hôtes… </para></note></ent
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description: Ce CGI vous donne une vue générale de toute l'activité de
+      <entry><para>Description: Ce &acronym-cgi; vous donne une vue générale de toute l'activité de
 supervision du réseau. Il vous permet de repérer rapidement les
 indisponibilités du réseau, l'état des hôtes et des services. Il distingue
 les problèmes qui ont été traités d'une façon ou d'une autre (par ex. qui
@@ -412,7 +412,7 @@ les services dont vous êtes un contact. </para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI produit une liste des hôtes <quote>à problèmes</quote>
+      <entry><para>Description : Ce &acronym-cgi; produit une liste des hôtes <quote>à problèmes</quote>
 de votre réseau qui sont responsables de ruptures de lien. Ceci est
 particulièrement utile sur les grands réseaux pour identifier rapidement la
 cause d'un problème. Les hôtes sont triés selon la gravité de la rupture
@@ -468,7 +468,7 @@ tous les hôtes</link> vous pouvez voir tous les hôtes. </para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para> Description : Ce CGI permet de visualiser les définitions d'objets (par
+      <entry><para> Description : Ce &acronym-cgi; permet de visualiser les définitions d'objets (par
 ex. hôtes, groupes d'hôtes, contacts, groupes de contacts, périodes,
 services et commandes) tels que spécifiés dans vos <link
 linkend="configuringnagios-configobject">fichier(s) de configuration des
@@ -520,11 +520,11 @@ information de configuration.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI permet d'envoyer des commandes au processus de
-Nagios. Bien que ce CGI accepte plusieurs arguments, mieux vaut ne pas s'y
+      <entry><para>Description : Ce &acronym-cgi; permet d'envoyer des commandes au processus de
+Nagios. Bien que ce &acronym-cgi; accepte plusieurs arguments, mieux vaut ne pas s'y
 essayer. La plupart changent selon les révisions de Nagios. Utilisez plutôt
 les <link linkend="thebasics-cgis-extinfo_cgi">informations complémentaires
-des CGIs</link> comme point de départ pour envoyer des commandes. </para>
+des &acronym-cgi;s</link> comme point de départ pour envoyer des commandes. </para>
       <para>Autorisation requises :</para> <itemizedlist>
         <listitem>
          <para>Vous devez être <link
@@ -555,9 +555,9 @@ les hôtes et services dont vous êtes un contact.</para>
         <listitem>
          <para>Si vous avez choisi de ne pas <link
 linkend="configuringnagios-configcgi-use_authentication">utiliser
-l'authentification</link> dans les CGIs, ce CGI ne permettra à personne
+l'authentification</link> dans les &acronym-cgi;s, ce &acronym-cgi; ne permettra à personne
 d'envoyer des commandes à Nagios, et ce dans votre propre intérêt. Je
-suggère dans ce cas de supprimer le CGI. </para>
+suggère dans ce cas de supprimer le &acronym-cgi;. </para>
         </listitem>
        </itemizedlist></entry>
      </row>
@@ -625,17 +625,17 @@ suggère dans ce cas de supprimer le CGI. </para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI permet de voir les informations relatives au processus
+      <entry><para>Description : Ce &acronym-cgi; permet de voir les informations relatives au processus
 de Nagios, aux statistiques sur les hôtes et les services, aux commentaires
 sur les hôtes et les services, et plus encore. C'est également un point
 d'entrée pour envoyer des commandes à Nagios via le <link
-linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Bien que ce CGI
+linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link>. Bien que ce &acronym-cgi;
 accepte plusieurs arguments, mieux vaut ne pas s'y essayer : la plupart
-changent selon les révisions de Nagios. Vous pouvez accéder à ce CGI en
+changent selon les révisions de Nagios. Vous pouvez accéder à ce &acronym-cgi; en
 cliquant sur les liens appelés 'Network Health' [NdT: Santé/Etat du réseau]
 et 'Process Information' [NdT: Information sur le processus Nagios] de la
 barre latérale de navigation, ou en cliquant sur un lien hôte ou service
-dans l'affichage du <link linkend="thebasics-cgis-status_cgi">CGI
+dans l'affichage du <link linkend="thebasics-cgis-status_cgi">&acronym-cgi;
 d'état</link>. </para>
       <para>Autorisation requises :</para> <itemizedlist>
         <listitem>
@@ -704,7 +704,7 @@ contact. </para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI affiche le <link
+      <entry><para>Description : Ce &acronym-cgi; affiche le <link
 linkend="configuringnagios-configmain-log_file">fichier journal</link>. Si
 vous avez activé la <link
 linkend="configuringnagios-configmain-log_rotation_method">rotation du
@@ -756,9 +756,9 @@ pour les informations système</link> pour voir le fichier journal.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI affiche l'historique des problèmes relatifs soit à un
+      <entry><para>Description : Ce &acronym-cgi; affiche l'historique des problèmes relatifs soit à un
 hôte particulier soit à tous les hôtes. L'affichage est un sous-ensemble de
-ce que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
+ce que produit le <link linkend="thebasics-cgis-showlog_cgi">&acronym-cgi; du fichier
 journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
 types de problèmes (i.e. alertes hard et/ou soft, les différents types
 d'alertes sur les services et les hôtes, tous les types d'alertes, etc.). Si
@@ -824,9 +824,9 @@ les hôtes et tous les services dont vous êtes un contact.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI affiche les notifications envoyées aux différents
+      <entry><para>Description : Ce &acronym-cgi; affiche les notifications envoyées aux différents
 contacts d'un hôte ou d'un service. L'affichage est un sous-ensemble de ce
-que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
+que produit le <link linkend="thebasics-cgis-showlog_cgi">&acronym-cgi; du fichier
 journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
 types de problèmes (i.e. notifications relatives aux services, aux hôtes,
 envoyées à des contacts spécifiques, etc). Si vous avez activé la <link
@@ -893,13 +893,13 @@ relatives à tous les hôtes et tous les services dont vous êtes un contact.</p
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI crée un graphique des états des hôtes et des services
-sur une période donnée. Pour que ce CGI soit pertinent, vous devez activer
+      <entry><para>Description : Ce &acronym-cgi; crée un graphique des états des hôtes et des services
+sur une période donnée. Pour que ce &acronym-cgi; soit pertinent, vous devez activer
 la <link linkend="configuringnagios-configmain-log_rotation_method">rotation
 du journal</link> et archiver les journaux dans le répertoire défini par la
 variable <link
 linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link>.
-Ce CGI utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
+Ce &acronym-cgi; utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
 Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.</para> <para>Autorisation requises :</para> <itemizedlist>
         <listitem>
          <para>Si vous êtes <link
@@ -965,8 +965,8 @@ les hôtes et tous les services dont vous êtes un contact.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description: Ce CGI permet de créer un rapport sur la disponibilité des
-hôtes et des services sur une période donnée. Pour que ce CGI soit
+      <entry><para>Description: Ce &acronym-cgi; permet de créer un rapport sur la disponibilité des
+hôtes et des services sur une période donnée. Pour que ce &acronym-cgi; soit
 pertinent, vous devez activer la <link
 linkend="configuringnagios-configmain-log_rotation_method">rotation du
 journal</link> et archiver les journaux dans le répertoire défini par la
@@ -1031,14 +1031,14 @@ tous les services et hôtes dont vous êtes un contact.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI permet d'afficher l'histogramme de disponibilité
-d'hôtes et services sur une période de temps. Pour que ce CGI soit
+      <entry><para>Description : Ce &acronym-cgi; permet d'afficher l'histogramme de disponibilité
+d'hôtes et services sur une période de temps. Pour que ce &acronym-cgi; soit
 pertinent, vous devez activer la <link
 linkend="configuringnagios-configmain-log_rotation_method">rotation du
 journal</link> et archiver les journaux dans le répertoire défini par la
 variable <link
 linkend="configuringnagios-configmain-log_archive_path">log_archive_path</link>.
-Ce CGI utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
+Ce &acronym-cgi; utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
 Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.</para>
       <para>Autorisation requises :</para> <itemizedlist>
         <listitem>
@@ -1099,7 +1099,7 @@ tous les services et hôtes dont vous êtes un contact.</para>
    <tgroup cols="1">
     <tbody>
      <row>
-      <entry><para>Description : Ce CGI fournit des rapports synthétiques sur les alertes
+      <entry><para>Description : Ce &acronym-cgi; fournit des rapports synthétiques sur les alertes
 concernant les hôtes et services, ainsi que le nombre total d'alertes, les
 services/hôtes générant le plus d'alertes, etc.</para> <para>Autorisation requises :</para> <itemizedlist>
         <listitem>

@@ -279,7 +279,7 @@ automatiquement au démarrage du système.</para>
   <para>&name-fedora; est fourni avec SELinux (Security Enhanced Linux) installé et
 en mode Enforcing par défaut. Cela peut engendrer des messages
 <errorname>Internal Server Error</errorname> quand vous essayez d'accéder aux
-CGIs de Nagios.</para>
+&acronym-cgi;s de Nagios.</para>
 
   <para>Vérifiez si SELinux est en mode Enforcing.</para>
 
@@ -297,7 +297,7 @@ CGIs de Nagios.</para>
 dans <filename>/etc/selinux/config</filename> et redémarrer.</para>
 
   <para>Plutôt que de passer SELinux en mode permissif ou de le désactiver, vous
-pouvez utiliser la commande suivante pour exécuter les CGIs en mode SELinux
+pouvez utiliser la commande suivante pour exécuter les &acronym-cgi;s en mode SELinux
 enforcing/targeted:</para>
 
   <screen>
@@ -305,7 +305,7 @@ enforcing/targeted:</para>
 <prompt>linux:~ # </prompt><userinput>chcon -R -t httpd_sys_content_t /usr/local/nagios/share/</userinput>
 </screen>
 
-  <para>Pour des informations sur la façon d'utiliser les CGIs Nagios en mode
+  <para>Pour des informations sur la façon d'utiliser les &acronym-cgi;s Nagios en mode
 Enforcing avec une police adaptée, allez sur le wiki de NagiosCommunity.org
 à l'adresse <ulink
 url="&url-nagios-community;">&url-nagios-community;</ulink>.</para>

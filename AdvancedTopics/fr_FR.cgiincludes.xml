@@ -13,35 +13,35 @@
 		<para>Si vous êtes amené à faire des installations personnalisées de Nagios, vous
 pourriez avoir envie d'avoir un en-tête et/ou un pied de page personnalisés
 à l'affichage des résultats des <link
-linkend="thebasics-cgis">CGIs</link>. Ceci est particulièrement utile pour
+linkend="thebasics-cgis">&acronym-cgi;s</link>. Ceci est particulièrement utile pour
 l'utilisateur final concernant l'affichage des informations de contact du
 support, etc.</para>
 		<para>Il est important de tenir compte du fait que, à moins d'être exécutables,
 les en-têtes et pieds de page personnalisés ne sont pas exécutés de quelle
 manière que ce soit avant d'être affichés. Le contenu du fichier d'en-tête
 et de pied de page est simplement lu et affiché au résultat de l'exécution
-de la CGI. Cela signifie qu'ils ne peuvent contenir que des informations
+du &acronym-cgi;. Cela signifie qu'ils ne peuvent contenir que des informations
 qu'un navigateur web peut comprendre (HTML, JavaScript, etc.).</para>
 		<para>Si les en-têtes et pieds de page personnalisés sont exécutables, alors les
 fichiers sont exécutés et leur sortie est affichée à l'utilisateur : ils
 doivent donc afficher du code HTML valide. Cette fonctionnalité permet
-d'utiliser vos propres CGIs pour ajouter des données à l'affichage de
+d'utiliser vos propres &acronym-cgi;s pour ajouter des données à l'affichage de
 Nagios. Ceci a été utilisé pour insérer des graphiques de rrdtool en
 utilisant ddraw et des menu de commande dans la fenêtre d'affichage de
 Nagios. Ces en-têtes et pieds de page exécutables disposent du même
-environnement que les CGIs natives : vous pouvez donc disposer des
+environnement que les &acronym-cgi;s natifs : vous pouvez donc disposer des
 informations sur la requête HTTP, sur l'utilisateur authentifié etc… pour
 afficher les informations adéquates.</para>
 	</section>
 	<section>
 		<title>Comment cela fonctionne t'il?</title>
 		<para>Vous pouvez inclure les en-têtes et pieds de page personnalisés dans le
-résultat des CGIs en fournissant des fichiers HTML avec un nom approprié dans
+résultat des &acronym-cgi;s en fournissant des fichiers HTML avec un nom approprié dans
 le sous-répertoire <filename class="directory">ssi/</filename> du répertoire
 HTML de Nagios (p.ex. <filename
 class="directory">/usr/local/nagios/share/ssi</filename>).</para>
 		<para>Les en-têtes personnalisés sont inclus immédiatement après la balise
-&lt;BODY&gt; du résultat de l'exécution de la CGI. Pareillement, les pieds
+&lt;BODY&gt; du résultat de l'exécution du &acronym-cgi;. Pareillement, les pieds
 de page personnalisés sont inclus avant la balise de fermeture
 &lt;/BODY&gt;. </para>
 		<para>Il y a deux types d'en-têtes et de bas de page personnalisés:</para>
@@ -51,14 +51,14 @@ de page personnalisés sont inclus avant la balise de fermeture
 <filename>common-header.ssi</filename> et
 <filename>common-footer.ssi</filename>, respectivement. Si ces fichiers
 existent, ils seront inclus dans le résultat de l'exécution de toutes les
-CGIs.</para>
+&acronym-cgi;s.</para>
 			</listitem>
 			<listitem>
-				<para>En-têtes/pieds de page de CGIs spécifiques. Ces fichiers devraient être
+				<para>En-têtes/pieds de page de &acronym-cgi;s spécifiques. Ces fichiers devraient être
 nommés dans le format <filename>NOMCGI-header.ssi</filename> et
 <filename>NOMCGI-footer.ssi</filename>, où CGINAME est le nom physique du
-CGI sans l'extension .cgi. Par exemple, l'en-tête et le bas de page pour le
-<link linkend="thebasics-cgis-summary_cgi">CGI résumé des alertes</link>
+&acronym-cgi; sans l'extension .cgi. Par exemple, l'en-tête et le bas de page pour le
+<link linkend="thebasics-cgis-summary_cgi">&acronym-cgi; résumé des alertes</link>
 [alert summary] (summary.cgi) devrait être appelé
 <filename>summary-header.ssi</filename> et
 <filename>summary-footer.ssi</filename>, respectivement. 

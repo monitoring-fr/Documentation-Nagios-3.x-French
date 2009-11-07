@@ -106,7 +106,7 @@ linkend="configuringnagios-configmain-max_concurrent_checks">max_concurrent_chec
 Cela vous permet de gérer la charge que Nagios impose à votre hôte de
 supervision, mais cela peut aussi ralentir le traitement. Si vous notez des
 latences importantes (> 10 ou 15 secondes) pour la majorité de vos contrôles
-de service (via le <link linkend="thebasics-cgis-extinfo_cgi">CGI
+de service (via le <link linkend="thebasics-cgis-extinfo_cgi">&acronym-cgi;
 d'informations complémentaires</link>), vous privez sans doute Nagios des
 contrôles dont il a besoin. Ce n'est pas la faute de Nagios - c'est la
 vôtre. Dans des conditions idéales, tous les contrôles de service ont une

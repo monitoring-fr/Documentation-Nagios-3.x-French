@@ -125,22 +125,22 @@ serveur web peut être un problème de sécurité. Après tout, vous ne souhaite
 pas que n'importe quel utilisateur du système puisse contrôler Nagios à
 partir du fichier des commandes externes. Dans ce cas, je vous suggère de
 donner les droits uniquement à l'utilisateur nagios et d'utiliser quelque
-chose comme <ulink url="http://cgiwrap.sourceforge.net/">CGIWrap</ulink>
-pour faire fonctionner les CGIs avec l'utilisateur nagios plutôt que nobody.</para>
+chose comme <ulink url="http://cgiwrap.sourceforge.net/">&acronym-cgi;Wrap</ulink>
+pour faire fonctionner les &acronym-cgi;s avec l'utilisateur nagios plutôt que nobody.</para>
    </listitem>
 
    <listitem>
-    <para><emphasis role="bold">Authentification requise pour les CGIs</emphasis>. Je
-vous recommande fortement de protéger l'accès aux CGIs par une
+    <para><emphasis role="bold">Authentification requise pour les &acronym-cgi;s</emphasis>. Je
+vous recommande fortement de protéger l'accès aux &acronym-cgi;s par une
 authentification. Ceci fait, lisez la documentation sur les droits par
 défaut dont disposent les contacts autorisés et n'accordez
 qu'exceptionnellement une autorisation à des contacts spécifiques. Les
 instructions pour la configuration des droits se trouvent <link
 linkend="configuringnagios-cgiauth">ici</link>. Si vous désactivez
-l'authentification préalable à l'accès aux CGIs par la commande <link
+l'authentification préalable à l'accès aux &acronym-cgi;s par la commande <link
 linkend="configuringnagios-configcgi-use_authentication">use_authentication</link>
-dans le fichier de configuration des CGIs, le <link
-linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> refusera d'écrire la
+dans le fichier de configuration des &acronym-cgi;s, le <link
+linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link> refusera d'écrire la
 moindre commande dans le <link
 linkend="configuringnagios-configmain-command_file">fichier des commandes
 externes</link>. De toutes façons, vous ne souhaitez pas que tout le monde
@@ -150,7 +150,7 @@ puisse contrôler vôtre Nagios ? </para>
    <listitem>
     <para><emphasis role="bold">Implémentez les mesure renforcées de sécurité des
 GCIs</emphasis>. Je vous recommande chaudement de considérer
-l'implémentation des mesures de sécurité pour les CGIs comme indiqué <link
+l'implémentation des mesures de sécurité pour les &acronym-cgi;s comme indiqué <link
 linkend="securityandperformancetuning-cgisecurity">ici</link>. Ces mesures
 peuvent aider à s'assurer que l'utilisateur/mot de passe que vous utilisez
 pour accéder à l'interface web de Nagios ne puissent intercepter par de
@@ -166,7 +166,7 @@ binaires que vous exécutez.</para>
 
    <listitem>
     <para><emphasis role="bold">Cachez les informations sensibles à l'aide des macros
-<varname>$USERn$</varname></emphasis>. Les CGIs parcourent le <link
+<varname>$USERn$</varname></emphasis>. Les &acronym-cgi;s parcourent le <link
 linkend="configuringnagios-configmain">fichier de configuration
 principal</link> et le(s) <link
 linkend="configuringnagios-configobject">fichier(s) de configuration des
@@ -176,7 +176,7 @@ mot de passe ou un nom d'utilisateur dans une définition de commande,
 utilisez <code>$USERn$</code> <link linkend="thebasics-macros">macro pour le cacher</link>. <code>$USERn$</code>
     Les macros $USERn$ sont définies dans un ou plusieurs <link
 linkend="configuringnagios-configmain-resource_file">fichiers de
-ressources</link>. Les CGIs ne parcourant pas les fichiers de ressources,
+ressources</link>. Les &acronym-cgi;s ne parcourant pas les fichiers de ressources,
 vous pouvez leur donner des permissions beaucoup plus restrictives (600 ou
 660). Consultez le fichier <filename>resource.cfg</filename> dans la
 distribution de base de Nagios, il vous donnera un exemple de d?finition de

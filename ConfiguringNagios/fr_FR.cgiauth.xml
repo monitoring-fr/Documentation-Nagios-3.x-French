@@ -12,7 +12,7 @@
  <section>
   <title>Introduction</title>
   
-  <para>Cette documentation décrit la façon dont les CGIs de Nagios décident de qui a
+  <para>Cette documentation décrit la façon dont les &acronym-cgi;s de Nagios décident de qui a
 le droit de voir les informations de configurations et d'états et de qui
 a le droit de soumettre des commandes au démon Nagios depuis l'interface
 web.</para>
@@ -46,14 +46,14 @@ utilisateurs authentifiés </title>
   <para>En partant du principe que vous avez configuré votre serveur web comme
 décrit dans le <link linkend="gettingstarted-quickstart">guide de démarrage
 rapide</link>, celui-ci devrait vous demander de vous authentifier avant de
-pouvoir accéder aux CGIs de Nagios.</para>
+pouvoir accéder aux &acronym-cgi;s de Nagios.</para>
 
   <para>Au fur et à mesure que vous allez ajouter de nouveaux <link
 linkend="configuringnagios-objectdefinitions-contact">contacts</link> pour
 recevoir des notifications d'hôtes et de services, vous souhaiterez
 certainement leur donner accès à l'interface web de Nagios. Vous pouvez
 utiliser la commande suivante pour ajouter de nouveaux utilisateurs capables
-de s'authentifier aux CGIs. Remplacez &lt;username&gt; par le nom
+de s'authentifier aux &acronym-cgi;s. Remplacez &lt;username&gt; par le nom
 d'utilisateur que vous souhaitez ajouter. Dans la plupart des cas, le nom
 d'utilisateur devrait correspondre au nom court du <link
 linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.
@@ -65,32 +65,32 @@ linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.
   <title><anchor id="configuringnagios-cgiauth-enable_cgi_auth" />Activer
 l'authentification/autorisation dans les CGIs</title>
 
-  <para>Maintenant il s'agit de s'assurer que les CGIs sont configurés pour filtrer
+  <para>Maintenant il s'agit de s'assurer que les &acronym-cgi;s sont configurés pour filtrer
 les informations et les commandes auxquelles les utilisateurs peuvent
 accéder. Pour cela la variable <link
 linkend="configuringnagios-configcgi-use_authentication">use_authentication</link>
 du fichier de configuration des <link
-linkend="configuringnagios-configcgi">CGIs</link> doit être positionnée à une
+linkend="configuringnagios-configcgi">&acronym-cgi;s</link> doit être positionnée à une
 valeur différente de zéro. Par exemple: </para>
 
   <programlisting>use_authentication=1</programlisting>
 
   <para>Voilà, la fonctionnalité d'authentification/autorisation de base est
-activée dans les CGIs.</para>
+activée dans les &acronym-cgi;s.</para>
  </section>
 
  <section>
   <title><anchor id="configuringnagios-cgiauth-default_rights" />Droits d'accès par
 défaut aux informations des CGIs</title>
 
-  <para>Quelles sont les droits d'accès aux CGIs par défaut quand la fonctionnalité
+  <para>Quelles sont les droits d'accès aux &acronym-cgi;s par défaut quand la fonctionnalité
 d'authentification/autorisation est activée ?</para>
 
   <informaltable frame="all">
    <tgroup cols="3">
     <thead>
      <row>
-      <entry><para>Données des CGIs</para></entry>
+      <entry><para>Données des &acronym-cgi;s</para></entry>
 
       <entry><para>Contacts authentifiés<link
 linkend="configuringnagios-cgiauth-definitions">*</link>
@@ -277,23 +277,23 @@ hôte</para>
   <itemizedlist>
    <listitem>
     <para>Voir le fichier journal brut via la <link
-linkend="thebasics-cgis-showlog_cgi">CGI</link> d'affichage du journal</para>
+linkend="thebasics-cgis-showlog_cgi">&acronym-cgi;</link> d'affichage du journal</para>
    </listitem>
 
    <listitem>
     <para>Voir les informations sur le processus de Nagios via le <link
-linkend="thebasics-cgis-extinfo_cgi">CGI d'informations
+linkend="thebasics-cgis-extinfo_cgi">&acronym-cgi; d'informations
 complémentaires</link></para>
    </listitem>
 
    <listitem>
     <para>Passer des commandes à Nagios via la <link
-linkend="thebasics-cgis-cmd_cgi">CGI de commande</link></para>
+linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link></para>
    </listitem>
 
    <listitem>
     <para>Voir les définitions des groupes d'hôtes, contacts, groupes de contacts,
-périodes, et commandes via la <link linkend="thebasics-cgis-config_cgi">CGI
+périodes, et commandes via la <link linkend="thebasics-cgis-config_cgi">&acronym-cgi;
 de configuration</link></para>
    </listitem>
   </itemizedlist>
@@ -308,10 +308,10 @@ utilisateurs) comme décrit ci-dessous…</para>
 d'accès supplémentaires aux informations des CGIs</title>
 
   <para>Vous pouvez donner aux contacts authentifiés et autres utilisateurs
-authentifiés des droits d'accès à d'autres informations des CGIs en les
+authentifiés des droits d'accès à d'autres informations des &acronym-cgi;s en les
 ajoutant à diverses variables d'autorisation dans le <link
 linkend="configuringnagios-configcgi">fichier de configuration des
-CGIs</link>. Je m'aperçois que ces variables ne permettent pas d'être très
+&acronym-cgi;s</link>. Je m'aperçois que ces variables ne permettent pas d'être très
 précis dans les autorisations, mais c'est mieux que rien. </para>
 
   <para>Des droits supplémentaires peuvent être accordés aux utilisateurs en les
@@ -366,8 +366,8 @@ pour toutes les commandes aux services</link></para>
   <title><anchor id="configuringnagios-cgiauth-cgi_auth_requirements" />Autorisations
 requises par les CGIs</title>
 
-  <para>Si les droits d'accès aux diverses informations des CGIs ne vous paraissent
-pas clairs, lisez la section Autorisations requises de chaque CGI qui se
+  <para>Si les droits d'accès aux diverses informations des &acronym-cgi;s ne vous paraissent
+pas clairs, lisez la section Autorisations requises de chaque &acronym-cgi; qui se
 trouve <link linkend="thebasics-cgis">ici</link>.</para>
  </section>
 
@@ -377,11 +377,11 @@ sur des serveurs web sécurisés</title>
 
   <para>Si votre serveur web se trouve dans un domaine sécurisé (par exemple derrière un
 firewall) ou si vous utilisez SSL, vous pouvez définir un utilisateur par
-défaut pour accéder aux CGIs. C'est le rôle de la variable <link
+défaut pour accéder aux &acronym-cgi;s. C'est le rôle de la variable <link
 linkend="configuringnagios-configcgi-default_user_name">default_user_name</link>
 du <link linkend="configuringnagios-configcgi">fichier de configuration des
-CGIs</link>. En définissant un nom d'utilisateur par défaut, vous pouvez
-autoriser les utilisateurs à accéder aux CGIs sans qu'ils ne s'authentifient
+&acronym-cgi;s</link>. En définissant un nom d'utilisateur par défaut, vous pouvez
+autoriser les utilisateurs à accéder aux &acronym-cgi;s sans qu'ils ne s'authentifient
 auprès du serveur web. Ceci vous permet d'éviter d'utiliser
 l'authentification web de base, qui transmet les mots de passe en clair sur
 Internet.</para>
@@ -389,7 +389,7 @@ Internet.</para>
   <important>
    <para>Ne définissez pas d'utilisateur par défaut, à moins que vous n'utilisiez un
 serveur web sécurisé et que vous soyez sûr que les utilisateurs qui accèdent
-aux CGIs ont été authentifiés d'une manière ou d'une autre ! Si vous utilisez
+aux &acronym-cgi;s ont été authentifiés d'une manière ou d'une autre ! Si vous utilisez
 cette variable, un utilisateur non authentifié héritera des droits de cet
 utilisateur par défaut !</para>
   </important>

@@ -108,7 +108,7 @@ contiennent maintenant elles-mêmes des macros, celles-ci sont:
  <listitem>
  <para>Les macros sont normalement disponibles comme variables d'environnement
 quand les contrôles, gestionnaires d'événements, notifications et autres
-commandes sont exécutées. Ceci est plutôt consommateur de ressources CPU. 
+commandes sont exécutées. Ceci est plutôt consommateur de ressources <acronym>CPU</acronym>. 
 Dans les installations où Nagios gère un nombre important d'hôtes et de services, vous devrez alors désactiver cette
 fonctionnalité à l'aide de l'option <link
 linkend="configuringnagios-configmain-enable_environment_macros">enable_environment_macros</link>.</para>
@@ -277,7 +277,7 @@ les fichiers de <link
 linkend="configuringnagios-configmain-status_file">statut</link> et de
 <link
 linkend="configuringnagios-configmain-state_retention_file">rétention</link>,
-bien que celles-ci ne soient pas traitées par les CGIs.</para>
+bien que celles-ci ne soient pas traitées par les &acronym-cgi;s.</para>
  </listitem>
  </itemizedlist>
  </section>
@@ -745,12 +745,12 @@ aux modules d'annuler/modifier les contrôles internes d'hôtes/services.</para>
  <itemizedlist>
  <listitem>
  <para>Les résumés de groupes d'hôtes et de services montrent maintenant les
-successions de problèmes importants/pas importants comme dans le CGI TAC.</para>
+successions de problèmes importants/pas importants comme dans le &acronym-cgi; tac.</para>
  </listitem>
 
  <listitem>
  <para>Quelques changements mineurs dans l'organisation des vues de détail d'hôte
-et service ont été opérées dans le CGI extinfo.</para>
+et service ont été opérées dans le &acronym-cgi; extinfo.</para>
  </listitem>
 
  <listitem>
@@ -760,10 +760,10 @@ et service ont été opérées dans le CGI extinfo.</para>
 
  <listitem>
  <para>Ajout des options d'intégration de <ulink url="&url-splunk;">Splunk</ulink>
-dans plusieurs CGIs. L'intégration est contrôlée par les options <link
+dans plusieurs &acronym-cgi;s. L'intégration est contrôlée par les options <link
 linkend="configuringnagios-configcgi-enable_splunk_integration">enable_splunk_integration</link>
 et <link linkend="configuringnagios-configcgi-splunk_url">splunk_url</link>
-du fichier de configuration des CGIs.</para>
+du fichier de configuration des &acronym-cgi;s.</para>
  </listitem>
 
  <listitem>

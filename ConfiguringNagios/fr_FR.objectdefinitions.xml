@@ -446,7 +446,7 @@ erreur parce que les plugins seront incapbles de résoudre le nom de l'hôte.</p
 		<listitem>
 		<para>Cette variables est utilisée pour afficher un nom différent à l'affichage
 dans l'interface web pour cet hôte. Si non précisée, la valeur par défaut
-est prise depuis la variable <emphasis>host_name</emphasis>.</para><note><para>Les CGIs actuels n'utilise pas cette option, mais les futurs versions de
+est prise depuis la variable <emphasis>host_name</emphasis>.</para><note><para>Les &acronym-cgi;s actuels n'utilise pas cette option, mais les futurs versions de
 l'interface le feront.
         </para></note>
 		</listitem>
@@ -897,7 +897,7 @@ linkend="advancedtopics-stalking">ici</link>.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le CGI
+à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
 (quand vous regardez les informations d'un hôte spécifié).</para>
 		</listitem>
@@ -909,11 +909,11 @@ linkend="advancedtopics-stalking">ici</link>.
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 informations supplémentaires sur l'hôte. Si vous précisez une URL, vous
-verrez une icône de dossier rouge dans les CGIs (quand vous regardez les
+verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous regardez les
 informations de l'hôte) qui renverra vers l'URL précisée ici. N'importe
 quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins
 relatifs, le chemin de base sera le même que celui utilisé pour accéder aux
-CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
+&acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
 vous souhaitez mettre à disposition d'autres équipes de support les
 informations détaillées d'un hôte, les moyens de contacts à utiliser en cas
 d'urgence, etc…</para>
@@ -926,11 +926,11 @@ d'urgence, etc…</para>
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 actions supplémentaires à appliquer à l'hôte. Si vous précisez une URL, vous
-verrez une icône <quote>splat</quote> rouge dans les CGIs (quand vous
+verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand vous
 regardez les informations de l'hôte) qui renverra vers l'URL précisée
 ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser
 des chemins relatifs, le chemin de base sera le même que celui utilisé pour
-accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
+accéder aux &acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
         </para>
 		</listitem>
 	</varlistentry>
@@ -941,7 +941,7 @@ accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
 PNG ou JPG à associer à l'hôte. Cette image sera affichée dans plusieurs
-endroits des CGIs. Le rendu de l'image sera maximal si celle-ci est au
+endroits des &acronym-cgi;s. Le rendu de l'image sera maximal si celle-ci est au
 format 40x40 pixels. Les images des hôtes sont censées se trouver dans le
 sous-répertoire <emphasis role="strong">logos/</emphasis> de votre dossier
 d'images HTML (par exemple <filename
@@ -966,7 +966,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
 PNG ou JPG à associer à l'hôte. Cette image sera utilisée comme fond de
-carte pour l'hôte spécifié dans le CGI <link
+carte pour l'hôte spécifié dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Au contraire de
 l'image utilisée dans la variable <emphasis>&lt;icon_image&gt;</emphasis>,
 celle-ci ne devrait <emphasis>pas</emphasis> avoir d'attribut de
@@ -984,7 +984,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		</term>
 		<listitem>
 		<para>Cette variable est utlisée pour définir le nom d'une image à associer à
-l'hôte dans le CGI <link
+l'hôte dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
 utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
@@ -997,7 +997,7 @@ GD2 doivent être créées dans un format <emphasis>non compressé</emphasis>
 toujours pour minimiser la charge CPU au moment de charger la carte
 réseau. Le rendu d el'image sera maximal si vous utilisez une taille de
 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas
-le CGI de carte d'états. Les images des hôtes sont censées se trouver dans
+le &acronym-cgi; de carte d'états. Les images des hôtes sont censées se trouver dans
 le sous-répertoire <emphasis role="strong">logos/</emphasis> de votre
 dossier d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
@@ -1010,7 +1010,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour définir les coordonnées à utiliser pour
-l'hôte dans le CGI <link
+l'hôte dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
 doivent être données en entier positif car correpsondant aux pixels dans
 l'image générée. Le départ de la carte (0,0) se trouve dans le coin
@@ -1020,7 +1020,7 @@ droite) à partir du haut de l'image et en positif dans la direction y (bas)
 thabituellement de 40x40 pixels (le texte prend un peu d'espace
 supplémentaire). Les coordonnées que vous précisez ici sont pour le coin
 supérieur gauche de l'icône de l'hôte à dessiner.</para><note><para>Ne vous inquiétez du nombre maximal de coordonnées que vous pouvez utliser
-ici. Le CGI va automatiquement calculer les dimensions maximales de l'image
+ici. Le &acronym-cgi; va automatiquement calculer les dimensions maximales de l'image
 qu'il créée en se basant sur les plus grandes valeurs x et y que vous avez
 précisé.
         </para></note>
@@ -1032,7 +1032,7 @@ précisé.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour définir les coordonnées de l'hôte à
-utiliser dans le CGI <link
+utiliser dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
 peuvent être des nombres positifs ou négatifs. Le départ du dessin est
 (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5
@@ -1065,7 +1065,7 @@ groupe d'hôtes</title>
 hôtes ensemble de façon à simplifier la configuration avec les <link
 linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
 ou pour des besoins de visualisation dans les <link
-linkend="thebasics-cgis">CGIs</link>.</para>
+linkend="thebasics-cgis">&acronym-cgi;s</link>.</para>
    </section>
 
    <section>
@@ -1200,7 +1200,7 @@ dans ce groupe.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le CGI
+à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
 (quand vous regardez les informations d'un hôte spécifié).
 		</para>
@@ -1213,11 +1213,11 @@ dans ce groupe.
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 informations supplémentaires sur le groupe d'hôtes. Si vous précisez une
-URL, vous verrez une icône de dossier rouge dans les CGIs (quand vous
+URL, vous verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous
 regardez les informations de groupe d'hôtes) qui renverra vers l'URL
 précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
-utilisé pour accéder aux CGIs (par exemple
+utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
 d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…
@@ -1231,11 +1231,11 @@ d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 actions supplémentaires à appliquer aux groupe d'hôtes. Si vous précisez une
-URL, vous verrez une icône <quote>splat</quote> rouge dans les CGIs (quand
+URL, vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand
 vous regardez les informations du groupe d'hôtes) qui renverra vers l'URL
 précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
-utilisé pour accéder aux CGIs (par exemple
+utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>).
 		</para>
 		</listitem>
@@ -1556,7 +1556,7 @@ identifiés par leurs variables <emphasis>host_name</emphasis> et
 		<para>Cette variable est utilisée pour définir un nom différent à afficher dans
 l'interface web pour ce service. Si non précisé, la valeur par défaut est
 prise depuis la variable <emphasis>service_description</emphasis>.</para>
-		<note><para>Les CGIs actuels n'utilise pas cette option, mais les futurs versions de
+		<note><para>Les &acronym-cgi;s actuels n'utilise pas cette option, mais les futurs versions de
 l'interface le feront.</para></note>
 		</listitem>
 	</varlistentry>
@@ -2054,7 +2054,7 @@ linkend="advancedtopics-stalking">ici</link>.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-au service. Si vous avez précisée une note ici, vous la verrez dans le CGI
+au service. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
 (quand vous regardez les informations de service spécifié).
 		</para>
@@ -2067,11 +2067,11 @@ au service. Si vous avez précisée une note ici, vous la verrez dans le CGI
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 informations supplémentaires sur le service. Si vous précisez une URL, vous
-verrez une icône de dossier rouge dans les CGIs (quand vous regardez les
+verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous regardez les
 informations de l'hôte) qui renverra vers l'URL précisée ici. N'importe
 quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins
 relatifs, le chemin de base sera le même que celui utilisé pour accéder aux
-CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
+&acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
 vous souhaitez mettre à disposition d'autres équipes de support les
 informations détaillées d'un service, les moyens de contacts à utiliser en
 cas d'urgence, etc…
@@ -2085,11 +2085,11 @@ cas d'urgence, etc…
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 actions supplémentaires à appliquer au service. Si vous précisez une URL,
-vous verrez une icône <quote>splat</quote> rouge dans les CGIs (quand vous
+vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand vous
 regardez les informations du service) qui renverra vers l'URL précisée
 ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser
 des chemins relatifs, le chemin de base sera le même que celui utilisé pour
-accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
+accéder aux &acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
         </para>
 		</listitem>
 	</varlistentry>
@@ -2099,7 +2099,7 @@ accéder aux CGIs (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
-PNG ou JPG à associer au service. Cette image sera affichée dans les CGIs
+PNG ou JPG à associer au service. Cette image sera affichée dans les &acronym-cgi;s
 <link linkend="thebasics-cgis-status_cgi">status</link> et <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link>. Le rendu
 de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images
@@ -2118,7 +2118,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		<para>Cette variable est utilisée pour définir une chaîne de caractère optionnelle
 à utiliser dans l'attribut ALT de l'image précisée par l'argument
 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
-dans les CGIs <link linkend="thebasics-cgis-status_cgi">status</link>, <link
+dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link> et <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
 		</para>
@@ -2140,7 +2140,7 @@ de groupe de services</title>
 services ensemble de façon à simplifier la configuration avec les <link
 linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
 ou pour des besoins de visualisation dans les <link
-linkend="thebasics-cgis">CGIs</link>.</para>
+linkend="thebasics-cgis">&acronym-cgi;s</link>.</para>
    </section>
 
    <section>
@@ -2281,7 +2281,7 @@ services à inclure dans ce groupe.
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
 au groupe de service. Si vous avez précisée une note ici, vous la verrez
-dans le CGI <link linkend="thebasics-cgis-extinfo_cgi">des informations
+dans le &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">des informations
 étendues</link> (quand vous regardez les informations d'un groupe de
 services spécifié).
 		</para>
@@ -2294,11 +2294,11 @@ services spécifié).
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 informations supplémentaires sur le groupe de services. Si vous précisez une
-URL, vous verrez une icône de dossier rouge dans les CGIs (quand vous
+URL, vous verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous
 regardez les informations de groupe de services) qui renverra vers l'URL
 précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
-utilisé pour accéder aux CGIs (par exemple
+utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
 d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…
@@ -2312,11 +2312,11 @@ d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 actions supplémentaires à appliquer au groupe de services. Si vous précisez
-une URL, vous verrez une icône <quote>splat</quote> rouge dans les CGIs
+une URL, vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s
 (quand vous regardez les informations du groupe de services) qui renverra
 vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si
 vous pensez utiliser des chemins relatifs, le chemin de base sera le même
-que celui utilisé pour accéder aux CGIs (par exemple
+que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>).
 		</para>
 		</listitem>
@@ -2716,7 +2716,7 @@ $CONTACTADDRESS<emphasis>x</emphasis>$ contiendra cette valeur.</para>
 		<listitem>
 		<para>Cette variable est utilisée pour déterminer si le contact peut ou non
 exécuter des <link linkend="advancedtopics-extcommands">commandes
-externes</link> à Nagios depuis les CGIs. Valeurs :
+externes</link> à Nagios depuis les &acronym-cgi;s. Valeurs :
 		<itemizedlist>
 		<listitem><para>0 = ne pas autoriser le contact à soumettre des commandes</para></listitem>
 		<listitem><para>1 = autoriser le contact à soumettre des commandes.</para></listitem>
@@ -4278,7 +4278,7 @@ des informations étendues d'hôtes</title>
     <title>Description</title>
 
     <para>Les entrées d'informations étendues d'hôtes sont utilisées à la base pour
-améliorer les vues des CGIs <link
+améliorer les vues des &acronym-cgi;s <link
 linkend="thebasics-cgis-status_cgi">status</link>, <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>, <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link> et <link
@@ -4412,7 +4412,7 @@ associées les données.</para>
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le CGI
+à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
 (quand vous regardez les informations d'un hôte spécifié).</para>
 		</listitem>
@@ -4425,11 +4425,11 @@ associées les données.</para>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 informations supplémentaires sur l'hôte. Si vous précisez une URL, vous
 verrez un lien indiquant <quote><guimenu>Extra Host Notes</guimenu></quote>
-dans le CGI <link linkend="thebasics-cgis-extinfo_cgi">extended
+dans le &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended
 information</link> (quand vous regardez les informations de
 l'hôte). N'importe quelle URL valide peut être utilisé. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
-utilisé pour accéder aux CGIs (par exemple
+utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
 d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…</para>
@@ -4443,10 +4443,10 @@ d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…</para>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 actions supplémentaires sur l'hôte. Si vous précisez une URL, vous verrez un
 lien indiquant <quote><guimenu>Extra Host Actions</guimenu></quote> dans le
-CGI <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>
+&acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>
 (quand vous regardez les informations de l'hôte). N'importe quelle URL
 valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le
-chemin de base sera le même que celui utilisé pour accéder aux CGIs (par
+chemin de base sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par
 exemple <emphasis>/cgi-bin/nagios/</emphasis>).</para>
 		</listitem>
 	</varlistentry>
@@ -4456,7 +4456,7 @@ exemple <emphasis>/cgi-bin/nagios/</emphasis>).</para>
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
-PNG ou JPG à associer à cet hôte. Cette image sera affichée dans les CGIs
+PNG ou JPG à associer à cet hôte. Cette image sera affichée dans les &acronym-cgi;s
 <link linkend="thebasics-cgis-status_cgi">status</link> et <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link>. Le rendu
 de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images
@@ -4475,7 +4475,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		<para>Cette variable est utilisée pour définir une chaîne de caractère optionnelle
 à utiliser dans l'attribut ALT de l'image précisée par l'argument
 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
-dans les CGIs <link linkend="thebasics-cgis-status_cgi">status</link>, <link
+dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link> et <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.</para>
 		</listitem>
@@ -4487,7 +4487,7 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.</para>
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
 PNG ou JPG à associer à cet hôte. Cette image sera utilisée comme fond de
-carte pour l'hôte spécifié dans le CGI <link
+carte pour l'hôte spécifié dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Au contraire de
 l'image utilisée dans la variable <emphasis>&lt;icon_image&gt;</emphasis>,
 celle-ci ne devrait <emphasis>pas</emphasis> avoir d'attribut de
@@ -4505,7 +4505,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		</term>
 		<listitem>
 		<para>Cette variable est utlisée pour définir le nom d'une image à associer à
-l'hôte dans le CGI <link
+l'hôte dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
 utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
@@ -4518,7 +4518,7 @@ GD2 doivent être créées dans un format <emphasis>non compressé</emphasis>
 toujours pour minimiser la charge CPU au moment de charger la carte
 réseau. Le rendu d el'image sera maximal si vous utilisez une taille de
 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas
-le CGI de carte d'états. Les images des hôtes sont censées se trouver dans
+le &acronym-cgi; de carte d'états. Les images des hôtes sont censées se trouver dans
 le sous-répertoire <emphasis role="strong">logos/</emphasis> de votre
 dossier d'images HTML (par exemple <filename
 class="directory">/usr/local/nagios/share/images/logos</filename>).
@@ -4531,7 +4531,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour définir les coordonnées à utiliser pour
-l'hôte dans le CGI <link
+l'hôte dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
 doivent être données en entier positif car correpsondant aux pixels dans
 l'image générée. Le départ de la carte (0,0) se trouve dans le coin
@@ -4542,7 +4542,7 @@ thabituellement de 40x40 pixels (le texte prend un peu d'espace
 supplémentaire). Les coordonnées que vous précisez ici sont pour le coin
 supérieur gauche de l'icône de l'hôte à dessiner.</para>
 		<note><para>Ne vous inquiétez du nombre maximal de coordonnées que vous pouvez utliser
-ici. Le CGI va automatiquement calculer les dimensions maximales de l'image
+ici. Le &acronym-cgi; va automatiquement calculer les dimensions maximales de l'image
 qu'il créée en se basant sur les plus grandes valeurs x et y que vous avez
 précisé.
         </para></note>
@@ -4554,7 +4554,7 @@ précisé.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour définir les coordonnées de l'hôte à
-utiliser dans le CGI <link
+utiliser dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
 peuvent être des nombres positifs ou négatifs. Le départ du dessin est
 (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5
@@ -4575,7 +4575,7 @@ des informations étendues de services</title>
     <title>Description</title>
 
     <para>Les entrées d'informations étendues de services sont utilisées à la base
-pour améliorer les vues des CGIs <link
+pour améliorer les vues des &acronym-cgi;s <link
 linkend="thebasics-cgis-status_cgi">status</link> et <link
 linkend="thebasics-cgis-extinfo_cgi">extinfo</link>. Elles n'ont aucun effet
 sur la supervision et sont complètement optionnelles.</para>
@@ -4701,7 +4701,7 @@ associées les données.</para>
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-au service. Si vous avez précisée une note ici, vous la verrez dans le CGI
+au service. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
 (quand vous regardez les informations de service spécifié).</para>
 		</listitem>
@@ -4714,11 +4714,11 @@ au service. Si vous avez précisée une note ici, vous la verrez dans le CGI
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 informations supplémentaires sur le service. Si vous précisez une URL, vous
 verrez un lien indiquant <quote><guimenu>Extra Service
-Notes</guimenu></quote> dans le CGI <link
+Notes</guimenu></quote> dans le &acronym-cgi; <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link> (quand vous
 regardez les informations du service). N'importe quelle URL valide peut être
 utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base
-sera le même que celui utilisé pour accéder aux CGIs (par exemple
+sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
 d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…</para>
@@ -4732,11 +4732,11 @@ d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc…</para>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
 actions supplémentaires sur le service. Si vous précisez une URL, vous
 verrez un lien indiquant <quote><guimenu>Extra Service
-Actions</guimenu></quote> dans le CGI <link
+Actions</guimenu></quote> dans le &acronym-cgi; <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link> (quand vous
 regardez les informations du service). N'importe quelle URL valide peut être
 utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base
-sera le même que celui utilisé pour accéder aux CGIs (par exemple
+sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>).</para>
 		</listitem>
 	</varlistentry>
@@ -4747,7 +4747,7 @@ sera le même que celui utilisé pour accéder aux CGIs (par exemple
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
 PNG ou JPG à associer à l'hôte. Cette image sera affichée dans plusieurs
-endroits des CGIs. Le rendu de l'image sera maximal si celle-ci est au
+endroits des &acronym-cgi;s. Le rendu de l'image sera maximal si celle-ci est au
 format 40x40 pixels. Les images des hôtes sont censées se trouver dans le
 sous-répertoire <emphasis role="strong">logos/</emphasis> de votre dossier
 d'images HTML (par exemple <filename
@@ -4763,7 +4763,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 		<para>Cette variable est utilisée pour définir une chaîne de caractère optionnelle
 à utiliser dans l'attribut ALT de l'image précisée par l'argument
 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
-dans les CGIs <link linkend="thebasics-cgis-status_cgi">status</link>, <link
+dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link> et <link
 linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.</para>
 		</listitem>

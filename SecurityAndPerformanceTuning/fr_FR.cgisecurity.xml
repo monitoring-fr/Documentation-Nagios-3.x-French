@@ -16,7 +16,7 @@
 format="PNG"/> </imageobject> </inlinemediaobject> Cette page est destinée à
 être une introduction pour l'implémentation d'un niveau d'authentification
 et de sécurité de serveur plus ardue concentrée autour de l'interface web
-CGI.</para>
+&acronym-cgi;.</para>
 
    <para>Il y a de nombreuses façons de personnaliser la sécurité de son serveur de
 Supervision et l'environnement Nagios. Ce qui va venir ne doit pas être pris
@@ -166,7 +166,7 @@ effet.</para>
    <section>
     <title>Implémentation de verrous de sous-réseaux IP</title>
 
-    <para>L'exemple suivant nous montre comment bloquer l'accès des CGIs Nagios à
+    <para>L'exemple suivant nous montre comment bloquer l'accès des &acronym-cgi;s Nagios à
 certaines adresses IP, plages d'adresses ou sous-réseaux en utilisant le
 <ulink url="&url-apache-docs;2.2/howto/access.html">contrôle des accès
 Apache</ulink>. Modifiez le fichier de configuration apache pour Nagios (par

@@ -11,7 +11,7 @@
 	<section>
 		<title>Introduction</title>
 		<para>Nagios peut traiter des commandes d'applications externes (y compris les
-CGIs, voir CGI de commande à titre d'exemple) et modifier de nombreux
+&acronym-cgi;s, voir &acronym-cgi; de commande à titre d'exemple) et modifier de nombreux
 aspects de ses fonctions de supervision suivant les commandes qu'il reçoit.</para>
 	</section>
 	<section>
@@ -75,7 +75,7 @@ commentaires aux hôtes et services, etc.</para>
 linkend="configuringnagios-configmain-command_file">fichier de
 commande</link> suivent le format suivant :</para>
 		<programlisting>[time] command_id;command_arguments</programlisting>
-		<para>…où time est l'heure (au format <option>time_t</option> à laquelle l'application externe ou le CGI a envoyé la commande externe au
+		<para>…où time est l'heure (au format <option>time_t</option> à laquelle l'application externe ou le &acronym-cgi; a envoyé la commande externe au
 fichier de commande. Certaines des commandes disponibles sont décrites dans
 le tableau ci-dessous, ainsi que leur <option>command_id et une description de leurs </option> 
 		et <option>command_arguments.</option> Les arguments dépendent de la commande qui sera soumisse à Nagios.</para>
