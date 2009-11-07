@@ -185,7 +185,7 @@ l'authentification</title>
 autorisations pour déterminer les informations et les commandes auxquelles
 les utilisateurs auront accès. Je vous recommande vivement d'utiliser
 l'authentification dans les &acronym-cgi;s. Si vous choisissez de ne pas le faire,
-assurez-vous de supprimer le <link linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de
+assurez-vous de supprimer le <link linkend="thebasics-cgis-cmd_cgi">CGI de
 commande</link> pour empêcher les utilisateurs non autorisés d'envoyer des
 commandes à Nagios. Ce &acronym-cgi; ne devrait pas envoyer de commandes à Nagios si
 l'authentification est désactivée, mais deux précautions valent mieux
@@ -316,7 +316,7 @@ commandes du système/processus</title>
 			</informaltable>
 			<para>C'est une liste de nom d'utilisateurs authentifiés, séparés par des
 virgules, qui peuvent passer des commandes système/processus via le <link
-linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link>. Les utilisateurs de
+linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Les utilisateurs de
 cette liste ne sont pas automatiquement autorisés à visualiser les
 informations sur le système et le processus. Si vous voulez que des
 utilisateurs puissent visualiser ces informations aussi, il faut les ajouter
@@ -358,7 +358,7 @@ aux informations de configuration</title>
 			</informaltable>
 			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
 virgules, qui peuvent voir les informations liées à la configuration via le
-<link linkend="thebasics-cgis-config_cgi">&acronym-cgi; de configuration</link>. Les
+<link linkend="thebasics-cgis-config_cgi">CGI de configuration</link>. Les
 utilisateurs de cette liste peuvent voir les informations sur tous les hôtes
 configurés, les groupes d'hôtes, les services, les contacts, les groupes de
 contacts, les périodes, et les commandes. Vous trouverez plus d'informations
@@ -438,7 +438,7 @@ global aux commandes des hôtes</title>
 			</informaltable>
 			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
 virgules, qui peuvent envoyer des commandes à tous les hôtes via le <link
-linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link>. Les utilisateurs de
+linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Les utilisateurs de
 cette liste sont également automatiquement autorisés à envoyer des commandes
 à tous les services. Les utilisateurs de cette liste ne sont pas
 automatiquement autorisés à voir l'état ou la configuration de tous les
@@ -522,7 +522,7 @@ global aux commandes des services</title>
 			</informaltable>
 			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
 virgules, qui peuvent envoyer des commandes à tous les services via le <link
-linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link>. Ils ne sont pas non
+linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Ils ne sont pas non
 plus automatiquement autorisés à envoyer des commandes aux hôtes. Les
 utilisateurs de cette liste ne sont pas automatiquement autorisés à voir
 l'état ou la configuration de tous les services. Si vous voulez que des
@@ -608,7 +608,7 @@ de fond du &acronym-cgi; de cartographie des états (Statusmap)</title>
 				</tgroup>
 			</informaltable>
 			<para>Cette option permet de spécifier une image qui sera utilisée comme fond
-d'image dans le <link linkend="thebasics-cgis-statusmap_cgi">&acronym-cgi; de
+d'image dans le <link linkend="thebasics-cgis-statusmap_cgi">CGI de
 cartographie des états</link> si vous utilisez la méthode de dessin des
 coordonnées définies par l'utilisateur. L'image de fond n'est disponible
 dans aucune autre méthode. Il est supposé que l'image est située dans le
@@ -651,7 +651,7 @@ la cartographie des états: valeur par défaut</title>
 				</tgroup>
 			</informaltable>
 			<para>Cette option définit la méthode de dessin utilisée par défaut par le <link
-linkend="thebasics-cgis-statusmap_cgi">&acronym-cgi; de cartographie des
+linkend="thebasics-cgis-statusmap_cgi">CGI de cartographie des
 états</link>. Les valeurs autorisées sont:</para>
 			<informaltable frame="all">
 				<tgroup cols="2">
@@ -792,7 +792,7 @@ monde des états: valeur par défaut</title>
 				</tgroup>
 			</informaltable>
 			<para>Cette option définit la méthode utilisée par défaut pour dessiner le monde
-VRML avec le <link linkend="thebasics-cgis-statuswrl_cgi">&acronym-cgi; concerné
+VRML avec le <link linkend="thebasics-cgis-statuswrl_cgi">CGI concerné
 (Statusvrml)</link>. Les options autorisées sont:</para>
 			<informaltable frame="all">
 				<tgroup cols="2">
@@ -874,7 +874,7 @@ rafraîchissement des CGIs</title>
 			</informaltable>
 			<para>Cette option vous permet de spécifier le délai en secondes entre deux
 rafraîchissements de page dans les <link
-linkend="thebasics-cgis-status_cgi">&acronym-cgi; d'état</link>, de <link
+linkend="thebasics-cgis-status_cgi">CGI d'état</link>, de <link
 linkend="thebasics-cgis-statusmap_cgi">cartographie des états</link>, et
 <link linkend="thebasics-cgis-extinfo_cgi">d'informations
 complémentaires</link>.</para>
@@ -919,7 +919,7 @@ complémentaires</link>.</para>
 			</informaltable>
 			<para>Cette option vous permet de spécifier un fichier audio à jouer dans votre
 navigateur lorsqu'il y a des problèmes dans le <link
-linkend="thebasics-cgis-status_cgi">&acronym-cgi; d'état</link>. En cas de problèmes
+linkend="thebasics-cgis-status_cgi">CGI d'état</link>. En cas de problèmes
 multiples, le fichier audio joué est celui du problème le plus critique. Un
 problème est considéré comme le plus critique lorsqu'un ou plusieurs hôtes
 sont inaccessibles, alors qu'il est le moins critique lorsqu'un ou plusieurs

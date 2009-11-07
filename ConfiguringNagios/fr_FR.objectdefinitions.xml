@@ -446,7 +446,7 @@ erreur parce que les plugins seront incapbles de résoudre le nom de l'hôte.</p
 		<listitem>
 		<para>Cette variables est utilisée pour afficher un nom différent à l'affichage
 dans l'interface web pour cet hôte. Si non précisée, la valeur par défaut
-est prise depuis la variable <emphasis>host_name</emphasis>.</para><note><para>Les &acronym-cgi;s actuels n'utilise pas cette option, mais les futurs versions de
+est prise depuis la variable <varname>host_name</varname>.</para><note><para>Les &acronym-cgi;s actuels n'utilise pas cette option, mais les futurs versions de
 l'interface le feront.
         </para></note>
 		</listitem>
@@ -1065,7 +1065,7 @@ groupe d'hôtes</title>
 hôtes ensemble de façon à simplifier la configuration avec les <link
 linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
 ou pour des besoins de visualisation dans les <link
-linkend="thebasics-cgis">&acronym-cgi;s</link>.</para>
+linkend="thebasics-cgis">CGIs</link>.</para>
    </section>
 
    <section>
@@ -2140,7 +2140,7 @@ de groupe de services</title>
 services ensemble de façon à simplifier la configuration avec les <link
 linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
 ou pour des besoins de visualisation dans les <link
-linkend="thebasics-cgis">&acronym-cgi;s</link>.</para>
+linkend="thebasics-cgis">CGIs</link>.</para>
    </section>
 
    <section>
@@ -4510,7 +4510,7 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
 utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
 temps &acronym-cpu; en calcul (comme c'est le cas avec les autres formats) quand vous
-générez la carte d'états. Le simages GD2 peuvent être créées à partir
+générez la carte d'états. Les images GD2 peuvent être créées à partir
 d'image PNG en utilisant l'utilitaire <emphasis
 role="bold">pngtogd2</emphasis> fourni avec la <ulink
 url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format

@@ -125,7 +125,7 @@ serveur web peut être un problème de sécurité. Après tout, vous ne souhaite
 pas que n'importe quel utilisateur du système puisse contrôler Nagios à
 partir du fichier des commandes externes. Dans ce cas, je vous suggère de
 donner les droits uniquement à l'utilisateur nagios et d'utiliser quelque
-chose comme <ulink url="http://cgiwrap.sourceforge.net/">&acronym-cgi;Wrap</ulink>
+chose comme <ulink url="http://cgiwrap.sourceforge.net/">CGI Wrap</ulink>
 pour faire fonctionner les &acronym-cgi;s avec l'utilisateur nagios plutôt que nobody.</para>
    </listitem>
 
@@ -138,9 +138,9 @@ qu'exceptionnellement une autorisation à des contacts spécifiques. Les
 instructions pour la configuration des droits se trouvent <link
 linkend="configuringnagios-cgiauth">ici</link>. Si vous désactivez
 l'authentification préalable à l'accès aux &acronym-cgi;s par la commande <link
-linkend="configuringnagios-configcgi-use_authentication">use_authentication</link>
+linkend="configuringnagios-configcgi-use_authentication"><varname>use_authentication</varname></link>
 dans le fichier de configuration des &acronym-cgi;s, le <link
-linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link> refusera d'écrire la
+linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> refusera d'écrire la
 moindre commande dans le <link
 linkend="configuringnagios-configmain-command_file">fichier des commandes
 externes</link>. De toutes façons, vous ne souhaitez pas que tout le monde

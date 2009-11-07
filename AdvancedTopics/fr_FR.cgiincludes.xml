@@ -13,7 +13,7 @@
 		<para>Si vous êtes amené à faire des installations personnalisées de Nagios, vous
 pourriez avoir envie d'avoir un en-tête et/ou un pied de page personnalisés
 à l'affichage des résultats des <link
-linkend="thebasics-cgis">&acronym-cgi;s</link>. Ceci est particulièrement utile pour
+linkend="thebasics-cgis">CGIs</link>. Ceci est particulièrement utile pour
 l'utilisateur final concernant l'affichage des informations de contact du
 support, etc.</para>
 		<para>Il est important de tenir compte du fait que, à moins d'être exécutables,
@@ -58,7 +58,7 @@ existent, ils seront inclus dans le résultat de l'exécution de toutes les
 nommés dans le format <filename>NOMCGI-header.ssi</filename> et
 <filename>NOMCGI-footer.ssi</filename>, où CGINAME est le nom physique du
 &acronym-cgi; sans l'extension .cgi. Par exemple, l'en-tête et le bas de page pour le
-<link linkend="thebasics-cgis-summary_cgi">&acronym-cgi; résumé des alertes</link>
+<link linkend="thebasics-cgis-summary_cgi">CGI résumé des alertes</link>
 [alert summary] (summary.cgi) devrait être appelé
 <filename>summary-header.ssi</filename> et
 <filename>summary-footer.ssi</filename>, respectivement. 

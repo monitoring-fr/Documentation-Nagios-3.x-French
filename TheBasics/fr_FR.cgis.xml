@@ -19,7 +19,7 @@ web et que vous êtes autorisés à accéder aux informations demandées. Pour
 plus d'informations sur la configuration des autorisations de votre serveur
 web et des &acronym-cgi;s, lisez les sections <link
 linkend="configuringnagios-cgiauth">Installer l'interface web et
-Authentification et autorisations dans les &acronym-cgi;s</link>.</para>
+Authentification et autorisations dans les CGIs</link>.</para>
  </section>
 
  <section>
@@ -524,7 +524,7 @@ information de configuration.</para>
 Nagios. Bien que ce &acronym-cgi; accepte plusieurs arguments, mieux vaut ne pas s'y
 essayer. La plupart changent selon les révisions de Nagios. Utilisez plutôt
 les <link linkend="thebasics-cgis-extinfo_cgi">informations complémentaires
-des &acronym-cgi;s</link> comme point de départ pour envoyer des commandes. </para>
+des CGIs</link> comme point de départ pour envoyer des commandes. </para>
       <para>Autorisation requises :</para> <itemizedlist>
         <listitem>
          <para>Vous devez être <link
@@ -629,13 +629,13 @@ suggère dans ce cas de supprimer le &acronym-cgi;. </para>
 de Nagios, aux statistiques sur les hôtes et les services, aux commentaires
 sur les hôtes et les services, et plus encore. C'est également un point
 d'entrée pour envoyer des commandes à Nagios via le <link
-linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link>. Bien que ce &acronym-cgi;
+linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Bien que ce &acronym-cgi;
 accepte plusieurs arguments, mieux vaut ne pas s'y essayer : la plupart
 changent selon les révisions de Nagios. Vous pouvez accéder à ce &acronym-cgi; en
 cliquant sur les liens appelés 'Network Health' [NdT: Santé/Etat du réseau]
 et 'Process Information' [NdT: Information sur le processus Nagios] de la
 barre latérale de navigation, ou en cliquant sur un lien hôte ou service
-dans l'affichage du <link linkend="thebasics-cgis-status_cgi">&acronym-cgi;
+dans l'affichage du <link linkend="thebasics-cgis-status_cgi">CGI
 d'état</link>. </para>
       <para>Autorisation requises :</para> <itemizedlist>
         <listitem>
@@ -758,7 +758,7 @@ pour les informations système</link> pour voir le fichier journal.</para>
      <row>
       <entry><para>Description : Ce &acronym-cgi; affiche l'historique des problèmes relatifs soit à un
 hôte particulier soit à tous les hôtes. L'affichage est un sous-ensemble de
-ce que produit le <link linkend="thebasics-cgis-showlog_cgi">&acronym-cgi; du fichier
+ce que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
 journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
 types de problèmes (i.e. alertes hard et/ou soft, les différents types
 d'alertes sur les services et les hôtes, tous les types d'alertes, etc.). Si
@@ -826,7 +826,7 @@ les hôtes et tous les services dont vous êtes un contact.</para>
      <row>
       <entry><para>Description : Ce &acronym-cgi; affiche les notifications envoyées aux différents
 contacts d'un hôte ou d'un service. L'affichage est un sous-ensemble de ce
-que produit le <link linkend="thebasics-cgis-showlog_cgi">&acronym-cgi; du fichier
+que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
 journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
 types de problèmes (i.e. notifications relatives aux services, aux hôtes,
 envoyées à des contacts spécifiques, etc). Si vous avez activé la <link

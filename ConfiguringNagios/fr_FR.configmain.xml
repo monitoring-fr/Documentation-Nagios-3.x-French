@@ -962,7 +962,7 @@ externes</title>
    <para>Cette option détermine si Nagios va vérifier le contenu du <xref
 linkend="configuringnagios-configmain-command_file" /> à la recherche de
 commandes à exécuter. Cette option doit être activée si vous avez prévu
-d'utiliser le <link linkend="thebasics-cgis">&acronym-cgi; de commande</link> pour
+d'utiliser le <link linkend="thebasics-cgis">CGI de commande</link> pour
 envoyer des commandes via l'interface web. Des programmes tiers peuvent
 également envoyer des commandes à Nagios en écrivant dans le fichier de
 commande, sous réserve que les droits nécessaires à l'accès au fichier ait
@@ -1050,7 +1050,7 @@ Command File" />Fichier de commandes externes</title>
    </informaltable>
 
    <para>C'est le fichier que Nagios lit à la recherche de commandes externes. Le
-<link linkend="thebasics-cgis-cmd_cgi">&acronym-cgi; de commande</link> écrit les
+<link linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> écrit les
 commandes dans ce fichier. Des programmes tiers peuvent écrire dans ce
 fichier sous réserve qu'ils aient les droits d'accès comme il est décrit
 ici. Le fichier de commandes externes est implémenté sous forme d'un tube
@@ -2052,7 +2052,7 @@ des versions de Nagios antérieures à la version 0.0.5). Mettez une valeur
 de s (débrouillard)[smart]) pour que le calcul du facteur d'entrelacement
 soit automatique, à moins que vous ayez une bonne raison de la changer. Le
 meilleur moyen de comprendre le fonctionnement du facteur d'entrelacement
-est d'observer le <link linkend="thebasics-cgis-status_cgi">&acronym-cgi;
+est d'observer le <link linkend="thebasics-cgis-status_cgi">CGI
 d'état</link> (vue détaillée) au moment où Nagios vient de démarrer. Vous
 verrez comment les contrôles sont faits au fur et à mesure que les résultats
 apparaissent. Vous trouverez plus d'informations sur l'entrelacement <link
