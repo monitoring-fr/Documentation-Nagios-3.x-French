@@ -39,7 +39,7 @@ linkend="thebasics-statetypes">ceci</link>.</para>
 
    <listitem>
     <para>Lorsqu'un hôte ou un service demeure dans un état hard et non-OK, et que le
-délai défini dans le paramétre &lt;notification_interval&gt; de la
+délai défini dans le paramètre &lt;notification_interval&gt; de la
 définition de l'hôte ou du service est écoulé depuis que la dernière
 notification a été émise (pour ce même hôte ou service).</para>
    </listitem>
@@ -49,13 +49,13 @@ notification a été émise (pour ce même hôte ou service).</para>
  <section>
   <title>Qui est notifié ?</title>
 
-  <para>Chaque définition de service comprend un paramétre &lt;contact_groups<code>contact_groups</code>&gt; qui définit quels groupes de contacts recevront les notifications de ce
+  <para>Chaque définition de service comprend un paramètre &lt;contact_groups<code>contact_groups</code>&gt; qui définit quels groupes de contacts recevront les notifications de ce
 service. Chaque groupe de contacts peut contenir un ou plusieurs contacts
 individuels.</para>
 
   <para>Quand Nagios émet une notification de service, il notifie chaque contact
-membre d'un des groupes de contacts spécifiés dans le paramétre
-&lt;contactgroups<code>contactgroups</code>&gt; de la définition du service. Nagios est conscient qu'un contact peut
+membre d'un des groupes de contacts spécifiés dans le paramètre
+&lt;<varname>contactgroups</varname>&gt; de la définition du service. Nagios est conscient qu'un contact peut
 être membre de plus d'un groupe, donc il commence par supprimer les doublons
 avant toute chose.</para>
  </section>
@@ -76,7 +76,7 @@ traverser… </para>
 
   <para>Le premier filtre que les notifications doivent traverser est un test pour
 savoir si les notifications sont activées au niveau global du programme ou
-non. Ceci est spécifié par le paramétre <link
+non. Ceci est spécifié par le paramètre <link
 linkend="configuringnagios-configmain-enable_notifications">enable_notifications<code>enable_notifications</code></link> du fichier de configuration principal, mais peut être modifié en
 cours d'exécution via l'interface web. Si les notifications sont désactivées
 de manière globale, aucune notification ne sera envoyée - point final. Si
@@ -102,13 +102,13 @@ personne n'est notifié. Sinon, la notification est passée au filtre
 suivant. </para>
 
   <para>Le troisième filtre à traverser pour les notifications d'hôte et de service
-est formé par les paramétres de notification. Chaque définition de service
-contient des paramétres qui déterminent si les notifications doivent être
+est formé par les paramètres de notification. Chaque définition de service
+contient des paramètres qui déterminent si les notifications doivent être
 envoyées pour les états WARNING, CRITICAL, et RECOVERY. De la même manière,
-chaque définition d'hôte contient des paramétres qui déterminent si les
+chaque définition d'hôte contient des paramètres qui déterminent si les
 notifications doivent être envoyées quand l'hôte s'arrête [NdT: état DOWN],
 devient inaccessible [UNREACHABLE], ou se rétablit [RECOVERY]. Si la
-notification d'hôte ou de service est bloquée par ces paramétres, personne
+notification d'hôte ou de service est bloquée par ces paramètres, personne
 n'est notifié. Dans le cas contraire, la notification est passée au filtre
 suivant…</para>
 
@@ -121,7 +121,7 @@ rétablissement pour un problème dont vous n'aviez pas connaissance… </para>
 
   <para>Le quatrième filtre des notifications d'hôte et de service à traverser
 concerne la période. Chaque définition d'hôte et de service comporte un
-paramétre &lt;<code>notification_period</code>notification_period&gt; qui spécifie quelle période contient les heures de
+paramètre &lt;<code>notification_period</code>notification_period&gt; qui spécifie quelle période contient les heures de
 notification valides pour cet hôte ou service. Si le moment où la
 notification apparaît n'est pas dans une plage valide de la période
 spécifiée, personne n'est contacté. Dans le cas contraire, la notification
@@ -141,7 +141,7 @@ problème avec l'hôte ou le service, et (2) l'hôte ou le service est resté
 dans le même état non-OK depuis la dernière notification. Si ces deux
 conditions sont réunies, Nagios vérifie que le temps écoulé depuis
 l'émission de la dernière notification est supérieur ou égal à la valeur
-spécifiée par le paramétre &lt;<code>notification_interval</code>notification_interval&gt; de la définition de l'hôte ou du service. Si le
+spécifiée par le paramètre &lt;<code>notification_interval</code>notification_interval&gt; de la définition de l'hôte ou du service. Si le
 temps écoulé depuis la dernière notification est insuffisant, personne n'est
 contacté. Si un temps suffisant s'est écoulé, ou si les deux conditions de
 ce filtre n'ont pas été réunies, la notification sera émise ! Le fait
@@ -165,7 +165,7 @@ reçoivent.</para>
 façon dont les autres contacts reçoivent les notifications. </para>
   </note>
 
-  <para>Le premier filtre à passer pour chaque contact concerne les paramétres de
+  <para>Le premier filtre à passer pour chaque contact concerne les paramètres de
 notification. Chaque définition de contact comprend des paramètres qui
 déterminent si les notifications de service peuvent être émises pour les
 états WARNING, CRITICAL, et RECOVERY. Chaque définition de contact contient
@@ -183,7 +183,7 @@ rétablissement pour un problème dont vous n'aviez pas connaissance… </para>
   </note>
 
   <para>Le dernier filtre à passer pour chaque contact concerne la période. Chaque
-définition de contact comprend un paramétre &lt;<code>notification_period</code>notification_period&gt; qui spécifie la période durant laquelle on peut
+définition de contact comprend un paramètre &lt;<code>notification_period</code>notification_period&gt; qui spécifie la période durant laquelle on peut
 envoyer des notification à ce contact. Si l'heure à laquelle la notification
 est faite n'est pas comprise dans la plage de temps de la période spécifiée,
 le contact ne recevra pas la notification. Dans le cas contraire, le contact
@@ -195,7 +195,7 @@ la reçoit ! </para>
 
   <para>Nagios peut vous envoyer des notificaitons sur le sproblèmes et retours à la
 normale d'a peu près toute sles façons que vous voulez: email, pager,
-téléphone (SMS), messageries instantanées Yahoo, ICQ, ou MSN, alertes
+téléphone (<acronym>SMS</acronym>), messageries instantanées Yahoo, <acronym>ICQ</acronym>, ou <acronym>MSN</acronym>, alertes
 sonores, décharge électrique, etc. La façon dont est envoyée les
 notifications dépend des <link
 linkend="configuringnagios-objectdefinitions-command">commandes de
@@ -343,7 +343,7 @@ notification possibles :</para>
    </listitem>
 
    <listitem>
-    <para>Téléphone (SMS)</para>
+    <para>Téléphone (<acronym>SMS</acronym>)</para>
    </listitem>
 
    <listitem>
@@ -351,7 +351,7 @@ notification possibles :</para>
    </listitem>
 
    <listitem>
-    <para>Messageries instantanées Yahoo, ICQ, ou MSN </para>
+    <para>Messageries instantanées Yahoo, <acronym>ICQ</acronym>, ou <acronym>MSN</acronym> </para>
    </listitem>
 
    <listitem>
@@ -378,7 +378,7 @@ m'ont dit l'avoir fait avec succès…</para>
   <itemizedlist>
    <listitem>
     <para><ulink url="http://www.gnokii.org/">Gnokii</ulink> (logiciel SMS pour
-contacter des téléphones Nokia via le réseau GSM)</para>
+contacter des téléphones Nokia via le réseau <acronym>GSM</acronym>)</para>
    </listitem>
 
    <listitem>
@@ -391,7 +391,7 @@ alphanumérique)</para>
    </listitem>
 
    <listitem>
-    <para><ulink url="http://www.smsclient.org/">SMS Client</ulink> (outil en ligne de
+    <para><ulink url="http://www.smsclient.org/"><acronym>SMS</acronym> Client</ulink> (outil en ligne de
 commande pour envoyer des messages aux pagers et aux téléphones portables)</para>
    </listitem>
   </itemizedlist>
@@ -401,8 +401,8 @@ avec les alertes sonores. Si vous voulez des alertes sonores sur le serveur
 de supervision (avec voix synthéthique), essayez <ulink
 url="http://www.cstr.ed.ac.uk/projects/festival/">Festival</ulink>
 [Anglais]. Si vous voulez les recevoir sur une autre machine, testez le
-<ulink url="http://radscan.com/nas.html">Network Audio System (NAS)</ulink>
-(NAS) [Anglais] et <ulink url="http://rplay.doit.org/">rplay</ulink>
+<ulink url="http://radscan.com/nas.html">Network Audio System (<acronym>NAS</acronym>)</ulink>
+(<acronym>NAS</acronym>) [Anglais] et <ulink url="http://rplay.doit.org/">rplay</ulink>
 [Anglais]. </para>
  </section>
 </chapter>

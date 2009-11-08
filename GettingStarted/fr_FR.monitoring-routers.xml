@@ -346,7 +346,7 @@ switch): <command>snmpwalk -v1 -c public 192.168.1.253 -m ALL .1</command></para
 
   <para>Si vous supervisez l'usage de la bande passante de vos switchs et routeurs
 en utilisant <ulink
-url="http://oss.oetiker.ch/mrtg/"><application>&acronym-mrtg;</application></ulink>,
+url="http://oss.oetiker.ch/mrtg/"><application><acronym>MRTG</acronym></application></ulink>,
 vous pouvez utiliser Nagios pour alerter quand les valeurs dépassent un
 seuil que vous spécifiez. Le plugin &plugin-mrtgtraf; (inclus dans la
 distribution de splugins Nagios) vous permet de le faire.</para>

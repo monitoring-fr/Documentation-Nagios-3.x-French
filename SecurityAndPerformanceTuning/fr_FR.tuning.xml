@@ -157,7 +157,7 @@ accélérez les traitements.</para>
     <para>Optimisez les commandes de contrôle d'hôte. Si vous contrôlez l'état des
 hôtes avec le plugin &plugin-ping;, vous vous apercevrez que ces contrôles
 se font bien plus vite en les éclatant. Plutôt que de spécifier une valeur
-de 1 pour le paramétre max_attempts dans la définition de l'hôte et de dire
+de 1 pour le paramètre max_attempts dans la définition de l'hôte et de dire
 au plugin &plugin-ping; d'envoyer 10 paquets ICMP à l'hôte, il est bien plus
 rapide de passer max_attempts à 10 et de n'envoyer qu'un paquet
 &protocol-icmp; à chaque fois. Ceci est dû au fait que Nagios peut souvent
@@ -233,7 +233,7 @@ de commandes externes</link> (par un thread séparé) avant d'être traitées
 par le démon Nagios. Si celui-ci reçoit beaucoup de remontées de contrôles
 passifs, vous pouvez aboutir à une situation où le tampon est toujours
 plein. Le résultat est que les processus enfant (scripts externes, démon
-&name-nsca;, etc.)sont bloqués quand ils essayent d'écrire dans le fichier
+&name-nsca;<indexterm><primary>&name-nsca;</primary></indexterm>, etc.)sont bloqués quand ils essayent d'écrire dans le fichier
 de commandes externes. Je vous recommande fortement de grapher le tampon
 pour les tubes de redirections en utilisant &acronym-mrtg; et l'utilitaire nagiostats
 comme décrit <link

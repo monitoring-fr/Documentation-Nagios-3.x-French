@@ -24,8 +24,8 @@ explications supposent que l'hôte pour lequel vous générez ces alertes
 hôte que celui sur lequel Nagios est installé. Si vous souhaitez générer
 des alertes sur l'hôte Nagios, vous aurez besoin de faire quelques
 modifications à l'exemple que je vous propose. Je suppose également que vous
-avez installé le daemon nsca sur la machine de surpervision et le client
-nsca (<command>send_nsca</command>) sur la machine qui génère les alertes TCP wrappers.</para>
+avez installé le démon <application>nsca</application> sur la machine de surpervision et le client
+&name-nsca;<indexterm><primary>&name-nsca;</primary></indexterm> (<command>send_nsca</command>) sur la machine qui génère les alertes TCP wrappers.</para>
 
   <para>Il y a quelques pré-requis à savoir :</para>
 
@@ -48,8 +48,8 @@ besoins les exemples ci-dessous.</para>
    </listitem>
 
    <listitem>
-    <para>Vous avez installé <link linkend="nagiosaddons-addons-nsca">&name-nsca;</link> sur votre
-serveur de supervision et le client &name-nsca;
+    <para>Vous avez installé <link linkend="nagiosaddons-addons-nsca">&name-nsca;</link><indexterm><primary>&name-nsca;</primary></indexterm> sur votre
+serveur de supervision et le client &name-nsca;<indexterm><primary>&name-nsca;</primary></indexterm>
 (<command>send_nsca</command>) sur la machine distance qui enverra des
 alertes TCP Wrapper.</para>
    </listitem>
@@ -128,7 +128,7 @@ quelque chose qui ressemblera à ça :</para>
 	</programlisting>
 	<para>Notez que le script handle_tcp_wrapper appelle le script submit_check_result
 pour envoyer des alertes à l'hôte chargé de supervision. Supposons que votre
-hôte de supervision s'appelle monitor, le script submit check_result
+hôte de supervision s'appelle monitor, le script submit <command>check_result</command>
 pourrait ressembler à ceci (vous devrez éventuellement modifier le script
 pour spécifier l'emplacement du programme <command>send_nsca</command> sur firestorm): 
 	</para>

@@ -989,7 +989,7 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
 utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
 temps &acronym-cpu; en calcul (comme c'est le cas avec les autres formats) quand vous
-générez la carte d'états. Le simages GD2 peuvent être créées à partir
+générez la carte d'états. Les images GD2 peuvent être créées à partir
 d'image PNG en utilisant l'utilitaire <emphasis
 role="bold">pngtogd2</emphasis> fourni avec la <ulink
 url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format
@@ -2688,7 +2688,7 @@ url="mailto:pagejoe@pagenet.com">pagejoe@pagenet.com</ulink>). En fonction
 de la façon dont vous avez configuré les commandes de notifications, cela
 peut être utilisé pour envoyer une alerte par pager au contact. Dans les
 bonnes circonstances, la <link linkend="thebasics-macros">macro</link>
-$CONTACTPAGER$ contiendra cette valeur.
+<varname>$CONTACTPAGER$</varname> contiendra cette valeur.
 		</para>
 		</listitem>
 	</varlistentry>
@@ -2706,7 +2706,7 @@ envoyer une alerte au contact. Il est possible de définir jusqu'à six
 adresses en utilisant ces variables (<emphasis>address1</emphasis> jusqu'à
 <emphasis>address6</emphasis>). La <link
 linkend="thebasics-macros">macro</link>
-$CONTACTADDRESS<emphasis>x</emphasis>$ contiendra cette valeur.</para>
+<varname>$CONTACTADDRESS</varname><emphasis>x</emphasis><varname>$</varname> contiendra cette valeur.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>

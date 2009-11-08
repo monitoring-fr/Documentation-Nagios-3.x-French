@@ -87,10 +87,10 @@ pas fourni d'information sur la manière d'envoyer des résultats de contrôles
 de service à partir d'autres hôtes. </para>
 		<para>Afin de faciliter l'envoi de résultats de contrôles passifs à un hôte
 distant, j'ai écrit le module complémentaire <link
-linkend="nagiosaddons-addons-nsca">nsca</link>. Il contient deux parties. La
-première est un programme client (send_nsca) qui tourne sur un hôte distant
+linkend="nagiosaddons-addons-nsca">&name-nsca;</link><indexterm><primary>&name-nsca;</primary></indexterm>. Il contient deux parties. La
+première est un programme client (<command>send_nsca</command>) qui tourne sur un hôte distant
 et envoi les résultats de contrôles de service à un autre serveur. La
-seconde est le démon nsca (nsca) qui fonctionne, soit comme un démon
+seconde est le démon &name-nsca;<indexterm><primary>&name-nsca;</primary></indexterm> (<application>nsca</application>) qui fonctionne, soit comme un démon
 autonome, soit sous inetd, et écoute les connections des programmes du
 client. Après avoir reçu l'information de contrôle de service de la part
 d'un client, le démon enverra l'information de contrôle à Nagios (sur le
@@ -144,7 +144,7 @@ de service dans le fichier de configuration principal et permettre qu'une
 commande ocsp soit lancée après chaque contrôle de service. Nous utiliserons
 cette <link linkend="configuringnagios-configmain-ocsp_command">commande
 ocsp</link> pour envoyer les résultats de tous les contrôles de service au
-serveur central, en utilisant le client send_nsca et le démon nsca (comme
+serveur central, en utilisant le client <command>send_nsca</command> et le démon <application>nsca</application> (comme
 décrit ci-dessus) pour gérer la transmission. </para>
 		<para>Pour mener tout cela à bien, il faut définir la commande ocsp de cette façon
 :</para>
@@ -197,8 +197,8 @@ ressemble à ceci : </para>
 
 		        /bin/printf "%s\t%s\t%s\t%s\n" "$1" "$2" "$return_code" "$4" | /usr/local/nagios/bin/send_nsca -H <replaceable>central_server</replaceable> -c /usr/local/nagios/etc/send_nsca.cfg
 		</programlisting>
-		<para>Le script ci-dessus suppose que vous avez le programme send_nsca et son
-fichier de configuration ((<filename>send_nsca.cfg</filename>) placés
+		<para>Le script ci-dessus suppose que vous avez le programme <command>send_nsca</command> et son
+fichier de configuration (<filename>send_nsca.cfg</filename>) placés
 respectivement dans les répertoires <filename
 class="directory">/usr/local/nagios/bin/</filename> et <filename
 class="directory">/usr/local/nagios/etc/</filename>.</para>
@@ -228,11 +228,11 @@ code de retour et sortie) au programme client <command>send_nsca</command>. </pa
 			</listitem>
 			<listitem>
 				<para>Le programme <command>send_nsca</command> transmet l'information de contrôle
-de service au démon nsca qui se trouve sur le serveur de supervision
+de service au démon <application>nsca</application> qui se trouve sur le serveur de supervision
 central.</para>
 			</listitem>
 			<listitem>
-				<para>Le démon nsca du serveur central prend l'information de contrôle de service
+				<para>Le démon <application>nsca</application> du serveur central prend l'information de contrôle de service
 et l'écrit dans le fichier de commande externe pour qu'elle soit reprise
 ultérieurement par Nagios. </para>
 			</listitem>

@@ -510,10 +510,10 @@ fonctionne de manière plus douce.</para>
 connait pas l’état courant des services ou des systèmes au moment même où il
 prend à sa charge le travail de surveillance. Une manière de solutionner ce
 problème est d’activer la <link
-linkend="configuringnagios-configmain-ocsp_command">commande ocsp</link> sur
+linkend="configuringnagios-configmain-ocsp_command"><varname>commande ocsp</varname></link> sur
 le système maître et de lui demander de rapporter les résultats des
-vérifications à l’esclave en utilisant l’ajout <link
-linkend="nagiosaddons-addons-nsca">nsca</link>. De cette manière, le système
+vérifications à l’esclave en utilisant l’addon <link
+linkend="nagiosaddons-addons-nsca">&name-nsca;</link><indexterm><primary>&name-nsca;</primary></indexterm>. De cette manière, le système
 esclave possède un statut mis à jour des informations de tous les services
 et des systèmes s’il venait à prendre en charge la surveillance. Tant que
 les vérifications actives ne sont pas activées sur le système esclave, il
