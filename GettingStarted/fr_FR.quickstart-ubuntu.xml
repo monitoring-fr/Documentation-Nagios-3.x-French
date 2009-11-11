@@ -7,7 +7,7 @@
 ]
 >
 <chapter id="gettingstarted-quickstart-ubuntu" xreflabel="Ubuntu quickstart">
- <title>Guide rapide Ubuntu</title>
+ <title>Guide de démarrage rapide Ubuntu</title>
 
  <note>
 
@@ -18,7 +18,7 @@ supervision de votre machine locale prête en moins de 20 minutes. Aucune
 option d'installation avancée n'est abordée ici - juste les notions basiques
 qui fonctionneront pour 95% des utilisateurs qui veulent démarrer.</para>
 
-  <para>Ces instructions ont été écrite en se basant sur une installation standard
+  <para>Ces instructions ont été écrites en se basant sur une installation standard
 de la distribution &name-fedora; 6.10 (desktop). Elles devraient fonctionner
 également pour &name-ubuntu; 7.10.</para>
  </note>
@@ -96,7 +96,7 @@ utiliser ce qui suit:</para>
 <prompt>linux:~ $ </prompt><userinput>sudo -s</userinput>
 </screen>
 
-  <para>Créez un utilisateur nagios et attribuez lui un mot de passe.</para>
+  <para>Créez un utilisateur nagios et attribuez-lui un mot de passe.</para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/sbin/useradd -m nagios</userinput>
@@ -138,7 +138,7 @@ l'utilisateur apache à ce groupe.</para>
 Nagios (visitez <ulink
 url="&url-nagios;download/">&url-nagios;download/</ulink> pour les liens
 vers les dernières versions). Au moment de la rédaction, les dernières
-versions de Nagios et des plugins Nagios étaient respectivement la 3.0.3 et
+versions de Nagios et des plugins Nagios étaient respectivement la 3.0.2 et
 la 1.4.11.</para>
 
   <screen>
@@ -189,7 +189,7 @@ des commandes externes.</para>
   <title>Personnalisation de la configuration</title>
 
   <para>Les exemples de <link linkend="configuringnagios-config">fichiers de
-configuration</link> ont été installé dans le répertoire <filename
+configuration</link> ont été installés dans le répertoire <filename
 class="directory">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple
 devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à
 modifier avant de pouvoir commencer…</para>
@@ -223,7 +223,7 @@ aurez besoin plus tard.</para>
 <prompt>linux:~ # </prompt><userinput>htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</userinput>
 </screen>
 
-  <para>Redémmarez Apache pour que les nouveaux réglages prennent effet.</para>
+  <para>Redémarrez Apache pour que les nouveaux réglages prennent effet.</para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>/etc/init.d/apache2 reload</userinput>
@@ -253,20 +253,20 @@ aurez besoin plus tard.</para>
  <section>
   <title>Démarrage de Nagios</title>
 
-  <para>Confugrez Nagios pour qu'il s'exécute automatiquement au démarrage du
+  <para>Configurez Nagios pour qu'il s'exécute automatiquement au démarrage du
 système.</para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios</userinput>
 </screen>
 
-  <para>Vérifier les exemples de fichiers de configuration de Nagios. </para>
+  <para>Vérifiez les exemples de fichiers de configuration de Nagios. </para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen>
 
-  <para>S'il n'y a pas d'erreur, démarrer Nagios.</para>
+  <para>S'il n'y a pas d'erreur, démarrez Nagios.</para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>/etc/init.d/nagios start</userinput>
