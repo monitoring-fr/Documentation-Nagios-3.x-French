@@ -16,7 +16,7 @@ supervision de votre machine locale prête en moins de 20 minutes. Aucune
 option d'installation avancée n'est abordée ici - juste les notions basiques
 qui fonctionneront pour 95% des utilisateurs qui veulent démarrer.</para>
 
-  <para>Ces instructions ont été écrite en se basant sur une installation
+  <para>Ces instructions ont été écrites en se basant sur une installation
 &name-opensuse; 10.2.</para>
  </note>
 
@@ -47,7 +47,7 @@ qui fonctionneront pour 95% des utilisateurs qui veulent démarrer.</para>
 <prompt>linux:~ $ </prompt><userinput>su -l</userinput>
 </screen>
 
-  <para>Créez un utilisateur nagios et attribuez lui un mot de passe.</para>
+  <para>Créez un utilisateur nagios et attribuez-lui un mot de passe.</para>
 
   <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/sbin/useradd -m nagios</userinput>
@@ -86,7 +86,7 @@ l'utilisateur apache à ce groupe.</para>
 Nagios (visitez <ulink
 url="&url-nagios;download/">&url-nagios;download/</ulink> pour les liens
 vers les dernières versions). Au moment de la rédaction, les dernières
-versions de Nagios et des plugins Nagios étaient respectivement la 3.0.3 et
+versions de Nagios et des plugins Nagios étaient respectivement la 3.0.2 et
 la 1.4.11.</para>
     <screen>
 <prompt>linux:~ # </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.0.2.tar.gz</userinput>
@@ -133,7 +133,7 @@ des commandes externes.</para>
   <title>Personnalisation de la configuration</title>
 
   <para>Les exemples de <link linkend="configuringnagios-config">fichiers de
-configuration</link> ont été installé dans le répertoire <filename
+configuration</link> ont été installés dans le répertoire <filename
 class="directory">/usr/local/nagios/etc</filename>. Ces fichiers d'exemple
 devraient suffire pour commencer avec Nagios. Vous n'aurez qu'une chose à
 modifier avant de pouvoir commencer…</para>
@@ -165,7 +165,7 @@ aurez besoin plus tard.</para>
 <prompt>linux:~ # </prompt><userinput>htpasswd2 -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</userinput>
 </screen>
 
-  <para>Redémmarez Apache pour que les nouveaux réglages prennent effet.</para>
+  <para>Redémarrez Apache pour que les nouveaux réglages prennent effet.</para>
 
          <screen>
 <prompt>linux:~ # </prompt><userinput>service apache2 restart</userinput>
@@ -195,7 +195,7 @@ aurez besoin plus tard.</para>
  <section>
   <title>Démarrage de Nagios</title>
 
-  <para>Ajouter Nagios à la liste des services système et démarrer le
+  <para>Ajoutez Nagios à la liste des services système et démarrer le
 automatiquement au démarrage du système.</para>
 
                <screen>
@@ -203,7 +203,7 @@ automatiquement au démarrage du système.</para>
 <prompt>linux:~ # </prompt><userinput>chkconfig nagios on</userinput>
 </screen>
 
-  <para>Vérifier les exemples de fichiers de configuration de Nagios. </para>
+  <para>Vérifiez les exemples de fichiers de configuration de Nagios. </para>
 
                <screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
@@ -239,11 +239,11 @@ temps.</para>
 autoriser l'accès au serveur web si vous souhaitez accéder à distance à
 l'interface de Nagios.</para>
 
-  <para>Vous pouvez faire ceci en:</para>
+  <para>Vous pouvez faire ceci:</para>
 
   <orderedlist>
    <listitem>
-    <para>Ouvrir le centre de contrôle</para>
+    <para>Ouvrez le centre de contrôle</para>
    </listitem>
 
    <listitem>
