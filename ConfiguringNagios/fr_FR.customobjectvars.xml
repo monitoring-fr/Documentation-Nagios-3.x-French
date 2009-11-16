@@ -11,7 +11,7 @@
 	<section>
 		<title>Introduction</title>
 		<para>Les utilisateurs demandent souvent que de nouvelles variables puissent être
-ajoutés aux définitions d'hôtes, de services et de contacts. Ceci inclut des
+ajoutées aux définitions d'hôtes, de services et de contacts. Ceci inclut des
 variables comme la communauté du protocole &protocol-snmp; l'adresse MAC, le
 nom d'utilisateur AIM, le numéro Skype ou une simple adresse. Le problème
 que je vois à faire ça est que Nagios devient alors moins générique et plus
@@ -23,7 +23,7 @@ simple adresse IP à l'adresse complète de type FQDN; quoique soit
 d'approprié à l'utilisateur.</para>
 		<para>Pourtant, il y a bien un besoin pour les administrateurs d'avoir la
 possibilité de stocker des informations à propos des composants de leur
-infrastructure dans la configuration de Nagios sans imposé un ensemble de
+infrastructure dans la configuration de Nagios sans imposer un ensemble de
 variables spécifiques pour les autres. Nagios essaie de solutionner ce
 problème en autorisant les utilisateurs à définir des variables
 personnalisées dans leurs définitions d'objets. Les variables personnalisées
@@ -34,7 +34,7 @@ d'hôtes et de services.</para>
 	</section>
 	<section>
 		<title>Principes de base des variables personnalisées</title>
-		<para>Il ya quelques points importants que vous devriez connaître sur les
+		<para>Il y a quelques points importants que vous devriez connaître sur les
 variables personnalisées :</para>
 		<itemizedlist>
 			<listitem>
