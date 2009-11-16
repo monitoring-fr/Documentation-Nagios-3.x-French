@@ -14,8 +14,8 @@
 votre <link linkend="configuringnagios-config">fichier de configuration</link>. C'est important de le
 faire avant de (re)démarrer Nagios, car Nagios ne démarrera pas si votre
 configuration contient des erreurs.</para>
-		<para>Afin de vérifier votre configuration, exécuter Nagios avec l'option de
-commande <option>-v</option> command line option like so:</para>
+		<para>Afin de vérifier votre configuration, exécutez Nagios en ligne de commandes avec l'option
+ <option>-v</option> comme suit:</para>
 		<screen>
 <prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen>
