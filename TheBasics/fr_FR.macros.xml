@@ -38,15 +38,15 @@ suivante :
 		</para>
 		<programlisting>
 		define host{
-			host_name		linuxbox
-			address			192.168.1.2
-			check_command		check_ping
-			…
+		   host_name         linuxbox
+		   address           192.168.1.2
+		   check_command     check_ping
+		…
 		}
 
 		define command{
-			command_name		check_ping
-			command_line		/usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w 100.0,90% -c 200.0,60%
+		   command_name   check_ping
+		   command_line   /usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w 100.0,90% -c 200.0,60%
 		}
 		</programlisting>
 		<para>La ligne de commande finale, après substitution, qui sera exécutée pour le
@@ -65,12 +65,12 @@ paramètres sont spécifiés dans la définition de l'objet (c.-à-d. de l'hôte
 ou du service), en les séparant du nom de la commande par des points
 d'exclamation (!) comme ceci :</para>
 		<programlisting>
-		define service{
-		        host_name               linuxbox
-		        service_description     PING
-		        check_command   check_ping!200.0,80%!400.0,40%
-		        …
-		        }
+		define service{	
+		   host_name             linuxbox
+		   service_description   PING
+		   check_command         check_ping!200.0,80%!400.0,40%
+		…
+		}
 		</programlisting>
 		<para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
 paramètres (auxquels on fait référence par les macros $ARGn$). La macro
@@ -78,9 +78,8 @@ $ARG1$ vaudra <quote>200.0,80%</quote> et $ARG2$ <literal>$ARG2$</literal> vaudr
 définition d'hôte ci-dessus et une commande check_ping définie comme ceci :</para>
 		<programlisting>
 		define command{
-		        command_name    check_ping
-		        command_line    /usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w $ARG1$ -c $ARG2$
-		        
+		   command_name   check_ping
+		   command_line   /usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w $ARG1$ -c $ARG2$
 		</programlisting>
 		<para>La ligne de commande finale à exécuter pour le contrôle du service sera :</para>
 		<para><code>/usr/local/nagios/libexec/check_ping -H 192.168.1.2 -w 200.0,80% -c 400.0,40%</code></para>
@@ -121,16 +120,31 @@ service - qui sont séparés par deux point (:) également.</para>
 vide. Dans ce cas, le nom de l'hôte est automatiquement associé dès que le
 service est utilisé.</para></tip></para>
 		<para>Voici des exemples de macros d'hôte et de service à la demande :</para>
-		<para><code>$HOSTDOWNTIME:myhost$                        &lt;--- On-demand host macro</code></para>
-		<para><code>$SERVICESTATEID:novellserver:DS Database$    &lt;--- On-demand service macro</code></para>
-		<para><code>$SERVICESTATEID::CPU Load$                   &lt;--- On-demand service macro with blank host name field</code></para>
-		<para>Les macros à la demande sont aussi valable pour les macros des groupes
+		<example><title>Macro à la demande d'hôte</title>
+		<para><literal>$HOSTDOWNTIME:myhost$</literal></para>
+		</example>
+		<example><title>Macro à la demande de service</title>
+		<para><literal>$SERVICESTATEID:novellserver:DS Database$</literal></para>
+		</example>
+		<example><title>Macro à la demande de service, sans le champ d'hôte</title>
+		<para><literal>$SERVICESTATEID::CPU Load$</literal></para>
+		</example>
+
+		<para>Les macros à la demande sont aussi valables pour les macros des groupes
 d'hôtes, des groupes de services, des contacts et des groupes de
 contact. Par exemple:</para>
-		<para><code>$CONTACTEMAIL:john$                          &lt;--- On-demand contact macro</code></para>
-		<para><code>$CONTACTGROUPMEMBERS:linux-admins$           &lt;--- On-demand contactgroup macro</code></para>
-		<para><code>$HOSTGROUPALIAS:linux-servers$               &lt;--- On-demand hostgroup macro</code></para>
-		<para><code>$SERVICEGROUPALIAS:DNS-Cluster$              &lt;--- On-demand servicegroup macro</code></para>
+		<example><title>Macro à la demande de contact</title>
+		<para><literal>$CONTACTEMAIL:john$</literal></para>
+		</example>
+		<example><title>Macro à la demande de groupe de contacts</title>
+		<para><literal>$CONTACTGROUPMEMBERS:linux-admins$</literal></para>
+		</example>
+		<example><title>Macro à la demande de groupe d'hôtes</title>
+		<para><literal>$HOSTGROUPALIAS:linux-servers$</literal></para>
+		</example>
+		<example><title>Macro à la demande de groupe de services</title>
+		<para><literal>$SERVICEGROUPALIAS:DNS-Cluster$</literal></para>
+		</example>
 	</section>
 	<section>
 		<title>Les groupes de macros à la demande</title>
@@ -182,11 +196,11 @@ variable personnalisée est appelée comme suit :</para>
 <quote><literal>_MACADDRESS</literal></quote>…</para>
 		<programlisting>
 		define host{
-		        host_name               linuxbox
-		        address         192.168.1.1
-		        _MACADDRESS     00:01:02:03:04:05
-		        …
-		        }
+		   host_name      linuxbox
+		   address        192.168.1.1
+		   _MACADDRESS   00:01:02:03:04:05
+		   …
+		}
 		</programlisting>
 		<para>The <literal>_MACADDRESS</literal> serait disponible dans une macro appelée <literal>$_HOSTMACADDRESS$</literal>. Plus d'information sur les variables personnalisées d'objets et comment
 les utiliser dans des macros peut être trouvé <link
