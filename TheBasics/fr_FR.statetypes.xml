@@ -93,8 +93,8 @@ l'exécution des gestionnaires d'événements. L'utilisation des gestionaires
 d'évéenements peut être particulièrement utile si vous voulez essayer et
 résoudre un problème de façon proactive avant qu'il ne se transforme en état
 HARD. Les macros <link
-linkend="thebasics-macrolist-hoststatetype">$HOSTSTATETYPE$</link> ou <link
-linkend="thebasics-macrolist-servicestatetype">$SERVICESTATETYPE$</link>
+linkend="thebasics-macrolist-hoststatetype"><literal>$HOSTSTATETYPE$</literal></link> ou <link
+linkend="thebasics-macrolist-servicestatetype"><literal>$SERVICESTATETYPE$</literal></link>
 auront alors la valeur <quote>SOFT</quote>quand les gestionnaires d'événement seront
 exécutés, ce qui permettra aux gestionnaires d'événements de savoir quand
 ils devraont prendre des mesures correctives. Plus d'informations sur les
@@ -158,8 +158,8 @@ hôte ou d'un service.</para>
   </itemizedlist>
 
   <para>Les macros <link
-linkend="thebasics-macrolist-hoststatetype">$HOSTSTATETYPE$</link> ou <link
-linkend="thebasics-macrolist-servicestatetype">$SERVICESTATETYPE$</link>
+linkend="thebasics-macrolist-hoststatetype"><literal>$HOSTSTATETYPE$</literal></link> ou <link
+linkend="thebasics-macrolist-servicestatetype"><literal>$SERVICESTATETYPE$</literal></link>
 auront la valeur <quote>HARD</quote> quand les gestionnaires d'événement seront exécutés,
 ce qui permettra aux gestionnaires d'événement de savoir qu'ils doivent
 effectuer une action corrective. Plus d'informations sur les gestionnaires

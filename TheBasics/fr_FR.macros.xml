@@ -23,9 +23,9 @@ gestionnaires d'événements, etc.) soit exécutée, Nagios va remplacer toutes
 les macros qu'il trouvera dans la définition de la commande par les valeurs
 correspondantes.</para>
 		<para>Certaines macros peuvent contenir elles-mêmes d'autres macros. Ceux-ci
-incluent les macros <code>$HOSTNOTES$</code>,
-		<code>$HOSTNOTESURL$</code>, <code>$HOSTACTIONURL$</code>, <code>$SERVICENOTES$</code>, 
-		<code>$SERVICENOTESURL$</code>, et <code>$SERVICEACTIONURL$</code> .</para>
+incluent les macros <literal><literal>$HOSTNOTES$</literal></literal>,
+		<literal><literal>$HOSTNOTESURL$</literal></literal>, <literal><literal>$HOSTACTIONURL$</literal></literal>, <literal><literal>$SERVICENOTES$</literal></literal>, 
+		<literal><literal>$SERVICENOTESURL$</literal></literal>, et <literal><literal>$SERVICEACTIONURL$</literal></literal> .</para>
 	</section>
 	<section>
 		<title>Exemple 1: La macro d'adresse de l'hôte</title>
@@ -38,16 +38,16 @@ suivante :
 		</para>
 		<programlisting>
 		define host{
-		        host_name               linuxbox
-		        address         192.168.1.2
-		        check_command   check_ping
-		        …
-		        }
-		       
+			host_name		linuxbox
+			address			192.168.1.2
+			check_command		check_ping
+			…
+		}
+
 		define command{
-		        command_name    check_ping
-		        command_line    /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w 100.0,90% -c 200.0,60%
-		        }
+			command_name		check_ping
+			command_line		/usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w 100.0,90% -c 200.0,60%
+		}
 		</programlisting>
 		<para>La ligne de commande finale, après substitution, qui sera exécutée pour le
 contrôle de l'hôte ressemblera à ceci :</para>
@@ -74,12 +74,12 @@ d'exclamation (!) comme ceci :</para>
 		</programlisting>
 		<para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
 paramètres (auxquels on fait référence par les macros $ARGn$). La macro
-$ARG1$ vaudra <quote>200.0,80%</quote> et $ARG2$ <code>$ARG2$</code> vaudra <quote>400.0,40%</quote> (sans les guillemets). Supposons que nous utilisons la
+$ARG1$ vaudra <quote>200.0,80%</quote> et $ARG2$ <literal>$ARG2$</literal> vaudra <quote>400.0,40%</quote> (sans les guillemets). Supposons que nous utilisons la
 définition d'hôte ci-dessus et une commande check_ping définie comme ceci :</para>
 		<programlisting>
 		define command{
 		        command_name    check_ping
-		        command_line    /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$
+		        command_line    /usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w $ARG1$ -c $ARG2$
 		        
 		</programlisting>
 		<para>La ligne de commande finale à exécuter pour le contrôle du service sera :</para>
@@ -105,13 +105,13 @@ l'identifiant de l'hôte ou du service où aller chercher leur valeur. Voici
 la syntaxe de base pour les macros à la demande :</para>
 		<itemizedlist>
 			<listitem>
-				<para><code>$HOSTMACRONAME:host_name$</code></para>
+				<para><literal>$HOSTMACRONAME:host_name$</literal></para>
 			</listitem>
 			<listitem>
-				<para><code>$SERVICEMACRONAME:host_name:service_description$</code></para>
+				<para><literal>$SERVICEMACRONAME:host_name:service_description$</literal></para>
 			</listitem>
 		</itemizedlist>
-		<para>Remplace <code>HOSTMACRONAME</code> et <code>SERVICEMACRONAME</code> avec le nom d'une des macros standard d'hôte ou de service trouvé <link
+		<para>Remplace <literal>HOSTMACRONAME</literal> et <literal>SERVICEMACRONAME</literal> avec le nom d'une des macros standard d'hôte ou de service trouvé <link
 linkend="thebasics-macrolist">ici</link>.</para>
 		<para>Notez que le nom de la macro est séparé de l'identifiant de l'hôte ou du
 service par deux points (:). Pour les macros de service à la demande,
@@ -141,22 +141,22 @@ référant à un groupe d'hôte spécifique, un groupe de service, ou le nom du
 groupe de contact dans une macro à la demande, comme ainsi :</para>
 		<itemizedlist>
 			<listitem>
-				<para><code>$HOSTMACRONAME:hostgroup_name:delimiter$</code></para>
+				<para><literal>$HOSTMACRONAME:hostgroup_name:delimiter$</literal></para>
 			</listitem>
 			<listitem>
-				<para><code>$SERVICEMACRONAME:servicegroup_name:delimiter$</code></para>
+				<para><literal>$SERVICEMACRONAME:servicegroup_name:delimiter$</literal></para>
 			</listitem>
 			<listitem>
-				<para><code>$CONTACTMACRONAME:contactgroup_name:delimiter$</code></para>
+				<para><literal>$CONTACTMACRONAME:contactgroup_name:delimiter$</literal></para>
 			</listitem>
 		</itemizedlist>
-		<para>Remplace <code>HOSTMACRONAME</code>, <code>SERVICEMACRONAME</code>, et <code>CONTACTMACRONAME</code> avec le nom de macro d'un hôte standard, un service, ou le contact trouvé
+		<para>Remplace <literal>HOSTMACRONAME</literal>, <literal>SERVICEMACRONAME</literal>, et <literal>CONTACTMACRONAME</literal> avec le nom de macro d'un hôte standard, un service, ou le contact trouvé
 <link linkend="thebasics-macrolist">ici</link>. Le délimiteur que vous
 spécifiez est utilisé pour séparer des valeurs de macro pour chaque membre
 d'un groupe.</para>
 		<para>Par exemple, la macro suivante retournera une liste d'état hôte séparé par
 des virgules pour les hôtes membres du groupe hg1:</para>
-		<para><code>$HOSTSTATEID:hg1:,$</code></para>
+		<para><literal>$HOSTSTATEID:hg1:,$</literal></para>
 		<para>La définition de cette macro retournera quelque chose ressemblant à ça:</para>
 		<para><code>0,2,1,1,0,0,2</code></para>
 	</section>
@@ -169,17 +169,17 @@ service, ou du contact sont aussi disponibles comme macros. La macro de
 variable personnalisée est appelée comme suit :</para>
 		<itemizedlist>
 			<listitem>
-				<para><code>$_HOSTvarname$</code></para>
+				<para><literal>$_HOSTvarname$</literal></para>
 			</listitem>
 			<listitem>
-				<para><code>$_SERVICEvarname$</code></para>
+				<para><literal>$_SERVICEvarname$</literal></para>
 			</listitem>
 			<listitem>
-				<para><code>$_CONTACTvarname$</code></para>
+				<para><literal>$_CONTACTvarname$</literal></para>
 			</listitem>
 		</itemizedlist>
 		<para>Prenez la définition d'hôte suivante avec une variable personnalisée appelée
-<quote><code>_MACADDRESS</code></quote>…</para>
+<quote><literal>_MACADDRESS</literal></quote>…</para>
 		<programlisting>
 		define host{
 		        host_name               linuxbox
@@ -188,7 +188,7 @@ variable personnalisée est appelée comme suit :</para>
 		        …
 		        }
 		</programlisting>
-		<para>The <code>_MACADDRESS</code> serait disponible dans une macro appelée <code>$_HOSTMACADDRESS$</code>. Plus d'information sur les variables personnalisées d'objets et comment
+		<para>The <literal>_MACADDRESS</literal> serait disponible dans une macro appelée <literal>$_HOSTMACADDRESS$</literal>. Plus d'information sur les variables personnalisées d'objets et comment
 les utiliser dans des macros peut être trouvé <link
 linkend="configuringnagios-customobjectvars">ici</link>.</para>
 	</section>
@@ -203,55 +203,55 @@ Ce nettoyage s'applique aux macros suivantes :</para>
 		<orderedlist>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostoutput">$HOSTOUTPUT$</link>
+					<link linkend="thebasics-macrolist-hostoutput"><literal>$HOSTOUTPUT$</literal></link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-longhostoutput">$LONGHOSTOUTPUT$</link>
+					<link linkend="thebasics-macrolist-longhostoutput"><literal>$LONGHOSTOUTPUT$</literal></link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostperfdata">$HOSTPERFDATA$</link>
+					<link linkend="thebasics-macrolist-hostperfdata"><literal>$HOSTPERFDATA$</literal></link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostackauthor">$HOSTACKAUTHOR$</link>
+					<link linkend="thebasics-macrolist-hostackauthor"><literal>$HOSTACKAUTHOR$</literal></link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostackcomment">$HOSTACKCOMMENT$</link>
+					<link linkend="thebasics-macrolist-hostackcomment"><literal>$HOSTACKCOMMENT$</literal></link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link
-linkend="thebasics-macrolist-longserviceoutput">$LONGSERVICEOUTPUT$</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link>
+					<link linkend="thebasics-macrolist-serviceoutput"><literal>$SERVICEOUTPUT$</literal></link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
 					<link
-linkend="thebasics-macrolist-serviceackauthor">$SERVICEACKAUTHOR$</link>
+linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</literal></link>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<link linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
 					<link
-linkend="thebasics-macrolist-serviceackcomment">$SERVICEACKCOMMENT$</link>
+linkend="thebasics-macrolist-serviceackauthor"><literal>$SERVICEACKAUTHOR$</literal></link>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<link
+linkend="thebasics-macrolist-serviceackcomment"><literal>$SERVICEACKCOMMENT$</literal></link>
 				</para>
 			</listitem>
 		</orderedlist>
@@ -271,7 +271,7 @@ d'environnement.</para>
 les macros correspondantes (listées <link
 linkend="thebasics-macrolist">ici</link>), avec le préfixe <quote>NAGIOS_</quote>. Par
 exemple, la macro <link
-linkend="thebasics-macrolist-hostname">$HOSTNAME$</link> est disponible à
+linkend="thebasics-macrolist-hostname"><literal>$HOSTNAME$</literal></link> est disponible à
 travers la variable d'environnement nommée <quote>NAGIOS_HOSTNAME</quote>.</para>
 	</section>
 	<section>
