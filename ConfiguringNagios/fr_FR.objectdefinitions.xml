@@ -433,7 +433,7 @@ moins tant que cela peut être utilisé pour contrôler l'état d'un hôte). Vou
 pouvez utiliser le FQDN pour identifier l'hôte plutôt que son adresse IP,
 mais avec des problèmes possibles si les services &protocol-dns; ne sont pas
 disponibles. Bine utilisé, la <link linkend="thebasics-macros">macro</link>
-$HOSTADDRESS$ contiendra cette adresse.</para><note><para>Le nom de l'hôte sera utilisé comme adresse si vous ne précisez pas de
+&macro-hostaddress; contiendra cette adresse.</para><note><para>Le nom de l'hôte sera utilisé comme adresse si vous ne précisez pas de
 variable adresse dans la définition d el'hôte.</para></note><caution><para>Une petite mise en garde néanmoins sur le fait de le faire - si le service
 &protocol-dns; tombe, la plupart de vos contrôles de services seront en
 erreur parce que les plugins seront incapbles de résoudre le nom de l'hôte.</para></caution>
@@ -2688,7 +2688,7 @@ url="mailto:pagejoe@pagenet.com">pagejoe@pagenet.com</ulink>). En fonction
 de la façon dont vous avez configuré les commandes de notifications, cela
 peut être utilisé pour envoyer une alerte par pager au contact. Dans les
 bonnes circonstances, la <link linkend="thebasics-macros">macro</link>
-<varname>$CONTACTPAGER$</varname> contiendra cette valeur.
+<literal>$CONTACTPAGER$</literal> contiendra cette valeur.
 		</para>
 		</listitem>
 	</varlistentry>
@@ -2706,7 +2706,7 @@ envoyer une alerte au contact. Il est possible de définir jusqu'à six
 adresses en utilisant ces variables (<emphasis>address1</emphasis> jusqu'à
 <emphasis>address6</emphasis>). La <link
 linkend="thebasics-macros">macro</link>
-<varname>$CONTACTADDRESS</varname><emphasis>x</emphasis><varname>$</varname> contiendra cette valeur.</para>
+<literal>$CONTACTADDRESS</literal><emphasis>x</emphasis><varname>$</varname> contiendra cette valeur.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>

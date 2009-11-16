@@ -4650,14 +4650,14 @@ déconseille. Quelques uns d'entre eux sont interprétés par le shell ( par
 exemple, le ` ) et peuvent poser des problèmes de sécurité. Les macros
 suivantes sont débarrassées des caractères spécifiés dans l'option :</para>
    <itemizedlist spacing="compact">
-   	<listitem><para><varname>$HOSTOUTPUT$</varname></para></listitem>
-	<listitem><para><varname>$HOSTPERFDATA$</varname></para></listitem>
-	<listitem><para><varname>$HOSTACKAUTHOR$</varname></para></listitem>
-	<listitem><para><varname>$HOSTACKCOMMENT$</varname></para></listitem>
-	<listitem><para><varname>$SERVICEOUTPUT$</varname></para></listitem>
-	<listitem><para><varname>$SERVICEPERFDATA$</varname></para></listitem>
-	<listitem><para><varname>$SERVICEACKAUTHOR$</varname></para></listitem>
-	<listitem><para><varname>$SERVICEACKCOMMENT$</varname></para></listitem>
+   	<listitem><para><literal>$HOSTOUTPUT$</literal></para></listitem>
+	<listitem><para><literal>$HOSTPERFDATA$</literal></para></listitem>
+	<listitem><para><literal>$HOSTACKAUTHOR$</literal></para></listitem>
+	<listitem><para><literal>$HOSTACKCOMMENT$</literal></para></listitem>
+	<listitem><para><literal>$SERVICEOUTPUT$</literal></para></listitem>
+	<listitem><para><literal>$SERVICEPERFDATA$</literal></para></listitem>
+	<listitem><para><literal>$SERVICEACKAUTHOR$</literal></para></listitem>
+	<listitem><para><literal>$SERVICEACKCOMMENT$</literal></para></listitem>
    </itemizedlist>
   </section>
 
@@ -4776,7 +4776,7 @@ xreflabel="Administrator Email Address"/>Adresse email de l'administrateur</titl
    <para>C'est l'adresse mail de l'administrateur local de la machine (i.e. celle sur
 laquelle Nagios tourne). Cette valeur peut être utilisée dans les commandes
 de notification grâce à la <link linkend="thebasics-macros">macro</link>
-<varname>$ADMINEMAIL$</varname>.</para>
+<literal>$ADMINEMAIL$</literal>.</para>
   </section>
 
   <section>
@@ -4807,7 +4807,7 @@ xreflabel="Administrator Pager"/>Pager de l'administrateur</title>
 de la machine locale (i.e. celle sur laquelle Nagios tourne). Le numéro ou
 l'adresse de pager peut être utilisé dans les commandes de notification
 grâce à la <link linkend="thebasics-macros">macro</link>
-<varname>$ADMINPAGER$ </varname>.</para>
+<literal>$ADMINPAGER$ </literal>.</para>
   </section>
 
   <section>

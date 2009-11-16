@@ -53,56 +53,56 @@ les utilisateurs occasionnels de Nagios.</para>
  <para><emphasis role="bold">Nouvelles macros</emphasis> - De nouvelles macros ont
 été ajoutées: &macro-temppath;,
 &macro-longhostoutput;, &macro-longserviceoutput;,
-<varname>$HOSTNOTIFICATIONID$</varname>,
-<varname>$SERVICENOTIFICATIONID$</varname>,
-<varname>$HOSTEVENTID$</varname>, <varname>$SERVICEEVENTID$</varname>,
-<varname>$SERVICEISVOLATILE$</varname>,
-<varname>$LASTHOSTEVENTID$</varname>,
-<varname>$LASTSERVICEEVENTID$</varname>,
-<varname>$HOSTDISPLAYNAME$</varname>,
-<varname>$SERVICEDISPLAYNAME$</varname>,
-<varname>$MAXHOSTATTEMPTS$</varname>,
-<varname>$MAXSERVICEATTEMPTS$</varname>,
-<varname>$TOTALHOSTSERVICES$</varname>,
-<varname>$TOTALHOSTSERVICESOK$</varname>,
-<varname>$TOTALHOSTSERVICESWARNING$</varname>,
-<varname>$TOTALHOSTSERVICESUNKNOWN$</varname>,
-<varname>$TOTALHOSTSERVICESCRITICAL$</varname>,
-<varname>$CONTACTGROUPNAME$</varname>,
-<varname>$CONTACTGROUPNAMES$</varname>,
-<varname>$CONTACTGROUPALIAS$</varname>,
-<varname>$CONTACTGROUPMEMBERS$</varname>,
-<varname>$NOTIFICATIONRECIPIENTS$</varname>,
-<varname>$NOTIFICATIONISESCALATED$</varname>,
-<varname>$NOTIFICATIONAUTHOR$</varname>,
-<varname>$NOTIFICATIONAUTHORNAME$</varname>,
-<varname>$NOTIFICATIONAUTHORALIAS$</varname>,
-<varname>$NOTIFICATIONCOMMENT$</varname>,
-<varname>$EVENTSTARTTIME$</varname>, <varname>$HOSTPROBLEMID$</varname>,
-<varname>$LASTHOSTPROBLEMID$</varname>,
-<varname>$SERVICEPROBLEMID$</varname>,
-<varname>$LASTSERVICEPROBLEMID$</varname>,
-<varname>$LASTHOSSTATE$</varname>, <varname>$LASTHOSTSTATEID$</varname>,
-<varname>$LASTSERVICESTATE$</varname>,
-<varname>$LASTSERVICESTATEID$</varname>. Deux macros de temps <quote>à la demande</quote>
-ont également été ajoutées: <varname>$ISVALIDTIME:$</varname> et
-<varname>$NEXTVALIDTIME:$</varname>.</para>
+<literal>$HOSTNOTIFICATIONID$</literal>,
+<literal>$SERVICENOTIFICATIONID$</literal>,
+<literal>$HOSTEVENTID$</literal>, <literal>$SERVICEEVENTID$</literal>,
+<literal>$SERVICEISVOLATILE$</literal>,
+<literal>$LASTHOSTEVENTID$</literal>,
+<literal>$LASTSERVICEEVENTID$</literal>,
+<literal>$HOSTDISPLAYNAME$</literal>,
+<literal>$SERVICEDISPLAYNAME$</literal>,
+<literal>$MAXHOSTATTEMPTS$</literal>,
+<literal>$MAXSERVICEATTEMPTS$</literal>,
+<literal>$TOTALHOSTSERVICES$</literal>,
+<literal>$TOTALHOSTSERVICESOK$</literal>,
+<literal>$TOTALHOSTSERVICESWARNING$</literal>,
+<literal>$TOTALHOSTSERVICESUNKNOWN$</literal>,
+<literal>$TOTALHOSTSERVICESCRITICAL$</literal>,
+<literal>$CONTACTGROUPNAME$</literal>,
+<literal>$CONTACTGROUPNAMES$</literal>,
+<literal>$CONTACTGROUPALIAS$</literal>,
+<literal>$CONTACTGROUPMEMBERS$</literal>,
+<literal>$NOTIFICATIONRECIPIENTS$</literal>,
+<literal>$NOTIFICATIONISESCALATED$</literal>,
+<literal>$NOTIFICATIONAUTHOR$</literal>,
+<literal>$NOTIFICATIONAUTHORNAME$</literal>,
+<literal>$NOTIFICATIONAUTHORALIAS$</literal>,
+<literal>$NOTIFICATIONCOMMENT$</literal>,
+<literal>$EVENTSTARTTIME$</literal>, <literal>$HOSTPROBLEMID$</literal>,
+<literal>$LASTHOSTPROBLEMID$</literal>,
+<literal>$SERVICEPROBLEMID$</literal>,
+<literal>$LASTSERVICEPROBLEMID$</literal>,
+<literal>$LASTHOSSTATE$</literal>, <literal>$LASTHOSTSTATEID$</literal>,
+<literal>$LASTSERVICESTATE$</literal>,
+<literal>$LASTSERVICESTATEID$</literal>. Deux macros de temps <quote>à la demande</quote>
+ont également été ajoutées: <literal>$ISVALIDTIME:$</literal> et
+<literal>$NEXTVALIDTIME:$</literal>.</para>
  </listitem>
 
  <listitem>
  <para><emphasis role="bold">Macros supprimées</emphasis> - L'ancienne macro
-<varname>$NOTIFICATIONNUMBER$</varname> a été désapprouvée au bénéfice
-des nouvelles macros <varname>$HOSTNOTIFICATIONNUMBER$</varname> et
-<varname>$SERVICENOTIFICATIONNUMBER$</varname>.</para>
+<literal>$NOTIFICATIONNUMBER$</literal> a été désapprouvée au bénéfice
+des nouvelles macros <literal>$HOSTNOTIFICATIONNUMBER$</literal> et
+<literal>$SERVICENOTIFICATIONNUMBER$</literal>.</para>
  </listitem>
 
  <listitem>
  <para><emphasis role="bold">Modifications</emphasis> - Les macros
-<varname>$HOSTNOTES$</varname> et <varname>$SERVICENOTES$</varname>
+<literal>$HOSTNOTES$</literal> et <literal>$SERVICENOTES$</literal>
 contiennent maintenant elles-mêmes des macros, celles-ci sont:
-<varname>$HOSTNOTESURL$</varname>, <varname>$HOSTACTIONURL$</varname>,
-<varname>$SERVICENOTESURL$</varname> et
-<varname>$SERVICEACTIONURL$</varname>.</para>
+<literal>$HOSTNOTESURL$</literal>, <literal>$HOSTACTIONURL$</literal>,
+<literal>$SERVICENOTESURL$</literal> et
+<literal>$SERVICEACTIONURL$</literal>.</para>
  </listitem>
 
  <listitem>
@@ -340,14 +340,14 @@ cela. Cette fonctionnalité est maintenant accessible au commun des mortels. </p
  <para>Les notifications sont maintenant envoyées pour les hôtes/services qui
 oscillent quand la détection d'oscillations est désactivée au niveau hôte,
 service ou globalement. Dans ce cas, la macro
-<varname>$NOTIFICATIONTYPE$</varname> sera positionnée sur
+<literal>$NOTIFICATIONTYPE$</literal> sera positionnée sur
 <quote>FLAPPINGDISABLED</quote>.</para>
  </listitem>
 
  <listitem>
  <para>Les notifications peuvent maintenant être envoyées lors de l'entrée/sortie
 dans une période de maintenance planifiée et être annulées pour les hôtes et
-services. La macro <varname>$NOTIFICATIONTYPE$</varname> sera positionnée
+services. La macro <literal>$NOTIFICATIONTYPE$</literal> sera positionnée
 respectivement sur <quote>DOWNTIMESTART</quote>, <quote>DOWNTIMEEND</quote>,
 ou <quote>DOWNTIMECANCELLED</quote>. Pour recevoir des notifications sur les
 événements de maintenance planifiée, précisez <quote>s</quote> ou
@@ -543,8 +543,8 @@ grapher l'usage que fait Nagios des slots de buffer dans le temps.</para>
 contrôles d'hôtes et de services. Hourra! L'&acronym-api; a été mise à jour pour supporter plusieurs lignes tout en conservant une
 compatibilité antérieure avec les plugins plus anciens. Les lignes
 supplémentaires de message (après la première ligne) sont maintenant
-stockées dans les nouvelles macros <varname>$LONGHOSTOUTPUT$</varname> et
-<varname>$LONGSERVICEOUTPUT$</varname>.</para>
+stockées dans les nouvelles macros <literal>$LONGHOSTOUTPUT$</literal> et
+<literal>$LONGSERVICEOUTPUT$</literal>.</para>
  </listitem>
 
  <listitem>
@@ -830,22 +830,22 @@ notification</emphasis> - Un ID unique est maintenant assigné à
 chaque notification d'hôte et de service. Un autre ID unique est
 également assigné aux changements d'états d'hôtes et services. Les IDs
 uniques sont rendus accessibles par l'usage des macros suivantes :
-<varname>$HOSTNOTIFICATIONID$</varname>,
-<varname>$SERVICENOTIFICATIONID$</varname>,
-<varname>$HOSTEVENTID$</varname>, <varname>$SERVICEEVENTID$</varname>,
-<varname>$LASTHOSTEVENTID$</varname>,
-<varname>$LASTSERVICEEVENTID$</varname>.</para>
+<literal>$HOSTNOTIFICATIONID$</literal>,
+<literal>$SERVICENOTIFICATIONID$</literal>,
+<literal>$HOSTEVENTID$</literal>, <literal>$SERVICEEVENTID$</literal>,
+<literal>$LASTHOSTEVENTID$</literal>,
+<literal>$LASTSERVICEEVENTID$</literal>.</para>
  </listitem>
 
  <listitem>
  <para><emphasis role="bold">Nouvelles macros</emphasis> - Quelques autres nouvelles
 macros ont été
-ajoutées. Ceci inclut <varname>$HOSTGROUPNAMES$</varname>,
-<varname>$SERVICEGROUPNAMES$</varname>,
-<varname>$HOSTACKAUTHORNAME$</varname>,
-<varname>$HOSTACKAUTHORALIAS$</varname>,
-<varname>$SERVICEACKAUTHORNAME$</varname> et
-<varname>$SERVICEACKAUTHORALIAS$</varname>.
+ajoutées. Ceci inclut <literal>$HOSTGROUPNAMES$</literal>,
+<literal>$SERVICEGROUPNAMES$</literal>,
+<literal>$HOSTACKAUTHORNAME$</literal>,
+<literal>$HOSTACKAUTHORALIAS$</literal>,
+<literal>$SERVICEACKAUTHORNAME$</literal> et
+<literal>$SERVICEACKAUTHORALIAS$</literal>.
 	 </para>
  </listitem>
 
