@@ -154,7 +154,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostname"><literal>$HOSTNAME$</literal></link>
+									<link linkend="thebasics-macrolist-hostname">&macro-hostname;</link>
 								</para>
 							</entry>
 							<entry>
@@ -185,7 +185,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostdisplayname"><literal>$HOSTDISPLAYNAME$</literal></link>
+									<link linkend="thebasics-macrolist-hostdisplayname">&macro-hostdisplayname;</link>
 								</para>
 							</entry>
 							<entry>
@@ -216,7 +216,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostalias"><literal>$HOSTALIAS$</literal></link>
+									<link linkend="thebasics-macrolist-hostalias">&macro-hostalias;</link>
 								</para>
 							</entry>
 							<entry>
@@ -247,7 +247,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostaddress"><literal>$HOSTADDRESS$</literal></link>
+									<link linkend="thebasics-macrolist-hostaddress">&macro-hostaddress;</link>
 								</para>
 							</entry>
 							<entry>
@@ -278,7 +278,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hoststate"><literal>$HOSTSTATE$</literal></link>
+									<link linkend="thebasics-macrolist-hoststate">&macro-hoststate;</link>
 								</para>
 							</entry>
 							<entry>
@@ -310,7 +310,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hoststateid"><literal>$HOSTSTATEID$</literal></link>
+									<link linkend="thebasics-macrolist-hoststateid">&macro-hoststateid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -342,7 +342,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-lasthoststate"><literal>$LASTHOSTSTATE$</literal></link>
+									<link linkend="thebasics-macrolist-lasthoststate">&macro-lasthostate;</link>
 								</para>
 							</entry>
 							<entry>
@@ -373,7 +373,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-lasthoststateid"><literal>$LASTHOSTSTATEID$</literal></link>
+									<link linkend="thebasics-macrolist-lasthoststateid">&macro-lasthoststateid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -404,7 +404,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hoststatetype"><literal>$HOSTSTATETYPE$</literal></link>
+									<link linkend="thebasics-macrolist-hoststatetype">&macro-hoststatetype;</link>
 								</para>
 							</entry>
 							<entry>
@@ -436,7 +436,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostattempt"><literal>$HOSTATTEMPT$</literal></link>
+									<link linkend="thebasics-macrolist-hostattempt">&macro-hostattempt;</link>
 								</para>
 							</entry>
 							<entry>
@@ -467,7 +467,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-maxhostattempts"><literal>$MAXHOSTATTEMPTS$</literal></link>
+									<link linkend="thebasics-macrolist-maxhostattempt">&macro-maxhostattempt;</link>
 								</para>
 							</entry>
 							<entry>
@@ -498,7 +498,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hosteventid"><literal>$HOSTEVENTID$</literal></link>
+									<link linkend="thebasics-macrolist-hosteventid">&macro-hosteventid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -529,7 +529,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-lasthosteventid"><literal>$LASTHOSTEVENTID$</literal></link>
+									<link linkend="thebasics-macrolist-lasthosteventid">&macro-lasthosteventid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -560,7 +560,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostproblemid"><literal>$HOSTPROBLEMID$</literal></link>
+									<link linkend="thebasics-macrolist-hostproblemid">&macro-hostproblemid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -592,7 +592,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-lasthostproblemid"><literal>$LASTHOSTPROBLEMID$</literal></link>
+linkend="thebasics-macrolist-lasthostproblemid">&macro-lasthostproblemid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -623,7 +623,7 @@ linkend="thebasics-macrolist-lasthostproblemid"><literal>$LASTHOSTPROBLEMID$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostlatency"><literal>$HOSTLATENCY$</literal></link>
+									<link linkend="thebasics-macrolist-hostlatency">&macro-hostlatency;</link>
 								</para>
 							</entry>
 							<entry>
@@ -655,7 +655,7 @@ linkend="thebasics-macrolist-lasthostproblemid"><literal>$LASTHOSTPROBLEMID$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostexecutiontime"><literal>$HOSTEXECUTIONTIME$</literal></link>
+linkend="thebasics-macrolist-hostexecutiontime">&macro-hostexecutiontime;</link>
 								</para>
 							</entry>
 							<entry>
@@ -687,7 +687,7 @@ linkend="thebasics-macrolist-hostexecutiontime"><literal>$HOSTEXECUTIONTIME$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostduration"><literal>$HOSTDURATION$</literal></link>
+									<link linkend="thebasics-macrolist-hostduration">&macro-hostduration;</link>
 								</para>
 							</entry>
 							<entry>
@@ -718,7 +718,7 @@ linkend="thebasics-macrolist-hostexecutiontime"><literal>$HOSTEXECUTIONTIME$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostdurationsec"><literal>$HOSTDURATIONSEC$</literal></link>
+									<link linkend="thebasics-macrolist-hostdurationsec">&macro-hostdurationsec;</link>
 								</para>
 							</entry>
 							<entry>
@@ -749,132 +749,7 @@ linkend="thebasics-macrolist-hostexecutiontime"><literal>$HOSTEXECUTIONTIME$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostdowntime"><literal>$HOSTDOWNTIME$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-hostpercentchange"><literal>$HOSTPERCENTCHANGE$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-hostgroupname"><literal>$HOSTGROUPNAME$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-hostgroupnames"><literal>$HOSTGROUPNAMES$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-lasthostcheck"><literal>$LASTHOSTCHECK$</literal></link>
+									<link linkend="thebasics-macrolist-hostdowntime">&macro-hostdowntime;</link>
 								</para>
 							</entry>
 							<entry>
@@ -906,7 +781,7 @@ linkend="thebasics-macrolist-hostpercentchange"><literal>$HOSTPERCENTCHANGE$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-lasthoststatechange"><literal>$LASTHOSTSTATECHANGE$</literal></link>
+linkend="thebasics-macrolist-hostpercentchange">&macro-hostpercentchange;</link>
 								</para>
 							</entry>
 							<entry>
@@ -937,7 +812,7 @@ linkend="thebasics-macrolist-lasthoststatechange"><literal>$LASTHOSTSTATECHANGE$
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-lasthostup"><literal>$LASTHOSTUP$</literal></link>
+									<link linkend="thebasics-macrolist-hostgroupname">&macro-hostgroupname;</link>
 								</para>
 							</entry>
 							<entry>
@@ -968,7 +843,38 @@ linkend="thebasics-macrolist-lasthoststatechange"><literal>$LASTHOSTSTATECHANGE$
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-lasthostdown"><literal>$LASTHOSTDOWN$</literal></link>
+									<link linkend="thebasics-macrolist-hostgroupnames">&macro-hostgroupnames;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-lasthostcheck">&macro-lasthostcheck;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1000,7 +906,38 @@ linkend="thebasics-macrolist-lasthoststatechange"><literal>$LASTHOSTSTATECHANGE$
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-lasthostunreachable"><literal>$LASTHOSTUNREACHABLE$</literal></link>
+linkend="thebasics-macrolist-lasthoststatechange">&macro-lasthoststatechange;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>                     
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-lasthostup">&macro-lasthostup;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1031,7 +968,70 @@ linkend="thebasics-macrolist-lasthostunreachable"><literal>$LASTHOSTUNREACHABLE$
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostoutput"><literal>$HOSTOUTPUT$</literal></link>
+									<link linkend="thebasics-macrolist-lasthostdown">&macro-lasthostdown;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lasthostunreachable">&macro-lasthostunreachable;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-hostoutput">&macro-hostoutput;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1063,7 +1063,7 @@ linkend="thebasics-macrolist-lasthostunreachable"><literal>$LASTHOSTUNREACHABLE$
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-longhostoutput"><literal>$LONGHOSTOUTPUT$</literal></link>
+									<link linkend="thebasics-macrolist-longhostoutput">&macro-longhostoutput;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1095,7 +1095,7 @@ linkend="thebasics-macrolist-lasthostunreachable"><literal>$LASTHOSTUNREACHABLE$
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostperfdata"><literal>$HOSTPERFDATA$</literal></link>
+									<link linkend="thebasics-macrolist-hostperfdata">&macro-hostperfdata;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1128,7 +1128,7 @@ linkend="thebasics-macrolist-lasthostunreachable"><literal>$LASTHOSTUNREACHABLE$
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostcheckcommand"><literal>$HOSTCHECKCOMMAND$</literal></link>
+linkend="thebasics-macrolist-hostcheckcommand">&macro-hostcheckcommand;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1159,7 +1159,7 @@ linkend="thebasics-macrolist-hostcheckcommand"><literal>$HOSTCHECKCOMMAND$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostackauthor"><literal>$HOSTACKAUTHOR$</literal></link>
+									<link linkend="thebasics-macrolist-hostackauthor">&macro-hostackauthor;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -1192,7 +1192,7 @@ linkend="thebasics-macrolist-hostcheckcommand"><literal>$HOSTCHECKCOMMAND$</lite
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostackauthorname"><literal>$HOSTACKAUTHORNAME$</literal></link>
+linkend="thebasics-macrolist-hostackauthorname">&macro-hostackauthorname;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -1225,7 +1225,7 @@ linkend="thebasics-macrolist-hostackauthorname"><literal>$HOSTACKAUTHORNAME$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostackauthoralias"><literal>$HOSTACKAUTHORALIAS$</literal></link>
+linkend="thebasics-macrolist-hostackauthoralias">&macro-hostackauthoralias;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -1257,7 +1257,7 @@ linkend="thebasics-macrolist-hostackauthoralias"><literal>$HOSTACKAUTHORALIAS$</
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostackcomment"><literal>$HOSTACKCOMMENT$</literal></link>
+									<link linkend="thebasics-macrolist-hostackcomment">&macro-hostackcomment;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -1289,7 +1289,7 @@ linkend="thebasics-macrolist-hostackauthoralias"><literal>$HOSTACKAUTHORALIAS$</
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostactionurl"><literal>$HOSTACTIONURL$</literal></link>
+									<link linkend="thebasics-macrolist-hostactionurl">&macro-hostactionurl;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1320,7 +1320,7 @@ linkend="thebasics-macrolist-hostackauthoralias"><literal>$HOSTACKAUTHORALIAS$</
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostnotesurl"><literal>$HOSTNOTESURL$</literal></link>
+									<link linkend="thebasics-macrolist-hostnotesurl">&macro-hostnotesurl;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1351,39 +1351,7 @@ linkend="thebasics-macrolist-hostackauthoralias"><literal>$HOSTACKAUTHORALIAS$</
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostnotes"><literal>$HOSTNOTES$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-totalhostservices"><literal>$TOTALHOSTSERVICES$</literal></link>
+									<link linkend="thebasics-macrolist-hostnotes">&macro-hostnotes;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1415,7 +1383,7 @@ linkend="thebasics-macrolist-totalhostservices"><literal>$TOTALHOSTSERVICES$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostservicesok"><literal>$TOTALHOSTSERVICESOK$</literal></link>
+linkend="thebasics-macrolist-totalhostservices">&macro-totalhostservices;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1447,7 +1415,7 @@ linkend="thebasics-macrolist-totalhostservicesok"><literal>$TOTALHOSTSERVICESOK$
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostserviceswarning"><literal>$TOTALHOSTSERVICESWARNING$</literal></link>
+linkend="thebasics-macrolist-totalhostservicesok">&macro-totalhostservicesok;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1479,7 +1447,7 @@ linkend="thebasics-macrolist-totalhostserviceswarning"><literal>$TOTALHOSTSERVIC
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostservicesunknown"><literal>$TOTALHOSTSERVICESUNKNOWN$</literal></link>
+linkend="thebasics-macrolist-totalhostserviceswarning">&macro-totalhostserviceswarning;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1511,7 +1479,39 @@ linkend="thebasics-macrolist-totalhostservicesunknown"><literal>$TOTALHOSTSERVIC
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostservicescritical"><literal>$TOTALHOSTSERVICESCRITICAL$</literal></link>
+linkend="thebasics-macrolist-totalhostservicesunknown">&macro-totalhostservicesunknown;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-totalhostservicescritical">&macro-totalhostservicescritical;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1585,7 +1585,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostgroupalias"><literal>$HOSTGROUPALIAS$</literal></link>
+									<link linkend="thebasics-macrolist-hostgroupalias">&macro-hostgroupalias;></link>
 <link linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -1618,7 +1618,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostgroupmembers"><literal>$HOSTGROUPMEMBERS$</literal></link>
+linkend="thebasics-macrolist-hostgroupmembers">&macro-hostgroupmembers;</link>
 <link linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -1650,40 +1650,7 @@ linkend="thebasics-macrolist-hostgroupmembers"><literal>$HOSTGROUPMEMBERS$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-hostgroupnotes"><literal>$HOSTGROUPNOTES$</literal></link>
-<link linkend="thebasics-macrolist-note5">5</link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-hostgroupnotesurl"><literal>$HOSTGROUPNOTESURL$</literal></link>
+									<link linkend="thebasics-macrolist-hostgroupnotes">&macro-hostgroupnotes;</link>
 <link linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -1716,7 +1683,40 @@ linkend="thebasics-macrolist-hostgroupnotesurl"><literal>$HOSTGROUPNOTESURL$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostgroupactionurl"><literal>$HOSTGROUPACTIONURL$</literal></link>
+linkend="thebasics-macrolist-hostgroupnotesurl">&macro-hostgroupnotesurl;></link>
+<link linkend="thebasics-macrolist-note5">5</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-hostgroupactionurl">&macro-hostgroupactionurl;</link>
 <link linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -1791,7 +1791,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-servicedesc"><literal>$SERVICEDESC$</literal></link>
+									<link linkend="thebasics-macrolist-servicedesc">&macro-servicedesc;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1823,7 +1823,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicedisplayname"><literal>$SERVICEDISPLAYNAME$</literal></link>
+linkend="thebasics-macrolist-servicedisplayname">&macro-servicedisplayname;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1854,7 +1854,7 @@ linkend="thebasics-macrolist-servicedisplayname"><literal>$SERVICEDISPLAYNAME$</
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-servicestate"><literal>$SERVICESTATE$</literal></link>
+									<link linkend="thebasics-macrolist-servicestate">&macro-servicestate;</link>
 								</para>
 							</entry>
 							<entry>
@@ -1886,802 +1886,7 @@ linkend="thebasics-macrolist-servicedisplayname"><literal>$SERVICEDISPLAYNAME$</
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-servicestateid"><literal>$SERVICESTATEID$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui <link linkend="thebasics-macrolist-note2">2</link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastservicestate"><literal>$LASTSERVICESTATE$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastservicestateid"><literal>$LASTSERVICESTATEID$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-servicestatetype"><literal>$SERVICESTATETYPE$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-serviceattempt"><literal>$SERVICEATTEMPT$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-maxserviceattempts"><literal>$MAXSERVICEATTEMPTS$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-serviceisvolatile"><literal>$SERVICEISVOLATILE$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-serviceeventid"><literal>$SERVICEEVENTID$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastserviceeventid"><literal>$LASTSERVICEEVENTID$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-serviceproblemid"><literal>$SERVICEPROBLEMID$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastserviceproblemid"><literal>$LASTSERVICEPROBLEMID$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-servicelatency"><literal>$SERVICELATENCY$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-serviceexecutiontime"><literal>$SERVICEEXECUTIONTIME$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui <link linkend="thebasics-macrolist-note2">2</link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-serviceduration"><literal>$SERVICEDURATION$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-servicedurationsec"><literal>$SERVICEDURATIONSEC$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-servicedowntime"><literal>$SERVICEDOWNTIME$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-servicepercentchange"><literal>$SERVICEPERCENTCHANGE$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-servicegroupname"><literal>$SERVICEGROUPNAME$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-servicegroupnames"><literal>$SERVICEGROUPNAMES$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastservicecheck"><literal>$LASTSERVICECHECK$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastservicestatechange"><literal>$LASTSERVICESTATECHANGE$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-lastserviceok"><literal>$LASTSERVICEOK$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastservicewarning"><literal>$LASTSERVICEWARNING$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastserviceunknown"><literal>$LASTSERVICEUNKNOWN$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-lastservicecritical"><literal>$LASTSERVICECRITICAL$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Non</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link linkend="thebasics-macrolist-serviceoutput"><literal>$SERVICEOUTPUT$</literal></link>
+									<link linkend="thebasics-macrolist-servicestateid">&macro-servicestateid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -2714,7 +1919,356 @@ linkend="thebasics-macrolist-lastservicecritical"><literal>$LASTSERVICECRITICAL$
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</literal></link>
+linkend="thebasics-macrolist-lastservicestate">&macro-lastservicestate;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastservicestateid">&macro-lastservicestateid;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-servicestatetype">&macro-servicestatetype;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-serviceattempt">&macro-serviceattempt;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-maxserviceattempts">&macro-maxserviceattempts;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-serviceisvolatile">&macro-serviceisvolatile;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-serviceeventid">&macro-serviceeventid;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastserviceeventid">&macro-lastserviceeventid;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-serviceproblemid">&macro-serviceproblemid;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastserviceproblemid">&macro-lastserviceproblemid;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-servicelatency">&macro-servicelatency;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-serviceexecutiontime">&macro-serviceexecutiontime;</link>
 								</para>
 							</entry>
 							<entry>
@@ -2746,7 +2300,388 @@ linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link>
+									<link linkend="thebasics-macrolist-serviceduration">&macro-serviceduration;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-servicedurationsec">&macro-servicedurationsec;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-servicedowntime">&macro-servicedowntime;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-servicepercentchange">&macro-servicepercentchange;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-servicegroupname">&macro-servicegroupname;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-servicegroupnames">&macro-servicegroupnames;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastservicecheck">&macro-lastservicecheck;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastservicestatechange">&macro-lastservicestatechange;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-lastserviceok">&macro-lastserviceok;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastservicewarning">&macro-lastservicewarning;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastserviceunknown">&macro-lastserviceunknown;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-lastservicecritical">&macro-lastservicecritical;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
 								</para>
 							</entry>
 							<entry>
@@ -2779,7 +2714,72 @@ linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicecheckcommand"><literal>$SERVICECHECKCOMMAND$</literal></link>
+linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui <link linkend="thebasics-macrolist-note2">2</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui <link linkend="thebasics-macrolist-note2">2</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Non</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-servicecheckcommand">&macro-servicecheckcommand;</link>
 								</para>
 							</entry>
 							<entry>
@@ -2811,7 +2811,7 @@ linkend="thebasics-macrolist-servicecheckcommand"><literal>$SERVICECHECKCOMMAND$
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-serviceackauthor"><literal>$SERVICEACKAUTHOR$</literal></link>
+linkend="thebasics-macrolist-serviceackauthor">&macro-serviceackauthor;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -2844,7 +2844,7 @@ linkend="thebasics-macrolist-serviceackauthor"><literal>$SERVICEACKAUTHOR$</lite
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-serviceackauthorname"><literal>$SERVICEACKAUTHORNAME$</literal></link>
+linkend="thebasics-macrolist-serviceackauthorname">&macro-serviceackauthorname;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -2877,7 +2877,7 @@ linkend="thebasics-macrolist-serviceackauthorname"><literal>$SERVICEACKAUTHORNAM
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-serviceackauthoralias"><literal>$SERVICEACKAUTHORALIAS$</literal></link>
+linkend="thebasics-macrolist-serviceackauthoralias">&macro-serviceackauthoralias;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -2910,7 +2910,7 @@ linkend="thebasics-macrolist-serviceackauthoralias"><literal>$SERVICEACKAUTHORAL
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-serviceackcomment"><literal>$SERVICEACKCOMMENT$</literal></link>
+linkend="thebasics-macrolist-serviceackcomment">&macro-serviceackcomment;</link>
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
@@ -2943,7 +2943,7 @@ linkend="thebasics-macrolist-serviceackcomment"><literal>$SERVICEACKCOMMENT$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-serviceactionurl"><literal>$SERVICEACTIONURL$</literal></link>
+linkend="thebasics-macrolist-serviceactionurl">&macro-serviceactionurl;</link>
 								</para>
 							</entry>
 							<entry>
@@ -2974,7 +2974,7 @@ linkend="thebasics-macrolist-serviceactionurl"><literal>$SERVICEACTIONURL$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-servicenotesurl"><literal>$SERVICENOTESURL$</literal></link>
+									<link linkend="thebasics-macrolist-servicenotesurl">&macro-servicenotesurl;</link>
 								</para>
 							</entry>
 							<entry>
@@ -3005,7 +3005,7 @@ linkend="thebasics-macrolist-serviceactionurl"><literal>$SERVICEACTIONURL$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-servicenotes"><literal>$SERVICENOTES$</literal></link>
+									<link linkend="thebasics-macrolist-servicenotes">&macro-servicenotes;</link>
 								</para>
 							</entry>
 							<entry>
@@ -3080,7 +3080,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicegroupalias"><literal>$SERVICEGROUPALIAS$</literal></link>
+linkend="thebasics-macrolist-servicegroupalias">&macro-servicegroupalias;</link>
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -3113,7 +3113,7 @@ linkend="thebasics-macrolist-servicegroupalias"><literal>$SERVICEGROUPALIAS$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicegroupmembers"><literal>$SERVICEGROUPMEMBERS$</literal></link>
+linkend="thebasics-macrolist-servicegroupmembers">&macro-servicegroupmembers;</link>
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -3146,7 +3146,7 @@ linkend="thebasics-macrolist-servicegroupmembers"><literal>$SERVICEGROUPMEMBERS$
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicegroupnotes"><literal>$SERVICEGROUPNOTES$</literal></link>
+linkend="thebasics-macrolist-servicegroupnotes">&macro-servicegroupnotes;</link>
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -3179,7 +3179,7 @@ linkend="thebasics-macrolist-servicegroupnotes"><literal>$SERVICEGROUPNOTES$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicegroupnotesurl"><literal>$SERVICEGROUPNOTESURL$</literal></link>
+linkend="thebasics-macrolist-servicegroupnotesurl">&macro-servicegroupnotesurl;</link>
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -3212,7 +3212,7 @@ linkend="thebasics-macrolist-servicegroupnotesurl"><literal>$SERVICEGROUPNOTESUR
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicegroupactionurl"><literal>$SERVICEGROUPACTIONURL$</literal></link>
+linkend="thebasics-macrolist-servicegroupactionurl">&macro-servicegroupactionurl;</link>
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -3287,7 +3287,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-contactname"><literal>$CONTACTNAME$</literal></link>
+									<link linkend="thebasics-macrolist-contactname">&macro-contactname;</link>
 								</para>
 							</entry>
 							<entry>
@@ -3318,7 +3318,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-contactalias"><literal>$CONTACTALIAS$</literal></link>
+									<link linkend="thebasics-macrolist-contactalias">&macro-contactalias;</link>
 								</para>
 							</entry>
 							<entry>
@@ -3349,7 +3349,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-contactemail"><literal>$CONTACTEMAIL$</literal></link>
+									<link linkend="thebasics-macrolist-contactemail">&macro-contactemail;</link>
 								</para>
 							</entry>
 							<entry>
@@ -3380,7 +3380,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-contactpager"><literal>$CONTACTPAGER$</literal></link>
+									<link linkend="thebasics-macrolist-contactpager">&macro-contactpager;</link>
 								</para>
 							</entry>
 							<entry>
@@ -3486,7 +3486,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-contactgroupalias"><literal>$CONTACTGROUPALIAS$</literal></link>
+linkend="thebasics-macrolist-contactgroupalias">&macro-contactgroupalias;</link>
 <link linkend="thebasics-macrolist-note7">7</link>
 								</para>
 							</entry>
@@ -3519,7 +3519,7 @@ linkend="thebasics-macrolist-contactgroupalias"><literal>$CONTACTGROUPALIAS$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-contactgroupmembers"><literal>$CONTACTGROUPMEMBERS$</literal></link>
+linkend="thebasics-macrolist-contactgroupmembers">&macro-contactgroupmembers;</link>
 <link linkend="thebasics-macrolist-note7">7</link>
 								</para>
 							</entry>
@@ -3595,7 +3595,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-totalhostsup"><literal>$TOTALHOSTSUP$</literal></link> <link
+									<link linkend="thebasics-macrolist-totalhostsup">&macro-totalhostsup;</link> <link
 linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3629,7 +3629,7 @@ linkend="thebasics-macrolist-note10">10</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-totalhostsdown"><literal>$TOTALHOSTSDOWN$</literal></link>
+									<link linkend="thebasics-macrolist-totalhostsdown">&macro-totalhostsdown;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3664,7 +3664,7 @@ linkend="thebasics-macrolist-note10">10</link>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostsunreachable"><literal>$TOTALHOSTSUNREACHABLE$</literal></link>
+linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3699,7 +3699,7 @@ linkend="thebasics-macrolist-totalhostsunreachable"><literal>$TOTALHOSTSUNREACHA
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostsdownunhandled"><literal>$TOTALHOSTSDOWNUNHANDLED$</literal></link>
+linkend="thebasics-macrolist-totalhostsdownunhandled">&macro-totalhostsdownunhandled;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3734,7 +3734,7 @@ linkend="thebasics-macrolist-totalhostsdownunhandled"><literal>$TOTALHOSTSDOWNUN
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostsunreachableunhandled"><literal>$TOTALHOSTSUNREACHABLEUNHANDLED$</literal></link>
+linkend="thebasics-macrolist-totalhostsunreachableunhandled">&macro-totalhostsunreachableunhandled;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3769,7 +3769,7 @@ linkend="thebasics-macrolist-totalhostsunreachableunhandled"><literal>$TOTALHOST
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostproblems"><literal>$TOTALHOSTPROBLEMS$</literal></link>
+linkend="thebasics-macrolist-totalhostproblems">&macro-totalhostproblems;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3802,7 +3802,7 @@ linkend="thebasics-macrolist-totalhostproblems"><literal>$TOTALHOSTPROBLEMS$</li
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalhostproblemsunhandled"><literal>$TOTALHOSTPROBLEMSUNHANDLED$</literal></link>
+linkend="thebasics-macrolist-totalhostproblemsunhandled">&macro-totalhostproblemsunhandled;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3834,40 +3834,7 @@ linkend="thebasics-macrolist-totalhostproblemsunhandled"><literal>$TOTALHOSTPROB
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-totalservicesok"><literal>$TOTALSERVICESOK$</literal></link>
-<link linkend="thebasics-macrolist-note10">10</link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui <link linkend="thebasics-macrolist-note4">4</link></para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui <link linkend="thebasics-macrolist-note4">4</link></para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-totalserviceswarning"><literal>$TOTALSERVICESWARNING$</literal></link>
+									<link linkend="thebasics-macrolist-totalservicesok">&macro-totalservicesok;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3900,7 +3867,7 @@ linkend="thebasics-macrolist-totalserviceswarning"><literal>$TOTALSERVICESWARNIN
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalservicescritical"><literal>$TOTALSERVICESCRITICAL$</literal></link>
+linkend="thebasics-macrolist-totalserviceswarning">&macro-totalserviceswarning;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3933,7 +3900,7 @@ linkend="thebasics-macrolist-totalservicescritical"><literal>$TOTALSERVICESCRITI
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalservicesunknown"><literal>$TOTALSERVICESUNKNOWN$</literal></link>
+linkend="thebasics-macrolist-totalservicescritical">&macro-totalservicescritical;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3966,7 +3933,7 @@ linkend="thebasics-macrolist-totalservicesunknown"><literal>$TOTALSERVICESUNKNOW
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalserviceswarningunhandled"><literal>$TOTALSERVICESWARNINGUNHANDLED$</literal></link>
+linkend="thebasics-macrolist-totalservicesunknown">&macro-totalservicesunknown;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -3999,7 +3966,7 @@ linkend="thebasics-macrolist-totalserviceswarningunhandled"><literal>$TOTALSERVI
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalservicescriticalunhandled"><literal>$TOTALSERVICESCRITICALUNHANDLED$</literal></link>
+linkend="thebasics-macrolist-totalserviceswarningunhandled">&macro-totalserviceswarningunhandled;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -4032,7 +3999,7 @@ linkend="thebasics-macrolist-totalservicescriticalunhandled"><literal>$TOTALSERV
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalservicesunknownunhandled"><literal>$TOTALSERVICESUNKNOWNUNHANDLED$</literal></link>
+linkend="thebasics-macrolist-totalservicescriticalunhandled">&macro-totalservicescriticalunhandled;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -4065,7 +4032,7 @@ linkend="thebasics-macrolist-totalservicesunknownunhandled"><literal>$TOTALSERVI
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalserviceproblems"><literal>$TOTALSERVICEPROBLEMS$</literal></link>
+linkend="thebasics-macrolist-totalservicesunknownunhandled">&macro-totalservicesunknownunhandled;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -4098,7 +4065,40 @@ linkend="thebasics-macrolist-totalserviceproblems"><literal>$TOTALSERVICEPROBLEM
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-totalserviceproblemsunhandled"><literal>$TOTALSERVICEPROBLEMSUNHANDLED$</literal></link>
+linkend="thebasics-macrolist-totalserviceproblems">&macro-totalserviceproblems;</link>
+<link linkend="thebasics-macrolist-note10">10</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui <link linkend="thebasics-macrolist-note4">4</link></para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui <link linkend="thebasics-macrolist-note4">4</link></para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-totalserviceproblemsunhandled">&macro-totalserviceproblemsunhandled;</link>
 <link linkend="thebasics-macrolist-note10">10</link>
 								</para>
 							</entry>
@@ -4172,7 +4172,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-notificationtype"><literal>$NOTIFICATIONTYPE$</literal></link>
+linkend="thebasics-macrolist-notificationtype">&macro-notificationtype;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4204,7 +4204,7 @@ linkend="thebasics-macrolist-notificationtype"><literal>$NOTIFICATIONTYPE$</lite
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-notificationrecipients"><literal>$NOTIFICATIONRECIPIENTS$</literal></link>
+linkend="thebasics-macrolist-notificationrecipients">&macro-notificationrecipients;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4236,7 +4236,7 @@ linkend="thebasics-macrolist-notificationrecipients"><literal>$NOTIFICATIONRECIP
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-notificationisescalated"><literal>$NOTIFICATIONISESCALATED$</literal></link>
+linkend="thebasics-macrolist-notificationisescalated">&macro-notificationisescalated;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4268,7 +4268,7 @@ linkend="thebasics-macrolist-notificationisescalated"><literal>$NOTIFICATIONISES
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-notificationauthor"><literal>$NOTIFICATIONAUTHOR$</literal></link>
+linkend="thebasics-macrolist-notificationauthor">&macro-notificationauthor;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4300,7 +4300,7 @@ linkend="thebasics-macrolist-notificationauthor"><literal>$NOTIFICATIONAUTHOR$</
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-notificationauthorname"><literal>$NOTIFICATIONAUTHORNAME$</literal></link>
+linkend="thebasics-macrolist-notificationauthorname">&macro-notificationauthorname;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4332,7 +4332,7 @@ linkend="thebasics-macrolist-notificationauthorname"><literal>$NOTIFICATIONAUTHO
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-notificationauthoralias"><literal>$NOTIFICATIONAUTHORALIAS$</literal></link>
+linkend="thebasics-macrolist-notificationauthoralias">&macro-notificationauthoralias;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4364,7 +4364,7 @@ linkend="thebasics-macrolist-notificationauthoralias"><literal>$NOTIFICATIONAUTH
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-notificationcomment"><literal>$NOTIFICATIONCOMMENT$</literal></link>
+linkend="thebasics-macrolist-notificationcomment">&macro-notificationcomment;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4396,7 +4396,7 @@ linkend="thebasics-macrolist-notificationcomment"><literal>$NOTIFICATIONCOMMENT$
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostnotificationnumber"><literal>$HOSTNOTIFICATIONNUMBER$</literal></link>
+linkend="thebasics-macrolist-hostnotificationnumber">&macro-hostnotificationnumber;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4428,7 +4428,7 @@ linkend="thebasics-macrolist-hostnotificationnumber"><literal>$HOSTNOTIFICATIONN
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-hostnotificationid"><literal>$HOSTNOTIFICATIONID$</literal></link>
+linkend="thebasics-macrolist-hostnotificationid">&macro-hostnotificationid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4460,7 +4460,7 @@ linkend="thebasics-macrolist-hostnotificationid"><literal>$HOSTNOTIFICATIONID$</
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicenotificationnumber"><literal>$SERVICENOTIFICATIONNUMBER$</literal></link>
+linkend="thebasics-macrolist-servicenotificationnumber">&macro-servicenotificationnumber;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4492,7 +4492,7 @@ linkend="thebasics-macrolist-servicenotificationnumber"><literal>$SERVICENOTIFIC
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-servicenotificationid"><literal>$SERVICENOTIFICATIONID$</literal></link>
+linkend="thebasics-macrolist-servicenotificationid">&macro-servicenotificationid;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4564,7 +4564,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-longdatetime"><literal>$LONGDATETIME$</literal></link>
+									<link linkend="thebasics-macrolist-longdatetime">&macro-longdatetime;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4595,7 +4595,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-shortdatetime"><literal>$SHORTDATETIME$</literal></link>
+									<link linkend="thebasics-macrolist-shortdatetime">&macro-shortdatetime;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4626,7 +4626,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-date"><literal>$DATE$</literal></link>
+									<link linkend="thebasics-macrolist-date">&macro-date;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4657,7 +4657,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-time"><literal>$TIME$</literal></link>
+									<link linkend="thebasics-macrolist-time">&macro-time;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4688,7 +4688,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-timet"><literal>$TIMET$</literal></link>
+									<link linkend="thebasics-macrolist-timet">&macro-timet;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4824,7 +4824,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-mainconfigfile"><literal>$MAINCONFIGFILE$</literal></link>
+									<link linkend="thebasics-macrolist-mainconfigfile">&macro-mainconfigfile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4855,7 +4855,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-statusdatafile"><literal>$STATUSDATAFILE$</literal></link>
+									<link linkend="thebasics-macrolist-statusdatafile">&macro-statusdatafile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4886,7 +4886,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-commentdatafile"><literal>$COMMENTDATAFILE$</literal></link>
+									<link linkend="thebasics-macrolist-commentdatafile">&macro-commentdatafile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4918,7 +4918,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-downtimedatafile"><literal>$DOWNTIMEDATAFILE$</literal></link>
+linkend="thebasics-macrolist-downtimedatafile">&macro-downtimedatafile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4950,7 +4950,7 @@ linkend="thebasics-macrolist-downtimedatafile"><literal>$DOWNTIMEDATAFILE$</lite
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-retentiondatafile"><literal>$RETENTIONDATAFILE$</literal></link>
+linkend="thebasics-macrolist-retentiondatafile">&macro-retentiondatafile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4981,7 +4981,7 @@ linkend="thebasics-macrolist-retentiondatafile"><literal>$RETENTIONDATAFILE$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-objectcachefile"><literal>$OBJECTCACHEFILE$</literal></link>
+									<link linkend="thebasics-macrolist-objectcachefile">&macro-objectcachefile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5012,7 +5012,7 @@ linkend="thebasics-macrolist-retentiondatafile"><literal>$RETENTIONDATAFILE$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-tempfile"><literal>$TEMPFILE$</literal></link>
+									<link linkend="thebasics-macrolist-tempfile">&macro-tempfile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5043,7 +5043,7 @@ linkend="thebasics-macrolist-retentiondatafile"><literal>$RETENTIONDATAFILE$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-temppath"><literal>$TEMPPATH$</literal></link>
+									<link linkend="thebasics-macrolist-temppath">&macro-temppath;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5074,7 +5074,7 @@ linkend="thebasics-macrolist-retentiondatafile"><literal>$RETENTIONDATAFILE$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-logfile"><literal>$LOGFILE$</literal></link>
+									<link linkend="thebasics-macrolist-logfile">&macro-logfile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5105,7 +5105,7 @@ linkend="thebasics-macrolist-retentiondatafile"><literal>$RETENTIONDATAFILE$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-resourcefile"><literal>$RESOURCEFILE$</literal></link>
+									<link linkend="thebasics-macrolist-resourcefile">&macro-resourcefile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5136,39 +5136,7 @@ linkend="thebasics-macrolist-retentiondatafile"><literal>$RETENTIONDATAFILE$</li
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-commandfile"><literal>$COMMANDFILE$</literal></link>
-								</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-							<entry>
-								<para>Oui</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>
-									<link
-linkend="thebasics-macrolist-hostperfdatafile"><literal>$HOSTPERFDATAFILE$</literal></link>
+									<link linkend="thebasics-macrolist-commandfile">&macro-commandfile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5200,7 +5168,39 @@ linkend="thebasics-macrolist-hostperfdatafile"><literal>$HOSTPERFDATAFILE$</lite
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-serviceperfdatafile"><literal>$SERVICEPERFDATAFILE$</literal></link>
+linkend="thebasics-macrolist-hostperfdatafile">&macro-hostperfdatafile;</link>
+								</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+							<entry>
+								<para>Oui</para>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<para>
+									<link
+linkend="thebasics-macrolist-serviceperfdatafile">&macro-serviceperfdatafile;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5273,7 +5273,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 							<entry>
 								<para>
 									<link
-linkend="thebasics-macrolist-processstarttime"><literal>$PROCESSSTARTTIME$</literal></link>
+linkend="thebasics-macrolist-processstarttime">&macro-processstarttime;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5304,7 +5304,7 @@ linkend="thebasics-macrolist-processstarttime"><literal>$PROCESSSTARTTIME$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-eventstarttime"><literal>$EVENTSTARTTIME$</literal></link>
+									<link linkend="thebasics-macrolist-eventstarttime">&macro-eventstarttime;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5335,7 +5335,7 @@ linkend="thebasics-macrolist-processstarttime"><literal>$PROCESSSTARTTIME$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-adminemail"><literal>$ADMINEMAIL$</literal></link>
+									<link linkend="thebasics-macrolist-adminemail">&macro-adminemail;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5366,7 +5366,7 @@ linkend="thebasics-macrolist-processstarttime"><literal>$PROCESSSTARTTIME$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-adminpager"><literal>$ADMINPAGER$</literal></link>
+									<link linkend="thebasics-macrolist-adminpager">&macro-adminpager;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5428,7 +5428,7 @@ linkend="thebasics-macrolist-processstarttime"><literal>$PROCESSSTARTTIME$</lite
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-user"><literal>$USERn$</literal></link>
+									<link linkend="thebasics-macrolist-usern">&macro-usern;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5477,7 +5477,7 @@ linkend="thebasics-macrolist-processstarttime"><literal>$PROCESSSTARTTIME$</lite
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostname"/><literal>$HOSTNAME$</literal></para>
+									<anchor id="thebasics-macrolist-hostname"/>&macro-hostname;</para>
 							</entry>
 							<entry>
 								<para>Nom court de l'hôte (par exemple <quote>biglinuxbox</quote>). Cette valeur
@@ -5489,7 +5489,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostdisplayname"/><literal>$HOSTDISPLAYNAME$</literal></para>
+									<anchor id="thebasics-macrolist-hostdisplayname"/>&macro-hostdisplayname;</para>
 							</entry>
 							<entry>
 								<para>Nom d'hôte utilisé pour l'affichage. Cette valeur provient du paramètre
@@ -5501,7 +5501,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostalias"/><literal>$HOSTALIAS$</literal></para>
+									<anchor id="thebasics-macrolist-hostalias"/>&macro-hostalias;</para>
 							</entry>
 							<entry>
 								<para>Nom long/description de l'hôte. Cette valeur provient du paramètre alias de
@@ -5512,7 +5512,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostaddress"/><literal>$HOSTADDRESS$</literal></para>
+									<anchor id="thebasics-macrolist-hostaddress"/>&macro-hostaddress;</para>
 							</entry>
 							<entry>
 								<para>Adresse de l'hôte. Cette valeur provient du paramètre address de la <link
@@ -5523,7 +5523,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hoststate"/><literal>$HOSTSTATE$</literal></para>
+									<anchor id="thebasics-macrolist-hoststate"/>&macro-hoststate;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne représentant l'état actuel de l'hôte (<quote>UP</quote>,
@@ -5533,7 +5533,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hoststateid"/><literal>$HOSTSTATEID$</literal></para>
+									<anchor id="thebasics-macrolist-hoststateid"/>&macro-hoststateid;</para>
 							</entry>
 							<entry>
 								<para>Un nombre correspondant à l'état actuel de l'hôte : 0=UP, 1=DOWN,
@@ -5543,7 +5543,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthoststate"/><literal>$LASTHOSTSTATE$</literal></para>
+									<anchor id="thebasics-macrolist-lasthoststate"/>&macro-lasthostate;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne représentant le dernier état de l'hôte (<quote>UP</quote>,
@@ -5553,7 +5553,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthoststateid"/><literal>$LASTHOSTSTATEID$</literal></para>
+									<anchor id="thebasics-macrolist-lasthoststateid"/>&macro-lasthoststateid;</para>
 							</entry>
 							<entry>
 								<para>Un nombre correspondant au dernier état de l'hôte : 0=UP, 1=DOWN,
@@ -5563,7 +5563,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hoststatetype"/><literal>$HOSTSTATETYPE$</literal></para>
+									<anchor id="thebasics-macrolist-hoststatetype"/>&macro-hoststatetype;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne indiquant le <link linkend="thebasics-statetypes">type
@@ -5576,7 +5576,7 @@ d'hôte a été tenté le nombre de fois maximum défini.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostattempt"/><literal>$HOSTATTEMPT$</literal></para>
+									<anchor id="thebasics-macrolist-hostattempt"/>&macro-hostattempt;</para>
 							</entry>
 							<entry>
 								<para>Le nombre d'essais de contrôle d'hôte actuel. Par exemple, si c'est la
@@ -5589,7 +5589,7 @@ manière spécifique selon le nombre de tentatives.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-maxhostattempts"/><literal>$MAXHOSTATTEMPTS$</literal></para>
+									<anchor id="thebasics-macrolist-maxhostattempt"/>&macro-maxhostattempt;</para>
 							</entry>
 							<entry>
 								<para>Le nombre maximum d'essais de contrôles défini pour l'hôte actuel. Utile
@@ -5601,7 +5601,7 @@ de l'essai.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hosteventid"/><literal>$HOSTEVENTID$</literal></para>
+									<anchor id="thebasics-macrolist-hosteventid"/>&macro-hosteventid;</para>
 							</entry>
 							<entry>
 								<para>Un numéro unique associé à l'état actuel de l'hôte. À chaque fois qu'un hôte
@@ -5612,7 +5612,7 @@ de un (1). Si un hôte n'a pas changé d'état, cette macro égale zéro (0).</p
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthosteventid"/><literal>$LASTHOSTEVENTID$</literal></para>
+									<anchor id="thebasics-macrolist-lasthosteventid"/>&macro-lasthosteventid;</para>
 							</entry>
 							<entry>
 								<para>Le numéro unique d'événement précédent qui a été donné à un hôte.</para>
@@ -5621,7 +5621,7 @@ de un (1). Si un hôte n'a pas changé d'état, cette macro égale zéro (0).</p
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostproblemid"/><literal>$HOSTPROBLEMID$</literal></para>
+									<anchor id="thebasics-macrolist-hostproblemid"/>&macro-hostproblemid;</para>
 							</entry>
 							<entry>
 								<para>Un numéro unique associé à l'état problématique actuel de l'hôte. À chaque
@@ -5639,7 +5639,7 @@ la première fois dans un état problématique.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthostproblemid"/><literal>$LASTHOSTPROBLEMID$</literal></para>
+									<anchor id="thebasics-macrolist-lasthostproblemid"/>&macro-lasthostproblemid;</para>
 							</entry>
 							<entry>
 								<para>Le numéro unique de problème précédent qui a été donné à un hôte. Combiné
@@ -5651,7 +5651,7 @@ reviennent dans un état UP.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostlatency"/><literal>$HOSTLATENCY$</literal></para>
+									<anchor id="thebasics-macrolist-hostlatency"/>&macro-hostlatency;</para>
 							</entry>
 							<entry>
 								<para>Un nombre (réel) indiquant le retard en secondes par rapport au moment où un
@@ -5664,7 +5664,7 @@ demande ont une latence de zéro secondes.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostexecutiontime"/><literal>$HOSTEXECUTIONTIME$</literal></para>
+									<anchor id="thebasics-macrolist-hostexecutiontime"/>&macro-hostexecutiontime;</para>
 							</entry>
 							<entry>
 								<para>un nombre (réel) indiquant le nombre de secondes qu'a pris l'exécution du
@@ -5674,7 +5674,7 @@ contrôle d'hôte (c.-à-d. le temps pendant lequel le contrôle s'est exécuté
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostduration"/><literal>$HOSTDURATION$</literal></para>
+									<anchor id="thebasics-macrolist-hostduration"/>&macro-hostduration;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne indiquant le temps qu'a passé l'hôte dans sont état actuel. Le
@@ -5685,7 +5685,7 @@ secondes.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostdurationsec"/><literal>$HOSTDURATIONSEC$</literal></para>
+									<anchor id="thebasics-macrolist-hostdurationsec"/>&macro-hostdurationsec;</para>
 							</entry>
 							<entry>
 								<para>Un nombre indiquant le nombre de secondes qu'a passé l'hôte dans sont état
@@ -5695,7 +5695,7 @@ actuel.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostdowntime"/><literal>$HOSTDOWNTIME$</literal></para>
+									<anchor id="thebasics-macrolist-hostdowntime"/>&macro-hostdowntime;</para>
 							</entry>
 							<entry>
 								<para>Un nombre indiquant la <quote>profondeur d'arrêt planifié</quote> pour
@@ -5708,7 +5708,7 @@ valeur sera zéro.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostpercentchange"/><literal>$HOSTPERCENTCHANGE$</literal></para>
+									<anchor id="thebasics-macrolist-hostpercentchange"/>&macro-hostpercentchange;</para>
 							</entry>
 							<entry>
 								<para>Un nombre (réel) indiquant le pourcentage de changement d'état subit par
@@ -5719,7 +5719,7 @@ l'hôte. Le pourcentage de changement d'état est utilisé par l'algorithme de
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostgroupname"/><literal>$HOSTGROUPNAME$</literal></para>
+									<anchor id="thebasics-macrolist-hostgroupname"/>&macro-hostgroupname;</para>
 							</entry>
 							<entry>
 								<para>le nom court du groupe d'hôtes auquel appartient cet hôte. Cette valeur
@@ -5732,7 +5732,7 @@ contiendra le nom d'un seul de ceux-ci.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostgroupnames"/><literal>$HOSTGROUPNAMES$</literal></para>
+									<anchor id="thebasics-macrolist-hostgroupnames"/>&macro-hostgroupnames;</para>
 							</entry>
 							<entry>
 								<para>Une liste séparée par des virgules du nom court de tous les groupes d'hôtes
@@ -5742,7 +5742,7 @@ auquel appartient cet hôte.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthostcheck"/><literal>$LASTHOSTCHECK$</literal></para>
+									<anchor id="thebasics-macrolist-lasthostcheck"/>&macro-lasthostcheck;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -5752,7 +5752,7 @@ le dernier contrôle d'hôte a eu lieu.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthoststatechange"/><literal>$LASTHOSTSTATECHANGE$</literal></para>
+									<anchor id="thebasics-macrolist-lasthoststatechange"/>&macro-lasthoststatechange;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -5762,7 +5762,7 @@ l'état de l'hôte a changé pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthostup"/><literal>$LASTHOSTUP$</literal></para>
+									<anchor id="thebasics-macrolist-lasthostup"/>&macro-lasthostup;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -5772,7 +5772,7 @@ l'hôte a été vu dans l'état UP pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthostdown"/><literal>$LASTHOSTDOWN$</literal></para>
+									<anchor id="thebasics-macrolist-lasthostdown"/>&macro-lasthostdown;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -5782,7 +5782,7 @@ l'hôte a été vu dans l'état DOWN pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthostunreachable"/><literal>$LASTHOSTUNREACHABLE$</literal></para>
+									<anchor id="thebasics-macrolist-lasthostunreachable"/>&macro-lasthostunreachable;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -5792,7 +5792,7 @@ l'hôte a été vu dans l'état UNREACHABLE pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostoutput"/><literal>$HOSTOUTPUT$</literal></para>
+									<anchor id="thebasics-macrolist-hostoutput"/>&macro-hostoutput;</para>
 							</entry>
 							<entry>
 								<para>La première ligne du texte en sortie du dernier contrôle d'hôte
@@ -5802,7 +5802,7 @@ l'hôte a été vu dans l'état UNREACHABLE pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-longhostoutput"/><literal>$LONGHOSTOUTPUT$</literal></para>
+									<anchor id="thebasics-macrolist-longhostoutput"/>&macro-longhostoutput;</para>
 							</entry>
 							<entry>
 								<para>Le texte complet (en plus de la première ligne) qui a été renvoyé par le
@@ -5812,7 +5812,7 @@ dernier contrôle d'hôte.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostperfdata"/><literal>$HOSTPERFDATA$</literal></para>
+									<anchor id="thebasics-macrolist-hostperfdata"/>&macro-hostperfdata;</para>
 							</entry>
 							<entry>
 								<para>Cette macro contient les <link linkend="advancedtopics-perfdata">données de
@@ -5823,7 +5823,7 @@ contrôle d'hôte.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostcheckcommand"/><literal>$HOSTCHECKCOMMAND$</literal></para>
+									<anchor id="thebasics-macrolist-hostcheckcommand"/>&macro-hostcheckcommand;</para>
 							</entry>
 							<entry>
 								<para>Cette macro contient le nom de la commande (ainsi que les paramètres qui ont
@@ -5833,93 +5833,93 @@ pu lui être passés) utilisée lors du contrôle d'hôte.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostackauthor"/><literal>$HOSTACKAUTHOR$</literal> <link
+									<anchor id="thebasics-macrolist-hostackauthor"/>&macro-hostackauthor;<link
 linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le nom de l'utilisateur qui a acquitté le problème de
 l'hôte. Cette macro n'est valable que dans les notifications dont la macro
-<literal>$NOTIFICATIONTYPE$</literal> vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
+&macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostackauthorname"/><literal>$HOSTACKAUTHORNAME$</literal>
+									<anchor id="thebasics-macrolist-hostackauthorname"/>&macro-hostackauthorname;
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le nom court du contact (si applicable) qui a acquitté
 le problème de l'hôte. Cette macro n'est valable que dans les notifications
-dont la macro <literal>$NOTIFICATIONTYPE$</literal> vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
+dont la macro &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostackauthoralias"/><literal>$HOSTACKAUTHORALIAS$</literal>
+									<anchor id="thebasics-macrolist-hostackauthoralias"/>&macro-hostackauthoralias;
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant l'alias du contact (si applicable) qui a acquitté le
 problème de l'hôte. Cette macro n'est valable que dans les notifications
-dont la macro <literal>$NOTIFICATIONTYPE$</literal> vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
+dont la macro &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostackcomment"/><literal>$HOSTACKCOMMENT$</literal> <link
+									<anchor id="thebasics-macrolist-hostackcomment"/>&macro-hostackcomment; <link
 linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le commentaire associé à l'acquittement saisi par
 l'utilisateur qui a acquitté le problème de l'hôte. Cette macro n'est
-valable que dans les notifications dont la macro <literal>$NOTIFICATIONTYPE$</literal> vaut
+valable que dans les notifications dont la macro &macro-notificationtype; vaut
 <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostactionurl"/><literal>$HOSTACTIONURL$</literal></para>
+									<anchor id="thebasics-macrolist-hostactionurl"/>&macro-hostactionurl;</para>
 							</entry>
 							<entry>
 								<para>URL d'action associée à l'hôte. Cette macro peut contenir d'autres macros
-(par exemple <literal>$HOSTNAME$</literal>), ce qui peut s'avérer pratique quand vous souhaitez
+(par exemple &macro-hostname;), ce qui peut s'avérer pratique quand vous souhaitez
 passer le nom d'hôte à une page web.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostnotesurl"/><literal>$HOSTNOTESURL$</literal></para>
+									<anchor id="thebasics-macrolist-hostnotesurl"/>&macro-hostnotesurl;</para>
 							</entry>
 							<entry>
 								<para>URL de notes associée à l'hôte. Cette macro peut contenir d'autres macros
-(par exemple <literal>$HOSTNAME$</literal>), ce qui peut s'avérer pratique quand vous souhaitez
+(par exemple &macro-hostname;), ce qui peut s'avérer pratique quand vous souhaitez
 passer le nom d'hôte à une page web.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostnotes"/><literal>$HOSTNOTES$</literal></para>
+									<anchor id="thebasics-macrolist-hostnotes"/>&macro-hostnotes;</para>
 							</entry>
 							<entry>
 								<para>URL de notes associée à l'hôte. Cette macro peut contenir d'autres macros
-(par exemple <literal>$HOSTNAME$</literal>), ce qui peut s'avérer pratique quand vous souhaitez
+(par exemple &macro-hostname;), ce qui peut s'avérer pratique quand vous souhaitez
 avoir l'état d'un hôte spécifique dans la description.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-totalhostservices"/><literal>$TOTALHOSTSERVICES$</literal></para>
+									<anchor id="thebasics-macrolist-totalhostservices"/>&macro-totalhostservices;</para>
 							</entry>
 							<entry>
 								<para>Le nombre total de services associés à l'hôte.</para>
@@ -5928,7 +5928,7 @@ avoir l'état d'un hôte spécifique dans la description.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-totalhostservicesok"/><literal>$TOTALHOSTSERVICESOK$</literal></para>
+									<anchor id="thebasics-macrolist-totalhostservicesok"/>&macro-totalhostservicesok;</para>
 							</entry>
 							<entry>
 								<para>Le nombre total de services associés à l'hôte qui sont dans un état OK.</para>
@@ -5938,7 +5938,7 @@ avoir l'état d'un hôte spécifique dans la description.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalhostserviceswarning"/><literal>$TOTALHOSTSERVICESWARNING$</literal></para>
+id="thebasics-macrolist-totalhostserviceswarning"/>&macro-totalhostserviceswarning;</para>
 							</entry>
 							<entry>
 								<para>Le nombre total de services associés à l'hôte qui sont dans un état WARNING.</para>
@@ -5948,7 +5948,7 @@ id="thebasics-macrolist-totalhostserviceswarning"/><literal>$TOTALHOSTSERVICESWA
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalhostservicesunknown"/><literal>$TOTALHOSTSERVICESUNKNOWN$</literal></para>
+id="thebasics-macrolist-totalhostservicesunknown"/>&macro-totalhostservicesunknown;</para>
 							</entry>
 							<entry>
 								<para>Le nombre total de services associés à l'hôte qui sont dans un état UNKNOWN.</para>
@@ -5958,7 +5958,7 @@ id="thebasics-macrolist-totalhostservicesunknown"/><literal>$TOTALHOSTSERVICESUN
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalhostservicescritical"/><literal>$TOTALHOSTSERVICESCRITICAL$</literal></para>
+id="thebasics-macrolist-totalhostservicescritical"/>&macro-totalhostservicescritical;</para>
 							</entry>
 							<entry>
 								<para>Le nombre total de services associés à l'hôte qui sont dans un état
@@ -5980,7 +5980,7 @@ linkend="thebasics-macrolist-note5">5</link>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostgroupalias"/><literal>$HOSTGROUPALIAS$</literal> <link
+									<anchor id="thebasics-macrolist-hostgroupalias"/>&macro-hostgroupalias; <link
 linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -5996,7 +5996,7 @@ d'hôtes</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostgroupmembers"/><literal>$HOSTGROUPMEMBERS$</literal> <link
+									<anchor id="thebasics-macrolist-hostgroupmembers"/>&macro-hostgroupmembers; <link
 linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -6010,7 +6010,7 @@ d'une macro à la demande).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostgroupnotes"/><literal>$HOSTGROUPNOTES$</literal> <link
+									<anchor id="thebasics-macrolist-hostgroupnotes"/>&macro-hostgroupnotes; <link
 linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -6026,7 +6026,7 @@ d'hôtes</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostgroupnotesurl"/><literal>$HOSTGROUPNOTESURL$</literal>
+									<anchor id="thebasics-macrolist-hostgroupnotesurl"/>&macro-hostgroupnotesurl;
 <link linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -6042,7 +6042,7 @@ d'hôtes</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostgroupactionurl"/><literal>$HOSTGROUPACTIONURL$</literal>
+									<anchor id="thebasics-macrolist-hostgroupactionurl"/>&macro-hostgroupactionurl;
 <link linkend="thebasics-macrolist-note5">5</link>
 								</para>
 							</entry>
@@ -6068,7 +6068,7 @@ d'hôtes</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicedesc"/><literal>$SERVICEDESC$</literal></para>
+									<anchor id="thebasics-macrolist-servicedesc"/>&macro-servicedesc;</para>
 							</entry>
 							<entry>
 								<para>Le nom long/description du service (p. ex. <quote>Main
@@ -6080,7 +6080,7 @@ service</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicedisplayname"/><literal>$SERVICEDISPLAYNAME$</literal></para>
+									<anchor id="thebasics-macrolist-servicedisplayname"/>&macro-servicedisplayname;</para>
 							</entry>
 							<entry>
 								<para>Un nom utilisé pour l'affichage du service. Cette valeur provient du
@@ -6092,7 +6092,7 @@ service</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicestate"/><literal>$SERVICESTATE$</literal></para>
+									<anchor id="thebasics-macrolist-servicestate"/>&macro-servicestate;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne indiquant l'état actuel du service (<quote>OK</quote>,
@@ -6102,7 +6102,7 @@ service</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicestateid"/><literal>$SERVICESTATEID$</literal></para>
+									<anchor id="thebasics-macrolist-servicestateid"/>&macro-servicestateid;</para>
 							</entry>
 							<entry>
 								<para>Un nombre qui correspond à l'état actuel du service : 0=OK, 1=WARNING,
@@ -6112,7 +6112,7 @@ service</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastservicestate"/><literal>$LASTSERVICESTATE$</literal></para>
+									<anchor id="thebasics-macrolist-lastservicestate"/>&macro-lastservicestate;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne indiquant l'état précédent du service (<quote>OK</quote>,
@@ -6122,7 +6122,7 @@ service</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastservicestateid"/><literal>$LASTSERVICESTATEID$</literal></para>
+									<anchor id="thebasics-macrolist-lastservicestateid"/>&macro-lastservicestateid;</para>
 							</entry>
 							<entry>
 								<para>Un nombre qui correspond à l'état précédent du service : 0=OK, 1=WARNING,
@@ -6132,7 +6132,7 @@ service</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicestatetype"/><literal>$SERVICESTATETYPE$</literal></para>
+									<anchor id="thebasics-macrolist-servicestatetype"/>&macro-servicestatetype;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne indiquant le <link linkend="thebasics-statetypes">type
@@ -6145,7 +6145,7 @@ de service a été tenté le nombre de fois maximum défini.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceattempt"/><literal>$SERVICEATTEMPT$</literal></para>
+									<anchor id="thebasics-macrolist-serviceattempt"/>&macro-serviceattempt;</para>
 							</entry>
 							<entry>
 								<para>Le nombre actuel d'essais de contrôle du service. Par exemple, si c'est la
@@ -6158,7 +6158,7 @@ manière spécifique selon le nombre de tentatives.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-maxserviceattempts"/><literal>$MAXSERVICEATTEMPTS$</literal></para>
+									<anchor id="thebasics-macrolist-maxserviceattempts"/>&macro-maxserviceattempts;</para>
 							</entry>
 							<entry>
 								<para>Le nombre maximum d'essais de contrôle du service actuel. Utile pour
@@ -6170,7 +6170,7 @@ tentatives de contrôle de service.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceisvolatile"/><literal>$SERVICEISVOLATILE$</literal></para>
+									<anchor id="thebasics-macrolist-serviceisvolatile"/>&macro-serviceisvolatile;</para>
 							</entry>
 							<entry>
 								<para>Indique si le service est volatile ou pas : 0 = non volatile, 1 = volatile.</para>
@@ -6179,7 +6179,7 @@ tentatives de contrôle de service.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceeventid"/><literal>$SERVICEEVENTID$</literal></para>
+									<anchor id="thebasics-macrolist-serviceeventid"/>&macro-serviceeventid;</para>
 							</entry>
 							<entry>
 								<para>Un numéro unique associé à l'état actuel du service. À chaque fois qu'un
@@ -6191,7 +6191,7 @@ zéro (0).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastserviceeventid"/><literal>$LASTSERVICEEVENTID$</literal></para>
+									<anchor id="thebasics-macrolist-lastserviceeventid"/>&macro-lastserviceeventid;</para>
 							</entry>
 							<entry>
 								<para>Le numéro unique d'événement précédent qui a été donné à un service.</para>
@@ -6200,7 +6200,7 @@ zéro (0).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceproblemid"/><literal>$SERVICEPROBLEMID$</literal></para>
+									<anchor id="thebasics-macrolist-serviceproblemid"/>&macro-serviceproblemid;</para>
 							</entry>
 							<entry>
 								<para>Un numéro unique associé à l'état problématique actuel du service. À chaque
@@ -6219,7 +6219,7 @@ pour la première fois dans un état problématique.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-lastserviceproblemid"/><literal>$LASTSERVICEPROBLEMID$</literal></para>
+id="thebasics-macrolist-lastserviceproblemid"/>&macro-lastserviceproblemid;</para>
 							</entry>
 							<entry>
 								<para>Le numéro unique de problème précédent qui a été donné à un service. Combiné
@@ -6231,7 +6231,7 @@ reviennent dans un état OK.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicelatency"/><literal>$SERVICELATENCY$</literal></para>
+									<anchor id="thebasics-macrolist-servicelatency"/>&macro-servicelatency;</para>
 							</entry>
 							<entry>
 								<para>Un nombre (réel) indiquant le retard en secondes par rapport au moment où un
@@ -6244,7 +6244,7 @@ la latence de ce contrôle est de 2.0 secondes.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-serviceexecutiontime"/><literal>$SERVICEEXECUTIONTIME$</literal></para>
+id="thebasics-macrolist-serviceexecutiontime"/>&macro-serviceexecutiontime;</para>
 							</entry>
 							<entry>
 								<para>un nombre (réel) indiquant le nombre de secondes qu'a pris l'exécution du
@@ -6255,10 +6255,10 @@ exécuté).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceduration"/><literal>$SERVICEDURATION$</literal></para>
+									<anchor id="thebasics-macrolist-serviceduration"/>&macro-serviceduration;</para>
 							</entry>
 							<entry>
-								<para>Une chaîne indiquant le temps qu'a passé le service dans sont état
+								<para>Une chaîne indiquant le temps qu'a passé le service dans son état
 actuel. Le format est <quote>XXh YYm ZZs</quote>, pour les heures, les
 minutes et les secondes.</para>
 							</entry>
@@ -6266,17 +6266,17 @@ minutes et les secondes.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicedurationsec"/><literal>$SERVICEDURATIONSEC$</literal></para>
+									<anchor id="thebasics-macrolist-servicedurationsec"/>&macro-servicedurationsec;</para>
 							</entry>
 							<entry>
-								<para>Un nombre indiquant le nombre de secondes qu'a passé le service dans sont
+								<para>Un nombre indiquant le nombre de secondes qu'a passé le service dans son
 état actuel.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicedowntime"/><literal>$SERVICEDOWNTIME$</literal></para>
+									<anchor id="thebasics-macrolist-servicedowntime"/>&macro-servicedowntime;</para>
 							</entry>
 							<entry>
 								<para>Un nombre indiquant la <quote>profondeur d'arrêt planifié</quote> pour le
@@ -6290,7 +6290,7 @@ valeur sera zéro.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-servicepercentchange"/><literal>$SERVICEPERCENTCHANGE$</literal></para>
+id="thebasics-macrolist-servicepercentchange"/>&macro-servicepercentchange;</para>
 							</entry>
 							<entry>
 								<para>Un nombre (réel) indiquant le pourcentage de changement d'état subit par le
@@ -6301,7 +6301,7 @@ service. Le pourcentage de changement d'état est utilisé par l'algorithme de
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicegroupname"/><literal>$SERVICEGROUPNAME$</literal></para>
+									<anchor id="thebasics-macrolist-servicegroupname"/>&macro-servicegroupname;</para>
 							</entry>
 							<entry>
 								<para>le nom court du groupe de services auquel appartient ce service. Cette
@@ -6314,7 +6314,7 @@ services cette macro contiendra le nom d'un seul de ceux-ci.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicegroupnames"/><literal>$SERVICEGROUPNAMES$</literal></para>
+									<anchor id="thebasics-macrolist-servicegroupnames"/>&macro-servicegroupnames;</para>
 							</entry>
 							<entry>
 								<para>Une liste séparée par des virgules du nom court de tous les groupes de
@@ -6324,7 +6324,7 @@ services auquel appartient ce service.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastservicecheck"/><literal>$LASTSERVICECHECK$</literal></para>
+									<anchor id="thebasics-macrolist-lastservicecheck"/>&macro-lastservicecheck;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -6335,7 +6335,7 @@ le dernier contrôle de service a eu lieu.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-lastservicestatechange"/><literal>$LASTSERVICESTATECHANGE$</literal></para>
+id="thebasics-macrolist-lastservicestatechange"/>&macro-lastservicestatechange;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -6345,7 +6345,7 @@ l'état du service a changé pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastserviceok"/><literal>$LASTSERVICEOK$</literal></para>
+									<anchor id="thebasics-macrolist-lastserviceok"/>&macro-lastserviceok;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -6355,7 +6355,7 @@ le service a été vu dans l'état OK pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastservicewarning"/><literal>$LASTSERVICEWARNING$</literal></para>
+									<anchor id="thebasics-macrolist-lastservicewarning"/>&macro-lastservicewarning;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -6365,7 +6365,7 @@ le service a été vu dans l'état WARNING pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastserviceunknown"/><literal>$LASTSERVICEUNKNOWN$</literal></para>
+									<anchor id="thebasics-macrolist-lastserviceunknown"/>&macro-lastserviceunknown;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -6375,7 +6375,7 @@ le service a été vu dans l'état UNKNOWN pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lastservicecritical"/><literal>$LASTSERVICECRITICAL$</literal></para>
+									<anchor id="thebasics-macrolist-lastservicecritical"/>&macro-lastservicecritical;</para>
 							</entry>
 							<entry>
 								<para>C'est le moment au format time_t (secondes écoulées depuis l'époque UNIX) où
@@ -6385,7 +6385,7 @@ le service a été vu dans l'état CRITICAL pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceoutput"/><literal>$SERVICEOUTPUT$</literal></para>
+									<anchor id="thebasics-macrolist-serviceoutput"/>&macro-serviceoutput;</para>
 							</entry>
 							<entry>
 								<para>La première ligne du texte en sortie du dernier contrôle de service
@@ -6395,7 +6395,7 @@ le service a été vu dans l'état CRITICAL pour la dernière fois.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-longserviceoutput"/><literal>$LONGSERVICEOUTPUT$</literal></para>
+									<anchor id="thebasics-macrolist-longserviceoutput"/>&macro-longserviceoutput;</para>
 							</entry>
 							<entry>
 								<para>Le texte complet (en plus de la première ligne) en sortie du dernier
@@ -6405,7 +6405,7 @@ contrôle de service (p. ex. <quote>Ping OK</quote>).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceperfdata"/><literal>$SERVICEPERFDATA$</literal></para>
+									<anchor id="thebasics-macrolist-serviceperfdata"/>&macro-serviceperfdata;</para>
 							</entry>
 							<entry>
 								<para>Cette macro contient les <link linkend="advancedtopics-perfdata">données de
@@ -6416,7 +6416,7 @@ service.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicecheckcommand"/><literal>$SERVICECHECKCOMMAND$</literal></para>
+									<anchor id="thebasics-macrolist-servicecheckcommand"/>&macro-servicecheckcommand;</para>
 							</entry>
 							<entry>
 								<para>Cette macro contient le nom de la commande (ainsi que les paramètres qui ont
@@ -6426,28 +6426,28 @@ pu lui être passés) utilisée lors du contrôle de service.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceackauthor"/><literal>$SERVICEACKAUTHOR$</literal> <link
+									<anchor id="thebasics-macrolist-serviceackauthor"/>&macro-serviceackauthor; <link
 linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le nom de l'utilisateur qui a acquitté le problème du
 service. Cette macro n'est valable que dans les notifications dont la macro
-<literal>$NOTIFICATIONTYPE$</literal> vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
+&macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-serviceackauthorname"/><literal>$SERVICEACKAUTHORNAME$</literal> <link
+id="thebasics-macrolist-serviceackauthorname"/>&macro-serviceackauthorname; <link
 linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le nom court de l'utilisateur (si applicable) qui a
 acquitté le problème du service. Cette macro n'est valable que dans les
-notifications dont la macro <literal>$NOTIFICATIONTYPE$</literal> vaut
+notifications dont la macro &macro-notificationtype; vaut
 <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
@@ -6455,34 +6455,34 @@ notifications dont la macro <literal>$NOTIFICATIONTYPE$</literal> vaut
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-serviceackauthoralias"/><literal>$SERVICEACKAUTHORALIAS$</literal>
+id="thebasics-macrolist-serviceackauthoralias"/>&macro-serviceackauthoralias;
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant l'alias de l'utilisateur (si applicable) qui a acquitté
 le problème du service. Cette macro n'est valable que dans les notifications
-dont la macro <literal>$NOTIFICATIONTYPE$</literal> vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
+dont la macro &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceackcomment"/><literal>$SERVICEACKCOMMENT$</literal>
+									<anchor id="thebasics-macrolist-serviceackcomment"/>&macro-serviceackcomment;
 <link linkend="thebasics-macrolist-note8">8</link>
 								</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le commentaire associé à l'acquittement saisi par
 l'utilisateur qui a acquitté le problème du service. Cette macro n'est
-valable que dans les notifications dont la macro <literal>$NOTIFICATIONTYPE$</literal> vaut
+valable que dans les notifications dont la macro &macro-notificationtype; vaut
 <quote>ACKNOWLEDGEMENT</quote>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceactionurl"/><literal>$SERVICEACTIONURL$</literal></para>
+									<anchor id="thebasics-macrolist-serviceactionurl"/>&macro-serviceactionurl;</para>
 							</entry>
 							<entry>
 								<para>URL d'action associée au service. Cette valeur provient du paramètre
@@ -6492,22 +6492,22 @@ action_url de la définition d'informations complémentaires du service.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicenotesurl"/><literal>$SERVICENOTESURL$</literal></para>
+									<anchor id="thebasics-macrolist-servicenotesurl"/>&macro-servicenotesurl;</para>
 							</entry>
 							<entry>
 								<para>URL d'action associée au service. Cette macro peut contenir d'autres macros
-(par exemple <literal>$HOSTNAME$</literal> ou <literal>$SERVICEDESC$</literal>), ce qui peut s'avérer pratique
+(par exemple &macro-hostname; ou &macro-servicedesc;), ce qui peut s'avérer pratique
 quand vous souhaitez passer le nom d'hôte à une page web.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicenotes"/><literal>$SERVICENOTES$</literal></para>
+									<anchor id="thebasics-macrolist-servicenotes"/>&macro-servicenotes;</para>
 							</entry>
 							<entry>
 								<para>URL de notes associée au service. Cette macro peut contenir d'autres macros
-(par exemple <literal>$HOSTNAME$</literal> ou <literal>$SERVICEDESC$</literal>), ce qui peut s'avérer pratique
+(par exemple &macro-hostname; ou &macro-servicedesc;), ce qui peut s'avérer pratique
 quand vous souhaitez avoir l'état d'un service spécifique dans la
 description.</para>
 							</entry>
@@ -6527,7 +6527,7 @@ linkend="thebasics-macrolist-note6">6</link>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicegroupalias"/><literal>$SERVICEGROUPALIAS$</literal>
+									<anchor id="thebasics-macrolist-servicegroupalias"/>&macro-servicegroupalias;
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -6543,7 +6543,7 @@ groupe de services</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicegroupmembers"/><literal>$SERVICEGROUPMEMBERS$</literal>
+									<anchor id="thebasics-macrolist-servicegroupmembers"/>&macro-servicegroupmembers;
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -6557,7 +6557,7 @@ le contexte d'une macro à la demande).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicegroupnotes"/><literal>$SERVICEGROUPNOTES$</literal>
+									<anchor id="thebasics-macrolist-servicegroupnotes"/>&macro-servicegroupnotes;
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -6574,7 +6574,7 @@ groupe de services</link>.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-servicegroupnotesurl"/><literal>$SERVICEGROUPNOTESURL$</literal> <link
+id="thebasics-macrolist-servicegroupnotesurl"/>&macro-servicegroupnotesurl; <link
 linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -6590,7 +6590,7 @@ groupe de services</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-servicegroupactionurl"/><literal>$SERVICEGROUPNOTES$</literal>
+									<anchor id="thebasics-macrolist-servicegroupactionurl"/>&macro-servicegroupnotes;
 <link linkend="thebasics-macrolist-note6">6</link>
 								</para>
 							</entry>
@@ -6616,7 +6616,7 @@ groupe de services</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactname"/><literal>$CONTACTNAME$</literal></para>
+									<anchor id="thebasics-macrolist-contactname"/>&macro-contactname;</para>
 							</entry>
 							<entry>
 								<para>Nom court du contact (p. ex. <quote>jdoe</quote>) qui est notifié pour un
@@ -6629,7 +6629,7 @@ contact</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactalias"/><literal>$CONTACTALIAS$</literal></para>
+									<anchor id="thebasics-macrolist-contactalias"/>&macro-contactalias;</para>
 							</entry>
 							<entry>
 								<para>Nom long/description du contact (p. ex. <quote>John Doe</quote>) qui est
@@ -6641,7 +6641,7 @@ contact</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactemail"/><literal>$CONTACTEMAIL$</literal></para>
+									<anchor id="thebasics-macrolist-contactemail"/>&macro-contactemail;</para>
 							</entry>
 							<entry>
 								<para>Adresse email du contact qui est notifié. Cette valeur provient du paramètre
@@ -6653,7 +6653,7 @@ contact</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactpager"/><literal>$CONTACTPAGER$</literal></para>
+									<anchor id="thebasics-macrolist-contactpager"/>&macro-contactpager;</para>
 							</entry>
 							<entry>
 								<para>Numéro/adresse du Pager du contact qui est notifié. Cette valeur provient du
@@ -6665,7 +6665,7 @@ contact</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactaddress"/><literal>$CONTACTADDRESSn$</literal></para>
+									<anchor id="thebasics-macrolist-contactaddressn"/>&macro-contactaddressn;</para>
 							</entry>
 							<entry>
 								<para>Adresse du contact qui est notifié. Chaque contact peut avoir six adresses
@@ -6679,7 +6679,7 @@ contact</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactgroupname"/><literal>$CONTACTGROUPNAME$</literal></para>
+									<anchor id="thebasics-macrolist-contactgroupname"/>&macro-contactgroupname;</para>
 							</entry>
 							<entry>
 								<para>Le nom court du groupe de contact auquel est rattaché ce contact. Cette
@@ -6691,7 +6691,7 @@ contacts</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactgroupnames"/><literal>$CONTACTGROUPNAMES$</literal></para>
+									<anchor id="thebasics-macrolist-contactgroupnames"/>&macro-contactgroupnames;</para>
 							</entry>
 							<entry>
 								<para>Une liste séparée par des virgules des groupes de contacts auxquels
@@ -6713,7 +6713,7 @@ linkend="thebasics-macrolist-note5">5</link>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactgroupalias"/><literal>$CONTACTGROUPALIAS$</literal>
+									<anchor id="thebasics-macrolist-contactgroupalias"/>&macro-contactgroupalias;
 <link linkend="thebasics-macrolist-note7">7</link>
 								</para>
 							</entry>
@@ -6729,7 +6729,7 @@ groupe de contacts</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-contactgroupmembers"/><literal>$CONTACTGROUPMEMBERS$</literal>
+									<anchor id="thebasics-macrolist-contactgroupmembers"/>&macro-contactgroupmembers;
 <link linkend="thebasics-macrolist-note7">7</link>
 								</para>
 							</entry>
@@ -6753,7 +6753,7 @@ contexte d'une macro à la demande).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-totalhostsup"/><literal>$TOTALHOSTSUP$</literal></para>
+									<anchor id="thebasics-macrolist-totalhostsup"/>&macro-totalhostsup;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total d'hôtes qui sont actuellement dans l'état
@@ -6763,7 +6763,7 @@ UP.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-totalhostsdown"/><literal>$TOTALHOSTSDOWN$</literal></para>
+									<anchor id="thebasics-macrolist-totalhostsdown"/>&macro-totalhostsdown;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total d'hôtes qui sont actuellement dans l'état
@@ -6774,7 +6774,7 @@ DOWN.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalhostsunreachable"/><literal>$TOTALHOSTSUNREACHABLE$</literal></para>
+id="thebasics-macrolist-totalhostsunreachable"/>&macro-totalhostsunreachable;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total d'hôtes qui sont actuellement dans l'état
@@ -6785,7 +6785,7 @@ UNREACHABLE.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalhostsdownunhandled"/><literal>$TOTALHOSTSDOWNUNHANDLED$</literal></para>
+id="thebasics-macrolist-totalhostsdownunhandled"/>&macro-totalhostsdownunhandled;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total d'hôtes qui sont actuellement dans l'état
@@ -6798,7 +6798,7 @@ les contrôles sont activés.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalhostsunreachableunhandled"/><literal>$TOTALHOSTSUNREACHABLEUNHANDLED$</literal></para>
+id="thebasics-macrolist-totalhostsunreachableunhandled"/>&macro-totalhostsunreachableunhandled;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total d'hôtes qui sont actuellement dans l'état
@@ -6810,7 +6810,7 @@ dont les contrôles sont activés.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-totalhostproblems"/><literal>$TOTALHOSTPROBLEMS$</literal></para>
+									<anchor id="thebasics-macrolist-totalhostproblems"/>&macro-totalhostproblems;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total d'hôtes qui sont actuellement dans l'état
@@ -6821,7 +6821,7 @@ DOWN ou UNREACHABLE.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalhostproblemsunhandled"/><literal>$TOTALHOSTPROBLEMSUNHANDLED$</literal></para>
+id="thebasics-macrolist-totalhostproblemsunhandled"/>&macro-totalhostproblemsunhandled;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total d'hôtes qui sont actuellement dans l'état
@@ -6833,7 +6833,7 @@ planifié, et dont les contrôles sont activés.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-totalservicesok"/><literal>$TOTALSERVICESOK$</literal></para>
+									<anchor id="thebasics-macrolist-totalservicesok"/>&macro-totalservicesok;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6844,7 +6844,7 @@ l'état OK.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalserviceswarning"/><literal>$TOTALSERVICESWARNING$</literal></para>
+id="thebasics-macrolist-totalserviceswarning"/>&macro-totalserviceswarning;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6855,7 +6855,7 @@ l'état WARNING.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalservicescritical"/><literal>$TOTALSERVICESCRITICAL$</literal></para>
+id="thebasics-macrolist-totalservicescritical"/>&macro-totalservicescritical;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6866,7 +6866,7 @@ l'état CRITICAL.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalservicesunknown"/><literal>$TOTALSERVICESUNKNOWN$</literal></para>
+id="thebasics-macrolist-totalservicesunknown"/>&macro-totalservicesunknown;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6877,7 +6877,7 @@ l'état UNKNOWN.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalserviceswarningunhandled"/><literal>$TOTALSERVICESWARNINGUNHANDLED$</literal></para>
+id="thebasics-macrolist-totalserviceswarningunhandled"/>&macro-totalserviceswarningunhandled;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6890,7 +6890,7 @@ planifié, et dont les contrôles sont activés.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalservicescriticalunhandled"/><literal>$TOTALSERVICESCRITICALUNHANDLED$</literal></para>
+id="thebasics-macrolist-totalservicescriticalunhandled"/>&macro-totalservicescriticalunhandled;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6903,7 +6903,7 @@ planifié, et dont les contrôles sont activés.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalservicesunknownunhandled"/><literal>$TOTALSERVICESUNKNOWNUNHANDLED$</literal></para>
+id="thebasics-macrolist-totalservicesunknownunhandled"/>&macro-totalservicesunknownunhandled;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6916,7 +6916,7 @@ planifié, et dont les contrôles sont activés.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalserviceproblems"/><literal>$TOTALSERVICEPROBLEMS$</literal></para>
+id="thebasics-macrolist-totalserviceproblems"/>&macro-totalserviceproblems;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6927,7 +6927,7 @@ l'état WARNING, CRITICAL, ou UNKNOWN.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-totalserviceproblemsunhandled"/><literal>$TOTALSERVICEPROBLEMSUNHANDLED$</literal></para>
+id="thebasics-macrolist-totalserviceproblemsunhandled"/>&macro-totalserviceproblemsunhandled;</para>
 							</entry>
 							<entry>
 								<para>Cette macro donne le nombre total de services qui sont actuellement dans
@@ -6949,7 +6949,7 @@ acquitté, ni en cours d'arrêt planifié, et dont les contrôles sont activés.
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-notificationtype"/><literal>$NOTIFICATIONTYPE$</literal></para>
+									<anchor id="thebasics-macrolist-notificationtype"/>&macro-notificationtype;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne représentant le type de notification envoyée
@@ -6964,7 +6964,7 @@ acquitté, ni en cours d'arrêt planifié, et dont les contrôles sont activés.
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-notificationrecipients"/><literal>$NOTIFICATIONRECIPIENTS$</literal></para>
+id="thebasics-macrolist-notificationrecipients"/>&macro-notificationrecipients;</para>
 							</entry>
 							<entry>
 								<para>Une liste séparée par des virgules de tous les noms courts des contacts qui
@@ -6975,7 +6975,7 @@ sont notifiés pour un hôte ou un service.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-notificationisescalated"/><literal>$NOTIFICATIONISESCALATED$</literal></para>
+id="thebasics-macrolist-notificationisescalated"/>&macro-notificationisescalated;</para>
 							</entry>
 							<entry>
 								<para>Un entier indiquant si la notification a été envoyé à des contacts normaux
@@ -6986,15 +6986,15 @@ normale (non-escaladée) , 1 = Notification escaladée.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-notificationauthor"/><literal>$NOTIFICATIONAUTHOR$</literal></para>
+									<anchor id="thebasics-macrolist-notificationauthor"/>&macro-notificationauthor;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le nom de l'utilisateur qui a écrit la notification. Si
-la macro <literal>$NOTIFICATIONTYPE$</literal> est égale à <quote>DOWNTIMESTART</quote> ou
+la macro &macro-notificationtype; est égale à <quote>DOWNTIMESTART</quote> ou
 <quote>DOWNTIMEEND</quote>, ce sera le nom de l'utilisateur qui a programmé
-la maintenance de l' hôte ou du service. Si la macro <literal>$NOTIFICATIONTYPE$</literal> est
+la maintenance de l' hôte ou du service. Si la macro &macro-notificationtype; est
 égale à <quote>ACKNOWLEDGEMENT</quote>, ce sera le nom de l'utilisateur qui
-a acquitté le problème de'hôte ou de service. Si la macro <literal>$NOTIFICATIONTYPE$</literal>
+a acquitté le problème de'hôte ou de service. Si la macro &macro-notificationtype;
 est égale à <quote>CUSTOM</quote>, ce sera le nom de l'utilisateur qui a
 initié la notification personnalisée de l'hôte ou du service.</para>
 							</entry>
@@ -7003,37 +7003,37 @@ initié la notification personnalisée de l'hôte ou du service.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-notificationauthorname"/><literal>$NOTIFICATIONAUTHORNAME$</literal></para>
+id="thebasics-macrolist-notificationauthorname"/>&macro-notificationauthorname;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le nom court du contact (si applicable) tel qu'indiqué
-dans la macro <literal>$NOTIFICATIONAUTHOR$</literal>.</para>
+dans la macro &macro-notificationauthor;.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-notificationauthoralias"/><literal>$NOTIFICATIONAUTHORALIAS$</literal></para>
+id="thebasics-macrolist-notificationauthoralias"/>&macro-notificationauthoralias;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant l'alias du contact (si applicable) tel qu'indiqué dans
-la macro <literal>$NOTIFICATIONAUTHOR$</literal>.</para>
+la macro &macro-notificationauthor;.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-notificationcomment"/><literal>$NOTIFICATIONCOMMENT$</literal></para>
+									<anchor id="thebasics-macrolist-notificationcomment"/>&macro-notificationcomment;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne contenant le commentaire entré par l'auteur de la
-notification. Si la macro <literal>$NOTIFICATIONTYPE$</literal> est égale à
+notification. Si la macro &macro-notificationtype; est égale à
 <quote>DOWNTIMESTART</quote> ou <quote>DOWNTIMEEND</quote>, ce sera le
 commentaire de l'utilisateur qui a programmé la maintenance de l' hôte ou du
-service. Si la macro <literal>$NOTIFICATIONTYPE$</literal> est égale à
+service. Si la macro &macro-notificationtype; est égale à
 <quote>ACKNOWLEDGEMENT</quote>, ce sera le commentaire de l'utilisateur qui
-a acquitté le problème de'hôte ou de service. Si la macro <literal>$NOTIFICATIONTYPE$</literal>
+a acquitté le problème de'hôte ou de service. Si la macro &macro-notificationtype;
 est égale à <quote>CUSTOM</quote>, ce sera le commentaire de l'utilisateur
 qui a initié la notification personnalisée de l'hôte ou du service.</para>
 							</entry>
@@ -7042,7 +7042,7 @@ qui a initié la notification personnalisée de l'hôte ou du service.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-hostnotificationnumber"/><literal>$HOSTNOTIFICATIONNUMBER$</literal></para>
+id="thebasics-macrolist-hostnotificationnumber"/>&macro-hostnotificationnumber;</para>
 							</entry>
 							<entry>
 								<para>Le numéro courant de la notification de l'hôte. Le numéro de notification
@@ -7057,7 +7057,7 @@ qui ont à voir avec les oscillations et la maintenance planifiée.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostnotificationid"/><literal>$HOSTNOTIFICATIONID$</literal></para>
+									<anchor id="thebasics-macrolist-hostnotificationid"/>&macro-hostnotificationid;</para>
 							</entry>
 							<entry>
 								<para>Un numéro unique qui identifie une notification d'hôte. Les numéros
@@ -7075,7 +7075,7 @@ contacts notifiés.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-servicenotificationnumber"/><literal>$SERVICENOTIFICATIONNUMBER$</literal></para>
+id="thebasics-macrolist-servicenotificationnumber"/>&macro-servicenotificationnumber;</para>
 							</entry>
 							<entry>
 								<para>Le numéro courant de la notification de service. Le numéro de notification
@@ -7091,7 +7091,7 @@ qui ont à voir avec les oscillations et la maintenance planifiée.</para>
 							<entry>
 								<para>
 									<anchor
-id="thebasics-macrolist-servicenotificationid"/><literal>$SERVICENOTIFICATIONID$</literal></para>
+id="thebasics-macrolist-servicenotificationid"/>&macro-servicenotificationid;</para>
 							</entry>
 							<entry>
 								<para>Un numéro unique qui identifie une notification des service. Les numéros
@@ -7118,7 +7118,7 @@ contacts notifiés.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-longdatetime"/><literal>$LONGDATETIME$</literal></para>
+									<anchor id="thebasics-macrolist-longdatetime"/>&macro-longdatetime;</para>
 							</entry>
 							<entry>
 								<para>Date et heure actuelles (p. ex. Fri Oct 13 00:30:28 CDT 2000). Le format de
@@ -7129,7 +7129,7 @@ linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-shortdatetime"/><literal>$SHORTDATETIME$</literal></para>
+									<anchor id="thebasics-macrolist-shortdatetime"/>&macro-shortdatetime;</para>
 							</entry>
 							<entry>
 								<para>Date et heure actuelles (p. ex. 10-13-2000 00:30:28). Le format de la date
@@ -7140,7 +7140,7 @@ linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-date"/><literal>$DATE$</literal></para>
+									<anchor id="thebasics-macrolist-date"/>&macro-date;</para>
 							</entry>
 							<entry>
 								<para>Date du jour (p. ex. 10-13-2000). Le format de la date est défini par le
@@ -7151,7 +7151,7 @@ linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-time"/><literal>$TIME$</literal></para>
+									<anchor id="thebasics-macrolist-time"/>&macro-time;</para>
 							</entry>
 							<entry>
 								<para>Heure actuelle (p. ex. 00:30:28).</para>
@@ -7160,7 +7160,7 @@ linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-timet"/><literal>$TIMET$</literal></para>
+									<anchor id="thebasics-macrolist-timet"/>&macro-timet;</para>
 							</entry>
 							<entry>
 								<para>Moment actuel au format time_t (secondes écoulées depuis l'époque UNIX).</para>
@@ -7232,7 +7232,7 @@ de temps précisée, la valeur d ela macro est égale à <quote>0</quote>.</para
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-mainconfigfile"/><literal>$MAINCONFIGFILE$</literal></para>
+									<anchor id="thebasics-macrolist-mainconfigfile"/>&macro-mainconfigfile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link linkend="configuringnagios-configmain">fichier de
@@ -7242,7 +7242,7 @@ configuration principal</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-statusdatafile"/><literal>$STATUSDATAFILE$</literal></para>
+									<anchor id="thebasics-macrolist-statusdatafile"/>&macro-statusdatafile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link
@@ -7252,7 +7252,7 @@ linkend="configuringnagios-configmain-status_file">journal des états</link>.</p
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-commentdatafile"/><literal>$COMMENTDATAFILE$</literal></para>
+									<anchor id="thebasics-macrolist-commentdatafile"/>&macro-commentdatafile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du fichier de commentaire.</para>
@@ -7261,7 +7261,7 @@ linkend="configuringnagios-configmain-status_file">journal des états</link>.</p
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-downtimedatafile"/><literal>$DOWNTIMEDATAFILE$</literal></para>
+									<anchor id="thebasics-macrolist-downtimedatafile"/>&macro-downtimedatafile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du fichier des arrêts planifiés.</para>
@@ -7270,7 +7270,7 @@ linkend="configuringnagios-configmain-status_file">journal des états</link>.</p
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-retentiondatafile"/><literal>$RETENTIONDATAFILE$</literal></para>
+									<anchor id="thebasics-macrolist-retentiondatafile"/>&macro-retentiondatafile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link
@@ -7281,7 +7281,7 @@ mémorisation des états</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-objectcachefile"/><literal>$OBJECTCACHEFILE$</literal></para>
+									<anchor id="thebasics-macrolist-objectcachefile"/>&macro-objectcachefile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link
@@ -7292,7 +7292,7 @@ des objets</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-tempfile"/><literal>$TEMPFILE$</literal></para>
+									<anchor id="thebasics-macrolist-tempfile"/>&macro-tempfile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link
@@ -7302,7 +7302,7 @@ linkend="configuringnagios-configmain-temp_file">fichier temporaire</link>.</par
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-temppath"/><literal>$TEMPPATH$</literal></para>
+									<anchor id="thebasics-macrolist-temppath"/>&macro-temppath;</para>
 							</entry>
 							<entry>
 								<para>Le dossier précisé dans la variable <link
@@ -7312,7 +7312,7 @@ linkend="configuringnagios-configmain-temp_path">chemin temporaire</link>.</para
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-logfile"/><literal>$LOGFILE$</literal></para>
+									<anchor id="thebasics-macrolist-logfile"/>&macro-logfile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link linkend="configuringnagios-configmain-log_file">fichier
@@ -7322,7 +7322,7 @@ journal</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-resourcefile"/><literal>$RESOURCEFILE$</literal></para>
+									<anchor id="thebasics-macrolist-resourcefile"/>&macro-resourcefile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link
@@ -7333,7 +7333,7 @@ ressources</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-commandfile"/><literal>$COMMANDFILE$</literal></para>
+									<anchor id="thebasics-macrolist-commandfile"/>&macro-commandfile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du <link
@@ -7344,7 +7344,7 @@ externes</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-hostperfdatafile"/><literal>$HOSTPERFDATAFILE$</literal></para>
+									<anchor id="thebasics-macrolist-hostperfdatafile"/>&macro-hostperfdatafile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du fichier de performance des hôtes (s'il est défini).</para>
@@ -7353,7 +7353,7 @@ externes</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-serviceperfdatafile"/><literal>$SERVICEPERFDATAFILE$</literal></para>
+									<anchor id="thebasics-macrolist-serviceperfdatafile"/>&macro-serviceperfdatafile;</para>
 							</entry>
 							<entry>
 								<para>Emplacement du fichier de performance des services (s'il est défini).</para>
@@ -7372,32 +7372,32 @@ externes</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-processstarttime"/><literal>$PROCESSSTARTTIME$</literal></para>
+									<anchor id="thebasics-macrolist-processstarttime"/>&macro-processstarttime;</para>
 							</entry>
 							<entry>
 								<para>Moment au format time_t (secondes écoulées depuis l'époque UNIX) où le
 processus Nagios a été (re)démarré pour la dernière fois. Vous pouvez en
 déduire le nombre de secondes écoulées depuis le démarrage (ou redémarrage)
-de Nagios, en soustrayant <literal>$PROCESSSTARTTIME$</literal> de <link
-linkend="thebasics-macrolist-timet"><literal>$TIMET$</literal></link>.</para>
+de Nagios, en soustrayant &macro-processstarttime; de <link
+linkend="thebasics-macrolist-timet">&macro-timet;</link>.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-eventstarttime"/><literal>$EVENTSTARTTIME$</literal></para>
+									<anchor id="thebasics-macrolist-eventstarttime"/>&macro-eventstarttime;</para>
 							</entry>
 							<entry>
 								<para>Moment au format time_t (secondes écoulées depuis l'époque UNIX) où Nagios
 a commencé à traiter les événements (contrôles, etc). Vous pouvez déduire le
 nombre de secondes qui ont été nécessaires au démarrage de Nagios en
-soustrayant <literal>$PROCESSSTARTTIME$</literal> de <literal>$EVENTSTARTTIME$</literal>.</para>
+soustrayant &macro-processstarttime; de &macro-eventstarttime;.</para>
 							</entry>
 						</row>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-adminemail"/><literal>$ADMINEMAIL$</literal></para>
+									<anchor id="thebasics-macrolist-adminemail"/>&macro-adminemail;</para>
 							</entry>
 							<entry>
 								<para>Adresse email globale de l'administrateur. Cette valeur provient du
@@ -7408,7 +7408,7 @@ linkend="configuringnagios-configmain-admin_email">admin_email</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-adminpager"/><literal>$ADMINPAGER$</literal></para>
+									<anchor id="thebasics-macrolist-adminpager"/>&macro-adminpager;</para>
 							</entry>
 							<entry>
 								<para>Numéro/adresse global du pager de l'administrateur. Cette valeur provient du
@@ -7430,7 +7430,7 @@ paramètre (de $ARG1$ à $ARG32$).</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-user"/><literal>$USERn$</literal></para>
+									<anchor id="thebasics-macrolist-user"/>&macro-usern;</para>
 							</entry>
 							<entry>
 								<para>La nième macro définie par l'utilisateur. Les macros utilisateur peuvent
@@ -7499,8 +7499,8 @@ tous les membres (contact) du groupe de contacts cg1.</para>
 			<para>
 				<anchor id="thebasics-macrolist-note8"/> 8 Ces macros d'acquittement sont
 abandonnées. Utilisez désormais les macros plus génériques
-<literal>$NOTIFICATIONAUTHOR$</literal>, <literal>$NOTIFICATIONAUTHORNAME$</literal>, <literal>$NOTIFICATIONAUTHORALIAS$</literal> ou
-<literal>$NOTIFICATIONAUTHORCOMMENT$</literal>.</para>
+&macro-notificationauthor;, &macro-notificationauthorname;, &macro-notificationauthoralias; ou
+&macro-notificationcomment;.</para>
 			<para>
 				<anchor id="thebasics-macrolist-note9"/> 9 Ces macros sont seulement
 valables dans le cas de macros à la demande- par ex. Vous devez fournir un

@@ -407,7 +407,7 @@ define host{
 nom est utilisé dans les définitions de groupes d'hôtes et de services pour
 faire référence à cet hôte en particulier. Les hôtes peuvent avoir plusieurs
 services (qui sont supervisés) associés à eux. Bien utilisé, la <link
-linkend="thebasics-macros">macro</link> <literal>$HOSTNAME$</literal> contiendra ce nom court.
+linkend="thebasics-macros">macro</link> &macro-hostname; contiendra ce nom court.
 		</para>
 		</listitem>
 	</varlistentry>
@@ -419,7 +419,7 @@ linkend="thebasics-macros">macro</link> <literal>$HOSTNAME$</literal> contiendra
 		<para>Cette variable est utilisée pour définir un nom long ou une description
 identifiant l'hôte. Cela permet d'identifier plus facilement un hôte en
 particulier. Bien utilisé, la <link linkend="thebasics-macros">macro</link>
-<literal>$HOSTALIAS$</literal> contiendra cet alias/description.</para>
+&macro-hostalias; contiendra cet alias/description.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>

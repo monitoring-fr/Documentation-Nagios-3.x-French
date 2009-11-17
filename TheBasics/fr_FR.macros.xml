@@ -46,7 +46,7 @@ suivante :
 
 		define command{
 		   command_name   check_ping
-		   command_line   /usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w 100.0,90% -c 200.0,60%
+		   command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w 100.0,90% -c 200.0,60%
 		}
 		</programlisting>
 		<para>La ligne de commande finale, après substitution, qui sera exécutée pour le
@@ -79,7 +79,7 @@ définition d'hôte ci-dessus et une commande check_ping définie comme ceci :</
 		<programlisting>
 		define command{
 		   command_name   check_ping
-		   command_line   /usr/local/nagios/libexec/check_ping -H <literal>$HOSTADDRESS$</literal> -w $ARG1$ -c $ARG2$
+		   command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$
 		</programlisting>
 		<para>La ligne de commande finale à exécuter pour le contrôle du service sera :</para>
 		<para><code>/usr/local/nagios/libexec/check_ping -H 192.168.1.2 -w 200.0,80% -c 400.0,40%</code></para>
@@ -285,7 +285,7 @@ d'environnement.</para>
 les macros correspondantes (listées <link
 linkend="thebasics-macrolist">ici</link>), avec le préfixe <literal>NAGIOS_</literal>. Par
 exemple, la macro <link
-linkend="thebasics-macrolist-hostname"><literal>$HOSTNAME$</literal></link> est disponible à
+linkend="thebasics-macrolist-hostname">&macro-hostname;</link> est disponible à
 travers la variable d'environnement nommée <literal>NAGIOS_HOSTNAME</literal>.</para>
 	</section>
 	<section>
