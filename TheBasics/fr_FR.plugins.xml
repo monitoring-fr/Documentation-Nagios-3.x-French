@@ -22,17 +22,17 @@ sale boulot.</para>
   <title>Que sont les plugins?</title>
 
   <para>Les plugins sont des programmes compilés ou des scripts (Perl, shell, etc..)
-qui peuvent être exécutés en ligne de commande pour contrôler l'état d'un
+qui peuvent être exécutés par une ligne de commande pour contrôler l'état d'un
 hôte ou d'un service. Nagios utilise le résultat des plugins pour déterminer
 le statut actuel des hôtes ou services sur le réseau.</para>
 
   <para>Nagios exécutera un plugin seulement lorsqu'il sera nécessaire de vérifier
 le statut d'un service ou d'un hôte. Le plugin fait quelque chose (notez le
 sens très général du terme) pour effectuer le contrôle et renvoie simplement
-le résultat à Nagios. Nagios Traitera les résultats qu'il aura reçu du
+le résultat à Nagios. Nagios traitera les résultats qu'il aura reçu du
 plugin et prendra les mesures nécessaires (en exécutant des <link
-linkend="advancedtopics-eventhandlers">event handlers</link>, en envoyant
-des <link linkend="thebasics-notifications">notifications</link>, etc).</para>
+linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>, en envoyant
+des <link linkend="thebasics-notifications">notifications</link>, etc…).</para>
  </section>
 
  <section>
@@ -47,11 +47,11 @@ des <link linkend="thebasics-notifications">notifications</link>, etc).</para>
 contrôle présent dans le démon Nagios et les services ou hôtes à superviser.</para>
 
   <para>L'avantage de ce type d'architecture de plugin est que vous pouvez
-superviser a peu près tout ce que vous voulez. Si vous pouvez automatiser le
+superviser à peu près tout ce que vous voulez. Si vous pouvez automatiser le
 procédé de contrôle de quelque-chose, vous pouvez le superviser avec
 Nagios. Il existe déjà plein de plugins qui ont été créés pour superviser
 des ressources basiques comme la charge processeur, l'espace disque utilsé,
-les statistiques de la commade ping, etc… Si vous voulez superviser autre
+les statistiques de la commande ping, etc… Si vous voulez superviser autre
 chose, reportez-vous à la documentation nommée <link
 linkend="development-pluginapi">écrire ses plugins</link> et créez les
 vôtres. C'est très simple!</para>
@@ -63,12 +63,12 @@ la température ambiante, la tension du &acronym-cpu;, la vitesse du ventilateur
 charge du processeur, l'espace disque, ou la capacité de votre
 super_fantastique grille-pain à griller parfaitement votre pain le
 matin… Nagios ne comprend pas les spécificités de ce qui est
-supervisé. Les plugins seulements savent exactement ce qu'ils contrôlent et
-comme effectuer ces contrôles.</para>
+supervisé. Les plugins seulement savent exactement ce qu'ils contrôlent et
+comment effectuer ces contrôles.</para>
  </section>
 
  <section>
-  <title>Quels plugins Existe-il?</title>
+  <title>Quels plugins existe-il?</title>
 
   <para>Il existe des plugins disponibles actuellement pour contrôler de nombreux
 types différents de matériels et de services, y compris:</para>
@@ -92,7 +92,7 @@ types différents de matériels et de services, y compris:</para>
    </listitem>
 
    <listitem>
-    <para>etc.</para>
+    <para>etc…</para>
    </listitem>
   </itemizedlist>
  </section>
