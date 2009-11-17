@@ -22,7 +22,7 @@ définir quelques commandes génériques que vous manipulerez à votre guise.</p
 gestionnaires d'événements, etc.) soit exécutée, Nagios va remplacer toutes
 les macros qu'il trouvera dans la définition de la commande par les valeurs
 correspondantes.</para>
-		<para>Certaines macros peuvent contenir elles-mêmes d'autres macros. Ceux-ci
+		<para>Certaines macros peuvent contenir elles-mêmes d'autres macros. Celles-ci
 incluent les macros &macro-hostnotes;,
 		&macro-hostnotesurl;, &macro-hostactionurl;, &macro-servicenotes;, 
 		&macro-servicenotesurl;, et &macro-serviceactionurl; .</para>
@@ -53,7 +53,7 @@ suivante :
 contrôle de l'hôte ressemblera à ceci :</para>
 		<para><code>/usr/local/nagios/libexec/check_ping -H 192.168.1.2 -w 100.0,90% -c 200.0,60%</code></para>
 		<para>Ce qui est beau c'est que vous pouvez utilisez une simple commande de
-contrôle pour un nombre illimité d'hôtes. Chaque hôte vont être contrôlé
+contrôle pour un nombre illimité d'hôtes. Chaque hôte va être contrôlé
 avec cette même commande parce que chaque adresse de vos hôtes seront
 automatiquement soumis pendant l'exécution de votre commande.</para>
 	</section>
@@ -110,7 +110,7 @@ la syntaxe de base pour les macros à la demande :</para>
 				<para><literal>$SERVICEMACRONAME:host_name:service_description$</literal></para>
 			</listitem>
 		</itemizedlist>
-		<para>Remplace <literal>HOSTMACRONAME</literal> et <literal>SERVICEMACRONAME</literal> avec le nom d'une des macros standard d'hôte ou de service trouvé <link
+		<para>Remplacez <literal>HOSTMACRONAME</literal> et <literal>SERVICEMACRONAME</literal> avec le nom d'une des macros standard d'hôte ou de service trouvé <link
 linkend="thebasics-macrolist">ici</link>.</para>
 		<para>Notez que le nom de la macro est séparé de l'identifiant de l'hôte ou du
 service par deux points (:). Pour les macros de service à la demande,
@@ -164,7 +164,7 @@ groupe de contact dans une macro à la demande, comme ainsi :</para>
 				<para><literal>$CONTACTMACRONAME:contactgroup_name:delimiter$</literal></para>
 			</listitem>
 		</itemizedlist>
-		<para>Remplace <literal>HOSTMACRONAME</literal>, <literal>SERVICEMACRONAME</literal>, et <literal>CONTACTMACRONAME</literal> avec le nom de macro d'un hôte standard, un service, ou le contact trouvé
+		<para>Remplacez <literal>HOSTMACRONAME</literal>, <literal>SERVICEMACRONAME</literal>, et <literal>CONTACTMACRONAME</literal> avec le nom de macro d'un hôte standard, un service, ou le contact trouvé
 <link linkend="thebasics-macrolist">ici</link>. Le délimiteur que vous
 spécifiez est utilisé pour séparer des valeurs de macro pour chaque membre
 d'un groupe.</para>
@@ -202,15 +202,15 @@ variable personnalisée est appelée comme suit :</para>
 		   …
 		}
 		</programlisting>
-		<para>The <literal>_MACADDRESS</literal> serait disponible dans une macro appelée <literal>$_HOSTMACADDRESS$</literal>. Plus d'information sur les variables personnalisées d'objets et comment
-les utiliser dans des macros peut être trouvé <link
+		<para>La variable <literal>_MACADDRESS</literal> serait disponible dans une macro appelée <literal>$_HOSTMACADDRESS$</literal>. Plus d'informations sur les variables personnalisées d'objets et comment
+les utiliser dans des macros peuvent être trouvées <link
 linkend="configuringnagios-customobjectvars">ici</link>.</para>
 	</section>
 	<section>
 		<title>Nettoyage des macros</title>
 		<para>Les valeurs de certaines macros sont dépouillées des métacaractères du shell
 potentiellement dangereux, avant d'être remplacées dans la commande à
-exécuter. Les caractéres qui seront supprimés dans les macros sont définis
+exécuter. Les caractères qui seront supprimés dans les macros sont définis
 par le paramètre <link
 linkend="configuringnagios-configmain-illegal_macro_output_chars">illegal_macro_output_chars</link>.
 Ce nettoyage s'applique aux macros suivantes :</para>
@@ -275,7 +275,7 @@ linkend="thebasics-macrolist-serviceackcomment">&macro-serviceackcomment;</link>
 		<para>A partir de la version 2.0 de Nagios, la plupart des macros sont
 disponibles sous forme de variables d'environnement. Cela signifie que les
 scripts lancés par Nagios (c.-à-d. les commandes de contrôle de service et
-d'hôte, les commandes de notification, etc.) peuvent faire référence à ces
+d'hôte, les commandes de notification, etc...) peuvent faire référence à ces
 macros directement en tant que variables d'environnement standard. Pour des
 raisons de sécurité et de bon sens, <link
 linkend="thebasics-macrolist-user">&macro-usern;</link> et les macros d'hôte et de
