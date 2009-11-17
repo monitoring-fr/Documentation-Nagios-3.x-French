@@ -166,21 +166,21 @@ binaires que vous exécutez.</para>
 
    <listitem>
     <para><emphasis role="bold">Cachez les informations sensibles à l'aide des macros
-<literal>$USERn$</literal></emphasis>. Les &acronym-cgi;s parcourent le <link
+&macro-argn;</emphasis>. Les &acronym-cgi;s parcourent le <link
 linkend="configuringnagios-configmain">fichier de configuration
 principal</link> et le(s) <link
 linkend="configuringnagios-configobject">fichier(s) de configuration des
 objets</link>, n'y laissez donc pas d'informations sensibles (noms
 d'utilisateur, mots de passe, etc…). Si vous avez besoin de préciser un
 mot de passe ou un nom d'utilisateur dans une définition de commande,
-utilisez <literal>$USERn$</literal> <link linkend="thebasics-macros">macro pour le cacher</link>. <literal>$USERn$</literal>
-    Les macros <literal>$USERn$</literal> sont définies dans un ou plusieurs <link
+utilisez &macro-usern; <link linkend="thebasics-macros">macro pour le cacher</link>. &macro-usern;
+    Les macros &macro-usern; sont définies dans un ou plusieurs <link
 linkend="configuringnagios-configmain-resource_file">fichiers de
 ressources</link>. Les &acronym-cgi;s ne parcourant pas les fichiers de ressources,
 vous pouvez leur donner des permissions beaucoup plus restrictives (600 ou
 660). Consultez le fichier <filename>resource.cfg</filename> dans la
 distribution de base de Nagios, il vous donnera un exemple de définition de
-la macro <literal>$USERn$</literal>. </para>
+la macro &macro-usern;. </para>
    </listitem>
 
    <listitem>
@@ -188,14 +188,15 @@ la macro <literal>$USERn$</literal>. </para>
 macros</emphasis>. Utilisez la directive <link
 linkend="configuringnagios-configmain-illegal_macro_output_chars">illegal_macro_output_chars</link>
 pour filtrer les caractères dangereux 
-    <literal>$HOSTOUTPUT$</literal>, <literal>$SERVICEOUTPUT$</literal>,
-    <literal>$HOSTPERFDATA$</literal>, et <literal>$SERVICEPERFDATA$</literal> des chaînes issues des macros $OUTPUT$ et $PERFDATA$ avant qu'elles ne
-soient utilisées pour des notifications, etc. Des caractères dangereux
+    des chaînes issues des macros &macro-hostoutput;, &macro-serviceoutput;,
+    &macro-hostperfdata;, et &macro-serviceperfdata;  avant qu'elles ne
+soient utilisées pour des notifications, etc. 
+Des caractères dangereux
 peuvent être tout caractère qui peut être interprété par un shell, ouvrant
 ainsi un trou de sécurité. Un bon exemple est la présence de la quote
-inverse (`) dans $OUTPUT$ <literal>$HOSTOUTPUT$</literal>,
-    <literal>$SERVICEOUTPUT$</literal>, <literal>$HOSTPERFDATA$</literal>, et/ou
-    <literal>$SERVICEPERFDATA$</literal> $PERFDATA$, qui pourrait permettre à un attaquant d'exécuter un commande
+inverse (`) dans &macro-hostoutput;,
+    &macro-serviceoutput;, &macro-hostperfdata;, et/ou
+    &macro-serviceperfdata;, qui pourrait permettre à un attaquant d'exécuter un commande
 arbitraire comme l'utilisateur nagios (une autre bonne raison pour ne pas
 exécuter Nagios comme l'utilisateur root). </para>
    </listitem>

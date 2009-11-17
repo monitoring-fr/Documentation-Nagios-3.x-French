@@ -127,13 +127,13 @@ shell ou perl, mais ils peuvent être n'importe quoi d'exécutable depuis la
 ligne de commande. Au minimum, les scripts devraient prendre les <link
 linkend="thebasics-macros">macros</link> suivantes comme arguments :</para>
 		<para>Pour les services: <link
-linkend="thebasics-macrolist-servicestate"><literal>$SERVICESTATE$</literal></link>, <link
-linkend="thebasics-macrolist-servicestatetype"><literal>$SERVICESTATETYPE$</literal></link>,
+linkend="thebasics-macrolist-servicestate">&macro-servicestate;</link>, <link
+linkend="thebasics-macrolist-servicestatetype">&macro-servicestatetype;</link>,
 <link
-linkend="thebasics-macrolist-serviceattempt"><literal>$SERVICEATTEMPT$</literal></link>Pour les
+linkend="thebasics-macrolist-serviceattempt">&macro-serviceattempt;</link>Pour les
 hôtes: <link linkend="thebasics-macrolist-hoststate">&macro-hoststate;</link>,
-<link linkend="thebasics-macrolist-hoststatetype"><literal>$HOSTSTATETYPE$</literal></link>,
-<link linkend="thebasics-macrolist-hostattempt"><literal>$HOSTATTEMPT$</literal></link>
+<link linkend="thebasics-macrolist-hoststatetype">&macro-hoststatetype;</link>,
+<link linkend="thebasics-macrolist-hostattempt">&macro-hostattempt;</link>
 		</para>
 		<para>Les scripts devraient être capables d'examiner les valeurs des arguments qui
 lui ont été passé et de prendre toute action nécessaire basée sur ces

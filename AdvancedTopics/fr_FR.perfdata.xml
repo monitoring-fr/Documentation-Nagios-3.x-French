@@ -45,13 +45,13 @@ planifié d'exécution) et le nombre de secondes qu'il aura fallu pour
 exécuter un contrôle d'hôte ou des service. Ce type de données de
 performance sont valables pour tous les contrôles qui sont effectués. Les
 <link linkend="thebasics-macros">macros</link> <link
-linkend="thebasics-macrolist-hostexecutiontime"><literal>$HOSTEXECUTIONTIME$</literal></link>
+linkend="thebasics-macrolist-hostexecutiontime">&macro-hostexecutiontime;</link>
 et <link
-linkend="thebasics-macrolist-serviceexecutiontime"><literal>$SERVICEEXECUTIONTIME$</literal></link>
+linkend="thebasics-macrolist-serviceexecutiontime">&macro-serviceexecutiontime;</link>
 peuvent être utilisées pour determiner le nombre de secondes qu'aura duré un
 contrôle d'hôte ou de service et les macros <link
-linkend="thebasics-macrolist-hostlatency"><literal>$HOSTLATENCY$</literal></link> et <link
-linkend="thebasics-macrolist-servicelatency"><literal>$SERVICELATENCY$</literal></link> peuvent
+linkend="thebasics-macrolist-hostlatency">&macro-hostlatency;</link> et <link
+linkend="thebasics-macrolist-servicelatency">&macro-servicelatency;</link> peuvent
 être utilisées afin de derterminer le "retard" que pourrait avoir un
 contrôle régulier d'un hôte ou d'un service.</para>
 
@@ -64,12 +64,12 @@ plugin contrôle quand il est exécuté. Les données de performance spécifique
 au plugin sont facultatives et ne sont pas forcement disponibles avec tous
 les plugins. Les données de performances spécifiques au plugin (si
 disponibles) peuvent être obtenues en utilisant les macros <link
-linkend="thebasics-macrolist-hostperfdata"><literal>$HOSTPERFDATA$</literal></link> et <link
-linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link> <link
+linkend="thebasics-macrolist-hostperfdata">&macro-hostperfdata;</link> et <link
+linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> <link
 linkend="thebasics-macros"></link>. Lire la suite pour plus d'informations
 sur la façon dont les plugins peuvent retourner les données de performance à
-Nagios afin de les stocker dans les macros <literal>$HOSTPERFDATA$</literal> and
-<literal>$SERVICEPERFDATA$</literal>.</para>
+Nagios afin de les stocker dans les macros &macro-hostperfdata; and
+&macro-serviceperfdata;.</para>
 	</section>
 
 	<section>
@@ -83,8 +83,8 @@ pourrait retourner une ligne de texte comme celle qui suit:</para>
 		<programlisting>PING ok - Packet loss = 0%, RTA = 0.80 ms </programlisting>
 
 		<para>Avec ce simple type de sortie, la ligne entière est disponible dans les
-<link linkend="thebasics-macros">macros</link> <literal>$HOSTOUTPUT$</literal> ou
-<literal>$SERVICEOUTPUT$</literal> (Cela dépend si le pllugin est utilisé pour le contrôle d'un
+<link linkend="thebasics-macros">macros</link> &macro-hostoutput; ou
+&macro-serviceoutput; (Cela dépend si le pllugin est utilisé pour le contrôle d'un
 hôte ou d'un service).</para>
 
 		<para>Les plugins peuvent renvoyer des données de performance dans leur message
@@ -104,19 +104,19 @@ plugin, il le scindera en deux parties:</para>
 			<listitem>
 				<para>Tout ce qui est situé avant le caratère 'pipe' ( | ) est considéré comme le
 message de sortie <quote>normal</quote> du plugin et sera alors stocké selon
-le cas dans les macros <literal>$HOSTOUTPUT$</literal> ou <literal>$SERVICEOUTPUT$</literal></para>
+le cas dans les macros &macro-hostoutput; ou &macro-serviceoutput;</para>
 			</listitem>
 
 			<listitem>
 				<para>Tout ce qui est situé après le caractère 'pipe' ( | ) est considéré comme
 étant les données de performance du plugin et seront stockées selon le cas
-dans les macros <literal>$HOSTPERFDATA$</literal> ou <literal>$SERVICEPERFDATA$</literal> </para>
+dans les macros &macro-hostperfdata; ou &macro-serviceperfdata; </para>
 			</listitem>
 		</orderedlist>
 
-		<para>Dans l'exemple ci-dessus, la macro <literal>$HOSTOUTPUT$</literal> ou <literal>$SERVICEOUTPUT$</literal>
+		<para>Dans l'exemple ci-dessus, la macro &macro-hostoutput; ou &macro-serviceoutput;
 contiendra <emphasis><quote>PING ok - Packet loss = 0%, RTA = 0.80 ms</quote></emphasis>
-(sans les guillemets) et la macro <literal>$HOSTPERFDATA$</literal> ou <literal>$SERVICEPERFDATA$</literal>
+(sans les guillemets) et la macro &macro-hostperfdata; ou &macro-serviceperfdata;
 contiendra <emphasis><quote>percent_packet_loss=0, rta=0.80</quote></emphasis> (sans les
 guillemets).</para>
 

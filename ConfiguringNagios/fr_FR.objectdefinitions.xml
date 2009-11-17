@@ -2487,7 +2487,7 @@ define contact{
 contact. Ceci est référencé dans les définitions de <link
 linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
 contacts</link>. Dans les bonnes circonstances, la <link
-linkend="thebasics-macros">macro</link> <literal>$CONTACTNAME$</literal> contiendra cette
+linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
 valeur.
 		</para>
 		</listitem>
@@ -2499,7 +2499,7 @@ valeur.
 		<listitem>
 		<para>Cette variable est utilisée pour définir un nom long ou une description
 identifiant le contact. Dans les bonnes circonstances, la <link
-linkend="thebasics-macros">macro</link> <literal>$CONTACTNAME$</literal> contiendra cette
+linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
 valeur. Si non précisée, la variable <emphasis>contact_name</emphasis> sera
 utilisé comme alias.
         </para>
@@ -2671,7 +2671,7 @@ linkend="configuringnagios-configmain-notification_timeout">notification_timeout
 contact. En fonction de la façon dont vous avez configuré les commandes de
 notifications, cela peut être utilisé pour envoyer une alerte par email au
 contact. Dans les bonnes circonstances, la <link
-linkend="thebasics-macros">macro</link> <literal>$CONTACTEMAIL$</literal> contiendra cette
+linkend="thebasics-macros">macro</link> &macro-contactemail; contiendra cette
 valeur.
 		</para>
 		</listitem>
@@ -2688,7 +2688,7 @@ url="mailto:pagejoe@pagenet.com">pagejoe@pagenet.com</ulink>). En fonction
 de la façon dont vous avez configuré les commandes de notifications, cela
 peut être utilisé pour envoyer une alerte par pager au contact. Dans les
 bonnes circonstances, la <link linkend="thebasics-macros">macro</link>
-<literal>$CONTACTPAGER$</literal> contiendra cette valeur.
+&macro-contactpager; contiendra cette valeur.
 		</para>
 		</listitem>
 	</varlistentry>
@@ -3207,16 +3207,16 @@ virgule</emphasis> (;) dans la variable <emphasis>command_line</emphasis>
 parce que tout ce qui se trouvera après sera considéré comme commentaire de
 fichier de configuration. Vous pouvez contourner cette limitation en
 initialisant une macro utilisateur <link
-linkend="thebasics-macrolist-user"><literal>$USER$</literal></link> dans votre <link
+linkend="thebasics-macrolist-usern">&macro-usern;</link> dans votre <link
 linkend="configuringnagios-configmain-resource_file">fichier de
 ressource</link> avec un point virgule et en référençant ensuite cette macro
-<literal>$USER$</literal> dans la variable <emphasis>command_line</emphasis> à la place du
+&macro-usern; dans la variable <emphasis>command_line</emphasis> à la place du
 point virgule. 
 		</para></note>
 		<para>
 		Si vous souhaitez passer des arguments aux commandes pendant l'exécution,
-vous pouvez utiliser les <link linkend="thebasics-macrolist-arg">macros
-<literal>$ARGn$</literal></link> dans la variable <emphasis>command_line</emphasis> de la
+vous pouvez utiliser les <link linkend="thebasics-macrolist-argn">macros
+&macro-argn;</link> dans la variable <emphasis>command_line</emphasis> de la
 définition de commande et ensuite séparer chaque argument du nom de la
 commande (et pour séparer chaque argument) avec le symbole du point
 d'exclamation (!) dans les variables de définitions (commande de contrôle

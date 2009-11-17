@@ -94,31 +94,31 @@ soient totalement compatibles avec Nagios 3:
   <itemizedlist>
    <listitem>
     <para>
-     L'ancienne variable <varname>service_reaper_frequency</varname> dans le
+     L'ancienne variable <literal>service_reaper_frequency</literal> dans le
 fichier de configuration princpal a été renommée en <link
-linkend="configuringnagios-configmain-check_result_reaper_frequency"><varname>check_result_reaper_frequency</varname></link>.
+linkend="configuringnagios-configmain-check_result_reaper_frequency"><literal>check_result_reaper_frequency</literal></link>.
     </para>
    </listitem>
    <listitem>
     <para>
      L'ancienne macro <literal>$NOTIFICATIONNUMBER$</literal> a été remplacée par
 les deux nouvelles macros <link
-linkend="thebasics-macrolist-hostnotificationnumber"><literal>$HOSTNOTIFICATIONNUMBER$</literal></link>
+linkend="thebasics-macrolist-hostnotificationnumber">&macro-hostnotificationnumber;</link>
 et <link
-linkend="thebasics-macrolist-servicenotificationnumber"><literal>$SERVICENOTIFICATIONNUMBER$</literal></link>
+linkend="thebasics-macrolist-servicenotificationnumber">&macro-servicenotificationnumber;</link>
 .
     </para>
    </listitem>
    <listitem>
     <para>
-     L'ancienne directive <varname>parallelize</varname> des définitions de
+     L'ancienne directive <literal>parallelize</literal> des définitions de
 services est maintenant devenue obsolète et n'est plus utilisée, du fait que
 les contrôles de services se font désormais en parallèle.
     </para>
    </listitem>
    <listitem>
     <para>
-     L'ancienne option <varname>aggregate_status_updates</varname> a été
+     L'ancienne option <literal>aggregate_status_updates</literal> a été
 supprimée. Toutes les mises à jour du fichier de statut sont maintenant
 regroupées dans un intervalle de temps minimum d'une seconde.
     </para>
@@ -133,7 +133,7 @@ définition vers les définitions des hôtes et des services, respectivement.
    </listitem>
    <listitem>
     <para>
-     L'ancienne variable du fichier <varname>downtime_file</varname> dans le
+     L'ancienne variable du fichier <literal>downtime_file</literal> dans le
 fichier de configuration principal n'est plus utilisée, les entrées
 correspondant aux arrêts planifiés sont maintenant sauvegardées dans le <link
 linkend="configuringnagios-configmain-state_retention_file">fichier de
@@ -144,7 +144,7 @@ programmés au fichier de rétention.
    </listitem>
    <listitem>
     <para>
-     L'ancienne variable du fichier <varname>comment_file</varname> dans le
+     L'ancienne variable du fichier <literal>comment_file</literal> dans le
 fichier de configuration principal n'est plus utilisé, les commentaires
 sont maintenant sauvegardés dans le <link
 linkend="configuringnagios-configmain-state_retention_file">fichier de

@@ -143,7 +143,7 @@ sortie, cela ressemblerait à ceci:</para>
 		<screen>DISK OK - free space: / 3326 MB (56%);</screen>
 		<para>Si le plugin est utilisé pour effectuer un contrôle d'un service, la ligne
 entière de sortie sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput"><literal>$SERVICEOUTPUT$</literal></link>
+linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
 .</para>
 		<para><emphasis role="bold">Cas 2: Une ligne en sortie (texte et données de
 performance)</emphasis></para><para>Un plugin peut retourner optionnelement des données de performance pouvant
@@ -156,10 +156,10 @@ comme ceci:</para>
 		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
 rouge du message de sortie du plugin (à gauche du séparateur 'pipe') sera
 écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput"><literal>$SERVICEOUTPUT$</literal></link> et la
+linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link> et la
 partie orange du message de sortie du plugin (à droite du séparateur 'pipe'
 ) sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link> .</para>
+linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> .</para>
 		<para><emphasis role="bold">Cas 3: Plusieurs lignes de sortie (texte et données de
 performance)</emphasis></para><para>Un plugin peut optionnellement retourner plusieurs lignes de texte et de
 données de performance, comme suit:</para>
@@ -167,14 +167,14 @@ données de performance, comme suit:</para>
 		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
 rouge de la première ligne du message de sortie du plugin (à gauche du
 séparateur 'pipe') sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput"><literal>$SERVICEOUTPUT$</literal></link> . Les
+linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link> . Les
 parties oranges de la première ligne et suivantes seront concaténées (avec
 des espaces) et seront stockées dans la macro <link
-linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link> . Les
+linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> . Les
 parties bleues de la 2ème à la 5ème ligne du message de sortie du plugin
 seront concaténées (avec comme séparateur le caractère 'nouvelle ligne' [
  ] ) et seront stockées dans la macro <link
-linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</literal></link> .</para>
+linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link> .</para>
 		<para>Le contenu final de chaque macro est listé ci-dessous:</para>
 		<informaltable frame="all">
 			<tgroup cols="2">
@@ -191,7 +191,7 @@ linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</li
 				<tbody>
 					<row>
 						<entry>
-							<para><literal>$SERVICEOUTPUT$</literal></para>
+							<para>&macro-serviceoutput;</para>
 						</entry>
 						<entry>
 							<para>DISK OK - free space: / 3326 MB (56%);</para>
@@ -199,7 +199,7 @@ linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</li
 					</row>
 					<row>
 						<entry>
-							<para><literal>$SERVICEPERFDATA$</literal></para>
+							<para>&macro-serviceperfdata;</para>
 						</entry>
 						<entry>
 							<para>/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</para>
@@ -207,7 +207,7 @@ linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</li
 					</row>
 					<row>
 						<entry>
-							<para><literal>$LONGSERVICEOUTPUT$</literal></para>
+							<para>&macro-longserviceoutput;</para>
 						</entry>
 						<entry>
 							<para>/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</para>

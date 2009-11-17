@@ -342,7 +342,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-lasthoststate">&macro-lasthostate;</link>
+									<link linkend="thebasics-macrolist-lasthoststate">&macro-lasthoststate;</link>
 								</para>
 							</entry>
 							<entry>
@@ -467,7 +467,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-maxhostattempt">&macro-maxhostattempt;</link>
+									<link linkend="thebasics-macrolist-maxhostattempts">&macro-maxhostattempts;</link>
 								</para>
 							</entry>
 							<entry>
@@ -3411,7 +3411,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-contactaddress">$CONTACTADDRESSn$</link>
+									<link linkend="thebasics-macrolist-contactaddressn">&macro-contactaddressn;</link>
 								</para>
 							</entry>
 							<entry>
@@ -4719,7 +4719,7 @@ linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-isvalidtime"><literal>$ISVALIDTIME:$</literal></link> <link
+									<link linkend="thebasics-macrolist-isvalidtime">&macro-isvalidtime;</link> <link
 linkend="thebasics-macrolist-note9">9</link>
 								</para>
 							</entry>
@@ -4751,7 +4751,7 @@ linkend="thebasics-macrolist-note9">9</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-nextvalidtime"><literal>$NEXTVALIDTIME:$</literal></link>
+									<link linkend="thebasics-macrolist-nextvalidtime">&macro-nextvalidtime;</link>
 <link linkend="thebasics-macrolist-note9">9</link>
 								</para>
 							</entry>
@@ -5397,7 +5397,7 @@ linkend="thebasics-macrolist-processstarttime">&macro-processstarttime;</link>
 						<row>
 							<entry>
 								<para>
-									<link linkend="thebasics-macrolist-arg">$ARGn$</link>
+									<link linkend="thebasics-macrolist-argn">&macro-argn;</link>
 								</para>
 							</entry>
 							<entry>
@@ -5543,7 +5543,7 @@ l'hôte</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-lasthoststate"/>&macro-lasthostate;</para>
+									<anchor id="thebasics-macrolist-lasthoststate"/>&macro-lasthoststate;</para>
 							</entry>
 							<entry>
 								<para>Une chaîne représentant le dernier état de l'hôte (<quote>UP</quote>,
@@ -5589,7 +5589,7 @@ manière spécifique selon le nombre de tentatives.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-maxhostattempt"/>&macro-maxhostattempt;</para>
+									<anchor id="thebasics-macrolist-maxhostattempts"/>&macro-maxhostattempts;</para>
 							</entry>
 							<entry>
 								<para>Le nombre maximum d'essais de contrôles défini pour l'hôte actuel. Utile
@@ -7169,7 +7169,7 @@ linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-isvalidtime"/><literal>$ISVALIDTIME:$</literal> <link
+									<anchor id="thebasics-macrolist-isvalidtime"/>&macro-isvalidtime; <link
 linkend="thebasics-macrolist-note9">9</link>
 								</para>
 							</entry>
@@ -7195,7 +7195,7 @@ valide dans la période de temps <quote>24x7</quote>. Égale à
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-nextvalidtime"/><literal>$NEXTVALIDTIME:$</literal> <link
+									<anchor id="thebasics-macrolist-nextvalidtime"/>&macro-nextvalidtime; <link
 linkend="thebasics-macrolist-note9">9</link>
 								</para>
 							</entry>
@@ -7419,12 +7419,12 @@ linkend="configuringnagios-configmain-admin_pager">admin_pager</link>.</para>
 						<row>
 							<entry>
 								<para>
-									<anchor id="thebasics-macrolist-arg"/>$ARGn$</para>
+									<anchor id="thebasics-macrolist-arg"/>&macro-argn;</para>
 							</entry>
 							<entry>
-								<para>Le nième paramètre passé à la commande (notification, gestionnaire
+								<para>Le n-ième paramètre passé à la commande (notification, gestionnaire
 d'événement, contrôle de service, etc.). Nagios gère jusqu'à 32 macros de
-paramètre (de $ARG1$ à $ARG32$).</para>
+paramètre (de <literal>$ARG1$</literal> à <literal>$ARG32$</literal>).</para>
 							</entry>
 						</row>
 						<row>

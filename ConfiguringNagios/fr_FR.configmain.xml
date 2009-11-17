@@ -258,8 +258,8 @@ File"/>Fichier de ressources</title>
    </informaltable>
 
    <para>Le fichier de ressources optionnel qui contient des définitions de macros du
-type <literal>$USERn$</literal>.
-   <literal>$USERn$</literal> Les <link linkend="thebasics-macros">macros</link> <literal>$USERn$</literal> permettent de
+type &macro-usern;.
+   &macro-usern; Les <link linkend="thebasics-macros">macros</link> &macro-usern; permettent de
    stocker des noms d'utilisateurs, des mots de passe, et les éléments couramment utilisés dans les commandes (comme les
 chemins d'accès). Les &acronym-cgi;s ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
@@ -267,7 +267,7 @@ protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de
 ressources en ajoutant des directives resource_file
    <literal>resource_file</literal> au fichier de configuration principal - Nagios les traitera
 tous. Référez-vous au fichier <filename>resource.cfg</filename> d'exemple situé à la racine de la
-distribution de Nagios, pour voir comment utiliser les macros <literal>$USERn$</literal>.</para>
+distribution de Nagios, pour voir comment utiliser les macros &macro-usern;.</para>
   </section>
 
   <section>
@@ -4650,14 +4650,14 @@ déconseille. Quelques uns d'entre eux sont interprétés par le shell ( par
 exemple, le ` ) et peuvent poser des problèmes de sécurité. Les macros
 suivantes sont débarrassées des caractères spécifiés dans l'option :</para>
    <itemizedlist spacing="compact">
-   	<listitem><para><literal>$HOSTOUTPUT$</literal></para></listitem>
-	<listitem><para><literal>$HOSTPERFDATA$</literal></para></listitem>
-	<listitem><para><literal>$HOSTACKAUTHOR$</literal></para></listitem>
-	<listitem><para><literal>$HOSTACKCOMMENT$</literal></para></listitem>
-	<listitem><para><literal>$SERVICEOUTPUT$</literal></para></listitem>
-	<listitem><para><literal>$SERVICEPERFDATA$</literal></para></listitem>
-	<listitem><para><literal>$SERVICEACKAUTHOR$</literal></para></listitem>
-	<listitem><para><literal>$SERVICEACKCOMMENT$</literal></para></listitem>
+   	<listitem><para>&macro-hostoutput;</para></listitem>
+	<listitem><para>&macro-hostperfdata;</para></listitem>
+	<listitem><para>&macro-hostackauthor;</para></listitem>
+	<listitem><para>&macro-hostackcomment;</para></listitem>
+	<listitem><para>&macro-serviceoutput;</para></listitem>
+	<listitem><para>&macro-serviceperfdata;</para></listitem>
+	<listitem><para>&macro-serviceackauthor;</para></listitem>
+	<listitem><para>&macro-serviceackcomment;</para></listitem>
    </itemizedlist>
   </section>
 
@@ -4776,7 +4776,7 @@ xreflabel="Administrator Email Address"/>Adresse email de l'administrateur</titl
    <para>C'est l'adresse mail de l'administrateur local de la machine (i.e. celle sur
 laquelle Nagios tourne). Cette valeur peut être utilisée dans les commandes
 de notification grâce à la <link linkend="thebasics-macros">macro</link>
-<literal>$ADMINEMAIL$</literal>.</para>
+&macro-adminemail;.</para>
   </section>
 
   <section>

@@ -23,9 +23,9 @@ gestionnaires d'événements, etc.) soit exécutée, Nagios va remplacer toutes
 les macros qu'il trouvera dans la définition de la commande par les valeurs
 correspondantes.</para>
 		<para>Certaines macros peuvent contenir elles-mêmes d'autres macros. Ceux-ci
-incluent les macros <literal><literal>$HOSTNOTES$</literal></literal>,
-		<literal><literal>$HOSTNOTESURL$</literal></literal>, <literal><literal>$HOSTACTIONURL$</literal></literal>, <literal><literal>$SERVICENOTES$</literal></literal>, 
-		<literal><literal>$SERVICENOTESURL$</literal></literal>, et <literal><literal>$SERVICEACTIONURL$</literal></literal> .</para>
+incluent les macros &macro-hostnotes;,
+		&macro-hostnotesurl;, &macro-hostactionurl;, &macro-servicenotes;, 
+		&macro-servicenotesurl;, et &macro-serviceactionurl; .</para>
 	</section>
 	<section>
 		<title>Exemple 1: La macro d'adresse de l'hôte</title>
@@ -73,9 +73,9 @@ d'exclamation (!) comme ceci :</para>
 		}
 		</programlisting>
 		<para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
-paramètres (auxquels on fait référence par les macros $ARGn$). La macro
-$ARG1$ vaudra <quote>200.0,80%</quote> et $ARG2$ <literal>$ARG2$</literal> vaudra <quote>400.0,40%</quote> (sans les guillemets). Supposons que nous utilisons la
-définition d'hôte ci-dessus et une commande check_ping définie comme ceci :</para>
+paramètres (auxquels on fait référence par les macros &macro-argn;). La macro
+<literal>$ARG1$</literal> vaudra <quote>200.0,80%</quote> et <literal>$ARG2$</literal> vaudra <quote>400.0,40%</quote> (sans les guillemets).
+Supposons que nous utilisons la définition d'hôte ci-dessus et une commande <command>check_ping</command> définie comme ceci :</para>
 		<programlisting>
 		define command{
 		   command_name   check_ping
@@ -217,55 +217,55 @@ Ce nettoyage s'applique aux macros suivantes :</para>
 		<orderedlist>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostoutput"><literal>$HOSTOUTPUT$</literal></link>
+					<link linkend="thebasics-macrolist-hostoutput">&macro-hostoutput;</link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-longhostoutput"><literal>$LONGHOSTOUTPUT$</literal></link>
+					<link linkend="thebasics-macrolist-longhostoutput">&macro-longhostoutput;</link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostperfdata"><literal>$HOSTPERFDATA$</literal></link>
+					<link linkend="thebasics-macrolist-hostperfdata">&macro-hostperfdata;</link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostackauthor"><literal>$HOSTACKAUTHOR$</literal></link>
+					<link linkend="thebasics-macrolist-hostackauthor">&macro-hostackauthor;</link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-hostackcomment"><literal>$HOSTACKCOMMENT$</literal></link>
+					<link linkend="thebasics-macrolist-hostackcomment">&macro-hostackcomment;</link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
-					<link linkend="thebasics-macrolist-serviceoutput"><literal>$SERVICEOUTPUT$</literal></link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link
-linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</literal></link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link>
+					<link linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
 					<link
-linkend="thebasics-macrolist-serviceackauthor"><literal>$SERVICEACKAUTHOR$</literal></link>
+linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<link linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link>
 				</para>
 			</listitem>
 			<listitem>
 				<para>
 					<link
-linkend="thebasics-macrolist-serviceackcomment"><literal>$SERVICEACKCOMMENT$</literal></link>
+linkend="thebasics-macrolist-serviceackauthor">&macro-serviceackauthor;</link>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<link
+linkend="thebasics-macrolist-serviceackcomment">&macro-serviceackcomment;</link>
 				</para>
 			</listitem>
 		</orderedlist>
@@ -278,7 +278,7 @@ scripts lancés par Nagios (c.-à-d. les commandes de contrôle de service et
 d'hôte, les commandes de notification, etc.) peuvent faire référence à ces
 macros directement en tant que variables d'environnement standard. Pour des
 raisons de sécurité et de bon sens, <link
-linkend="thebasics-macrolist-user"><literal>$USERn$</literal></link> et les macros d'hôte et de
+linkend="thebasics-macrolist-user">&macro-usern;</link> et les macros d'hôte et de
 service à la demande ne sont pas disponibles comme variables
 d'environnement.</para>
 		<para>Les variables d'environnement qui contiennent des macros sont nommées comme
