@@ -258,16 +258,16 @@ File"/>Fichier de ressources</title>
    </informaltable>
 
    <para>Le fichier de ressources optionnel qui contient des définitions de macros du
-type $USERn$.
-   <code>$USERn$</code> Les <link linkend="thebasics-macros">macros</link> $USERn$ permettent de stocker des noms d'utilisateurs, des mots
-de passe, et les éléments couramment utilisés dans les commandes (comme les
+type <literal>$USERn$</literal>.
+   <literal>$USERn$</literal> Les <link linkend="thebasics-macros">macros</link> <literal>$USERn$</literal> permettent de
+   stocker des noms d'utilisateurs, des mots de passe, et les éléments couramment utilisés dans les commandes (comme les
 chemins d'accès). Les &acronym-cgi;s ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
 protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de
 ressources en ajoutant des directives resource_file
-   <code>resource_file</code> au fichier de configuration principal - Nagios les traitera
-tous. Référez-vous au fichier resource.cfg d'exemple situé à la racine de la
-distribution de Nagios, pour voir comment utiliser les macros $USERn$. <code>$USERn$</code> .</para>
+   <literal>resource_file</literal> au fichier de configuration principal - Nagios les traitera
+tous. Référez-vous au fichier <filename>resource.cfg</filename> d'exemple situé à la racine de la
+distribution de Nagios, pour voir comment utiliser les macros <literal>$USERn$</literal>.</para>
   </section>
 
   <section>

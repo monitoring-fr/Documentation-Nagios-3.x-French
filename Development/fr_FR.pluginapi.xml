@@ -167,14 +167,14 @@ données de performance, comme suit:</para>
 		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
 rouge de la première ligne du message de sortie du plugin (à gauche du
 séparateur 'pipe') sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput">$SERVICEOUTPUT$</link> . Les
+linkend="thebasics-macrolist-serviceoutput"><literal>$SERVICEOUTPUT$</literal></link> . Les
 parties oranges de la première ligne et suivantes seront concaténées (avec
 des espaces) et seront stockées dans la macro <link
-linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> . Les
+linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link> . Les
 parties bleues de la 2ème à la 5ème ligne du message de sortie du plugin
 seront concaténées (avec comme séparateur le caractère 'nouvelle ligne' [
  ] ) et seront stockées dans la macro <link
-linkend="thebasics-macrolist-longserviceoutput">$LONGSERVICEOUTPUT$</link> .</para>
+linkend="thebasics-macrolist-longserviceoutput"><literal>$LONGSERVICEOUTPUT$</literal></link> .</para>
 		<para>Le contenu final de chaque macro est listé ci-dessous:</para>
 		<informaltable frame="all">
 			<tgroup cols="2">
@@ -191,7 +191,7 @@ linkend="thebasics-macrolist-longserviceoutput">$LONGSERVICEOUTPUT$</link> .</pa
 				<tbody>
 					<row>
 						<entry>
-							<para>$SERVICEOUTPUT$</para>
+							<para><literal>$SERVICEOUTPUT$</literal></para>
 						</entry>
 						<entry>
 							<para>DISK OK - free space: / 3326 MB (56%);</para>
@@ -199,7 +199,7 @@ linkend="thebasics-macrolist-longserviceoutput">$LONGSERVICEOUTPUT$</link> .</pa
 					</row>
 					<row>
 						<entry>
-							<para>$SERVICEPERFDATA$</para>
+							<para><literal>$SERVICEPERFDATA$</literal></para>
 						</entry>
 						<entry>
 							<para>/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</para>
@@ -207,7 +207,7 @@ linkend="thebasics-macrolist-longserviceoutput">$LONGSERVICEOUTPUT$</link> .</pa
 					</row>
 					<row>
 						<entry>
-							<para>$LONGSERVICEOUTPUT$</para>
+							<para><literal>$LONGSERVICEOUTPUT$</literal></para>
 						</entry>
 						<entry>
 							<para>/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</para>
@@ -242,8 +242,8 @@ ligne que les suivantes (comme montré si dessous)</para>
 plugin. Ceci dans le but d'empêcher les plugins à déverser des Mégas ou des
 Gigas de données à Nagios. Cette limite de 4KB est assez facile à modifier
 si vous en ressentez le besoin. Il suffit de modifier la valeur de la
-définition nommée MAX_PLUGIN_OUTPUT_LENGTH dans le fichier
-include/nagios.h.in du code source et de recompiler Nagios. Il n'y a rien
+définition nommée <literal>MAX_PLUGIN_OUTPUT_LENGTH</literal> dans le fichier
+<filename>include/nagios.h.in</filename> du code source et de recompiler Nagios. Il n'y a rien
 d'autre à faire!</para>
 	</section>
 	<section>

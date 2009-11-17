@@ -135,11 +135,11 @@ comme étant <quote>l’esclave</quote>. </para>
 			<title>Réglages initiaux du programme</title>
 			
 			<para>Le système esclave (système E) a sa directive initiale de notification <link
-linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link>
+linkend="configuringnagios-configmain-enable_notifications"><literal>enable_notifications</literal></link>
 désactivée, afin de lui éviter d’envoyer des notifications autant pour les
 hôtes que pour les services. Il faut aussi s’assurer que le système esclave
 a sa directive <link
-linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link>
+linkend="configuringnagios-configmain-check_external_commands"><literal>check_external_commands</literal></link>
 activée. C’est plutôt simple…</para>
 		</section>
 		
@@ -159,7 +159,7 @@ fichiers de configuration…</para>
 				<listitem>
 					<para>La définition du système A (dans le fichier de configuration du système E)
 devrait avoir un gestionnaire d’événement défini. Supposons que le nom du
-gestionnaire d’événement pour le système s’appelle handle-master-host-event <code>handle-master-host-event</code>.</para>
+gestionnaire d’événement pour le système s’appelle <literal>handle-master-host-event</literal>.</para>
 				</listitem>
 				
 				<listitem>
@@ -174,7 +174,7 @@ check_nagios sur le système A &acronym-faq;.</para>
 système A devrait être un <link
 linkend="advancedtopics-eventhandlers">gestionnaire
 d’événement</link>. Supposons que ce service gestionnaire d’événement soit
-handle-master-proc-event.</para>
+<literal>handle-master-proc-event</literal>.</para>
 				</listitem>
 			</itemizedlist>
 			
@@ -216,7 +216,7 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 			
 			<para>Ok, regardons à quoi ressemble ce script…</para>
 			
-			<para>Gestionnaire d’Evènement de système (handle-master-host-event):</para>
+			<para>Gestionnaire d’Evènement de système (<literal>handle-master-host-event</literal>):</para>
 				
 			<programlisting>#!/bin/sh
 				# Only take action on hard host states…
@@ -242,7 +242,7 @@ placer ailleurs, mais vous devrez modifier les exemples que j’ai donnés ici.<
 				esac
 				exit 0</programlisting>
 			
-			<para>Gestionnaire d’Evènements de Service (handle-master-proc-event):</para>
+			<para>Gestionnaire d’Evènements de Service (<literal>handle-master-proc-event</literal>):</para>
 				
 			<programlisting>#!/bin/sh
 				# Only take action on hard service states…
@@ -289,13 +289,13 @@ services tant que le processus Nagios fonctionne sur le système maître
 			<itemizedlist>
 				<listitem>
 					<para>Le système maître (système A) tombe et le gestionnaire d’événement de
-système handle-master-host-event est exécuté.</para>
+système <literal>handle-master-host-event</literal> est exécuté.</para>
 				</listitem>
 				
 				<listitem>
 					<para>Le processus Nagios sur le système maître (système A) s’arrête de
 fonctionner et le gestionnaire d’événement du service
-handle-master-proc-event est exécuté.</para>
+<literal>handle-master-proc-event</literal> est exécuté.</para>
 				</listitem>
 			</itemizedlist>
 			
@@ -310,12 +310,12 @@ contacts des problèmes de systèmes et services!</para>
 			<itemizedlist>
 				<listitem>
 					<para>Le système A revient à la normale et le gestionnaire d’événement de système
-handle-master-host-event est exécuté.</para>
+<literal>handle-master-host-event</literal> est exécuté.</para>
 				</listitem>
 				
 				<listitem>
 					<para>Le processus Nagios sur le système A revient à la normale et que le
-gestionnaire d’événement de service handle-master-proc-event est exécuté.</para>
+gestionnaire d’événement de service <literal>handle-master-proc-event</literal> est exécuté.</para>
 				</listitem>
 			</itemizedlist>
 			
@@ -358,14 +358,14 @@ où Nagios va vérifier la présence d’une commande externe</para>
 				<listitem>
 					<para>S’assurant que le processus Nagios sur le système E (re)vérifie un ou
 plusieurs services avec une fréquence élevée. Ceci peut être fait en
-utilisant les arguments check_interval et retry_interval dans chaque
+utilisant les arguments <literal>check_interval</literal> et <literal>retry_interval</literal> dans chaque
 définition de service.</para>
 				</listitem>
 				
 				<listitem>
 					<para>S’assurer que le nombre de re-vérifications de la présence du système A (sur
 le système E) permette une détection des problèmes liés au système plus
-rapidement. Ceci peut être fait en utilisant l’argument max_check_attempts
+rapidement. Ceci peut être fait en utilisant l’argument <literal>max_check_attempts</literal>
 dans la définition du système.</para>
 				</listitem>
 				
@@ -373,7 +373,7 @@ dans la définition du système.</para>
 					<para>Augmenter la fréquence de vérification des <link
 linkend="advancedtopics-extcommands">commandes externes</link> sur le
 système E. Ceci peut être fait en modifiant l’option <link
-linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link>
+linkend="configuringnagios-configmain-command_check_interval"><literal>command_check_interval</literal></link>
 dans le fichier de configuration principal.</para>
 				</listitem>
 			</itemizedlist>
@@ -464,13 +464,13 @@ problème…</para>
 			
 			<para>Désactiver la vérification active des services et la notification sur le
 système esclave en utilisant les directives <link
-linkend="configuringnagios-configmain-execute_service_checks">execute_service_checks</link>
+linkend="configuringnagios-configmain-execute_service_checks"><literal>execute_service_checks</literal></link>
 et <link
-linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link>.
+linkend="configuringnagios-configmain-enable_notifications"><literal>enable_notifications</literal></link>.
 Ceci évitera au système esclave de surveiller les services et les systèmes
 et d’envoyer des notifications tant que le processus Nagios sur le système
 maître fonctionne. Assurez-vous d’avoir la directive <link
-linkend="configuringnagios-configmain-check_external_commands">check_external_commands</link>
+linkend="configuringnagios-configmain-check_external_commands"><literal>check_external_commands</literal></link>
 activée sur le système esclave.</para>
 		</section>
 		

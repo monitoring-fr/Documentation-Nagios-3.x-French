@@ -45,13 +45,13 @@ planifié d'exécution) et le nombre de secondes qu'il aura fallu pour
 exécuter un contrôle d'hôte ou des service. Ce type de données de
 performance sont valables pour tous les contrôles qui sont effectués. Les
 <link linkend="thebasics-macros">macros</link> <link
-linkend="thebasics-macrolist-hostexecutiontime">$HOSTEXECUTIONTIME$</link>
+linkend="thebasics-macrolist-hostexecutiontime"><literal>$HOSTEXECUTIONTIME$</literal></link>
 et <link
-linkend="thebasics-macrolist-serviceexecutiontime">$SERVICEEXECUTIONTIME$</link>
+linkend="thebasics-macrolist-serviceexecutiontime"><literal>$SERVICEEXECUTIONTIME$</literal></link>
 peuvent être utilisées pour determiner le nombre de secondes qu'aura duré un
 contrôle d'hôte ou de service et les macros <link
-linkend="thebasics-macrolist-hostlatency">$HOSTLATENCY$</link> et <link
-linkend="thebasics-macrolist-servicelatency">$SERVICELATENCY$</link> peuvent
+linkend="thebasics-macrolist-hostlatency"><literal>$HOSTLATENCY$</literal></link> et <link
+linkend="thebasics-macrolist-servicelatency"><literal>$SERVICELATENCY$</literal></link> peuvent
 être utilisées afin de derterminer le "retard" que pourrait avoir un
 contrôle régulier d'un hôte ou d'un service.</para>
 
@@ -64,12 +64,12 @@ plugin contrôle quand il est exécuté. Les données de performance spécifique
 au plugin sont facultatives et ne sont pas forcement disponibles avec tous
 les plugins. Les données de performances spécifiques au plugin (si
 disponibles) peuvent être obtenues en utilisant les macros <link
-linkend="thebasics-macrolist-hostperfdata">$HOSTPERFDATA$</link> et <link
-linkend="thebasics-macrolist-serviceperfdata">$SERVICEPERFDATA$</link> <link
+linkend="thebasics-macrolist-hostperfdata"><literal>$HOSTPERFDATA$</literal></link> et <link
+linkend="thebasics-macrolist-serviceperfdata"><literal>$SERVICEPERFDATA$</literal></link> <link
 linkend="thebasics-macros"></link>. Lire la suite pour plus d'informations
 sur la façon dont les plugins peuvent retourner les données de performance à
-Nagios afin de les stocker dans les macros $HOSTPERFDATA$ and
-$SERVICEPERFDATA$.</para>
+Nagios afin de les stocker dans les macros <literal>$HOSTPERFDATA$</literal> and
+<literal>$SERVICEPERFDATA$</literal>.</para>
 	</section>
 
 	<section>
@@ -83,8 +83,8 @@ pourrait retourner une ligne de texte comme celle qui suit:</para>
 		<programlisting>PING ok - Packet loss = 0%, RTA = 0.80 ms </programlisting>
 
 		<para>Avec ce simple type de sortie, la ligne entière est disponible dans les
-<link linkend="thebasics-macros">macros</link> $HOSTOUTPUT$ ou
-$SERVICEOUTPUT$ (Cela dépend si le pllugin est utilisé pour le contrôle d'un
+<link linkend="thebasics-macros">macros</link> <literal>$HOSTOUTPUT$</literal> ou
+<literal>$SERVICEOUTPUT$</literal> (Cela dépend si le pllugin est utilisé pour le contrôle d'un
 hôte ou d'un service).</para>
 
 		<para>Les plugins peuvent renvoyer des données de performance dans leur message
@@ -104,19 +104,19 @@ plugin, il le scindera en deux parties:</para>
 			<listitem>
 				<para>Tout ce qui est situé avant le caratère 'pipe' ( | ) est considéré comme le
 message de sortie <quote>normal</quote> du plugin et sera alors stocké selon
-le cas dans les macros $HOSTOUTPUT$ ou $SERVICEOUTPUT$</para>
+le cas dans les macros <literal>$HOSTOUTPUT$</literal> ou <literal>$SERVICEOUTPUT$</literal></para>
 			</listitem>
 
 			<listitem>
 				<para>Tout ce qui est situé après le caractère 'pipe' ( | ) est considéré comme
 étant les données de performance du plugin et seront stockées selon le cas
-dans les macros $HOSTPERFDATA$ ou $SERVICEPERFDATA$ </para>
+dans les macros <literal>$HOSTPERFDATA$</literal> ou <literal>$SERVICEPERFDATA$</literal> </para>
 			</listitem>
 		</orderedlist>
 
-		<para>Dans l'exemple ci-dessus, la macro $HOSTOUTPUT$ ou $SERVICEOUTPUT$
+		<para>Dans l'exemple ci-dessus, la macro <literal>$HOSTOUTPUT$</literal> ou <literal>$SERVICEOUTPUT$</literal>
 contiendra <emphasis><quote>PING ok - Packet loss = 0%, RTA = 0.80 ms</quote></emphasis>
-(sans les guillemets) et la macro $HOSTPERFDATA$ ou $SERVICEPERFDATA$
+(sans les guillemets) et la macro <literal>$HOSTPERFDATA$</literal> ou <literal>$SERVICEPERFDATA$</literal>
 contiendra <emphasis><quote>percent_packet_loss=0, rta=0.80</quote></emphasis> (sans les
 guillemets).</para>
 
@@ -196,14 +196,14 @@ méthode est décrite dans la section suivante.</para>
 		<para>Vous pouvez faire en sorte que Nagios écrive toutes les données de
 performances des hôtes et des services directement dans un fichier texte en
 utilisant les options <link
-linkend="configuringnagios-configmain-host_perfdata_file">host_perfdata_file</link>
+linkend="configuringnagios-configmain-host_perfdata_file"><literal>host_perfdata_file</literal></link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file">service_perfdata_file</link>.
+linkend="configuringnagios-configmain-service_perfdata_file"><literal>service_perfdata_file</literal></link>.
 Le format dans lequel les données de performance des hôtes et des services
 seront écrites est défini dans les options <link
-linkend="configuringnagios-configmain-host_perfdata_file_template">host_perfdata_file_template</link>
+linkend="configuringnagios-configmain-host_perfdata_file_template"><literal>host_perfdata_file_template</literal></link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_template">service_perfdata_file_template</link>.</para>
+linkend="configuringnagios-configmain-service_perfdata_file_template"><literal>service_perfdata_file_template</literal></link>.</para>
 
 		<para>Un exemple de format de modèle pour les données de performance d'un service
 pourrait ressembler à ceci:</para>
@@ -213,21 +213,21 @@ pourrait ressembler à ceci:</para>
 		<para>Par défaut, les fichiers texte seront ouverts en mode <quote>append</quote>. Si vous
 avez besoin de changer les modes en <quote>write</quote> ou <quote>non-blocking read/write</quote>
 (utile lors d'écriture via 'pipe'), vous pouvez utiliser les options <link
-linkend="configuringnagios-configmain-host_perfdata_file_mode">host_perfdata_file_mode</link>
+linkend="configuringnagios-configmain-host_perfdata_file_mode"><literal>host_perfdata_file_mode</literal></link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_mode">service_perfdata_file_mode</link>.</para>
+linkend="configuringnagios-configmain-service_perfdata_file_mode"><literal>service_perfdata_file_mode</literal></link>.</para>
 
 		<para>En outre, vous pouvez avoir Nagios qui exécute périodiquement des commandes
 traite périodiquement les fichiers de données de performance (par exemple à
 tour de rôle) en utilisant les options <link
-linkend="configuringnagios-configmain-host_perfdata_file_processing_command">host_perfdata_file_processing_command</link>
+linkend="configuringnagios-configmain-host_perfdata_file_processing_command"><literal>host_perfdata_file_processing_command</literal></link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_processing_command">service_perfdata_file_processing_command</link>.
+linkend="configuringnagios-configmain-service_perfdata_file_processing_command"><literal>service_perfdata_file_processing_command</literal></link>.
 L'intervalle à laquelle ces commandes sont exécutées sont régies par les
 options <link
-linkend="configuringnagios-configmain-host_perfdata_file_processing_interval">host_perfdata_file_processing_interval</link>
+linkend="configuringnagios-configmain-host_perfdata_file_processing_interval"><literal>host_perfdata_file_processing_interval</literal></link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_processing_interval">service_perfdata_file_processing_interval</link>,
+linkend="configuringnagios-configmain-service_perfdata_file_processing_interval"><literal>service_perfdata_file_processing_interval</literal></link>,
 respectivement.</para>
 	</section>
 </chapter>
