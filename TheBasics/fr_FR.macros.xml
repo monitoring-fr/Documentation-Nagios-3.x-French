@@ -132,7 +132,7 @@ service est utilisé.</para></tip></para>
 
 		<para>Les macros à la demande sont aussi valables pour les macros des groupes
 d'hôtes, des groupes de services, des contacts et des groupes de
-contact. Par exemple:</para>
+contacts. Par exemple:</para>
 		<example><title>Macro à la demande de contact</title>
 		<para><literal>$CONTACTEMAIL:john$</literal></para>
 		</example>
@@ -152,7 +152,7 @@ contact. Par exemple:</para>
 hôtes, ou les services dans un groupe spécifique en utilisant un format
 spécial dans votre déclaration de macro à la demande. Vous le faites en vous
 référant à un groupe d'hôte spécifique, un groupe de service, ou le nom du
-groupe de contact dans une macro à la demande, comme ainsi :</para>
+groupe de contact dans une macro à la demande, comme ceci :</para>
 		<itemizedlist>
 			<listitem>
 				<para><literal>$HOSTMACRONAME:hostgroup_name:delimiter$</literal></para>
@@ -168,7 +168,7 @@ groupe de contact dans une macro à la demande, comme ainsi :</para>
 <link linkend="thebasics-macrolist">ici</link>. Le délimiteur que vous
 spécifiez est utilisé pour séparer des valeurs de macro pour chaque membre
 d'un groupe.</para>
-		<para>Par exemple, la macro suivante retournera une liste d'état hôte séparé par
+		<para>Par exemple, la macro suivante retournera une liste d'états hôtes séparés par
 des virgules pour les hôtes membres du groupe hg1:</para>
 		<para><literal>$HOSTSTATEID:hg1:,$</literal></para>
 		<para>La définition de cette macro retournera quelque chose ressemblant à ça:</para>
@@ -176,10 +176,10 @@ des virgules pour les hôtes membres du groupe hg1:</para>
 	</section>
 	<section>
 		<title>Les macros de variable personnalisée</title>
-		<para>N'importe quelles <link
+		<para>N'importe laquelle des <link
 linkend="configuringnagios-customobjectvars">variables d'objet
-personnalisées</link> que vous définissez dans la définition de l'hôte, du
-service, ou du contact sont aussi disponibles comme macros. La macro de
+personnalisées</link> que vous spécifiez dans la définition de l'hôte, du
+service, ou du contact est aussi disponible comme macro. La macro de
 variable personnalisée est appelée comme suit :</para>
 		<itemizedlist>
 			<listitem>
