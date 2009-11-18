@@ -3512,7 +3512,7 @@ linkend="configuringnagios-configmain-ocsp_timeout" />. Vous trouverez plus
 d'informations sur la supervision répartie <link
 linkend="advancedtopics-distributed">ici</link>. <code>obsess_over_service</code> Cette commande est seulement exécuté que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" /> est
-entièrement activée et que si la directive dans la<link
+entièrement activée et que si le paramètre dans la<link
 linkend="configuringnagios-objectdefinitions-service">définition du
 service</link> l'est aussi</para>
   </section>
@@ -3600,7 +3600,7 @@ linkend="configuringnagios-configmain-ochp_timeout" />. Vous trouverez plus
 d'informations sur la supervision répartie <link
 linkend="advancedtopics-distributed">ici</link>. Cette commande n'est
 exécutée que si l'option de <xref
-linkend="configuringnagios-configmain-obsess_over_hosts" /> est activée et <code>obsess_over_host</code> que si la directive dans la <link
+linkend="configuringnagios-configmain-obsess_over_hosts" /> est activée et <code>obsess_over_host</code> que si le paramètre dans la <link
 linkend="configuringnagios-objectdefinitions-host">définition de
 l'hôte</link> l'est aussi.</para>
   </section>
@@ -3678,8 +3678,8 @@ d'une <link linkend="configuringnagios-objectdefinitions-command">définition
 de commande</link> que vous avez définie dans le fichier de configuration
 des objets. Cette commande est exécutée si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" /> est
-activée et si la directive process_perf_data ([NdT] : traitement des données
-de performance) est activée dans la définition de l'hôte. <code>process_perf_data</code> que si la directive dans la <link
+activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
+de performance) est activé dans la définition de l'hôte. <code>process_perf_data</code> que si le paramètre dans la <link
 linkend="configuringnagios-objectdefinitions-host">définition de
 l'hôte</link> l'est aussi.</para>
   </section>
@@ -3717,11 +3717,11 @@ d'une <link linkend="configuringnagios-objectdefinitions-command">définition
 de commande</link> que vous avez définie dans le fichier de configuration
 des objets. Cette commande est exécutée si l'option de <link
 linkend="configuringnagios-configmain-process_performance_data">traitement
-des données de performance</link> est activée et si la directive
-process_perf_data ([NdT] : traitement des données de performance) est
-activée dans la définition du service. <code>process_perf_data</code> Cette commande est seulement exécuté que si la variable <xref
+des données de performance</link> est activée et si le paramètre
+<varname>process_perf_data</varname> ([NdT] : traitement des données de performance) est
+activé dans la définition du service. <code>process_perf_data</code> Cette commande est seulement exécuté que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" /> est
-entièrement activée et que si la directive dans la<link
+entièrement activée et que si le paramètre dans la<link
 linkend="configuringnagios-objectdefinitions-service">définition du
 service</link> l'est aussi</para>
   </section>
@@ -3757,8 +3757,8 @@ fichier comme spécifié dans le <xref
 linkend="configuringnagios-configmain-host_perfdata_file_template" />. Les
 données ne seront écrites que si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" /> est
-activée et si la directive process_perf_data ([NdT] : traitement des données
-de performance) est activée dans la définition de l'hôte. <code>process_perf_data</code> que si la directive dans la <link
+activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
+de performance) est activé dans la définition de l'hôte. <varname>process_perf_data</varname> que si le paramètre dans la <link
 linkend="configuringnagios-objectdefinitions-host">définition de
 l'hôte</link> l'est aussi.</para>
   </section>
@@ -3795,10 +3795,10 @@ dans ce fichier comme spécifié dans le <xref
 linkend="configuringnagios-configmain-service_perfdata_file_template"
 />. Les données ne seront écrites que si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" /> est
-activée et si la directive process_perf_data ([NdT] : traitement des données
-de performance) est activée dans la définition du service. <code>process_perf_data</code> Cette commande est seulement exécuté que si la variable <xref
+activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
+de performance) est activé dans la définition du service. <code>process_perf_data</code> Cette commande est seulement exécuté que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" /> est
-entièrement activée et que si la directive dans la<link
+entièrement activée et que si le paramètre dans la<link
 linkend="configuringnagios-objectdefinitions-service">définition du
 service</link> l'est aussi</para>
   </section>

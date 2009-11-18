@@ -56,7 +56,7 @@ mécanisme sera présentez plus loin). Les valeurs acceptées sont les
 suivantes : 0 = ne PAS prendre en compte la définition de l'objet, 1 =
 prendre en compte la définition de l'objet (Comportement par défaut). Cette
 variable n'est pas héritée, toutes definition d'objet (partiel) utilisé
-comme gabarits doivent explicitement avoir la directive
+comme gabarits doivent explicitement avoir le paramètre
 <varname>register</varname> à 0. Celà évite d'avoir à surcharger une
 directective <varname>register</varname> héritée avec la valeur 1 pour tous
 les objets qui doivent être pris en compte. </para>
@@ -477,11 +477,11 @@ Implicite/Additive dans les escalades</title>
 
   <para>La superposition de défintion d'hôte et de service peuvent utiliser une
 règle spécial qui combine les fonctionnalités de l'héritage implicite et
-explicite. Si la superposition 1) n'hérite pas la valeurs de leurs directive
+explicite. Si la superposition 1) n'hérite pas la valeurs de leurs paramètres
 <varname>contact_groups</varname> ou <varname>contacts</varname> d'un autre
-gabarit et 2) leurs directives <varname>contact_groups</varname> or
+gabarit et 2) leurs paramètres <varname>contact_groups</varname> or
 <varname>contacts</varname> commencent avec un signe (+), alors les valeurs
-des directive <varname>contact_groups</varname> or
+des paramètres <varname>contact_groups</varname> or
 <varname>contacts</varname> de leurs défintions d'hôte ou service seront
 utilisé avec une logique d'héritage additive. </para>
 
@@ -554,7 +554,7 @@ variables/valeurs provenant de deux sources :
 <varname>development-server</varname>. Vous noterez qu'une variable
 <varname>check_interval</varname> est défini dans les deux sources. Puisque
 <varname>generic-host</varname> était le premier gabarit spécifié dans les
-directives de <varname>devweb1</varname>, sa valeur pour la variable
+paramètres de <varname>devweb1</varname>, sa valeur pour la variable
 <varname>check_interval</varname> est héritée par l'hôte
 <varname>devweb1</varname>. Après l'héritage, la définition effective de
 <varname>devweb1</varname> est la suivante : </para>
@@ -576,7 +576,7 @@ directives de <varname>devweb1</varname>, sa valeur pour la variable
   <para>Quand vous utilisez de multiples sources d'héritage, il est très important
 de savoir comment Nagios gère les variables qui sont définies dans ces
 sources multiples. Dans ces cas, Nagios utilisera les variables/valeurs de
-la première source qui est spécifié dans la directive à utiliser. Puisque
+la première source qui est spécifié dans le paramètre à utiliser. Puisque
 les sources d'héritage peuvent elles-même hériter de variables/valeurs
 provement d'une ou plusieurs sources, il peut devenir très compliqué de
 trouver quelle paire de variable/valeur aura la priorité. </para>

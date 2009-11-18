@@ -178,7 +178,7 @@ ci-dessous). Avant Nagios 3, la planification régulière des contrôles
 d'hôtes pouvait avoir un impact très négatif sur les performances. Ce n'est
 plus le cas puisque les contrôles d'hôtes sont exécutés en parallèle - tout
 comme les services. Pour planifier des contrôles réguliers pour un hôte,
-mettez la directive check_interval de la <link
+mettez le paramètre <varname>check_interval</varname> de la <link
 linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
 à une valeur supérieure à 0.</para>
    </listitem>

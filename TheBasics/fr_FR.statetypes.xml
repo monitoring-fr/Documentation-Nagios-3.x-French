@@ -58,7 +58,7 @@ dans la compréhension de comment les type d'états fonctionnent.</para>
    <listitem>
     <para>Quand le contrôle d'un service ou d'un hôte retournre un état non-OK ou
 non-UP et quand le service n'a pas été (re)contrôlé le nombre de fois
-spécifié par la directive max_check_attempts des définitions des hôtes ou
+spécifié par le paramètre <varname>max_check_attempts</varname> des définitions des hôtes ou
 des services. C'est ce qu'on appelle une erreur Soft.</para>
    </listitem>
 

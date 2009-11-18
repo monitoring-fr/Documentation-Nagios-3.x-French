@@ -95,9 +95,9 @@ en utilisant un des plugins compris dans la ditribution Nagios. Allons-y…</par
   <para>Avant de pouvoir superviser un service, vous devez d'abord définir un <link
 linkend="configuringnagios-objectdefinitions-host">host</link> associé à ce
 service. Vous pouvez mettre les définitions d'hôtes dans n'importe quel
-fichier de configuration spécifié avec la directive <link
+fichier de configuration spécifié avec le paramètre <link
 linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> ou les
-mettre dans un dossier précisé par la directive <link
+mettre dans un dossier précisé par le paramètre <link
 linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>. Si vous avez
 déjà créé une définition d'hôte, vous pouvez passer cette étape.</para>
 
@@ -130,9 +130,9 @@ peuvent être mises dans n'importe quel fichier de configuration.</para>
 linkend="configuringnagios-objectdefinitions-service">service</link> dans
 Nagios associé à la définition d'hôte que vous avez juste créé. Vous pouvez
 mettre des définitions de services dans n'importe quel fichier de
-configuration précisé par la directive <link
+configuration précisé par le paramètre <link
 linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> ou dans
-n'importe quel dossier précisé par la directive <link
+n'importe quel dossier précisé par le paramètre <link
 linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.</para>
 
   <para>Quelques exemples de définitions de services pour superviser des services

@@ -127,7 +127,7 @@ linkend="configuringnagios-configmain-enable_environment_macros">&config-enable_
  <listitem>
  <para>Les informations concernant les <link linkend="advancedtopics-downtime">arrêts programmés</link>
 ne sont plus stockées dans leur propre fichier de configuration
-(précédemment définies par la directive <varname>downtime_file</varname> dans
+(précédemment définies par le paramètre <varname>downtime_file</varname> dans
 le fichier de configuration principal). Les informations concernant les arrêts programmés
 courants et retenus sont maintenant stockées respectivement dans les
 fichiers <link linkend="configuringnagios-configmain-status_file">status
@@ -207,7 +207,7 @@ redémmarage. </para>
 
  <itemizedlist>
  <listitem>
- <para>Ajout de la directive <varname>flap_detection_options</varname> aux
+ <para>Ajout de le paramètre <varname>flap_detection_options</varname> aux
 définitions d'hôte et de service vous permettant de spécifier quels états
 d'hôte/service doivent être utilisés par la logique de détection
 d'oscillation (par défaut tous les états sont utilisés).</para>

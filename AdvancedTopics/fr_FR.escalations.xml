@@ -332,17 +332,17 @@ est sans effet, car il n'y aura jamais plus de quatre notifications.</para>
 
 		<para>Dans des circonstances normales, les escalades peuvent servir aux heures où
 une notification pourrait normalement être envoyée pour le service. Cette
-<quote>fenêtre d'heures de notification</quote> est déterminée par la directive
-<varname>notification_period</varname> de la definition de service.Notez que
-la notification est toujours soumise aux restriction d'heure normales
-imposées par la directive notification_period de l'escalade de service, et
+<quote>fenêtre d'heures de notification</quote> est déterminée par le paramètre
+<varname>notification_period</varname> de la définition de service.Notez que
+la notification est toujours soumise aux restrictions d'heure normales
+imposées par le paramètre <varname>notification_period</varname> de l'escalade de service, et
 donc que la période de temps que vous spécifiez dans l'escalade doit être
 comprise dans une plus grande <quote>fenêtre d'heures de notification</quote>.</para>
 
 		<para>Vous pouvez optionnellement restreindre l'escalade pour qu'elle ne soit
-prise ne compte pendant une période de temps spécifique en utilisant la
-directive <varname>escalation_period</varname> dans la définition de
-l'escalade de service. Si vous utilisez la directive
+prise ne compte pendant une période de temps spécifique en utilisant le
+paramètre <varname>escalation_period</varname> dans la définition de
+l'escalade de service. Si vous utilisez le paramètre
 <varname>escalation_period</varname> pour spécifier une <xref
 linkend="configuringnagios-objectdefinitions-timeperiod"/> pendant laquelle
 utiliser l'escalade, l'escalade sera prise en compte uniquement pendant ces
@@ -353,7 +353,7 @@ service.</para>
 
 		<note>
 			<para>Les escalades de notifications sont toujours soumises aux restrictions de
-temps normales imposées par la directive <varname> notification_period
+temps normales imposées par le paramètre <varname> notification_period
 </varname> dans une défintion d'hôte ou de service, donc le timeperiod que
 vous spécifiez dans une définition d'escalade correspond à une sorte de
 sous-ensemble de ce qu'on appelerait <quote>la fenêtre de temps de notification</quote>.</para>
@@ -365,8 +365,8 @@ sous-ensemble de ce qu'on appelerait <quote>la fenêtre de temps de notification
 
 		<para>Si vous voulez restreindre la définition d'escalade pour qu'elle soit prise
 en compte uniquement quand le service est dans un état donné, vous pouves
-utiliser la directive <varname>escalation_options</varname> dans la
-définition de l'escalade de service. Si vous n'utilisez pas la directive
+utiliser le paramètre <varname>escalation_options</varname> dans la
+définition de l'escalade de service. Si vous n'utilisez pas le paramètre
 <varname>escalation_options</varname>, l'escalade peut être prise en compte
 quel que soit l'état du service.</para>
 	</section>

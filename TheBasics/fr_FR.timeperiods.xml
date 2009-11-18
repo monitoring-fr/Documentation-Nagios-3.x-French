@@ -91,12 +91,12 @@ services</title>
 sera utilisée pour restreindre les moments où les contrôles actifs des hôtes
 ou des services devront être effectués .</para>
 
-  <para>Si vous n'utilisez pas la directive <varname>check_period </varname> pour
+  <para>Si vous n'utilisez pas le paramètre <varname>check_period </varname> pour
 spécifier une période, Nagios sera capable de planifier les contrôles
 actiffs des hôtes et services aussi souvent qu'il en aura besoin. Il s'agit
 essentiellement d'une periode de surveillance de type 24x7.</para>
 
-  <para>Spécifier une plage horaires dans la directive
+  <para>Spécifier une plage horaires dans le paramètre
 <varname>check_period</varname> vous permet de restreindre Nagios à
 planifier les contrôles actifs réguliers des hôtes ou des services. Quand
 Nagios va tenter de replanifier un contrôle d'hôte ou de service, il va
@@ -107,7 +107,7 @@ dans la plage horaire spécifiée. Ce qui signifie que l'hôte ou le service ne
 sera contrôlé à nouveau que dans plusieurs heures, jours, semaines, etc…</para>
 
   <note><para>Les contrôles à la demande et les contrôles passifs ne sont pas réstreints
-par la plage horaire spécifiée dans la directive
+par la plage horaire spécifiée dans le paramètre
 <varname>check_period</varname>. Seuls des contrôles réguliers actifs sont
 concernés.</para></note>
 
@@ -139,7 +139,7 @@ les contacts ne seront pas immédiatement notifiés du retour à normale.</para>
  <section>
   <title>Comment fonctionnent les périodes de temps avec les contacts de notifications</title>
 
-  <para>En spécifiant une période à la directive
+  <para>En spécifiant une période à le paramètre
 <varname>notification_period</varname> d'une définition d'un hôte ou d'un
 service, vous pouvez contrôler quand Nagios est autorisé à envoyé des
 notifications concernant des problèmes ou des retours à la normale pour cet
@@ -169,9 +169,9 @@ disponibles <link linkend="advancedtopics-oncallrotation">ici</link>.</para>
   <para>Les <link linkend="advancedtopics-escalations">escalades de notification</link> des hôtes et services ont une directive optionnelle nommée
 <varname>escalation_period</varname> qui vous permet de spécifier une plage
 horaire où l'escalade sera valide et pourra être utilisée. Si vous
-n'utilisez pas la directive <varname>escalation_period</varname> dans la
+n'utilisez pas le paramètre <varname>escalation_period</varname> dans la
 définition de l'escalalde, l'escalade sera considérée comme valide tout le
-temps. Si vous spécifiez une plage horaire pour la directive
+temps. Si vous spécifiez une plage horaire pour le paramètre
 <varname>escalation_period</varname>, Nagios utilisera définition de
 l'escalade seulement pendant cette plage horaire.</para>
  </section>
@@ -183,9 +183,9 @@ l'escalade seulement pendant cette plage horaire.</para>
 services</link> ont une directive optionnelle nommée
 <varname>dependency_period</varname> qui vous permet de spécifier une plage
 horaire où la dépendance sera valide et pourra être utilisée. Si vous
-n'utilisez pas la directive <varname>dependency_period</varname> dans la
+n'utilisez pas le paramètre <varname>dependency_period</varname> dans la
 définition de la dépendance, la dépendance pourra être utilisée n'importe
-quand. Si vous spécifiez une plage horaire pour la directive
+quand. Si vous spécifiez une plage horaire pour le paramètre
 <varname>dependency_period</varname>, Nagios utilisera définition de la
 dépendance seulement pendant cette plage horaire.</para>
  </section>

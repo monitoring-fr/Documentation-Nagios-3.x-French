@@ -134,7 +134,7 @@ d'apache sur la &acronym-tls;/&acronym-ssl; <ulink url="&url-apache-docs;2.0/ssl
 Cryptage</ulink> et <ulink url="http://www.google.com">Google</ulink> pour des
 problèmes spécifique à votre installation apache. Ensuite, modifiez la
 configuration apache pour nagios (par défaut
-<filename>/etc/httpd/conf.d/nagios.conf</filename>) en ajoutant la directive
+<filename>/etc/httpd/conf.d/nagios.conf</filename>) en ajoutant le paramètre
 <varname>SSLRequireSSL</varname> aux deux instructions pour les répertoires
 <filename class="directory">sbin</filename> et <filename
 class="directory">share</filename>.</para>

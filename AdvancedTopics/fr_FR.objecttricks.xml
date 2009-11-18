@@ -97,7 +97,7 @@ lorsque vous vérifiez votre configuration.
 			<para>Si vous voulez créer des <link
 linkend="configuringnagios-objectdefinitions-service">services</link>
 identiques assignés à plusieurs hôtes, vous pouvez préciser plusieurs hôtes
-dans la directive <varname>host_name</varname>. La définition ci-dessous va
+dans le paramètre <varname>host_name</varname>. La définition ci-dessous va
 créer une service nommé SOMESERVICE sur les hôtes HOST1 jusqu'à
 HOSTN. Toutes les instances du service SOMESERVICE devraient être identiques
 (c.-à-d. auront la même commande de contrôle, le même nombre maximum
@@ -207,7 +207,7 @@ define serviceescalation{
 			<para>Si vous voulez créer une escalade de service identique pour des services
 portant le même nom/description et qui sont assignés à tous les hôtes
 définis dans vos fichiers de configuration, vous pouvez utiliser un
-caractère de remplacement dans la directive <varname>host_name</varname>. La
+caractère de remplacement dans le paramètre <varname>host_name</varname>. La
 définition ci-dessous va créer une escalade pour tous les services appelés
 SOMESERVICE de tous les hôtes définis dans vos fichiers de
 configuration. Toutes les instances de l'escalade de service seront

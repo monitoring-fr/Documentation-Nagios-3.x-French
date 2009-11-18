@@ -204,7 +204,7 @@ simplement modifier l'exemple de définition d'hôte dans
   <note>
    <para>Remplacez <quote><replaceable>linksys-srw224p</replaceable></quote> dans les
 exemples de définitions ci-dessous par le nom que vous avez renseigné dans
-la directive <varname>host_name</varname> que vous venez d'ajouter dans la
+le paramètre <varname>host_name</varname> que vous venez d'ajouter dans la
 définition d'hôte.</para>
   </note>
  </section>
@@ -298,7 +298,7 @@ define service{
   }
 </programlisting>
 
-  <para>Dans la directive <varname>check_command</varname> de la définition de
+  <para>Dans le paramètre <varname>check_command</varname> de la définition de
 service ci-dessus, le <option>-C public</option> indique au plugin que le nom de communauté &protocol-snmp; à utiliser est
 <varname>public</varname> et que <computeroutput>-o
 sysUpTime.0</computeroutput> indique que l' &acronym-oid; doit être contrôlé.</para>

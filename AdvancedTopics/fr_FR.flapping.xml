@@ -261,7 +261,7 @@ service), pour l'utilisation dans la logique de détection de l'oscillation.</pa
 
   <tip>
    <para>Nous pouvons exclure certains hôtes ou services à l'algorithme de de
-l'oscillation en utilisant la directive
+l'oscillation en utilisant le paramètre
 <varname>flap_detection_options</varname> dans la définition de l'hôte ou du
 service. Cette option vous permet de préciser pour quel états d'hôte ou
 service (par exemple <quote>UP</quote>, <quote>DOWN</quote>, <quote>OK</quote>, <quote>CRITICAL</quote>) vous voulez utilisez la
@@ -331,24 +331,24 @@ faire:</para>
 
   <itemizedlist>
    <listitem>
-    <para>Passer la directive <link
+    <para>Passer le paramètre <link
 linkend="configuringnagios-configmain-enable_flap_detection">&config-enable_flap_detection;</link>
 à 1</para>
    </listitem>
 
    <listitem>
-    <para>Passer la directive <varname>flap_detection_enabled</varname> dans la
+    <para>Passer le paramètre <varname>flap_detection_enabled</varname> dans la
 définition de votre hôte ou service à 1</para>
    </listitem>
   </itemizedlist>
 
-  <para>Si vous voulez désactiver de manière générale cette option, passez la
-directive <link
+  <para>Si vous voulez désactiver de manière générale cette option, passez le
+paramètre <link
 linkend="configuringnagios-configmain-enable_flap_detection">&config-enable_flap_detection;</link>
 à 0.</para>
 
   <para>Si vou voulez désactiver cette option pour quelques hôtes ou services,
-utilisez la directive <varname>flap_detection_enabled</varname> dans la
+utilisez le paramètre <varname>flap_detection_enabled</varname> dans la
 définition de vos hôtes et services pour faire ça.</para>
  </section>
 </chapter>
