@@ -96,9 +96,9 @@ en utilisant un des plugins compris dans la ditribution Nagios. Allons-y…</par
 linkend="configuringnagios-objectdefinitions-host">host</link> associé à ce
 service. Vous pouvez mettre les définitions d'hôtes dans n'importe quel
 fichier de configuration spécifié avec la directive <link
-linkend="configuringnagios-configmain-cfg_file">cfg_file</link> ou les
+linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> ou les
 mettre dans un dossier précisé par la directive <link
-linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link>. Si vous avez
+linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>. Si vous avez
 déjà créé une définition d'hôte, vous pouvez passer cette étape.</para>
 
   <para>Pour cet exemple, disons que vous souhaitez superviser une variété de
@@ -131,9 +131,9 @@ linkend="configuringnagios-objectdefinitions-service">service</link> dans
 Nagios associé à la définition d'hôte que vous avez juste créé. Vous pouvez
 mettre des définitions de services dans n'importe quel fichier de
 configuration précisé par la directive <link
-linkend="configuringnagios-configmain-cfg_file">cfg_file</link> ou dans
+linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> ou dans
 n'importe quel dossier précisé par la directive <link
-linkend="configuringnagios-configmain-cfg_dir">cfg_dir</link>.</para>
+linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.</para>
 
   <para>Quelques exemples de définitions de services pour superviser des services
 publics communs (&protocol-http;, &protocol-ftp;, etc) sont donnés

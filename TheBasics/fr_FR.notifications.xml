@@ -77,7 +77,8 @@ traverser… </para>
   <para>Le premier filtre que les notifications doivent traverser est un test pour
 savoir si les notifications sont activées au niveau global du programme ou
 non. Ceci est spécifié par le paramètre <link
-linkend="configuringnagios-configmain-enable_notifications">enable_notifications<code>enable_notifications</code></link> du fichier de configuration principal, mais peut être modifié en
+linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;<code>enable_notifications</code></link>
+du fichier de configuration principal, mais peut être modifié en
 cours d'exécution via l'interface web. Si les notifications sont désactivées
 de manière globale, aucune notification ne sera envoyée - point final. Si
 elles sont activées, il y a encore d'autres tests à réussir… </para>

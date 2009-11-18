@@ -135,11 +135,11 @@ comme étant <quote>l’esclave</quote>. </para>
 			<title>Réglages initiaux du programme</title>
 			
 			<para>Le système esclave (système E) a sa directive initiale de notification <link
-linkend="configuringnagios-configmain-enable_notifications"><literal>enable_notifications</literal></link>
+linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>
 désactivée, afin de lui éviter d’envoyer des notifications autant pour les
 hôtes que pour les services. Il faut aussi s’assurer que le système esclave
 a sa directive <link
-linkend="configuringnagios-configmain-check_external_commands"><literal>check_external_commands</literal></link>
+linkend="configuringnagios-configmain-check_external_commands">&config-check_external_commands;</link>
 activée. C’est plutôt simple…</para>
 		</section>
 		
@@ -373,7 +373,7 @@ dans la définition du système.</para>
 					<para>Augmenter la fréquence de vérification des <link
 linkend="advancedtopics-extcommands">commandes externes</link> sur le
 système E. Ceci peut être fait en modifiant l’option <link
-linkend="configuringnagios-configmain-command_check_interval"><literal>command_check_interval</literal></link>
+linkend="configuringnagios-configmain-command_check_interval">&config-command_check_interval;</link>
 dans le fichier de configuration principal.</para>
 				</listitem>
 			</itemizedlist>
@@ -464,13 +464,13 @@ problème…</para>
 			
 			<para>Désactiver la vérification active des services et la notification sur le
 système esclave en utilisant les directives <link
-linkend="configuringnagios-configmain-execute_service_checks"><literal>execute_service_checks</literal></link>
+linkend="configuringnagios-configmain-execute_service_checks">&config-execute_service_checks;</link>
 et <link
-linkend="configuringnagios-configmain-enable_notifications"><literal>enable_notifications</literal></link>.
+linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>.
 Ceci évitera au système esclave de surveiller les services et les systèmes
 et d’envoyer des notifications tant que le processus Nagios sur le système
 maître fonctionne. Assurez-vous d’avoir la directive <link
-linkend="configuringnagios-configmain-check_external_commands"><literal>check_external_commands</literal></link>
+linkend="configuringnagios-configmain-check_external_commands">&config-check_external_commands;</link>
 activée sur le système esclave.</para>
 		</section>
 		

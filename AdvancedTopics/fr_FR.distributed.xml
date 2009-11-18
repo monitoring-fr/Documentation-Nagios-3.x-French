@@ -118,7 +118,7 @@ d'hôte</link>.</para>
 			</listitem>
 			<listitem>
 				<para>Le serveur distribué a sa directive <link
-linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link>
+linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>
 initiale fixée à 0. Cela évitera d'envoyer des notifications à partir du
 serveur. </para>
 			</listitem>
@@ -212,7 +212,7 @@ référence ci-dessus) : </para>
 			<listitem>
 				<para>Après que le serveur distribué a terminé l'exécution d'un contrôle de
 service, il exécute la commande définie par la variable <link
-linkend="configuringnagios-configmain-ocsp_command">ocsp_command</link>.
+linkend="configuringnagios-configmain-ocsp_command">&config-ocsp_command;</link>.
 Dans notre exemple, c'est le script
 <filename>/usr/local/nagios/libexec/eventhandlers/submit_check_result</filename>.
 Remarquez que la définition de la commande
@@ -256,7 +256,7 @@ recommandé)</para>
 			</listitem>
 			<listitem>
 				<para>Sur le serveur central, la directive <link
-linkend="configuringnagios-configmain-enable_notifications">enable_notifications</link>
+linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>
 est fixée à 1. Ceci activera les notifications (optionnel, mais recommandé) </para>
 			</listitem>
 			<listitem>
@@ -290,7 +290,7 @@ un service qui a été défini. </para>
 résultats sont fournis par des hôtes distribués, vous pouvez simplement
 désactiver tous les contrôles de service de façon globale en mettant la
 directive <link
-linkend="configuringnagios-configmain-execute_service_checks">execute_service_checks</link>
+linkend="configuringnagios-configmain-execute_service_checks">&config-execute_service_checks;</link>
 à 0. Si vous utilisez le serveur central pour superviser activement quelques
 services par lui-même (sans l'intervention des serveurs distribués),
 l'option <varname>enable_active_checks</varname> de chaque définition de

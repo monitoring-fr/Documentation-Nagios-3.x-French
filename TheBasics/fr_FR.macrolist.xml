@@ -7123,7 +7123,7 @@ contacts notifiés.</para>
 							<entry>
 								<para>Date et heure actuelles (p. ex. Fri Oct 13 00:30:28 CDT 2000). Le format de
 la date est défini par le paramètre <link
-linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
+linkend="configuringnagios-configmain-date_format">&config-date_format;</link>.</para>
 							</entry>
 						</row>
 						<row>
@@ -7134,7 +7134,7 @@ linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
 							<entry>
 								<para>Date et heure actuelles (p. ex. 10-13-2000 00:30:28). Le format de la date
 est défini par le paramètre <link
-linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
+linkend="configuringnagios-configmain-date_format">&config-date_format;</link>.</para>
 							</entry>
 						</row>
 						<row>
@@ -7145,7 +7145,7 @@ linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
 							<entry>
 								<para>Date du jour (p. ex. 10-13-2000). Le format de la date est défini par le
 paramètre <link
-linkend="configuringnagios-configmain-date_format">date_format</link>.</para>
+linkend="configuringnagios-configmain-date_format">&config-date_format;</link>.</para>
 							</entry>
 						</row>
 						<row>
@@ -7402,7 +7402,7 @@ soustrayant &macro-processstarttime; de &macro-eventstarttime;.</para>
 							<entry>
 								<para>Adresse email globale de l'administrateur. Cette valeur provient du
 paramètre <link
-linkend="configuringnagios-configmain-admin_email">admin_email</link>.</para>
+linkend="configuringnagios-configmain-admin_email">&config-admin_email;</link>.</para>
 							</entry>
 						</row>
 						<row>
@@ -7413,7 +7413,7 @@ linkend="configuringnagios-configmain-admin_email">admin_email</link>.</para>
 							<entry>
 								<para>Numéro/adresse global du pager de l'administrateur. Cette valeur provient du
 paramètre <link
-linkend="configuringnagios-configmain-admin_pager">admin_pager</link>.</para>
+linkend="configuringnagios-configmain-admin_pager">&config-admin_pager;</link>.</para>
 							</entry>
 						</row>
 						<row>
@@ -7509,7 +7509,7 @@ disponibles comme variables d'environnement.</para>
 			<para>
 				<anchor id="thebasics-macrolist-note10"/> 10 Les macros de statistiques ne
 sont pas disponibles comme variables d'environnement si l'option <link
-linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link>
+linkend="configuringnagios-configmain-use_large_installation_tweaks">&config-use_large_installation_tweaks;</link>
 est activée, car elles sont plutôt grosses consommatrices de &acronym-cpu; lors de
 leurs calculs.</para>
 			

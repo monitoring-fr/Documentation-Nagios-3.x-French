@@ -82,9 +82,9 @@ d'état d'hôte ou de service, immédiatement avant d'exécuter n'importe quel
 gestionnaire d'événements spécifique d'hôte ou de service. Vous pouvez
 préciser les commandes de gestionnaires d'événements globaux en utilisant
 les options <link
-linkend="configuringnagios-configmain-global_host_event_handler">global_host_event_handler</link>
+linkend="configuringnagios-configmain-global_host_event_handler">&config-global_host_event_handler;</link>
 et <link
-linkend="configuringnagios-configmain-global_service_event_handler">global_service_event_handler</link>
+linkend="configuringnagios-configmain-global_service_event_handler">&config-global_service_event_handler;</link>
 de votre fichier de configuration principal.</para>
 		<para>Les hôtes et les services peuvent avoir leur propre commande de gestionnaire
 d'événements qui s'exécute à chaque changement d'état. Vous pouvez préciser
@@ -99,7 +99,7 @@ l'exécution du gestionnaire global (optionnel) d'hôtes et de services.</para>
 		<title>Activation des gestionnaires d'événements</title>
 		<para>Les gestionnaires d'événements peuvent être activés et désactivés au niveau
 général du programme en utilisant <link
-linkend="configuringnagios-configmain-enable_event_handlers">enable_event_handlers</link>
+linkend="configuringnagios-configmain-enable_event_handlers">&config-enable_event_handlers;</link>
 dans votre fichier de configuration principal.</para>
 		<para>Les gestionnaires d'événements spécifiques aux hôtes et services peuvent
 être activés et désactivés en utilisant les directives
@@ -108,7 +108,7 @@ linkend="configuringnagios-objectdefinitions-host">hôtes</link> et de <link
 linkend="configuringnagios-objectdefinitions-service">services</link>. Les
 gestionnaires d'événements spécifiques aux hôtes et services ne peuvent pas
 être exécutés si l'option globale <link
-linkend="configuringnagios-configmain-enable_event_handlers">enable_event_handlers</link>
+linkend="configuringnagios-configmain-enable_event_handlers">&config-enable_event_handlers;</link>
 est désactivée.</para>
 	</section>
 	<section>

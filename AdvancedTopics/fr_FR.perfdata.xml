@@ -145,7 +145,7 @@ travers des plugins, vous devez configurer ce qui suit:</para>
 		<orderedlist>
 			<listitem>
 				<para>Activer l'option <link
-linkend="configuringnagios-configmain-process_performance_data">process_performance_data</link>.</para>
+linkend="configuringnagios-configmain-process_performance_data">&config-process_performance_data;</link>.</para>
 			</listitem>
 
 			<listitem>
@@ -167,9 +167,9 @@ exécuter à Nagios des commandes (que vous avez spécifié) pour traiter ou
 rediriger les données pour un traitement ultérieur par des applications
 externes. Les commandes que Nagios exécute pour traiter les données de
 performances sont définies par les options <link
-linkend="configuringnagios-configmain-host_perfdata_command">host_perfdata_command</link>
+linkend="configuringnagios-configmain-host_perfdata_command">&config-host_perfdata_command;</link>
 and <link
-linkend="configuringnagios-configmain-service_perfdata_command">service_perfdata_command</link>,
+linkend="configuringnagios-configmain-service_perfdata_command">&config-service_perfdata_command;</link>,
 respectivement.</para>
 
 		<para>Un exemple de définition de commande qui redirige les données de performance
@@ -196,14 +196,14 @@ méthode est décrite dans la section suivante.</para>
 		<para>Vous pouvez faire en sorte que Nagios écrive toutes les données de
 performances des hôtes et des services directement dans un fichier texte en
 utilisant les options <link
-linkend="configuringnagios-configmain-host_perfdata_file"><literal>host_perfdata_file</literal></link>
+linkend="configuringnagios-configmain-host_perfdata_file">&config-host_perfdata_file;</link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file"><literal>service_perfdata_file</literal></link>.
+linkend="configuringnagios-configmain-service_perfdata_file">&config-service_perfdata_file;</link>.
 Le format dans lequel les données de performance des hôtes et des services
 seront écrites est défini dans les options <link
-linkend="configuringnagios-configmain-host_perfdata_file_template"><literal>host_perfdata_file_template</literal></link>
+linkend="configuringnagios-configmain-host_perfdata_file_template">&config-host_perfdata_file_template;</link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_template"><literal>service_perfdata_file_template</literal></link>.</para>
+linkend="configuringnagios-configmain-service_perfdata_file_template">&config-service_perfdata_file_template;</link>.</para>
 
 		<para>Un exemple de format de modèle pour les données de performance d'un service
 pourrait ressembler à ceci:</para>
@@ -213,21 +213,21 @@ pourrait ressembler à ceci:</para>
 		<para>Par défaut, les fichiers texte seront ouverts en mode <quote>append</quote>. Si vous
 avez besoin de changer les modes en <quote>write</quote> ou <quote>non-blocking read/write</quote>
 (utile lors d'écriture via 'pipe'), vous pouvez utiliser les options <link
-linkend="configuringnagios-configmain-host_perfdata_file_mode"><literal>host_perfdata_file_mode</literal></link>
+linkend="configuringnagios-configmain-host_perfdata_file_mode">&config-host_perfdata_file_mode;</link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_mode"><literal>service_perfdata_file_mode</literal></link>.</para>
+linkend="configuringnagios-configmain-service_perfdata_file_mode">&config-service_perfdata_file_mode;</link>.</para>
 
 		<para>En outre, vous pouvez avoir Nagios qui exécute périodiquement des commandes
 traite périodiquement les fichiers de données de performance (par exemple à
 tour de rôle) en utilisant les options <link
-linkend="configuringnagios-configmain-host_perfdata_file_processing_command"><literal>host_perfdata_file_processing_command</literal></link>
+linkend="configuringnagios-configmain-host_perfdata_file_processing_command">&config-host_perfdata_file_processing_command;</link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_processing_command"><literal>service_perfdata_file_processing_command</literal></link>.
+linkend="configuringnagios-configmain-service_perfdata_file_processing_command">&config-service_perfdata_file_processing_command;</link>.
 L'intervalle à laquelle ces commandes sont exécutées sont régies par les
 options <link
-linkend="configuringnagios-configmain-host_perfdata_file_processing_interval"><literal>host_perfdata_file_processing_interval</literal></link>
+linkend="configuringnagios-configmain-host_perfdata_file_processing_interval">&config-host_perfdata_file_processing_interval;</link>
 et <link
-linkend="configuringnagios-configmain-service_perfdata_file_processing_interval"><literal>service_perfdata_file_processing_interval</literal></link>,
+linkend="configuringnagios-configmain-service_perfdata_file_processing_interval">&config-service_perfdata_file_processing_interval;</link>,
 respectivement.</para>
 	</section>
 </chapter>

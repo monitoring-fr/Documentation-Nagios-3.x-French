@@ -83,9 +83,9 @@ rencontrent des changements d'état SOFT:</para>
 
   <para>Les états SOFT sont seulement journalisés si vous avez activé les options
 <link
-linkend="configuringnagios-configmain-log_service_retries">log_service_retries</link>
+linkend="configuringnagios-configmain-log_service_retries">&config-log_service_retries;</link>
 ou <link
-linkend="configuringnagios-configmain-log_host_retries">log_host_retries</link>
+linkend="configuringnagios-configmain-log_host_retries">&config-log_host_retries;</link>
 dans le fichier de configuration principal.</para>
 
   <para>La seule chose importante qui se passe réellement lors d'un état soft, c'est
@@ -134,7 +134,7 @@ est considéré comme un retour à la normale hard</para>
     <para>Lorsqu'un <link linkend="thebasics-passivechecks">contrôle passif d'un
 hôte</link> est reçu. Les contrôles passifs des hôtes sont traités comme
 HARD sauf si l'option <link
-linkend="configuringnagios-configmain-passive_host_checks_are_soft">passive_host_checks_are_soft</link>
+linkend="configuringnagios-configmain-passive_host_checks_are_soft">&config-passive_host_checks_are_soft;</link>
 est activée.</para>
    </listitem>
   </itemizedlist>

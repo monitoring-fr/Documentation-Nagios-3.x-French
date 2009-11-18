@@ -508,7 +508,7 @@ certainement du principe que cet hôte répond (il peut être indiqué en état
 <quote>PENDING</quote> dans l'interface web). C'est utile si vous supervisez
 des imprimantes ou des équipements qui sont fréquemment éteints. Le temps
 maximal d'exécution de la commande peut être contrôlé par l'option <link
-linkend="configuringnagios-configmain-host_check_timeout">host_check_timeout</link>.</para>
+linkend="configuringnagios-configmain-host_check_timeout">&config-host_check_timeout;</link>.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -546,7 +546,7 @@ contrôle de l'hôte, laissez simplement vide l'option
 		<para>Cette variable est utilisée pour définir le nombre d'<quote>unités de
 temps</quote> entre les contrôles réguliers d'un hôte. Sauf si vous avez
 changé la variable <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
 d'informations sur cette valeur peut être trouvée dans la documentation sur
 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -567,7 +567,7 @@ changement d'état, il sera contrôlé à nouveau sur une fréquence
 <quote>normale</quote> telle que définie dans la valeur <emphasis
 role="bold">check_interval</emphasis>. Sauf si vous avez changé la variable
 <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
 d'informations sur cette valeur peut être trouvée dans la documentation sur
 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -616,7 +616,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		<listitem>
 		<para>Cette variable est utilisée pour définir si les contrôles pour cet hôte
 seront ou non <quote>obsessed</quote> en utilisant la commande <link
-linkend="configuringnagios-configmain-ochp_command">ochp_command</link>.
+linkend="configuringnagios-configmain-ochp_command">&config-ochp_command;</link>.
 		</para>
 		</listitem>
 	</varlistentry>
@@ -656,7 +656,7 @@ les <link linkend="advancedtopics-eventhandlers">gestionnaire
 d'événenements</link> pour plus d'explications sur la façon d'écrire des
 scripts pour gérer les événements. Le temps maximal d'exécution d'une
 commande de gestion d'événements est contrôlé par l'option <link
-linkend="configuringnagios-configmain-event_handler_timeout">event_handler_timeout</link>.</para>
+linkend="configuringnagios-configmain-event_handler_timeout">&config-event_handler_timeout;</link>.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -680,7 +680,7 @@ d'oscillation pour l'hôte. Plus d'informations sur la détection
 d'ocillations se trouve <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">low_host_flap_threshold</link>
+linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
 au niveau global du logiciel sera utilisée.</para>
 		</listitem>
 	</varlistentry>
@@ -694,7 +694,7 @@ d'oscillation pour l'hôte. Plus d'informations sur la détection
 d'ocillations se trouve <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">low_host_flap_threshold</link>
+linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
 au niveau global du logiciel sera utilisée.</para>
 		</listitem>
 	</varlistentry>
@@ -748,7 +748,7 @@ activé.
 états de l'hôte sont conservées ou non après redémarrage du programme. C'est
 seulement utile si vous avez activé la rétention d'états en utilisant la
 variable <link
-linkend="configuringnagios-configmain-retain_state_information">retain_state_information</link>.
+linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
 Valeur : 0 = rétention des données d'états désactivé, 1 = rétention des
 données d'états activé.</para>
 		</listitem>
@@ -762,7 +762,7 @@ données d'états activé.</para>
 des états de l'hôte sont conservées après redémarrage du programme. C'est
 seulement utile si vous avez activé la rétention d'états en utilisant la
 variable <link
-linkend="configuringnagios-configmain-retain_state_information">retain_state_information</link>.
+linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
 Valeur : 0 = rétention des données différentes des états désactivé, 1 =
 rétention des données différentes des états activé.
         </para>
@@ -806,8 +806,8 @@ contact ou un groupe de contacts dans chaque définition d'hôte.</para>
 temps</quote> à attendre avant de re-notifier un contact que ce service est
 <emphasis>tojours</emphasis> down ou innacessible. Sauf si vous avez changé
 la variable <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
-de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Sivous
 mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les
 contacts des problèmes pour cet hôte - une seule notification de problème
 sera envoyée.
@@ -822,7 +822,7 @@ sera envoyée.
 		<para>Cette variable est utilisée pour préciser le nombre d'<quote>unités de
 temps</quote> à attendre avant d'envoyer la première notification quand un
 hôte passe dans un état non-UP. Sauf si vous avez changé la variable <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
 mettez cette valeur à 0, Nagios commencera à envoyer des notifications
 immédiatement.</para>
@@ -1601,7 +1601,7 @@ d'une <link
 linkend="configuringnagios-objectdefinitions-command">commande</link> à
 utiliser pour contrôler l'état du service. Le temps maximal d'exécution
 d'une commande de contrôle de service est contrôlé par l'option <link
-linkend="configuringnagios-configmain-service_check_timeout">service_check_timeout</link>.</para>
+linkend="configuringnagios-configmain-service_check_timeout">&config-service_check_timeout;</link>.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1645,7 +1645,7 @@ dans un état OK ou non-OK mais qu'il a déjà été recontrôlé le nombre de f
 précisé dans la variable <emphasis
 role="bold">max_check_attempts</emphasis>. Sauf si vous avez changé la
 variable <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
 d'informations sur cette valeur peut être trouvée dans la documentation sur
 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -1666,7 +1666,7 @@ role="bold">max_check_attempts</emphasis> sans changement d'état, il sera
 contrôlé à nouveau sur une fréquence <quote>normale</quote> telle que
 définie dans la valeur <emphasis role="bold">check_interval</emphasis>. Sauf
 si vous avez changé la variable <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
 d'informations sur cette valeur peut être trouvée dans la documentation sur
 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -1722,7 +1722,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		<listitem>
 		<para>Cette variable est utilisée pour déterminer si les contrôles de ce service
 seront ou non <quote>obsessed</quote> en utilisant la commande <link
-linkend="configuringnagios-configmain-ocsp_command">ocsp_command</link>.
+linkend="configuringnagios-configmain-ocsp_command">&config-ocsp_command;</link>.
         </para>
 		</listitem>
 	</varlistentry>
@@ -1767,7 +1767,7 @@ les <link linkend="advancedtopics-eventhandlers">gestionnaire
 d'événenements</link> pour plus d'explications sur la façon d'écrire des
 scripts pour gérer les événements. Le temps maximal d'exécution d'une
 commande de gestion d'événements est contrôlé par l'option <link
-linkend="configuringnagios-configmain-event_handler_timeout">event_handler_timeout</link>.</para>
+linkend="configuringnagios-configmain-event_handler_timeout">&config-event_handler_timeout;</link>.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1795,7 +1795,7 @@ d'oscillation pour ce service. Plus d'informations sur la détection
 d'ocillations se trouve <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">low_host_flap_threshold</link>
+linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
 au niveau global du logiciel sera utilisée.</para>
 		</listitem>
 	</varlistentry>
@@ -1809,7 +1809,7 @@ d'oscillation pour ce service. Plus d'informations sur la détection
 d'ocillations se trouve <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">low_host_flap_threshold</link>
+linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
 au niveau global du logiciel sera utilisée.</para>
 		</listitem>
 	</varlistentry>
@@ -1872,7 +1872,7 @@ performance est activé ou non pour ce service. Valeurs :
 états de service sont conservées ou non après redémarrage du
 programme. C'est seulement utile si vous avez activé la rétention d'états en
 utilisant la variable <link
-linkend="configuringnagios-configmain-retain_state_information">retain_state_information</link>.
+linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
 Valeur :
 		<itemizedlist>
 		<listitem><para>0 = rétention des données d'états désactivée</para></listitem>
@@ -1890,7 +1890,7 @@ Valeur :
 des états de service sont conservées après redémarrage du programme. C'est
 seulement utile si vous avez activé la rétention d'états en utilisant la
 variable <link
-linkend="configuringnagios-configmain-retain_state_information">retain_state_information</link>.
+linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
 Valeur : 
 		<itemizedlist>
 		<listitem><para>0 = rétention des données autres que celles d'états désactivée</para></listitem>
@@ -1908,7 +1908,7 @@ Valeur :
 temps</quote> à attendre avant de re-notifier un contact que ce service est
 <emphasis>tojours</emphasis> dans un état non-OK. Sauf si vous avez changé
 la variable <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
 mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les
 contacts des problèmes pour cet hôte - une seule notification de problème
@@ -1925,7 +1925,7 @@ sera envoyée.
 temps</quote> à attendre avant d'envoyer la première notification quand un
 service passe dans un état non-UP. Sauf si vous avez changé la variable
 <link
-linkend="configuringnagios-configmain-interval_length">interval_length</link>
+linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
 mettez cette valeur à 0, Nagios commencera à envoyer des notifications
 immédiatement.</para>
@@ -2599,7 +2599,7 @@ et des retours à la normale. Plusieurs notifications peuvent être séparés
 par des virgules. Toutes les commandes de notification sont exécutées quand
 les contacts ont besoin d'être notifiés. Le durée maximale d'exécution de la
 commande est contrôlée par l'option <link
-linkend="configuringnagios-configmain-notification_timeout">notification_timeout</link>.</para>
+linkend="configuringnagios-configmain-notification_timeout">&config-notification_timeout;</link>.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -2658,7 +2658,7 @@ notifications peuvent être séparés par des virgules. Toutes les commandes de
 notification sont exécutées quand les contacts ont besoin d'être
 notifiés. Le durée maximale d'exécution de la commande est contrôlée par
 l'option <link
-linkend="configuringnagios-configmain-notification_timeout">notification_timeout</link>.
+linkend="configuringnagios-configmain-notification_timeout">&config-notification_timeout;</link>.
 		</para>
 		</listitem>
 	</varlistentry>
@@ -2733,7 +2733,7 @@ externes</link> à Nagios depuis les &acronym-cgi;s. Valeurs :
 états du contact sont conservées ou non après redémarrage du
 programme. C'est seulement utile si vous avez activé la rétention d'états en
 utilisant la variable <link
-linkend="configuringnagios-configmain-retain_state_information">retain_state_information</link>.
+linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
 Valeur :
 		<itemizedlist>
 		<listitem><para>0 = rétention des données d'états désactivée</para></listitem>
@@ -2751,7 +2751,7 @@ Valeur :
 des états du contact sont conservées après redémarrage du programme. C'est
 seulement utile si vous avez activé la rétention d'états en utilisant la
 variable <link
-linkend="configuringnagios-configmain-retain_state_information">retain_state_information</link>.
+linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
 Valeur :
 		<itemizedlist>
 		<listitem><para>0 = rétention des données autres que celles d'états désactivée</para></listitem>

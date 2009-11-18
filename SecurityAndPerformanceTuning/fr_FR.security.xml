@@ -88,9 +88,9 @@ Root!</emphasis>. Il n'est pas nécessaire d'être root pour faire fonctionner
 Nagios, alors ne le faîtes pas. Vous pouvez obliger Nagios à abandonner des
 privilèges après le lancement et à fonctionner avec les droits d'un autre
 utilisateur/groupe en utilisant les directives <link
-linkend="configuringnagios-configmain-nagios_user">nagios_user</link>et
+linkend="configuringnagios-configmain-nagios_user">&config-nagios_user;</link>et
 <link
-linkend="configuringnagios-configmain-nagios_group">nagios_group</link> dans
+linkend="configuringnagios-configmain-nagios_group">&config-nagios_group;</link> dans
 le fichier principal de configuration. Si vous avez besoin d'exécuter des
 gestionnaires d'événements ou des plugins qui requièrent des accès root,
 vous pouvez essayer d'utiliser <ulink
@@ -186,7 +186,7 @@ la macro &macro-usern;. </para>
    <listitem>
     <para><emphasis role="bold">Éliminez les caractères dangereux des
 macros</emphasis>. Utilisez la directive <link
-linkend="configuringnagios-configmain-illegal_macro_output_chars">illegal_macro_output_chars</link>
+linkend="configuringnagios-configmain-illegal_macro_output_chars">&config-illegal_macro_output_chars;</link>
 pour filtrer les caractères dangereux 
     des chaînes issues des macros &macro-hostoutput;, &macro-serviceoutput;,
     &macro-hostperfdata;, et &macro-serviceperfdata;  avant qu'elles ne

@@ -111,7 +111,7 @@ quand les contrôles, gestionnaires d'événements, notifications et autres
 commandes sont exécutées. Ceci est plutôt consommateur de ressources &acronym-cpu;. 
 Dans les installations où Nagios gère un nombre important d'hôtes et de services, vous devrez alors désactiver cette
 fonctionnalité à l'aide de l'option <link
-linkend="configuringnagios-configmain-enable_environment_macros">enable_environment_macros</link>.</para>
+linkend="configuringnagios-configmain-enable_environment_macros">&config-enable_environment_macros;</link>.</para>
  </listitem>
 
  <listitem>
@@ -175,27 +175,27 @@ rétention ne sont pas supprimées ou ignorées</para>
  
 	<listitem>
  <para>Ajout des variables <link
-linkend="configuringnagios-configmain-retained_host_attribute_mask"><varname>retained_host_attribute_mask</varname></link>
+linkend="configuringnagios-configmain-retained_host_attribute_mask">&config-retained_host_attribute_mask;</link>
 et <link
-linkend="configuringnagios-configmain-retained_service_attribute_mask"><varname>retained_service_attribute_mask</varname></link>
+linkend="configuringnagios-configmain-retained_service_attribute_mask">&config-retained_service_attribute_mask;</link>
 permettant de contrôler quels attributs d'hôte/service sont conservés entre
 chaque redémarrage.</para>
  </listitem>
  
 	<listitem>
  <para>Ajout des variables <link
-linkend="configuringnagios-configmain-retained_process_host_attribute_mask"><varname>retained_process_host_attribute_mask</varname></link>
+linkend="configuringnagios-configmain-retained_process_host_attribute_mask">&config-retained_process_host_attribute_mask;</link>
 et <link
-linkend="configuringnagios-configmain-retained_process_service_attribute_mask"><varname>retained_process_service_attribute_mask</varname></link>
+linkend="configuringnagios-configmain-retained_process_service_attribute_mask">&config-retained_process_service_attribute_mask;</link>
 afin de contrôler quels attributs de processus sont conservés entre chaque
 redémarrage.</para>
  </listitem>
  
 	<listitem>
  <para>Ajout des variables <link
-linkend="configuringnagios-configmain-retained_contact_host_attribute_mask"><varname>retained_contact_host_attribute_mask</varname></link>
+linkend="configuringnagios-configmain-retained_contact_host_attribute_mask">&config-retained_contact_host_attribute_mask;</link>
 et <link
-linkend="configuringnagios-configmain-retained_contact_service_attribute_mask"><varname>retained_contact_service_attribute_mask</varname></link>
+linkend="configuringnagios-configmain-retained_contact_service_attribute_mask">&config-retained_contact_service_attribute_mask;</link>
 afin de contrôler quels attributs de contact sont conservés entre chaque
 redémmarage. </para>
  </listitem>
@@ -257,7 +257,7 @@ sont pas traitées en interne par le démon Nagios. Elle devraient, malgré tout
  <listitem>
  <para>
 	 L'option <link
-linkend="configuringnagios-configmain-check_external_commands"><varname>check_external_commands</varname></link>
+linkend="configuringnagios-configmain-check_external_commands">&config-check_external_commands;</link>
 est maintenant activée par défaut, ce qui signifie que Nagios est configuré
 d'origine pour vérifier les commandes externes. Toutes les versions de
 Nagios antérieures à la version 2.x avaient cette option désactivée par
@@ -288,9 +288,9 @@ bien que celles-ci ne soient pas traitées par les &acronym-cgi;s.</para>
  <itemizedlist>
  <listitem>
  <para>Ajout des variables <link
-linkend="configuringnagios-configmain-enable_embedded_perl"><varname>enable_embedded_perl</varname></link>
+linkend="configuringnagios-configmain-enable_embedded_perl">&config-enable_embedded_perl;</link>
 et <link
-linkend="configuringnagios-configmain-use_embedded_perl_implicitly"><varname>use_embedded_perl_implicitly</varname></link>
+linkend="configuringnagios-configmain-use_embedded_perl_implicitly">&config-use_embedded_perl_implicitly;</link>
 afin de contrôler l'utilisation de l'interpréteur Perl intégré.</para>
  </listitem>
 
@@ -428,7 +428,7 @@ services.</para>
  <listitem>
  <para>Les expressions régulières étendues sont désormais utilisées si vous activez
 l'option de configuration <link
-linkend="configuringnagios-configmain-use_regexp_matching"><varname>use_regexp_matching</varname></link>.
+linkend="configuringnagios-configmain-use_regexp_matching">&config-use_regexp_matching;</link>.
 Les expressions régulières de base sont seulement utilisées dans certaines
 variables de définitions d'objets qui contiennent <emphasis
 role="strong">*</emphasis>, <emphasis role="bold">?</emphasis>, <emphasis
@@ -510,7 +510,7 @@ linkend="securityandperformancetuning-faststartup">ici</link>.
 
  <listitem>
  <para>Une nouvelle option <link
-linkend="configuringnagios-configmain-use_large_installation_tweaks"><varname>use_large_installation_tweaks</varname></link>
+linkend="configuringnagios-configmain-use_large_installation_tweaks">&config-use_large_installation_tweaks;</link>
 a été ajoutée qui devrait permettre d'améliorer les performances sur les
 Nagios comprenant de nombreux hôtes et services. En savoir plus <link
 linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
@@ -525,7 +525,7 @@ de vitesse sur les installations comprenant de nombreux hôtes et services.</par
 
  <listitem>
  <para>Une nouvelle option <link
-linkend="configuringnagios-configmain-external_command_buffer_slots"><varname>external_command_buffer_slots</varname></link>
+linkend="configuringnagios-configmain-external_command_buffer_slots">&config-external_command_buffer_slots;</link>
 a été ajoutée pour permettre de facilement dimensionner Nagios dans des 
 installations comprenant de nombreux hôtes et services. Pour obtenir les meilleurs résultats, vous devriez
 utiliser <link linkend="securityandperformancetuning-mrtggraphs">MRTG</link> pour
@@ -573,7 +573,7 @@ multi-lignes et la longueur maximale d'un message retour
 
  <listitem>
  <para>Ajout d'une nouvelle option <link
-linkend="configuringnagios-configmain-enable_predictive_service_dependency_checks"><varname>enable_predictive_service_dependency_checks</varname></link>
+linkend="configuringnagios-configmain-enable_predictive_service_dependency_checks">&config-enable_predictive_service_dependency_checks;</link>
 pour contrôler si Nagios va initier ou non un contrôle prédictif de service
 dont celui-ci dépend (dans les définitions de dépendances). Les contrôles
 prédictifs aide à s'assurer que la logique de dépendance est aussi précise
@@ -617,7 +617,7 @@ de mise en cache des contrôles (voir ci-dessous).</para>
 
  <listitem>
  <para>Ajout d'une nouvelle option <link
-linkend="configuringnagios-configmain-check_for_orphaned_hosts"><varname>check_for_orphaned_hosts</varname></link>
+linkend="configuringnagios-configmain-check_for_orphaned_hosts">&config-check_for_orphaned_hosts;</link>
 pour activer ou non les contrôles d'hôtes orphelins. C'est maintenant
 nécessaire puisque les contrôles d'hôtes fonctionnent en parallèle.
 	 </para>
@@ -625,7 +625,7 @@ nécessaire puisque les contrôles d'hôtes fonctionnent en parallèle.
 
  <listitem>
  <para>Ajout d'une nouvelle option <link
-linkend="configuringnagios-configmain-enable_predictive_host_dependency_checks"><varname>enable_predictive_host_dependency_checks</varname></link>
+linkend="configuringnagios-configmain-enable_predictive_host_dependency_checks">&config-enable_predictive_host_dependency_checks;</link>
 pour contrôler si Nagios va initier ou non un contrôle prédictif pour les
 hôtes dont celui-ci dépend (dans les définitions de dépendances). Les
 contrôles prédictifs aide à s'assurer que la logique de dépendance est aussi
@@ -654,7 +654,7 @@ d'hôtes <link linkend="advancedtopics-passivestatetranslation">ici</link>.</par
  <listitem>
  <para>Les contrôles passifs d'hôtes placent normalement celui-ci dans un état
 HARD. Ceci peut désormais être changé en activant l'option <link
-linkend="configuringnagios-configmain-passive_host_checks_are_soft"><varname>passive_host_checks_are_soft</varname></link>.</para>
+linkend="configuringnagios-configmain-passive_host_checks_are_soft">&config-passive_host_checks_are_soft;</link>.</para>
  </listitem>
  </itemizedlist>
  </section>
@@ -665,7 +665,7 @@ linkend="configuringnagios-configmain-passive_host_checks_are_soft"><varname>pas
  <itemizedlist>
  <listitem>
  <para>Une nouvelle option <link
-linkend="configuringnagios-configmain-additional_freshness_latency"><varname>additional_freshness_latency</varname></link>
+linkend="configuringnagios-configmain-additional_freshness_latency">&config-additional_freshness_latency;</link>
 a été ajoutée pour permettre de préciser le nombre de secondes qui devraient
 être ajoutées à n'importe quel seuil de fraîcheur d'hôte ou de service
 automatiquement calculé par Nagios.</para>
@@ -688,9 +688,9 @@ comprenant de nombreux hôtes et services.</para>
  <listitem>
  <para>Les résultats de contrôles sont maintenant transférés en écrivant 
 dans le dossier précisé par l'option <link
-linkend="configuringnagios-configmain-check_result_path"><varname>check_result_path</varname></link>.
+linkend="configuringnagios-configmain-check_result_path">&config-check_result_path;</link>.
 Les fichiers plus vieux que l'option <link
-linkend="configuringnagios-configmain-max_check_result_file_age"><varname>max_check_result_file_age</varname></link>
+linkend="configuringnagios-configmain-max_check_result_file_age">&config-max_check_result_file_age;</link>
 seront détruits définitivement et sans aucun traitement supplémentaire.</para>
  </listitem>
  </itemizedlist>
@@ -804,11 +804,10 @@ développement, aussi n'est-il peut-être pas complet quand vous l'essayerez.</p
 
  <listitem>
  <para>Les variables qui modifient le comportement du journal de debug sont <link
-linkend="configuringnagios-configmain-debug_file"><varname>debug_file</varname></link>, <link
-linkend="configuringnagios-configmain-debug_level"><varname>debug_level</varname></link>, <link
-linkend="configuringnagios-configmain-debug_verbosity"><varname>debug_verbosity</varname></link>
-et <link
-linkend="configuringnagios-configmain-max_debug_file_size"><varname>max_debug_file_size</varname></link>.</para>
+linkend="configuringnagios-configmain-debug_file">&config-debug_file;</link>, <link
+linkend="configuringnagios-configmain-debug_level">&config-debug_level;</link>, <link
+linkend="configuringnagios-configmain-debug_verbosity">&config-debug_verbosity;</link>
+et <link linkend="configuringnagios-configmain-max_debug_file_size">&config-max_debug_file_size;</link>.</para>
  </listitem>
  </itemizedlist>
  </section>
@@ -820,7 +819,7 @@ linkend="configuringnagios-configmain-max_debug_file_size"><varname>max_debug_fi
  <listitem>
  <para><emphasis role="bold">Variable de chemin temporaire</emphasis> - Une
 nouvelle variable <link
-linkend="configuringnagios-configmain-temp_path"><varname>temp_path</varname></link> a été
+linkend="configuringnagios-configmain-temp_path">&config-temp_path;</link> a été
 ajoutée pour préciser un répertoire temporaire que Nagios peut utiliser.</para>
  </listitem>
 
@@ -852,7 +851,7 @@ ajoutées. Ceci inclut &macro-hostgroupnames;,
  <listitem>
  <para><emphasis role="bold">Fréquence de reaper</emphasis> - L'ancienne variable
 <varname>service_reaper_frequency</varname> a été renommée en <link
-linkend="configuringnagios-configmain-check_result_reaper_frequency"><varname>check_result_reaper_frequency</varname></link>
+linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link>
 puisqu'elle est désormais également utilisée pour traiter les résultats de contrôles
 d'hôtes.</para>
  </listitem>
@@ -860,7 +859,7 @@ d'hôtes.</para>
  <listitem>
  <para><emphasis role="bold">Temps maximal de reaper</emphasis> - Une nouvelle
 variable <link
-linkend="configuringnagios-configmain-max_check_result_reaper_time"><varname>max_check_result_reaper_time</varname></link>
+linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link>
 a été ajoutée pour limiter le temps d'exécution d'un événement reaper.
 	 </para>
  </listitem>
@@ -908,15 +907,15 @@ agrégées à un intervalle minimum de 1 seconde.</para>
  <listitem>
  <para><emphasis role="bold">Nouveau mode de fichier de données de
 performance</emphasis> - Une nouvelle option <quote><option>p</option></quote> a été ajoutée aux options
-<link linkend="configuringnagios-configmain-host_perfdata_file_mode"><varname>host_perfdata_file_mode</varname></link> et 
-<link linkend="configuringnagios-configmain-service_perfdata_file_mode"><varname>service_perfdata_file_mode</varname></link>. 
+<link linkend="configuringnagios-configmain-host_perfdata_file_mode">&config-host_perfdata_file_mode;</link> et 
+<link linkend="configuringnagios-configmain-service_perfdata_file_mode">&config-service_perfdata_file_mode;</link>. 
 Ce nouveau mode ouvre un fichier en lecture/écriture non exclusive, ce qui est utile pour les fichiers tubes.</para>
  </listitem>
 
  <listitem>
  <para><emphasis role="bold">Décalage de fuseau horaire</emphasis> - Une nouvelle
 option, <link
-linkend="configuringnagios-configmain-use_timezone"><varname>use_timezone</varname></link>, a
+linkend="configuringnagios-configmain-use_timezone">&config-use_timezone;</link>, a
 été ajoutée afin de vous permettre de démarrer des instances de nagios
 situées dans des fuseaux horaires autres que le fuseau local.</para>
  </listitem>

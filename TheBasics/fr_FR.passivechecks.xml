@@ -115,7 +115,7 @@ procéder de la manière suivante:</para>
   <itemizedlist>
    <listitem>
     <para>Passer la directive <link
-linkend="configuringnagios-configmain-accept_passive_service_checks"><code>accept_passive_service_checks</code></link> à 1.</para>
+linkend="configuringnagios-configmain-accept_passive_service_checks">&config-accept_passive_service_checks;</link> à 1.</para>
    </listitem>
 
    <listitem>
@@ -125,7 +125,7 @@ linkend="configuringnagios-configmain-accept_passive_service_checks"><code>accep
 
   <para>Si vous voulez désactiver globalement le contrôle passifs, passer la
 directive <link
-linkend="configuringnagios-configmain-accept_passive_service_checks"><code>accept_passive_service_checks</code></link> à 0.</para>
+linkend="configuringnagios-configmain-accept_passive_service_checks">&config-accept_passive_service_checks;</link> à 0.</para>
 
   <para>Si vous voulez désactiver le contrôle passifs pour quelques services ou
 hôtes, utilisez la directive <code>passive_checks_enabled</code> dans votre définition d'hôte et/ou service pour faire ça.</para>
@@ -232,12 +232,12 @@ dans laquelle vous avez des liens d'hôtes pères/fils complexes.</para>
 
   <para>Vous pouvez dire à nagios de traduire un résultat de contrôle passif
 DOWN/UNREACHABLE par votre <quote>propre</quote> état en utilisant la variable <link
-linkend="configuringnagios-configmain-translate_passive_host_checks"><code>translate_passive_host_checks</code></link>. Vous trouverez plus d'information sur son fonctionnement <link
+linkend="configuringnagios-configmain-translate_passive_host_checks">&config-translate_passive_host_checks;</link>. Vous trouverez plus d'information sur son fonctionnement <link
 linkend="advancedtopics-passivestatetranslation">ici</link>.</para>
 
   <note><para>Les contrôles passifs des hôtes sont normalement traité en <link
 linkend="thebasics-statetypes">états HARD</link>, à moins que l'option <link
-linkend="configuringnagios-configmain-passive_host_checks_are_soft"><code>passive_host_checks_are_soft</code></link> soit activée.</para></note>
+linkend="configuringnagios-configmain-passive_host_checks_are_soft">&config-passive_host_checks_are_soft;</link> soit activée.</para></note>
  </section>
 
  <section>

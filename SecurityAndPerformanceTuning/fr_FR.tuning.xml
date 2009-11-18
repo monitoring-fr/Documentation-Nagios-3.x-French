@@ -41,7 +41,7 @@ linkend="securityandperformancetuning-mrtggraphs" >ici</link>.</para>
    <listitem>
     <para>Utilisez les trucs et astuces pour les installations de grande
 dimension. Activer l'option <link
-linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link>
+linkend="configuringnagios-configmain-use_large_installation_tweaks">&config-use_large_installation_tweaks;</link>
 peut vous donner de meilleures performances. Lisez plus d'informations sur
 ce que fait cette option <link
 linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
@@ -58,12 +58,12 @@ toutes les macros nécessaires en argument de la ligne de commande), vous
 n'avez alors pas besoin de cette fonctionnalité. Vous pouvez empêcher de
 rendre les macros disponibles comme variables d'environnement en utilisant
 l'option <link
-linkend="configuringnagios-configmain-enable_environment_macros">enable_environment_macros</link>.</para>
+linkend="configuringnagios-configmain-enable_environment_macros">&config-enable_environment_macros;</link>.</para>
    </listitem>
 
    <listitem>
     <para>Fréquence de consolidation des résultats de contrôle. La variable <link
-linkend="configuringnagios-configmain-check_result_reaper_frequency">check_result_reaper_frequency</link>
+linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link>
 détermine la fréquence à laquelle Nagios doit vérifier la présence de
 résultats de contrôles d'hôtes et de services qui doivent être traités. Le
 temps maximum qu'il doit passer à traiter ces résultats est déterminé par la
@@ -75,7 +75,7 @@ et de services.</para>
 
    <listitem>
     <para>Temps maximum de consolidation. La variable <link
-linkend="configuringnagios-configmain-max_check_result_reaper_time">max_check_result_reaper_time</link>
+linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link>
 détermine le temps maximum que le démon Nagios peut passer à traiter les
 résultats de contrôles d'hôtes et de services avant de pouvoir faire autre
 chose - comme exécuter de nouveaux contrôles d'hôtes et de services. Une
@@ -90,7 +90,7 @@ MRTG</link> pour pouvoir prendre cette décision.</para>
    <listitem>
     <para>Ajuster la taille du tampon. Vous pouvez avoir à régler la valeur de
 l'option <link
-linkend="configuringnagios-configmain-external_command_buffer_slots">external_command_buffer_slots</link>.
+linkend="configuringnagios-configmain-external_command_buffer_slots">&config-external_command_buffer_slots;</link>.
 Grapher les statistiques liées au tampon avec <link
 linkend="securityandperformancetuning-mrtggraphs">MRTG</link> (voir au
 dessus) est critique pour pouvoir déterminer les valeurs à utiliser pour
@@ -102,7 +102,7 @@ cette option.</para>
 nombre maximal de contrôles en parallèle. Nagios peut restreindre le nombre
 maximal de contrôles de service exécutés en parallèle à la valeur que vous
 spécifiez dans le paramètre <link
-linkend="configuringnagios-configmain-max_concurrent_checks">max_concurrent_checks</link>.
+linkend="configuringnagios-configmain-max_concurrent_checks">&config-max_concurrent_checks;</link>.
 Cela vous permet de gérer la charge que Nagios impose à votre hôte de
 supervision, mais cela peut aussi ralentir le traitement. Si vous notez des
 latences importantes (> 10 ou 15 secondes) pour la majorité de vos contrôles
@@ -203,7 +203,7 @@ linkend="advancedtopics-cachedchecks">ici</link>.</para>
     <para>N'utilisez pas le contrôle agressif des hôtes. Sauf si Nagios a du mal à
 identifier les rétablissements d'hôte, je recommanderais de ne pas activer
 le paramètre <link
-linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressive_host_checking</link>.
+linkend="configuringnagios-configmain-use_aggressive_host_checking">&config-use_aggressive_host_checking;</link>.
 Quand cette option est désactivée, les contrôles s'exécutent beaucoup plus
 vite, accélérant le traitement des résultats de contrôles de
 service. Cependant, les rétablissements d'hôtes peuvent être manqués en
@@ -221,7 +221,7 @@ expressément besoin…</para>
 beaucoup de commandes externes (p. ex. des vérifications passives dans une
 <link linkend="advancedtopics-distributed">supervision distribuée</link>),
 vous devrez probablement affecter -1 au paramètre <link
-linkend="configuringnagios-configmain-command_check_interval">command_check_interval</link>.
+linkend="configuringnagios-configmain-command_check_interval">&config-command_check_interval;</link>.
 Cela forcera Nagios à vérifier les commandes externes aussi souvent que
 possible. C'est important parce que la plupart des systèmes ont une petite
 taille de <link
