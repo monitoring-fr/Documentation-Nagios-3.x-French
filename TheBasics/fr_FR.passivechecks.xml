@@ -119,12 +119,12 @@ linkend="configuringnagios-configmain-accept_passive_service_checks">&config-acc
    </listitem>
 
    <listitem>
-    <para>Passer dans la définition des hôtes et des services la <code>passive_checks_enabled</code> directive à 1</para>
+    <para>Passer dans la définition des hôtes et des services le paramètre <varname>passive_checks_enabled</varname> à 1</para>
    </listitem>
   </itemizedlist>
 
-  <para>Si vous voulez désactiver globalement le contrôle passifs, passer la
-directive <link
+  <para>Si vous voulez désactiver globalement le contrôle passifs, passer le
+paramètre <link
 linkend="configuringnagios-configmain-accept_passive_service_checks">&config-accept_passive_service_checks;</link> à 0.</para>
 
   <para>Si vous voulez désactiver le contrôle passifs pour quelques services ou

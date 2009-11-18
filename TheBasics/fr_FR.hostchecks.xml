@@ -196,8 +196,8 @@ réellement DOWN ou s'il est UNREACHABLE. La distinction entre les états
 d'hôtes DOWN et UNREACHABLE est important, car elle peut permettre aux
 admministrateurs de determiner l'origine de la coupure réseau rapidement. Le
 tableau suivant montre comment Nagios détermine l'état final en fonction de
-l'état de l'hôte(s) parent(s). Les parents d'hôtes sont définis dans la
-directive parents de la définition d'hôte.</para></note>
+l'état de l'hôte(s) parent(s). Les parents d'hôtes sont définis dans le
+paramètre <varname>parents</varname> de la définition d'hôte.</para></note>
 		<informaltable frame="all">
 			<tgroup cols="3">
 				<thead>

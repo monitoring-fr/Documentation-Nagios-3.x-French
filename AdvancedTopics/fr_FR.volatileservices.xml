@@ -134,8 +134,8 @@ service.</para>
    <title>Configuration de PortSentry</title>
 
    <para>Modifiez votre fichier de configuration de PortSentry
-(<filename>portsentry.conf</filename>), et définissez une commande pour la
-directive KILL_RUN_CMD comme suit :</para>
+(<filename>portsentry.conf</filename>), et définissez une commande pour le
+paramètre KILL_RUN_CMD comme suit :</para>
 
    <programlisting>KILL_RUN_CMD="/usr/local/Nagios/libexec/eventhandlers/submit_check_result <replaceable>host_name</replaceable> 'Port Scans' 2 'Port scan from host $TARGET$ on port $PORT$.  Host has been firewalled.'"</programlisting>
 

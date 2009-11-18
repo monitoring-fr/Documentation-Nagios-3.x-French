@@ -120,8 +120,7 @@ objets</link> que Nagios doit utiliser pour la supervision. Ce fichier
 contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes
 de contacts, services, commandes etc… Vous pouvez éclater votre fichier de
 configuration des objets en plusieurs fichiers que vous inclurez, pour leur
-traitement,
-   <code>cfg_file=</code> en ajoutant une directive cfg_file= pour chacun d'eux.</para>
+traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d'eux.</para>
   </section>
 
   <section>
@@ -161,7 +160,7 @@ objets</link> que Nagios doit utiliser pour la supervision. Ce fichier
 contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes
 de contacts, services, commandes etc… Vous pouvez éclater votre fichier de
 configuration des objets en plusieurs fichiers que vous inclurez, pour leur
-traitement, en ajoutant une directive <programlisting> cfg_file=</programlisting> pour chacun d'eux.</para>
+traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d'eux.</para>
   </section>
 
   <section>
@@ -264,8 +263,8 @@ type &macro-usern;.
 chemins d'accès). Les &acronym-cgi;s ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
 protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de
-ressources en ajoutant des directives resource_file
-   <literal>resource_file</literal> au fichier de configuration principal - Nagios les traitera
+ressources en ajoutant des paramètres <varname>resource_file</varname> 
+au fichier de configuration principal - Nagios les traitera
 tous. Référez-vous au fichier <filename>resource.cfg</filename> d'exemple situé à la racine de la
 distribution de Nagios, pour voir comment utiliser les macros &macro-usern;.</para>
   </section>
@@ -4568,7 +4567,7 @@ défaut.</para>
 
    <note>
     <para>Si vous utilisez cette option de plage horaire personnalisé, vous allez
-devoir modifier des directives dans les fichier de configurations d'Apache
+devoir modifier des paramètres dans les fichiers de configurations d'Apache
 concernant les &acronym-cgi;s comme dans l'exemple suivant:</para>
    </note>
 
@@ -4686,8 +4685,8 @@ expressions rationnelles</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette option détermine si les directives dans vos définitions d'objet seront
-traitées comme des expressions rationnelles. Vous pouvez trouver plus
+   <para>Cette option détermine si les paramètres dans vos définitions d'objet seront
+traités comme des expressions rationnelles. Vous pouvez trouver plus
 d'informations sur ce service <link
 linkend="advancedtopics-objecttricks">ici</link>.</para>
 
@@ -4729,11 +4728,11 @@ systématique par expressions rationnelles</title>
    </informaltable>
 
    <para>Si vous avez activé la concordance par expression rationnelle, cette option
-va déterminer quand les directives vont être traitées comme des expressions
+va déterminer quand les paramètres vont être traités comme des expressions
 rationnelles :  * Si cette option est désactivée (par défaut), les
-directives seront traitées comme des expression rationnelles uniquement si
+paramètres seront traités comme des expression rationnelles uniquement si
 elles contiennent un *, ?, +, ou un \ …  * Si cette option est activée,
-toutes les directives seront traitées comme des expressions
+toutes les paramètres seront traités comme des expressions
 rationnelles. Faîtes très attention lorsque vous activez cette option !Pour
 plus d'information, lisez <link
 linkend="advancedtopics-objecttricks">ceci</link>.</para>
@@ -4883,9 +4882,9 @@ Broker Modules"/>Les Modules événementiels</title>
     </tgroup>
    </informaltable>
 
-   <para>Cette directive est utilisé particulièrement pour que le module événementiel
+   <para>Ce paramètre est particulièrement utilisé pour que le module événementiel
 soit chargé au démarrage de Nagios. On peut utiliser plusieurs de ces mêmes
-directive si l'on veut en charger plusieurs. Les arguments passés au module
+paramètres si l'on veut en charger plusieurs. Les arguments passés au module
 seront séparés par un espace.</para>
 
    <warning><para>Ne PAS écraser les modules pendant qu'ils sont utilisés par Nagios ou Nagios

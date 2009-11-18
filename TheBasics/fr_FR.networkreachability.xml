@@ -75,10 +75,10 @@ parent/enfant dans Nagios.</para>
 
   <para>Maintenant que vous savez ce que représente les relations parent/enfant pour
 les hôtes supervisés; comment configurer Nagios pour représenter celles-ci?
-La directive parents de vos <link
+Le paramètre <varname>parents</varname> de vos <link
 linkend="configuringnagios-objectdefinitions-host">définitions
-d'hôtes</link> vou spermet de le faire. Voici un extrait des définitions de
-l'hôte avec les relations parent/enfant pour cet exemple:</para>
+d'hôtes</link> vous permet de le faire. Voici un extrait des définitions de
+l'hôte avec les relations parent/enfant pour cet exemple :</para>
 
   <programlisting>define host{
 		        host_name               Nagios   ; &lt;-- The local host has no parent - it is the topmost host
@@ -189,8 +189,8 @@ derrière est inacessible.</para>
 UNREACHABLE pendant des coupures réseaux, vous pouvez exclure l'option
 unreachable (u) de le paramètre <varname>notification_options</varname> dans votre fichier de
 configuration d'<link
-linkend="configuringnagios-objectdefinitions-host">hôte</link> et/ou dans la
-directive host_notification_options de votre fichier de définitions des
+linkend="configuringnagios-objectdefinitions-host">hôte</link> et/ou dans le
+paramètre <varname>host_notification_options</varname> de votre fichier de définitions des
 <link linkend="configuringnagios-objectdefinitions-contact">contacts</link>.</para>
  </section>
 </chapter>

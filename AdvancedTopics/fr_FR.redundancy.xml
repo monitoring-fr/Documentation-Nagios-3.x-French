@@ -134,11 +134,11 @@ comme étant <quote>l’esclave</quote>. </para>
 		<section>
 			<title>Réglages initiaux du programme</title>
 			
-			<para>Le système esclave (système E) a sa directive initiale de notification <link
+			<para>Le système esclave (système E) a son paramètre initial de notification <link
 linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>
-désactivée, afin de lui éviter d’envoyer des notifications autant pour les
+désactivé, afin de lui éviter d’envoyer des notifications autant pour les
 hôtes que pour les services. Il faut aussi s’assurer que le système esclave
-a sa directive <link
+a son paramètre <link
 linkend="configuringnagios-configmain-check_external_commands">&config-check_external_commands;</link>
 activée. C’est plutôt simple…</para>
 		</section>
@@ -463,7 +463,7 @@ problème…</para>
 			<title>Réglages initiaux du programme</title>
 			
 			<para>Désactiver la vérification active des services et la notification sur le
-système esclave en utilisant les directives <link
+système esclave en utilisant les paramètres <link
 linkend="configuringnagios-configmain-execute_service_checks">&config-execute_service_checks;</link>
 et <link
 linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>.

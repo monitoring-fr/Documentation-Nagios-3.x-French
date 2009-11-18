@@ -31,7 +31,7 @@ rapide</link>.			</para>
 		<title>Fichier de configuration principal</title>
 		
 		<para>Le fichier de configuration principal contient un certain nombre de
-directives qui affectent la manière dont Nagios fonctionne. Ce fichier est
+paramètres qui affectent la manière dont Nagios fonctionne. Ce fichier est
 lu par le processus Nagios et par les &acronym-cgi;. C'est ici que commence vos aventures de configuration.
 		</para>
 		
@@ -71,7 +71,7 @@ désirez le faire.
 		</para>
 		
 		<para>Vous pouvez définir un ou plusieurs fichiers de définitions des objets avec
-les directives <link
+les paramètres <link
 linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> et/ou <link
 linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link> dans le
 fichier de configuration principal. 
@@ -87,7 +87,7 @@ linkend="configuringnagios-configobject">ici</link>.
 		<title>Fichier de configuration des CGIs</title>
 		
 		<para>Le fichier de configuration des &acronym-cgi;s contient un certain nombre de
-directives qui affectent le mode de fonctionnement des <link
+paramètres qui affectent le mode de fonctionnement des <link
 linkend="thebasics-cgis">CGIs</link>. Il contient également une référence au
 fichier de configuration principal, de façon à ce que les &acronym-cgi;s sachent
 comment est configuré Nagios et où trouver les objets de configuration.

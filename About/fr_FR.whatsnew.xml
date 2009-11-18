@@ -143,7 +143,7 @@ file</link>.</para>
  <itemizedlist>
  <listitem>
  <para>Les commentaires de services et d'hôtes ne sont plus stockés dans leur
-propre fichier (précédemment spécifié à l'aide d'une directive
+propre fichier (précédemment spécifié à l'aide d'un paramètre
 <varname>comment_file</varname> dans le fichier de configuration
 principal). Les commentaires courant et retenus sont maintenant stockés
 respectivement dans <link linkend="configuringnagios-configmain-status_file">le fichier statut</link>
@@ -604,8 +604,8 @@ savoir plus</link>)</para>
 
  <listitem>
  <para>Les réessais de contrôles d'hôtes sont maintenant gérés comme ceux
-des services. Tout ça pour dire que les définitions d'hôtes ont une nouvelle
-variable &directive-retry_interval; qui précise le temps à attendre
+des services. Tout ça pour dire que les définitions d'hôtes ont un nouveau
+paramètre &directive-retry_interval; qui précise le temps à attendre
 avant de faire un nouvel essai de contrôle sur l'hôte. ;-)</para>
  </listitem>
 

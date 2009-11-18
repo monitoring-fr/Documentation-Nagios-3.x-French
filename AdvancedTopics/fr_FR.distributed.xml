@@ -117,9 +117,9 @@ linkend="configuringnagios-configobject">fichier de configuration
 d'hôte</link>.</para>
 			</listitem>
 			<listitem>
-				<para>Le serveur distribué a sa directive <link
+				<para>Le serveur distribué a son paramètre <link
 linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>
-initiale fixée à 0. Cela évitera d'envoyer des notifications à partir du
+initiale fixé à 0. Cela évitera d'envoyer des notifications à partir du
 serveur. </para>
 			</listitem>
 			<listitem>
@@ -288,8 +288,8 @@ un service qui a été défini. </para>
 			<listitem>
 				<para>Si vous n'utilisez le serveur central que pour traiter des services dont les
 résultats sont fournis par des hôtes distribués, vous pouvez simplement
-désactiver tous les contrôles de service de façon globale en mettant la
-directive <link
+désactiver tous les contrôles de service de façon globale en mettant le
+paramètre <link
 linkend="configuringnagios-configmain-execute_service_checks">&config-execute_service_checks;</link>
 à 0. Si vous utilisez le serveur central pour superviser activement quelques
 services par lui-même (sans l'intervention des serveurs distribués),
