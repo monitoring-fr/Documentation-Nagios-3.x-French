@@ -2905,9 +2905,9 @@ comportement.</para>
    </itemizedlist>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-enable_environment_macros"
-xreflabel="Environment Macros Option"/>Environment Macros Option</title>
+  <section id="configuringnagios-configmain-enable_environment_macros">
+   <title>Activation des macros d'environnement</title>
+   <titleabbrev id="configuringnagios-configmain-enable_environment_macros-tech">enable_environment_macros</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2931,7 +2931,7 @@ xreflabel="Environment Macros Option"/>Environment Macros Option</title>
    <para>Cette option détermine si oui ou non le démon Nagios peut considérer toutes
 les <link linkend="thebasics-macrolist">macros</link> standard comme des
 variables d'environnements pour vos contrôles, notifications, déclencheur
-d'événement, etc … Dans de grand périmètre de production, ceci peut être
+d'événement, etc. Dans de grand périmètre de production, ceci peut être
 problématique car une utilisation mémoire et &acronym-cpu; supplémentaire est utile
 pour convertir ces macros en variables d'environnements.</para>
 

@@ -21,7 +21,7 @@ sale boulot.</para>
  <section>
   <title>Que sont les plugins?</title>
 
-  <para>Les plugins sont des programmes compilés ou des scripts (Perl, shell, etc..)
+  <para>Les plugins sont des programmes compilés ou des scripts (Perl, shell, etc.)
 qui peuvent être exécutés par une ligne de commande pour contrôler l'état d'un
 hôte ou d'un service. Nagios utilise le résultat des plugins pour déterminer
 le statut actuel des hôtes ou services sur le réseau.</para>
@@ -32,7 +32,7 @@ sens très général du terme) pour effectuer le contrôle et renvoie simplement
 le résultat à Nagios. Nagios traitera les résultats qu'il aura reçu du
 plugin et prendra les mesures nécessaires (en exécutant des <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>, en envoyant
-des <link linkend="thebasics-notifications">notifications</link>, etc…).</para>
+des <link linkend="thebasics-notifications">notifications</link>, etc.).</para>
  </section>
 
  <section>
@@ -51,7 +51,7 @@ superviser à peu près tout ce que vous voulez. Si vous pouvez automatiser le
 procédé de contrôle de quelque-chose, vous pouvez le superviser avec
 Nagios. Il existe déjà plein de plugins qui ont été créés pour superviser
 des ressources basiques comme la charge processeur, l'espace disque utilsé,
-les statistiques de la commande ping, etc… Si vous voulez superviser autre
+les statistiques de la commande ping, etc. Si vous voulez superviser autre
 chose, reportez-vous à la documentation nommée <link
 linkend="development-pluginapi">écrire ses plugins</link> et créez les
 vôtres. C'est très simple!</para>

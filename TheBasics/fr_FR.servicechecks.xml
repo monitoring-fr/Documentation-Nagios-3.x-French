@@ -61,13 +61,13 @@ linkend="advancedtopics-dependencies">ici</link>.</para>
 		<para>Les contrôles de services planifiés sont effecués en parallèle. Lorsque
 Nagios a besoin d'effectuer un contrôle de service planifié, il lancera le
 contrôle du service et reviendra ensuite à d'autres tâches (exécution de
-contrôles d'hôtes, etc…). Le contrôle de service est lancé en tant que
+contrôles d'hôtes, etc.). Le contrôle de service est lancé en tant que
 processus enfant qui a été doublé depuis le démon principal de Nagios. Quand
 le contrôle de service est terminé, le processus enfant informera le
 processus principal Nagios (son parent) des résultats du contrôle. Le
 processus principal de Nagios prend en compte les résultats et prend les
 mesures appropriées (exécution des gestionnaires d'événements, l'envoi de
-notification, etc…).</para>
+notification, etc.).</para>
 		<para>Les contrôles de service à la demande peuvent être aussi lancés en parallèle
 si besoin. Comme il a été mentionné précédement, Nagios peut renoncer à
 l'exécution d'un contrôle de service à la demande s'il peut utiliser les

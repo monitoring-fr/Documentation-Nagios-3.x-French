@@ -110,8 +110,7 @@ contiennent maintenant elles-mêmes des macros, celles-ci sont:
 quand les contrôles, gestionnaires d'événements, notifications et autres
 commandes sont exécutées. Ceci est plutôt consommateur de ressources &acronym-cpu;. 
 Dans les installations où Nagios gère un nombre important d'hôtes et de services, vous devrez alors désactiver cette
-fonctionnalité à l'aide de l'option <link
-linkend="configuringnagios-configmain-enable_environment_macros">&config-enable_environment_macros;</link>.</para>
+fonctionnalité à l'aide de l'option <xref linkend="configuringnagios-configmain-enable_environment_macros" endterm="configuringnagios-configmain-enable_environment_macros-tech"/>.</para>
  </listitem>
 
  <listitem>
@@ -702,7 +701,7 @@ seront détruits définitivement et sans aucun traitement supplémentaire.</para
  <itemizedlist>
  <listitem>
  <para>Les périodes de temps ont finalement été étendues pour accepter les
-exceptions, les sauts de dates (tous les 3 jours), etc… Cela devrait aider
+exceptions, les sauts de dates (tous les 3 jours), etc. Cela devrait aider
 lors de la définition de périodes de notifications pour les rotations de
 pager.</para>
  </listitem>
