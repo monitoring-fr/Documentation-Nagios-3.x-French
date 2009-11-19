@@ -15,8 +15,7 @@
   <itemizedlist>
    <listitem>
     <para>Les lignes qui commencent par le caractère
-'<computeroutput>#</computeroutput>' sont des commentaires et ne sont pas
-traitées
+'<computeroutput>#</computeroutput>' sont des commentaires et ne sont pas traitées
 	</para>
    </listitem>
 
@@ -58,11 +57,10 @@ class="directory">/usr/local/nagios/etc/</filename>.
 
   <para>Vous allez trouver ci-dessous la description de chacune des options du fichier principal de configuration de Nagios…</para>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-log_file" xreflabel="Log
-File"/>Fichier journal</title>
- 
-   
+  <section id="configuringnagios-configmain-log_file">
+   <title>Fichier journal</title>
+   <titleabbrev id="configuringnagios-configmain-log_file-tech">log_file</titleabbrev>
+    
    <variablelist>
    <varlistentry>
    <term>Format</term>
@@ -83,34 +81,23 @@ journaux</link>, ce fichier sera automatiquement archivé et remplacé chaque
 heure, jour, semaine et mois.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-cfg_file" xreflabel="Object
-Configuration Files" />Fichier de configuration des objets</title>
+  <section id="configuringnagios-configmain-cfg_file">
+   <title>Fichier de configuration des objets</title>
+   <titleabbrev id="configuringnagios-configmain-cfg_file-tech">cfg_file</titleabbrev>
+   
    <para>
    Format : 
    <synopsis>cfg_file=&lt;nom_de_fichier&gt;</synopsis>
-   
-   <informalexample>
-   	<literallayout class="monospaced">
-cfg_file=/usr/local/nagios/etc/hosts.cfg
-cfg_file=/usr/local/nagios/etc/services.cfg
-cfg_file=/usr/local/nagios/etc/commands.cfg
-	</literallayout>
-   </informalexample>
-   
    </para>
    
    <variablelist>
-   <varlistentry>
-   <term>Format</term>
-   <listitem><programlisting>cfg_file=&lt;nom_de_fichier&gt;</programlisting></listitem>
-   </varlistentry>
+   
    <varlistentry>
    <term>Exemple</term>
-   <listitem><para><literallayout class="monospaced">
+   <listitem><para><programlisting>
 cfg_file=/usr/local/nagios/etc/hosts.cfg
 cfg_file=/usr/local/nagios/etc/services.cfg
-cfg_file=/usr/local/nagios/etc/commands.cfg</literallayout></para></listitem>
+cfg_file=/usr/local/nagios/etc/commands.cfg</programlisting></para></listitem>
    </varlistentry>
    </variablelist>
 
@@ -123,10 +110,9 @@ configuration des objets en plusieurs fichiers que vous inclurez, pour leur
 traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d'eux.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-cfg_dir" xreflabel="Object
-Configuration Directory"/>Répertoire des fichiers de configuration des
-objets</title>
+  <section id="configuringnagios-configmain-cfg_dir">
+   <title>Répertoire des fichiers de configuration des objets</title>
+   <titleabbrev id="configuringnagios-configmain-cfg_dir-tech">cfg_dir</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -163,9 +149,9 @@ configuration des objets en plusieurs fichiers que vous inclurez, pour leur
 traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d'eux.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-object_cache_file"
-xreflabel="Object Cache File"/>Fichier de cache des objets</title>
+  <section id="configuringnagios-configmain-object_cache_file">
+   <title>Fichier de cache des objets</title>
+   <titleabbrev id="configuringnagios-configmain-object_cache_file-tech">object_cache_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -197,9 +183,9 @@ les fichiers de configuration des objets, pendant que Nagios tourne, sans
 que l'affichage des &acronym-cgi;s soit modifié.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-precached_object_file"
-xreflabel="Precached Object File" />Fichier de pré-cache des objets</title>
+  <section id="configuringnagios-configmain-precached_object_file">
+   <title>Fichier de pré-cache des objets</title>
+   <titleabbrev id="configuringnagios-configmain-precached_object_file-tech">precached_object_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -232,9 +218,9 @@ démarrage <link
 linkend="securityandperformancetuning-faststartup">ici</link>.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-resource_file" xreflabel="Resource
-File"/>Fichier de ressources</title>
+  <section id="configuringnagios-configmain-resource_file">
+   <title>Fichier de ressources</title>
+   <titleabbrev id="configuringnagios-configmain-resource_file-tech">resource_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -269,9 +255,9 @@ tous. Référez-vous au fichier <filename>resource.cfg</filename> d'exemple situ
 distribution de Nagios, pour voir comment utiliser les macros &macro-usern;.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-temp_file" xreflabel="Temp
-File"/>Fichier temporaire</title>
+  <section id="configuringnagios-configmain-temp_file">
+   <title>Fichier temporaire</title>
+   <titleabbrev id="configuringnagios-configmain-temp_file-tech">temp_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">                            
@@ -298,9 +284,9 @@ commentaires de données, des données d'état etc… Il est supprimé quand il
 n'est plus nécessaire.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-temp_path" xreflabel="Temp
-Path"/>Répertoire temporaire</title>
+  <section id="configuringnagios-configmain-temp_path">
+   <title>Répertoire temporaire</title>
+   <titleabbrev id="configuringnagios-configmain-temp_path-tech">temp_path</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -329,10 +315,9 @@ similaire sur ce réperoire pour effacer les fichiers plus vieux de 24
 heures.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-status_log" /> <anchor
-id="configuringnagios-configmain-status_file" xreflabel="Status File"
-/>Fichier d'états (journal des états)</title>
+  <section id="configuringnagios-configmain-status_file" >
+   <title>Fichier d'états (journal des états)</title>
+   <titleabbrev id="configuringnagios-configmain-status_file-tech">status_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2861,10 +2846,9 @@ défaut, Nagios libère la mémoire. Ce</para>
    </itemizedlist>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-child_processes_fork_twice"
-xreflabel="Forker les processus enfants en double"/>Forker les processus
-enfant en double</title>
+  <section id="configuringnagios-configmain-child_processes_fork_twice">
+   <title>Forker les processus enfant en double</title>
+   <titleabbrev id="configuringnagios-configmain-child_processes_fork_twice-tech">child_processes_fork_twice</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
