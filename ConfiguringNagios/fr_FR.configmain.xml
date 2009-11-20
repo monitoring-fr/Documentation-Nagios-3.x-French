@@ -560,6 +560,7 @@ valeurs possibles de cette variable sont :</para>
 
   <section id="configuringnagios-configmain-accept_passive_host_checks">
    <title>Option d'acceptation des contrôles passifs d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-accept_passive_host_checks-tech">accept_passive_host_checks</titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -614,6 +615,7 @@ valeurs possibles de cette variable sont :</para></note>
 
   <section id="configuringnagios-configmain-enable_event_handlers">
    <title>Option de gestion d'événement</title>
+   <titleabbrev id="configuringnagios-configmain-enable_event_handlers-tech">enable_event_handlers</titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -667,6 +669,7 @@ valeurs possibles de cette variable sont :</para></note>
 
   <section id="configuringnagios-configmain-log_rotation_method">
    <title>Méthode de rotation du journal</title>
+   <titleabbrev id="configuringnagios-configmain-log_rotation_method-tech">log_rotation_method</titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -711,6 +714,7 @@ dernier jour du mois)</para>
 
   <section id="configuringnagios-configmain-log_archive_path">
    <title>Chemin d'accès aux archives du journal</title>
+   <titleabbrev id="configuringnagios-configmain-log_archive_path-tech">log_archive_path</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -741,6 +745,7 @@ journal</link>.</para>
 
   <section id="configuringnagios-configmain-check_external_commands">
    <title>Option de contrôle des commandes externes</title>
+   <titleabbrev id="configuringnagios-configmain-check_external_commands-tech">check_external_commands</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -786,6 +791,7 @@ linkend="advancedtopics-extcommands">ici</link>.</para>
 
   <section id="configuringnagios-configmain-command_check_interval">
    <title>Intervalle entre les contrôles des commandes externes</title>
+   <titleabbrev id="configuringnagios-configmain-command_check_interval-tech">command_check_interval</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -828,6 +834,7 @@ externes <link linkend="advancedtopics-extcommands">ici</link>.</para>
 
   <section id="configuringnagios-configmain-command_file">
    <title>Fichier de commandes externes</title>
+   <titleabbrev id="configuringnagios-configmain-command_file-tech">command_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -861,6 +868,7 @@ lisez <link linkend="advancedtopics-extcommands">ceci</link>.</para>
 
   <section id="configuringnagios-configmain-external_command_buffer_slots">
    <title>Mémoire tampon des commandes externes</title>
+   <titleabbrev id="configuringnagios-configmain-external_command_buffer_slots-tech">external_command_buffer_slots</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -904,6 +912,7 @@ linkend="securityandperformancetuning-mrtggraphs">ici</link>.</para>
 
   <section id="configuringnagios-configmain-lock_file">
    <title>Fichier verrou</title>
+   <titleabbrev id="configuringnagios-configmain-lock_file-tech">configmain-lock_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -932,6 +941,7 @@ en tant que démon (i.e. démarré avec l'argument
 
   <section id="configuringnagios-configmain-retain_state_information">
    <title>Option de mémorisation de l'état</title>
+   <titleabbrev id="configuringnagios-configmain-retain_state_information-tech">retain_state_information</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -975,6 +985,7 @@ redémarrera.</para>
 
   <section id="configuringnagios-configmain-state_retention_file">
    <title>Fichier de mémorisation de l'état</title>
+   <titleabbrev id="configuringnagios-configmain-state_retention_file-tech">state_retention_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1007,6 +1018,7 @@ linkend="configuringnagios-configmain-retain_state_information" />.</para>
 
   <section id="configuringnagios-configmain-retention_update_interval">
    <title>Intervalle de mise à jour des états mémorisés</title>
+   <titleabbrev id="configuringnagios-configmain-retention_update_interval-tech">retention_update_interval</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1040,6 +1052,7 @@ variable est sans effet.</para>
 
   <section id="configuringnagios-configmain-use_retained_program_state">
    <title>Option d'utilisation des états mémorisés du programme</title>
+   <titleabbrev id="configuringnagios-configmain-use_retained_program_state-tech">use_retained_program_state</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1088,6 +1101,7 @@ option est sans effet.</para>
 
   <section id="configuringnagios-configmain-use_retained_scheduling_info">
    <title>Option d'utilisation des états mémorisés de l'ordonnanceur</title>
+   <titleabbrev id="configuringnagios-configmain-use_retained_scheduling_info-tech">use_retained_scheduling_info</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1264,6 +1278,7 @@ contact sont conservés.</para>
   
   <section id="configuringnagios-configmain-use_syslog">
    <title>Option de journalisation dans Syslog</title>
+   <titleabbrev id="configuringnagios-configmain-use_syslog-tech">use_syslog</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1301,6 +1316,7 @@ l'utilitaire système Syslog. Les valeurs possibles sont :</para>
 
   <section id="configuringnagios-configmain-log_notifications">
    <title>Option de journalisation des notifications</title>
+   <titleabbrev id="configuringnagios-configmain-log_notifications-tech">log_notifications</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1340,6 +1356,7 @@ pour éviter de journaliser les notifications faites aux contacts.</para>
 
   <section id="configuringnagios-configmain-log_service_retries">
    <title>Option de journalisation de tentatives de contrôle de service</title>
+   <titleabbrev id="configuringnagios-configmain-log_service_retries-tech">log_service_retries</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1382,6 +1399,7 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</par
 
   <section id="configuringnagios-configmain-log_host_retries">
    <title>Option de journalisation de tentatives de contrôle d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-log_host_retries-tech">log_host_retries</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1421,6 +1439,7 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</par
 
   <section id="configuringnagios-configmain-log_event_handlers">
    <title>Option de journalisation des gestions d'événement</title>
+   <titleabbrev id="configuringnagios-configmain-log_event_handlers-tech">log_event_handlers</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1462,6 +1481,7 @@ déboguer Nagios ou de tester les scripts de gestion d'événements.</para>
 
   <section id="configuringnagios-configmain-log_initial_states">
    <title>Option de journalisation des états initiaux</title>
+   <titleabbrev id="configuringnagios-configmain-log_initial_states-tech">log_initial_states</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1503,6 +1523,7 @@ terme pour les hôtes et services.</para>
 
   <section id="configuringnagios-configmain-log_external_commands">
    <title>Option de journalisation des commandes externes</title>
+   <titleabbrev id="configuringnagios-configmain-log_external_commands-tech">log_external_commands</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1549,6 +1570,7 @@ journalisation des contrôles passifs de service.</para>
 
   <section id="configuringnagios-configmain-log_passive_checks">
    <title>Option de journalisation des contrôles passifs</title>
+   <titleabbrev id="configuringnagios-configmain-log_passive_checks-tech">log_passive_checks</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1593,6 +1615,7 @@ journal de trop grossir.</para>
 
   <section id="configuringnagios-configmain-global_host_event_handler">
    <title>Gestionnaire global des événements relatifs aux hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-global_host_event_handler-tech">global_host_event_handler</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1628,6 +1651,7 @@ linkend="advancedtopics-eventhandlers">ici</link></para>
 
   <section id="configuringnagios-configmain-global_service_event_handler">
    <title>Gestionnaire global des événements relatifs aux services</title>
+   <titleabbrev id="configuringnagios-configmain-global_service_event_handler-tech">global_service_event_handler</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1663,6 +1687,7 @@ linkend="advancedtopics-eventhandlers">ici</link>.</para>
 
   <section id="configuringnagios-configmain-sleep_time">
    <title>Temps de sommeil entre les contrôles</title>
+   <titleabbrev id="configuringnagios-configmain-sleep_time-tech">sleep_time</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1692,6 +1717,7 @@ contrôles de services en retard dans la file.</para>
 
   <section id="configuringnagios-configmain-service_inter_check_delay_method">
    <title>Méthode de délai inter-contrôles de services</title>
+   <titleabbrev id="configuringnagios-configmain-service_inter_check_delay_method-tech">service_inter_check_delay_method</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1752,6 +1778,7 @@ service</para>
 
   <section id="configuringnagios-configmain-max_service_check_spread">
    <title>Délai maximum de répartition des contrôles initiaux de services</title>
+   <titleabbrev id="configuringnagios-configmain-max_service_check_spread-tech">max_service_check_spread</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1786,6 +1813,7 @@ activée. La valeur par défaut est de 30 (minutes).</para>
 
   <section id="configuringnagios-configmain-service_interleave_factor">
    <title>Délai maximum de répartition des contrôles initiaux de services</title>
+   <titleabbrev id="configuringnagios-configmain-service_interleave_factor-tech">service_interleave_factor</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1842,6 +1870,7 @@ d'entrelacement (par défaut)</para>
 
   <section id="configuringnagios-configmain-max_concurrent_checks">
    <title>Nombre maximal de contrôles de service simultanés</title>
+   <titleabbrev id="configuringnagios-configmain-max_concurrent_checks-tech">max_concurrent_checks</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1876,6 +1905,7 @@ linkend="advancedtopics-checkscheduling-max_concurrent_checks">ici</link>.</para
 
   <section id="configuringnagios-configmain-check_result_reaper_frequency">
    <title>Fréquence de consolidation des résultats de contrôle</title>
+   <titleabbrev id="configuringnagios-configmain-check_result_reaper_frequency-tech">check_result_reaper_frequency</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1906,6 +1936,7 @@ cœur de la logique de supervision de Nagios.</para>
 
   <section id="configuringnagios-configmain-max_check_result_reaper_time">
    <title>Temps maximum de consolidation des résultats de contrôle</title>
+   <titleabbrev id="configuringnagios-configmain-max_check_result_reaper_time-tech">max_check_result_reaper_time</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1940,6 +1971,7 @@ Nagios pour d'autres traitements de la logique de supervision.</para>
 
   <section id="configuringnagios-configmain-check_result_path">
    <title>Répertoire de stockage des résultats de contrôle</title>
+   <titleabbrev id="configuringnagios-configmain-check_result_path-tech">check_result_path</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -1976,6 +2008,7 @@ Nagios prélève des résultats ne la concernant pas! </para></note>
 
   <section id="configuringnagios-configmain-max_check_result_file_age">
    <title>L'age maximum du fichier de résultat de contrôle</title>
+   <titleabbrev id="configuringnagios-configmain-max_check_result_file_age-tech">max_check_result_file_age</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2008,6 +2041,7 @@ contrôle. </para>
 
   <section id="configuringnagios-configmain-host_inter_check_delay_method">
    <title>Méthode de délai inter-contrôles d'hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-host_inter_check_delay_method-tech">host_inter_check_delay_method</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2066,6 +2100,7 @@ répartir également les contrôles d'hôte (par défaut)</para>
 
   <section id="configuringnagios-configmain-max_host_check_spread">
    <title>Délai maximum de répartition des contrôles initiaux d'hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-max_host_check_spread-tech">max_host_check_spread</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2101,6 +2136,7 @@ défaut est de 30 (minutes).</para>
 
   <section id="configuringnagios-configmain-interval_length">
    <title>Valeur de l'intervalle de temps</title>
+   <titleabbrev id="configuringnagios-configmain-interval_length-tech">interval_length</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2136,6 +2172,7 @@ cette variable, donc vous la modifierez à vos risques et périls !</para></impo
 
   <section id="configuringnagios-configmain-auto_reschedule_checks">
    <title>Option de réordonnancement automatique</title>
+   <titleabbrev id="configuringnagios-configmain-auto_reschedule_checks-tech">auto_reschedule_checks</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2171,6 +2208,7 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
 
   <section id="configuringnagios-configmain-auto_rescheduling_interval">
    <title>Intervalle de réordonnancement automatique</title>
+   <titleabbrev id="configuringnagios-configmain-auto_rescheduling_interval-tech">auto_rescheduling_interval</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2203,6 +2241,7 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
 
   <section id="configuringnagios-configmain-auto_rescheduling_window">
    <title>Fenêtre de réordonnancement automatique</title>
+   <titleabbrev id="configuringnagios-configmain-auto_rescheduling_window-tech">auto_rescheduling_window</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2239,6 +2278,7 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
 
   <section id="configuringnagios-configmain-use_aggressive_host_checking">
    <title>Option de contrôle agressif des hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-use_aggressive_host_checking-tech">use_aggressive_host_checking</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2282,6 +2322,7 @@ je vous suggère de ne pas activer cette option.</para>
 
   <section id="configuringnagios-configmain-translate_passive_host_checks">
    <title>Option de traduction des contrôles d'hôte passif</title>
+   <titleabbrev id="configuringnagios-configmain-translate_passive_host_checks-tech">translate_passive_host_checks</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2323,6 +2364,7 @@ linkend="advancedtopics-passivestatetranslation">ici</link>.</para>
 
   <section id="configuringnagios-configmain-passive_host_checks_are_soft">
    <title>Option de status (FIXME ?) des contrôle passifs d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-passive_host_checks_are_soft-tech">passive_host_checks_are_soft</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2363,6 +2405,8 @@ changer ceci en activant cette option.</para>
 
   <section id="configuringnagios-configmain-enable_predictive_host_dependency_checks">
    <title>Option de contrôles prédictifs de dépendances d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-enable_predictive_host_dependency_checks-tech">enable_predictive_host_dependency_checks</titleabbrev>
+
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
 	<colspec colnum="1" colwidth="15*"/>
@@ -2405,6 +2449,7 @@ linkend="advancedtopics-dependencychecks">ici</link></para>
 
   <section id="configuringnagios-configmain-enable_predictive_service_dependency_checks">
    <title>Option de contrôle prédictif de dépendance de service</title>
+   <titleabbrev id="configuringnagios-configmain-enable_predictive_service_dependency_checks-tech">enable_predictive_service_dependency_checks</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2447,6 +2492,7 @@ peuvent être trouvées <link linkend="advancedtopics-dependencychecks">ici FIXM
 
   <section id="configuringnagios-configmain-cached_host_check_horizon">
    <title>FIXME Cached Host Check Horizon</title>
+   <titleabbrev id="configuringnagios-configmain-cached_host_check_horizon-tech">cached_host_check_horizon</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2483,6 +2529,7 @@ linkend="advancedtopics-cachedchecks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-cached_service_check_horizon">
    <title>FIXME Cached Service Check Horizon</title>
+   <titleabbrev id="configuringnagios-configmain-cached_service_check_horizon-tech">cached_service_check_horizon</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2519,6 +2566,7 @@ linkend="advancedtopics-cachedchecks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-use_large_installation_tweaks">
    <title>Option d'optimisations pour les gros périmètres</title>
+   <titleabbrev id="configuringnagios-configmain-use_large_installation_tweaks-tech">use_large_installation_tweaks</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2560,6 +2608,7 @@ linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-free_child_process_memory">
    <title>Option de gestion de la mémoire des processus enfants</title>
+   <titleabbrev id="configuringnagios-configmain-free_child_process_memory-tech">free_child_process_memory</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2682,6 +2731,7 @@ pour convertir ces macros en variables d'environnements.</para>
 
   <section id="configuringnagios-configmain-enable_flap_detection">
    <title>Option de détection de l'oscillation d'un service ou d'un hôte[flap]</title>
+   <titleabbrev id="configuringnagios-configmain-enable_flap_detection-tech">enable_flap_detection</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2741,6 +2791,7 @@ l'interface web.</para></note>
 
   <section id="configuringnagios-configmain-low_service_flap_threshold">
    <title>Seuil inférieur d'oscillation d'un service</title>
+   <titleabbrev id="configuringnagios-configmain-low_service_flap_threshold-tech">low_service_flap_threshold</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2770,6 +2821,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-high_service_flap_threshold">
    <title>Seuil supérieur d'oscillation d'un service</title>
+   <titleabbrev id="configuringnagios-configmain-high_service_flap_threshold-tech">high_service_flap_threshold</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2799,6 +2851,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-low_host_flap_threshold">
    <title>Seuil inférieur d'oscillation d'un hôte</title>
+   <titleabbrev id="configuringnagios-configmain-low_host_flap_threshold-tech">low_host_flap_threshold</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2828,6 +2881,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-high_host_flap_threshold">
    <title>Seuil supérieur d'oscillation d'un hôte</title>
+   <titleabbrev id="configuringnagios-configmain-high_host_flap_threshold-tech">high_host_flap_threshold</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2857,6 +2911,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-soft_state_dependencies">
    <title>Option de dépendance <quote>soft</quote> des services</title>
+   <titleabbrev id="configuringnagios-configmain-soft_state_dependencies-tech">soft_state_dependencies</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2899,6 +2954,7 @@ hard ou soft), activez cette option.</para>
 
   <section id="configuringnagios-configmain-service_check_timeout">
    <title>Dépassement de délai du contrôle de service</title>
+   <titleabbrev id="configuringnagios-configmain-service_check_timeout-tech">service_check_timeout</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2936,6 +2992,7 @@ pensant que c'est un processus ayant des problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-host_check_timeout">
    <title>Dépassement de délai du contrôle d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-host_check_timeout-tech">host_check_timeout</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -2973,6 +3030,7 @@ pensant que c'est un processus ayant des problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-event_handler_timeout">
    <title>Dépassement de délai de contrôle du gestionnaire d'événement</title>
+   <titleabbrev id="configuringnagios-configmain-event_handler_timeout-tech">event_handler_timeout</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3010,6 +3068,7 @@ problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-notification_timeout">
    <title>Dépassement de délai de notification</title>
+   <titleabbrev id="configuringnagios-configmain-notification_timeout-tech">notification_timeout</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3047,6 +3106,7 @@ que c'est un processus ayant des problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-ocsp_timeout">
    <title>Dépassement de délai de la commande de remontée de contrôle de service</title>
+   <titleabbrev id="configuringnagios-configmain-ocsp_timeout-tech">ocsp_timeout</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3076,6 +3136,7 @@ limite, elle sera tuée et une alerte sera journalisée.</para>
 
   <section id="configuringnagios-configmain-ochp_timeout">
    <title>Dépassement de délai de la commande de remontée de contrôle d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-ochp_timeout-tech">ochp_timeout</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3106,6 +3167,7 @@ journalisée.</para>
 
   <section id="configuringnagios-configmain-perfdata_timeout">
    <title>Dépassement de délai de la commande de traitement des données liées aux performances</title>
+   <titleabbrev id="configuringnagios-configmain-perfdata_timeout-tech">perfdata_timeout</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3138,6 +3200,7 @@ dépasse cette limite, elle sera tuée et une alerte sera journalisée.</para>
 
   <section id="configuringnagios-configmain-obsess_over_services">
    <title>Option de remontée de contrôle de service</title>
+   <titleabbrev id="configuringnagios-configmain-obsess_over_services-tech">obsess_over_services</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3182,6 +3245,7 @@ pas cette option.</para>
 
   <section id="configuringnagios-configmain-ocsp_command">
    <title>Commande de remontée de contrôle de service</title>
+   <titleabbrev id="configuringnagios-configmain-ocsp_command-tech">ocsp_command</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3225,6 +3289,7 @@ service</link> l'est aussi</para>
 
   <section id="configuringnagios-configmain-obsess_over_hosts">
    <title>Option de remontée de contrôle d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-obsess_over_hosts-tech">obsess_over_hosts</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3268,6 +3333,7 @@ faites pas de supervision répartie, n'activez pas cette option.</para>
 
   <section id="configuringnagios-configmain-ochp_command">
    <title>Commande de remontée de contrôle d'hôte</title>
+   <titleabbrev id="configuringnagios-configmain-ochp_command-tech">ochp_command</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3311,6 +3377,7 @@ l'hôte</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-process_performance_data">
    <title>Option de traitement des données liées aux performances</title>
+   <titleabbrev id="configuringnagios-configmain-process_performance_data-tech">process_performance_data</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3349,6 +3416,7 @@ et de services.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_command">
    <title>Commande de performance liée aux hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_command-tech">host_perfdata_command</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3386,6 +3454,7 @@ l'hôte</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_command">
    <title>Commande de performance liée aux services</title>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_command-tech">service_perfdata_command</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3426,6 +3495,7 @@ service</link> l'est aussi</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file">
    <title>Fichier de performance des hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file-tech">host_perfdata_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3462,6 +3532,7 @@ l'hôte</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file">
    <title>Fichier de performance des services</title>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file-tech">service_perfdata_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3500,6 +3571,7 @@ service</link> l'est aussi</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_template">
    <title>Patron du fichier de performance des hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_template-tech">host_perfdata_file_template</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3532,6 +3604,7 @@ performance.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_template">
    <title>Patron du fichier de performance des services</title>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_template-tech">service_perfdata_file_template</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3564,6 +3637,7 @@ performance.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_mode">
    <title>Mode d'ouverture du fichier de performance des hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_mode-tech">host_perfdata_file_mode</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3608,6 +3682,7 @@ utiliser l'option par défaut ajout.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_mode">
    <title>Mode d'ouverture du fichier de performance des services</title>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_mode-tech">service_perfdata_file_mode</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3652,6 +3727,7 @@ certainement utiliser l'option par défaut ajout.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_processing_interval">
    <title>Intervalle de traitement du fichier de performance des hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_interval-tech">host_perfdata_file_processing_interval</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3684,6 +3760,7 @@ traitement n'aura pas lieu de manière régulière.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_processing_interval">
    <title>Intervalle de traitement du fichier de performance des services</title>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_interval-tech">service_perfdata_file_processing_interval</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3716,6 +3793,7 @@ traitement n'aura pas lieu de manière régulière.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_processing_command">
    <title>Commande de traitement du fichier de performance des hôtes</title>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_command-tech">host_perfdata_file_processing_command</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3750,6 +3828,7 @@ de traitement du fichier de performance des hôtes</link>.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_processing_command">
    <title>Commande de traitement du fichier de performance des services</title>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_command-tech">service_perfdata_file_processing_command</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3785,6 +3864,7 @@ linkend="configuringnagios-configmain-service_perfdata_file_processing_interval"
 
   <section id="configuringnagios-configmain-check_for_orphaned_services">
    <title>Option de vérification des contrôles de service orphelins</title>
+   <titleabbrev id="configuringnagios-configmain-check_for_orphaned_services-tech">check_for_orphaned_services</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3835,6 +3915,7 @@ services orphelins.</simpara>
 
   <section id="configuringnagios-configmain-check_for_orphaned_hosts">
    <title>Option de vérification des contrôles d'hôtes orphelins</title>
+   <titleabbrev id="configuringnagios-configmain-check_for_orphaned_hosts-tech">check_for_orphaned_hosts</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3885,6 +3966,7 @@ hôtes orphelins.</simpara>
 
   <section id="configuringnagios-configmain-check_service_freshness">
    <title>Option de contrôle de la validité des données d'un service</title>
+   <titleabbrev id="configuringnagios-configmain-check_service_freshness-tech">check_service_freshness</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3926,6 +4008,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-service_freshness_check_interval">
    <title>Intervalle de contrôle de la validité des données d'un service</title>
+   <titleabbrev id="configuringnagios-configmain-service_freshness_check_interval-tech">service_freshness_check_interval</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3958,6 +4041,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-check_host_freshness">
    <title>Option du contrôle de la validité des données d'un hôte</title>
+   <titleabbrev id="configuringnagios-configmain-check_host_freshness-tech">check_host_freshness</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -3999,6 +4083,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-host_freshness_check_interval">
    <title>Intervalle de contrôle de la validité des données d'un hôte</title>
+   <titleabbrev id="configuringnagios-configmain-host_freshness_check_interval-tech">host_freshness_check_interval</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4031,6 +4116,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-additional_freshness_latency">
    <title>Option du Seuil de Fraîcheur Supplémentaire de la Latence </title>
+   <titleabbrev id="configuringnagios-configmain-additional_freshness_latency-tech">additional_freshness_latency</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4060,6 +4146,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-enable_embedded_perl">
    <title>Activation de l'interpréteur Perl incorporé</title>
+   <titleabbrev id="configuringnagios-configmain-enable_embedded_perl-tech">enable_embedded_perl</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4088,8 +4175,9 @@ ce sujet <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
   </section>
 
   <section id="configuringnagios-configmain-use_embedded_perl_implicitly">
-   <title>Interpréteur Perl Incorporé</title>
-   
+   <title>Interpréteur Perl Incorporé FIXME implicite</title>
+   <titleabbrev id="configuringnagios-configmain-use_embedded_perl_implicitly-tech">use_embedded_perl_implicitly</titleabbrev>
+
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
 	<colspec colnum="1" colwidth="15*"/>
@@ -4119,6 +4207,7 @@ linkend="advancedtopics-embeddedperl">ici</link>.</para>
 
   <section id="configuringnagios-configmain-date_format">
    <title>Format de la date</title>
+   <titleabbrev id="configuringnagios-configmain-date_format-tech">date_format</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4195,6 +4284,7 @@ l'interface web. Les options possibles sont :</para>
 
   <section id="configuringnagios-configmain-use_timezone">
    <title>Option de plage horaire</title>
+   <titleabbrev id="configuringnagios-configmain-use_timezone-tech">use_timezone</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4241,6 +4331,7 @@ concernant les &acronym-cgi;s comme dans l'exemple suivant:</para>
 
   <section id="configuringnagios-configmain-illegal_object_name_chars">
    <title>Caractères illégaux dans les noms d'objets</title>
+   <titleabbrev id="configuringnagios-configmain-illegal_object_name_chars-tech">illegal_object_name_chars</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4271,6 +4362,7 @@ recommande de ne pas utiliser les caractères ci-dessus. Le faire vous expose
 
   <section id="configuringnagios-configmain-illegal_macro_output_chars">
   <title>Caractères illégaux dans la sortie des macros</title>
+   <titleabbrev id="configuringnagios-configmain-illegal_macro_output_chars-tech">illegal_macro_output_chars</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4315,6 +4407,7 @@ suivantes sont débarrassées des caractères spécifiés dans l'option :</para>
 
   <section id="configuringnagios-configmain-use_regexp_matching">
    <title>Option de concordance par expressions rationnelles</title>
+   <titleabbrev id="configuringnagios-configmain-use_regexp_matching-tech">use_regexp_matching</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4354,6 +4447,7 @@ linkend="advancedtopics-objecttricks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-use_true_regexp_matching">
    <title>Option de concordance systématique par expressions rationnelles</title>
+   <titleabbrev id="configuringnagios-configmain-use_true_regexp_matching-tech">use_true_regexp_matching</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4398,6 +4492,7 @@ linkend="advancedtopics-objecttricks">ceci</link>.</para>
 
   <section id="configuringnagios-configmain-admin_email">
    <title>Adresse email de l'administrateur</title>
+   <titleabbrev id="configuringnagios-configmain-admin_email-tech">admin_email</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4427,6 +4522,7 @@ de notification grâce à la <link linkend="thebasics-macros">macro</link>
 
   <section id="configuringnagios-configmain-admin_pager">
    <title>Pager de l'administrateur</title>
+   <titleabbrev id="configuringnagios-configmain-admin_pager-tech">admin_pager</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4457,6 +4553,7 @@ grâce à la <link linkend="thebasics-macros">macro</link>
 
   <section id="configuringnagios-configmain-event_broker_options">
    <title>Options du courtier d'événement</title>
+   <titleabbrev id="configuringnagios-configmain-event_broker_options-tech">event_broker_options</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4504,6 +4601,7 @@ suivantes:</para>
 
   <section id="configuringnagios-configmain-broker_module">
    <title>Les Modules événementiels</title>
+   <titleabbrev id="configuringnagios-configmain-broker_module-tech">broker_module</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4553,6 +4651,7 @@ la place le nouveau fichier, redémarrez Nagios</para>
 
   <section id="configuringnagios-configmain-debug_file">
    <title>Fichier de débogage</title>
+   <titleabbrev id="configuringnagios-configmain-debug_file-tech">debug_file</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4585,6 +4684,7 @@ linkend="configuringnagios-configmain-max_debug_file_size" /></para>
 
   <section id="configuringnagios-configmain-debug_level">
    <title>Niveau de débogage</title>
+   <titleabbrev id="configuringnagios-configmain-debug_level-tech">debug_level</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4651,6 +4751,7 @@ sont les suivantes:</para>
 
   <section id="configuringnagios-configmain-debug_verbosity">
    <title>Verbosité du mode de débogage</title>
+   <titleabbrev id="configuringnagios-configmain-debug_verbosity-tech">debug_verbosity</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">
@@ -4694,6 +4795,7 @@ débogage</link>.</para>
 
   <section id="configuringnagios-configmain-max_debug_file_size">
    <title>Taille maximale du fichier de débogage</title>
+   <titleabbrev id="configuringnagios-configmain-max_debug_file_size-tech">max_debug_file_size</titleabbrev>
 
    <informaltable frame="none" rowsep="0" colsep="0">
     <tgroup cols="2">

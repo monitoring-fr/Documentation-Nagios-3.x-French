@@ -17,6 +17,9 @@
 <xsl:param name="imagedata.default.scale">pagebound</xsl:param>
 
 <xsl:param name="variablelist.as.blocks" select="1"/>
+<xsl:param name="paper.type">A4</xsl:param>
+
+<xsl:param name="term.breakline">1</xsl:param>
 
 <!-- How to handle the tag linking. Avoids hyphenation in the link,
      and prevents from putting too much thing in the margin (\sloppy)
