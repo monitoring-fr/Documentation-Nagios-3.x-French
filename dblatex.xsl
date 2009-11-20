@@ -15,7 +15,8 @@
 <xsl:param name="draft.mode">yes</xsl:param>
 <xsl:param name="draft.watermark">0</xsl:param>
 <xsl:param name="imagedata.default.scale">pagebound</xsl:param>
-<xsl:param name="variablelist.as.blocks">1</xsl:param>
+
+<xsl:param name="variablelist.as.blocks" select="1"/>
 
 <!-- How to handle the tag linking. Avoids hyphenation in the link,
      and prevents from putting too much thing in the margin (\sloppy)
