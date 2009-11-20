@@ -273,7 +273,7 @@ Nagios, et recréé au démarrage.</para>
   </section>
 
   <section id="configuringnagios-configmain-status_update_interval">
-   <title>/>Intervalle de mise à jour des états agrégés</title>
+   <title>Intervalle de mise à jour des états agrégés</title>
    <titleabbrev id="configuringnagios-configmain-status_update_interval-tech">status_update_interval</titleabbrev>
    
    <variablelist>
@@ -716,26 +716,17 @@ dernier jour du mois)</para>
    <title>Chemin d'accès aux archives du journal</title>
    <titleabbrev id="configuringnagios-configmain-log_archive_path-tech">log_archive_path</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_archive_path=&lt;path&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_archive_path=/usr/local/nagios/var/archives/</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_archive_path=&lt;path&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_archive_path=/usr/local/nagios/var/archives/</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le répertoire où Nagios doit enregistrer les fichiers journaux ayant
 fait l'objet d'une rotation. Cette option est ignorée si vous n'avez pas
 activé la <link
@@ -747,27 +738,18 @@ journal</link>.</para>
    <title>Option de contrôle des commandes externes</title>
    <titleabbrev id="configuringnagios-configmain-check_external_commands-tech">check_external_commands</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>check_external_commands=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>check_external_commands=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Cette option détermine si Nagios va vérifier le contenu du <xref
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>check_external_commands=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>check_external_commands=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
+    <para>Cette option détermine si Nagios va vérifier le contenu du <xref
 linkend="configuringnagios-configmain-command_file" /> à la recherche de
 commandes à exécuter. Cette option doit être activée si vous avez prévu
 d'utiliser le <link linkend="thebasics-cgis">CGI de commande</link> pour
@@ -793,26 +775,17 @@ linkend="advancedtopics-extcommands">ici</link>.</para>
    <title>Intervalle entre les contrôles des commandes externes</title>
    <titleabbrev id="configuringnagios-configmain-command_check_interval-tech">command_check_interval</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>command_check_interval=&lt;xxx&gt;[s]</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>command_check_interval=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>command_check_interval=&lt;xxx&gt;[s]</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>command_check_interval=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Si vous spécifiez un nombre suivi d'un <quote>s</quote> (par exemple 30s), c'est le
 nombre de secondes qui séparera deux contrôles de commandes externes. Si
 vous ne mettez pas de <quote>s</quote>, c''est le nombre d'<quote>unités de temps</quote>
@@ -836,26 +809,17 @@ externes <link linkend="advancedtopics-extcommands">ici</link>.</para>
    <title>Fichier de commandes externes</title>
    <titleabbrev id="configuringnagios-configmain-command_file-tech">command_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>command_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>command_file=/usr/local/nagios/var/rw/nagios.cmd</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>command_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>command_file=/usr/local/nagios/var/rw/nagios.cmd</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le fichier que Nagios lit à la recherche de commandes externes. Le
 <link linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> écrit les
 commandes dans ce fichier. Des programmes tiers peuvent écrire dans ce
@@ -870,26 +834,17 @@ lisez <link linkend="advancedtopics-extcommands">ceci</link>.</para>
    <title>Mémoire tampon des commandes externes</title>
    <titleabbrev id="configuringnagios-configmain-external_command_buffer_slots-tech">external_command_buffer_slots</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>external_command_buffer_slots=&lt;#&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>external_command_buffer_slots=512</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>external_command_buffer_slots=&lt;#&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>external_command_buffer_slots=512</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <note>
     <para>C'est une option avancée.</para>
    </note>
@@ -914,26 +869,17 @@ linkend="securityandperformancetuning-mrtggraphs">ici</link>.</para>
    <title>Fichier verrou</title>
    <titleabbrev id="configuringnagios-configmain-lock_file-tech">configmain-lock_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>lock_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>lock_file=/tmp/nagios.lock</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>lock_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>lock_file=/tmp/nagios.lock</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est l'emplacement du fichier verrou qu'utilise Nagios quand il est lancé
 en tant que démon (i.e. démarré avec l'argument 
    <option>-d</option> ). Ce fichier contient l'identifiant du processus (&acronym-pid;) de Nagios.</para>
@@ -943,26 +889,17 @@ en tant que démon (i.e. démarré avec l'argument
    <title>Option de mémorisation de l'état</title>
    <titleabbrev id="configuringnagios-configmain-retain_state_information-tech">retain_state_information</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>retain_state_information=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>retain_state_information=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retain_state_information=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retain_state_information=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si Nagios doit mémoriser l'état des hôtes et des
 services entre deux démarrages. Si vous activez cette option, vous devez
 donnez une valeur à la variable <xref
@@ -987,26 +924,17 @@ redémarrera.</para>
    <title>Fichier de mémorisation de l'état</title>
    <titleabbrev id="configuringnagios-configmain-state_retention_file-tech">state_retention_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>state_retention_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>state_retention_file=/usr/local/nagios/var/retention.dat</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>state_retention_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>state_retention_file=/usr/local/nagios/var/retention.dat</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le fichier utilisé par Nagios pour mémoriser l'état des hôtes et des
 services entre les redémarrages. Au démarrage, Nagios positionnera l'état
 initial des services et des hôtes à partir des informations contenues dans
@@ -1020,26 +948,17 @@ linkend="configuringnagios-configmain-retain_state_information" />.</para>
    <title>Intervalle de mise à jour des états mémorisés</title>
    <titleabbrev id="configuringnagios-configmain-retention_update_interval-tech">retention_update_interval</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>retention_update_interval=&lt;minutes&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>retention_update_interval=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retention_update_interval=&lt;minutes&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retention_update_interval=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette variable détermine la fréquence (en minutes) à laquelle Nagios va
 automatiquement sauvegarder les données de mémorisation en situation
 normale. Si vous donnez une valeur de 0, Nagios ne sauvegardera pas les
@@ -1054,25 +973,17 @@ variable est sans effet.</para>
    <title>Option d'utilisation des états mémorisés du programme</title>
    <titleabbrev id="configuringnagios-configmain-use_retained_program_state-tech">use_retained_program_state</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_retained_program_state=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_retained_program_state=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_retained_program_state=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_retained_program_state=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
 
    <para>Cette option détermine si Nagios positionnera diverses variables d'état du
 programme à partir des valeurs enregistrées dans le fichier de
@@ -1103,25 +1014,17 @@ option est sans effet.</para>
    <title>Option d'utilisation des états mémorisés de l'ordonnanceur</title>
    <titleabbrev id="configuringnagios-configmain-use_retained_scheduling_info-tech">use_retained_scheduling_info</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_retained_scheduling_info=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_retained_scheduling_info=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_retained_scheduling_info=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_retained_scheduling_info=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
 
    <para>Cette option détermine si Nagios va garder les informations
 d'ordonnancement (prochain lancement de vérification pour chaque service),
@@ -1150,27 +1053,17 @@ option active.</para>
    <anchor id="configuringnagios-configmain-retained_host_attribute_mask" />
    Masques d'attribut conservé pour hôte et service</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>retained_host_attribute_mask=&lt;number&gt;retained_service_attribute_mask=&lt;number&gt;</programlisting>
-      </para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>retained_host_attribute_mask=0retained_service_attribute_mask=0</programlisting>
-      </para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retained_host_attribute_mask=&lt;number&gt;retained_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retained_host_attribute_mask=0retained_service_attribute_mask=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
 
    <warning>
     <para>C'est une fonction avancée. Vous aurez besoin de lire le code source de
@@ -1191,28 +1084,17 @@ d'hôtes et services sont conservés.</para>
    <anchor id="configuringnagios-configmain-retained_process_host_attribute_mask"/>
    Masque d'attributs conservés du processus</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>retained_process_host_attribute_mask=&lt;number&gt;retained_process_service_attribute_mask=&lt;number&gt;</programlisting>
-      </para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>retained_process_host_attribute_mask=0retained_process_service_attribute_mask=0</programlisting>
-      </para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retained_process_host_attribute_mask=&lt;number&gt; retained_process_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retained_process_host_attribute_mask=0 retained_process_service_attribute_mask=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <warning>
     <para>C'est une fonction avancée. Vous aurez besoin de lire le code source de
 Nagios pour utiliser cette option de façon efficace.</para>
@@ -1235,28 +1117,17 @@ tous les attributs de processus sont conservés.</para>
    <anchor id="configuringnagios-configmain-retained_contact_host_attribute_mask"/>
    Masques d'attribut conservé de contact</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>retained_contact_host_attribute_mask=&lt;number&gt;retained_contact_service_attribute_mask=&lt;number&gt;</programlisting>
-      </para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>retained_contact_host_attribute_mask=0retained_contact_service_attribute_mask=0</programlisting>
-      </para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retained_contact_host_attribute_mask=&lt;number&gt; retained_contact_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retained_contact_host_attribute_mask=0 retained_contact_service_attribute_mask=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <warning>
     <para>C'est une fonction avancée. Vous aurez besoin de lire le code source de
 Nagios pour utiliser cette option de façon efficace.</para>
@@ -1279,27 +1150,18 @@ contact sont conservés.</para>
   <section id="configuringnagios-configmain-use_syslog">
    <title>Option de journalisation dans Syslog</title>
    <titleabbrev id="configuringnagios-configmain-use_syslog-tech">use_syslog</titleabbrev>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_syslog=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_syslog=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_syslog=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_syslog=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si les messages doivent être journalisés via
 l'utilitaire système Syslog. Les valeurs possibles sont :</para>
 
@@ -1318,25 +1180,16 @@ l'utilitaire système Syslog. Les valeurs possibles sont :</para>
    <title>Option de journalisation des notifications</title>
    <titleabbrev id="configuringnagios-configmain-log_notifications-tech">log_notifications</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_notifications=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_notifications=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_notifications=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_notifications=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette variable détermine si les messages de notification sont journalisés ou
 non. Si vous avez de nombreux contacts ou des problèmes fréquents sur les
@@ -1358,25 +1211,16 @@ pour éviter de journaliser les notifications faites aux contacts.</para>
    <title>Option de journalisation de tentatives de contrôle de service</title>
    <titleabbrev id="configuringnagios-configmain-log_service_retries-tech">log_service_retries</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_service_retries=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_service_retries=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_service_retries=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_service_retries=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si les tentatives répétées de contrôle d'un service
 sont journalisées. Ces tentatives ont lieu lorsqu'un service retourne un
@@ -1401,25 +1245,16 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</par
    <title>Option de journalisation de tentatives de contrôle d'hôte</title>
    <titleabbrev id="configuringnagios-configmain-log_host_retries-tech">log_host_retries</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_host_retries=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_host_retries=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_host_retries=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_host_retries=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si les tentatives répétées de contrôle d'un hôte sont
 journalisées. La journalisation des tentatives de contrôle permet de
@@ -1441,25 +1276,16 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</par
    <title>Option de journalisation des gestions d'événement</title>
    <titleabbrev id="configuringnagios-configmain-log_event_handlers-tech">log_event_handlers</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_event_handlers=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_event_handlers=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_event_handlers=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal></literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si les <link
 linkend="advancedtopics-eventhandlers">gestions d'événements</link> liés aux
@@ -1483,25 +1309,16 @@ déboguer Nagios ou de tester les scripts de gestion d'événements.</para>
    <title>Option de journalisation des états initiaux</title>
    <titleabbrev id="configuringnagios-configmain-log_initial_states-tech">log_initial_states</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_initial_states=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_initial_states=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_initial_states=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_initial_states=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette variable détermine si Nagios forcera la journalisation de tous les
 états initiaux des hôtes et des services, même si leur état est OK. Les
@@ -1525,25 +1342,16 @@ terme pour les hôtes et services.</para>
    <title>Option de journalisation des commandes externes</title>
    <titleabbrev id="configuringnagios-configmain-log_external_commands-tech">log_external_commands</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_external_commands=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_external_commands=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_external_commands=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_external_commands=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette variable détermine si Nagios journalisera les <link
 linkend="advancedtopics-extcommands">commandes externes</link> reçues via le
@@ -1572,25 +1380,16 @@ journalisation des contrôles passifs de service.</para>
    <title>Option de journalisation des contrôles passifs</title>
    <titleabbrev id="configuringnagios-configmain-log_passive_checks-tech">log_passive_checks</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_passive_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_passive_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_passive_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_passive_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette variable détermine si Nagios journalisera les <link
 linkend="thebasics-passivechecks">contrôles passifs d'hôte ou de
@@ -1617,25 +1416,16 @@ journal de trop grossir.</para>
    <title>Gestionnaire global des événements relatifs aux hôtes</title>
    <titleabbrev id="configuringnagios-configmain-global_host_event_handler-tech">global_host_event_handler</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>global_host_event_handler=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>global_host_event_handler=log-host-event-to-db</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>global_host_event_handler=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>global_host_event_handler=log-host-event-to-db</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine un gestionnaire d'événement appelé à chaque
 changement d'état d'un hôte. Il s'exécute juste avant le gestionnaire
@@ -1653,27 +1443,18 @@ linkend="advancedtopics-eventhandlers">ici</link></para>
    <title>Gestionnaire global des événements relatifs aux services</title>
    <titleabbrev id="configuringnagios-configmain-global_service_event_handler-tech">global_service_event_handler</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>global_service_event_handler=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>global_service_event_handler=log-service-event-to-db</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
-       <entry><para><programlisting>global_service_event_handler=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>global_service_event_handler=log-service-event-to-db</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Cette option détermine un gestionnaire d'événement appelé à chaque
+  <para>Cette option détermine un gestionnaire d'événement appelé à chaque
 changement d'état d'un service. Il s'exécute juste avant le gestionnaire
 d'événement particulier à l'hôte que vous avez précisé de manière
 optionnelle dans la définition du service. L'argument commande est le nom
@@ -1689,25 +1470,16 @@ linkend="advancedtopics-eventhandlers">ici</link>.</para>
    <title>Temps de sommeil entre les contrôles</title>
    <titleabbrev id="configuringnagios-configmain-sleep_time-tech">sleep_time</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>sleep_time=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>sleep_time=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>sleep_time=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>sleep_time=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>C'est le nombre de secondes pendant lequel Nagios va sommeiller avant de
 vérifier si le prochain contrôle de service ou d'hôte en file d'attente doit
@@ -1719,25 +1491,16 @@ contrôles de services en retard dans la file.</para>
    <title>Méthode de délai inter-contrôles de services</title>
    <titleabbrev id="configuringnagios-configmain-service_inter_check_delay_method-tech">service_inter_check_delay_method</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_inter_check_delay_method=&lt;n/d/s/x.xx&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_inter_check_delay_method=s</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_inter_check_delay_method=&lt;n/d/s/x.xx&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_inter_check_delay_method=s</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine comment les contrôles de service sont initialement
 <quote>répartis</quote> dans la file d'attente. L'option de calcul
@@ -1780,25 +1543,16 @@ service</para>
    <title>Délai maximum de répartition des contrôles initiaux de services</title>
    <titleabbrev id="configuringnagios-configmain-max_service_check_spread-tech">max_service_check_spread</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>max_service_check_spread=&lt;minutes&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>max_service_check_spread=30</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>max_service_check_spread=&lt;minutes&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>max_service_check_spread=30</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine le temps maximum (en minutes) entre le démarrage de
 Nagios et la vérification de tous les services qui sont ordonnancés
@@ -1815,25 +1569,16 @@ activée. La valeur par défaut est de 30 (minutes).</para>
    <title>Délai maximum de répartition des contrôles initiaux de services</title>
    <titleabbrev id="configuringnagios-configmain-service_interleave_factor-tech">service_interleave_factor</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_interleave_factor=&lt;s|x&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_interleave_factor=s</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_interleave_factor=&lt;s|x&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_interleave_factor=s</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette variable détermine comment les contrôles de service sont
 entrelacés. L'entrelacement permet une distribution plus égale des contrôles
@@ -1872,25 +1617,17 @@ d'entrelacement (par défaut)</para>
    <title>Nombre maximal de contrôles de service simultanés</title>
    <titleabbrev id="configuringnagios-configmain-max_concurrent_checks-tech">max_concurrent_checks</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>max_concurrent_checks=&lt;max_checks&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>max_concurrent_checks=20</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
-       <entry><para><programlisting>max_concurrent_checks=&lt;max_checks&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>max_concurrent_checks=20</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
 
    <para>Cette option détermine le nombre maximal de contrôles de service pouvant
 tourner en parallèle à un instant donné. Une valeur de 1 empêche la
@@ -1907,25 +1644,16 @@ linkend="advancedtopics-checkscheduling-max_concurrent_checks">ici</link>.</para
    <title>Fréquence de consolidation des résultats de contrôle</title>
    <titleabbrev id="configuringnagios-configmain-check_result_reaper_frequency-tech">check_result_reaper_frequency</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>check_result_reaper_frequency=&lt;fréquence_en_secondes&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>check_result_reaper_frequency=5</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>check_result_reaper_frequency=&lt;fréquence_en_secondes&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>check_result_reaper_frequency=5</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de contrôler la fréquence en secondes des
 événements de <quote>consolidation</quote>. Les événements de
@@ -1938,27 +1666,18 @@ cœur de la logique de supervision de Nagios.</para>
    <title>Temps maximum de consolidation des résultats de contrôle</title>
    <titleabbrev id="configuringnagios-configmain-max_check_result_reaper_time-tech">max_check_result_reaper_time</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>max_check_result_reaper_time=&lt;secondes&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>max_check_result_reaper_time=30</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
-       <entry><para><programlisting>max_check_result_reaper_time=&lt;secondes&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>max_check_result_reaper_time=30</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Cette option vous permet de contrôler le temps maximum en secondes que doit
+    <para>Cette option vous permet de contrôler le temps maximum en secondes que doit
 prendre une consolidation des résultats de contrôles d'hôte et de
 service. Les événements de consolidation traitent les résultats de contrôle
 d'hôtes et de services qui sont terminés. Si il y a une grande quantité de
@@ -1973,25 +1692,16 @@ Nagios pour d'autres traitements de la logique de supervision.</para>
    <title>Répertoire de stockage des résultats de contrôle</title>
    <titleabbrev id="configuringnagios-configmain-check_result_path-tech">check_result_path</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>check_result_path=&lt;path&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>check_result_path=/var/spool/nagios/checkresults</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>check_result_path=&lt;path&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>check_result_path=/var/spool/nagios/checkresults</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine quel répertoire Nagios utilisera pour stocker
 temporairement les résultats de contrôle. Ce répertoire ne doit pas stocker
@@ -2010,25 +1720,17 @@ Nagios prélève des résultats ne la concernant pas! </para></note>
    <title>L'age maximum du fichier de résultat de contrôle</title>
    <titleabbrev id="configuringnagios-configmain-max_check_result_file_age-tech">max_check_result_file_age</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>max_check_result_file_age=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>max_check_result_file_age=3600</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
-       <entry><para><programlisting>max_check_result_file_age=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>max_check_result_file_age=3600</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
 
    <para>Cette option détermine le temps maximum en seconde que Nagios peut
 considérer trouver des informations de résultats de contrôles dans le <link
@@ -2043,25 +1745,16 @@ contrôle. </para>
    <title>Méthode de délai inter-contrôles d'hôtes</title>
    <titleabbrev id="configuringnagios-configmain-host_inter_check_delay_method-tech">host_inter_check_delay_method</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_inter_check_delay_method=&lt;n/d/s/x.xx&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_inter_check_delay_method=s</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_inter_check_delay_method=&lt;n/d/s/x.xx&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_inter_check_delay_method=s</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine comment les contrôles d'hôtes (pour les hôtes qui
 sont régulièrement contrôlés) sont initialement <quote>répartis</quote> dans
@@ -2102,25 +1795,16 @@ répartir également les contrôles d'hôte (par défaut)</para>
    <title>Délai maximum de répartition des contrôles initiaux d'hôtes</title>
    <titleabbrev id="configuringnagios-configmain-max_host_check_spread-tech">max_host_check_spread</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>max_host_check_spread=&lt;minutes&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>max_host_check_spread=30</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>max_host_check_spread=&lt;minutes&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>max_host_check_spread=30</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine le temps maximum (en minutes) entre le démarrage de
 Nagios et la vérification de tous les hôtes qui sont contrôlés
@@ -2138,25 +1822,16 @@ défaut est de 30 (minutes).</para>
    <title>Valeur de l'intervalle de temps</title>
    <titleabbrev id="configuringnagios-configmain-interval_length-tech">interval_length</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>interval_length=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>interval_length=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>interval_length=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>interval_length=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>C'est le nombre de secondes que contient une <quote>unité de temps</quote>
 utilisée dans la file d'ordonnancement, les re-notifications, etc. Les
@@ -2174,25 +1849,16 @@ cette variable, donc vous la modifierez à vos risques et périls !</para></impo
    <title>Option de réordonnancement automatique</title>
    <titleabbrev id="configuringnagios-configmain-auto_reschedule_checks-tech">auto_reschedule_checks</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>auto_reschedule_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>auto_reschedule_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>auto_reschedule_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>auto_reschedule_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si Nagios va essayer de ré ordonnancer
 automatiquement les services de vérification actifs des hôtes et services
@@ -2209,27 +1875,18 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
   <section id="configuringnagios-configmain-auto_rescheduling_interval">
    <title>Intervalle de réordonnancement automatique</title>
    <titleabbrev id="configuringnagios-configmain-auto_rescheduling_interval-tech">auto_rescheduling_interval</titleabbrev>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>auto_rescheduling_interval=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>auto_rescheduling_interval=30</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>auto_rescheduling_interval=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>auto_rescheduling_interval=30</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine la fréquence (en secondes) de réordonnancement
 automatique. Cette option n'a d'effet que si l'option de réordonnancement
 automatique est active. La valeur par défaut est de 30 secondes.</para>
@@ -2243,26 +1900,17 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
    <title>Fenêtre de réordonnancement automatique</title>
    <titleabbrev id="configuringnagios-configmain-auto_rescheduling_window-tech">auto_rescheduling_window</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>auto_rescheduling_window=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>auto_rescheduling_window=180</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>auto_rescheduling_window=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>auto_rescheduling_window=180</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine la <quote>fenêtre</quote> de temps (en seconde) sur
 laquelle Nagios va porter le réordonnancement automatique. Seules les
 vérifications d'hôtes et de services qui doivent avoir lieu durant les
@@ -2280,26 +1928,17 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
    <title>Option de contrôle agressif des hôtes</title>
    <titleabbrev id="configuringnagios-configmain-use_aggressive_host_checking-tech">use_aggressive_host_checking</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_aggressive_host_checking=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_aggressive_host_checking=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_aggressive_host_checking=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_aggressive_host_checking=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>[NdT] : cette option comporte deux <quote>g</quote> à <quote>aggressive</quote> depuis la version
 2. Elle n'en comprenait qu'un auparavant.Nagios essaye d'être plus malin
 dans la façon et le moment de contrôler l'état des hôtes. En général,
@@ -2324,26 +1963,17 @@ je vous suggère de ne pas activer cette option.</para>
    <title>Option de traduction des contrôles d'hôte passif</title>
    <titleabbrev id="configuringnagios-configmain-translate_passive_host_checks-tech">translate_passive_host_checks</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>translate_passive_host_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>translate_passive_host_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>translate_passive_host_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>translate_passive_host_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si Nagios peut traduire ou non l'état
 DOWN/UNREACHABLE d'un contrôle passif en l'état <quote>correct</quote> en
 considérant un point de vue d'une instance Nagios locale. Cette option peut
@@ -2366,26 +1996,17 @@ linkend="advancedtopics-passivestatetranslation">ici</link>.</para>
    <title>Option de status (FIXME ?) des contrôle passifs d'hôte</title>
    <titleabbrev id="configuringnagios-configmain-passive_host_checks_are_soft-tech">passive_host_checks_are_soft</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>passive_host_checks_are_soft=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>passive_host_checks_are_soft=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>passive_host_checks_are_soft=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>passive_host_checks_are_soft=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si en effet Nagios traitera les <link
 linkend="thebasics-passivechecks">contrôles d'hôte passif</link> en états
 HARD ou SOFT. Par défaut, les résultats de contrôles passif sont considéré
@@ -2407,26 +2028,17 @@ changer ceci en activant cette option.</para>
    <title>Option de contrôles prédictifs de dépendances d'hôte</title>
    <titleabbrev id="configuringnagios-configmain-enable_predictive_host_dependency_checks-tech">enable_predictive_host_dependency_checks</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>enable_predictive_host_dependency_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>enable_predictive_host_dependency_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>enable_predictive_host_dependency_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>enable_predictive_host_dependency_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si Nagios exécutera ou non des contrôles prédictifs
 sur les hôtes dépendant (comme définit dans <link
 linkend="advancedtopics-dependencies">dépendance d'hôtes</link>) d'un hôte
@@ -2451,26 +2063,17 @@ linkend="advancedtopics-dependencychecks">ici</link></para>
    <title>Option de contrôle prédictif de dépendance de service</title>
    <titleabbrev id="configuringnagios-configmain-enable_predictive_service_dependency_checks-tech">enable_predictive_service_dependency_checks</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>enable_predictive_service_dependency_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>enable_predictive_service_dependency_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>enable_predictive_service_dependency_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>enable_predictive_service_dependency_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si Nagios exécutera ou non des contrôles prédictifs
 sur les services dépendants (comme défini dans <link
 linkend="advancedtopics-dependencies">dépendance de service</link>) d'un
@@ -2494,26 +2097,17 @@ peuvent être trouvées <link linkend="advancedtopics-dependencychecks">ici FIXM
    <title>FIXME Cached Host Check Horizon</title>
    <titleabbrev id="configuringnagios-configmain-cached_host_check_horizon-tech">cached_host_check_horizon</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>cached_host_check_horizon=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>cached_host_check_horizon=15</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>cached_host_check_horizon=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>cached_host_check_horizon=15</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine le temps maximum (en secondes) pour que l'état d'un
 précédent contrôle d'hôte soit considéré comme courant. Le cache d'état
 d'hôtes (du point de vue des contrôles d'hôtes qui ont été effectués plus
@@ -2531,26 +2125,17 @@ linkend="advancedtopics-cachedchecks">ici</link>.</para>
    <title>FIXME Cached Service Check Horizon</title>
    <titleabbrev id="configuringnagios-configmain-cached_service_check_horizon-tech">cached_service_check_horizon</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>cached_service_check_horizon=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>cached_service_check_horizon=15</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>cached_service_check_horizon=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>cached_service_check_horizon=15</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option permet de définir le temps maximum (en secondes) pour que
 l'état d'un précédent contrôle de service soit considéré comme courant. Le
 cache d'état de service (Pour les contrôles de services qui sont effectués
@@ -2568,26 +2153,17 @@ linkend="advancedtopics-cachedchecks">ici</link>.</para>
    <title>Option d'optimisations pour les gros périmètres</title>
    <titleabbrev id="configuringnagios-configmain-use_large_installation_tweaks-tech">use_large_installation_tweaks</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_large_installation_tweaks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_large_installation_tweaks=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_large_installation_tweaks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_large_installation_tweaks=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si Nagios utilisera différents raccourcis pour
 améliorer les performances. Ces raccourcis font perdre quelques
 fonctionnalités, mais ils apportent de gros gains sur des périmètres
@@ -2610,26 +2186,17 @@ linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
    <title>Option de gestion de la mémoire des processus enfants</title>
    <titleabbrev id="configuringnagios-configmain-free_child_process_memory-tech">free_child_process_memory</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>free_child_process_memory=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>free_child_process_memory=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>free_child_process_memory=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>free_child_process_memory=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option permet de déterminer si Nagios libérera la mémoire utilisée par
 les processus enfant quand il seront arrivé en fin de traitement. Par
 défaut, Nagios libère la mémoire. Ce</para>
@@ -2649,26 +2216,17 @@ défaut, Nagios libère la mémoire. Ce</para>
    <title>Forker les processus enfant en double</title>
    <titleabbrev id="configuringnagios-configmain-child_processes_fork_twice-tech">child_processes_fork_twice</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>child_processes_fork_twice=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>child_processes_fork_twice=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>child_processes_fork_twice=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>child_processes_fork_twice=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si nagios doit forker ou non en double les processus
 enfants quand il exécute des contrôle d'hôte et de service. Par défaut,
 Nagios fork en double. Cependant, si l'option <link
@@ -2692,25 +2250,17 @@ comportement.</para>
    <title>Activation des macros d'environnement</title>
    <titleabbrev id="configuringnagios-configmain-enable_environment_macros-tech">enable_environment_macros</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>enable_environment_macros=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>enable_environment_macros=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>enable_environment_macros=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>enable_environment_macros=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si oui ou non le démon Nagios peut considérer toutes
 les <link linkend="thebasics-macrolist">macros</link> standard comme des
 variables d'environnements pour vos contrôles, notifications, déclencheur
@@ -2733,26 +2283,17 @@ pour convertir ces macros en variables d'environnements.</para>
    <title>Option de détection de l'oscillation d'un service ou d'un hôte[flap]</title>
    <titleabbrev id="configuringnagios-configmain-enable_flap_detection-tech">enable_flap_detection</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>enable_flap_detection=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>enable_flap_detection=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>enable_flap_detection=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>enable_flap_detection=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si Nagios essaiera de détecter les hôtes et les
 services qui oscillent [ou <quote>bagotent, yoyotent de la touffe</quote> en
 bon argot]. L'oscillation apparaît lorsqu'un hôte ou un service change
@@ -2793,26 +2334,17 @@ l'interface web.</para></note>
    <title>Seuil inférieur d'oscillation d'un service</title>
    <titleabbrev id="configuringnagios-configmain-low_service_flap_threshold-tech">low_service_flap_threshold</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>low_service_flap_threshold=&lt;percent&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>low_service_flap_threshold=25.0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>low_service_flap_threshold=&lt;percent&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>low_service_flap_threshold=25.0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option permet de donner le seuil inférieur pour la détection de
 l'oscillation d'un service. Pour plus d'informations sur la détection et la
 gestion des oscillations (et comment cette variable les affecte), lisez
@@ -2823,25 +2355,17 @@ gestion des oscillations (et comment cette variable les affecte), lisez
    <title>Seuil supérieur d'oscillation d'un service</title>
    <titleabbrev id="configuringnagios-configmain-high_service_flap_threshold-tech">high_service_flap_threshold</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>high_service_flap_threshold=&lt;percent&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>high_service_flap_threshold=50.0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>high_service_flap_threshold=&lt;percent&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>high_service_flap_threshold=50.0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
 
    <para>Cette option permet de donner le seuil supérieur pour la détection de
 l'oscillation d'un service. Pour plus d'informations sur la détection et la
@@ -2853,27 +2377,18 @@ gestion des oscillations (et comment cette variable les affecte), lisez
    <title>Seuil inférieur d'oscillation d'un hôte</title>
    <titleabbrev id="configuringnagios-configmain-low_host_flap_threshold-tech">low_host_flap_threshold</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>low_host_flap_threshold=&lt;percent&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>low_host_flap_threshold=25.0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Cette option permet de donner le seuil inférieur pour la détection de
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>low_host_flap_threshold=&lt;percent&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>low_host_flap_threshold=25.0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
+    <para>Cette option permet de donner le seuil inférieur pour la détection de
 l'oscillation d'un hôte. Pour plus d'informations sur la détection et la
 gestion des oscillations (et comment cette variable les affecte), lisez
 <link linkend="advancedtopics-flapping">ceci</link>.</para>
@@ -2883,26 +2398,17 @@ gestion des oscillations (et comment cette variable les affecte), lisez
    <title>Seuil supérieur d'oscillation d'un hôte</title>
    <titleabbrev id="configuringnagios-configmain-high_host_flap_threshold-tech">high_host_flap_threshold</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>high_host_flap_threshold=&lt;percent&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>high_host_flap_threshold=50.0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>high_host_flap_threshold=&lt;percent&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>high_host_flap_threshold=50.0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option permet de donner le seuil supérieur pour la détection de
 l'oscillation d'un hôte. Pour plus d'informations sur la détection et la
 gestion des oscillations (et comment cette variable les affecte), lisez
@@ -2913,26 +2419,17 @@ gestion des oscillations (et comment cette variable les affecte), lisez
    <title>Option de dépendance <quote>soft</quote> des services</title>
    <titleabbrev id="configuringnagios-configmain-soft_state_dependencies-tech">soft_state_dependencies</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>soft_state_dependencies=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>soft_state_dependencies=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>soft_state_dependencies=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>soft_state_dependencies=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option détermine si Nagios utilisera les informations d'état <quote>soft</quote>
 des services lors du contrôle des <link
 linkend="advancedtopics-dependencies">dépendances de service</link>. En
@@ -2956,26 +2453,17 @@ hard ou soft), activez cette option.</para>
    <title>Dépassement de délai du contrôle de service</title>
    <titleabbrev id="configuringnagios-configmain-service_check_timeout-tech">service_check_timeout</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_check_timeout=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_check_timeout=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_check_timeout=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_check_timeout=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 un contrôle de service. Si le contrôle dépasse cette limite, il est tué et
 un état CRITICAL est retourné. Une erreur de dépassement de délai est
@@ -2994,27 +2482,18 @@ pensant que c'est un processus ayant des problèmes d'exécution.</para>
    <title>Dépassement de délai du contrôle d'hôte</title>
    <titleabbrev id="configuringnagios-configmain-host_check_timeout-tech">host_check_timeout</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_check_timeout=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_check_timeout=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>C'est le nombre maximal de secondes pendant lesquelles Nagios laissera
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_check_timeout=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_check_timeout=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
+  <para>C'est le nombre maximal de secondes pendant lesquelles Nagios laissera
 tourner un contrôle d'hôte. Si le contrôle dépasse cette limite, il est tué
 et un état CRITICAL est retourné, et l'hôte sera supposé être dans l'état
 DOWN. Une erreur de dépassement de délai est également journalisée.</para>
@@ -3032,26 +2511,17 @@ pensant que c'est un processus ayant des problèmes d'exécution.</para>
    <title>Dépassement de délai de contrôle du gestionnaire d'événement</title>
    <titleabbrev id="configuringnagios-configmain-event_handler_timeout-tech">event_handler_timeout</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>event_handler_timeout=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>event_handler_timeout=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>event_handler_timeout=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>event_handler_timeout=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 un gestionnaire d'événement. Si un gestionnaire d'événement dépasse cette
 limite il sera tué et une alerte sera journalisée.</para>
@@ -3070,26 +2540,17 @@ problèmes d'exécution.</para>
    <title>Dépassement de délai de notification</title>
    <titleabbrev id="configuringnagios-configmain-notification_timeout-tech">notification_timeout</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>notification_timeout=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>notification_timeout=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>notification_timeout=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>notification_timeout=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 une commande de notification. Si une commande de notification dépasse cette
 limite elle sera tuée et une alerte sera journalisée.</para>
@@ -3108,26 +2569,17 @@ que c'est un processus ayant des problèmes d'exécution.</para>
    <title>Dépassement de délai de la commande de remontée de contrôle de service</title>
    <titleabbrev id="configuringnagios-configmain-ocsp_timeout-tech">ocsp_timeout</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>ocsp_timeout=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>ocsp_timeout=5</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>ocsp_timeout=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>ocsp_timeout=5</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 une <link linkend="configuringnagios-configmain-ocsp_command">commande de
 remontée de contrôle de service</link>. Si une commande dépasse cette
@@ -3138,30 +2590,20 @@ limite, elle sera tuée et une alerte sera journalisée.</para>
    <title>Dépassement de délai de la commande de remontée de contrôle d'hôte</title>
    <titleabbrev id="configuringnagios-configmain-ochp_timeout-tech">ochp_timeout</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>ochp_timeout=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>ochp_timeout=5</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>ochp_timeout=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>ochp_timeout=5</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
-une <link
-linkend="configuringnagios-configmain-ochp_command">ochp_command</link>. Si une
-commande dépasse cette limite, elle sera tuée et une alerte sera
+une <link linkend="configuringnagios-configmain-ochp_command">ochp_command</link>.
+Si une commande dépasse cette limite, elle sera tuée et une alerte sera
 journalisée.</para>
   </section>
 
@@ -3169,26 +2611,17 @@ journalisée.</para>
    <title>Dépassement de délai de la commande de traitement des données liées aux performances</title>
    <titleabbrev id="configuringnagios-configmain-perfdata_timeout-tech">perfdata_timeout</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>perfdata_timeout=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>perfdata_timeout=5</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>perfdata_timeout=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>perfdata_timeout=5</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est le nombre maximal de secondes pendant lequel Nagios laissera tourner
 une commande de <link
 linkend="configuringnagios-configmain-host_perfdata_file_processing_command">traitement
@@ -3202,26 +2635,17 @@ dépasse cette limite, elle sera tuée et une alerte sera journalisée.</para>
    <title>Option de remontée de contrôle de service</title>
    <titleabbrev id="configuringnagios-configmain-obsess_over_services-tech">obsess_over_services</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>obsess_over_services=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>obsess_over_services=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>obsess_over_services=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>obsess_over_services=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette variable détermine si Nagios remontera les résultats de contrôles de
 service et lancera la <link
 linkend="configuringnagios-configmain-ocsp_command">commande de remontée de
@@ -3247,26 +2671,17 @@ pas cette option.</para>
    <title>Commande de remontée de contrôle de service</title>
    <titleabbrev id="configuringnagios-configmain-ocsp_command-tech">ocsp_command</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>ocsp_command=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>ocsp_command=obsessive_service_handler</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>ocsp_command=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>ocsp_command=obsessive_service_handler</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette option définit la commande à lancer après chaque contrôle de service,
 ce qui peut être utile dans une <link
 linkend="advancedtopics-distributed">supervision répartie</link>. Elles est
@@ -3291,26 +2706,17 @@ service</link> l'est aussi</para>
    <title>Option de remontée de contrôle d'hôte</title>
    <titleabbrev id="configuringnagios-configmain-obsess_over_hosts-tech">obsess_over_hosts</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>obsess_over_hosts=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>obsess_over_hosts=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>obsess_over_hosts=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>obsess_over_hosts=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>Cette variable détermine si Nagios remontera les résultats de contrôles
 d'hôtes et lancera la <link
 linkend="configuringnagios-configmain-ochp_command">commande de remontée de
@@ -3335,25 +2741,16 @@ faites pas de supervision répartie, n'activez pas cette option.</para>
    <title>Commande de remontée de contrôle d'hôte</title>
    <titleabbrev id="configuringnagios-configmain-ochp_command-tech">ochp_command</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>ochp_command=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>ochp_command=obsessive_host_handler</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>ochp_command=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>ochp_command=obsessive_host_handler</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option définit la commande à lancer après chaque contrôle d'hôte, ce
 qui peut être utile dans une <link
@@ -3379,25 +2776,16 @@ l'hôte</link> l'est aussi.</para>
    <title>Option de traitement des données liées aux performances</title>
    <titleabbrev id="configuringnagios-configmain-process_performance_data-tech">process_performance_data</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>process_performance_data=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>process_performance_data=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>process_performance_data=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>process_performance_data=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette valeur détermine si Nagios traitera les données liées aux <link
 linkend="advancedtopics-perfdata">performances</link> des contrôles d'hôtes
@@ -3418,25 +2806,16 @@ et de services.</para>
    <title>Commande de performance liée aux hôtes</title>
    <titleabbrev id="configuringnagios-configmain-host_perfdata_command-tech">host_perfdata_command</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_command=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_command=process-host-perfdata</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_perfdata_command=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_perfdata_command=process-host-perfdata</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier une commande qui sera lancée après
 chaque vérification d'hôte pour traiter les <link
@@ -3456,25 +2835,16 @@ l'hôte</link> l'est aussi.</para>
    <title>Commande de performance liée aux services</title>
    <titleabbrev id="configuringnagios-configmain-service_perfdata_command-tech">service_perfdata_command</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_command=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_command=process-service-perfdata</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_perfdata_command=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_perfdata_command=process-service-perfdata</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier une commande qui sera lancée après
 chaque vérification de service pour traiter les <link
@@ -3497,25 +2867,16 @@ service</link> l'est aussi</para>
    <title>Fichier de performance des hôtes</title>
    <titleabbrev id="configuringnagios-configmain-host_perfdata_file-tech">host_perfdata_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file=/usr/local/nagios/var/host-perfdata.dat</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_perfdata_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_perfdata_file=/usr/local/nagios/var/host-perfdata.dat</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier un fichier dans lequel les <link
 linkend="advancedtopics-perfdata">données de performance</link> vont être
@@ -3534,25 +2895,16 @@ l'hôte</link> l'est aussi.</para>
    <title>Fichier de performance des services</title>
    <titleabbrev id="configuringnagios-configmain-service_perfdata_file-tech">service_perfdata_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file=/usr/local/nagios/var/service-perfdata.dat</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_perfdata_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_perfdata_file=/usr/local/nagios/var/service-perfdata.dat</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier un fichier dans lequel les <link
 linkend="advancedtopics-perfdata">données de performance</link> vont être
@@ -3573,25 +2925,16 @@ service</link> l'est aussi</para>
    <title>Patron du fichier de performance des hôtes</title>
    <titleabbrev id="configuringnagios-configmain-host_perfdata_file_template-tech">host_perfdata_file_template</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_template=&lt;template&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_template=[HOSTPERFDATA]\t$TIMET$\t$HOSTNAME$\t$HOSTEXECUTIONTIME$\t$HOSTOUTPUT$\t$HOSTPERFDATA$</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_perfdata_file_template=&lt;template&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_perfdata_file_template=[HOSTPERFDATA]\t$TIMET$\t$HOSTNAME$\t$HOSTEXECUTIONTIME$\t$HOSTOUTPUT$\t$HOSTPERFDATA$</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine ce qui va être écrit (et comment) dans le <link
 linkend="configuringnagios-configmain-host_perfdata_file">fichier de
@@ -3606,25 +2949,16 @@ performance.</para>
    <title>Patron du fichier de performance des services</title>
    <titleabbrev id="configuringnagios-configmain-service_perfdata_file_template-tech">service_perfdata_file_template</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_template=&lt;template&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_template=[SERVICEPERFDATA]\t$TIMET$\t$HOSTNAME$\t$SERVICEDESC$\t$SERVICEEXECUTIONTIME$\t$SERVICELATENCY$\t$SERVICEOUTPUT$\t$SERVICEPERFDATA$</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_perfdata_file_template=&lt;template&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_perfdata_file_template=[SERVICEPERFDATA]\t$TIMET$\t$HOSTNAME$\t$SERVICEDESC$\t$SERVICEEXECUTIONTIME$\t$SERVICELATENCY$\t$SERVICEOUTPUT$\t$SERVICEPERFDATA$</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine ce qui va être écrit (et comment) dans le <link
 linkend="configuringnagios-configmain-service_perfdata_file">fichier de
@@ -3639,25 +2973,16 @@ performance.</para>
    <title>Mode d'ouverture du fichier de performance des hôtes</title>
    <titleabbrev id="configuringnagios-configmain-host_perfdata_file_mode-tech">host_perfdata_file_mode</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_mode=&lt;mode&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_mode=a</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_perfdata_file_mode=&lt;mode&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_perfdata_file_mode=a</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si le <link
 linkend="configuringnagios-configmain-host_perfdata_file">fichier de
@@ -3684,25 +3009,16 @@ utiliser l'option par défaut ajout.</para>
    <title>Mode d'ouverture du fichier de performance des services</title>
    <titleabbrev id="configuringnagios-configmain-service_perfdata_file_mode-tech">service_perfdata_file_mode</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_mode=&lt;mode&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_mode=a</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_perfdata_file_mode=&lt;mode&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_perfdata_file_mode=a</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si le <link
 linkend="configuringnagios-configmain-service_perfdata_file">fichier de
@@ -3729,25 +3045,16 @@ certainement utiliser l'option par défaut ajout.</para>
    <title>Intervalle de traitement du fichier de performance des hôtes</title>
    <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_interval-tech">host_perfdata_file_processing_interval</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_processing_interval=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_processing_interval=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_perfdata_file_processing_interval=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_perfdata_file_processing_interval=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier l'intervalle (en secondes) entre deux
 traitements du <link
@@ -3762,25 +3069,16 @@ traitement n'aura pas lieu de manière régulière.</para>
    <title>Intervalle de traitement du fichier de performance des services</title>
    <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_interval-tech">service_perfdata_file_processing_interval</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_processing_interval=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_processing_interval=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_perfdata_file_processing_interval=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_perfdata_file_processing_interval=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier l'intervalle (en secondes) entre deux
 traitements du <link
@@ -3795,25 +3093,16 @@ traitement n'aura pas lieu de manière régulière.</para>
    <title>Commande de traitement du fichier de performance des hôtes</title>
    <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_command-tech">host_perfdata_file_processing_command</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_processing_command=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_perfdata_file_processing_command=process-host-perfdata-file</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_perfdata_file_processing_command=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_perfdata_file_processing_command=process-host-perfdata-file</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de définir la commande qui sera exécutée pour le
 traîtement du <link
@@ -3830,25 +3119,16 @@ de traitement du fichier de performance des hôtes</link>.</para>
    <title>Commande de traitement du fichier de performance des services</title>
    <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_command-tech">service_perfdata_file_processing_command</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_processing_command=&lt;command&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_perfdata_file_processing_command=process-service-perfdata-file</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_perfdata_file_processing_command=&lt;command&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_perfdata_file_processing_command=process-service-perfdata-file</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de définir la commande qui sera exécutée pour le
 traîtement du <link
@@ -3866,25 +3146,16 @@ linkend="configuringnagios-configmain-service_perfdata_file_processing_interval"
    <title>Option de vérification des contrôles de service orphelins</title>
    <titleabbrev id="configuringnagios-configmain-check_for_orphaned_services-tech">check_for_orphaned_services</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>check_for_orphaned_services=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>check_for_orphaned_services=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>check_for_orphaned_services=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>check_for_orphaned_services=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <simpara>Cette option vous permet d'activer ou désactiver la vérification des
 contrôles de service orphelins. Les contrôles de service orphelins sont des
@@ -3917,25 +3188,16 @@ services orphelins.</simpara>
    <title>Option de vérification des contrôles d'hôtes orphelins</title>
    <titleabbrev id="configuringnagios-configmain-check_for_orphaned_hosts-tech">check_for_orphaned_hosts</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>check_for_orphaned_hosts=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>check_for_orphaned_hosts=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>check_for_orphaned_hosts=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>check_for_orphaned_hosts=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <simpara>Cette option vous permet d'activer ou désactiver la vérification des
 contrôles d'hôte orphelins. Les contrôles d'hôte orphelins sont des
@@ -3968,25 +3230,16 @@ hôtes orphelins.</simpara>
    <title>Option de contrôle de la validité des données d'un service</title>
    <titleabbrev id="configuringnagios-configmain-check_service_freshness-tech">check_service_freshness</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>check_service_freshness=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>check_service_freshness=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>check_service_freshness=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>check_service_freshness=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si Nagios va contrôler ou non périodiquement la
 validité des données d'un service. L'activation de cette option aide à
@@ -4010,25 +3263,16 @@ linkend="advancedtopics-freshness">ici</link>.</para>
    <title>Intervalle de contrôle de la validité des données d'un service</title>
    <titleabbrev id="configuringnagios-configmain-service_freshness_check_interval-tech">service_freshness_check_interval</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>service_freshness_check_interval=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>service_freshness_check_interval=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>service_freshness_check_interval=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>service_freshness_check_interval=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine l'intervalle de temps (en secondes) entre deux
 contrôles de validité des données d'un service. Si vous avez désactivé ce
@@ -4043,25 +3287,16 @@ linkend="advancedtopics-freshness">ici</link>.</para>
    <title>Option du contrôle de la validité des données d'un hôte</title>
    <titleabbrev id="configuringnagios-configmain-check_host_freshness-tech">check_host_freshness</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>check_host_freshness=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>check_host_freshness=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>check_host_freshness=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>check_host_freshness=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si Nagios va contrôler ou non périodiquement la
 validité des données d'un hôte. L'activation de cette option aide à
@@ -4085,25 +3320,16 @@ linkend="advancedtopics-freshness">ici</link>.</para>
    <title>Intervalle de contrôle de la validité des données d'un hôte</title>
    <titleabbrev id="configuringnagios-configmain-host_freshness_check_interval-tech">host_freshness_check_interval</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>host_freshness_check_interval=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>host_freshness_check_interval=60</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>host_freshness_check_interval=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>host_freshness_check_interval=60</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine l'intervalle de temps (en secondes) entre deux
 contrôles de validité des données d'un hôte. Si vous avez désactivé ce
@@ -4118,25 +3344,16 @@ linkend="advancedtopics-freshness">ici</link>.</para>
    <title>Option du Seuil de Fraîcheur Supplémentaire de la Latence </title>
    <titleabbrev id="configuringnagios-configmain-additional_freshness_latency-tech">additional_freshness_latency</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>additional_freshness_latency=&lt;#&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>additional_freshness_latency=15</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>additional_freshness_latency=&lt;#&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>additional_freshness_latency=15</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine le nombres de secondes que Nagios ajoutera pour qu'un
 hôte ou un service se rafraichisse (Ce n'est pas déterminé nativement par
@@ -4148,25 +3365,16 @@ linkend="advancedtopics-freshness">ici</link>.</para>
    <title>Activation de l'interpréteur Perl incorporé</title>
    <titleabbrev id="configuringnagios-configmain-enable_embedded_perl-tech">enable_embedded_perl</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>enable_embedded_perl=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>enable_embedded_perl=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>enable_embedded_perl=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>enable_embedded_perl=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine ou non si l'interpréteur Perl est activé dans le
 cœur du programme. Nagios doit être compilé en précisant cette option pour
@@ -4178,25 +3386,16 @@ ce sujet <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
    <title>Interpréteur Perl Incorporé FIXME implicite</title>
    <titleabbrev id="configuringnagios-configmain-use_embedded_perl_implicitly-tech">use_embedded_perl_implicitly</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_embedded_perl_implicitly=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_embedded_perl_implicitly=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_embedded_perl_implicitly=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_embedded_perl_implicitly=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Ce paramétrage détermine si oui ou non l'interpréteur Perl sera utilisé lors
 d'utilisation de plugins/scripts perl. Nagios doit être compilé en précisant
@@ -4209,25 +3408,16 @@ linkend="advancedtopics-embeddedperl">ici</link>.</para>
    <title>Format de la date</title>
    <titleabbrev id="configuringnagios-configmain-date_format-tech">date_format</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>date_format=&lt;option&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>date_format=us</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>date_format=&lt;option&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>date_format=us</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option spécifie le format de date que Nagios utilisera dans
 l'interface web. Les options possibles sont :</para>
@@ -4286,25 +3476,16 @@ l'interface web. Les options possibles sont :</para>
    <title>Option de plage horaire</title>
    <titleabbrev id="configuringnagios-configmain-use_timezone-tech">use_timezone</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_timezone=&lt;tz&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_timezone=US/Mountain</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_timezone=&lt;tz&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_timezone=US/Mountain</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous autorise à définir la plage horaire par défaut à
 l'instance Nagios. Ceci est très utile si vous possédez plusieurs instances
@@ -4333,25 +3514,16 @@ concernant les &acronym-cgi;s comme dans l'exemple suivant:</para>
    <title>Caractères illégaux dans les noms d'objets</title>
    <titleabbrev id="configuringnagios-configmain-illegal_object_name_chars-tech">illegal_object_name_chars</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>illegal_object_name_chars=&lt;chars...&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>illegal_object_name_chars=`~!$%^&amp;*"|'&lt;&gt;?,()=</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>illegal_object_name_chars=&lt;chars...&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>illegal_object_name_chars=`~!$%^&amp;*"|'&lt;&gt;?,()=</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier quels sont les caractères illégaux
 dans les noms d'objets, tels qu'hôtes, services et autres. Nagios vous
@@ -4364,25 +3536,16 @@ recommande de ne pas utiliser les caractères ci-dessus. Le faire vous expose
   <title>Caractères illégaux dans la sortie des macros</title>
    <titleabbrev id="configuringnagios-configmain-illegal_macro_output_chars-tech">illegal_macro_output_chars</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>illegal_macro_output_chars=&lt;chars...&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>illegal_macro_output_chars=`~$^&amp;"|'&lt;&gt;</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>illegal_macro_output_chars=&lt;chars...&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>illegal_macro_output_chars=`~$^&amp;"|'&lt;&gt;</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option vous permet de spécifier les caractères illégaux qui seront
 filtrés dans les <link linkend="thebasics-macros">macros</link>, avant
@@ -4409,25 +3572,16 @@ suivantes sont débarrassées des caractères spécifiés dans l'option :</para>
    <title>Option de concordance par expressions rationnelles</title>
    <titleabbrev id="configuringnagios-configmain-use_regexp_matching-tech">use_regexp_matching</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_regexp_matching=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_regexp_matching=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_regexp_matching=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_regexp_matching=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si les paramètres dans vos définitions d'objet seront
 traités comme des expressions rationnelles. Vous pouvez trouver plus
@@ -4449,25 +3603,16 @@ linkend="advancedtopics-objecttricks">ici</link>.</para>
    <title>Option de concordance systématique par expressions rationnelles</title>
    <titleabbrev id="configuringnagios-configmain-use_true_regexp_matching-tech">use_true_regexp_matching</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>use_true_regexp_matching=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>use_true_regexp_matching=0</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>use_true_regexp_matching=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>use_true_regexp_matching=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Si vous avez activé la concordance par expression rationnelle, cette option
 va déterminer quand les paramètres vont être traités comme des expressions
@@ -4494,25 +3639,16 @@ linkend="advancedtopics-objecttricks">ceci</link>.</para>
    <title>Adresse email de l'administrateur</title>
    <titleabbrev id="configuringnagios-configmain-admin_email-tech">admin_email</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>admin_email=&lt;email_address&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>admin_email=root@localhost.localdomain</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>admin_email=&lt;email_address&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>admin_email=root@localhost.localdomain</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>C'est l'adresse mail de l'administrateur local de la machine (i.e. celle sur
 laquelle Nagios tourne). Cette valeur peut être utilisée dans les commandes
@@ -4524,25 +3660,16 @@ de notification grâce à la <link linkend="thebasics-macros">macro</link>
    <title>Pager de l'administrateur</title>
    <titleabbrev id="configuringnagios-configmain-admin_pager-tech">admin_pager</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>admin_pager=&lt;pager_number_or_pager_email_gateway&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>admin_pager=pageroot@localhost.localdomain</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>admin_pager=&lt;pager_number_or_pager_email_gateway&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>admin_pager=pageroot@localhost.localdomain</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>C'est le numéro du pager (ou la passerelle pager-email) de l'administrateur
 de la machine locale (i.e. celle sur laquelle Nagios tourne). Le numéro ou
@@ -4555,25 +3682,16 @@ grâce à la <link linkend="thebasics-macros">macro</link>
    <title>Options du courtier d'événement</title>
    <titleabbrev id="configuringnagios-configmain-event_broker_options-tech">event_broker_options</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>event_broker_options=&lt;#&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>event_broker_options=-1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>event_broker_options=&lt;#&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>event_broker_options=-1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option contrôle que les données (si plusieurs) seront envoyées au
 <quote>courtier d'événement</quote> et, ensuite, chargées dans le module du
@@ -4603,26 +3721,17 @@ suivantes:</para>
    <title>Les Modules événementiels</title>
    <titleabbrev id="configuringnagios-configmain-broker_module-tech">broker_module</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>broker_module=&lt;modulepath&gt; [moduleargs]</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>broker_module=/usr/local/nagios/bin/ndomod.o
-       cfg_file=/usr/local/nagios/etc/ndomod.cfg</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>broker_module=&lt;modulepath&gt; [moduleargs]</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>broker_module=/usr/local/nagios/bin/ndomod.o
+       cfg_file=/usr/local/nagios/etc/ndomod.cfg</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Ce paramètre est particulièrement utilisé pour que le module événementiel
 soit chargé au démarrage de Nagios. On peut utiliser plusieurs de ces mêmes
@@ -4653,25 +3762,16 @@ la place le nouveau fichier, redémarrez Nagios</para>
    <title>Fichier de débogage</title>
    <titleabbrev id="configuringnagios-configmain-debug_file-tech">debug_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>debug_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>debug_file=/usr/local/nagios/var/nagios.debug</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>debug_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>debug_file=/usr/local/nagios/var/nagios.debug</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si oui ou pas Nagios peut écrire des informations de
 débogage. La précision des informations que Nagios écrit dépend des options
@@ -4686,25 +3786,16 @@ linkend="configuringnagios-configmain-max_debug_file_size" /></para>
    <title>Niveau de débogage</title>
    <titleabbrev id="configuringnagios-configmain-debug_level-tech">debug_level</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>debug_level=&lt;#&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>debug_level=24</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>debug_level=&lt;#&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>debug_level=24</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine quel type d'information Nagios doit écrire dans <xref
 linkend="configuringnagios-configmain-debug_file" />. Les valeurs possibles
@@ -4753,25 +3844,16 @@ sont les suivantes:</para>
    <title>Verbosité du mode de débogage</title>
    <titleabbrev id="configuringnagios-configmain-debug_verbosity-tech">debug_verbosity</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>debug_verbosity=&lt;#&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>debug_verbosity=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>debug_verbosity=&lt;#&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>debug_verbosity=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine la quantité d'information de débogage que Nagios doit
 écrire dans le <link
@@ -4797,25 +3879,16 @@ débogage</link>.</para>
    <title>Taille maximale du fichier de débogage</title>
    <titleabbrev id="configuringnagios-configmain-max_debug_file_size-tech">max_debug_file_size</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>max_debug_file_size=&lt;#&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>max_debug_file_size=1000000</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>max_debug_file_size=&lt;#&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>max_debug_file_size=1000000</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine la taille maximum (en octets) du <link
 linkend="configuringnagios-configmain-debug_file">fichier de
