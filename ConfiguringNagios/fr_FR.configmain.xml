@@ -96,10 +96,10 @@ heure, jour, semaine et mois.</para>
    </varlistentry>
    </variablelist>
 
-   <para>Cette variable détermine le <link
-linkend="configuringnagios-configobject">fichier de configuration des
-objets</link> que Nagios doit utiliser pour la supervision. Ce fichier
-contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes
+   <para>Cette variable détermine les <link
+linkend="configuringnagios-configobject">fichiers de configuration des
+objets</link> que Nagios doit utiliser pour la supervision. Ces fichiers
+contiennent les définitions pour les hôtes, groupes d'hôtes, contacts, groupes
 de contacts, services, commandes etc… Vous pouvez éclater votre fichier de
 configuration des objets en plusieurs fichiers que vous inclurez, pour leur
 traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d'eux.</para>
@@ -120,13 +120,13 @@ traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d
    </varlistentry>
    </variablelist>
    
-    <para>Cette variable détermine le <link
-linkend="configuringnagios-configobject">fichier de configuration des
-objets</link> que Nagios doit utiliser pour la supervision. Ce fichier
-contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes
-de contacts, services, commandes etc… Vous pouvez éclater votre fichier de
-configuration des objets en plusieurs fichiers que vous inclurez, pour leur
-traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d'eux.</para>
+    <para>Cette directive est utilisée pour spécifier un répertoire qui contient 
+les fichiers de configuration d'objet que Nagios doit utiliser pour la supervision. 
+Tous les fichiers contenus dans le répertoire avec une extension cfg sont traitées 
+comme objet config. En outre, Nagios procède de manière récursive tous les fichiers 
+de config dans les sous-répertoires du répertoire que vous spécifiez ici. Vous pouvez 
+éclater votre fichier de configuration des objets dans plusieurs répertoires que vous inclurez, 
+pour leur traitement, en ajoutant une directive <varname>cfg_dir=</varname> pour chacun d'eux.</para>
   </section>
 
   <section id="configuringnagios-configmain-object_cache_file">
@@ -195,7 +195,7 @@ linkend="securityandperformancetuning-faststartup">ici</link>.</para>
    
     <para>Le fichier de ressources optionnel qui contient des définitions de macros du
 type &macro-usern;.
-   &macro-usern; Les <link linkend="thebasics-macros">macros</link> &macro-usern; permettent de
+   Les <link linkend="thebasics-macros">macros</link> &macro-usern; permettent de
    stocker des noms d'utilisateurs, des mots de passe, et les éléments couramment utilisés dans les commandes (comme les
 chemins d'accès). Les &acronym-cgi;s ne lisent pas les fichiers de ressources, si bien
 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
@@ -264,8 +264,8 @@ heures.</para>
    </variablelist>
 
    <para>C'est le fichier utilisé par Nagios, pour stocker l'état courant de tous
-les services supervisés. L'état de tous les hôtes associés avec ces
-services, est également enregistré dans ce fichier. Ce fichier est utilisé
+les services supervisés. L'état de tous les hôtes et leurs services associés,
+ est également enregistré dans ce fichier. Ce fichier est utilisé
 par le &acronym-cgi; d'état pour afficher l'état courant de la supervision dans
 l'interface web. Les &acronym-cgi;s doivent avoir le droit d'accéder en lecture à ce
 fichier, pour fonctionner correctement. Ce fichier est supprimé à l'arrêt de
@@ -290,11 +290,11 @@ Nagios, et recréé au démarrage.</para>
    <para>Cette variable, détermine la fréquence (en secondes), à laquelle Nagios
 mettra à jour les données d'état dans le <xref
 linkend="configuringnagios-configmain-status_file" />. L'intervalle minimal
-est de une secondes.</para>
+est de une seconde.</para>
   </section>
 
   <section id="configuringnagios-configmain-nagios_user">
-   <title>Utilisateur de Nagios</title>
+   <title>L'utilisateur de Nagios</title>
    <titleabbrev id="configuringnagios-configmain-nagios_user-tech">nagios_user</titleabbrev>
 
    <variablelist>
@@ -755,7 +755,7 @@ commandes à exécuter. Cette option doit être activée si vous avez prévu
 d'utiliser le <link linkend="thebasics-cgis">CGI de commande</link> pour
 envoyer des commandes via l'interface web. Des programmes tiers peuvent
 également envoyer des commandes à Nagios en écrivant dans le fichier de
-commande, sous réserve que les droits nécessaires à l'accès au fichier ait
+commande, sous réserve que les droits nécessaires à l'accès au fichier aient
 été donnés, comme le souligne cette FAQ. Vous trouverez plus d'informations
 sur les commandes externes <link
 linkend="advancedtopics-extcommands">ici</link>.</para>
@@ -850,7 +850,7 @@ lisez <link linkend="advancedtopics-extcommands">ceci</link>.</para>
    </note>
 
    <para>Cette option détermine le nombre de slots tampon que Nagios va réserver pour
-cacher les commandes externes qui ont été lues depuis le fichier de
+mettre en cache les commandes externes qui ont été lues depuis le fichier de
 commandes externes par un processus enfant (worker thread) mais qui n'ont
 pas encore été traité par le processus principal (main thread) du démon
 Nagios. Chaque slot peut gérer une commande externe, ce qui fait que cette
@@ -1355,7 +1355,7 @@ terme pour les hôtes et services.</para>
 
    <para>Cette variable détermine si Nagios journalisera les <link
 linkend="advancedtopics-extcommands">commandes externes</link> reçues via le
-fichier des <link linkend="configuringnagios-configmain-command_file">des
+fichier des <link linkend="configuringnagios-configmain-command_file">
 commandes externes</link>.</para>
 
    <note>
@@ -1560,7 +1560,7 @@ régulièrement. Cette option va automatiquement ajuster le <link
 linkend="configuringnagios-configmain-service_inter_check_delay_method">délai
 inter-contrôles de services</link> (si nécessaire) pour s'assurer que les
 contrôles initiaux des services vont s'effectuer dans le temps imparti. En
-général, cette option n'a pas d'effet si l'option d'<xref
+général, cette option n'a pas d'effet si l'option <xref
 linkend="configuringnagios-configmain-use_retained_scheduling_info" /> est
 activée. La valeur par défaut est de 30 (minutes).</para>
   </section>
@@ -1860,7 +1860,7 @@ cette variable, donc vous la modifierez à vos risques et périls !</para></impo
    </varlistentry>
    </variablelist>
 
-   <para>Cette option détermine si Nagios va essayer de ré ordonnancer
+   <para>Cette option détermine si Nagios va essayer de ré-ordonnancer
 automatiquement les services de vérification actifs des hôtes et services
 pour les lisser dans le temps. Ceci peut aider à distribuer la charge sur le
 serveur de surveillance car il va essayer de conserver un delta de temps
@@ -2009,7 +2009,7 @@ linkend="advancedtopics-passivestatetranslation">ici</link>.</para>
    
    <para>Cette option détermine si en effet Nagios traitera les <link
 linkend="thebasics-passivechecks">contrôles d'hôte passif</link> en états
-HARD ou SOFT. Par défaut, les résultats de contrôles passif sont considéré
+HARD ou SOFT. Par défaut, les résultats de contrôles passif sont considérés
 en <link linkend="thebasics-statetypes">état HARD</link>. Vous pouvez
 changer ceci en activant cette option.</para>
 
@@ -2114,7 +2114,7 @@ d'hôtes (du point de vue des contrôles d'hôtes qui ont été effectués plus
 récemment que le temps spécifié par cette valeur) peut améliorer
 considérablement les performances pour les contrôles d'hôtes. Une valeur trop
 élevée pour cette option peut se traduire par des états d'hôtes
-(temporairement) éronné, alors qu'une valeur trop basse se traduira par un
+(temporairement) éronnés, alors qu'une valeur trop basse se traduira par un
 écroulement des performances pour les contrôles d'hôtes. Utiliser la valeur
 0 pour désactiver le cache de contrôle des hôtes. Plus d'informations
 concernant le cache des contrôles peuvent être trouvées <link
@@ -2198,7 +2198,7 @@ linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
    </variablelist>
    
    <para>Cette option permet de déterminer si Nagios libérera la mémoire utilisée par
-les processus enfant quand il seront arrivé en fin de traitement. Par
+les processus enfant quand il seront arrivés en fin de traitement. Par
 défaut, Nagios libère la mémoire. Ce</para>
 
    <itemizedlist>
@@ -2231,7 +2231,7 @@ défaut, Nagios libère la mémoire. Ce</para>
 enfants quand il exécute des contrôle d'hôte et de service. Par défaut,
 Nagios fork en double. Cependant, si l'option <link
 linkend="configuringnagios-configmain-use_large_installation_tweaks">use_large_installation_tweaks</link> est
-activée, il ne fera qu'un fork. En déclarant cette option dans vortre
+activée, il ne fera qu'un fork. En déclarant cette option dans votre
 fichier de configuration, vous avez la possibilité de changer ce
 comportement.</para>
 
@@ -2264,7 +2264,7 @@ comportement.</para>
    <para>Cette option détermine si oui ou non le démon Nagios peut considérer toutes
 les <link linkend="thebasics-macrolist">macros</link> standard comme des
 variables d'environnements pour vos contrôles, notifications, déclencheur
-d'événement, etc. Dans de grand périmètre de production, ceci peut être
+d'événement, etc… Dans de grands périmètres de production, ceci peut être
 problématique car une utilisation mémoire et &acronym-cpu; supplémentaire est utile
 pour convertir ces macros en variables d'environnements.</para>
 
@@ -2295,8 +2295,8 @@ pour convertir ces macros en variables d'environnements.</para>
    </variablelist>
    
    <para>Cette option détermine si Nagios essaiera de détecter les hôtes et les
-services qui oscillent [ou <quote>bagotent, yoyotent de la touffe</quote> en
-bon argot]. L'oscillation apparaît lorsqu'un hôte ou un service change
+services qui oscillent. 
+L'oscillation apparaît lorsqu'un hôte ou un service change
 d'état trop fréquemment, causant l'émission d'une montagne de
 notifications. Quand Nagios détecte qu'un hôte ou un service oscille, il
 supprime temporairement les notifications pour cet hôte/service jusqu'à ce
@@ -2684,7 +2684,7 @@ pas cette option.</para>
    
    <para>Cette option définit la commande à lancer après chaque contrôle de service,
 ce qui peut être utile dans une <link
-linkend="advancedtopics-distributed">supervision répartie</link>. Elles est
+linkend="advancedtopics-distributed">supervision répartie</link>. Elle est
 exécutée après les éventuelles commandes de <link
 linkend="advancedtopics-eventhandlers">gestion d'événement</link> ou de
 <link linkend="thebasics-notifications">notification</link>. L'argument
@@ -2695,11 +2695,11 @@ hôtes. Cette option sert dans le cadre de la supervision répartie. Le temps
 d'exécution maximal de cette commande est déterminé par la variable <xref
 linkend="configuringnagios-configmain-ocsp_timeout" />. Vous trouverez plus
 d'informations sur la supervision répartie <link
-linkend="advancedtopics-distributed">ici</link>. <code>obsess_over_service</code> Cette commande est seulement exécuté que si la variable <xref
+linkend="advancedtopics-distributed">ici</link>. Cette commande est seulement exécutée que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" /> est
-entièrement activée et que si le paramètre dans la<link
+entièrement activée et que si le paramètre <code>obsess_over_service</code> dans la <link
 linkend="configuringnagios-objectdefinitions-service">définition du
-service</link> l'est aussi</para>
+service</link> l'est aussi.</para>
   </section>
 
   <section id="configuringnagios-configmain-obsess_over_hosts">
@@ -2767,7 +2767,7 @@ linkend="configuringnagios-configmain-ochp_timeout" />. Vous trouverez plus
 d'informations sur la supervision répartie <link
 linkend="advancedtopics-distributed">ici</link>. Cette commande n'est
 exécutée que si l'option de <xref
-linkend="configuringnagios-configmain-obsess_over_hosts" /> est activée et <code>obsess_over_host</code> que si le paramètre dans la <link
+linkend="configuringnagios-configmain-obsess_over_hosts" /> est activée et que si le paramètre <code>obsess_over_host</code> dans la <link
 linkend="configuringnagios-objectdefinitions-host">définition de
 l'hôte</link> l'est aussi.</para>
   </section>
@@ -2826,7 +2826,7 @@ de commande</link> que vous avez définie dans le fichier de configuration
 des objets. Cette commande est exécutée si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" /> est
 activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
-de performance) est activé dans la définition de l'hôte. <code>process_perf_data</code> que si le paramètre dans la <link
+de performance) dans la <link
 linkend="configuringnagios-objectdefinitions-host">définition de
 l'hôte</link> l'est aussi.</para>
   </section>
@@ -2856,11 +2856,11 @@ des objets. Cette commande est exécutée si l'option de <link
 linkend="configuringnagios-configmain-process_performance_data">traitement
 des données de performance</link> est activée et si le paramètre
 <varname>process_perf_data</varname> ([NdT] : traitement des données de performance) est
-activé dans la définition du service. <code>process_perf_data</code> Cette commande est seulement exécuté que si la variable <xref
+activé dans la définition du service. Cette commande est seulement exécuté que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" /> est
-entièrement activée et que si le paramètre dans la<link
+entièrement activée et que si le paramètre <code>process_perf_data</code> dans la <link
 linkend="configuringnagios-objectdefinitions-service">définition du
-service</link> l'est aussi</para>
+service</link> l'est aussi.</para>
   </section>
 
   <section id="configuringnagios-configmain-host_perfdata_file">
@@ -2914,11 +2914,11 @@ linkend="configuringnagios-configmain-service_perfdata_file_template"
 />. Les données ne seront écrites que si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" /> est
 activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
-de performance) est activé dans la définition du service. <code>process_perf_data</code> Cette commande est seulement exécuté que si la variable <xref
+de performance) est activé dans la définition du service. Cette commande est seulement exécuté que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" /> est
-entièrement activée et que si le paramètre dans la<link
+entièrement activée et que si le paramètre <code>process_perf_data</code> dans la <link
 linkend="configuringnagios-objectdefinitions-service">définition du
-service</link> l'est aussi</para>
+service</link> l'est aussi.</para>
   </section>
 
   <section id="configuringnagios-configmain-host_perfdata_file_template">
@@ -3341,7 +3341,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
   </section>
 
   <section id="configuringnagios-configmain-additional_freshness_latency">
-   <title>Option du Seuil de Fraîcheur Supplémentaire de la Latence </title>
+   <title>Option du seuil de fraîcheur supplémentaire de la latence </title>
    <titleabbrev id="configuringnagios-configmain-additional_freshness_latency-tech">additional_freshness_latency</titleabbrev>
 
    <variablelist>
@@ -3383,7 +3383,7 @@ ce sujet <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
   </section>
 
   <section id="configuringnagios-configmain-use_embedded_perl_implicitly">
-   <title>Interpréteur Perl Incorporé FIXME implicite</title>
+   <title>Interpréteur Perl incorporé FIXME implicite</title>
    <titleabbrev id="configuringnagios-configmain-use_embedded_perl_implicitly-tech">use_embedded_perl_implicitly</titleabbrev>
 
    <variablelist>
@@ -3397,7 +3397,7 @@ ce sujet <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
    </varlistentry>
    </variablelist>
 
-   <para>Ce paramétrage détermine si oui ou non l'interpréteur Perl sera utilisé lors
+   <para>Cette option détermine si oui ou non l'interpréteur Perl sera utilisé lors
 d'utilisation de plugins/scripts perl. Nagios doit être compilé en précisant
 cette option pour que ce paramétrage soit opérationnel. Vous trouverez plus
 d'informations à ce sujet <link
@@ -3494,7 +3494,7 @@ associées. Si vous ne spécifiez rien, Nagios prend celle du système par
 défaut.</para>
 
    <note>
-    <para>Si vous utilisez cette option de plage horaire personnalisé, vous allez
+    <para>Si vous utilisez cette option de plage horaire personnalisée, vous allez
 devoir modifier des paramètres dans les fichiers de configurations d'Apache
 concernant les &acronym-cgi;s comme dans l'exemple suivant:</para>
    </note>
@@ -3620,8 +3620,8 @@ rationnelles :  * Si cette option est désactivée (par défaut), les
 paramètres seront traités comme des expression rationnelles uniquement si
 elles contiennent un *, ?, +, ou un \ …  * Si cette option est activée,
 toutes les paramètres seront traités comme des expressions
-rationnelles. Faîtes très attention lorsque vous activez cette option !Pour
-plus d'information, lisez <link
+rationnelles. Faîtes très attention lorsque vous activez cette option! Pour
+plus d'informations, lisez <link
 linkend="advancedtopics-objecttricks">ceci</link>.</para>
 
    <itemizedlist>
@@ -3695,9 +3695,9 @@ grâce à la <link linkend="thebasics-macros">macro</link>
 
    <para>Cette option contrôle que les données (si plusieurs) seront envoyées au
 <quote>courtier d'événement</quote> et, ensuite, chargées dans le module du
-courtier d'événement.Il s'agit d'une option avancée. Dans le doute, ne
+courtier d'événement. Il s'agit d'une option avancée. Dans le doute, ne
 transportez rien (si vous n'utilisez aucun modules) ou choisissez de tout
-transporter (si vous utilisez des modules). Les valeurs possible sont les
+transporter (si vous utilisez des modules). Les valeurs possibles sont les
 suivantes:</para>
 
    <itemizedlist>
@@ -3712,13 +3712,13 @@ suivantes:</para>
     <listitem>
      <para># = Regardez la définition de BROKER_* dans le code source
 (<filename>include/broker.h</filename>) pour d'autres valeurs qui pourront
-être définit pour plus tard</para>
+être définies pour plus tard</para>
     </listitem>
    </itemizedlist>
   </section>
 
   <section id="configuringnagios-configmain-broker_module">
-   <title>Les Modules événementiels</title>
+   <title>Les modules événementiels</title>
    <titleabbrev id="configuringnagios-configmain-broker_module-tech">broker_module</titleabbrev>
 
    <variablelist>
@@ -3773,11 +3773,11 @@ la place le nouveau fichier, redémarrez Nagios</para>
    </varlistentry>
    </variablelist>
 
-   <para>Cette option détermine si oui ou pas Nagios peut écrire des informations de
+   <para>Cette option détermine si oui ou non Nagios peut écrire des informations de
 débogage. La précision des informations que Nagios écrit dépend des options
 <link linkend="configuringnagios-configmain-debug_level">debug_level</link> et <link
 linkend="configuringnagios-configmain-debug_verbosity">debug_verbosity</link>. Vous pouvez
-automatique gérer la rotation du fichier de débogage en fonction de sa
+automatiquement gérer la rotation du fichier de débogage en fonction de sa
 taille en utilisant l'option <xref
 linkend="configuringnagios-configmain-max_debug_file_size" /></para>
   </section>
@@ -3823,7 +3823,7 @@ sont les suivantes:</para>
     </listitem>
 
     <listitem>
-     <para>8 = Les informations liées au planification des événements</para>
+     <para>8 = Les informations liées aux planificationx des événements</para>
     </listitem>
 
     <listitem>
