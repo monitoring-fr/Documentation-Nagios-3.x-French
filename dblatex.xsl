@@ -4,6 +4,7 @@
 <!-- We want the TOC links in the titles, and in blue. -->
 <xsl:param name="latex.hyperparam">colorlinks,linkcolor=blue,pdfstartview=FitH</xsl:param>
 
+
 <!-- Show the list of examples too -->
 <xsl:param name="doc.lot.show">figure,table,example</xsl:param>
 <xsl:param name="doc.toc.show">1</xsl:param>
@@ -14,6 +15,7 @@
 <xsl:param name="draft.mode">yes</xsl:param>
 <xsl:param name="draft.watermark">0</xsl:param>
 <xsl:param name="imagedata.default.scale">pagebound</xsl:param>
+<xsl:param name="variablelist.as.blocks">1</xsl:param>
 
 <!-- How to handle the tag linking. Avoids hyphenation in the link,
      and prevents from putting too much thing in the margin (\sloppy)

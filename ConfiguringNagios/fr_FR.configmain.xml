@@ -84,20 +84,15 @@ heure, jour, semaine et mois.</para>
   <section id="configuringnagios-configmain-cfg_file">
    <title>Fichier de configuration des objets</title>
    <titleabbrev id="configuringnagios-configmain-cfg_file-tech">cfg_file</titleabbrev>
-   
-   <para>
-   Format : 
-   <synopsis>cfg_file=&lt;nom_de_fichier&gt;</synopsis>
-   </para>
-   
+
    <variablelist>
-   
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>cfg_file=&lt;nom_de_fichier&gt;</literal></para></listitem>
+   </varlistentry>
    <varlistentry>
    <term>Exemple</term>
-   <listitem><para><programlisting>
-cfg_file=/usr/local/nagios/etc/hosts.cfg
-cfg_file=/usr/local/nagios/etc/services.cfg
-cfg_file=/usr/local/nagios/etc/commands.cfg</programlisting></para></listitem>
+   <listitem><para><literal>cfg_file=/usr/local/nagios/etc/hosts.cfg</literal></para></listitem>
    </varlistentry>
    </variablelist>
 
@@ -113,34 +108,19 @@ traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d
   <section id="configuringnagios-configmain-cfg_dir">
    <title>Répertoire des fichiers de configuration des objets</title>
    <titleabbrev id="configuringnagios-configmain-cfg_dir-tech">cfg_dir</titleabbrev>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>cfg_dir=&lt;nom_de_répertoire&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para>
-	   <programlisting>
-	   cfg_dir=/usr/local/nagios/etc/commands
-	   cfg_dir=/usr/local/nagios/etc/services
-	   cfg_dir=/usr/local/nagios/etc/hosts
-	   </programlisting>
-      </para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Cette variable détermine le <link
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>cfg_dir=&lt;nom_de_répertoire&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>cfg_dir=/usr/local/nagios/etc/commands</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
+    <para>Cette variable détermine le <link
 linkend="configuringnagios-configobject">fichier de configuration des
 objets</link> que Nagios doit utiliser pour la supervision. Ce fichier
 contient les définitions pour les hôtes, groupes d'hôtes, contacts groupes
@@ -153,26 +133,16 @@ traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d
    <title>Fichier de cache des objets</title>
    <titleabbrev id="configuringnagios-configmain-object_cache_file-tech">object_cache_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>object_cache_file=&lt;nom_de_fichier&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>object_cache_file=/usr/local/nagios/var/objects.cache</programlisting>
-      </para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>object_cache_file=&lt;nom_de_fichier&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>object_cache_file=/usr/local/nagios/var/objects.cache</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui
 contiendra une copie en <link linkend="configuringnagios-configobject">cache
@@ -187,27 +157,17 @@ que l'affichage des &acronym-cgi;s soit modifié.</para>
    <title>Fichier de pré-cache des objets</title>
    <titleabbrev id="configuringnagios-configmain-precached_object_file-tech">precached_object_file</titleabbrev>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>precached_object_file=&lt;nom_du_fichier&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>precached_object_file=/usr/local/nagios/var/objects.precache</programlisting>
-      </para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>precached_object_file=&lt;nom_du_fichier&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>precached_object_file=/usr/local/nagios/var/objects.precache</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+  
    <para>Cette variable est utilisée pour indiquer l'emplacement d'un fichier qui va
 contenir une copie pré-traitée, pré-cachée du <link
 linkend="configuringnagios-configobject">fichier de configuration des
@@ -221,28 +181,19 @@ linkend="securityandperformancetuning-faststartup">ici</link>.</para>
   <section id="configuringnagios-configmain-resource_file">
    <title>Fichier de ressources</title>
    <titleabbrev id="configuringnagios-configmain-resource_file-tech">resource_file</titleabbrev>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>resource_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>resource_file=/usr/local/nagios/etc/resource.cfg</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Le fichier de ressources optionnel qui contient des définitions de macros du
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>resource_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>resource_file=/usr/local/nagios/etc/resource.cfg</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
+    <para>Le fichier de ressources optionnel qui contient des définitions de macros du
 type &macro-usern;.
    &macro-usern; Les <link linkend="thebasics-macros">macros</link> &macro-usern; permettent de
    stocker des noms d'utilisateurs, des mots de passe, et les éléments couramment utilisés dans les commandes (comme les
@@ -258,27 +209,18 @@ distribution de Nagios, pour voir comment utiliser les macros &macro-usern;.</pa
   <section id="configuringnagios-configmain-temp_file">
    <title>Fichier temporaire</title>
    <titleabbrev id="configuringnagios-configmain-temp_file-tech">temp_file</titleabbrev>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">                            
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>temp_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>temp_file=/usr/local/nagios/var/nagios.tmp</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>temp_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>temp_file=/usr/local/nagios/var/nagios.tmp</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
    <para>C'est un fichier que Nagios crée périodiquement durant la mise à jour des
 commentaires de données, des données d'état etc… Il est supprimé quand il
 n'est plus nécessaire.</para>
@@ -287,27 +229,18 @@ n'est plus nécessaire.</para>
   <section id="configuringnagios-configmain-temp_path">
    <title>Répertoire temporaire</title>
    <titleabbrev id="configuringnagios-configmain-temp_path-tech">temp_path</titleabbrev>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>temp_path=&lt;dir_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>temp_path=/tmp</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>temp_path=&lt;dir_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>temp_path=/tmp</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+ 
    <para>C'est un répertoire que Nagios peut utiliser comme espace <quote>scratch</quote> pour
 créer des fichiers temporaires utilisés durant le processus de
 supervision. Vous pouvez exécuter <command>tmpwatch</command>, ou un outil
@@ -318,26 +251,17 @@ heures.</para>
   <section id="configuringnagios-configmain-status_file" >
    <title>Fichier d'états (journal des états)</title>
    <titleabbrev id="configuringnagios-configmain-status_file-tech">status_file</titleabbrev>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>status_file=&lt;file_name&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>status_file=/usr/local/nagios/var/status.dat</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>status_file=&lt;file_name&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>status_file=/usr/local/nagios/var/status.dat</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>C'est le fichier utilisé par Nagios, pour stocker l'état courant de tous
 les services supervisés. L'état de tous les hôtes associés avec ces
@@ -348,31 +272,21 @@ fichier, pour fonctionner correctement. Ce fichier est supprimé à l'arrêt de
 Nagios, et recréé au démarrage.</para>
   </section>
 
-  <section>
-   <title><anchor id="configuringnagios-configmain-status_update_interval"
-xreflabel="Status File Update Interval"/>Intervalle de mise à jour des états
-agrégés</title>
-
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>status_update_interval=&lt;seconds&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>status_update_interval=15</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
+  <section id="configuringnagios-configmain-status_update_interval">
+   <title>/>Intervalle de mise à jour des états agrégés</title>
+   <titleabbrev id="configuringnagios-configmain-status_update_interval-tech">status_update_interval</titleabbrev>
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>status_update_interval=&lt;seconds&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>status_update_interval=15</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+      
    <para>Cette variable, détermine la fréquence (en secondes), à laquelle Nagios
 mettra à jour les données d'état dans le <xref
 linkend="configuringnagios-configmain-status_file" />. L'intervalle minimal
@@ -383,25 +297,16 @@ est de une secondes.</para>
    <title><anchor id="configuringnagios-configmain-nagios_user" xreflabel="Nagios
 User"/>Nagios</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>nagios_user=&lt;username/UID&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>nagios_user=nagios</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>nagios_user=&lt;username/UID&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>nagios_user=nagios</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Ceci détermine quel utilisateur doit être le propriétaire du processus de
 Nagios. Après le démarrage du programme, et avant toute supervision,
@@ -413,27 +318,18 @@ utilisateur. Vous pouvez donner un nom d'utilisateur ou un UID.</para>
    <title><anchor id="configuringnagios-configmain-nagios_group" xreflabel="Nagios
 Group" />Groupe de Nagios</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>nagios_group=&lt;groupname/GID&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>nagios_group=nagios</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
-       <entry><para><programlisting>nagios_group=&lt;groupname/GID&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>nagios_group=nagios</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Ceci détermine quel groupe doit être propriétaire du processus de
+    <para>Ceci détermine quel groupe doit être propriétaire du processus de
 Nagios. Après le démarrage du programme, et avant toute supervision,
 Nagios abandonnera ses privilèges effectifs et se lancera sous ce
 groupe. Vous pouvez donner un nom de groupe ou un GID.</para>
@@ -443,27 +339,18 @@ groupe. Vous pouvez donner un nom de groupe ou un GID.</para>
    <title><anchor id="configuringnagios-configmain-enable_notifications"
 xreflabel="Notifications Option" />Option des notifications</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>enable_notifications=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>enable_notifications=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
-       <entry><para><programlisting>enable_notifications=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>enable_notifications=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Cette option détermine si Nagios envoie ou non une notification quand il
+    <para>Cette option détermine si Nagios envoie ou non une notification quand il
 (re)démarre. Si cette option est désactivée, Nagios n'enverra aucune
 notification, quel que soit l'hôte ou le service.</para>
 
@@ -499,25 +386,16 @@ valeurs possibles de cette variable sont :</para>
 xreflabel="Service Check Execution Option" />Option d'exécution des
 contrôles de service</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>execute_service_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>execute_service_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>execute_service_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>execute_service_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine, si Nagios effectuera les contrôles des services
 lorsqu'il (re)démarrera. Si cette option est désactivée, Nagios
@@ -572,25 +450,16 @@ xreflabel="Passive Service Check Acceptance Option" />Option d'acceptation
 des contrôles passifs de service
    </title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>accept_passive_service_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>accept_passive_service_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>accept_passive_service_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>accept_passive_service_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si Nagios accepte les <link
 linkend="thebasics-passivechecks">contrôles passifs de service</link> quand
@@ -638,27 +507,18 @@ xreflabel="Host Check Execution Option"/>Option d'exécution des contrôles
 d'hôtes
    </title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>execute_host_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>execute_host_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
-       <entry><para><programlisting>execute_host_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>execute_host_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-
-   <para>Cette option détermine si Nagios effectuera les contrôles des hôtes - à la
+    <para>Cette option détermine si Nagios effectuera les contrôles des hôtes - à la
 demande ou de manière régulière - lorsqu'il (re)démarrera. Si cette option
 est désactivée, Nagios n'effectuera aucun contrôle sur les hôtes et restera
 dans un mode <link linkend="thebasics-passivechecks">de sommeil</link> (il
@@ -710,25 +570,16 @@ valeurs possibles de cette variable sont :</para>
 xreflabel="Passive Host Check Acceptance Option"/>Option d'acceptation des
 contrôles passifs d'hôte</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>accept_passive_host_checks=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>accept_passive_host_checks=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>accept_passive_host_checks=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>accept_passive_host_checks=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si Nagios accepte les <link
 linkend="thebasics-passivechecks">contrôles passifs d'hôte</link> quand il
@@ -774,25 +625,16 @@ valeurs possibles de cette variable sont :</para></note>
    <title><anchor id="configuringnagios-configmain-enable_event_handlers"
 xreflabel="Event Handler Option" />Option de gestion d'événement</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>enable_event_handlers=&lt;0/1&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>enable_event_handlers=1</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>enable_event_handlers=&lt;0/1&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>enable_event_handlers=1</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>Cette option détermine si Nagios activera les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événement</link>
@@ -837,25 +679,16 @@ valeurs possibles de cette variable sont :</para></note>
    <title><anchor id="configuringnagios-configmain-log_rotation_method" xreflabel="Log
 Rotation Method" />Méthode de rotation du journal</title>
 
-   <informaltable frame="none" rowsep="0" colsep="0">
-    <tgroup cols="2">
-	<colspec colnum="1" colwidth="15*"/>
-	<colspec colnum="2" colwidth="85*"/>
-     <tbody>
-      <row>
-       <entry><para>Format:</para></entry>
-
-       <entry><para><programlisting>log_rotation_method=&lt;n/h/d/w/m&gt;</programlisting></para></entry>
-      </row>
-
-      <row>
-       <entry><para>Exemple:</para></entry>
-
-       <entry><para><programlisting>log_rotation_method=d</programlisting></para></entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>log_rotation_method=&lt;n/h/d/w/m&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>log_rotation_method=d</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
 
    <para>C'est la méthode de rotation que vous voulez que Nagios utilise pour le
 fichier journal. Les valeurs possibles de cette variable sont :</para>
