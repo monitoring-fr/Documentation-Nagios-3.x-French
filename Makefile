@@ -6,7 +6,7 @@ html/index.html:$(XMLSOURCE)
 	xmlto -o html/ html fr_FR.nagios.xml	
 	
 pdf/nagios-dblatex.pdf:$(XMLSOURCE)
-	dblatex fr_FR.nagios.xml -p dblatex.xsl -o pdf/fr_FR.nagios-dblatex.pdf
+	dblatex fr_FR.nagios.xml -b xetex -p dblatex.xsl -o pdf/fr_FR.nagios-dblatex.pdf
 
 pdf/nagios-db2latex.pdf:$(XMLSOURCE)
 	dblatex fr_FR.nagios.xml -p dblatex.xsl -o pdf/fr_FR.nagios-db2latex.pdf -T db2latex
