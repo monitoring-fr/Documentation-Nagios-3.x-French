@@ -13,12 +13,12 @@
   <title>Introduction</title>
 
   <para>Une des fonctionnalités du format de configuration des objets de Nagios est
-qu evous pouvez créer des définitions d'objets qui héritent leurs propriétés
+que vous pouvez créer des définitions d'objets qui héritent leurs propriétés
 d'autres objets de configuration. Une explication sur le fonctionnement de
-l'héritage peut être trouvé <link
+l'héritage peut être trouvée <link
 linkend="advancedtopics-objectinheritance">ici</link>. Je recommande
 vivement que vous vous familiarisez avec l'héritage des objets une fois que
-vous aurez lu la docuementation présentée ci-dessous, du fait que cela
+vous aurez lu la documentation présentée ci-dessous, du fait que cela
 permet une maintenance des définitions d'objets beaucoup plus facile que
 sans. Lisez aussi les <link linkend="advancedtopics-objecttricks">trucs et
 astuces pour les objets</link> qui offrent des raccourcis pour des tâches de
@@ -76,7 +76,7 @@ initiales plutôt que du fichier de rétention d'états au moment du
   <note>
    <para>Des exemples de fichiers de configuration sont installés dans le répertoire
 <filename class="directory">/usr/local/nagios/etc/</filename> quand vous
-suivez le<link linkend="gettingstarted-quickstart">guide d'installation
+suivez le <link linkend="gettingstarted-quickstart">guide d'installation
 rapide</link>.
    </para>
   </note>
@@ -87,31 +87,31 @@ rapide</link>.
 
   <para>
   <link linkend="configuringnagios-objectdefinitions-host">Définitions
-d'hôtes</link> <link
+d'hôtes</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-hostgroup">Définitions de
-groupes d'hôtes</link> <link
+groupes d'hôtes</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-service">Définitions de
-services</link> <link
+services</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-servicegroup">Définitions de
-groupes de services</link> <link
+groupes de services</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-contact">Définitions de
-contacts</link> <link
+contacts</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-contactgroup">Définitions de
-groupes de contacts</link> <link
+groupes de contacts</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-timeperiod">Définitions de
-périodes de temps</link> <link
+périodes de temps</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-command">Définitions de
-commandes</link> <link
+commandes</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-servicedependency">Définitions
-de dépendances de services</link> <link
+de dépendances de services</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-serviceescalation">Définitions
-d'escalades de services</link> <link
+d'escalades de services</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-hostdependency">Définitions de
-dépendances d'hotes</link> <link
+dépendances d'hotes</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-hostescalation">Définitions
-d'escalades d'hôtes</link> <link
+d'escalades d'hôtes</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-hostextinfo">Définitions
-d'informations étendues d'hôtes</link> <link
+d'informations étendues d'hôtes</link> </para> <para> <link
 linkend="configuringnagios-objectdefinitions-serviceextinfo">Définitions
 d'informations étendues de services</link>
   </para>
@@ -406,7 +406,7 @@ define host{
 		Cette variable est utilisée pour définir le nom court identifiant l'hôte. Ce
 nom est utilisé dans les définitions de groupes d'hôtes et de services pour
 faire référence à cet hôte en particulier. Les hôtes peuvent avoir plusieurs
-services (qui sont supervisés) associés à eux. Bien utilisé, la <link
+services (qui sont supervisés) associés à eux. Bien utilisée, la <link
 linkend="thebasics-macros">macro</link> &macro-hostname; contiendra ce nom court.
 		</para>
 		</listitem>
@@ -418,7 +418,7 @@ linkend="thebasics-macros">macro</link> &macro-hostname; contiendra ce nom court
 		<listitem>
 		<para>Cette variable est utilisée pour définir un nom long ou une description
 identifiant l'hôte. Cela permet d'identifier plus facilement un hôte en
-particulier. Bien utilisé, la <link linkend="thebasics-macros">macro</link>
+particulier. Bien utilisée, la <link linkend="thebasics-macros">macro</link>
 &macro-hostalias; contiendra cet alias/description.</para>
 		</listitem>
 	</varlistentry>
@@ -432,9 +432,9 @@ c'est une adresse IP, même si cela pourrait être ce que vous voulez (au
 moins tant que cela peut être utilisé pour contrôler l'état d'un hôte). Vous
 pouvez utiliser le FQDN pour identifier l'hôte plutôt que son adresse IP,
 mais avec des problèmes possibles si les services &protocol-dns; ne sont pas
-disponibles. Bine utilisé, la <link linkend="thebasics-macros">macro</link>
+disponibles. Bien utilisée, la <link linkend="thebasics-macros">macro</link>
 &macro-hostaddress; contiendra cette adresse.</para><note><para>Le nom de l'hôte sera utilisé comme adresse si vous ne précisez pas de
-variable adresse dans la définition d el'hôte.</para></note><caution><para>Une petite mise en garde néanmoins sur le fait de le faire - si le service
+variable adresse dans la définition de l'hôte.</para></note><caution><para>Une petite mise en garde néanmoins sur le fait de le faire - si le service
 &protocol-dns; tombe, la plupart de vos contrôles de services seront en
 erreur parce que les plugins seront incapbles de résoudre le nom de l'hôte.</para></caution>
 		</listitem>
@@ -458,9 +458,9 @@ l'interface le feront.
 		<listitem>
 		<para>Cette variable est utilisée pour définir une liste séparée par des virgules
 de noms courts représentant les hôtes <quote>parents</quote> de cet hôte en
-particulier. Les hôtes parents sont typiquement des routeurs, des parefeus,
+particulier. Les hôtes parents sont typiquement des routeurs, des pare-feux,
 etc… qui se trouvent sur la route entre le serveur de supervision et les
-hôtes à superviser. Un routeur, switch, etc. qui se trouve le plus près de
+hôtes à superviser. Un routeur, switch, etc… qui se trouve le plus près de
 l'hôte à superviser est considéré comme le <quote>parent</quote> de cet
 hôte. Lisez le document <quote>Déterminer l'état et l'accessibilité du
 réseau des hôtes</quote> situé <link
@@ -561,7 +561,7 @@ contrôles</link>.</para>
 		<para>Ce paramètre est utilisé pour définir le nombre d'<quote>unités de
 temps</quote> à attendre avant d'ordonnancer un nouveau contrôle des
 hôtes. Les hôtes sont recontrôlés à l'intervalle de réessai quand ils sont
-passées dans un état non UP. Une fois que l'hôte à été réessayé le nombre de
+passés dans un état non UP. Une fois que l'hôte à été recontrôlé le nombre de
 fois précisé dans <emphasis role="bold">max_check_attempts</emphasis> sans
 changement d'état, il sera contrôlé à nouveau sur une fréquence
 <quote>normale</quote> telle que définie dans la valeur <emphasis
@@ -604,7 +604,7 @@ possibles pour cet hôte. Valeurs : 0 = contrôles d'hôte passif désactivés, 
 		<listitem>
 		<para>Cette variable est utilisée pour définir le nom court de la <link
 linkend="configuringnagios-objectdefinitions-timeperiod">période de
-temps</link> pendant laquelle peut se dérouler les contrôles actifs de cet
+temps</link> pendant laquelle peuvent se dérouler les contrôles actifs de cet
 hôte.</para>
 		</listitem>
 	</varlistentry>
@@ -652,7 +652,7 @@ d'une <link
 linkend="configuringnagios-objectdefinitions-command">commande</link> à
 exécuter à chaque changement d'état de l'hôte (par exemple quand il n'est
 plus disponible ou qu'il redevient disponible). Lisez la documentation sur
-les <link linkend="advancedtopics-eventhandlers">gestionnaire
+les <link linkend="advancedtopics-eventhandlers">gestionnaires
 d'événenements</link> pour plus d'explications sur la façon d'écrire des
 scripts pour gérer les événements. Le temps maximal d'exécution d'une
 commande de gestion d'événements est contrôlé par l'option <link
@@ -677,7 +677,7 @@ d'hôte désactivé, 1 = gestionnaire d'événements d'hôte activé</para>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser le seuil bas de détection
 d'oscillation pour l'hôte. Plus d'informations sur la détection
-d'ocillations se trouve <link
+d'ocillations se trouvent <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
 linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
@@ -691,7 +691,7 @@ au niveau global du logiciel sera utilisée.</para>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser le seuil haut de détection
 d'oscillation pour l'hôte. Plus d'informations sur la détection
-d'ocillations se trouve <link
+d'ocillations se trouvent <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
 linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
@@ -706,7 +706,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		<listitem>
 		<para>Cette variable est utilisée pour déterminer si la détection d'oscillation
 est activée ou non pour l'hôte. Plus d'informations sur la détection
-d'ocillations se trouve <link
+d'ocillations se trouvent <link
 linkend="advancedtopics-flapping">ici</link>. Valeurs : 0 = détection
 d'ocillation pour l'hôte désactivée, 1 = détection d'ocillation pour l'hôte
 activée.</para>
@@ -749,8 +749,8 @@ activé.
 seulement utile si vous avez activé la rétention d'états en utilisant la
 variable <link
 linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
-Valeur : 0 = rétention des données d'états désactivé, 1 = rétention des
-données d'états activé.</para>
+Valeur : 0 = rétention des données d'états désactivée, 1 = rétention des
+données d'états activée.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -763,8 +763,8 @@ des états de l'hôte sont conservées après redémarrage du programme. C'est
 seulement utile si vous avez activé la rétention d'états en utilisant la
 variable <link
 linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
-Valeur : 0 = rétention des données différentes des états désactivé, 1 =
-rétention des données différentes des états activé.
+Valeur : 0 = rétention des données différentes des états désactivée, 1 =
+rétention des données différentes des états activée.
         </para>
 		</listitem>
 	</varlistentry>
@@ -804,7 +804,7 @@ contact ou un groupe de contacts dans chaque définition d'hôte.</para>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser le nombre d'<quote>unités de
 temps</quote> à attendre avant de re-notifier un contact que ce service est
-<emphasis>tojours</emphasis> down ou innacessible. Sauf si vous avez changé
+<emphasis>toujours</emphasis> down ou innacessible. Sauf si vous avez changé
 la variable <link
 linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Sivous
@@ -880,13 +880,13 @@ désactivées, 1 = notifications pour l'hôte activées.</para>
 			talking_options
 		</term>
 		<listitem>
-		<para>Cette variable est utilisée pour déterminer quelles
+		<para>Cette variable est utilisée pour déterminer quelle
 <quote>mémorisation</quote> d'états est utilisée pour l'hôte. Les options
 valides sont une combinaison d'un ou ou de plusieurs des états suivants :
 <emphasis role="bold">o</emphasis> = mémorisation des états UP, <emphasis
 role="bold">d</emphasis> = mémorisation des états DOWN et <emphasis
 role="strong">u</emphasis> = mémorisation des états UNREACHABLE. Plus
-d'informations sur la mémorisation d'états peut être trouvée <link
+d'informations sur la mémorisation d'états peuvent être trouvées <link
 linkend="advancedtopics-stalking">ici</link>.
         </para>
 		</listitem>
@@ -911,7 +911,7 @@ linkend="advancedtopics-stalking">ici</link>.
 informations supplémentaires sur l'hôte. Si vous précisez une URL, vous
 verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous regardez les
 informations de l'hôte) qui renverra vers l'URL précisée ici. N'importe
-quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins
+quelle URL valide peut être utilisée. Si vous pensez utiliser des chemins
 relatifs, le chemin de base sera le même que celui utilisé pour accéder aux
 &acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
 vous souhaitez mettre à disposition d'autres équipes de support les
@@ -995,7 +995,7 @@ role="bold">pngtogd2</emphasis> fourni avec la <ulink
 url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format
 GD2 doivent être créées dans un format <emphasis>non compressé</emphasis>
 toujours pour minimiser la charge &acronym-cpu; au moment de charger la carte
-réseau. Le rendu d el'image sera maximal si vous utilisez une taille de
+réseau. Le rendu de l'image sera maximal si vous utilisez une taille de
 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas
 le &acronym-cgi; de carte d'états. Les images des hôtes sont censées se trouver dans
 le sous-répertoire <emphasis role="bold">logos/</emphasis> de votre
@@ -1019,7 +1019,7 @@ droite) à partir du haut de l'image et en positif dans la direction y (bas)
 à partir du bord gauche de l'image. Pour référence, la taille des icônes es
 thabituellement de 40x40 pixels (le texte prend un peu d'espace
 supplémentaire). Les coordonnées que vous précisez ici sont pour le coin
-supérieur gauche de l'icône de l'hôte à dessiner.</para><note><para>Ne vous inquiétez du nombre maximal de coordonnées que vous pouvez utliser
+supérieur gauche de l'icône de l'hôte à dessiner.</para><note><para>Ne vous inquiétez pas du nombre maximal de coordonnées que vous pouvez utliser
 ici. Le &acronym-cgi; va automatiquement calculer les dimensions maximales de l'image
 qu'il créée en se basant sur les plus grandes valeurs x et y que vous avez
 précisé.
