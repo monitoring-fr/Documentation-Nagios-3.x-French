@@ -58,7 +58,7 @@ class="directory">/usr/local/nagios/etc/</filename>.
 
   <section id="configuringnagios-configmain-log_file">
    <title>Fichier journal</title>
-   <titleabbrev id="configuringnagios-configmain-log_file-tech">log_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_file-tech"><literal>log_file</literal></titleabbrev>
     
    <variablelist>
    <varlistentry>
@@ -82,7 +82,7 @@ heure, jour, semaine et mois.</para>
 
   <section id="configuringnagios-configmain-cfg_file">
    <title>Fichier de configuration des objets</title>
-   <titleabbrev id="configuringnagios-configmain-cfg_file-tech">cfg_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-cfg_file-tech"><literal>cfg_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -106,7 +106,7 @@ traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d
 
   <section id="configuringnagios-configmain-cfg_dir">
    <title>Répertoire des fichiers de configuration des objets</title>
-   <titleabbrev id="configuringnagios-configmain-cfg_dir-tech">cfg_dir</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-cfg_dir-tech"><literal>cfg_dir</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -130,7 +130,7 @@ pour leur traitement, en ajoutant une directive <varname>cfg_dir=</varname> pour
 
   <section id="configuringnagios-configmain-object_cache_file">
    <title>Fichier de cache des objets</title>
-   <titleabbrev id="configuringnagios-configmain-object_cache_file-tech">object_cache_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-object_cache_file-tech"><literal>object_cache_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -154,7 +154,7 @@ que l'affichage des &acronym-cgi;s soit modifié.</para>
 
   <section id="configuringnagios-configmain-precached_object_file">
    <title>Fichier de pré-cache des objets</title>
-   <titleabbrev id="configuringnagios-configmain-precached_object_file-tech">precached_object_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-precached_object_file-tech"><literal>precached_object_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -179,7 +179,7 @@ linkend="securityandperformancetuning-faststartup">ici</link>.</para>
 
   <section id="configuringnagios-configmain-resource_file">
    <title>Fichier de ressources</title>
-   <titleabbrev id="configuringnagios-configmain-resource_file-tech">resource_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-resource_file-tech"><literal>resource_file</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -207,7 +207,7 @@ distribution de Nagios, pour voir comment utiliser les macros &macro-usern;.</pa
 
   <section id="configuringnagios-configmain-temp_file">
    <title>Fichier temporaire</title>
-   <titleabbrev id="configuringnagios-configmain-temp_file-tech">temp_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-temp_file-tech"><literal>temp_file</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -227,7 +227,7 @@ n'est plus nécessaire.</para>
 
   <section id="configuringnagios-configmain-temp_path">
    <title>Répertoire temporaire</title>
-   <titleabbrev id="configuringnagios-configmain-temp_path-tech">temp_path</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-temp_path-tech"><literal>temp_path</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -249,7 +249,7 @@ heures.</para>
 
   <section id="configuringnagios-configmain-status_file" >
    <title>Fichier d'états (journal des états)</title>
-   <titleabbrev id="configuringnagios-configmain-status_file-tech">status_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-status_file-tech"><literal>status_file</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -273,7 +273,7 @@ Nagios, et recréé au démarrage.</para>
 
   <section id="configuringnagios-configmain-status_update_interval">
    <title>Intervalle de mise à jour des états agrégés</title>
-   <titleabbrev id="configuringnagios-configmain-status_update_interval-tech">status_update_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-status_update_interval-tech"><literal>status_update_interval</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -294,7 +294,7 @@ est de une seconde.</para>
 
   <section id="configuringnagios-configmain-nagios_user">
    <title>L'utilisateur de Nagios</title>
-   <titleabbrev id="configuringnagios-configmain-nagios_user-tech">nagios_user</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-nagios_user-tech"><literal>nagios_user</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -315,7 +315,7 @@ utilisateur. Vous pouvez donner un nom d'utilisateur ou un UID.</para>
 
   <section id="configuringnagios-configmain-nagios_group">
    <title>Groupe de Nagios</title>
-   <titleabbrev id="configuringnagios-configmain-nagios_group-tech">nagios_group</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-nagios_group-tech"><literal>nagios_group</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -336,7 +336,7 @@ groupe. Vous pouvez donner un nom de groupe ou un GID.</para>
 
   <section id="configuringnagios-configmain-enable_notifications">
    <title>Option des notifications</title>
-   <titleabbrev id="configuringnagios-configmain-enable_notifications-tech">enable_notifications</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-enable_notifications-tech"><literal>enable_notifications</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -382,7 +382,7 @@ valeurs possibles de cette variable sont :</para>
 
   <section id="configuringnagios-configmain-execute_service_checks">
    <title>Option d'exécution des contrôles de service</title>
-   <titleabbrev id="configuringnagios-configmain-execute_service_checks-tech">execute_service_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-execute_service_checks-tech"><literal>execute_service_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -443,7 +443,7 @@ valeurs possibles de cette variable sont :</para>
 
   <section id="configuringnagios-configmain-accept_passive_service_checks">
    <title>Option d'acceptation des contrôles passifs de service</title>
-   <titleabbrev id="configuringnagios-configmain-accept_passive_service_checks-tech">accept_passive_service_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-accept_passive_service_checks-tech"><literal>accept_passive_service_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -497,7 +497,7 @@ valeurs possibles de cette variable sont :</para>
 
   <section id="configuringnagios-configmain-execute_host_checks">
    <title>Option d'exécution des contrôles d'hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-execute_host_checks-tech">execute_host_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-execute_host_checks-tech"><literal>execute_host_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -559,7 +559,7 @@ valeurs possibles de cette variable sont :</para>
 
   <section id="configuringnagios-configmain-accept_passive_host_checks">
    <title>Option d'acceptation des contrôles passifs d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-accept_passive_host_checks-tech">accept_passive_host_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-accept_passive_host_checks-tech"><literal>accept_passive_host_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -614,7 +614,7 @@ valeurs possibles de cette variable sont :</para></note>
 
   <section id="configuringnagios-configmain-enable_event_handlers">
    <title>Option de gestion d'événement</title>
-   <titleabbrev id="configuringnagios-configmain-enable_event_handlers-tech">enable_event_handlers</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-enable_event_handlers-tech"><literal>enable_event_handlers</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -668,7 +668,7 @@ valeurs possibles de cette variable sont :</para></note>
 
   <section id="configuringnagios-configmain-log_rotation_method">
    <title>Méthode de rotation du journal</title>
-   <titleabbrev id="configuringnagios-configmain-log_rotation_method-tech">log_rotation_method</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_rotation_method-tech"><literal>log_rotation_method</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -713,7 +713,7 @@ dernier jour du mois)</para>
 
   <section id="configuringnagios-configmain-log_archive_path">
    <title>Chemin d'accès aux archives du journal</title>
-   <titleabbrev id="configuringnagios-configmain-log_archive_path-tech">log_archive_path</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_archive_path-tech"><literal>log_archive_path</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -735,7 +735,7 @@ journal</link>.</para>
 
   <section id="configuringnagios-configmain-check_external_commands">
    <title>Option de contrôle des commandes externes</title>
-   <titleabbrev id="configuringnagios-configmain-check_external_commands-tech">check_external_commands</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-check_external_commands-tech"><literal>check_external_commands</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -772,7 +772,7 @@ linkend="advancedtopics-extcommands">ici</link>.</para>
 
   <section id="configuringnagios-configmain-command_check_interval">
    <title>Intervalle entre les contrôles des commandes externes</title>
-   <titleabbrev id="configuringnagios-configmain-command_check_interval-tech">command_check_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-command_check_interval-tech"><literal>command_check_interval</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -806,7 +806,7 @@ externes <link linkend="advancedtopics-extcommands">ici</link>.</para>
 
   <section id="configuringnagios-configmain-command_file">
    <title>Fichier de commandes externes</title>
-   <titleabbrev id="configuringnagios-configmain-command_file-tech">command_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-command_file-tech"><literal>command_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -831,7 +831,7 @@ lisez <link linkend="advancedtopics-extcommands">ceci</link>.</para>
 
   <section id="configuringnagios-configmain-external_command_buffer_slots">
    <title>Mémoire tampon des commandes externes</title>
-   <titleabbrev id="configuringnagios-configmain-external_command_buffer_slots-tech">external_command_buffer_slots</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-external_command_buffer_slots-tech"><literal>external_command_buffer_slots</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -866,7 +866,7 @@ linkend="securityandperformancetuning-mrtggraphs">ici</link>.</para>
 
   <section id="configuringnagios-configmain-lock_file">
    <title>Fichier verrou</title>
-   <titleabbrev id="configuringnagios-configmain-lock_file-tech">configmain-lock_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-lock_file-tech"><literal>lock_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -886,7 +886,7 @@ en tant que démon (i.e. démarré avec l'argument
 
   <section id="configuringnagios-configmain-retain_state_information">
    <title>Option de mémorisation de l'état</title>
-   <titleabbrev id="configuringnagios-configmain-retain_state_information-tech">retain_state_information</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-retain_state_information-tech"><literal>retain_state_information</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -921,7 +921,7 @@ redémarrera.</para>
 
   <section id="configuringnagios-configmain-state_retention_file">
    <title>Fichier de mémorisation de l'état</title>
-   <titleabbrev id="configuringnagios-configmain-state_retention_file-tech">state_retention_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-state_retention_file-tech"><literal>state_retention_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -945,7 +945,7 @@ linkend="configuringnagios-configmain-retain_state_information" />.</para>
 
   <section id="configuringnagios-configmain-retention_update_interval">
    <title>Intervalle de mise à jour des états mémorisés</title>
-   <titleabbrev id="configuringnagios-configmain-retention_update_interval-tech">retention_update_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-retention_update_interval-tech"><literal>retention_update_interval</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -970,7 +970,7 @@ variable est sans effet.</para>
 
   <section id="configuringnagios-configmain-use_retained_program_state">
    <title>Option d'utilisation des états mémorisés du programme</title>
-   <titleabbrev id="configuringnagios-configmain-use_retained_program_state-tech">use_retained_program_state</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_retained_program_state-tech"><literal>use_retained_program_state</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1011,7 +1011,7 @@ option est sans effet.</para>
 
   <section id="configuringnagios-configmain-use_retained_scheduling_info">
    <title>Option d'utilisation des états mémorisés de l'ordonnanceur</title>
-   <titleabbrev id="configuringnagios-configmain-use_retained_scheduling_info-tech">use_retained_scheduling_info</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_retained_scheduling_info-tech"><literal>use_retained_scheduling_info</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1175,7 +1175,7 @@ contact sont conservés.</para>
   
   <section id="configuringnagios-configmain-use_syslog">
    <title>Option de journalisation dans Syslog</title>
-   <titleabbrev id="configuringnagios-configmain-use_syslog-tech">use_syslog</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_syslog-tech"><literal>use_syslog</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -1204,7 +1204,7 @@ l'utilitaire système Syslog. Les valeurs possibles sont :</para>
 
   <section id="configuringnagios-configmain-log_notifications">
    <title>Option de journalisation des notifications</title>
-   <titleabbrev id="configuringnagios-configmain-log_notifications-tech">log_notifications</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_notifications-tech"><literal>log_notifications</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1235,7 +1235,7 @@ pour éviter de journaliser les notifications faites aux contacts.</para>
 
   <section id="configuringnagios-configmain-log_service_retries">
    <title>Option de journalisation de tentatives de contrôle de service</title>
-   <titleabbrev id="configuringnagios-configmain-log_service_retries-tech">log_service_retries</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_service_retries-tech"><literal>log_service_retries</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1269,7 +1269,7 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</par
 
   <section id="configuringnagios-configmain-log_host_retries">
    <title>Option de journalisation de tentatives de contrôle d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-log_host_retries-tech">log_host_retries</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_host_retries-tech"><literal>log_host_retries</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1300,7 +1300,7 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.</par
 
   <section id="configuringnagios-configmain-log_event_handlers">
    <title>Option de journalisation des gestions d'événement</title>
-   <titleabbrev id="configuringnagios-configmain-log_event_handlers-tech">log_event_handlers</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_event_handlers-tech"><literal>log_event_handlers</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1333,7 +1333,7 @@ déboguer Nagios ou de tester les scripts de gestion d'événements.</para>
 
   <section id="configuringnagios-configmain-log_initial_states">
    <title>Option de journalisation des états initiaux</title>
-   <titleabbrev id="configuringnagios-configmain-log_initial_states-tech">log_initial_states</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_initial_states-tech"><literal>log_initial_states</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1366,7 +1366,7 @@ terme pour les hôtes et services.</para>
 
   <section id="configuringnagios-configmain-log_external_commands">
    <title>Option de journalisation des commandes externes</title>
-   <titleabbrev id="configuringnagios-configmain-log_external_commands-tech">log_external_commands</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_external_commands-tech"><literal>log_external_commands</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1404,7 +1404,7 @@ journalisation des contrôles passifs de service.</para>
 
   <section id="configuringnagios-configmain-log_passive_checks">
    <title>Option de journalisation des contrôles passifs</title>
-   <titleabbrev id="configuringnagios-configmain-log_passive_checks-tech">log_passive_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-log_passive_checks-tech"><literal>log_passive_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1440,7 +1440,7 @@ journal de trop grossir.</para>
 
   <section id="configuringnagios-configmain-global_host_event_handler">
    <title>Gestionnaire global des événements relatifs aux hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-global_host_event_handler-tech">global_host_event_handler</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-global_host_event_handler-tech"><literal>global_host_event_handler</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1467,7 +1467,7 @@ linkend="advancedtopics-eventhandlers">ici</link></para>
 
   <section id="configuringnagios-configmain-global_service_event_handler">
    <title>Gestionnaire global des événements relatifs aux services</title>
-   <titleabbrev id="configuringnagios-configmain-global_service_event_handler-tech">global_service_event_handler</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-global_service_event_handler-tech"><literal>global_service_event_handler</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1494,7 +1494,7 @@ linkend="advancedtopics-eventhandlers">ici</link>.</para>
 
   <section id="configuringnagios-configmain-sleep_time">
    <title>Temps de sommeil entre les contrôles</title>
-   <titleabbrev id="configuringnagios-configmain-sleep_time-tech">sleep_time</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-sleep_time-tech"><literal>sleep_time</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1515,7 +1515,7 @@ contrôles de services en retard dans la file.</para>
 
   <section id="configuringnagios-configmain-service_inter_check_delay_method">
    <title>Méthode de délai inter-contrôles de services</title>
-   <titleabbrev id="configuringnagios-configmain-service_inter_check_delay_method-tech">service_inter_check_delay_method</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_inter_check_delay_method-tech"><literal>service_inter_check_delay_method</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1567,7 +1567,7 @@ service</para>
 
   <section id="configuringnagios-configmain-max_service_check_spread">
    <title>Délai maximum de répartition des contrôles initiaux de services</title>
-   <titleabbrev id="configuringnagios-configmain-max_service_check_spread-tech">max_service_check_spread</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-max_service_check_spread-tech"><literal>max_service_check_spread</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1593,7 +1593,7 @@ activée. La valeur par défaut est de 30 (minutes).</para>
 
   <section id="configuringnagios-configmain-service_interleave_factor">
    <title>Délai maximum de répartition des contrôles initiaux de services</title>
-   <titleabbrev id="configuringnagios-configmain-service_interleave_factor-tech">service_interleave_factor</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_interleave_factor-tech"><literal>service_interleave_factor</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1641,7 +1641,7 @@ d'entrelacement (par défaut)</para>
 
   <section id="configuringnagios-configmain-max_concurrent_checks">
    <title>Nombre maximal de contrôles de service simultanés</title>
-   <titleabbrev id="configuringnagios-configmain-max_concurrent_checks-tech">max_concurrent_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-max_concurrent_checks-tech"><literal>max_concurrent_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1668,7 +1668,7 @@ linkend="advancedtopics-checkscheduling-max_concurrent_checks">ici</link>.</para
 
   <section id="configuringnagios-configmain-check_result_reaper_frequency">
    <title>Fréquence de consolidation des résultats de contrôle</title>
-   <titleabbrev id="configuringnagios-configmain-check_result_reaper_frequency-tech">check_result_reaper_frequency</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-check_result_reaper_frequency-tech"><literal>check_result_reaper_frequency</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1690,7 +1690,7 @@ cœur de la logique de supervision de Nagios.</para>
 
   <section id="configuringnagios-configmain-max_check_result_reaper_time">
    <title>Temps maximum de consolidation des résultats de contrôle</title>
-   <titleabbrev id="configuringnagios-configmain-max_check_result_reaper_time-tech">max_check_result_reaper_time</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-max_check_result_reaper_time-tech"><literal>max_check_result_reaper_time</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1716,7 +1716,7 @@ Nagios pour d'autres traitements de la logique de supervision.</para>
 
   <section id="configuringnagios-configmain-check_result_path">
    <title>Répertoire de stockage des résultats de contrôle</title>
-   <titleabbrev id="configuringnagios-configmain-check_result_path-tech">check_result_path</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-check_result_path-tech"><literal>check_result_path</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1744,7 +1744,7 @@ Nagios prélève des résultats ne la concernant pas! </para></note>
 
   <section id="configuringnagios-configmain-max_check_result_file_age">
    <title>L'age maximum du fichier de résultat de contrôle</title>
-   <titleabbrev id="configuringnagios-configmain-max_check_result_file_age-tech">max_check_result_file_age</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-max_check_result_file_age-tech"><literal>max_check_result_file_age</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1769,7 +1769,7 @@ contrôle. </para>
 
   <section id="configuringnagios-configmain-host_inter_check_delay_method">
    <title>Méthode de délai inter-contrôles d'hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-host_inter_check_delay_method-tech">host_inter_check_delay_method</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_inter_check_delay_method-tech"><literal>host_inter_check_delay_method</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1819,7 +1819,7 @@ répartir également les contrôles d'hôte (par défaut)</para>
 
   <section id="configuringnagios-configmain-max_host_check_spread">
    <title>Délai maximum de répartition des contrôles initiaux d'hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-max_host_check_spread-tech">max_host_check_spread</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-max_host_check_spread-tech"><literal>max_host_check_spread</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1846,7 +1846,7 @@ défaut est de 30 (minutes).</para>
 
   <section id="configuringnagios-configmain-interval_length">
    <title>Valeur de l'intervalle de temps</title>
-   <titleabbrev id="configuringnagios-configmain-interval_length-tech">interval_length</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-interval_length-tech"><literal>interval_length</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1873,7 +1873,7 @@ cette variable, donc vous la modifierez à vos risques et périls !</para></impo
 
   <section id="configuringnagios-configmain-auto_reschedule_checks">
    <title>Option de réordonnancement automatique</title>
-   <titleabbrev id="configuringnagios-configmain-auto_reschedule_checks-tech">auto_reschedule_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-auto_reschedule_checks-tech"><literal>auto_reschedule_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1900,7 +1900,7 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
 
   <section id="configuringnagios-configmain-auto_rescheduling_interval">
    <title>Intervalle de réordonnancement automatique</title>
-   <titleabbrev id="configuringnagios-configmain-auto_rescheduling_interval-tech">auto_rescheduling_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-auto_rescheduling_interval-tech"><literal>auto_rescheduling_interval</literal></titleabbrev>
    
    <variablelist>
    <varlistentry>
@@ -1924,7 +1924,7 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
 
   <section id="configuringnagios-configmain-auto_rescheduling_window">
    <title>Fenêtre de réordonnancement automatique</title>
-   <titleabbrev id="configuringnagios-configmain-auto_rescheduling_window-tech">auto_rescheduling_window</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-auto_rescheduling_window-tech"><literal>auto_rescheduling_window</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1952,7 +1952,7 @@ LIEU DE LES AMELIORER, SI ELLE EST MAL UTILISEE.</para></warning>
 
   <section id="configuringnagios-configmain-use_aggressive_host_checking">
    <title>Option de contrôle agressif des hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-use_aggressive_host_checking-tech">use_aggressive_host_checking</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_aggressive_host_checking-tech"><literal>use_aggressive_host_checking</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -1987,7 +1987,7 @@ je vous suggère de ne pas activer cette option.</para>
 
   <section id="configuringnagios-configmain-translate_passive_host_checks">
    <title>Option de traduction des contrôles d'hôte passif</title>
-   <titleabbrev id="configuringnagios-configmain-translate_passive_host_checks-tech">translate_passive_host_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-translate_passive_host_checks-tech"><literal>translate_passive_host_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2020,7 +2020,7 @@ linkend="advancedtopics-passivestatetranslation">ici</link>.</para>
 
   <section id="configuringnagios-configmain-passive_host_checks_are_soft">
    <title>Option de status (FIXME ?) des contrôle passifs d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-passive_host_checks_are_soft-tech">passive_host_checks_are_soft</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-passive_host_checks_are_soft-tech"><literal>passive_host_checks_are_soft</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2052,7 +2052,7 @@ changer ceci en activant cette option.</para>
 
   <section id="configuringnagios-configmain-enable_predictive_host_dependency_checks">
    <title>Option de contrôles prédictifs de dépendances d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-enable_predictive_host_dependency_checks-tech">enable_predictive_host_dependency_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-enable_predictive_host_dependency_checks-tech"><literal>enable_predictive_host_dependency_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2087,7 +2087,7 @@ linkend="advancedtopics-dependencychecks">ici</link></para>
 
   <section id="configuringnagios-configmain-enable_predictive_service_dependency_checks">
    <title>Option de contrôle prédictif de dépendance de service</title>
-   <titleabbrev id="configuringnagios-configmain-enable_predictive_service_dependency_checks-tech">enable_predictive_service_dependency_checks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-enable_predictive_service_dependency_checks-tech"><literal>enable_predictive_service_dependency_checks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2121,7 +2121,7 @@ peuvent être trouvées <link linkend="advancedtopics-dependencychecks">ici FIXM
 
   <section id="configuringnagios-configmain-cached_host_check_horizon">
    <title>FIXME Cached Host Check Horizon</title>
-   <titleabbrev id="configuringnagios-configmain-cached_host_check_horizon-tech">cached_host_check_horizon</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-cached_host_check_horizon-tech"><literal>cached_host_check_horizon</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2149,7 +2149,7 @@ linkend="advancedtopics-cachedchecks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-cached_service_check_horizon">
    <title>FIXME Cached Service Check Horizon</title>
-   <titleabbrev id="configuringnagios-configmain-cached_service_check_horizon-tech">cached_service_check_horizon</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-cached_service_check_horizon-tech"><literal>cached_service_check_horizon</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2177,7 +2177,7 @@ linkend="advancedtopics-cachedchecks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-use_large_installation_tweaks">
    <title>Option d'optimisations pour les gros périmètres</title>
-   <titleabbrev id="configuringnagios-configmain-use_large_installation_tweaks-tech">use_large_installation_tweaks</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_large_installation_tweaks-tech"><literal>use_large_installation_tweaks</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2210,7 +2210,7 @@ linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-free_child_process_memory">
    <title>Option de gestion de la mémoire des processus enfants</title>
-   <titleabbrev id="configuringnagios-configmain-free_child_process_memory-tech">free_child_process_memory</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-free_child_process_memory-tech"><literal>free_child_process_memory</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2240,7 +2240,7 @@ défaut, Nagios libère la mémoire. Ce</para>
 
   <section id="configuringnagios-configmain-child_processes_fork_twice">
    <title>Forker les processus enfant en double</title>
-   <titleabbrev id="configuringnagios-configmain-child_processes_fork_twice-tech">child_processes_fork_twice</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-child_processes_fork_twice-tech"><literal>child_processes_fork_twice</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2274,7 +2274,7 @@ comportement.</para>
 
   <section id="configuringnagios-configmain-enable_environment_macros">
    <title>Activation des macros d'environnement</title>
-   <titleabbrev id="configuringnagios-configmain-enable_environment_macros-tech">enable_environment_macros</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-enable_environment_macros-tech"><literal>enable_environment_macros</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2307,7 +2307,7 @@ pour convertir ces macros en variables d'environnements.</para>
 
   <section id="configuringnagios-configmain-enable_flap_detection">
    <title>Option de détection de l'oscillation d'un service ou d'un hôte[flap]</title>
-   <titleabbrev id="configuringnagios-configmain-enable_flap_detection-tech">enable_flap_detection</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-enable_flap_detection-tech"><literal>enable_flap_detection</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2358,7 +2358,7 @@ l'interface web.</para></note>
 
   <section id="configuringnagios-configmain-low_service_flap_threshold">
    <title>Seuil inférieur d'oscillation d'un service</title>
-   <titleabbrev id="configuringnagios-configmain-low_service_flap_threshold-tech">low_service_flap_threshold</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-low_service_flap_threshold-tech"><literal>low_service_flap_threshold</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2379,7 +2379,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-high_service_flap_threshold">
    <title>Seuil supérieur d'oscillation d'un service</title>
-   <titleabbrev id="configuringnagios-configmain-high_service_flap_threshold-tech">high_service_flap_threshold</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-high_service_flap_threshold-tech"><literal>high_service_flap_threshold</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2401,7 +2401,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-low_host_flap_threshold">
    <title>Seuil inférieur d'oscillation d'un hôte</title>
-   <titleabbrev id="configuringnagios-configmain-low_host_flap_threshold-tech">low_host_flap_threshold</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-low_host_flap_threshold-tech"><literal>low_host_flap_threshold</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2422,7 +2422,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-high_host_flap_threshold">
    <title>Seuil supérieur d'oscillation d'un hôte</title>
-   <titleabbrev id="configuringnagios-configmain-high_host_flap_threshold-tech">high_host_flap_threshold</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-high_host_flap_threshold-tech"><literal>high_host_flap_threshold</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2443,7 +2443,7 @@ gestion des oscillations (et comment cette variable les affecte), lisez
 
   <section id="configuringnagios-configmain-soft_state_dependencies">
    <title>Option de dépendance <quote>soft</quote> des services</title>
-   <titleabbrev id="configuringnagios-configmain-soft_state_dependencies-tech">soft_state_dependencies</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-soft_state_dependencies-tech"><literal>soft_state_dependencies</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2477,7 +2477,7 @@ hard ou soft), activez cette option.</para>
 
   <section id="configuringnagios-configmain-service_check_timeout">
    <title>Dépassement de délai du contrôle de service</title>
-   <titleabbrev id="configuringnagios-configmain-service_check_timeout-tech">service_check_timeout</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_check_timeout-tech"><literal>service_check_timeout</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2506,7 +2506,7 @@ pensant que c'est un processus ayant des problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-host_check_timeout">
    <title>Dépassement de délai du contrôle d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-host_check_timeout-tech">host_check_timeout</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_check_timeout-tech"><literal>host_check_timeout</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2535,7 +2535,7 @@ pensant que c'est un processus ayant des problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-event_handler_timeout">
    <title>Dépassement de délai de contrôle du gestionnaire d'événement</title>
-   <titleabbrev id="configuringnagios-configmain-event_handler_timeout-tech">event_handler_timeout</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-event_handler_timeout-tech"><literal>event_handler_timeout</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2564,7 +2564,7 @@ problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-notification_timeout">
    <title>Dépassement de délai de notification</title>
-   <titleabbrev id="configuringnagios-configmain-notification_timeout-tech">notification_timeout</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-notification_timeout-tech"><literal>notification_timeout</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2593,7 +2593,7 @@ que c'est un processus ayant des problèmes d'exécution.</para>
 
   <section id="configuringnagios-configmain-ocsp_timeout">
    <title>Dépassement de délai de la commande de remontée de contrôle de service</title>
-   <titleabbrev id="configuringnagios-configmain-ocsp_timeout-tech">ocsp_timeout</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-ocsp_timeout-tech"><literal>ocsp_timeout</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2614,7 +2614,7 @@ limite, elle sera tuée et une alerte sera journalisée.</para>
 
   <section id="configuringnagios-configmain-ochp_timeout">
    <title>Dépassement de délai de la commande de remontée de contrôle d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-ochp_timeout-tech">ochp_timeout</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-ochp_timeout-tech"><literal>ochp_timeout</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2635,7 +2635,7 @@ journalisée.</para>
 
   <section id="configuringnagios-configmain-perfdata_timeout">
    <title>Dépassement de délai de la commande de traitement des données liées aux performances</title>
-   <titleabbrev id="configuringnagios-configmain-perfdata_timeout-tech">perfdata_timeout</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-perfdata_timeout-tech"><literal>perfdata_timeout</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2659,7 +2659,7 @@ dépasse cette limite, elle sera tuée et une alerte sera journalisée.</para>
 
   <section id="configuringnagios-configmain-obsess_over_services">
    <title>Option de remontée de contrôle de service</title>
-   <titleabbrev id="configuringnagios-configmain-obsess_over_services-tech">obsess_over_services</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-obsess_over_services-tech"><literal>obsess_over_services</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2695,7 +2695,7 @@ pas cette option.</para>
 
   <section id="configuringnagios-configmain-ocsp_command">
    <title>Commande de remontée de contrôle de service</title>
-   <titleabbrev id="configuringnagios-configmain-ocsp_command-tech">ocsp_command</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-ocsp_command-tech"><literal>ocsp_command</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2730,7 +2730,7 @@ service</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-obsess_over_hosts">
    <title>Option de remontée de contrôle d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-obsess_over_hosts-tech">obsess_over_hosts</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-obsess_over_hosts-tech"><literal>obsess_over_hosts</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2765,7 +2765,7 @@ faites pas de supervision répartie, n'activez pas cette option.</para>
 
   <section id="configuringnagios-configmain-ochp_command">
    <title>Commande de remontée de contrôle d'hôte</title>
-   <titleabbrev id="configuringnagios-configmain-ochp_command-tech">ochp_command</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-ochp_command-tech"><literal>ochp_command</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2800,7 +2800,7 @@ l'hôte</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-process_performance_data">
    <title>Option de traitement des données liées aux performances</title>
-   <titleabbrev id="configuringnagios-configmain-process_performance_data-tech">process_performance_data</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-process_performance_data-tech"><literal>process_performance_data</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2830,7 +2830,7 @@ et de services.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_command">
    <title>Commande de performance liée aux hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-host_perfdata_command-tech">host_perfdata_command</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_command-tech"><literal>host_perfdata_command</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2859,7 +2859,7 @@ l'hôte</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_command">
    <title>Commande de performance liée aux services</title>
-   <titleabbrev id="configuringnagios-configmain-service_perfdata_command-tech">service_perfdata_command</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_command-tech"><literal>service_perfdata_command</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2891,7 +2891,7 @@ service</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file">
    <title>Fichier de performance des hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-host_perfdata_file-tech">host_perfdata_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file-tech"><literal>host_perfdata_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2919,7 +2919,7 @@ l'hôte</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file">
    <title>Fichier de performance des services</title>
-   <titleabbrev id="configuringnagios-configmain-service_perfdata_file-tech">service_perfdata_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file-tech"><literal>service_perfdata_file</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2949,7 +2949,7 @@ service</link> l'est aussi.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_template">
    <title>Patron du fichier de performance des hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_template-tech">host_perfdata_file_template</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_template-tech"><literal>host_perfdata_file_template</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2973,7 +2973,7 @@ performance.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_template">
    <title>Patron du fichier de performance des services</title>
-   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_template-tech">service_perfdata_file_template</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_template-tech"><literal>service_perfdata_file_template</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -2997,7 +2997,7 @@ performance.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_mode">
    <title>Mode d'ouverture du fichier de performance des hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_mode-tech">host_perfdata_file_mode</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_mode-tech"><literal>host_perfdata_file_mode</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3033,7 +3033,7 @@ utiliser l'option par défaut ajout.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_mode">
    <title>Mode d'ouverture du fichier de performance des services</title>
-   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_mode-tech">service_perfdata_file_mode</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_mode-tech"><literal>service_perfdata_file_mode</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3069,7 +3069,7 @@ certainement utiliser l'option par défaut ajout.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_processing_interval">
    <title>Intervalle de traitement du fichier de performance des hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_interval-tech">host_perfdata_file_processing_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_interval-tech"><literal>host_perfdata_file_processing_interval</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3093,7 +3093,7 @@ traitement n'aura pas lieu de manière régulière.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_processing_interval">
    <title>Intervalle de traitement du fichier de performance des services</title>
-   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_interval-tech">service_perfdata_file_processing_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_interval-tech"><literal>service_perfdata_file_processing_interval</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3117,7 +3117,7 @@ traitement n'aura pas lieu de manière régulière.</para>
 
   <section id="configuringnagios-configmain-host_perfdata_file_processing_command">
    <title>Commande de traitement du fichier de performance des hôtes</title>
-   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_command-tech">host_perfdata_file_processing_command</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_perfdata_file_processing_command-tech"><literal>host_perfdata_file_processing_command</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3143,7 +3143,7 @@ de traitement du fichier de performance des hôtes</link>.</para>
 
   <section id="configuringnagios-configmain-service_perfdata_file_processing_command">
    <title>Commande de traitement du fichier de performance des services</title>
-   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_command-tech">service_perfdata_file_processing_command</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_perfdata_file_processing_command-tech"><literal>service_perfdata_file_processing_command</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3170,7 +3170,7 @@ linkend="configuringnagios-configmain-service_perfdata_file_processing_interval"
 
   <section id="configuringnagios-configmain-check_for_orphaned_services">
    <title>Option de vérification des contrôles de service orphelins</title>
-   <titleabbrev id="configuringnagios-configmain-check_for_orphaned_services-tech">check_for_orphaned_services</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-check_for_orphaned_services-tech"><literal>check_for_orphaned_services</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3212,7 +3212,7 @@ services orphelins.</simpara>
 
   <section id="configuringnagios-configmain-check_for_orphaned_hosts">
    <title>Option de vérification des contrôles d'hôtes orphelins</title>
-   <titleabbrev id="configuringnagios-configmain-check_for_orphaned_hosts-tech">check_for_orphaned_hosts</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-check_for_orphaned_hosts-tech"><literal>check_for_orphaned_hosts</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3254,7 +3254,7 @@ hôtes orphelins.</simpara>
 
   <section id="configuringnagios-configmain-check_service_freshness">
    <title>Option de contrôle de la validité des données d'un service</title>
-   <titleabbrev id="configuringnagios-configmain-check_service_freshness-tech">check_service_freshness</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-check_service_freshness-tech"><literal>check_service_freshness</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3287,7 +3287,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-service_freshness_check_interval">
    <title>Intervalle de contrôle de la validité des données d'un service</title>
-   <titleabbrev id="configuringnagios-configmain-service_freshness_check_interval-tech">service_freshness_check_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-service_freshness_check_interval-tech"><literal>service_freshness_check_interval</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3311,7 +3311,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-check_host_freshness">
    <title>Option du contrôle de la validité des données d'un hôte</title>
-   <titleabbrev id="configuringnagios-configmain-check_host_freshness-tech">check_host_freshness</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-check_host_freshness-tech"><literal>check_host_freshness</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3344,7 +3344,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-host_freshness_check_interval">
    <title>Intervalle de contrôle de la validité des données d'un hôte</title>
-   <titleabbrev id="configuringnagios-configmain-host_freshness_check_interval-tech">host_freshness_check_interval</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-host_freshness_check_interval-tech"><literal>host_freshness_check_interval</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3368,7 +3368,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-additional_freshness_latency">
    <title>Option du seuil de fraîcheur supplémentaire de la latence </title>
-   <titleabbrev id="configuringnagios-configmain-additional_freshness_latency-tech">additional_freshness_latency</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-additional_freshness_latency-tech"><literal>additional_freshness_latency</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3389,7 +3389,7 @@ linkend="advancedtopics-freshness">ici</link>.</para>
 
   <section id="configuringnagios-configmain-enable_embedded_perl">
    <title>Activation de l'interpréteur Perl incorporé</title>
-   <titleabbrev id="configuringnagios-configmain-enable_embedded_perl-tech">enable_embedded_perl</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-enable_embedded_perl-tech"><literal>enable_embedded_perl</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3410,7 +3410,7 @@ ce sujet <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
 
   <section id="configuringnagios-configmain-use_embedded_perl_implicitly">
    <title>Interpréteur Perl incorporé FIXME implicite</title>
-   <titleabbrev id="configuringnagios-configmain-use_embedded_perl_implicitly-tech">use_embedded_perl_implicitly</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_embedded_perl_implicitly-tech"><literal>use_embedded_perl_implicitly</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3432,7 +3432,7 @@ linkend="advancedtopics-embeddedperl">ici</link>.</para>
 
   <section id="configuringnagios-configmain-date_format">
    <title>Format de la date</title>
-   <titleabbrev id="configuringnagios-configmain-date_format-tech">date_format</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-date_format-tech"><literal>date_format</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3500,7 +3500,7 @@ l'interface web. Les options possibles sont :</para>
 
   <section id="configuringnagios-configmain-use_timezone">
    <title>Option de plage horaire</title>
-   <titleabbrev id="configuringnagios-configmain-use_timezone-tech">use_timezone</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_timezone-tech"><literal>use_timezone</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3538,7 +3538,7 @@ concernant les &acronym-cgi;s comme dans l'exemple suivant:</para>
 
   <section id="configuringnagios-configmain-illegal_object_name_chars">
    <title>Caractères illégaux dans les noms d'objets</title>
-   <titleabbrev id="configuringnagios-configmain-illegal_object_name_chars-tech">illegal_object_name_chars</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-illegal_object_name_chars-tech"><literal>illegal_object_name_chars</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3560,7 +3560,7 @@ recommande de ne pas utiliser les caractères ci-dessus. Le faire vous expose
 
   <section id="configuringnagios-configmain-illegal_macro_output_chars">
   <title>Caractères illégaux dans la sortie des macros</title>
-   <titleabbrev id="configuringnagios-configmain-illegal_macro_output_chars-tech">illegal_macro_output_chars</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-illegal_macro_output_chars-tech"><literal>illegal_macro_output_chars</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3596,7 +3596,7 @@ suivantes sont débarrassées des caractères spécifiés dans l'option :</para>
 
   <section id="configuringnagios-configmain-use_regexp_matching">
    <title>Option de concordance par expressions rationnelles</title>
-   <titleabbrev id="configuringnagios-configmain-use_regexp_matching-tech">use_regexp_matching</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_regexp_matching-tech"><literal>use_regexp_matching</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3627,7 +3627,7 @@ linkend="advancedtopics-objecttricks">ici</link>.</para>
 
   <section id="configuringnagios-configmain-use_true_regexp_matching">
    <title>Option de concordance systématique par expressions rationnelles</title>
-   <titleabbrev id="configuringnagios-configmain-use_true_regexp_matching-tech">use_true_regexp_matching</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-use_true_regexp_matching-tech"><literal>use_true_regexp_matching</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3663,7 +3663,7 @@ linkend="advancedtopics-objecttricks">ceci</link>.</para>
 
   <section id="configuringnagios-configmain-admin_email">
    <title>Adresse email de l'administrateur</title>
-   <titleabbrev id="configuringnagios-configmain-admin_email-tech">admin_email</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-admin_email-tech"><literal>admin_email</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3684,7 +3684,7 @@ de notification grâce à la <link linkend="thebasics-macros">macro</link>
 
   <section id="configuringnagios-configmain-admin_pager">
    <title>Pager de l'administrateur</title>
-   <titleabbrev id="configuringnagios-configmain-admin_pager-tech">admin_pager</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-admin_pager-tech"><literal>admin_pager</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3706,7 +3706,7 @@ grâce à la <link linkend="thebasics-macros">macro</link>
 
   <section id="configuringnagios-configmain-event_broker_options">
    <title>Options du courtier d'événement</title>
-   <titleabbrev id="configuringnagios-configmain-event_broker_options-tech">event_broker_options</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-event_broker_options-tech"><literal>event_broker_options</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3745,7 +3745,7 @@ suivantes:</para>
 
   <section id="configuringnagios-configmain-broker_module">
    <title>Les modules événementiels</title>
-   <titleabbrev id="configuringnagios-configmain-broker_module-tech">broker_module</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-broker_module-tech"><literal>broker_module</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3786,7 +3786,7 @@ la place le nouveau fichier, redémarrez Nagios</para>
 
   <section id="configuringnagios-configmain-debug_file">
    <title>Fichier de débogage</title>
-   <titleabbrev id="configuringnagios-configmain-debug_file-tech">debug_file</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-debug_file-tech"><literal><literal>debug_file</literal></literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3810,7 +3810,7 @@ linkend="configuringnagios-configmain-max_debug_file_size" /></para>
 
   <section id="configuringnagios-configmain-debug_level">
    <title>Niveau de débogage</title>
-   <titleabbrev id="configuringnagios-configmain-debug_level-tech">debug_level</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-debug_level-tech"><literal>debug_level</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3868,7 +3868,7 @@ sont les suivantes:</para>
 
   <section id="configuringnagios-configmain-debug_verbosity">
    <title>Verbosité du mode de débogage</title>
-   <titleabbrev id="configuringnagios-configmain-debug_verbosity-tech">debug_verbosity</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-debug_verbosity-tech"><literal>debug_verbosity</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
@@ -3903,7 +3903,7 @@ débogage</link>.</para>
 
   <section id="configuringnagios-configmain-max_debug_file_size">
    <title>Taille maximale du fichier de débogage</title>
-   <titleabbrev id="configuringnagios-configmain-max_debug_file_size-tech">max_debug_file_size</titleabbrev>
+   <titleabbrev id="configuringnagios-configmain-max_debug_file_size-tech"><literal>max_debug_file_size</literal></titleabbrev>
 
    <variablelist>
    <varlistentry>
