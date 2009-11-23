@@ -17,6 +17,7 @@
 
 <xsl:param name="paper.type">A4</xsl:param>
 
+
 <!-- pour forcer les variablelists sur deux lignes -->
 <xsl:param name="term.breakline">1</xsl:param>
 

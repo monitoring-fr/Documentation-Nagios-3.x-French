@@ -37,12 +37,11 @@ pas d'espace avant le nom
   <tip>
    <para>Un fichier de configuration d'exemple
 (<filename>/usr/local/nagios/etc/nagios.cfg</filename>) est installé pour
-vous quand suivez le <link linkend="gettingstarted-quickstart">guide de
-démarrage rapide</link>.
+vous quand suivez le <xref linkend="gettingstarted-quickstart"/>
    </para>
   </tip>
  </section>
-
+ 																																																																																														
  <section>
   <title>Emplacement du fichier de configuration</title>
 
@@ -1044,23 +1043,32 @@ option active.</para>
     </listitem>
    </itemizedlist>
   </section>
-
-  <!-- FIXME - DEBUT -->
   
   <section>
-   <title xreflabel="Retained Host and Service Attribute Masks">
-   <anchor id="configuringnagios-configmain-retained_service_attribute_mask"/>
-   <anchor id="configuringnagios-configmain-retained_host_attribute_mask" />
+   <title xreflabel="Masques d'attribut conservé pour hôte et service">
+   <anchor id="configuringnagios-configmain-retained_service_attribute_mask" xreflabel="retained_service_attribute_mask"/>
+   <anchor id="configuringnagios-configmain-retained_host_attribute_mask" xreflabel="retained_host_attribute_mask"/>
    Masques d'attribut conservé pour hôte et service</title>
 
    <variablelist>
    <varlistentry>
    <term>Format</term>
-   <listitem><para><literal>retained_host_attribute_mask=&lt;number&gt;retained_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   <listitem><para><literal>retained_host_attribute_mask=&lt;number&gt;</literal></para></listitem>
    </varlistentry>
    <varlistentry>
    <term>Exemple</term>
-   <listitem><para><literal>retained_host_attribute_mask=0retained_service_attribute_mask=0</literal></para></listitem>
+   <listitem><para><literal>retained_host_attribute_mask=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retained_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retained_service_attribute_mask=0</literal></para></listitem>
    </varlistentry>
    </variablelist>
    
@@ -1079,19 +1087,30 @@ d'hôtes et services sont conservés.</para>
   </section>
 
   <section>
-   <title xreflabel="Retained Process Attribute Masks">
-   <anchor id="configuringnagios-configmain-retained_process_service_attribute_mask"/>
-   <anchor id="configuringnagios-configmain-retained_process_host_attribute_mask"/>
+   <title xreflabel="Masque d'attributs conservés du processus">
+   <anchor id="configuringnagios-configmain-retained_process_service_attribute_mask" xreflabel="retained_process_service_attribute_mask"/>
+   <anchor id="configuringnagios-configmain-retained_process_host_attribute_mask" xreflabel="retained_process_host_attribute_mask"/>
    Masque d'attributs conservés du processus</title>
 
    <variablelist>
    <varlistentry>
    <term>Format</term>
-   <listitem><para><literal>retained_process_host_attribute_mask=&lt;number&gt; retained_process_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   <listitem><para><literal>retained_process_host_attribute_mask=&lt;number&gt;</literal></para></listitem>
    </varlistentry>
    <varlistentry>
    <term>Exemple</term>
-   <listitem><para><literal>retained_process_host_attribute_mask=0 retained_process_service_attribute_mask=0</literal></para></listitem>
+   <listitem><para><literal>retained_process_host_attribute_mask=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retained_process_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retained_process_service_attribute_mask=0</literal></para></listitem>
    </varlistentry>
    </variablelist>
    
@@ -1112,19 +1131,30 @@ tous les attributs de processus sont conservés.</para>
   </section>
 
   <section>
-   <title xreflabel="Retained Contact Attribute Masks" >
-   <anchor id="configuringnagios-configmain-retained_contact_service_attribute_mask"/>
-   <anchor id="configuringnagios-configmain-retained_contact_host_attribute_mask"/>
+   <title xreflabel="Masques d'attribut conservé de contact" >
+   <anchor id="configuringnagios-configmain-retained_contact_service_attribute_mask" xreflabel="retained_contact_service_attribute_mask"/>
+   <anchor id="configuringnagios-configmain-retained_contact_host_attribute_mask" xreflabel="retained_contact_host_attribute_mask"/>
    Masques d'attribut conservé de contact</title>
 
    <variablelist>
    <varlistentry>
    <term>Format</term>
-   <listitem><para><literal>retained_contact_host_attribute_mask=&lt;number&gt; retained_contact_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   <listitem><para><literal>retained_contact_host_attribute_mask=&lt;number&gt;</literal></para></listitem>
    </varlistentry>
    <varlistentry>
    <term>Exemple</term>
-   <listitem><para><literal>retained_contact_host_attribute_mask=0 retained_contact_service_attribute_mask=0</literal></para></listitem>
+   <listitem><para><literal>retained_contact_host_attribute_mask=0</literal></para></listitem>
+   </varlistentry>
+   </variablelist>
+   
+   <variablelist>
+   <varlistentry>
+   <term>Format</term>
+   <listitem><para><literal>retained_contact_service_attribute_mask=&lt;number&gt;</literal></para></listitem>
+   </varlistentry>
+   <varlistentry>
+   <term>Exemple</term>
+   <listitem><para><literal>retained_contact_service_attribute_mask=0</literal></para></listitem>
    </varlistentry>
    </variablelist>
    
@@ -1142,10 +1172,6 @@ niveau du bit (bitwise) ET les valeurs spécifiées par les définitions de
 <filename>include/common.h</filename>. Par défaut, tous les attributs de
 contact sont conservés.</para>
   </section>
-
-    <!-- FIXME - FIN  -->
-
-  
   
   <section id="configuringnagios-configmain-use_syslog">
    <title>Option de journalisation dans Syslog</title>
