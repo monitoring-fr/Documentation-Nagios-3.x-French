@@ -86,10 +86,10 @@ utilisant les commandes suivantes (en tant que root):
   </para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>yum install httpd</userinput>
-<prompt>linux:~ # </prompt><userinput>yum install gcc</userinput>
-<prompt>linux:~ # </prompt><userinput>yum install glibc glibc-common</userinput>
-<prompt>linux:~ # </prompt><userinput>yum install gd gd-devel</userinput>
+<prompt># </prompt><userinput>yum install httpd</userinput>
+<prompt># </prompt><userinput>yum install gcc</userinput>
+<prompt># </prompt><userinput>yum install glibc glibc-common</userinput>
+<prompt># </prompt><userinput>yum install gd gd-devel</userinput>
 </screen>
  </section>
 
@@ -99,14 +99,14 @@ utilisant les commandes suivantes (en tant que root):
   <para>Passez sur le compte root.</para>
 
   <screen>
-<prompt>linux:~ $ </prompt><userinput>su -l</userinput>
+<prompt>$ </prompt><userinput>su -l</userinput>
 </screen>
 
   <para>Créez un utilisateur nagios et attribuez lui un mot de passe.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/sbin/useradd -m nagios</userinput>
-<prompt>linux:~ # </prompt><userinput>passwd nagios</userinput>
+<prompt># </prompt><userinput>/usr/sbin/useradd -m nagios</userinput>
+<prompt># </prompt><userinput>passwd nagios</userinput>
 </screen>
 
   <para>Créez un groupe nagcmd pour autoriser la soumission de commandes externes
@@ -114,9 +114,9 @@ depuis l'interface web. Ajoutez à la fois l'utilisateur nagios et
 l'utilisateur apache à ce groupe.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/sbin/groupadd nagcmd</userinput>
-<prompt>linux:~ # </prompt><userinput>/usr/sbin/usermod -G nagcmd nagios</userinput>
-<prompt>linux:~ # </prompt><userinput>/usr/sbin/usermod -G nagcmd apache</userinput>
+<prompt># </prompt><userinput>/usr/sbin/groupadd nagcmd</userinput>
+<prompt># </prompt><userinput>/usr/sbin/usermod -G nagcmd nagios</userinput>
+<prompt># </prompt><userinput>/usr/sbin/usermod -G nagcmd apache</userinput>
 </screen>
  </section>
 
@@ -126,8 +126,8 @@ l'utilisateur apache à ce groupe.</para>
   <para>Créez un répertoire pour stocker les téléchargements.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>mkdir ~/downloads</userinput>
-<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>
+<prompt># </prompt><userinput>mkdir ~/downloads</userinput>
+<prompt># </prompt><userinput>cd ~/downloads</userinput>
 </screen>
 
   <para>
@@ -140,8 +140,8 @@ la 1.4.11.
   </para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.0.2.tar.gz</userinput>
-<prompt>linux:~ # </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz</userinput>
+<prompt># </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.0.2.tar.gz</userinput>
+<prompt># </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.11.tar.gz</userinput>
 </screen>
  </section>
 
@@ -151,22 +151,22 @@ la 1.4.11.
   <para>Extraire le code source de Nagios de l'archive.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>
-<prompt>linux:~ # </prompt><userinput>tar xzf nagios-3.0.2.tar.gz</userinput>
-<prompt>linux:~ # </prompt><userinput>cd nagios-3.0.2</userinput>
+<prompt># </prompt><userinput>cd ~/downloads</userinput>
+<prompt># </prompt><userinput>tar xzf nagios-3.0.2.tar.gz</userinput>
+<prompt># </prompt><userinput>cd nagios-3.0.2</userinput>
 </screen>
 
   <para>Exécutez le script de configuration de Nagios en lui passant le nom du
 groupe que vous venez juste de créer comme suit:</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>./configure --with-command-group=nagcmd</userinput>
+<prompt># </prompt><userinput>./configure --with-command-group=nagcmd</userinput>
 </screen>
 
   <para>Compilez le code source de Nagios.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>make all</userinput>
+<prompt># </prompt><userinput>make all</userinput>
 </screen>
 
   <para>Installez les binaires, les scripts de démarrage, les fichiers de
@@ -174,10 +174,10 @@ configuration fournis en exemple et réglez les permissions sur le dossier
 des commandes externes.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>make install</userinput>
-<prompt>linux:~ # </prompt><userinput>make install-init</userinput>
-<prompt>linux:~ # </prompt><userinput>make install-config</userinput>
-<prompt>linux:~ # </prompt><userinput>make install-commandmode</userinput>
+<prompt># </prompt><userinput>make install</userinput>
+<prompt># </prompt><userinput>make install-init</userinput>
+<prompt># </prompt><userinput>make install-config</userinput>
+<prompt># </prompt><userinput>make install-commandmode</userinput>
 </screen>
 
   <para>Ne démarrez pas Nagios maintenant - Il reste quelques manipulations à
@@ -200,7 +200,7 @@ associée avec la définition de contact nagiosadmin par celle que vous
 souhaitez utiliser pour recevoir les alertes.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/contacts.cfg</userinput>
+<prompt># </prompt><userinput>vi /usr/local/nagios/etc/objects/contacts.cfg</userinput>
 </screen>
  </section>
 
@@ -211,7 +211,7 @@ souhaitez utiliser pour recevoir les alertes.</para>
 <filename class="directory">conf.d</filename>.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>make install-webconf</userinput>
+<prompt># </prompt><userinput>make install-webconf</userinput>
 </screen>
 
   <para>Créez un compte nagiosadmin pour la connexion à l'interface web de
@@ -219,13 +219,13 @@ Nagios. Souvenez-vous du mot de passe que vous avez attribué à ce
 compte&nbsp;-&nbsp;Vous en aurez besoin plus tard.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</userinput>
+<prompt># </prompt><userinput>htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</userinput>
 </screen>
 
   <para>Redémarrez Apache pour que les nouveaux réglages prennent effet.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>service httpd restart</userinput>
+<prompt># </prompt><userinput>service httpd restart</userinput>
 </screen>
  </section>
 
@@ -235,17 +235,17 @@ compte&nbsp;-&nbsp;Vous en aurez besoin plus tard.</para>
   <para>Extraire le code source des plugins Nagios de l'archive.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>cd ~/downloads</userinput>
-<prompt>linux:~ # </prompt><userinput>tar xzf nagios-plugins-1.4.11.tar.gz</userinput>
-<prompt>linux:~ # </prompt><userinput>cd nagios-plugins-1.4.11</userinput>
+<prompt># </prompt><userinput>cd ~/downloads</userinput>
+<prompt># </prompt><userinput>tar xzf nagios-plugins-1.4.11.tar.gz</userinput>
+<prompt># </prompt><userinput>cd nagios-plugins-1.4.11</userinput>
 </screen>
 
   <para>Compilation et installation des plugins.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>./configure --with-nagios-user=nagios --with-nagios-group=nagios</userinput>
-<prompt>linux:~ # </prompt><userinput>make</userinput>
-<prompt>linux:~ # </prompt><userinput>make install</userinput>
+<prompt># </prompt><userinput>./configure --with-nagios-user=nagios --with-nagios-group=nagios</userinput>
+<prompt># </prompt><userinput>make</userinput>
+<prompt># </prompt><userinput>make install</userinput>
 </screen>
  </section>
 
@@ -256,20 +256,20 @@ compte&nbsp;-&nbsp;Vous en aurez besoin plus tard.</para>
 automatiquement au démarrage du système.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>chkconfig --add nagios</userinput>
-<prompt>linux:~ # </prompt><userinput>chkconfig nagios on</userinput>
+<prompt># </prompt><userinput>chkconfig --add nagios</userinput>
+<prompt># </prompt><userinput>chkconfig nagios on</userinput>
 </screen>
 
   <para>Vérifier les exemples de fichiers de configuration de Nagios. </para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen>
 
   <para>S'il n'y a pas d'erreur, démarrer Nagios.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>service nagios start</userinput>
+<prompt># </prompt><userinput>service nagios start</userinput>
 </screen>
  </section>
 
@@ -284,13 +284,13 @@ en mode Enforcing par défaut. Cela peut engendrer des messages
   <para>Vérifiez si SELinux est en mode Enforcing.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>getenforce</userinput>
+<prompt># </prompt><userinput>getenforce</userinput>
 </screen>
 
   <para>Réglez SELinux sur le mode Permissif.</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>setenforce 0</userinput>
+<prompt># </prompt><userinput>setenforce 0</userinput>
 </screen>
 
   <para>Pour rendre le changement permanent, vous allez devoir modifier ces réglages
@@ -301,8 +301,8 @@ pouvez utiliser la commande suivante pour exécuter les &acronym-cgi;s en mode S
 enforcing/targeted:</para>
 
   <screen>
-<prompt>linux:~ # </prompt><userinput>chcon -R -t httpd_sys_content_t /usr/local/nagios/sbin/</userinput>
-<prompt>linux:~ # </prompt><userinput>chcon -R -t httpd_sys_content_t /usr/local/nagios/share/</userinput>
+<prompt># </prompt><userinput>chcon -R -t httpd_sys_content_t /usr/local/nagios/sbin/</userinput>
+<prompt># </prompt><userinput>chcon -R -t httpd_sys_content_t /usr/local/nagios/share/</userinput>
 </screen>
 
   <para>Pour des informations sur la façon d'utiliser les &acronym-cgi;s Nagios en mode

@@ -23,14 +23,14 @@ configuration avant de (re)démarrer Nagios.</para></tip>
    <listitem>
     <para>Init Script: Le moyen le plus facile pour démarrer Nagios est d'utiliser
 l'init script comme ceci:</para>
-  <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios start</userinput></screen>
+  <screen><prompt># </prompt><userinput>/etc/rc.d/init.d/nagios start</userinput></screen>
    </listitem>
 
    <listitem>
     <para>Manuellement: Vous pouvez démarrer le démon Nagios manuellement en ligne de commandes avec
 l'option <option>-d</option>
     comme ceci:</para>
-            <screen><prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg</userinput></screen>
+            <screen><prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg</userinput></screen>
    </listitem>
   </orderedlist>
  </section>
@@ -45,7 +45,7 @@ de configuration et que vous voulez que ces changements prennent effet.</para>
    <listitem>
     <para>Init Script: Le moyen le plus facile pour redémarrer le démon Nagios est
 d'utiliser le script de démarrage comme ceci:</para>
-            <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios reload</userinput></screen>
+            <screen><prompt># </prompt><userinput>/etc/rc.d/init.d/nagios reload</userinput></screen>
    </listitem>
 
    <listitem>
@@ -63,7 +63,7 @@ l'option <guimenuitem>Restart the Nagios process</guimenuitem>:
    <listitem>
     <para>Manuellement: Vous pouvez redémarrer le processus Nagios en lui envoyant un
 signal SIGHUP comme ceci:</para>
-            <screen><prompt>linux:~ # </prompt><userinput>kill -HUP &lt;nagios_pid&gt;</userinput></screen>
+            <screen><prompt># </prompt><userinput>kill -HUP &lt;nagios_pid&gt;</userinput></screen>
    </listitem>
   </orderedlist>
  </section>
@@ -76,7 +76,7 @@ signal SIGHUP comme ceci:</para>
     <para>Script de démarrage: Le moyen le plus facile pour arrêter le démon Nagios est
 d'utiliser le script de démarrage comme ceci:</para>
 
-        <screen><prompt>linux:~ # </prompt><userinput>/etc/rc.d/init.d/nagios stop</userinput></screen>
+        <screen><prompt># </prompt><userinput>/etc/rc.d/init.d/nagios stop</userinput></screen>
    </listitem>
 
    <listitem>
@@ -93,7 +93,7 @@ sur le lien <guimenu>Process Info</guimenu> et en choisissant l'option
    <listitem>
     <para>Manuellement: Vous pouvez arrêter le processus Nagios en lui envoyant un
 signal SIGTERM comme ceci:</para>
-    <screen><prompt>linux:~ # </prompt><userinput>kill &lt;nagios_pid&gt;</userinput></screen>
+    <screen><prompt># </prompt><userinput>kill &lt;nagios_pid&gt;</userinput></screen>
    </listitem>
   </orderedlist>
  </section>

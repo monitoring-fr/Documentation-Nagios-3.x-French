@@ -76,7 +76,7 @@ modifiez la configuration apache pour Nagios (par défaut
     <para>Créer un nouveau mot de passe en utilisant l'outil <quote><ulink
 url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink></quote>. </para>
 
-    <screen><prompt>linux:~ # </prompt><userinput>htdigest -c /usr/local/nagios/etc/.digest_pw "Nagios Access" nagiosadmin</userinput></screen>
+    <screen><prompt># </prompt><userinput>htdigest -c /usr/local/nagios/etc/.digest_pw "Nagios Access" nagiosadmin</userinput></screen>
 
     <para>Ensuite, éditer le fichier de configuration apache pour Nagios (typiquement
 <filename>/etc/httpd/conf.d/nagios.conf</filename>) en utilisant l'exemple
@@ -113,7 +113,7 @@ suivant.</para>
     <para>Ensuite, redémarrer le service apache pour que la nouvelle configuration
 soit pris en compte.</para>
 
-    <screen><prompt>linux:~ # </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
+    <screen><prompt># </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
    </section>
 
    <section>
@@ -160,7 +160,7 @@ class="directory">share</filename>.</para>
     <para>Redémarrage du service Apache pour que la nouvelle configuration prenne
 effet.</para>
 
-    <screen><prompt>linux:~ # </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
+    <screen><prompt># </prompt><userinput>/etc/init.d/httpd restart</userinput></screen>
    </section>
 
    <section>

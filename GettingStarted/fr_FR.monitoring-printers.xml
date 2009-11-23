@@ -166,7 +166,7 @@ réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez
 
   <para>Éditez le fichier de configuration principal de Nagios.</para>
 
-  <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
+  <screen><prompt># </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
   <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
 
@@ -197,7 +197,7 @@ pour pouvoir superviser une nouvelle imprimante.</para>
 
   
   	<screen>
-	<prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/printer.cfg</userinput>
+	<prompt># </prompt><userinput>vi /usr/local/nagios/etc/objects/printer.cfg</userinput>
 	</screen>
 
   <para>Ajouter une nouvelle définition d'<link

@@ -33,7 +33,7 @@ ancienne version.
 devront utiliser <userinput>sudo -s nagios</userinput>.
   </para>
 <screen>
-<prompt>linux:~ $ </prompt><userinput>su -l nagios</userinput>
+<prompt>$ </prompt><userinput>su -l nagios</userinput>
 </screen>
   <para>
    Téléchargez le code source de la dernière version de Nagios (visitez <ulink
@@ -41,27 +41,27 @@ url="&url-nagios;download/">&url-nagios;download/</ulink> pour avoir le lien
 vers la dernière version).
   </para>
 <screen>
-<prompt>linux:~ $ </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.x.tar.gz</userinput>
+<prompt>$ </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.x.tar.gz</userinput>
 </screen>
   <para>
    Extrayez le code source de Nagios de l'archive.
   </para>
 <screen>
-<prompt>linux:~ $ </prompt><userinput>tar xzf nagios-3.x.tar.gz</userinput>
-<prompt>linux:~ $ </prompt><userinput>cd nagios-3.x</userinput>
+<prompt>$ </prompt><userinput>tar xzf nagios-3.x.tar.gz</userinput>
+<prompt>$ </prompt><userinput>cd nagios-3.x</userinput>
 </screen>
   <para>
    Exécutez le script de configuration de Nagios, en passant le nom du groupe
 utilisé pour contrôler les permissions du fichiers de commande comme ceci:
   </para>
 <screen>
-<prompt>linux:~ $ </prompt><userinput>./configure --with-command-group=nagcmd</userinput>
+<prompt>$ </prompt><userinput>./configure --with-command-group=nagcmd</userinput>
 </screen>
   <para>
    Compilez le code source de Nagios.
   </para>
 <screen>
-<prompt>linux:~ $ </prompt><userinput>make all</userinput>
+<prompt>$ </prompt><userinput>make all</userinput>
 </screen>
   <para>
    Installation de la mise à jour des binaires, de la documentation et
@@ -69,14 +69,14 @@ l'interface web. Vos fichiers de configuration ne seront pas écrasés par
 cette étape.
   </para>
 <screen>
-<prompt>linux:~ $ </prompt><userinput>make install</userinput>
+<prompt>$ </prompt><userinput>make install</userinput>
 </screen>
   <para>
    Vérifiez votre configuration et relancer Nagios.
   </para>
 <screen>
-<prompt>linux:~ $ </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
-<prompt>linux:~ $ </prompt><userinput>/sbin/service nagios restart</userinput>
+<prompt>$ </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt>$ </prompt><userinput>/sbin/service nagios restart</userinput>
 </screen>
   <para>
    Ca y est - C'est fait !

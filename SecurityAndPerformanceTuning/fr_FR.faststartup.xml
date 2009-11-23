@@ -98,7 +98,7 @@ avec l'argument -s pour avoir les informations de planification et de temps.</pa
   <para>Un exemple de la sortie (uniquement la partie intéressante) est montrée
 ci-dessous. Pour cet exemple, j'utilise une configuration Nagios qui a 25
 hôtes et juste un plus de 10 000 services définis. <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -s /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -s /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
 
   <screen>
@@ -183,7 +183,7 @@ dans le futur. </para> <para>Vous devez utiliser l'option <option>-p, </option>
       en même que <option>-v</option> ou
       <option>-s</option> options, comme indiqué ci-dessous. Cela permet de s'assurer que votre
 configuration est vérifiée avant que la fichier de pré-cache ne soit créé.</para> <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -pv /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -pv /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen> <para>La taille de votre fichier de pré-cache sera très certainement supérieure à
 la somme de la taille de vos fichiers d'objets de configuration. C'est
 normal et ainsi pensé.</para></entry>
@@ -197,7 +197,7 @@ fileref="images/fast-startup1.png" format="PNG"/> </imageobject>
       <entry><para>Une fois qu ele fichier de pré-cache a été créé, vous pouvez démarrer Nagios
 et lui indiquer d'utiliser ce fichier plutôt que d'utiliser les fichiers
 d'objets de configuration en utilisant l'argument <option>-u</option> à la ligne de commande. <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -ud /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -ud /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para> <important>
         <para>Si vous avez modifié vos fichiers de configuration, vous devrez revérifier
 et recacher vos fichiers de configuration avant de pouvoir redémarrer
@@ -240,7 +240,7 @@ amélioré dans une version 3.x de Nagios.</para>
   <para>Si vous souhaitez outrepasser la vérification des références circualires au
 démarrage de Nagios, vous pouvez ajouter l'argument -x sur la ligne de
 commande comme suit : <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -xd /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -xd /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
 
   <important>
@@ -261,7 +261,7 @@ circulaires.</para>
    <step>
     <para>Vérifiez votre configuration Nagios et créez le fichier de pré-cache avec la
 commande suivante : <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -vp /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -vp /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
    </step>
 
@@ -272,7 +272,7 @@ commande suivante : <screen>
    <step>
     <para>Démarrez Nagios comme ceci de façon à utiliser le fichier de pré-cache et à
 ne pas faire le contrôle des références circulaires. <screen>
-<prompt>linux:~ # </prompt><userinput>/usr/local/nagios/bin/nagios -uxd /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -uxd /usr/local/nagios/etc/nagios.cfg</userinput>
 </screen></para>
    </step>
 

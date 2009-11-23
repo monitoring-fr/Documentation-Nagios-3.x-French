@@ -57,7 +57,7 @@ de s'authentifier aux &acronym-cgi;s. Remplacez &lt;username&gt; par le nom
 d'utilisateur que vous souhaitez ajouter. Dans la plupart des cas, le nom
 d'utilisateur devrait correspondre au nom court du <link
 linkend="configuringnagios-objectdefinitions-contact">contact</link> défini.
-<screen><prompt>linux:~ # </prompt><userinput>htpasswd /usr/local/nagios/etc/htpasswd.users <replaceable>&lt;username&gt;</replaceable></userinput></screen>
+<screen><prompt># </prompt><userinput>htpasswd /usr/local/nagios/etc/htpasswd.users <replaceable>&lt;username&gt;</replaceable></userinput></screen>
   </para>
  </section>
 

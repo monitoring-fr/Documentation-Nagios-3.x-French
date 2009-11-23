@@ -155,7 +155,7 @@ n'avez à le faire que pour la *première* machine Windows à superviser.</para>
 
   <para>Éditez le fichier de configuration principal de Nagios.</para>
 
-  <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
+  <screen><prompt># </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
 
   <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
 
@@ -290,7 +290,7 @@ nouvelle machine Windows.</para>
 
   <para>Ouvrez le fichier <filename>windows.cfg</filename> pour édition.</para>
 
-  <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/objects/windows.cfg</userinput></screen>
+  <screen><prompt># </prompt><userinput>vi /usr/local/nagios/etc/objects/windows.cfg</userinput></screen>
 
   <para>Ajouter une nouvelle définition d'<link
 linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
@@ -430,7 +430,7 @@ NSClient++ de la machine Windows, vous aurez besoin de modifier la
 définition de commande &plugin-nt; pour inclure le mot de passe. Ouvrez le
 fichier <filename>commands.cfg</filename> pour édition.</para>
 
-  <screen><prompt>linux:~ # </prompt><userinput>vi /usr/local/nagios/etc/commands.cfg</userinput></screen>
+  <screen><prompt># </prompt><userinput>vi /usr/local/nagios/etc/commands.cfg</userinput></screen>
 
   <para>Modifiez la définition de la commande &plugin-nt; pour inclure l'argument <quote><option>-s</option> &lt;PASSWORD&gt;</quote> (où PASSWORD est le mot de passe précisé sur la machine
 Windows) comme suit:</para>
