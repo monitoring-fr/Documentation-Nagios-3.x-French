@@ -1164,7 +1164,7 @@ identifier le groupe d'hôtes.
 		<listitem>
 		<para>Cette variable est utilisée pour définir un nom long ou une description à
 utiliser pour identifier le groupe d'hôtes. Ceci est fourni pour vous
-permettre d'identifier plus facilement un groupe d'hôte en particulier.</para>
+permettre d'identifier plus facilement un groupe d'hôtes en particulier.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -1215,7 +1215,7 @@ dans ce groupe.
 informations supplémentaires sur le groupe d'hôtes. Si vous précisez une
 URL, vous verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous
 regardez les informations de groupe d'hôtes) qui renverra vers l'URL
-précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez
+précisée ici. N'importe quelle URL valide peut être utilisée. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
 utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
@@ -1230,10 +1230,10 @@ d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
-actions supplémentaires à appliquer aux groupe d'hôtes. Si vous précisez une
+actions supplémentaires à appliquer aux groupes d'hôtes. Si vous précisez une
 URL, vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand
 vous regardez les informations du groupe d'hôtes) qui renverra vers l'URL
-précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez
+précisée ici. N'importe quelle URL valide peut être utilisée. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
 utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>).
@@ -1585,7 +1585,7 @@ services</link>.
 		<para>Cette variable est utilisée pour préciser si un service doit être considéré
 comme <quote>volatile</quote>. Les services ne sont normalement
 <emphasis>pas</emphasis> volatiles. Plus d'informations sur les services
-volatiles et en quoi ils différent des services normaux peut être trouvée
+volatiles et en quoi ils différent des services normaux peuvent être trouvées
 <link linkend="advancedtopics-volatileservices">ici</link>. Valeur : 0 =
 service non volatile, 1 = service volatile.
         </para>
@@ -1647,7 +1647,7 @@ role="bold">max_check_attempts</emphasis>. Sauf si vous avez changé la
 variable <link
 linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
-d'informations sur cette valeur peut être trouvée dans la documentation sur
+d'informations sur cette valeur peuvent être trouvées dans la documentation sur
 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
 contrôles</link>.</para>
 		</listitem>
@@ -1660,7 +1660,7 @@ contrôles</link>.</para>
 		<para>Ce paramètre est utilisé pour définir le nombre d'<quote>unités de
 temps</quote> à attendre avant d'ordonnancer un nouveau contrôle du
 service. Les services sont recontrôlés à l'intervalle de réessai quand ils
-sont passées dans un état non UP. Une fois que le service à été réessayé le
+sont passée dans un état non UP. Une fois que le service à été réessayé le
 nombre de fois précisé dans la variable <emphasis
 role="bold">max_check_attempts</emphasis> sans changement d'état, il sera
 contrôlé à nouveau sur une fréquence <quote>normale</quote> telle que
@@ -1668,7 +1668,7 @@ définie dans la valeur <emphasis role="bold">check_interval</emphasis>. Sauf
 si vous avez changé la variable <link
 linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
-d'informations sur cette valeur peut être trouvée dans la documentation sur
+d'informations sur cette valeur peuvent être trouvées dans la documentation sur
 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
 contrôles</link>.</para>
 		</listitem>
@@ -1733,7 +1733,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour déterminer si les <link
-linkend="advancedtopics-freshness">contres de fraîcheur</link> sont activés
+linkend="advancedtopics-freshness">contrôles de fraîcheur</link> sont activés
 ou non pour ce service. Valeurs : 
 		<itemizedlist>
 		<listitem><para>0 = disable freshness checks</para></listitem>
@@ -1763,7 +1763,7 @@ d'une <link
 linkend="configuringnagios-objectdefinitions-command">commande</link> à
 exécuter à chaque changement d'état du service (par exemple quand il n'est
 plus disponible ou qu'il redevient disponible). Lisez la documentation sur
-les <link linkend="advancedtopics-eventhandlers">gestionnaire
+les <link linkend="advancedtopics-eventhandlers">gestionnaires
 d'événenements</link> pour plus d'explications sur la façon d'écrire des
 scripts pour gérer les événements. Le temps maximal d'exécution d'une
 commande de gestion d'événements est contrôlé par l'option <link
@@ -1792,7 +1792,7 @@ est activé ou non pour ce service. Valeurs :
 		<listitem>
 		<para>Cette variable est utilisée pour préciser le seuil bas de détection
 d'oscillation pour ce service. Plus d'informations sur la détection
-d'ocillations se trouve <link
+d'ocillations se trouvent <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
 linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
@@ -1806,7 +1806,7 @@ au niveau global du logiciel sera utilisée.</para>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser le seuil haut de détection
 d'oscillation pour ce service. Plus d'informations sur la détection
-d'ocillations se trouve <link
+d'ocillations se trouvent <link
 linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
 à 0, la valeur précisée avec <link
 linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
@@ -1821,7 +1821,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
 		<listitem>
 		<para>Cette variable est utilisée pour déterminer si la détection d'oscillation
 est activée ou non pour ce service. Plus d'informations sur la détection
-d'ocillations se trouve <link
+d'ocillations se trouvent <link
 linkend="advancedtopics-flapping">ici</link>. Valeurs : 
 		<itemizedlist>
 		<listitem><para>0 = disable service flap detection</para></listitem>
@@ -1939,7 +1939,7 @@ immédiatement.</para>
 		<para>Cette variable est utilisée pour préciser le nom court des <link
 linkend="configuringnagios-objectdefinitions-timeperiod">périodes de
 temps</link> pendant lesquelles les notifications d'événements sont envoyées
-aux contacts de cet service. Aucune notification ne sera envoyée hors
+aux contacts de ce service. Aucune notification ne sera envoyée hors
 couverture d'une période de temps.
 		</para>
 		</listitem>
@@ -1950,7 +1950,7 @@ couverture d'une période de temps.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour déterminer quand les notifications pour ce
-service doivent être envoyées. Le soptions valides sont une combinaison de
+service doivent être envoyées. Les options valides sont une combinaison de
 l'un ou plusieurs des états suivants :
 		<itemizedlist>
 		<listitem><para><emphasis role="bold">w</emphasis> = envois de notifications sur état
@@ -1974,7 +1974,7 @@ changement d'état possible.</para></listitem>
 	
 		<informalexample>
 		<para>
-        Si vous précisez<emphasis role="bold">w,r</emphasis>dans ce champ, les
+        Si vous précisez <emphasis role="bold">w,r</emphasis> dans ce champ, les
 notifications seront envoyées uniquement quand le service passera en état
 WARNING ou qu'il sortira de cet état WARNING.
 		</para>
@@ -2004,7 +2004,7 @@ service sont activées ou non. Valeurs :
 		<listitem>
 		<para>C'est une liste des <emphasis>noms courts</emphasis> des <link
 linkend="configuringnagios-objectdefinitions-contact">contacts</link> qui
-devraient être notifiés quand quand il y a des problèmes (ou retours à la
+devraient être notifiés quand il y a des problèmes (ou retours à la
 normale) avec ce service. Plusieurs contacts peuvent être séparés par des
 virgules. Utile si vous souhaitez envoyer des notifications vers quelques
 personnes et que vous ne souhaitez pas configurer des <link
@@ -2021,7 +2021,7 @@ contacts dans chaque définition de service.
 		<listitem>
 		<para>C'est une liste des <emphasis>noms courts</emphasis> des <link
 linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-contacts</link> qui devraient être notifiés quand quand il y a des problèmes
+contacts</link> qui devraient être notifiés quand il y a des problèmes
 (ou retours à la normale) avec ce service. Plusieurs groupes de contacts
 peuvent être séparés par des virgules. Vous devez préciser au moins un
 contact ou un groupe de contacts dans chaque définition de service.
@@ -2033,7 +2033,7 @@ contact ou un groupe de contacts dans chaque définition de service.
 			stalking_options
 		</term>
 		<listitem>
-		<para>Cette variable est utilisée pour déterminer quelles
+		<para>Cette variable est utilisée pour déterminer quelle
 <quote>mémorisation</quote> d'états est utilisée pour le service. Les
 options valides sont une combinaison d'un ou ou de plusieurs des états
 suivants : 
@@ -2043,7 +2043,7 @@ suivants :
         <listitem><para>u = mémorisation sur états UNKNOWN</para></listitem>
 		<listitem><para>c = mémorisation sur états CRITICAL</para></listitem>
 		</itemizedlist>
-		Plus d'informations sur la mémorisation d'états peut être trouvée <link
+		Plus d'informations sur la mémorisation d'états peuvent être trouvées <link
 linkend="advancedtopics-stalking">ici</link>.
         </para>
 		</listitem>
@@ -2054,9 +2054,9 @@ linkend="advancedtopics-stalking">ici</link>.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-au service. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
+au service. Si vous avez précisé une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
-(quand vous regardez les informations de service spécifié).
+(quand vous regardez les informations du service spécifié).
 		</para>
 		</listitem>
 	</varlistentry>
@@ -2069,12 +2069,12 @@ au service. Si vous avez précisée une note ici, vous la verrez dans le &acrony
 informations supplémentaires sur le service. Si vous précisez une URL, vous
 verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous regardez les
 informations de l'hôte) qui renverra vers l'URL précisée ici. N'importe
-quelle URL valide peut être utilisé. Si vous pensez utiliser des chemins
+quelle URL valide peut être utilisée. Si vous pensez utiliser des chemins
 relatifs, le chemin de base sera le même que celui utilisé pour accéder aux
 &acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
 vous souhaitez mettre à disposition d'autres équipes de support les
 informations détaillées d'un service, les moyens de contacts à utiliser en
-cas d'urgence, etc.
+cas d'urgence, etc…
 		</para>
 		</listitem>
 	</varlistentry>
@@ -2087,7 +2087,7 @@ cas d'urgence, etc.
 actions supplémentaires à appliquer au service. Si vous précisez une URL,
 vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand vous
 regardez les informations du service) qui renverra vers l'URL précisée
-ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser
+ici. N'importe quelle URL valide peut être utilisée. Si vous pensez utiliser
 des chemins relatifs, le chemin de base sera le même que celui utilisé pour
 accéder aux &acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>).
         </para>
