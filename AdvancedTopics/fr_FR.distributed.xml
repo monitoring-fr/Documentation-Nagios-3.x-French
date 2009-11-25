@@ -7,16 +7,16 @@
 ]
 >
 <chapter id="advancedtopics-distributed" xreflabel="Distributed Monitoring">
-	<title>Supervision distribuée</title>
-	<section>
-		<title>Introduction</title>
-		<para>Nagios peut être configuré pour supporter la supervision distribuée des
+    <title>Supervision distribuée</title>
+    <section>
+        <title>Introduction</title>
+        <para>Nagios peut être configuré pour supporter la supervision distribuée des
 services et ressources du réseau. Je vais essayer d'expliquer brièvement
 comment cela peut être fait… </para>
-	</section>
-	<section>
-		<title>Buts</title>
-		<para>Le but de l'environnement de supervision distribué que je vais décrire est
+    </section>
+    <section>
+        <title>Buts</title>
+        <para>Le but de l'environnement de supervision distribué que je vais décrire est
 de décharger l'excès de charge induit par les contrôle de services (sur la
 &acronym-cpu;, etc.) du serveur <quote>central</quote> sur un ou plusieurs serveurs
 <quote>distribués</quote>. La plupart des petites et moyennes entreprises
@@ -24,31 +24,31 @@ n'auront pas réellement besoin de mettre en œuvre cet
 environnement. Cependant, quand vous voulez superviser des centaines, voire
 des milliers d'hôtes (et plusieurs fois cette valeur en termes de services)
 à l'aide de Nagios, cela commence à devenir important. </para>
-	</section>
-	<section>
-		<title>Diagramme de référence</title>
-		<para>Le diagramme ci-dessous devrait vous aider à vous faire une idée du
+    </section>
+    <section>
+        <title>Diagramme de référence</title>
+        <para>Le diagramme ci-dessous devrait vous aider à vous faire une idée du
 fonctionnement de la supervision distribuée avec Nagios. Je ferai référence
 aux éléments du diagramme quand j'expliquerai les choses… </para>
-		<para>
-		<informalfigure>
-		<mediaobject>
-	     <imageobject>
-	      <imagedata fileref="images/distributed.png" format="PNG"/>
-	     </imageobject>
-	    </mediaobject>
-	  </informalfigure>
-		</para>
-	</section>
-	<section>
-		<title>Serveur central ou serveurs distribués </title>
-		<para>Quand on installe l'environnement de supervision distribué avec Nagios, il y
+        <para>
+        <informalfigure>
+        <mediaobject>
+         <imageobject>
+          <imagedata fileref="images/distributed.png" format="PNG"/>
+         </imageobject>
+        </mediaobject>
+      </informalfigure>
+        </para>
+    </section>
+    <section>
+        <title>Serveur central ou serveurs distribués </title>
+        <para>Quand on installe l'environnement de supervision distribué avec Nagios, il y
 a des différences entre la configuration du serveur central et celle des
 serveurs distribués. Je vous montrerai comment configurer ces deux types de
 serveurs et j'expliquerai les effets des changements sur la supervision en
 général. A l'intention des débutants, décrivons d'abord l'utilité des
 différents serveurs… </para>
-		<para>Le rôle d'un serveur distribué est de contrôler tous les services définis
+        <para>Le rôle d'un serveur distribué est de contrôler tous les services définis
 pour une grappe [cluster] d'hôtes. J'utilise ce terme <quote>grappe</quote>
 de manière inappropriée : il désigne simplement un groupe d'hôtes de votre
 réseau. Selon la topographie de votre réseau, vous pouvez avoir plusieurs
@@ -62,7 +62,7 @@ d'envoyer des notifications, de faire tourner les scripts de gestionnaires
 d'événements ou de faire autre chose que l'exécution des contrôles de
 service si vous ne le souhaitez pas. De plus amples explications relatives à
 la configuration du serveur distribué suivront… </para>
-		<para>Le but du serveur central est d'écouter simplement les résultats des
+        <para>Le but du serveur central est d'écouter simplement les résultats des
 contrôles de service d'un ou de plusieurs serveurs distribués. Même si les
 services sont occasionnellement contrôlés activement par le serveur central,
 les contrôles actifs sont seulement exécutés dans des circonstances
@@ -73,11 +73,11 @@ passifs</link> d'un ou plusieurs serveurs répartis, il est utilisé comme
 point central pour la logique de supervision (ex: il envoie des
 notifications, exécute les scripts de gestionnaires d'événements, détermine
 l'état des hôtes, son interface web est installée, etc.). </para>
-	</section>
-	<section>
-		<title>Obtention des informations de contrôle de service à partir de serveurs
+    </section>
+    <section>
+        <title>Obtention des informations de contrôle de service à partir de serveurs
 distribués</title>
-		<para>Avant de sauter à pieds joints dans les détails de la configuration, il faut
+        <para>Avant de sauter à pieds joints dans les détails de la configuration, il faut
 savoir comment envoyer les résultats des contrôles de service des serveurs
 distribués au serveur central. J'ai déjà expliqué comment soumettre des
 résultats de contrôles passifs à Nagios à partir de la machine même sur
@@ -85,7 +85,7 @@ laquelle Nagios tourne (cf. documentation sur les <link
 linkend="thebasics-passivechecks">contrôles passifs</link>), mais je n'ai
 pas fourni d'information sur la manière d'envoyer des résultats de contrôles
 de service à partir d'autres hôtes. </para>
-		<para>Afin de faciliter l'envoi de résultats de contrôles passifs à un hôte
+        <para>Afin de faciliter l'envoi de résultats de contrôles passifs à un hôte
 distant, j'ai écrit le module complémentaire <link
 linkend="nagiosaddons-addons-nsca">&name-nsca;</link><indexterm><primary>&name-nsca;</primary></indexterm>. Il contient deux parties. La
 première est un programme client (<command>send_nsca</command>) qui tourne sur un hôte distant
@@ -101,39 +101,40 @@ que Nagios contrôlera les <link
 linkend="advancedtopics-extcommands">commandes externes</link>, il trouvera
 l'information de contrôle de service passif qui avait été envoyée par le
 serveur distribué et la traitera. Facile, non ? </para>
-	</section>
-	<section>
-		<title>Configuration des serveurs distribués</title>
-		<para>Bon, comment Nagios est-il configuré sur un serveur distribué ? A la base,
+    </section>
+    <section>
+        <title>Configuration des serveurs distribués</title>
+        <para>Bon, comment Nagios est-il configuré sur un serveur distribué ? A la base,
 c'est juste une simple installation. Il n'est pas nécessaire d'installer
 l'interface web ou de faire envoyer des notifications par le serveur, comme
 c'est le cas pour le serveur central. </para>
-		<para>Changements principaux dans la configuration :</para>
-		<itemizedlist>
-			<listitem>
-				<para>Seuls les services et les hôtes qui sont supervisés directement par le
+        <para>Changements principaux dans la configuration :</para>
+        <itemizedlist>
+            <listitem>
+                <para>Seuls les services et les hôtes qui sont supervisés directement par le
 serveur distribué sont définis dans le <link
 linkend="configuringnagios-configobject">fichier de configuration
 d'hôte</link>.</para>
-			</listitem>
-			<listitem>
-				<para>Le serveur distribué a son paramètre <link
-linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>
-initiale fixé à 0. Cela évitera d'envoyer des notifications à partir du
-serveur. </para>
-			</listitem>
-			<listitem>
-				<para>Le serveur distribué est configuré avec l'option de <link
-linkend="configuringnagios-configmain-obsess_over_services">remontée de
-contrôle de service</link> activée. </para>
-			</listitem>
-			<listitem>
-				<para>Le serveur distribué a une <link
+            </listitem>
+            <listitem>
+                <para>Le serveur distribué a son paramètre 
+                <xref linkend="configuringnagios-configmain-enable_notifications"
+                endterm="configuringnagios-configmain-enable_notifications-tech"/>
+                initiale fixé à 0. Cela évitera d'envoyer des notifications à partir du
+                serveur. </para>
+            </listitem>
+            <listitem>
+                <para>Le serveur distribué est configuré avec l'option de <link
+                linkend="configuringnagios-configmain-obsess_over_services">remontée de
+                contrôle de service</link> activée. </para>
+            </listitem>
+            <listitem>
+                <para>Le serveur distribué a une <link
 linkend="configuringnagios-configmain-ocsp_command">commande ocsp</link>
 définie (cf. ci-dessous).</para>
-			</listitem>
-		</itemizedlist>
-		<para>Afin que tout fonctionne ensemble de manière correcte, nous voulons que le
+            </listitem>
+        </itemizedlist>
+        <para>Afin que tout fonctionne ensemble de manière correcte, nous voulons que le
 serveur distribué renvoie les résultats de tous les contrôles de service à
 Nagios. Nous pourrions utiliser les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
@@ -146,73 +147,74 @@ cette <link linkend="configuringnagios-configmain-ocsp_command">commande
 ocsp</link> pour envoyer les résultats de tous les contrôles de service au
 serveur central, en utilisant le client <command>send_nsca</command> et le démon <application>nsca</application> (comme
 décrit ci-dessus) pour gérer la transmission. </para>
-		<para>Pour mener tout cela à bien, il faut définir la commande ocsp de cette façon
+        <para>Pour mener tout cela à bien, il faut définir la commande ocsp de cette façon
 :</para>
-		<programlisting>ocsp_command=submit_check_result</programlisting>
-		<para>La définition de la commande <filename>submit_check_result</filename>
+        <programlisting>ocsp_command=submit_check_result</programlisting>
+        <para>La définition de la commande <filename>submit_check_result</filename>
 ressemble à ceci : </para>
-		<programlisting>
-		define command{
-		        command_name    submit_check_result
-		        command_line    /usr/local/nagios/libexec/eventhandlers/submit_check_result $HOSTNAME$ '$SERVICEDESC$' $SERVICESTATE$ '$SERVICEOUTPUT$'
-		        }
-		</programlisting>
-		<para>Le script shell <command>submit_check_result</command> ressemble à cela
+        <programlisting>
+        define command{
+                command_name    submit_check_result
+                command_line    /usr/local/nagios/libexec/eventhandlers/submit_check_result $HOSTNAME$ '$SERVICEDESC$' $SERVICESTATE$ '$SERVICEOUTPUT$'
+                }
+        </programlisting>
+        <para>Le script shell <command>submit_check_result</command> ressemble à cela
 (remplacez central_server par l'adresse IP du serveur central) : </para>
-		<programlisting>
-		        #!/bin/sh
+        <programlisting>
+                #!/bin/sh
 
-		        # Arguments:
-		        #  $1 = host_name (Short name of host that the service is
-		        #       associated with)
-		        #  $2 = svc_description (Description of the service)
-		        #  $3 = state_string (A string representing the status of
-		        #       the given service - "OK", "WARNING", "CRITICAL"
-		        #       or "UNKNOWN")
-		        #  $4 = plugin_output (A text string that should be used
-		        #       as the plugin output for the service checks)
-		        #
+                # Arguments:
+                #  $1 = host_name (Short name of host that the service is
+                #       associated with)
+                #  $2 = svc_description (Description of the service)
+                #  $3 = state_string (A string representing the status of
+                #       the given service - "OK", "WARNING", "CRITICAL"
+                #       or "UNKNOWN")
+                #  $4 = plugin_output (A text string that should be used
+                #       as the plugin output for the service checks)
+                #
 
-		        # Convert the state string to the corresponding return code
-		        return_code=-1
+                # Convert the state string to the corresponding return code
+                return_code=-1
 
-		        case "$3" in
-		            OK)
-		                        return_code=0
-		                    ;;
-		                WARNING)
-		                    return_code=1
-		                        ;;
-		                CRITICAL)
-		                    return_code=2
-		                        ;;
-		                UNKNOWN)
-		                    return_code=-1
-		                        ;;
-		        esac
+                case "$3" in
+                    OK)
+                                return_code=0
+                            ;;
+                        WARNING)
+                            return_code=1
+                                ;;
+                        CRITICAL)
+                            return_code=2
+                                ;;
+                        UNKNOWN)
+                            return_code=-1
+                                ;;
+                esac
 
-		        # pipe the service check info into the send_nsca program, which
-		        # in turn transmits the data to the nsca daemon on the central
-		        # monitoring server
+                # pipe the service check info into the send_nsca program, which
+                # in turn transmits the data to the nsca daemon on the central
+                # monitoring server
 
-		        /bin/printf "%s\t%s\t%s\t%s\n" "$1" "$2" "$return_code" "$4" | /usr/local/nagios/bin/send_nsca -H <replaceable>central_server</replaceable> -c /usr/local/nagios/etc/send_nsca.cfg
-		</programlisting>
-		<para>Le script ci-dessus suppose que vous avez le programme <command>send_nsca</command> et son
+                /bin/printf "%s\t%s\t%s\t%s\n" "$1" "$2" "$return_code" "$4" | /usr/local/nagios/bin/send_nsca -H <replaceable>central_server</replaceable> -c /usr/local/nagios/etc/send_nsca.cfg
+        </programlisting>
+        <para>Le script ci-dessus suppose que vous avez le programme <command>send_nsca</command> et son
 fichier de configuration (<filename>send_nsca.cfg</filename>) placés
 respectivement dans les répertoires <filename
 class="directory">/usr/local/nagios/bin/</filename> et <filename
 class="directory">/usr/local/nagios/etc/</filename>.</para>
-		<para>C'est tout ! Nous venons de configurer avec succès un hôte distant sur
+        <para>C'est tout ! Nous venons de configurer avec succès un hôte distant sur
 lequel tourne Nagios pour agir comme un serveur de supervision
 distribué. Voyons maintenant ce qui se passe exactement avec le serveur
 distribué et comment il envoie des résultats de contrôle de service à Nagios
 (les étapes soulignées ci-dessous correspondent aux numéros du schéma de
 référence ci-dessus) : </para>
-		<orderedlist>
-			<listitem>
-				<para>Après que le serveur distribué a terminé l'exécution d'un contrôle de
-service, il exécute la commande définie par la variable <link
-linkend="configuringnagios-configmain-ocsp_command">&config-ocsp_command;</link>.
+        <orderedlist>
+            <listitem>
+                <para>Après que le serveur distribué a terminé l'exécution d'un contrôle de
+                service, il exécute la commande définie par la variable 
+                <xref linkend="configuringnagios-configmain-ocsp_command"
+                endterm="configuringnagios-configmain-ocsp_command-tech"/>.
 Dans notre exemple, c'est le script
 <filename>/usr/local/nagios/libexec/eventhandlers/submit_check_result</filename>.
 Remarquez que la définition de la commande
@@ -220,99 +222,100 @@ Remarquez que la définition de la commande
 d'information au script : le nom de l'hôte auquel le service est associé, la
 description du service, le code de retour du contrôle de service, et la
 sortie du plugin de contrôle du service. </para>
-			</listitem>
-			<listitem>
-				<para>Le script <filename>submit_check_result</filename> envoie dans un tube
+            </listitem>
+            <listitem>
+                <para>Le script <filename>submit_check_result</filename> envoie dans un tube
 [pipe] l'information du contrôle de service (nom de l'hôte, description,
 code de retour et sortie) au programme client <command>send_nsca</command>. </para>
-			</listitem>
-			<listitem>
-				<para>Le programme <command>send_nsca</command> transmet l'information de contrôle
+            </listitem>
+            <listitem>
+                <para>Le programme <command>send_nsca</command> transmet l'information de contrôle
 de service au démon <application>nsca</application> qui se trouve sur le serveur de supervision
 central.</para>
-			</listitem>
-			<listitem>
-				<para>Le démon <application>nsca</application> du serveur central prend l'information de contrôle de service
+            </listitem>
+            <listitem>
+                <para>Le démon <application>nsca</application> du serveur central prend l'information de contrôle de service
 et l'écrit dans le fichier de commande externe pour qu'elle soit reprise
 ultérieurement par Nagios. </para>
-			</listitem>
-			<listitem>
-				<para>Le processus Nagios du serveur central lit le fichier de commande externe et
+            </listitem>
+            <listitem>
+                <para>Le processus Nagios du serveur central lit le fichier de commande externe et
 analyse l'information de contrôle de service provenant du serveur de
 supervision distribué.</para>
-			</listitem>
-		</orderedlist>
-	</section>
-	<section>
-		<title>Configuration du serveur central</title>
-		<para>Nous avons vu comment les serveurs de supervision distribués doivent être
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Configuration du serveur central</title>
+        <para>Nous avons vu comment les serveurs de supervision distribués doivent être
 configurés, occupons nous maintenant du serveur central. Pour accomplir
 toutes ses missions, il est configuré de la même manière que vous
 configureriez un serveur seul. Il est installé de la manière suivante : </para>
-		<itemizedlist>
-			<listitem>
-				<para>L'interface web du serveur central est installée (optionnel, mais
+        <itemizedlist>
+            <listitem>
+                <para>L'interface web du serveur central est installée (optionnel, mais
 recommandé)</para>
-			</listitem>
-			<listitem>
-				<para>Sur le serveur central, le paramètre <link
-linkend="configuringnagios-configmain-enable_notifications">&config-enable_notifications;</link>
-est fixée à 1. Ceci activera les notifications (optionnel, mais recommandé) </para>
-			</listitem>
-			<listitem>
-				<para>Les <link
+            </listitem>
+            <listitem>
+                <para>Sur le serveur central, le paramètre 
+                <xref linkend="configuringnagios-configmain-enable_notifications"
+                endterm="configuringnagios-configmain-enable_notifications-tech"/>
+                est fixée à 1. Ceci activera les notifications (optionnel, mais recommandé) </para>
+            </listitem>
+            <listitem>
+                <para>Les <link
 linkend="configuringnagios-configmain-execute_service_checks">contrôles de
 service actifs</link> sont désactivés sur le serveur central (optionnel,
 mais recommandé — voir notes ci-dessous) </para>
-			</listitem>
-			<listitem>
-				<para>Les <link
+            </listitem>
+            <listitem>
+                <para>Les <link
 linkend="configuringnagios-configmain-check_external_commands">contrôles de
 commandes externes</link> sont activés sur le serveur central (obligatoire) </para>
-			</listitem>
-			<listitem>
-				<para>Les <link
+            </listitem>
+            <listitem>
+                <para>Les <link
 linkend="configuringnagios-configmain-accept_passive_service_checks">contrôles
 de service passifs</link> sont activés sur le serveur central (obligatoire)</para>
-			</listitem>
-		</itemizedlist>
-		<para>Il y a trois autres éléments importants que vous devez conserver à l'esprit
+            </listitem>
+        </itemizedlist>
+        <para>Il y a trois autres éléments importants que vous devez conserver à l'esprit
 en configurant le serveur central :</para>
-		<itemizedlist>
-			<listitem>
-				<para>Tous les services qui sont supervisés par les serveurs distribués doivent
+        <itemizedlist>
+            <listitem>
+                <para>Tous les services qui sont supervisés par les serveurs distribués doivent
 comporter des définitions de service sur le serveur central. Nagios ignorera
 les résultats des contrôles de service passifs s'ils ne correspondent pas à
 un service qui a été défini. </para>
-			</listitem>
-			<listitem>
-				<para>Si vous n'utilisez le serveur central que pour traiter des services dont les
-résultats sont fournis par des hôtes distribués, vous pouvez simplement
-désactiver tous les contrôles de service de façon globale en mettant le
-paramètre <link
-linkend="configuringnagios-configmain-execute_service_checks">&config-execute_service_checks;</link>
-à 0. Si vous utilisez le serveur central pour superviser activement quelques
-services par lui-même (sans l'intervention des serveurs distribués),
-l'option <varname>enable_active_checks</varname> de chaque définition de
-service pour les services dont les résultats sont fournis par les hôtes
-distribués doit être positionnée à 0. Ceci empêchera Nagios de vérifier
-activement ces services. </para>
-			</listitem>
-		</itemizedlist>
-		<para>Il est important que vous désactiviez soit tous les contrôles de service
+            </listitem>
+            <listitem>
+                <para>Si vous n'utilisez le serveur central que pour traiter des services dont les
+                résultats sont fournis par des hôtes distribués, vous pouvez simplement
+                désactiver tous les contrôles de service de façon globale en mettant le
+                paramètre <xref linkend="configuringnagios-configmain-execute_service_checks"
+                endterm="configuringnagios-configmain-execute_service_checks-tech"/>
+                à 0. Si vous utilisez le serveur central pour superviser activement quelques
+                services par lui-même (sans l'intervention des serveurs distribués),
+                l'option <literal>enable_active_checks</literal> de chaque définition de
+                service pour les services dont les résultats sont fournis par les hôtes
+                distribués doit être positionnée à 0. Ceci empêchera Nagios de vérifier
+                activement ces services. </para>
+            </listitem>
+        </itemizedlist>
+        <para>Il est important que vous désactiviez soit tous les contrôles de service
 pour l'ensemble du logiciel, soit l'option
-<varname>enable_active_checks</varname> dans la définition de tout service
+<literal>enable_active_checks</literal> dans la définition de tout service
 surveillé par un serveur distribué. Cela assure que les contrôles de service
 actifs ne sont jamais exécutés en temps normal. Les services continueront à
 être ordonnancés à leur intervalle de contrôle normal (3 minutes, 5 minutes,
 etc…), mais ils ne seront jamais exécutés. Cette boucle de ré
 ordonnancement continuera aussi longtemps que Nagios tourne. Je vais
 expliquer bientôt pourquoi ce type de fonctionnement… </para>
-		<para>Et voilà ! Facile, non ?</para>
-	</section>
-	<section>
-		<title>Problèmes avec les contrôles passifs </title>
-		<para>Pour toutes les utilisations intensives, nous pouvons dire que le serveur
+        <para>Et voilà ! Facile, non ?</para>
+    </section>
+    <section>
+        <title>Problèmes avec les contrôles passifs </title>
+        <para>Pour toutes les utilisations intensives, nous pouvons dire que le serveur
 central s'appuie uniquement sur les contrôles passifs pour la
 supervision. Faire totalement confiance aux contrôles passifs pour
 superviser pose un problème majeur : Nagios doit se fier à quelque chose
@@ -320,11 +323,11 @@ d'autre pour fournir les données supervisées. Que se passe-t-il si l'hôte
 distant qui envoie les résultats s'effondre ou devient injoignable ? Si
 Nagios ne contrôle pas activement les services de cet hôte, comment
 saura-t-il qu'il y a un problème ?</para>
-		<para>Heureusement, il y a une façon de gérer ces types de problèmes…</para>
-	</section>
-	<section>
-		<title>Le contrôle de validité des données</title>
-		<para>Nagios offre une fonctionnalité qui teste la validité des résultats d'un
+        <para>Heureusement, il y a une façon de gérer ces types de problèmes…</para>
+    </section>
+    <section>
+        <title>Le contrôle de validité des données</title>
+        <para>Nagios offre une fonctionnalité qui teste la validité des résultats d'un
 test (<quote>freshness</quote> checking). On peut trouver plus
 d'informations à ce sujet <link
 linkend="advancedtopics-freshness">ici</link>. Cette fonctionnalité apporte
@@ -335,41 +338,41 @@ passivement par les serveurs distribués, soit exécuté activement par le
 serveur central si nécessaire. Si les résultats fournis par le test du
 service deviennent <quote>figés</quote>, Nagios peut être configuré pour
 forcer un contrôle actif depuis le serveur central.</para>
-		<para>Comment fait-on cela ? Sur le serveur central, il faut configurer ainsi les
+        <para>Comment fait-on cela ? Sur le serveur central, il faut configurer ainsi les
 services qui sont surveillés par les serveurs distribués :</para>
-		<itemizedlist>
-			<listitem>
-				<para>L'option <varname>check_freshness</varname> dans la définition des services
+        <itemizedlist>
+            <listitem>
+                <para>L'option <literal>check_freshness</literal> dans la définition des services
 doit être à 1. Ceci active le test de validité (<quote>freshness</quote>
 checking)</para>
-			</listitem>
-			<listitem>
-				<para>L'option <varname>freshness_threshold</varname> dans la définition des
+            </listitem>
+            <listitem>
+                <para>L'option <literal>freshness_threshold</literal> dans la définition des
 services doit être positionné à une valeur qui indique le niveau de validité
 ([NdT] : la traduction littérale est la <quote>fraîcheur</quote>, mais il ne me semble
 pas adapté) des données (telles que fournies par les serveurs distribués).</para>
-			</listitem>
-			<listitem>
-				<para>L'option <varname>check_command</varname> dans la définition des services
+            </listitem>
+            <listitem>
+                <para>L'option <literal>check_command</literal> dans la définition des services
 doit indiquer les commandes valides qui seront employées pour tester
 activement les services depuis le serveur central.</para>
-			</listitem>
-		</itemizedlist>
-		<para>Nagios teste régulièrement la validité des résultats pour lesquels cette
-option est activée. L'option <varname>freshness_threshold</varname>dans
+            </listitem>
+        </itemizedlist>
+        <para>Nagios teste régulièrement la validité des résultats pour lesquels cette
+option est activée. L'option <literal>freshness_threshold</literal>dans
 chaque service détermine le niveau de validité pour celui-ci. Par exemple,
 si sa valeur est 300 pour un de vos services, Nagios va considérer que les
 résultats du service sont <quote>figés</quote> s'ils ont plus de 5 minutes
 (300 secondes). Si vous ne spécifiez pas la valeur de
-<varname>freshness_threshold</varname>, Nagios calculera un seuil à partir
-de la valeur des options <varname>normal_check_interval</varname> ou de
-<varname>retry_check_interval</varname> (en fonction de <link
+<literal>freshness_threshold</literal>, Nagios calculera un seuil à partir
+de la valeur des options <literal>normal_check_interval</literal> ou de
+<literal>retry_check_interval</literal> (en fonction de <link
 linkend="thebasics-statetypes">l'état du service</link>). Si les résultats
 sont <quote>figés</quote>, Nagos exécutera la commande spécifiée dans
-<varname>check_command</varname> dans la définition du service, vérifiant
+<literal>check_command</literal> dans la définition du service, vérifiant
 ainsi activement ce service.</para>
-		<para>N'oubliez pas que vous devez définir l'option
-<varname>check_command</varname> dans la définition des services, pour
+        <para>N'oubliez pas que vous devez définir l'option
+<literal>check_command</literal> dans la définition des services, pour
 pouvoir tester activement l'état d'un service depuis le serveur
 central. Dans des conditions normales, cette commande check_command ne sera
 pas exécutée (parce que les test actifs auront été désactivés globalement au
@@ -377,39 +380,39 @@ niveau du programme, ou pour des services spécifiques). A partir du moment
 ou le contrôle de validité des données est activé, Nagios exécutera cette
 commande, même si les tests actifs ont été désactivés globalement au niveau
 du programme ou pour des services spécifiques.</para>
-		<para>Si nous n'arrivez pas à définir des commandes pour tester activement un
+        <para>Si nous n'arrivez pas à définir des commandes pour tester activement un
 service depuis le serveur central (ou bien cela est un casse-tête
 douloureux), vous pouvez simplement définir toutes les options
-<varname>check_command</varname> d'après un simple script qui retourne un
+<literal>check_command</literal> d'après un simple script qui retourne un
 état critique. Voici un exemple : supposons que vous ayez défini une
-commande <varname>service-fige</varname> et utilisez cette commande dans
-l'option <varname>check_command</varname> de vos services. Elle pourrait
+commande <literal>service-fige</literal> et utilisez cette commande dans
+l'option <literal>check_command</literal> de vos services. Elle pourrait
 ressembler à cela …..</para>
-		<programlisting>
-		define command{
-			command_name    service-fige
-			command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Service results are stale"
-			}
-		</programlisting>
-		<para>Quand Nagios détecte que les résultats sont figés et lance la commande
+        <programlisting>
+        define command{
+            command_name    service-fige
+            command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Service results are stale"
+            }
+        </programlisting>
+        <para>Quand Nagios détecte que les résultats sont figés et lance la commande
 <command>service_fige.sh</command>, le plugin &plugin-dummy; est exécuté et
 le service passe dans un état critique. Ceci déclenchera l'envoi de
 notifications, donc vous saurez finalement qu'il y a un problème.</para>
-	</section>
-	<section>
-		<title>Contrôles des hôtes</title>
-		<para>Maintenant, vous savez comment obtenir des résultats de contrôles passifs
+    </section>
+    <section>
+        <title>Contrôles des hôtes</title>
+        <para>Maintenant, vous savez comment obtenir des résultats de contrôles passifs
 depuis des serveurs distribués. Ceci signifie que le serveur central ne
 teste activement que ses propres services. Mais qu'en est-il des hôtes ?
 Vous en avez toujours besoin, non ?</para>
-		<para>Comme les contrôles d'hôtes n'ont qu'un impact faible sur la surveillance
+        <para>Comme les contrôles d'hôtes n'ont qu'un impact faible sur la surveillance
 (ils ne sont faits que s'ils sont vraiment nécessaires), je vous
 recommanderais bien de faire ces contrôles de manière active depuis le
 serveur central. Ceci signifie que vous définirez le contrôle des hôtes sur
 le serveur central de la même manière que vous l'avez fait sur les serveurs
 distribués (également de la même manière que sur un serveur normal, non
 distribué).</para>
-		<para>Les résultats de contrôle passifs des hôtes sont disponible (lisez <link
+        <para>Les résultats de contrôle passifs des hôtes sont disponible (lisez <link
 linkend="thebasics-passivechecks">ceci</link>), donc vous pourriez les
 utiliser dans votre architecture distribuée mais cette méthode comporte
 certains problèmes. Le principal étant que Nagios ne traduit pas les états
@@ -419,31 +422,31 @@ vos serveurs de supervision ont une structure différentes en terme de
 parents ou enfants (et c'est ce qui se passe lorsque vos serveurs de
 supervisions ne sont pas exactement au même endroit), le serveur central va
 avoir une vision incorrecte des états des hôtes.</para>
-		<para>Si vous voulez vraiment envoyer des résultats passifs de contrôle d'hôte à
+        <para>Si vous voulez vraiment envoyer des résultats passifs de contrôle d'hôte à
 un serveur de supervision central, vérifiez que :</para>
-		<itemizedlist>
-			<listitem>
-				<para>La réception <link
+        <itemizedlist>
+            <listitem>
+                <para>La réception <link
 linkend="configuringnagios-configmain-accept_passive_host_checks">passive de
 vérification d'hôte</link> (requis) est activée sur le serveur central</para>
-			</listitem>
-			<listitem>
-				<para>Le serveur distribué est configuré avec l'option de <link
+            </listitem>
+            <listitem>
+                <para>Le serveur distribué est configuré avec l'option de <link
 linkend="configuringnagios-configmain-obsess_over_hosts">remontée de
 contrôle d'hôte</link> activée. </para>
-			</listitem>
-			<listitem>
-				<para>Le serveur distribué a une commande <link
+            </listitem>
+            <listitem>
+                <para>Le serveur distribué a une commande <link
 linkend="configuringnagios-configmain-ochp_command">ochp</link> définie.</para>
-			</listitem>
-		</itemizedlist>
-		<para>La commande ochp utilisée pour le traitement des vérifications d'hôtes
+            </listitem>
+        </itemizedlist>
+        <para>La commande ochp utilisée pour le traitement des vérifications d'hôtes
 fonctionne de manière similaire à la commande ocsp utilisée pour le
 traitement des vérification des services (cf documentation ci dessus). Pour
 être sûr que les vérifications passives d'hôtes sont valides et à jour, il
 est nécessaire d'activer la <link
 linkend="advancedtopics-freshness">validité des vérification pour les
 hôtes</link> de la même manière que pour les services.</para>
-	</section>
+    </section>
 </chapter>
 
