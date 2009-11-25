@@ -1660,7 +1660,7 @@ contrôles</link>.</para>
 		<para>Ce paramètre est utilisé pour définir le nombre d'<quote>unités de
 temps</quote> à attendre avant d'ordonnancer un nouveau contrôle du
 service. Les services sont recontrôlés à l'intervalle de réessai quand ils
-sont passée dans un état non UP. Une fois que le service à été réessayé le
+sont passés dans un état non UP. Une fois que le service à été réessayé le
 nombre de fois précisé dans la variable <emphasis
 role="bold">max_check_attempts</emphasis> sans changement d'état, il sera
 contrôlé à nouveau sur une fréquence <quote>normale</quote> telle que
@@ -2074,7 +2074,7 @@ relatifs, le chemin de base sera le même que celui utilisé pour accéder aux
 &acronym-cgi;s (par exemple <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si
 vous souhaitez mettre à disposition d'autres équipes de support les
 informations détaillées d'un service, les moyens de contacts à utiliser en
-cas d'urgence, etc…
+cas d'urgence, etc.
 		</para>
 		</listitem>
 	</varlistentry>
