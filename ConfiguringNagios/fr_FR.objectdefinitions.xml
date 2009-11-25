@@ -954,7 +954,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 			icon_image_alt
 		</term>
 		<listitem>
-		<para>Cette variable est utilisée pour définir une chaîne de caractère optionnelle
+		<para>Cette variable est utilisée pour définir une chaîne de caractères optionnelle
 à utiliser dans l'attribut ALT de l'image précisée par l'argument
 <emphasis>&lt;icon_image&gt;</emphasis>.</para>
 		</listitem>
@@ -2115,7 +2115,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 			icon_image_alt
 		</term>
 		<listitem>
-		<para>Cette variable est utilisée pour définir une chaîne de caractère optionnelle
+		<para>Cette variable est utilisée pour définir une chaîne de caractères optionnelle
 à utiliser dans l'attribut ALT de l'image précisée par l'argument
 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
 dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
@@ -2253,8 +2253,8 @@ groupe. Plusieurs noms d'hôtes et de services peuvent être séparés par des
 virgules. Cette variable peut être utilisée comme une alternative (ou en
 complément) à la variable <emphasis>servicegroups</emphasis> dans les <link
 linkend="configuringnagios-objectdefinitions-service">définitions de
-service</link>. Le format de la variable <varname>member</varname> est le
-suivant (notez qu ele nom d el'hôte doit précéder le nom/description du
+service</link>. Le format de la variable <varname>members</varname> est le
+suivant (notez que le nom de l'hôte doit précéder le nom/description du
 service) :
 		<programlisting>
 members=&lt;host1&gt;,&lt;service1&gt;,&lt;host2&gt;,&lt;service2&gt;,…,&lt;host<emphasis>n</emphasis>&gt;,&lt;service<emphasis>n</emphasis>&gt;
@@ -2280,7 +2280,7 @@ services à inclure dans ce groupe.
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-au groupe de service. Si vous avez précisée une note ici, vous la verrez
+au groupe de service. Si vous avez précisé une note ici, vous la verrez
 dans le &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">des informations
 étendues</link> (quand vous regardez les informations d'un groupe de
 services spécifié).
@@ -2296,7 +2296,7 @@ services spécifié).
 informations supplémentaires sur le groupe de services. Si vous précisez une
 URL, vous verrez une icône de dossier rouge dans les &acronym-cgi;s (quand vous
 regardez les informations de groupe de services) qui renverra vers l'URL
-précisée ici. N'importe quelle URL valide peut être utilisé. Si vous pensez
+précisée ici. N'importe quelle URL valide peut être utilisée. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
 utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
@@ -2314,7 +2314,7 @@ d'un hôte, les moyens de contacts à utiliser en cas d'urgence, etc.
 actions supplémentaires à appliquer au groupe de services. Si vous précisez
 une URL, vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s
 (quand vous regardez les informations du groupe de services) qui renverra
-vers l'URL précisée ici. N'importe quelle URL valide peut être utilisé. Si
+vers l'URL précisée ici. N'importe quelle URL valide peut être utilisée. Si
 vous pensez utiliser des chemins relatifs, le chemin de base sera le même
 que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>).
@@ -2335,7 +2335,7 @@ contact</title>
 
     <para>La définition de contact est utilisée pour identifer quelqu'un qui doit être
 contacté dans le cas de problèmes sur votre réseau. Les différents arguments
-d'une définition de contact sont décrits ci-dessou.</para>
+d'une définition de contact sont décrits ci-dessous.</para>
    </section>
 
    <section>
@@ -2501,7 +2501,7 @@ valeur.
 identifiant le contact. Dans les bonnes circonstances, la <link
 linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
 valeur. Si non précisée, la variable <emphasis>contact_name</emphasis> sera
-utilisé comme alias.
+utilisée comme alias.
         </para>
 		</listitem>
 	</varlistentry>
@@ -2617,8 +2617,8 @@ une combinaison d'un ou de plusieurs des états suivants :
 		<listitem><para>f = notification quand un hôte commence ou s'arrête d'<link
 linkend="advancedtopics-flapping">osciller</link>,</para></listitem>
         <listitem><para>s = envoi de notifications quand un hôte ou service entre ou sort de période
-de <link linkend="advancedtopics-downtime">maintenance planifiée</link>. Si
-vous précisez <emphasis role="bold">n</emphasis> (null) comme option, le
+de <link linkend="advancedtopics-downtime">maintenance planifiée</link>.</para> 
+<para>Si vous précisez <emphasis role="bold">n</emphasis> (null) comme option, le
 contact ne recevra aucun type de notifications d'hôtes.</para></listitem>
 		</itemizedlist>
 		</para>
@@ -2653,8 +2653,8 @@ linkend="advancedtopics-flapping">osciller</link>.</para></listitem>
 courts</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-command">commandes</link> à
 utiliser pour notifier le contact des problèmes
-de<emphasis>services</emphasis> et des retours à la normale. Plusieurs
-notifications peuvent être séparés par des virgules. Toutes les commandes de
+de <emphasis>services</emphasis> et des retours à la normale. Plusieurs commandes 
+de notifications peuvent être séparées par des virgules. Toutes les commandes de
 notification sont exécutées quand les contacts ont besoin d'être
 notifiés. Le durée maximale d'exécution de la commande est contrôlée par
 l'option <link
@@ -2697,7 +2697,7 @@ bonnes circonstances, la <link linkend="thebasics-macros">macro</link>
 			address<emphasis>x</emphasis>
 		</term>
 		<listitem>
-		<para>Les variables <varname>Address</varname> sont utilisées pour définir des
+		<para>Les variables <varname>address</varname> sont utilisées pour définir des
 <quote>adresses</quote> supplémentaires pour le contact. Ces adresses
 peuvent être n'importe quoi - numéro de téléphone mobile, adresse de
 messagerie instantanée, etc. En fonction de la façon dont vous avez
@@ -2775,8 +2775,8 @@ de groupe de contacts</title>
 plusieurs <link
 linkend="configuringnagios-objectdefinitions-contact">contacts</link>
 ensemble de façon à envoyer les <link
-linkend="thebasics-notifications">notifications</link> pour problèmes et
-retours à la normale.</para>
+linkend="thebasics-notifications">notifications</link> pour des problèmes et
+des retours à la normale.</para>
    </section>
 
    <section>
@@ -2905,7 +2905,7 @@ notifications et les contrôles de services. Cela consiste en plages horaires
 définies pour chaque jour de la semaine qui <quote>tournent</quote> une fois
 la semaine finie. Différents types d'exceptions aux heurs normales de la
 semaine sont supportées : jours de la semaine en particulier, jours de mois
-généraux à tous le smois, jours de certains mois et dates de calendrier.
+généraux à tous les mois, jours de certains mois et dates de calendrier.
 	</para>
    </section>
 
@@ -3045,7 +3045,7 @@ identifiant la période de temps. </para>
 <quote><emphasis>saturday</emphasis></quote>) sont des listes séparées par
 des virgules de périodes de temps <quote>valides</quote> pour un jour
 particulier de la semaine. Notez qu'il y a sept jours différents pour
-lesquels vous définir des périodes de temps (dimanche à lundi). Chaque
+lesquels vous pouvez définir des périodes de temps (dimanche à lundi). Chaque
 période de temps est sous la forme <emphasis
 role="bold">HH:MM-HH:MM</emphasis>, où les heures sont indiquées sur 24
 heures. Par exemple, <emphasis role="bold">00:15-24:00</emphasis> indique
@@ -3073,7 +3073,7 @@ exemples de définitions de périodes de temps ci-dessus pour voir ce qui est
 possible. ;-) Les jours de la semaine et d'autres types d'exceptions ont
 tous des niveaux différents de précédence, aussi est-il important de
 comprendre comment ils interagissent les uns les autres. Plus d'informations
-sur ceci peut être trouvé dans la documentation sur les <link
+sur ceci peuvent être trouvées dans la documentation sur les <link
 linkend="thebasics-timeperiods">périodes de temps</link>.
 			</para>
 			</listitem>
@@ -3110,8 +3110,8 @@ gestionnaires d'événements d'hôtes. Les définitions de commandes peuvent
 contenir des <link linkend="thebasics-timeperiods">timeperiods</link> mais
 vous devez vous assurez de n'utiliser que les macros <quote>valides</quote>
 dans le contexte où sera utilisée la commande. Plus d'informations sur les
-macros disponibles et quand elles sont <quote>valides</quote> peut être
-trouvé <link linkend="thebasics-macros">ici</link>. Les différents arguments
+macros disponibles et quand elles sont <quote>valides</quote> peuvent être
+trouvées <link linkend="thebasics-macros">ici</link>. Les différents arguments
 d'une définition de commande sont indiqués ci-dessous.</para>
    </section>
 
@@ -3180,7 +3180,7 @@ d'<link linkend="configuringnagios-objectdefinitions-host">hôte</link> et de
 <link linkend="configuringnagios-objectdefinitions-service">service</link>
 (dans les variables <varname>notification</varname>,
 <varname>check</varname> et <varname>event handler</varname>) entre autres
-endroits.
+.
 		</para>
 		</listitem>
 	</varlistentry>
@@ -3221,8 +3221,8 @@ définition de commande et ensuite séparer chaque argument du nom de la
 commande (et pour séparer chaque argument) avec le symbole du point
 d'exclamation (!) dans les variables de définitions (commande de contrôle
 d'hôte, commande de gestionnaire d'événements, etc.) qui référencent cette
-commande. Plus d'informations su rla façon dont sont traités les arguments
-de commande au moment de leur exécution peut être trouvé dans la
+commande. Plus d'informations sur la façon dont sont traités les arguments
+de commande au moment de leur exécution peuvent être trouvées dans la
 documentation sur les <link linkend="thebasics-macros">macros</link>.
 		</para>
 		</listitem>
@@ -3244,7 +3244,7 @@ se basant sur l'état d'un ou de plusieurs autres services. Les dépendances
 de services sont optionnelles et sont principalement destinées aux
 utilisateurs avancés qui ont des installations de supervision
 complexes. Plus d'informations sur le focntionnement des dépendances de
-services (à lire absolument!) peut être trouvée <link
+services (à lire absolument!) peuvent être trouvées <link
 linkend="advancedtopics-dependencies">ici</link>.
 	</para>
    </section>
@@ -3349,7 +3349,7 @@ define servicedependency{
 			dependent_host
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
+		<para>Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> d'<link
 linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
 <quote>tourne</quote> le service <emphasis>dépendant</emphasis> où avec
@@ -3365,13 +3365,13 @@ linkend="advancedtopics-objecttricks-same_host_dependency">dépendances
 			dependent_hostgroup
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
+		<para>Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
 d'hôtes</link> sur lesquels <quote>tourne</quote> le service
 <emphasis>dépendant</emphasis> où avec lesquels il est associé. Plusieurs
 groupes d'hôtes peuvent être séparés par des virgules. La variable
-<varname>dependent_hostgroup</varname> peut être utilisé à la place ou en
+<varname>dependent_hostgroup</varname> peut être utilisée à la place ou en
 conjonction avec la variable <varname>dependent_host</varname>.
 		</para>
 		</listitem>
@@ -3381,7 +3381,7 @@ conjonction avec la variable <varname>dependent_host</varname>.
 			dependent_service_description
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier la
+		<para>Cette variable est utilisée pour identifier la
 <emphasis>description</emphasis> d'un <link
 linkend="configuringnagios-objectdefinitions-service">service</link>
 <emphasis>dépendant</emphasis>.
@@ -3393,7 +3393,7 @@ linkend="configuringnagios-objectdefinitions-service">service</link>
 			host_name
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
+		<para>Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> d'<link
 linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
 <quote>tourne</quote> le service <emphasis>dont on dépend</emphasis> (aussi
@@ -3407,7 +3407,7 @@ peuvent être séparés par des virgules.
 			hostgroup_name
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
+		<para>Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> de<link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
 d'hôtes</link> sur lequel <quote>tourne</quote> le service <emphasis>dont on
@@ -3423,7 +3423,7 @@ en conjonction avec la variable <varname>host_name</varname>.
 			service_description
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier la
+		<para>Cette variable est utilisée pour identifier la
 <emphasis>description</emphasis> du <link
 linkend="configuringnagios-objectdefinitions-service">service</link>
 <emphasis>dont on dépend</emphasis> (aussi appelé service maître).
@@ -3435,7 +3435,7 @@ linkend="configuringnagios-objectdefinitions-service">service</link>
 			inherits_parent
 		</term>
 		<listitem>
-		<para>Cette variables indique si la dépendance hérite des dépendances du service
+		<para>Cette variable indique si la dépendance hérite des dépendances du service
 <emphasis>dont on dépend</emphasis> (aussi appelé service maître). En
 d'autres termes, si le service maître est dépendant de plusieurs autres
 services et qu'une des ces dépendances échoue, alors cette dépendance
@@ -3532,7 +3532,7 @@ temps.</para>
 
     <para>Les escalades de services sont complètement optionnelles et sont utilisées
 pour escalader les notifications d'un service particulier. Plus
-d'informations sur le fonctionnement des escalades peut être trouvé <link
+d'informations sur le fonctionnement des escalades peuvent être trouvées <link
 linkend="advancedtopics-escalations">ici</link>.</para>
    </section>
 
@@ -3656,9 +3656,9 @@ court(s)</emphasis> des <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
 d'hôtes</link> pour lesquel(s) l'escalade de <link
 linkend="configuringnagios-objectdefinitions-service">service</link> doit
-s'appliquer ou auquel(s) il est associé. Plusieurs groupes hôtes peuvent
+s'appliquer ou auquel(s) il est associé. Plusieurs groupes d'hôtes peuvent
 être séparés par des virgules. La variable <varname>hostgroup_name</varname>
-peut être utilisé à la place ou en conjonction avec la variable
+peut être utilisée à la place ou en conjonction avec la variable
 <varname>host_name</varname>.
 		</para>
 		</listitem>
@@ -3681,8 +3681,8 @@ lequel s'applique l'escalade.
 		</term>
 		<listitem>
 		<para>Cette variable est un nombre identifiant la <emphasis>première</emphasis>
-notification pour laquelle l'esacalade est effective. Par exemple, si vous
-mettez cette valeur à 3, cette esacalade sera seulement utilisée si le
+notification pour laquelle l'escalade est effective. Par exemple, si vous
+mettez cette valeur à 3, cette escalade sera seulement utilisée si le
 service est dans un état non-OK depuis suffisamment longtemps pour qu'une
 troisième notification soit envoyée.
 		</para>
@@ -3707,7 +3707,7 @@ nombre de notifications envoyées).
 			contacts
 		</term>
 		<listitem>
-		<para>Cette une liste de <emphasis>noms courts</emphasis> de <link
+		<para>C'est une liste de <emphasis>noms courts</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-contact">contacts</link> à
 notifier à chaque fois qu'il y a des problèmes (ou des retours à la normale)
 avec ce service. Plusieurs contacts peuvent être précisés en les séparant
@@ -3724,7 +3724,7 @@ contacts dans chaque définition d'escalade de service.
 			contact_groups
 		</term>
 		<listitem>
-		<para>Cette une liste de <emphasis>noms courts</emphasis> de <link
+		<para>C'est une liste de <emphasis>noms courts</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
 contacts</link> à notifier à chaque fois que ce service est
 escaladé. Plusieurs groupes de contacts peuvent être précisés en les
@@ -3742,11 +3742,11 @@ groupe de contacts dans chaque définition d'escalade de service.
 notifications pendant que l'escalade est valide. Si vous précisez une valeur
 de 0 pour cet intervalle, Nagios va envoyer la première notification quand
 la définition d'escalade est valide mais prendra soin de ne plus envoyer
-aucune notification de problème pour l'hôte. Les notification sont renvoyés
+aucune notification de problème pour l'hôte. Les notifications sont renvoyées
 quand l'hôte revient à la normale. Utile si vous souhaitez arrêter l'envoi
 des notifications après un certain temps.</para>
 		<note><para>Si de multiples entrées d'escalade pour un hôte se chevauchent sur une ou
-plusieurs plages de notificitions, le plus petit des intervalles de
+plusieurs plages de notifications, le plus petit des intervalles de
 notification pour toutes les escalades sera utilisé.</para></note>
 		</listitem>
 	</varlistentry>
@@ -3772,7 +3772,7 @@ escalade de service doit être utilisé. L'escalade est seulement utilisée si
 le service est dans un des états précisés dans cette variable. Si cette
 variable n'est pas précisée dans la définition d'escalade de service,
 l'escalade est considérée comme valide pendant l'ensemble des états du
-service. Les options valides osnt une combinaison de l'un ou de plusieurs de
+service. Les options valides sont une combinaison de l'un ou de plusieurs de
 ces états : 
 		<itemizedlist>
 		<listitem><para><emphasis role="bold">r</emphasis> = escalade sur un état OK (retour à la
@@ -3782,7 +3782,7 @@ normale)</para></listitem>
 		<listitem><para><emphasis role="bold">c</emphasis> = escalade sur un état CRITICAL </para></listitem>
 		</itemizedlist>
 		<informalexample><para>Si vous précisez <emphasis role="bold">w</emphasis> dans ce champ,
-l'esaclade sera seulement utilisée quand le service es ten état WARNING.</para></informalexample>
+l'escalade sera seulement utilisée quand le service est en état WARNING.</para></informalexample>
 		</para>
 		</listitem>
 	</varlistentry>
@@ -3802,8 +3802,8 @@ permet de supprimer des notifications et des contrôles actifs d'hôtes en se
 basant sur l'état d'un ou de plusieurs autres hôtes. Les dépendances d'hôtes
 sont optionnelles et sont principalement destinées aux utilisateurs avancés
 qui ont des installations de supervision complexes. Plus d'informations sur
-le focntionnement des dépendances de services (à lire absolument!) peut être
-trouvée <link linkend="advancedtopics-dependencies">ici</link>.</para>
+le focntionnement des dépendances de services (à lire absolument!) peuvent être
+trouvées <link linkend="advancedtopics-dependencies">ici</link>.</para>
    </section>
 
    <section>
@@ -3894,7 +3894,7 @@ define hostdependency{
 			dependent_host_name
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier la
+		<para>Cette variable est utilisée pour identifier la
 <emphasis>description</emphasis> d'un <link
 linkend="configuringnagios-objectdefinitions-host">hôte</link>
 <emphasis>dépendant</emphasis>. Plusieurs hôtes peuvent être séparés par des
@@ -3907,12 +3907,12 @@ virgules.
 			dependent_hostgroup_name
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
+		<para>Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupes
 d'hôtes</link> <emphasis>dépendants</emphasis>. Plusieurs groupes d'hôtes
 peuvent être séparés par des virgules. La variable
-<varname>dependent_hostgroup_name</varname> peut être utilisé à la place ou
+<varname>dependent_hostgroup_name</varname> peut être utilisée à la place ou
 en conjonction avec la variable <varname>dependent_host_name</varname>.</para>
 		</listitem>
 	</varlistentry>
@@ -3921,7 +3921,7 @@ en conjonction avec la variable <varname>dependent_host_name</varname>.</para>
 			host_name
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier la
+		<para>Cette variable est utilisée pour identifier la
 <emphasis>description</emphasis> d'un <link
 linkend="configuringnagios-objectdefinitions-host">hôte</link> <emphasis>don
 on dépend</emphasis> (aussi appelé hôte maître). Plusieurs hôtes peuvent
@@ -3933,12 +3933,12 @@ on dépend</emphasis> (aussi appelé hôte maître). Plusieurs hôtes peuvent
 			hostgroup_name
 		</term>
 		<listitem>
-		<para>Cette variables est utilisée pour identifier le(s) <emphasis>nom(s)
+		<para>Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupes
 d'hôtes</link> <emphasis>dont on dépend</emphasis> (aussi appelé hôte
 maître). Plusieurs groupes d'hôtes peuvent être séparés par des virgules. La
-variable <varname>hostgroup_name</varname> peut être utilisé à la place ou
+variable <varname>hostgroup_name</varname> peut être utilisée à la place ou
 en conjonction avec la variable <varname>host_name</varname>.</para>
 		</listitem>
 	</varlistentry>
@@ -3947,7 +3947,7 @@ en conjonction avec la variable <varname>host_name</varname>.</para>
 			inherits_parent
 		</term>
 		<listitem>
-		<para>Cette variables indique si la dépendance hérite des dépendances de l'hôte
+		<para>Cette variable indique si la dépendance hérite des dépendances de l'hôte
 <emphasis>dont on dépend</emphasis> (aussi appelé hôte maître). En d'autres
 termes, si l'hôte maître est dépendant de plusieurs autres hôtes et qu'une
 des ces dépendances échoue, alors cette dépendance échouera également.
@@ -3959,7 +3959,7 @@ des ces dépendances échoue, alors cette dépendance échouera également.
 			execution_failure_criteria
 		</term>
 		<listitem>
-		<para>Cette variable est utilisée pour péciser les critères qui déterminent quand
+		<para>Cette variable est utilisée pour préciser les critères qui déterminent quand
 l'hôte dépendant ne doit <emphasis>pas</emphasis> être contrôlé
 activement. Si l'hôte <emphasis>maître</emphasis> est dans un état d'erreur
 que nous précisons, l'hôte <emphasis>dépendant</emphasis> ne sera pas
@@ -4038,7 +4038,7 @@ d'escalade d'hôte</title>
 
     <para>Les escalades d'hôtes sont complètement optionnelles et sont utilisées pour
 escalader les notifications d'un hôte particulier. Plus d'informations sur
-le fonctionnement des escalades peut être trouvé <link
+le fonctionnement des escalades peuvent être trouvées <link
 linkend="advancedtopics-escalations">ici</link>.</para>
    </section>
 
@@ -4150,8 +4150,8 @@ lesquel l'escalade doit s'appliquer.</para>
 		<para>Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
 court(s)</emphasis> des <link
 linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
-d'hôtes</link> aqeules doit s'appliquer cette escalade. Plusieurs groupes
-d'hôte speuvent être séparés par des virgules. Si utilisé, l'escalade
+d'hôtes</link> auxquels doit s'appliquer cette escalade. Plusieurs groupes
+d'hôtes peuvent être séparés par des virgules. Si utilisée, l'escalade
 s'appliquera à tous les hôtes membres des groupes d'hôtes spécifiés.
         </para>
 		</listitem>
@@ -4162,8 +4162,8 @@ s'appliquera à tous les hôtes membres des groupes d'hôtes spécifiés.
 		</term>
 		<listitem>
 		<para>Cette variable est un nombre identifiant la <emphasis>première</emphasis>
-notification pour laquelle l'esacalade est effective. Par exemple, si vous
-mettez cette valeur à 3, cette esacalade sera seulement utilisée si l'hôte
+notification pour laquelle l'escalade est effective. Par exemple, si vous
+mettez cette valeur à 3, cette escalade sera seulement utilisée si l'hôte
 est dans un état non-OK depuis suffisamment longtemps pour qu'une troisième
 notification soit envoyée.</para>
 		</listitem>
@@ -4186,7 +4186,7 @@ notifications envoyées).</para>
 			contacts
 		</term>
 		<listitem>
-		<para>Cette une liste de <emphasis>noms courts</emphasis> de <link
+		<para>C'est une liste de <emphasis>noms courts</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-contact">contacts</link> à
 notifier à chaque fois qu'il y a des problèmes (ou des retours à la normale)
 avec cet hôte. Plusieurs contacts peuvent être précisés en les séparant par
@@ -4203,7 +4203,7 @@ contacts dans chaque définition d'escalade d'hôte.
 			contact_groups
 		</term>
 		<listitem>
-		<para>Cette une liste de <emphasis>noms courts</emphasis> de <link
+		<para>C'est une liste de <emphasis>noms courts</emphasis> de <link
 linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
 contacts</link> à notifier à chaque escalade de l'hôte. Plusieurs groupes de
 contacts peuvent être précisés en les séparant par des virgules. Vous devez
@@ -4220,11 +4220,11 @@ d'escalade d'hôte.</para>
 notifications pendant que l'escalade est valide. Si vous précisez une valeur
 de 0 pour cet intervalle, Nagios va envoyer la première notification quand
 la définition d'escalade est valide mais prendra soin de ne plus envoyer
-aucune notification de problème pour l'hôte. Les notification sont renvoyés
+aucune notification de problème pour l'hôte. Les notifications sont renvoyées
 quand l'hôte revient à la normale. Utile si vous souhaitez arrêter l'envoi
 des notifications après un certain temps.</para>
 		<note><para>Si de multiples entrées d'escalade pour un hôte se chevauchent sur une ou
-plusieurs plages de notificitions, le plus petit des intervalles de
+plusieurs plages de notifications, le plus petit des intervalles de
 notification pour toutes les escalades sera utilisé.</para></note>
 		</listitem>
 	</varlistentry>
@@ -4249,7 +4249,7 @@ escalade d'hôte doit être utilisée. L'escalade est seulement utilisée si
 l'hôte est dans un des états précisés dans cette variable. Si cette variable
 n'est pas précisée dans la définition d'escalade d'un hôte, l'escalade est
 considérée comme valide pendant l'ensemble des états du service. Les options
-valides osnt une combinaison de l'un ou de plusieurs de ces états :
+valides sont une combinaison de l'un ou de plusieurs de ces états :
 		<itemizedlist>
 		<listitem><para><emphasis role="bold">r</emphasis> = escalade sur un état UP (retour à la
 normale)</para></listitem>
@@ -4412,7 +4412,7 @@ associées les données.</para>
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-à l'hôte. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
+à l'hôte. Si vous avez précisé une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
 (quand vous regardez les informations d'un hôte spécifié).</para>
 		</listitem>
@@ -4427,7 +4427,7 @@ informations supplémentaires sur l'hôte. Si vous précisez une URL, vous
 verrez un lien indiquant <quote><guimenu>Extra Host Notes</guimenu></quote>
 dans le &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended
 information</link> (quand vous regardez les informations de
-l'hôte). N'importe quelle URL valide peut être utilisé. Si vous pensez
+l'hôte). N'importe quelle URL valide peut être utilisée. Si vous pensez
 utiliser des chemins relatifs, le chemin de base sera le même que celui
 utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
@@ -4445,7 +4445,7 @@ actions supplémentaires sur l'hôte. Si vous précisez une URL, vous verrez un
 lien indiquant <quote><guimenu>Extra Host Actions</guimenu></quote> dans le
 &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>
 (quand vous regardez les informations de l'hôte). N'importe quelle URL
-valide peut être utilisé. Si vous pensez utiliser des chemins relatifs, le
+valide peut être utilisée. Si vous pensez utiliser des chemins relatifs, le
 chemin de base sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par
 exemple <emphasis>/cgi-bin/nagios/</emphasis>).</para>
 		</listitem>
@@ -4472,7 +4472,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 			icon_image_alt
 		</term>
 		<listitem>
-		<para>Cette variable est utilisée pour définir une chaîne de caractère optionnelle
+		<para>Cette variable est utilisée pour définir une chaîne de caractères optionnelle
 à utiliser dans l'attribut ALT de l'image précisée par l'argument
 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
 dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
@@ -4516,7 +4516,7 @@ role="bold">pngtogd2</emphasis> fourni avec la <ulink
 url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format
 GD2 doivent être créées dans un format <emphasis>non compressé</emphasis>
 toujours pour minimiser la charge &acronym-cpu; au moment de charger la carte
-réseau. Le rendu d el'image sera maximal si vous utilisez une taille de
+réseau. Le rendu de l'image sera maximal si vous utilisez une taille de
 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas
 le &acronym-cgi; de carte d'états. Les images des hôtes sont censées se trouver dans
 le sous-répertoire <emphasis role="bold">logos/</emphasis> de votre
@@ -4537,11 +4537,11 @@ doivent être données en entier positif car correpsondant aux pixels dans
 l'image générée. Le départ de la carte (0,0) se trouve dans le coin
 supérieur gauche de l'image et s'étend en positif dans la direction x (à
 droite) à partir du haut de l'image et en positif dans la direction y (bas)
-à partir du bord gauche de l'image. Pour référence, la taille des icônes es
-thabituellement de 40x40 pixels (le texte prend un peu d'espace
+à partir du bord gauche de l'image. Pour référence, la taille des icônes est 
+habituellement de 40x40 pixels (le texte prend un peu d'espace
 supplémentaire). Les coordonnées que vous précisez ici sont pour le coin
 supérieur gauche de l'icône de l'hôte à dessiner.</para>
-		<note><para>Ne vous inquiétez du nombre maximal de coordonnées que vous pouvez utliser
+		<note><para>Ne vous inquiétez pas du nombre maximal de coordonnées que vous pouvez utliser
 ici. Le &acronym-cgi; va automatiquement calculer les dimensions maximales de l'image
 qu'il créée en se basant sur les plus grandes valeurs x et y que vous avez
 précisé.
@@ -4558,7 +4558,7 @@ utiliser dans le &acronym-cgi; <link
 linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
 peuvent être des nombres positifs ou négatifs. Le départ du dessin est
 (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5
-unités de chaque côté (les textes rennent un plus d'espace). Les coordonnées
+unités de chaque côté (les textes prennent un plus d'espace). Les coordonnées
 que vous utilisez sont le centre du cube de l'hôte.</para>
 		</listitem>
 	</varlistentry>
@@ -4680,7 +4680,7 @@ define serviceextinfo{
 		<para>Cette variable est utilisée pour identifier le <emphasis>nom
 court</emphasis> du <link
 linkend="configuringnagios-objectdefinitions-service">service</link> auquel
-associées les données.
+sont associées les données.
         </para>
 		</listitem>
 	</varlistentry>
@@ -4692,7 +4692,7 @@ associées les données.
 		<para>Cette variable est utilisée pour identifier le <emphasis>nom
 court</emphasis> du <link
 linkend="configuringnagios-objectdefinitions-service">service</link> auquel
-associées les données.</para>
+sont associées les données.</para>
 		</listitem>
 	</varlistentry>
 	<varlistentry>
@@ -4701,7 +4701,7 @@ associées les données.</para>
 		</term>
 		<listitem>
 		<para>Cette variable est utilisée pour préciser une note d'information à rattacher
-au service. Si vous avez précisée une note ici, vous la verrez dans le &acronym-cgi;
+au service. Si vous avez précisé une note ici, vous la verrez dans le &acronym-cgi;
 <link linkend="thebasics-cgis-extinfo_cgi">des informations étendues</link>
 (quand vous regardez les informations de service spécifié).</para>
 		</listitem>
@@ -4717,7 +4717,7 @@ verrez un lien indiquant <quote><guimenu>Extra Service
 Notes</guimenu></quote> dans le &acronym-cgi; <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link> (quand vous
 regardez les informations du service). N'importe quelle URL valide peut être
-utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base
+utilisée. Si vous pensez utiliser des chemins relatifs, le chemin de base
 sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
 mettre à disposition d'autres équipes de support les informations détaillées
@@ -4735,7 +4735,7 @@ verrez un lien indiquant <quote><guimenu>Extra Service
 Actions</guimenu></quote> dans le &acronym-cgi; <link
 linkend="thebasics-cgis-extinfo_cgi">extended information</link> (quand vous
 regardez les informations du service). N'importe quelle URL valide peut être
-utilisé. Si vous pensez utiliser des chemins relatifs, le chemin de base
+utilisée. Si vous pensez utiliser des chemins relatifs, le chemin de base
 sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
 <emphasis>/cgi-bin/nagios/</emphasis>).</para>
 		</listitem>
@@ -4760,7 +4760,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
 			icon_image_alt
 		</term>
 		<listitem>
-		<para>Cette variable est utilisée pour définir une chaîne de caractère optionnelle
+		<para>Cette variable est utilisée pour définir une chaîne de caractères optionnelle
 à utiliser dans l'attribut ALT de l'image précisée par l'argument
 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
 dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
