@@ -6,91 +6,106 @@
  %all.entities;
 ]
 >
-<chapter id="advancedtopics-dependencychecks" xreflabel="Read more">
-	<title>Contrôles prédictifs de dépendances</title>
-	<section>
-		<title>Introduction</title>
-		<para>Les <link linkend="advancedtopics-dependencies">dépendances</link> d'hôtes
-et de services peuvent vous permettre un plus grand contrôle du moment de
-déclenchement des contrôles et du moment d'envoi des notifications. Comme
-les dépendances sont utilisées pour contrôler plusieurs aspects du processus
-de supervision, il est crucial que les informations d'états utilisées dans
-la logique de dépendances soit le plus à jour possibles.</para>
-		<para>Nagios vous permet d'activer les contrôles prédictifs de dépendances pour
-les hôtes et services de façon à s'assurer que la logique de dépendance aura
-les informations d'états les plus récentes quand il s'agira de prendre des
-décisions sur le fait d'envoyer ou non des notifications ou d'autoriser les
-contrôles actifs d'un hôte ou d'un service.</para>
-	</section>
-	<section>
-		<title>Comment fonctionnent les contrôles prédictifs?</title>
-		<para>L'image ci-dessous présente un diagramme simple d'hôtes supervisés par
-Nagios ainsi que les relations parents/enfants et les dépendances.</para>
-		<para>L'hôte <emphasis>Switch2</emphasis> dans cet exemple vient juste de changer
-d'état de UP vers un état problématique. Nagios a besoin de déterminer si
-l'hôtes est DOWN ou UNREACHABLE. Il va donc lanczer des contrôles parallèles
-des hôtes parents (<emphasis>Firewall1</emphasis>) et enfants
-(<emphasis>Comp1</emphasis>, <emphasis>Comp2</emphasis>, and
-<emphasis>Switch3</emphasis>) de <emphasis>Switch2</emphasis>. C'est le
-fonctionnement normal de la logique d'<link
-linkend="thebasics-networkreachability">accessibilité des hôtes</link>.</para>
-		<para>Vous noterez que <emphasis>Switch2</emphasis> est dépendant de
-<emphasis>Monitor1</emphasis> et de <emphasis>File1</emphasis> pour les
-notifications et les contrôles (ce qui n'est pas important dans cet
-exemple). Si les contrôles prédictifs d'hôtes sont activés, Nagios va lancer
-des contrôles parallèles de <emphasis>Monitor1</emphasis> et
-<emphasis>File1</emphasis> au même moment qu'il lance des contrôles sur les
-parents et enfants directs de <emphasis>Switch2</emphasis>. Nagios le fait
-parce qu'il sait qu'il va avoir à tester la logique de dépendances dans un
-futur proche (par exemple pour des besoins de notifications) et il veut être
-sûr d'avoir l'état le plus récent possible des hôtes qui prennent part dans
-cette logique de dépendances.</para>
-		<para>
-		<informalfigure>
-		<mediaobject>
-	     <imageobject>
-	      <imagedata fileref="images/predictive-dependency-checks.png" format="PNG"/>
-	     </imageobject>
-	    </mediaobject>
-	  </informalfigure>
-		</para>
-		<para>C'est comme ça que fonctionne les contrôles prédictifs de
-dépendances. Plutôt simple, non?</para>
-		<note><para>Les contrôles prédictifs de dépendances de services fonctionnent de façon
-identique à ce qui décrit ci-dessus. Excepté bien sûr qu'ils trvaillent sur
-les services et non les hôtes.</para></note>
-	</section>
-	<section>
-		<title>Activation des contrôles prédictifs</title>
-		<para>Les contrôles prédictifs de dépendances n'induisent que peu de charge
-supplementaire, aussi je recommande que vou sles activiez. Dans la plupart
-des cas, les bénéfices d'avoir des informations exactes pour les logique de
-dépendances contre-balance la charge supplémentaire imposée par ces
-contrôles.</para>
-		<para>Il est simple d'activer les contrôles prédictifs:</para>
-		<itemizedlist>
-			<listitem>
-				<para>Les contrôles prédictifs de dépendances d'hôtes sont gérés par l'option
-<link
-linkend="configuringnagios-configmain-enable_predictive_host_dependency_checks">&config-enable_predictive_host_dependency_checks;</link>.</para>
-			</listitem>
-			<listitem>
-				<para>Les contrôles prédictifs de dépendances de services sont gérés par l'option
-<link
-linkend="configuringnagios-configmain-enable_predictive_service_dependency_checks">&config-enable_predictive_service_dependency_checks;</link>.</para>
-			</listitem>
-</itemizedlist>
-	</section>
-	<section>
-		<title>Contrôles mis en cache</title>
-		<para>Les contrôles prédictifs sont des contrôles faits à la demande et sont donc
-régis par les mêmes règles que les <link
-linkend="advancedtopics-cachedchecks">contrôles mis en cache</link>. Les
-contrôles mis en cache peuvent vous permettre d'améliorer les performances
-en autorisant Nagios a utiliser un résultat de contrôle assez récent plutôt
-que d'exécuter le contrôle de l'hôte ou du service. Plus d'informations su
-rles contrôles mis en cache sont disponibles <link
-linkend="advancedtopics-cachedchecks">ici</link>.</para>
-	</section>
+
+<chapter id="advancedtopics-dependencychecks" xreflabel="Contrôles prédictifs de dépendances">
+    <title>Contrôles prédictifs de dépendances</title>
+    <section>
+        <title>Introduction</title>
+        <para>
+            Les <link linkend="advancedtopics-dependencies">dépendances</link> d'hôtes
+            et de services peuvent vous permettre un plus grand contrôle du moment de
+            déclenchement des contrôles et du moment d'envoi des notifications. Comme
+            les dépendances sont utilisées pour contrôler plusieurs aspects du processus
+            de supervision, il est crucial que les informations d'états utilisées dans
+            la logique de dépendances soit le plus à jour possibles.
+        </para>
+        <para>Nagios vous permet d'activer les contrôles prédictifs de dépendances pour
+            les hôtes et services de façon à s'assurer que la logique de dépendance aura
+            les informations d'états les plus récentes quand il s'agira de prendre des
+            décisions sur le fait d'envoyer ou non des notifications ou d'autoriser les
+            contrôles actifs d'un hôte ou d'un service.
+        </para>
+    </section>
+    <section>
+        <title>Comment fonctionnent les contrôles prédictifs?</title>
+        <para>L'image ci-dessous présente un diagramme simple d'hôtes supervisés par
+            Nagios ainsi que les relations parents/enfants et les dépendances.
+        </para>
+        <para>
+            L'hôte <emphasis>Switch2</emphasis> dans cet exemple vient juste de changer
+            d'état de UP vers un état problématique. Nagios a besoin de déterminer si
+            l'hôtes est DOWN ou UNREACHABLE. Il va donc lanczer des contrôles parallèles
+            des hôtes parents (<emphasis>Firewall1</emphasis>) et enfants
+            (<emphasis>Comp1</emphasis>, <emphasis>Comp2</emphasis>, and
+            <emphasis>Switch3</emphasis>) de <emphasis>Switch2</emphasis>. C'est le
+            fonctionnement normal de la logique d'<link linkend="thebasics-networkreachability">accessibilité des hôtes</link>.
+        </para>
+        <para>
+            Vous noterez que <emphasis>Switch2</emphasis> est dépendant de
+            <emphasis>Monitor1</emphasis> et de <emphasis>File1</emphasis> pour les
+            notifications et les contrôles (ce qui n'est pas important dans cet
+            exemple). Si les contrôles prédictifs d'hôtes sont activés, Nagios va lancer
+            des contrôles parallèles de <emphasis>Monitor1</emphasis> et
+            <emphasis>File1</emphasis> au même moment qu'il lance des contrôles sur les
+            parents et enfants directs de <emphasis>Switch2</emphasis>. Nagios le fait
+            parce qu'il sait qu'il va avoir à tester la logique de dépendances dans un
+            futur proche (par exemple pour des besoins de notifications) et il veut être
+            sûr d'avoir l'état le plus récent possible des hôtes qui prennent part dans
+            cette logique de dépendances.
+        </para>
+        <para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/predictive-dependency-checks.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </informalfigure>
+        </para>
+        <para>C'est comme ça que fonctionne les contrôles prédictifs de
+            dépendances. Plutôt simple, non?
+        </para>
+        <note>
+            <para>Les contrôles prédictifs de dépendances de services fonctionnent de façon
+                identique à ce qui décrit ci-dessus. Excepté bien sûr qu'ils trvaillent sur
+                les services et non les hôtes.
+            </para>
+        </note>
+    </section>
+    <section>
+        <title>Activation des contrôles prédictifs</title>
+        <para>Les contrôles prédictifs de dépendances n'induisent que peu de charge
+            supplementaire, aussi je recommande que vou sles activiez. Dans la plupart
+            des cas, les bénéfices d'avoir des informations exactes pour les logique de
+            dépendances contre-balance la charge supplémentaire imposée par ces
+            contrôles.
+        </para>
+        <para>Il est simple d'activer les contrôles prédictifs:</para>
+        <itemizedlist>
+            <listitem>
+                <para>Les contrôles prédictifs de dépendances d'hôtes sont gérés par l'option
+                    <xref linkend="configuringnagios-configmain-enable_predictive_host_dependency_checks"
+                    endterm="configuringnagios-configmain-enable_predictive_host_dependency_checks-tech"/>.
+                </para>
+            </listitem>
+            <listitem>
+                <para>Les contrôles prédictifs de dépendances de services sont gérés par l'option
+                    <xref linkend="configuringnagios-configmain-enable_predictive_service_dependency_checks"
+                    endterm="configuringnagios-configmain-enable_predictive_service_dependency_checks-tech"/>.
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>Contrôles mis en cache</title>
+        <para>Les contrôles prédictifs sont des contrôles faits à la demande et sont donc
+            régis par les mêmes règles que les <link linkend="advancedtopics-cachedchecks">
+            contrôles mis en cache</link>. Les contrôles mis en cache peuvent vous permettre 
+            d'améliorer les performances en autorisant Nagios a utiliser un résultat de
+            contrôle assez récent plutôt que d'exécuter le contrôle de l'hôte ou du service. 
+            Plus d'informations sur les contrôles mis en cache sont disponibles 
+            <link linkend="advancedtopics-cachedchecks">ici</link>.
+        </para>
+    </section>
 </chapter>
 
