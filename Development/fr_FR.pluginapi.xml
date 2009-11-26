@@ -7,260 +7,305 @@
 ]
 >
 <chapter id="development-pluginapi" xreflabel="Nagios Plugin API">
-	<title>API pour les plugins Nagios</title>
-	<section>
-		<title>Autres Ressources</title>
-		<para>Si vous cherchez à écrire vos propres plugins pour Nagios, soyez sûrs
-d'avoir visiter ces autres ressources:</para>
-		<itemizedlist>
-			<listitem>
-				<para>Le <ulink url="&url-sourceforge-projects;nagiosplug/">site officiel <quote>Nagios
-plugin project</quote> </ulink>
-				</para>
-			</listitem>
-			<listitem>
-				<para>Le <ulink url="http://nagiosplug.sourceforge.net/developer-guidelines.html">
-site officiel des grandes lignes du developpement des plugins Nagios</ulink>
-				</para>
-			</listitem>
-		</itemizedlist>
-	</section>
-	<section>
-		<title>Vue d'ensemble du plugin</title>
-		<para>Les scripts et exécutables doivent faire deux choses (au minimum) afin
-d'être considérés comme plugins Nagios</para>
-		<itemizedlist>
-			<listitem>
-				<para>Sortir avec une des différentes valeurs de retour possibles</para>
-			</listitem>
-			<listitem>
-				<para>Retourner au moins une ligne de texte vers le <varname>STDOUT</varname></para>
-			</listitem>
-		</itemizedlist>
-		<para>Le fonctionnement interne de votre plugin n'intéresse pas Nagios. Votre
-plugin peut contrôler l'état d'un port TCP, exécuter une requête sur une
-base de données, vérifier l'espace disque restant, ou faire tout à fait
-autre chose dont il a besoin pour effectuer son contrôle.</para>
-	</section>
-	<section>
-		<title>Code de retour</title>
-		<para>Nagios determine l'état de l'hôte ou du service en évaluant le code de
-retour du plugin. Le tableau suivant nous montre une liste des différents
-codes de retour valides, ainsi que l'état du service ou de l'hôte
-correspondant.</para>
-		<informaltable frame="all">
-			<tgroup cols="3">
-				<thead>
-					<row>
-						<entry>
-							<para>Code de retour du plugin</para>
-						</entry>
-						<entry>
-							<para>Etat du service</para>
-						</entry>
-						<entry>
-							<para>Etat de l'hôte</para>
-						</entry>
-					</row>
-				</thead>
-				<tbody>
-					<row>
-						<entry>
-							<para>0</para>
-						</entry>
-						<entry>
-							<para>OK</para>
-						</entry>
-						<entry>
-							<para>UP</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>1</para>
-						</entry>
-						<entry>
-							<para>WARNING</para>
-						</entry>
-						<entry>
-							<para>UP ou DOWN/UNREACHABLE*</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>2</para>
-						</entry>
-						<entry>
-							<para>CRITICAL</para>
-						</entry>
-						<entry>
-							<para>DOWN/UNREACHABLE</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>3</para>
-						</entry>
-						<entry>
-							<para>UNKNOWN</para>
-						</entry>
-						<entry>
-							<para>DOWN/UNREACHABLE</para>
-						</entry>
-					</row>
-				</tbody>
-			</tgroup>
-		</informaltable>
-		<note><para>Si l'option <link
+    <title>API pour les plugins Nagios</title>
+    <section>
+        <title>Autres Ressources</title>
+        <para>Si vous cherchez à écrire vos propres plugins pour Nagios, soyez sûrs
+            d'avoir visiter ces autres ressources:
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    Le 
+                    <ulink url="&url-sourceforge-projects;nagiosplug/">
+                        site officiel <quote>Nagios
+                            plugin project
+                        </quote>
+                    </ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>Le <ulink url="http://nagiosplug.sourceforge.net/developer-guidelines.html">
+                        site officiel des grandes lignes du developpement des plugins Nagios
+                    </ulink>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>Vue d'ensemble du plugin</title>
+        <para>Les scripts et exécutables doivent faire deux choses (au minimum) afin
+            d'être considérés comme plugins Nagios
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Sortir avec une des différentes valeurs de retour possibles</para>
+            </listitem>
+            <listitem>
+                <para>
+                    Retourner au moins une ligne de texte vers le <varname>STDOUT</varname>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>Le fonctionnement interne de votre plugin n'intéresse pas Nagios. Votre
+            plugin peut contrôler l'état d'un port TCP, exécuter une requête sur une
+            base de données, vérifier l'espace disque restant, ou faire tout à fait
+            autre chose dont il a besoin pour effectuer son contrôle.
+        </para>
+    </section>
+    <section>
+        <title>Code de retour</title>
+        <para>Nagios determine l'état de l'hôte ou du service en évaluant le code de
+            retour du plugin. Le tableau suivant nous montre une liste des différents
+            codes de retour valides, ainsi que l'état du service ou de l'hôte
+            correspondant.
+        </para>
+        <informaltable frame="all">
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Code de retour du plugin</para>
+                        </entry>
+                        <entry>
+                            <para>Etat du service</para>
+                        </entry>
+                        <entry>
+                            <para>Etat de l'hôte</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>0</para>
+                        </entry>
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        <entry>
+                            <para>UP</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        <entry>
+                            <para>WARNING</para>
+                        </entry>
+                        <entry>
+                            <para>UP ou DOWN/UNREACHABLE*</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>2</para>
+                        </entry>
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        <entry>
+                            <para>DOWN/UNREACHABLE</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>3</para>
+                        </entry>
+                        <entry>
+                            <para>UNKNOWN</para>
+                        </entry>
+                        <entry>
+                            <para>DOWN/UNREACHABLE</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        <note>
+            <para>
+                Si l'option <link
 linkend="configuringnagios-configmain-use_aggressive_host_checking">&config-use_aggressive_host_checking;</link>
-est activée, les codes de retour 1 donneront un état DOWN ou UNREACHABLE
-pour l'hôte. Sinon, les codes de retour 1 donneront un état UP pour
-l'hôte. Le processus par lequel Nagios détermine si une machine est DOWN ou
-UNREACHABLE est traité <link
-linkend="thebasics-networkreachability">ici</link>.</para></note>
-	</section>
-	<section>
-		<title>Spécifications pour la sortie du plugin</title>
-		<para>Au minimum, les plugins doivent retourner au moins du texte en sortie. A
-partir de Nagios 3, les plugins peuvent optionnellement retourner plusieurs
-lignes de texte en sortie. Les plugins peuvent aussi retourner
-optionnellement des données de performance qui pourront être traitées par
-une applicaiotn externe. Le format basique pour la sortie d'un plugin est
-décrit ci-dessous:</para>
-		<para>TEXT OUTPUT | OPTIONAL PERFDATALONG TEXT LINE 1LONG TEXT LINE 2…LONG TEXT
-LINE N | PERFDATA LINE 2PERFDATA LINE 3…PERFDATA LINE N</para>
-		<para>Les données de performance (ici en orange) sont optionnelles. Si un plugin
-renvoie des données de performance dans sa sortie, elles doivent être
-séparées du texte en utilisant le symbole 'pipe' ou 'tube' ( | ). Les lignes
-supplémentaires de texte de sorties (ici en bleu) sont aussi optionnelles.</para>
-	</section>
-	<section>
-		<title>Exemples de sorties de plugin</title>
-		<para>Voyons quelques exemples de sorties de plugin possibles…</para>
-		<para><emphasis role="bold">Cas 1: Une ligne en sortie (texte
-seulement)</emphasis></para><para>Imaginons que notre plugin ne retourne qu'une seule ligne de texte en
-sortie, cela ressemblerait à ceci:</para>
-		<screen>DISK OK - free space: / 3326 MB (56%);</screen>
-		<para>Si le plugin est utilisé pour effectuer un contrôle d'un service, la ligne
-entière de sortie sera écrite dans la macro <link
+                est activée, les codes de retour 1 donneront un état DOWN ou UNREACHABLE
+                pour l'hôte. Sinon, les codes de retour 1 donneront un état UP pour
+                l'hôte. Le processus par lequel Nagios détermine si une machine est DOWN ou
+                UNREACHABLE est traité <link
+linkend="thebasics-networkreachability">ici</link>.
+            </para>
+        </note>
+    </section>
+    <section>
+        <title>Spécifications pour la sortie du plugin</title>
+        <para>Au minimum, les plugins doivent retourner au moins du texte en sortie. A
+            partir de Nagios 3, les plugins peuvent optionnellement retourner plusieurs
+            lignes de texte en sortie. Les plugins peuvent aussi retourner
+            optionnellement des données de performance qui pourront être traitées par
+            une applicaiotn externe. Le format basique pour la sortie d'un plugin est
+            décrit ci-dessous:
+        </para>
+        <para>TEXT OUTPUT | OPTIONAL PERFDATALONG TEXT LINE 1LONG TEXT LINE 2…LONG TEXT
+            LINE N | PERFDATA LINE 2PERFDATA LINE 3…PERFDATA LINE N
+        </para>
+        <para>Les données de performance (ici en orange) sont optionnelles. Si un plugin
+            renvoie des données de performance dans sa sortie, elles doivent être
+            séparées du texte en utilisant le symbole 'pipe' ou 'tube' ( | ). Les lignes
+            supplémentaires de texte de sorties (ici en bleu) sont aussi optionnelles.
+        </para>
+    </section>
+    <section>
+        <title>Exemples de sorties de plugin</title>
+        <para>Voyons quelques exemples de sorties de plugin possibles…</para>
+        <para>
+            <emphasis role="bold">Cas 1: Une ligne en sortie (texte
+                seulement)
+            </emphasis>
+        </para>
+        <para>Imaginons que notre plugin ne retourne qu'une seule ligne de texte en
+            sortie, cela ressemblerait à ceci:
+        </para>
+        <screen>DISK OK - free space: / 3326 MB (56%);</screen>
+        <para>Si le plugin est utilisé pour effectuer un contrôle d'un service, la ligne
+            entière de sortie sera écrite dans la macro <link
 linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
-.</para>
-		<para><emphasis role="bold">Cas 2: Une ligne en sortie (texte et données de
-performance)</emphasis></para><para>Un plugin peut retourner optionnelement des données de performance pouvant
-être utilisées par des applications externes. Pour ce faire, les données de
-performance doivent être séparées du texte par un 'pipe' ou 'tube' ( | )
-comme ceci:</para>
-		<screen>DISK OK - free space: / 3326 MB (56%);</screen>
-		<screen>|</screen>
-		<screen>/=2643MB;5948;5958;0;5968</screen>
-		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
-rouge du message de sortie du plugin (à gauche du séparateur 'pipe') sera
-écrite dans la macro <link
+            .
+        </para>
+        <para>
+            <emphasis role="bold">Cas 2: Une ligne en sortie (texte et données de
+                performance)
+            </emphasis>
+        </para>
+        <para>Un plugin peut retourner optionnelement des données de performance pouvant
+            être utilisées par des applications externes. Pour ce faire, les données de
+            performance doivent être séparées du texte par un 'pipe' ou 'tube' ( | )
+            comme ceci:
+        </para>
+        <screen>DISK OK - free space: / 3326 MB (56%);</screen>
+        <screen>|</screen>
+        <screen>/=2643MB;5948;5958;0;5968</screen>
+        <para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
+            rouge du message de sortie du plugin (à gauche du séparateur 'pipe') sera
+            écrite dans la macro <link
 linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link> et la
-partie orange du message de sortie du plugin (à droite du séparateur 'pipe'
-) sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> .</para>
-		<para><emphasis role="bold">Cas 3: Plusieurs lignes de sortie (texte et données de
-performance)</emphasis></para><para>Un plugin peut optionnellement retourner plusieurs lignes de texte et de
-données de performance, comme suit:</para>
-		<screen>DISK OK - free space: / 3326 MB (56%); | /=2643MB;5948;5958;0;5968/ 15272 MB (77%);/boot 68 MB (69%);/home 69357 MB (27%);/var/log 819 MB (84%); | /boot=68MB;88;93;0;98/home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</screen>
-		<para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
-rouge de la première ligne du message de sortie du plugin (à gauche du
-séparateur 'pipe') sera écrite dans la macro <link
+            partie orange du message de sortie du plugin (à droite du séparateur 'pipe'
+            ) sera écrite dans la macro <link
+linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> .
+        </para>
+        <para>
+            <emphasis role="bold">Cas 3: Plusieurs lignes de sortie (texte et données de
+                performance)
+            </emphasis>
+        </para>
+        <para>Un plugin peut optionnellement retourner plusieurs lignes de texte et de
+            données de performance, comme suit:
+        </para>
+        <screen>DISK OK - free space: / 3326 MB (56%); | /=2643MB;5948;5958;0;5968/ 15272 MB (77%);/boot 68 MB (69%);/home 69357 MB (27%);/var/log 819 MB (84%); | /boot=68MB;88;93;0;98/home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</screen>
+        <para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
+            rouge de la première ligne du message de sortie du plugin (à gauche du
+            séparateur 'pipe') sera écrite dans la macro <link
 linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link> . Les
-parties oranges de la première ligne et suivantes seront concaténées (avec
-des espaces) et seront stockées dans la macro <link
+            parties oranges de la première ligne et suivantes seront concaténées (avec
+            des espaces) et seront stockées dans la macro <link
 linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> . Les
-parties bleues de la 2ème à la 5ème ligne du message de sortie du plugin
-seront concaténées (avec comme séparateur le caractère 'nouvelle ligne' [
- ] ) et seront stockées dans la macro <link
-linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link> .</para>
-		<para>Le contenu final de chaque macro est listé ci-dessous:</para>
-		<informaltable frame="all">
-			<tgroup cols="2">
-				<thead>
-					<row>
-						<entry>
-							<para>Macro</para>
-						</entry>
-						<entry>
-							<para>Valeur</para>
-						</entry>
-					</row>
-				</thead>
-				<tbody>
-					<row>
-						<entry>
-							<para>&macro-serviceoutput;</para>
-						</entry>
-						<entry>
-							<para>DISK OK - free space: / 3326 MB (56%);</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>&macro-serviceperfdata;</para>
-						</entry>
-						<entry>
-							<para>/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>&macro-longserviceoutput;</para>
-						</entry>
-						<entry>
-							<para>/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</para>
-						</entry>
-					</row>
-				</tbody>
-			</tgroup>
-		</informaltable>
-		<para>Dans le cas de plusieurs lignes en sortie, vous disposez des options
-suivantes pour retourner les données de performance:</para>
-		<itemizedlist>
-			<listitem>
-				<para>Vous pouvez choisir de ne pas retourner de données de performance</para>
-			</listitem>
-			<listitem>
-				<para>Vous pouvez retourner des données de performances seulement sur la première
-ligne</para>
-			</listitem>
-			<listitem>
-				<para>Vous pouvez retourner des données de performance seulement sur les lignes
-suivantes (après la première)</para>
-			</listitem>
-			<listitem>
-				<para>Vous pouvez retourner des données de performance aussi bien sur la première
-ligne que les suivantes (comme montré si dessous)</para>
-			</listitem>
-		</itemizedlist>
-	</section>
-	<section>
-		<title>Restriction de longueur de message de sortie de plugin</title>
-		<para>Nagios ne lira que les premiers 4KB des données qui seront retournées par le
-plugin. Ceci dans le but d'empêcher les plugins à déverser des Mégas ou des
-Gigas de données à Nagios. Cette limite de 4KB est assez facile à modifier
-si vous en ressentez le besoin. Il suffit de modifier la valeur de la
-définition nommée <literal>MAX_PLUGIN_OUTPUT_LENGTH</literal> dans le fichier
-<filename>include/nagios.h.in</filename> du code source et de recompiler Nagios. Il n'y a rien
-d'autre à faire!</para>
-	</section>
-	<section>
-		<title>Exemples</title>
-		<para>Si vous êtes à la recherche d'exemples de plugins à étudier, Je vous
-recommande de télécharger les plugins officiels Nagios et de jeter un œil
-sur les différents scripts des plugins en C, Perl ou encore Shell. Des
-information sur l'obtention des plugins Nagios officiels peuvent être
-trouvées <link linkend="thebasics-plugins">ici</link>.</para>
-	</section>
-	<section>
-		<title>Plugins Perl</title>
-		<para>Nagios peut utiliser en option un <link
+            parties bleues de la 2ème à la 5ème ligne du message de sortie du plugin
+            seront concaténées (avec comme séparateur le caractère 'nouvelle ligne' [
+            ] ) et seront stockées dans la macro <link
+linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link> .
+        </para>
+        <para>Le contenu final de chaque macro est listé ci-dessous:</para>
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Macro</para>
+                        </entry>
+                        <entry>
+                            <para>Valeur</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>&macro-serviceoutput;</para>
+                        </entry>
+                        <entry>
+                            <para>DISK OK - free space: / 3326 MB (56%);</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>&macro-serviceperfdata;</para>
+                        </entry>
+                        <entry>
+                            <para>/=2643MB;5948;5958;0;5968 /boot=68MB;88;93;0;98 /home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>&macro-longserviceoutput;</para>
+                        </entry>
+                        <entry>
+                            <para>/ 15272 MB (77%);\n/boot 68 MB (69%);\n/var/log 819 MB (84%);</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        <para>Dans le cas de plusieurs lignes en sortie, vous disposez des options
+            suivantes pour retourner les données de performance:
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Vous pouvez choisir de ne pas retourner de données de performance</para>
+            </listitem>
+            <listitem>
+                <para>Vous pouvez retourner des données de performances seulement sur la première
+                    ligne
+                </para>
+            </listitem>
+            <listitem>
+                <para>Vous pouvez retourner des données de performance seulement sur les lignes
+                    suivantes (après la première)
+                </para>
+            </listitem>
+            <listitem>
+                <para>Vous pouvez retourner des données de performance aussi bien sur la première
+                    ligne que les suivantes (comme montré si dessous)
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>Restriction de longueur de message de sortie de plugin</title>
+        <para>Nagios ne lira que les premiers 4KB des données qui seront retournées par le
+            plugin. Ceci dans le but d'empêcher les plugins à déverser des Mégas ou des
+            Gigas de données à Nagios. Cette limite de 4KB est assez facile à modifier
+            si vous en ressentez le besoin. Il suffit de modifier la valeur de la
+            définition nommée <literal>MAX_PLUGIN_OUTPUT_LENGTH</literal> dans le fichier
+            <filename>include/nagios.h.in</filename> du code source et de recompiler Nagios. Il n'y a rien
+            d'autre à faire!
+        </para>
+    </section>
+    <section>
+        <title>Exemples</title>
+        <para>Si vous êtes à la recherche d'exemples de plugins à étudier, Je vous
+            recommande de télécharger les plugins officiels Nagios et de jeter un œil
+            sur les différents scripts des plugins en C, Perl ou encore Shell. Des
+            information sur l'obtention des plugins Nagios officiels peuvent être
+            trouvées <link linkend="thebasics-plugins">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Plugins Perl</title>
+        <para>
+            Nagios peut utiliser en option un <link
 linkend="advancedtopics-embeddedperl">interpréteur Perl intégré</link> qui
-peut accélérer l'exécution des plugins codés en Perl. Plus d'informations
-sur le développement des plugins en Perl utilisant l'interpréteur Perl
-intégré disponibles <link linkend="advancedtopics-embeddedperl">ici</link>.</para>
-	</section>
+            peut accélérer l'exécution des plugins codés en Perl. Plus d'informations
+            sur le développement des plugins en Perl utilisant l'interpréteur Perl
+            intégré disponibles <link linkend="advancedtopics-embeddedperl">ici</link>.
+        </para>
+    </section>
 </chapter>
 
