@@ -8,314 +8,557 @@
 >
 <chapter id="securityandperformancetuning-mrtggraphs"
      xreflabel="Graphing Performance Info With MRTG">
- <title>Grapher les informations de performance avec MRTG</title>
-
- <section>
-  <title>Introduction</title>
-
-  <para>L'utilitaire <link
+    <title>Grapher les informations de performance avec MRTG</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>
+            L'utilitaire <link
 linkend="securityandperformancetuning-nagiostats">nagiostats</link> vous permet de grapher divers statisques de performance dans le
-temps en utilisant <ulink
-url="http://oss.oetiker.ch/mrtg/"><application><acronym>MRTG</acronym></application></ulink><indexterm><primary>MRTG</primary></indexterm>. Ceci est important car il peut vous aider à:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Assurer le bon fonctionnement de Nagios</para>
-   </listitem>
-
-   <listitem>
-    <para>Localiser les problèmes dans le processus de supervision</para>
-   </listitem>
-
-   <listitem>
-    <para>Observez la performance des impacts des changements dans votre configuration
-de Nagios</para>
-   </listitem>
-  </itemizedlist>
- </section>
-
- <section>
-  <title>Exemple de configuration MRTG</title>
-
-  <para>Un fichier d'exemple de configuration &acronym-mrtg; pour grapher quelques
-statistiques Nagios de performance peut être trouvé dans le fichier
-<filename>mrtg.cfg</filename> situé dans le sous-répertoire <filename
+            temps en utilisant 
+            <ulink
+url="http://oss.oetiker.ch/mrtg/">
+                <application>
+                    <acronym>MRTG</acronym>
+                </application>
+            </ulink>
+            <indexterm>
+                <primary>MRTG</primary>
+            </indexterm>
+            .Ceci est important car il peut vous aider à:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Assurer le bon fonctionnement de Nagios</para>
+            </listitem>
+            
+            <listitem>
+                <para>Localiser les problèmes dans le processus de supervision</para>
+            </listitem>
+            
+            <listitem>
+                <para>Observez la performance des impacts des changements dans votre configuration
+                    de Nagios
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    
+    <section>
+        <title>Exemple de configuration MRTG</title>
+        
+        <para>Un fichier d'exemple de configuration &acronym-mrtg; pour grapher quelques
+            statistiques Nagios de performance peut être trouvé dans le fichier
+            <filename>mrtg.cfg</filename> situé dans le sous-répertoire <filename
 class="directory">sample-config/</filename> du package Nagios. Vous pouvez
-créer des graphs d'autres informations de performance si vous voulez - Les
-exemples vous donnent juste un bon point de départ.</para>
-
-  <para>Une fois que vous aurez copié ces exemples d'entrées dans votre fichier de
-configuration &acronym-mrtg; (<filename>/etc/mrtg/mrtg.cfg</filename>), vous devriez
-avoir des nouveaux graphiques, la prochaine fois que &acronym-mrtg; fonctionnera.</para>
- </section>
-
- <section>
-  <title>Exemples de graphiques</title>
-
-  <para>Je vais décrire ce que quelques-uns des graphiques &acronym-mrtg; signifient et à quoi
-ils peuvent être utilisés…</para>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Les contrôles actifs des hôtes - Ce graphique montre comment les contrôles
-actifs d'hôtes (réguliers et sur demande) ont eu lieu au cours du
-temps. Utiles pour la compréhension:</para> <itemizedlist>
-        <listitem>
-         <para><link
-linkend="thebasics-hostchecks">Des contrôles d'hôte</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="advancedtopics-dependencychecks">Des contrôles de
-prédiction de dépendance d'hôte</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-activehostchecks.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Les contrôles actifs des services - Ce graphique montre comment les
-contrôles des services actifs (réguliers et sur demande) ont eu lieu au
-cours du temps. Utiles pour la compréhension:</para> <itemizedlist>
-        <listitem>
-         <para><link linkend="thebasics-servicechecks">Des contrôles de service</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="advancedtopics-dependencychecks">Des contrôles de
-prédiction de dépendance de service</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-activeservicechecks.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Les contrôles d'hôtes et de services mis en cache - Ce graphique montre
-comment les contrôles d'hôtes et de services mis en cache ont eu lieu dans
-le temps. Utiles pour la compréhension:</para> <itemizedlist>
-        <listitem>
-         <para><link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="advancedtopics-dependencychecks">Des contrôles de
-prédiction de dépendance d'hôte et de service</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-cachedchecks.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Les contrôles passifs des services - Ce graphique montre comment les
-contrôles des services passifs ont eu lieu au cours du temps. Utiles pour la
-compréhension:</para> <itemizedlist>
-        <listitem>
-         <para><link linkend="thebasics-passivechecks">Des contrôles passifs</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-passivechecks.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Les hôtes/services actifs contrôlés - Ce graphique montre combien (d'un
-nombre total de) d'hôte et de services ont été contrôlés activement dans le
-temps. Utiles pour la compréhension:</para>
-      <itemizedlist>
-        <listitem>
-         <para><link linkend="thebasics-activechecks">Des contrôles actifs</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-activelychecked.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Les hôtes/services passifs contrôlés - Ce graphique montre combien (d'un
-nombre total de) d'hôte et de services ont été contrôlés passivement dans le
-temps. Utiles pour la compréhension:</para>
-      <itemizedlist>
-        <listitem>
-         <para><link linkend="thebasics-passivechecks">Des contrôles passifs</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-passivelychecked.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>La latence et le temps d'exécution d'un contrôle de service - Ce graphique
-montre la latence moyenne et le temps moyen de l'exécution d'un contrôle de
-service dans le temps. Utiles pour la compréhension:</para> <itemizedlist>
-        <listitem>
-         <para><link linkend="thebasics-servicechecks">Des contrôles de service</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="securityandperformancetuning-tuning">De l'optimisation des
-performances</link></para>
-        </listitem>
-       </itemizedlist> <para>Une forte latence persistente peut être l'indication qu'une ou plusieurs des
-variables suivantes a/ont besoin d'être modifiée(s):</para> <itemizedlist>
-        <listitem>
-         <para><link
-linkend="configuringnagios-configmain-max_concurrent_checks">&config-max_concurrent_checks;</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link
-linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link
-linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-serviceperfstats.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Le taux moyen de changement d'état des services - Ce graphique montre le
-pourcentage moyen de changement d'état (une valeur de la volatilité) des
-services au cours du temps, ventilés par les services qui ont été contrôlés
-en dernier activement ou passivement. Utiles pour la compréhension:</para>
-      <itemizedlist>
-        <listitem>
-         <para><link linkend="advancedtopics-flapping">Détection d'oscillation</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-servicestatechange.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>La latence et le temps d'exécution d'un contrôle d'un hôte - Ce graphique
-montre la latence moyenne et le temps moyen de l'exécution d'un contrôle
-d'hôte dans le temps. Utiles pour la compréhension:</para> <itemizedlist>
-        <listitem>
-         <para><link linkend="thebasics-hostchecks"> Des contrôles d'hôte</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="securityandperformancetuning-tuning">De l'optimisation des
-performances</link></para>
-        </listitem>
-       </itemizedlist> <para>Une forte latence persistente peut être l'indication qu'une ou plusieurs des
-variables suivantes a/ont besoin d'être modifiée(s):</para> <itemizedlist>
-        <listitem>
-         <para><link
-linkend="configuringnagios-configmain-max_concurrent_checks">&config-max_concurrent_checks;</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link
-linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link
-linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-hostperfstats.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Le taux moyen de changement d'état des hôtes - Ce graphique montre le
-pourcentage moyen de changement d'état (une valeur de la volatilité) des
-hôtes au cours du temps, ventilés par les hôtes qui ont été contrôlés en
-dernier activement ou passivement. Utiles pour la compréhension:</para>
-      <itemizedlist>
-        <listitem>
-         <para><link linkend="advancedtopics-flapping">Flap detection</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-hoststatechange.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Les commandes externes - Ce graphique montre comment les commandes externes
-ont été traitées par le démon Nagios dans le temps. A moins que vous
-traitiez un grand nombre de commandes externes (comme dans le cas d'une
-architecture de supervision distribuée), ce graphique semble rester vide. La
-supervision des commandes externes peut être utile pour la cromprehension
-des impacts de:</para> <itemizedlist>
-        <listitem>
-         <para><link linkend="thebasics-passivechecks">Des contrôles passifs</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="advancedtopics-distributed">La supervision distribuée</link></para>
-        </listitem>
-
-        <listitem>
-         <para><link linkend="advancedtopics-redundancy">Redondance/Basculement en cas de
-panne de la supervision</link></para>
-        </listitem>
-       </itemizedlist></entry>
-
-      <entry><para> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-externalcommands.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-
-     <row>
-      <entry><para>Les tampons de Commandes Externes - Ce graphique montre comment les
-emplacements mémoire des tampon de commandes externes sont utilisés dans le
-temps. Si le nombre des tampons utilisés est proche du nombre de tampons
-disponibles, il semblerait qu'il faille augmenter le nombre d'emplacement
-mémoire pour les <link
+            créer des graphs d'autres informations de performance si vous voulez - Les
+            exemples vous donnent juste un bon point de départ.
+        </para>
+        
+        <para>Une fois que vous aurez copié ces exemples d'entrées dans votre fichier de
+            configuration &acronym-mrtg; (<filename>/etc/mrtg/mrtg.cfg</filename>), vous devriez
+            avoir des nouveaux graphiques, la prochaine fois que &acronym-mrtg; fonctionnera.
+        </para>
+    </section>
+    
+    <section>
+        <title>Exemples de graphiques</title>
+        
+        <para>Je vais décrire ce que quelques-uns des graphiques &acronym-mrtg; signifient et à quoi
+            ils peuvent être utilisés…
+        </para>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Les contrôles actifs des hôtes - Ce graphique montre comment les contrôles
+                                actifs d'hôtes (réguliers et sur demande) ont eu lieu au cours du
+                                temps. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link
+linkend="thebasics-hostchecks">Des contrôles d'hôte</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-dependencychecks">Des contrôles de
+                                            prédiction de dépendance d'hôte
+                                        </link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-activehostchecks.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Les contrôles actifs des services - Ce graphique montre comment les
+                                contrôles des services actifs (réguliers et sur demande) ont eu lieu au
+                                cours du temps. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="thebasics-servicechecks">Des contrôles de service</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-dependencychecks">Des contrôles de
+                                            prédiction de dépendance de service
+                                        </link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-activeservicechecks.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Les contrôles d'hôtes et de services mis en cache - Ce graphique montre
+                                comment les contrôles d'hôtes et de services mis en cache ont eu lieu dans
+                                le temps. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-dependencychecks">Des contrôles de
+                                            prédiction de dépendance d'hôte et de service
+                                        </link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-cachedchecks.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Les contrôles passifs des services - Ce graphique montre comment les
+                                contrôles des services passifs ont eu lieu au cours du temps. Utiles pour la
+                                compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="thebasics-passivechecks">Des contrôles passifs</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-passivechecks.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Les hôtes/services actifs contrôlés - Ce graphique montre combien (d'un
+                                nombre total de) d'hôte et de services ont été contrôlés activement dans le
+                                temps. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="thebasics-activechecks">Des contrôles actifs</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-activelychecked.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Les hôtes/services passifs contrôlés - Ce graphique montre combien (d'un
+                                nombre total de) d'hôte et de services ont été contrôlés passivement dans le
+                                temps. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="thebasics-passivechecks">Des contrôles passifs</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-passivelychecked.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>La latence et le temps d'exécution d'un contrôle de service - Ce graphique
+                                montre la latence moyenne et le temps moyen de l'exécution d'un contrôle de
+                                service dans le temps. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="thebasics-servicechecks">Des contrôles de service</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="securityandperformancetuning-tuning">De l'optimisation des
+                                            performances
+                                        </link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                             <para>Une forte latence persistente peut être l'indication qu'une ou plusieurs des
+                                variables suivantes a/ont besoin d'être modifiée(s):
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link
+linkend="configuringnagios-configmain-max_concurrent_checks">&config-max_concurrent_checks;</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link
+linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link
+linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata
+fileref="images/mrtg-serviceperfstats.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Le taux moyen de changement d'état des services - Ce graphique montre le
+                                pourcentage moyen de changement d'état (une valeur de la volatilité) des
+                                services au cours du temps, ventilés par les services qui ont été contrôlés
+                                en dernier activement ou passivement. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-flapping">Détection d'oscillation</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata
+fileref="images/mrtg-servicestatechange.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>La latence et le temps d'exécution d'un contrôle d'un hôte - Ce graphique
+                                montre la latence moyenne et le temps moyen de l'exécution d'un contrôle
+                                d'hôte dans le temps. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="thebasics-hostchecks"> Des contrôles d'hôte</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="securityandperformancetuning-tuning">De l'optimisation des
+                                            performances
+                                        </link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                             <para>Une forte latence persistente peut être l'indication qu'une ou plusieurs des
+                                variables suivantes a/ont besoin d'être modifiée(s):
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link
+linkend="configuringnagios-configmain-max_concurrent_checks">&config-max_concurrent_checks;</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link
+linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link
+linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-hostperfstats.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Le taux moyen de changement d'état des hôtes - Ce graphique montre le
+                                pourcentage moyen de changement d'état (une valeur de la volatilité) des
+                                hôtes au cours du temps, ventilés par les hôtes qui ont été contrôlés en
+                                dernier activement ou passivement. Utiles pour la compréhension:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-flapping">Flap detection</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-hoststatechange.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Les commandes externes - Ce graphique montre comment les commandes externes
+                                ont été traitées par le démon Nagios dans le temps. A moins que vous
+                                traitiez un grand nombre de commandes externes (comme dans le cas d'une
+                                architecture de supervision distribuée), ce graphique semble rester vide. La
+                                supervision des commandes externes peut être utile pour la cromprehension
+                                des impacts de:
+                            </para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <link linkend="thebasics-passivechecks">Des contrôles passifs</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-distributed">La supervision distribuée</link>
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        <link linkend="advancedtopics-redundancy">Redondance/Basculement en cas de
+                                            panne de la supervision
+                                        </link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                        <imagedata
+fileref="images/mrtg-externalcommands.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>Les tampons de Commandes Externes - Ce graphique montre comment les
+                                emplacements mémoire des tampon de commandes externes sont utilisés dans le
+                                temps. Si le nombre des tampons utilisés est proche du nombre de tampons
+                                disponibles, il semblerait qu'il faille augmenter le nombre d'emplacement
+                                mémoire pour les <link
 linkend="configuringnagios-configmain-external_command_buffer_slots">tampons
-de commandes externes</link>. Chaque emplacement mémoire d'un tampon peut
-contenir une commande externe. Les tampons sont utilisés pour garder
-temporairement en mémoire les commandes externes du moment où elles ont été
-lues à partir du <link
+                                    de commandes externes
+                                </link>
+                                .Chaque emplacement mémoire d'un tampon peut
+                                contenir une commande externe. Les tampons sont utilisés pour garder
+                                temporairement en mémoire les commandes externes du moment où elles ont été
+                                lues à partir du <link
 linkend="configuringnagios-configmain-command_file">fichier de commandes
-externes</link> jusqu'à ce qu'elles soient traitées par le démon Nagios.</para></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata
-fileref="images/mrtg-commandbuffers.png" format="PNG"/> </imageobject>
-</inlinemediaobject> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
+                                    externes
+                                </link>
+                                jusqu'à ce qu'elles soient traitées par le démon Nagios.
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata
+fileref="images/mrtg-commandbuffers.png" format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
 </chapter>
