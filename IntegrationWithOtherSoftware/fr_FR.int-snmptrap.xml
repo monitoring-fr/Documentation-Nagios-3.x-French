@@ -8,30 +8,32 @@
 >
 <chapter id="integrationwithothersoftware-int-snmptrap"
      xreflabel="SNMP Trap Integration">
- <title>Intégration des interruptions SNMP</title>
-
- <section>
-  <title>Introduction</title>
-
-  <note>
-   <para>Nagios n'est pas prévu pour remplacer une application de gestion dédiée
-&protocol-snmp; comme HP OpenView ou <ulink
+    <title>Intégration des interruptions SNMP</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <note>
+            <para>Nagios n'est pas prévu pour remplacer une application de gestion dédiée
+                &protocol-snmp; comme HP OpenView ou <ulink
 url="http://www.opennms.org/">OpenNMS</ulink>. Quoique qu'il en soit, vous
-pouvez régler les choses de façon à ce qu'une interruption &protocol-snmp;
-reçu par un des hôtes de votre réseau puisse générer une alerte dans Nagios.</para>
-  </note>
-
-  <para>Comme si il avait été prévu pour faire mourir de rire les Dieux de
-l'Hypocrisie, &protocol-snmp; est tout sauf simple. Traduire les
-interruptions &protocol-snmp; et les recevoir dans Nagios (comme résultat de
-contrôle passif) peu têtre assez pénible. Pour rendre les choses un peu plus
-facile, je vous propose de regarder du côté du projet de Alex Burger,
-&protocol-snmp; Trap Translator situé à <ulink
+                pouvez régler les choses de façon à ce qu'une interruption &protocol-snmp;
+                reçu par un des hôtes de votre réseau puisse générer une alerte dans Nagios.
+            </para>
+        </note>
+        
+        <para>Comme si il avait été prévu pour faire mourir de rire les Dieux de
+            l'Hypocrisie, &protocol-snmp; est tout sauf simple. Traduire les
+            interruptions &protocol-snmp; et les recevoir dans Nagios (comme résultat de
+            contrôle passif) peu têtre assez pénible. Pour rendre les choses un peu plus
+            facile, je vous propose de regarder du côté du projet de Alex Burger,
+            &protocol-snmp; Trap Translator situé à <ulink
 url="http://www.snmptt.org/">http://www.snmptt.org</ulink>. Combiné avec
-Net-&protocol-snmp;, SNMPTT fournit un système de gestion des interruptions
-amélioré qui peut être intégré à Nagios.</para>
-
-  <para>Oui, c'est tout.</para>
- </section>
+            Net-&protocol-snmp;, SNMPTT fournit un système de gestion des interruptions
+            amélioré qui peut être intégré à Nagios.
+        </para>
+        
+        <para>Oui, c'est tout.</para>
+    </section>
 </chapter>
 

@@ -7,110 +7,122 @@
 ]
 >
 <chapter id="integrationwithothersoftware-integration" xreflabel="Integration Overview">
-	<title>Vue générale de l'intégration</title>
-	<section>
-		<title>Introduction</title>
-		<para>Une des raisons de la popularité de Nagios comme logiciel de supervision est
-sa capacité à s'intégrer à votre infrasctuture existante. Il y a plusieurs
-méthodes pour intégrer Nagios avec le logiciel de gestion d'infrastructure
-que vous utilisez déjà et vous pouvez supervisez quasiment n'importe quel
-type de matériel, nouveau ou personnalisé ainsi que les applications que
-vous possédez.</para>
-	</section>
-	<section>
-		<title>Les points d'intégration</title>
-		<para>
-		<informalfigure>
-		<mediaobject>
-    <imageobject>
-     <imagedata fileref="images/integrationoverview.png" format="PNG"/>
-    </imageobject>
-   </mediaobject>
-   </informalfigure>
-			Pour superviser de nouveaux matériels, services ou applications, regardez
-les documentations sur :</para>
-		<itemizedlist>
-			<listitem>
-				<para>
-<link linkend="thebasics-plugins">Les plugins</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-<link linkend="thebasics-plugins">Le développement de plugin</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-<link linkend="thebasics-passivechecks">Les contrôles passifs</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-<link linkend="advancedtopics-eventhandlers">Le gestionnaire
-d'événements</link>
-				</para>
-			</listitem>
-		</itemizedlist>
-		<para>Pour recevoir dans Nagios les données d'appplications externes, regardez les
-documentations suivantes sur :</para>
-		<itemizedlist>
-			<listitem>
-				<para>
-<link linkend="thebasics-passivechecks">Les contrôles passifs</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-<link linkend="advancedtopics-extcommands">Les commandes externes</link>
-				</para>
-			</listitem>
-		</itemizedlist>
-		<para>Pour envoyer des états, données de performance ou des notifications de
-Nagios vers des appplications externes, regardez les documentations
-suivantes sur :</para>
-		<itemizedlist>
-			<listitem>
-				<para>
-<link linkend="advancedtopics-eventhandlers">Le gestionnaire
-d'événements</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					Les commandes <link
+    <title>Vue générale de l'intégration</title>
+    <section>
+        <title>Introduction</title>
+        <para>Une des raisons de la popularité de Nagios comme logiciel de supervision est
+            sa capacité à s'intégrer à votre infrasctuture existante. Il y a plusieurs
+            méthodes pour intégrer Nagios avec le logiciel de gestion d'infrastructure
+            que vous utilisez déjà et vous pouvez supervisez quasiment n'importe quel
+            type de matériel, nouveau ou personnalisé ainsi que les applications que
+            vous possédez.
+        </para>
+    </section>
+    <section>
+        <title>Les points d'intégration</title>
+        <para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/integrationoverview.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </informalfigure>
+            Pour superviser de nouveaux matériels, services ou applications, regardez
+            les documentations sur :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-plugins">Les plugins</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-plugins">Le développement de plugin</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-passivechecks">Les contrôles passifs</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="advancedtopics-eventhandlers">Le gestionnaire
+                        d'événements
+                    </link>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>Pour recevoir dans Nagios les données d'appplications externes, regardez les
+            documentations suivantes sur :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-passivechecks">Les contrôles passifs</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="advancedtopics-extcommands">Les commandes externes</link>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>Pour envoyer des états, données de performance ou des notifications de
+            Nagios vers des appplications externes, regardez les documentations
+            suivantes sur :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <link linkend="advancedtopics-eventhandlers">Le gestionnaire
+                        d'événements
+                    </link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Les commandes <link
 linkend="configuringnagios-configmain-ocsp_command">OCSP</link> et <link
-linkend="configuringnagios-configmain-ochp_command">OCHP</link></para>
-			</listitem>
-			<listitem>
-				<para>
-<link linkend="advancedtopics-perfdata">Les données de performance</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-<link linkend="thebasics-notifications">Les notifications</link>
-				</para>
-			</listitem>
-		</itemizedlist>
-		
-	</section>
-	<section>
-		<title>Exemples d'intégration</title>
-		<para>J'ai documenté quelques exemples d'intégration de Nagios avec des
-applications tierces :</para>
-		<itemizedlist>
-			<listitem>
-				<para>
-					<link linkend="integrationwithothersoftware-int-tcpwrappers">Intégration
-d'un TCP Wrapper</link></para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="integrationwithothersoftware-int-snmptrap">Intégration de
-UCD-SNMP (statut de job Arcserve)</link></para>
-			</listitem>
-		</itemizedlist>
-	</section>
+linkend="configuringnagios-configmain-ochp_command">OCHP</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="advancedtopics-perfdata">Les données de performance</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-notifications">Les notifications</link>
+                </para>
+            </listitem>
+        </itemizedlist>
+        
+    </section>
+    <section>
+        <title>Exemples d'intégration</title>
+        <para>J'ai documenté quelques exemples d'intégration de Nagios avec des
+            applications tierces :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <link linkend="integrationwithothersoftware-int-tcpwrappers">Intégration
+                        d'un TCP Wrapper
+                    </link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="integrationwithothersoftware-int-snmptrap">Intégration de
+                        UCD-SNMP (statut de job Arcserve)
+                    </link>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
 </chapter>
 
