@@ -266,9 +266,6 @@ linkend="configuringnagios-configmain-external_command_buffer_slots">tampon
                     passifs, vous pouvez aboutir à une situation où le tampon est toujours
                     plein. Le résultat est que les processus enfant (scripts externes, démon
                     &name-nsca;
-                    <indexterm>
-                        <primary>&name-nsca;</primary>
-                    </indexterm>
                     ,etc.)sont bloqués quand ils essayent d'écrire dans le fichier
                     de commandes externes. Je vous recommande fortement de grapher le tampon
                     pour les tubes de redirections en utilisant &acronym-mrtg; et l'utilitaire nagiostats

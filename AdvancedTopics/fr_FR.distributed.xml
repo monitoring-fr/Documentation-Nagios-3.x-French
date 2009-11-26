@@ -98,16 +98,10 @@ linkend="thebasics-passivechecks">contrôles passifs</link>), mais je n'ai
         <para>Afin de faciliter l'envoi de résultats de contrôles passifs à un hôte
             distant, j'ai écrit le module complémentaire <link
 linkend="nagiosaddons-addons-nsca">&name-nsca;</link>
-            <indexterm>
-                <primary>&name-nsca;</primary>
-            </indexterm>
             .Il contient deux parties. La
             première est un programme client (<command>send_nsca</command>) qui tourne sur un hôte distant
             et envoi les résultats de contrôles de service à un autre serveur. La
             seconde est le démon &name-nsca;
-            <indexterm>
-                <primary>&name-nsca;</primary>
-            </indexterm>
             (<application>nsca</application>) qui fonctionne, soit comme un démon
             autonome, soit sous inetd, et écoute les connections des programmes du
             client. Après avoir reçu l'information de contrôle de service de la part

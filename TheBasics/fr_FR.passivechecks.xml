@@ -315,22 +315,13 @@ linkend="configuringnagios-configmain-passive_host_checks_are_soft">&config-pass
         <para>Pour permettre aux hôtes distants d'envoyer leurs résultats de contrôles
             passifs au serveur de supervision, j'ai développé un agent du nom <link
 linkend="nagiosaddons-addons-nsca">&name-nsca;</link>
-            <indexterm>
-                <primary>&name-nsca;</primary>
-            </indexterm>
             .L'agent &name-nsca;
-            <indexterm>
-                <primary>&name-nsca;</primary>
-            </indexterm>
             se compose d'un démon tournant sur le serveur Nagios et un client qui est
             exécuté des hôtes distants. Le démon écoutera toutes les connections des
             hôtes distants, exécutera quelques validations fondamentale sur les
             résultats lui étant soumis et écrira ensuite les résultats des contrôles
             directement dans le fichier de commandes externes (comme décrit
             au-dessus). Plus de renseignements sur l'agent &name-nsca;
-            <indexterm>
-                <primary>&name-nsca;</primary>
-            </indexterm>
             peut être trouvé
             <link linkend="nagiosaddons-addons-nsca">ici</link>.
         </para>

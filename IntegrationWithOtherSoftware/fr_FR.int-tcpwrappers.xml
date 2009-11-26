@@ -29,9 +29,6 @@
             modifications à l'exemple que je vous propose. Je suppose également que vous
             avez installé le démon <application>nsca</application> sur la machine de surpervision et le client
             &name-nsca;
-            <indexterm>
-                <primary>&name-nsca;</primary>
-            </indexterm>
             (<command>send_nsca</command>) sur la machine qui génère les alertes TCP wrappers.
         </para>
         
@@ -63,14 +60,8 @@ linkend="advancedtopics-volatileservices" /> et comment les utiliser.
             <listitem>
                 <para>
                     Vous avez installé <link linkend="nagiosaddons-addons-nsca">&name-nsca;</link>
-                    <indexterm>
-                        <primary>&name-nsca;</primary>
-                    </indexterm>
                     sur votre
                     serveur de supervision et le client &name-nsca;
-                    <indexterm>
-                        <primary>&name-nsca;</primary>
-                    </indexterm>
                     (<command>send_nsca</command>) sur la machine distance qui enverra des
                     alertes TCP Wrapper.
                 </para>
