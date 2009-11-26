@@ -6,7 +6,7 @@
  %all.entities;
 ]
 >
-<chapter id="advancedtopics-extcommands" xreflabel="External Commands">
+<chapter id="advancedtopics-extcommands" xreflabel="Commandes externes">
     <title>Commandes externes</title>
     <section>
         <title>Introduction</title>
@@ -31,20 +31,23 @@
         <itemizedlist>
             <listitem>
                 <para>
-                    Activer le contrôle des commandes externes à l'aide de l'option <link
-linkend="configuringnagios-configmain-check_external_commands">&config-check_external_commands;</link>
+                    Activer le contrôle des commandes externes à l'aide de l'option 
+                    <xref linkend="configuringnagios-configmain-check_external_commands"
+                    endterm="configuringnagios-configmain-check_external_commands-tech"/>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Régler la fréquence des contrôles de commande à l'aide de l'option <link
-linkend="configuringnagios-configmain-command_check_interval">&config-command_check_interval;</link>
+                    Régler la fréquence des contrôles de commande à l'aide de l'option
+                    <xref linkend="configuringnagios-configmain-command_check_interval"
+                    endterm="configuringnagios-configmain-command_check_interval-tech"/>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Préciser l'emplacement du fichier de commandes à l'aide de l'option <link
-linkend="configuringnagios-configmain-command_file">&config-command_file;</link> .
+                    Préciser l'emplacement du fichier de commandes à l'aide de l'option 
+                    <xref linkend="configuringnagios-configmain-command_file"
+                    endterm="configuringnagios-configmain-command_file-tech"/>.
                 </para>
             </listitem>
             <listitem>
@@ -60,15 +63,15 @@ linkend="configuringnagios-configmain-command_file">&config-command_file;</link>
         <itemizedlist>
             <listitem>
                 <para>
-                    A intervalles réguliers précisés par l'option <link
-linkend="configuringnagios-configmain-command_check_interval">&config-command_check_interval;</link>
+                    A intervalles réguliers précisés par l'option 
+                    <link linkend="configuringnagios-configmain-command_check_interval"
+                    endterm="configuringnagios-configmain-command_check_interval-tech"/>
                     du fichier de configuration principal.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Immédiatement après que les <link
-linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
+                    Immédiatement après que les <link linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
                     soient exécutés. Cela s'effectue en plus du cycle régulier des contrôles de
                     commandes externes et sert à fournir une action immédiate si un gestionnaire
                     d'événement soumet des commandes à Nagios.
@@ -89,25 +92,23 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
     <section>
         <title>Format des commandes</title>
         <para>
-            Les commandes externes écrites pour le <link
-linkend="configuringnagios-configmain-command_file">fichier de
-                commande
-            </link>
+            Les commandes externes écrites pour le 
+            <link linkend="configuringnagios-configmain-command_file">fichier de commande</link>
             suivent le format suivant :
         </para>
         <programlisting>[time] command_id;command_arguments</programlisting>
         <para>
-            …où time est l'heure (au format <option>time_t</option> à laquelle l'application externe ou le &acronym-cgi; a envoyé la commande externe au
+            …où time est l'heure (au format <literal>time_t</literal> à laquelle 
+            l'application externe ou le &acronym-cgi; a envoyé la commande externe au
             fichier de commande. Certaines des commandes disponibles sont décrites dans
-            le tableau ci-dessous, ainsi que leur <option>command_id et une description de leurs </option> 
-            et <option>command_arguments.</option> Les arguments dépendent de la commande qui sera soumisse à Nagios.
+            le tableau ci-dessous, ainsi que leur <option>command_id</option> et une description de leurs !!! FIXME !!!  
+            et <option>command_arguments.</option> Les arguments dépendent de la commande qui sera soumise à Nagios.
         </para>
         <para>Un listing complet des commandes externes qui peuvent être utilisées (ainsi
             que des exemples d'utilisation) sont en ligne à l'adresse suivante:
         </para>
         <para>
-            <ulink
-url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/externalcommands/</ulink>
+            <ulink url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/externalcommands/</ulink>
         </para>
     </section>
 </chapter>
