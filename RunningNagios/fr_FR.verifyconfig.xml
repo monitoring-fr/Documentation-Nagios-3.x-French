@@ -7,33 +7,37 @@
 ]
 >
 <chapter id="runningnagios-verifyconfig" xreflabel="Verifying Your Configuration">
-	<title>Vérification de votre configuration</title>
-	<section>
-		<title>Vérification de votre configuration</title>
-		<para>Vous devriez vérifier votre configuration à chaque fois que vous modifiez
-votre <link linkend="configuringnagios-config">fichier de configuration</link>. C'est important de le
-faire avant de (re)démarrer Nagios, car Nagios ne démarrera pas si votre
-configuration contient des erreurs.</para>
-		<para>Afin de vérifier votre configuration, exécutez Nagios en ligne de commandes avec l'option
- <option>-v</option> comme suit:</para>
-		<screen>
-<prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
-</screen>
-		<para>Si vous avez oublié de saisir certaines données critiques ou avez des choses
-mal configurées, Nagios vous indiquera par des messages de warning ou
-d'erreur l'endroit du problème. Habituellement, les messages d'erreurs
-indiquent la ligne de la configuration qui semble poser problème. Souvent,
-Nagios va quitter la vérification avant démarrage et revenir à la ligne de
-commande dès qu'il aura indiqué la première erreur rencontrée. C'est ainsi
-fait pour qu'une erreur ne déclenche pas une cascade d'erreurs au fur et à
-mesure que les données de configuration sont vérifiées. Si vous avez le
-moindre message d'erreur, vous aurez besoin d'éditer vos fichiers de
-configuration pour régler le problème. Les messages de warning peuvent en
-général être ignorés sans problème car ce sont seulement des recommandations
-et non des obligations.</para>
-		<para>Une fois que vous avez vérifié vos fichiers de configuration et réglé toutes
-les erreurs, vous pouvez continuer et <link
-linkend="runningnagios-startstop">(re)démarrer Nagios</link>.</para>
-	</section>
+    <title>Vérification de votre configuration</title>
+    <section>
+        <title>Vérification de votre configuration</title>
+        <para>Vous devriez vérifier votre configuration à chaque fois que vous modifiez
+            votre <link linkend="configuringnagios-config">fichier de configuration</link>. C'est important de le
+            faire avant de (re)démarrer Nagios, car Nagios ne démarrera pas si votre
+            configuration contient des erreurs.
+        </para>
+        <para>Afin de vérifier votre configuration, exécutez Nagios en ligne de commandes avec l'option
+            <option>-v</option> comme suit:
+        </para>
+        <screen>
+            <prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
+        </screen>
+        <para>Si vous avez oublié de saisir certaines données critiques ou avez des choses
+            mal configurées, Nagios vous indiquera par des messages de warning ou
+            d'erreur l'endroit du problème. Habituellement, les messages d'erreurs
+            indiquent la ligne de la configuration qui semble poser problème. Souvent,
+            Nagios va quitter la vérification avant démarrage et revenir à la ligne de
+            commande dès qu'il aura indiqué la première erreur rencontrée. C'est ainsi
+            fait pour qu'une erreur ne déclenche pas une cascade d'erreurs au fur et à
+            mesure que les données de configuration sont vérifiées. Si vous avez le
+            moindre message d'erreur, vous aurez besoin d'éditer vos fichiers de
+            configuration pour régler le problème. Les messages de warning peuvent en
+            général être ignorés sans problème car ce sont seulement des recommandations
+            et non des obligations.
+        </para>
+        <para>Une fois que vous avez vérifié vos fichiers de configuration et réglé toutes
+            les erreurs, vous pouvez continuer et <link
+linkend="runningnagios-startstop">(re)démarrer Nagios</link>.
+        </para>
+    </section>
 </chapter>
 

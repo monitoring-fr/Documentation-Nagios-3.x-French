@@ -7,95 +7,122 @@
 ]
 >
 <chapter id="runningnagios-startstop" xreflabel="Starting and Stopping Nagios">
- <title>Démarrage et Arrêt de Nagios</title>
-
- <para>Il y a plus d'une façon de démarrer, arrêter et redémarrer Nagios. Voici
-quelques-unes des plus communes …
- </para>
-
- <tip><para>Soyez toujours sûrs d'avoir <link linkend="runningnagios-verifyconfig">vérifié</link> votre
-configuration avant de (re)démarrer Nagios.</para></tip>
-
- <section>
-  <title>Démarrage de Nagios</title>
-
-  <orderedlist>
-   <listitem>
-    <para>Init Script: Le moyen le plus facile pour démarrer Nagios est d'utiliser
-l'init script comme ceci:</para>
-  <screen><prompt># </prompt><userinput>/etc/rc.d/init.d/nagios start</userinput></screen>
-   </listitem>
-
-   <listitem>
-    <para>Manuellement: Vous pouvez démarrer le démon Nagios manuellement en ligne de commandes avec
-l'option <option>-d</option>
-    comme ceci:</para>
-            <screen><prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg</userinput></screen>
-   </listitem>
-  </orderedlist>
- </section>
-
- <section>
-  <title>Redémarrage de Nagios</title>
-
-  <para>Redémarrer/recharger est nécessaire lorsque vous modifiez vos fichiers
-de configuration et que vous voulez que ces changements prennent effet.</para>
-
-  <orderedlist>
-   <listitem>
-    <para>Init Script: Le moyen le plus facile pour redémarrer le démon Nagios est
-d'utiliser le script de démarrage comme ceci:</para>
-            <screen><prompt># </prompt><userinput>/etc/rc.d/init.d/nagios reload</userinput></screen>
-   </listitem>
-
-   <listitem>
-    <para>L'interface Web: Vous pouvez redémarrer Nagios au travers de l'interface web
-en cliquant sur le lien <guimenu>Process Info</guimenu> et en choisissant
-l'option <guimenuitem>Restart the Nagios process</guimenuitem>:
-    <screenshot>
-    <mediaobject>
-   <imageobject>
-    <imagedata fileref="images/stoprestart.png" format="PNG"/>
-   </imageobject>
-  </mediaobject></screenshot></para>
-   </listitem>
-
-   <listitem>
-    <para>Manuellement: Vous pouvez redémarrer le processus Nagios en lui envoyant un
-signal SIGHUP comme ceci:</para>
-            <screen><prompt># </prompt><userinput>kill -HUP &lt;nagios_pid&gt;</userinput></screen>
-   </listitem>
-  </orderedlist>
- </section>
-
- <section>
-  <title>Arrêt de Nagios</title>
-
-  <orderedlist>
-   <listitem>
-    <para>Script de démarrage: Le moyen le plus facile pour arrêter le démon Nagios est
-d'utiliser le script de démarrage comme ceci:</para>
-
-        <screen><prompt># </prompt><userinput>/etc/rc.d/init.d/nagios stop</userinput></screen>
-   </listitem>
-
-   <listitem>
-    <para>L'interface Web: Vous pouvez arrêter Nagios via l'interface web en cliquant
-sur le lien <guimenu>Process Info</guimenu> et en choisissant l'option
-<guimenuitem>Shutdown the Nagios process</guimenuitem>:
-          <screenshot><mediaobject>
-   <imageobject>
-    <imagedata fileref="images/stoprestart.png" format="PNG"/>
-   </imageobject>
-  </mediaobject></screenshot></para>
-   </listitem>
-
-   <listitem>
-    <para>Manuellement: Vous pouvez arrêter le processus Nagios en lui envoyant un
-signal SIGTERM comme ceci:</para>
-    <screen><prompt># </prompt><userinput>kill &lt;nagios_pid&gt;</userinput></screen>
-   </listitem>
-  </orderedlist>
- </section>
+    <title>Démarrage et Arrêt de Nagios</title>
+    
+    <para>Il y a plus d'une façon de démarrer, arrêter et redémarrer Nagios. Voici
+        quelques-unes des plus communes …
+    </para>
+    
+    <tip>
+        <para>
+            Soyez toujours sûrs d'avoir <link linkend="runningnagios-verifyconfig">vérifié</link> votre
+            configuration avant de (re)démarrer Nagios.
+        </para>
+    </tip>
+    
+    <section>
+        <title>Démarrage de Nagios</title>
+        
+        <orderedlist>
+            <listitem>
+                <para>Init Script: Le moyen le plus facile pour démarrer Nagios est d'utiliser
+                    l'init script comme ceci:
+                </para>
+                <screen>
+                    <prompt>#</prompt><userinput>/etc/rc.d/init.d/nagios start</userinput>
+                </screen>
+            </listitem>
+            
+            <listitem>
+                <para>Manuellement: Vous pouvez démarrer le démon Nagios manuellement en ligne de commandes avec
+                    l'option <option>-d</option>
+                    comme ceci:
+                </para>
+                <screen>
+                    <prompt>#</prompt><userinput>/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg</userinput>
+                </screen>
+            </listitem>
+        </orderedlist>
+    </section>
+    
+    <section>
+        <title>Redémarrage de Nagios</title>
+        
+        <para>Redémarrer/recharger est nécessaire lorsque vous modifiez vos fichiers
+            de configuration et que vous voulez que ces changements prennent effet.
+        </para>
+        
+        <orderedlist>
+            <listitem>
+                <para>Init Script: Le moyen le plus facile pour redémarrer le démon Nagios est
+                    d'utiliser le script de démarrage comme ceci:
+                </para>
+                <screen>
+                    <prompt>#</prompt><userinput>/etc/rc.d/init.d/nagios reload</userinput>
+                </screen>
+            </listitem>
+            
+            <listitem>
+                <para>L'interface Web: Vous pouvez redémarrer Nagios au travers de l'interface web
+                    en cliquant sur le lien <guimenu>Process Info</guimenu> et en choisissant
+                    l'option <guimenuitem>Restart the Nagios process</guimenuitem>:
+                    <screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="images/stoprestart.png" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Manuellement: Vous pouvez redémarrer le processus Nagios en lui envoyant un
+                    signal SIGHUP comme ceci:
+                </para>
+                <screen>
+                    <prompt>#</prompt><userinput>kill -HUP &lt;nagios_pid&gt;</userinput>
+                </screen>
+            </listitem>
+        </orderedlist>
+    </section>
+    
+    <section>
+        <title>Arrêt de Nagios</title>
+        
+        <orderedlist>
+            <listitem>
+                <para>Script de démarrage: Le moyen le plus facile pour arrêter le démon Nagios est
+                    d'utiliser le script de démarrage comme ceci:
+                </para>
+                
+                <screen>
+                    <prompt>#</prompt><userinput>/etc/rc.d/init.d/nagios stop</userinput>
+                </screen>
+            </listitem>
+            
+            <listitem>
+                <para>L'interface Web: Vous pouvez arrêter Nagios via l'interface web en cliquant
+                    sur le lien <guimenu>Process Info</guimenu> et en choisissant l'option
+                    <guimenuitem>Shutdown the Nagios process</guimenuitem>:
+                    <screenshot><mediaobject>
+                            <imageobject>
+                                <imagedata fileref="images/stoprestart.png" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Manuellement: Vous pouvez arrêter le processus Nagios en lui envoyant un
+                    signal SIGTERM comme ceci:
+                </para>
+                <screen>
+                    <prompt>#</prompt><userinput>kill &lt;nagios_pid&gt;</userinput>
+                </screen>
+            </listitem>
+        </orderedlist>
+    </section>
 </chapter>
 
