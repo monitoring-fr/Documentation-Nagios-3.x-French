@@ -7,186 +7,223 @@
 ]
 >
 <chapter id="thebasics-timeperiods" xreflabel="Time Periods">
- <title>Les périodes de temps</title>
-<note>
- <para>Ou… <quote>Est-ce le bon moment?</quote></para>
-</note>
- <section>
-  <title>Introduction</title>
-
-  <para><inlinemediaobject> <imageobject> <imagedata
-fileref="images/objects-timeperiods.png" format="PNG"/> </imageobject>
-</inlinemediaobject> Les paramètres concernant les <link
+    <title>Les périodes de temps</title>
+    <note>
+        <para>
+            Ou… <quote>Est-ce le bon moment?</quote>
+        </para>
+    </note>
+    <section>
+        <title>Introduction</title>
+        
+        <para>
+            <inlinemediaobject>
+                 
+                <imageobject>
+                     <imagedata
+fileref="images/objects-timeperiods.png" format="PNG"/>
+                </imageobject>
+            </inlinemediaobject>
+             Les paramètres concernant les <link
 linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
-vous permettent de maîtriser le fonctionnement logique des différents
-aspects de la supervision et de la notification. Par exemple, vous pouvez
-restreindre:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Quand les contrôles d'hôtes et de services planifiés peuvent être effectués</para>
-   </listitem>
-
-   <listitem>
-    <para>Quand les notifications peuvent être envoyées</para>
-   </listitem>
-
-   <listitem>
-    <para>Quand les escalades de notification peuvent être utilisées</para>
-   </listitem>
-
-   <listitem>
-    <para>Quand les dépendances sont valides</para>
-   </listitem>
-  </itemizedlist>
- </section>
-
- <section>
-  <title>Les priorités dans les périodes de temps</title>
-
-  <para>Les <link linkend="configuringnagios-objectdefinitions-timeperiod">définitions de périodes de temps</link>
-peuvent contenir différent types de paramètres, incluant les jours de la
-semaine, certains jours dans le mois, et des dates précises du
-calendrier. Les différents types de paramètres ont des priorités différentes
-et peuvent passer outre les autres définitions de périodes. L'ordre des
-priorités pour les différents type de directives (dans l'ordre décroissant)
-est le suivant:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Une date précise dans le calendrier (01/01/2008)</para>
-   </listitem>
-
-   <listitem>
-    <para>Une date spécifique dans un mois quelconque (1er Janvier)</para>
-   </listitem>
-
-   <listitem>
-    <para>Une date générique mensuelle (tous les 15 du mois)</para>
-   </listitem>
-
-   <listitem>
-    <para>Un jour d'un mois spécifique (le 2ème Mardi de Décembre)</para>
-   </listitem>
-
-   <listitem>
-    <para>Un jour spécifique mensuel (3ème Lundi de chaque mois)</para>
-   </listitem>
-
-   <listitem>
-    <para>Un jour dans la semaine (le Mardi)</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Des exemples de paramètres concernant les périodes de temps sont accessibles
-<link linkend="configuringnagios-objectdefinitions-timeperiod">ici</link>.</para>
- </section>
-
- <section>
-  <title>Comment les périodes de temps fonctionnent avec les contrôles des hôtes et des
-services</title>
-
-  <para>Les définitions des hôtes et des services ont un paramètre optionnel
-<varname>check_period</varname> qui vous permet de spécifier la période qui
-sera utilisée pour restreindre les moments où les contrôles actifs des hôtes
-ou des services devront être effectués .</para>
-
-  <para>Si vous n'utilisez pas le paramètre <varname>check_period </varname> pour
-spécifier une période, Nagios sera capable de planifier les contrôles
-actifs des hôtes et services aussi souvent qu'il en aura besoin. Il s'agit
-essentiellement d'une période de surveillance de type 24x7.</para>
-
-  <para>Spécifier une plage horaires dans le paramètre
-<varname>check_period</varname> vous permet de restreindre Nagios à
-planifier les contrôles actifs réguliers des hôtes ou des services. Quand
-Nagios va tenter de replanifier un contrôle d'hôte ou de service, il va
-s'assurer que le prochain contrôle tombe bien dans la plage horaire
-définie. Si ce n'est pas le cas, Nagios va ajuster l'heure du prochain
-contrôle pour qu'elle coïncide avec la prochaine heure <quote>valide</quote>
-dans la plage horaire spécifiée. Ce qui signifie que l'hôte ou le service ne
-sera contrôlé à nouveau que dans plusieurs heures, jours, semaines, etc.</para>
-
-  <note><para>Les contrôles à la demande et les contrôles passifs ne sont pas restreints
-par la plage horaire spécifiée dans le paramètre
-<varname>check_period</varname>. Seuls des contrôles réguliers actifs sont
-concernés.</para></note>
-
-  <para>Sauf si vous avez une bonne raison de ne pas le faire, je vous conseille de
-surveiller tous les hôtes et les services en utilisant des plages horaires
-qui couvrent une période de temps 24x7. Si vous ne le faites pas, vous
-pouvez rencontrer certains problèmes au cours de ces périodes de
-<quote>non-contrôle</quote> (lorsque l'on ne se trouve pas dans la plage horaire
-définie):</para>
-
-  <orderedlist>
-   <listitem>
-    <para>Le statut de l'hôte ou du service apparaîtra inchangé tout au long de la
-période de non-contrôle.</para>
-   </listitem>
-
-   <listitem>
-    <para>Les contacts ne seront pas re-notifiés des problèmes avec un hôte ou un
-service durant une période de non-contrôle.</para>
-   </listitem>
-
-   <listitem>
-    <para>Si un hôte ou un service redevient OK pendant une période de non-contrôle,
-les contacts ne seront pas immédiatement notifiés du retour à normale.</para>
-   </listitem>
-  </orderedlist>
- </section>
-
- <section>
-  <title>Comment fonctionnent les périodes de temps avec les contacts de notifications</title>
-
-  <para>En spécifiant une période au paramètre
-<varname>notification_period</varname> d'une définition d'un hôte ou d'un
-service, vous pouvez contrôler quand Nagios est autorisé à envoyer des
-notifications concernant des problèmes ou des retours à la normale pour cet
-hôte ou ce service. Lorsqu'une notification pour un hôte doit être envoyée,
-Nagios s'assure que l'heure actuelle est bien comprise dans la plage horaire
-<varname>notification_period</varname> valide. Si c'est une heure valide,
-alors Nagios essayera de notifier chaque contact du problème ou du retour à
-la normale.</para>
-
-  <para>Vous pouvez aussi utiliser les périodes pour contrôler quand seront envoyées
-les notifications individuellement à chaque contact. En utilisant les
-paramètres <varname>service_notification_period</varname> and
-<varname>host_notification_period</varname> dans <link
+            vous permettent de maîtriser le fonctionnement logique des différents
+            aspects de la supervision et de la notification. Par exemple, vous pouvez
+            restreindre:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Quand les contrôles d'hôtes et de services planifiés peuvent être effectués</para>
+            </listitem>
+            
+            <listitem>
+                <para>Quand les notifications peuvent être envoyées</para>
+            </listitem>
+            
+            <listitem>
+                <para>Quand les escalades de notification peuvent être utilisées</para>
+            </listitem>
+            
+            <listitem>
+                <para>Quand les dépendances sont valides</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    
+    <section>
+        <title>Les priorités dans les périodes de temps</title>
+        
+        <para>
+            Les <link linkend="configuringnagios-objectdefinitions-timeperiod">définitions de périodes de temps</link>
+            peuvent contenir différent types de paramètres, incluant les jours de la
+            semaine, certains jours dans le mois, et des dates précises du
+            calendrier. Les différents types de paramètres ont des priorités différentes
+            et peuvent passer outre les autres définitions de périodes. L'ordre des
+            priorités pour les différents type de directives (dans l'ordre décroissant)
+            est le suivant:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Une date précise dans le calendrier (01/01/2008)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Une date spécifique dans un mois quelconque (1er Janvier)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Une date générique mensuelle (tous les 15 du mois)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Un jour d'un mois spécifique (le 2ème Mardi de Décembre)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Un jour spécifique mensuel (3ème Lundi de chaque mois)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Un jour dans la semaine (le Mardi)</para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Des exemples de paramètres concernant les périodes de temps sont accessibles
+            <link linkend="configuringnagios-objectdefinitions-timeperiod">ici</link>.
+        </para>
+    </section>
+    
+    <section>
+        <title>Comment les périodes de temps fonctionnent avec les contrôles des hôtes et des
+            services
+        </title>
+        
+        <para>Les définitions des hôtes et des services ont un paramètre optionnel
+            <varname>check_period</varname> qui vous permet de spécifier la période qui
+            sera utilisée pour restreindre les moments où les contrôles actifs des hôtes
+            ou des services devront être effectués .
+        </para>
+        
+        <para>
+            Si vous n'utilisez pas le paramètre <varname>check_period </varname> pour
+            spécifier une période, Nagios sera capable de planifier les contrôles
+            actifs des hôtes et services aussi souvent qu'il en aura besoin. Il s'agit
+            essentiellement d'une période de surveillance de type 24x7.
+        </para>
+        
+        <para>Spécifier une plage horaires dans le paramètre
+            <varname>check_period</varname> vous permet de restreindre Nagios à
+            planifier les contrôles actifs réguliers des hôtes ou des services. Quand
+            Nagios va tenter de replanifier un contrôle d'hôte ou de service, il va
+            s'assurer que le prochain contrôle tombe bien dans la plage horaire
+            définie. Si ce n'est pas le cas, Nagios va ajuster l'heure du prochain
+            contrôle pour qu'elle coïncide avec la prochaine heure <quote>valide</quote>
+            dans la plage horaire spécifiée. Ce qui signifie que l'hôte ou le service ne
+            sera contrôlé à nouveau que dans plusieurs heures, jours, semaines, etc.
+        </para>
+        
+        <note>
+            <para>Les contrôles à la demande et les contrôles passifs ne sont pas restreints
+                par la plage horaire spécifiée dans le paramètre
+                <varname>check_period</varname>. Seuls des contrôles réguliers actifs sont
+                concernés.
+            </para>
+        </note>
+        
+        <para>Sauf si vous avez une bonne raison de ne pas le faire, je vous conseille de
+            surveiller tous les hôtes et les services en utilisant des plages horaires
+            qui couvrent une période de temps 24x7. Si vous ne le faites pas, vous
+            pouvez rencontrer certains problèmes au cours de ces périodes de
+            <quote>non-contrôle</quote> (lorsque l'on ne se trouve pas dans la plage horaire
+            définie):
+        </para>
+        
+        <orderedlist>
+            <listitem>
+                <para>Le statut de l'hôte ou du service apparaîtra inchangé tout au long de la
+                    période de non-contrôle.
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Les contacts ne seront pas re-notifiés des problèmes avec un hôte ou un
+                    service durant une période de non-contrôle.
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Si un hôte ou un service redevient OK pendant une période de non-contrôle,
+                    les contacts ne seront pas immédiatement notifiés du retour à normale.
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+    
+    <section>
+        <title>Comment fonctionnent les périodes de temps avec les contacts de notifications</title>
+        
+        <para>En spécifiant une période au paramètre
+            <varname>notification_period</varname> d'une définition d'un hôte ou d'un
+            service, vous pouvez contrôler quand Nagios est autorisé à envoyer des
+            notifications concernant des problèmes ou des retours à la normale pour cet
+            hôte ou ce service. Lorsqu'une notification pour un hôte doit être envoyée,
+            Nagios s'assure que l'heure actuelle est bien comprise dans la plage horaire
+            <varname>notification_period</varname> valide. Si c'est une heure valide,
+            alors Nagios essayera de notifier chaque contact du problème ou du retour à
+            la normale.
+        </para>
+        
+        <para>Vous pouvez aussi utiliser les périodes pour contrôler quand seront envoyées
+            les notifications individuellement à chaque contact. En utilisant les
+            paramètres <varname>service_notification_period</varname> and
+            <varname>host_notification_period</varname> dans <link
 linkend="configuringnagios-objectdefinitions-contact">la définition d'un
-contact</link>, vous serez en mesure de définir une plage horaire <quote>sur
-mesure</quote> pour chaque contact. Les contacts recevront les notifications pour
-les hôtes et les services seulement pendant la plage horaire que vous leur
-aurez spécifié.</para>
-
-  <para>Des exemples de création de définition de plages horaires sur mesure sont
-disponibles <link linkend="advancedtopics-oncallrotation">ici</link>.</para>
- </section>
-
- <section>
-  <title>Comment fonctionnent les périodes de temps avec les escalades de notification</title>
-
-  <para>Les <link linkend="advancedtopics-escalations">escalades de notification</link> des hôtes et services ont un paramètre optionnel nommé
-<varname>escalation_period</varname> qui vous permet de spécifier une plage
-horaire où l'escalade sera valide et pourra être utilisée. Si vous
-n'utilisez pas le paramètre <varname>escalation_period</varname> dans la
-définition de l'escalalde, l'escalade sera considérée comme valide tout le
-temps. Si vous spécifiez une plage horaire pour le paramètre
-<varname>escalation_period</varname>, Nagios utilisera définition de
-l'escalade seulement pendant cette plage horaire.</para>
- </section>
-
- <section>
-  <title>Comment fonctionnent les périodes de temps avec les dépendances</title>
-
-  <para>Les <link linkend="advancedtopics-dependencies">dépendances d'hôtes et de
-services</link> ont un paramètre optionnel nommé
-<varname>dependency_period</varname> qui vous permet de spécifier une plage
-horaire où la dépendance sera valide et pourra être utilisée. Si vous
-n'utilisez pas le paramètre <varname>dependency_period</varname> dans la
-définition de la dépendance, la dépendance pourra être utilisée n'importe
-quand. Si vous spécifiez une plage horaire pour le paramètre
-<varname>dependency_period</varname>, Nagios utilisera la définition de la
-dépendance seulement pendant cette plage horaire.</para>
- </section>
+                contact
+            </link>
+            ,vous serez en mesure de définir une plage horaire <quote>sur
+                mesure
+            </quote>
+            pour chaque contact. Les contacts recevront les notifications pour
+            les hôtes et les services seulement pendant la plage horaire que vous leur
+            aurez spécifié.
+        </para>
+        
+        <para>Des exemples de création de définition de plages horaires sur mesure sont
+            disponibles <link linkend="advancedtopics-oncallrotation">ici</link>.
+        </para>
+    </section>
+    
+    <section>
+        <title>Comment fonctionnent les périodes de temps avec les escalades de notification</title>
+        
+        <para>
+            Les <link linkend="advancedtopics-escalations">escalades de notification</link> des hôtes et services ont un paramètre optionnel nommé
+            <varname>escalation_period</varname> qui vous permet de spécifier une plage
+            horaire où l'escalade sera valide et pourra être utilisée. Si vous
+            n'utilisez pas le paramètre <varname>escalation_period</varname> dans la
+            définition de l'escalalde, l'escalade sera considérée comme valide tout le
+            temps. Si vous spécifiez une plage horaire pour le paramètre
+            <varname>escalation_period</varname>, Nagios utilisera définition de
+            l'escalade seulement pendant cette plage horaire.
+        </para>
+    </section>
+    
+    <section>
+        <title>Comment fonctionnent les périodes de temps avec les dépendances</title>
+        
+        <para>
+            Les <link linkend="advancedtopics-dependencies">dépendances d'hôtes et de
+                services
+            </link>
+            ont un paramètre optionnel nommé
+            <varname>dependency_period</varname> qui vous permet de spécifier une plage
+            horaire où la dépendance sera valide et pourra être utilisée. Si vous
+            n'utilisez pas le paramètre <varname>dependency_period</varname> dans la
+            définition de la dépendance, la dépendance pourra être utilisée n'importe
+            quand. Si vous spécifiez une plage horaire pour le paramètre
+            <varname>dependency_period</varname>, Nagios utilisera la définition de la
+            dépendance seulement pendant cette plage horaire.
+        </para>
+    </section>
 </chapter>

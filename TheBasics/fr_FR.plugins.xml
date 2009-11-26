@@ -7,135 +7,156 @@
 ]
 >
 <chapter id="thebasics-plugins" xreflabel="Nagios Plugins">
- <title>Les Plugins Nagios</title>
-
- <section>
-  <title>Introduction</title>
-
-  <para>Comme pas mal d'autres outils de supervision, Nagios n'intègre aucun
-mécanisme pour contrôler l'état des hôtes et services sur votre réseau. Du
-coup, Nagios délègue à des programmes externes (appelés plugins) tout le
-sale boulot.</para>
- </section>
-
- <section>
-  <title>Que sont les plugins?</title>
-
-  <para>Les plugins sont des programmes compilés ou des scripts (Perl, shell, etc.)
-qui peuvent être exécutés par une ligne de commande pour contrôler l'état d'un
-hôte ou d'un service. Nagios utilise le résultat des plugins pour déterminer
-le statut actuel des hôtes ou services sur le réseau.</para>
-
-  <para>Nagios exécutera un plugin seulement lorsqu'il sera nécessaire de vérifier
-le statut d'un service ou d'un hôte. Le plugin fait quelque chose (notez le
-sens très général du terme) pour effectuer le contrôle et renvoie simplement
-le résultat à Nagios. Nagios traitera les résultats qu'il aura reçu du
-plugin et prendra les mesures nécessaires (en exécutant des <link
+    <title>Les Plugins Nagios</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>Comme pas mal d'autres outils de supervision, Nagios n'intègre aucun
+            mécanisme pour contrôler l'état des hôtes et services sur votre réseau. Du
+            coup, Nagios délègue à des programmes externes (appelés plugins) tout le
+            sale boulot.
+        </para>
+    </section>
+    
+    <section>
+        <title>Que sont les plugins?</title>
+        
+        <para>Les plugins sont des programmes compilés ou des scripts (Perl, shell, etc.)
+            qui peuvent être exécutés par une ligne de commande pour contrôler l'état d'un
+            hôte ou d'un service. Nagios utilise le résultat des plugins pour déterminer
+            le statut actuel des hôtes ou services sur le réseau.
+        </para>
+        
+        <para>Nagios exécutera un plugin seulement lorsqu'il sera nécessaire de vérifier
+            le statut d'un service ou d'un hôte. Le plugin fait quelque chose (notez le
+            sens très général du terme) pour effectuer le contrôle et renvoie simplement
+            le résultat à Nagios. Nagios traitera les résultats qu'il aura reçu du
+            plugin et prendra les mesures nécessaires (en exécutant des <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>, en envoyant
-des <link linkend="thebasics-notifications">notifications</link>, etc.).</para>
- </section>
-
- <section>
-  <title>Les plugins comme une couche intermédiaire</title>
-
-  <para><informalfigure>
-	<mediaobject>
-    <imageobject>
-     <imagedata fileref="images/plugins.png" format="PNG"/>
-    </imageobject>
-   </mediaobject></informalfigure>Les plugins sont comme une couche intermédiaire entre le ordonnancement de
-contrôle présent dans le démon Nagios et les services ou hôtes à superviser.</para>
-
-  <para>L'avantage de ce type d'architecture de plugin est que vous pouvez
-superviser à peu près tout ce que vous voulez. Si vous pouvez automatiser le
-procédé de contrôle de quelque-chose, vous pouvez le superviser avec
-Nagios. Il existe déjà plein de plugins qui ont été créés pour superviser
-des ressources basiques comme la charge processeur, l'espace disque utilsé,
-les statistiques de la commande ping, etc. Si vous voulez superviser autre
-chose, reportez-vous à la documentation nommée <link
+            des <link linkend="thebasics-notifications">notifications</link>, etc.).
+        </para>
+    </section>
+    
+    <section>
+        <title>Les plugins comme une couche intermédiaire</title>
+        
+        <para><informalfigure>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/plugins.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </informalfigure>
+            Les plugins sont comme une couche intermédiaire entre le ordonnancement de
+            contrôle présent dans le démon Nagios et les services ou hôtes à superviser.
+        </para>
+        
+        <para>L'avantage de ce type d'architecture de plugin est que vous pouvez
+            superviser à peu près tout ce que vous voulez. Si vous pouvez automatiser le
+            procédé de contrôle de quelque-chose, vous pouvez le superviser avec
+            Nagios. Il existe déjà plein de plugins qui ont été créés pour superviser
+            des ressources basiques comme la charge processeur, l'espace disque utilsé,
+            les statistiques de la commande ping, etc. Si vous voulez superviser autre
+            chose, reportez-vous à la documentation nommée <link
 linkend="development-pluginapi">écrire ses plugins</link> et créez les
-vôtres. C'est très simple!</para>
-
-  <para>L'inconvénient de ce type d'architecture de plugin est le fait que Nagios
-n'a absolument aucune idée de ce que vous supervisez. Vous pourriez
-superviser les statistiques du trafic réseau, les taux d'erreur de données,
-la température ambiante, la tension du &acronym-cpu;, la vitesse du ventilateur, la
-charge du processeur, l'espace disque, ou la capacité de votre
-super_fantastique grille-pain à griller parfaitement votre pain le
-matin… Nagios ne comprend pas les spécificités de ce qui est
-supervisé. Les plugins seulement savent exactement ce qu'ils contrôlent et
-comment effectuer ces contrôles.</para>
- </section>
-
- <section>
-  <title>Quels plugins existe-il?</title>
-
-  <para>Il existe des plugins disponibles actuellement pour contrôler de nombreux
-types différents de matériels et de services, y compris:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>&protocol-http;, &protocol-pop3;, &protocol-imap;, &protocol-ftp;,
-&protocol-ssh;, &protocol-dhcp;</para>
-   </listitem>
-
-   <listitem>
-    <para>Charge &acronym-cpu;, espace disque utilisé, mémoire utilisée, utilisateurs connectés</para>
-   </listitem>
-
-   <listitem>
-    <para>Unix/Linux, Windows, et serveurs Netware</para>
-   </listitem>
-
-   <listitem>
-    <para>Routeurs et switchs</para>
-   </listitem>
-
-   <listitem>
-    <para>etc…</para>
-   </listitem>
-  </itemizedlist>
- </section>
-
- <section>
-  <title>Obtenir des plugins</title>
-
-  <para>Les plugins ne sont pas distribués avec Nagios, mais vous pouvez télécharger
-les plugins officiels Nagios et d'autres plugins supplémentaires créés et
-soutenus par les utilisateurs Nagios aux adresses suivantes:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Projet Plugins Nagios: <ulink
-url="http://nagiosplug.sourceforge.net/">http://nagiosplug.sourceforge.net/</ulink></para>
-   </listitem>
-
-   <listitem>
-    <para>La page de téléchargement du site Nagios: <ulink
-url="&url-nagios;download/">&url-nagios;download/</ulink></para>
-   </listitem>
-
-   <listitem>
-    <para>NagiosExchange.org: <ulink
-url="&url-nagiosexchange;/">&url-nagiosexchange;/</ulink></para>
-   </listitem>
-  </itemizedlist>
- </section>
-
- <section>
-  <title>Comment utiliser le plugin x?</title>
-
-  <para>La grosse majorité des plugins affichent des informations basiques d'usage
-quand vous les exécutez en utilisant <option>-h</option> ou <option>--help</option> en ligne de commandes. Par exemple, si vous voulez savoir comment le plugin
-&plugin-http; fonctionne ou quelles options il accepte, vous
-pouvez essayer d'exécuter la commande suivante: <command>./check_http --help</command></para>
- </section>
-
- <section>
-  <title><anchor id="howto" />Plugin API</title>
-
-  <para>Vous pouvez trouver des informations sur les aspects techniques des plugins,
-ainsi que des informations sur comment développer vos propres plugins <link
-linkend="development-pluginapi">ici</link>.</para>
- </section>
+            vôtres. C'est très simple!
+        </para>
+        
+        <para>L'inconvénient de ce type d'architecture de plugin est le fait que Nagios
+            n'a absolument aucune idée de ce que vous supervisez. Vous pourriez
+            superviser les statistiques du trafic réseau, les taux d'erreur de données,
+            la température ambiante, la tension du &acronym-cpu;, la vitesse du ventilateur, la
+            charge du processeur, l'espace disque, ou la capacité de votre
+            super_fantastique grille-pain à griller parfaitement votre pain le
+            matin… Nagios ne comprend pas les spécificités de ce qui est
+            supervisé. Les plugins seulement savent exactement ce qu'ils contrôlent et
+            comment effectuer ces contrôles.
+        </para>
+    </section>
+    
+    <section>
+        <title>Quels plugins existe-il?</title>
+        
+        <para>Il existe des plugins disponibles actuellement pour contrôler de nombreux
+            types différents de matériels et de services, y compris:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>&protocol-http;, &protocol-pop3;, &protocol-imap;, &protocol-ftp;,
+                    &protocol-ssh;, &protocol-dhcp;
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Charge &acronym-cpu;, espace disque utilisé, mémoire utilisée, utilisateurs connectés</para>
+            </listitem>
+            
+            <listitem>
+                <para>Unix/Linux, Windows, et serveurs Netware</para>
+            </listitem>
+            
+            <listitem>
+                <para>Routeurs et switchs</para>
+            </listitem>
+            
+            <listitem>
+                <para>etc…</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    
+    <section>
+        <title>Obtenir des plugins</title>
+        
+        <para>Les plugins ne sont pas distribués avec Nagios, mais vous pouvez télécharger
+            les plugins officiels Nagios et d'autres plugins supplémentaires créés et
+            soutenus par les utilisateurs Nagios aux adresses suivantes:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>
+                    Projet Plugins Nagios: <ulink
+url="http://nagiosplug.sourceforge.net/">http://nagiosplug.sourceforge.net/</ulink>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    La page de téléchargement du site Nagios: <ulink
+url="&url-nagios;download/">&url-nagios;download/</ulink>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    NagiosExchange.org: <ulink
+url="&url-nagiosexchange;/">&url-nagiosexchange;/</ulink>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    
+    <section>
+        <title>Comment utiliser le plugin x?</title>
+        
+        <para>La grosse majorité des plugins affichent des informations basiques d'usage
+            quand vous les exécutez en utilisant <option>-h</option> ou <option>--help</option> en ligne de commandes. Par exemple, si vous voulez savoir comment le plugin
+            &plugin-http; fonctionne ou quelles options il accepte, vous
+            pouvez essayer d'exécuter la commande suivante: <command>./check_http --help</command>
+        </para>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="howto" />Plugin API
+        </title>
+        
+        <para>Vous pouvez trouver des informations sur les aspects techniques des plugins,
+            ainsi que des informations sur comment développer vos propres plugins <link
+linkend="development-pluginapi">ici</link>.
+        </para>
+    </section>
 </chapter>

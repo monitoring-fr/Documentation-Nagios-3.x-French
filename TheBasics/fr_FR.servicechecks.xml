@@ -7,116 +7,140 @@
 ]
 >
 <chapter id="thebasics-servicechecks" xreflabel="Service Checks">
-	<title>Les contrôles de services</title>
-	<section>
-		<title>Introduction</title>
-		<para>Le fonctionnement basique des contrôles de service est décrit ici…</para>
-	</section>
-	<section>
-		<title>Quand les contrôles de services sont-ils réalisés ?</title>
-		<para>Les services sont contrôlés par le démon Nagios:</para>
-		<itemizedlist>
-			<listitem>
-				<para>À intervalles réguliers, comme définit par la variable <varname>check_interval</varname>
-				et <varname>retry_interval</varname> dans vos <link
+    <title>Les contrôles de services</title>
+    <section>
+        <title>Introduction</title>
+        <para>Le fonctionnement basique des contrôles de service est décrit ici…</para>
+    </section>
+    <section>
+        <title>Quand les contrôles de services sont-ils réalisés ?</title>
+        <para>Les services sont contrôlés par le démon Nagios:</para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    À intervalles réguliers, comme définit par la variable <varname>check_interval</varname>
+                    et <varname>retry_interval</varname> dans vos <link
 linkend="configuringnagios-objectdefinitions-service">définitions de
-service</link>.</para>
-			</listitem>
-			<listitem>
-				<para>A la demande si besoin est pour <link
+                        service
+                    </link>
+                    .
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    A la demande si besoin est pour <link
 linkend="advancedtopics-dependencychecks">contrôles en prévision des
-dépendances des services</link>.</para>
-			</listitem>
-		</itemizedlist>
-		<para>Les contrôles à la demande sont effectués dans le cadre de la logique des
-<link linkend="advancedtopics-dependencychecks">contrôles en prévision des
-dépendances des services</link>. Ces contrôles permettent de garantir que la
-logique de dépendance soit la plus précise possible. Si vous n'utilisez pas
-les dépendances de service, Nagios ne réalisear aucun contrôle de service à
-la demande</para>
-	</section>
-	<section>
-		<title>Les contrôles de service mis en cache</title>
-		<para>La performance des contrôles de service à la demande peut être
-considérablement améliorée par la mise en œuvre de l'utilisation des
-contrôles mis en cache, ce qui permet à Nagios de renoncer à l'exécution
-d'un contrôle de service s'il détermine qu'un résultat d'un contrôle est
-relativement récent peut convenir à la place. Les contrôles mis en cache ne
-fournissent qu'une augmentation des performances si vous utilisez les <link
+                        dépendances des services
+                    </link>
+                    .
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>Les contrôles à la demande sont effectués dans le cadre de la logique des
+            <link linkend="advancedtopics-dependencychecks">contrôles en prévision des
+                dépendances des services
+            </link>
+            .Ces contrôles permettent de garantir que la
+            logique de dépendance soit la plus précise possible. Si vous n'utilisez pas
+            les dépendances de service, Nagios ne réalisear aucun contrôle de service à
+            la demande
+        </para>
+    </section>
+    <section>
+        <title>Les contrôles de service mis en cache</title>
+        <para>La performance des contrôles de service à la demande peut être
+            considérablement améliorée par la mise en œuvre de l'utilisation des
+            contrôles mis en cache, ce qui permet à Nagios de renoncer à l'exécution
+            d'un contrôle de service s'il détermine qu'un résultat d'un contrôle est
+            relativement récent peut convenir à la place. Les contrôles mis en cache ne
+            fournissent qu'une augmentation des performances si vous utilisez les <link
 linkend="configuringnagios-objectdefinitions-servicedependency">dependances
-de service</link>. Plus d'informations sur les contrôles mis en cache
-peuvent être trouvés <link linkend="advancedtopics-cachedchecks">ici</link>.</para>
-	</section>
-	<section>
-		<title>Les contrôles et les dépendances</title>
-		<para>Vous pouvez préciser <link
+                de service
+            </link>
+            .Plus d'informations sur les contrôles mis en cache
+            peuvent être trouvés <link linkend="advancedtopics-cachedchecks">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Les contrôles et les dépendances</title>
+        <para>
+            Vous pouvez préciser <link
 linkend="configuringnagios-objectdefinitions-servicedependency">l'exécution
-des dépendances de service</link> qui empêche Nagios de vérifier les statuts
-des services dépendants en fonction de l'état d'un ou plusieurs autres
-services. Plus d'information sur les dépendances sont disponibles <link
-linkend="advancedtopics-dependencies">ici</link>.</para>
-	</section>
-	<section>
-		<title>Parallélisation des contrôles de services</title>
-		<para>Les contrôles de services planifiés sont effecués en parallèle. Lorsque
-Nagios a besoin d'effectuer un contrôle de service planifié, il lancera le
-contrôle du service et reviendra ensuite à d'autres tâches (exécution de
-contrôles d'hôtes, etc.). Le contrôle de service est lancé en tant que
-processus enfant qui a été doublé depuis le démon principal de Nagios. Quand
-le contrôle de service est terminé, le processus enfant informera le
-processus principal Nagios (son parent) des résultats du contrôle. Le
-processus principal de Nagios prend en compte les résultats et prend les
-mesures appropriées (exécution des gestionnaires d'événements, l'envoi de
-notification, etc.).</para>
-		<para>Les contrôles de service à la demande peuvent être aussi lancés en parallèle
-si besoin. Comme il a été mentionné précédement, Nagios peut renoncer à
-l'exécution d'un contrôle de service à la demande s'il peut utiliser les
-résultats du contrôle de service qu'il a en cache sont relativement récent.</para>
-	</section>
-	<section>
-		<title>États des services</title>
-		<para>Les services qui ont été contrôlés peuvent avoir un des quatre états:</para>
-		<itemizedlist>
-			<listitem>
-				<para>OK</para>
-			</listitem>
-			<listitem>
-				<para>WARNING</para>
-			</listitem>
-			<listitem>
-				<para>UNKNOWN</para>
-			</listitem>
-			<listitem>
-				<para>CRITICAL</para>
-			</listitem>
-		</itemizedlist>
-	</section>
-	<section>
-		<title>Détermination de l'état du service</title>
-		<para>Les contrôles de service sont par des <link
+                des dépendances de service
+            </link>
+            qui empêche Nagios de vérifier les statuts
+            des services dépendants en fonction de l'état d'un ou plusieurs autres
+            services. Plus d'information sur les dépendances sont disponibles <link
+linkend="advancedtopics-dependencies">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Parallélisation des contrôles de services</title>
+        <para>Les contrôles de services planifiés sont effecués en parallèle. Lorsque
+            Nagios a besoin d'effectuer un contrôle de service planifié, il lancera le
+            contrôle du service et reviendra ensuite à d'autres tâches (exécution de
+            contrôles d'hôtes, etc.). Le contrôle de service est lancé en tant que
+            processus enfant qui a été doublé depuis le démon principal de Nagios. Quand
+            le contrôle de service est terminé, le processus enfant informera le
+            processus principal Nagios (son parent) des résultats du contrôle. Le
+            processus principal de Nagios prend en compte les résultats et prend les
+            mesures appropriées (exécution des gestionnaires d'événements, l'envoi de
+            notification, etc.).
+        </para>
+        <para>Les contrôles de service à la demande peuvent être aussi lancés en parallèle
+            si besoin. Comme il a été mentionné précédement, Nagios peut renoncer à
+            l'exécution d'un contrôle de service à la demande s'il peut utiliser les
+            résultats du contrôle de service qu'il a en cache sont relativement récent.
+        </para>
+    </section>
+    <section>
+        <title>États des services</title>
+        <para>Les services qui ont été contrôlés peuvent avoir un des quatre états:</para>
+        <itemizedlist>
+            <listitem>
+                <para>OK</para>
+            </listitem>
+            <listitem>
+                <para>WARNING</para>
+            </listitem>
+            <listitem>
+                <para>UNKNOWN</para>
+            </listitem>
+            <listitem>
+                <para>CRITICAL</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>Détermination de l'état du service</title>
+        <para>
+            Les contrôles de service sont par des <link
 linkend="thebasics-plugins">plugins</link>, qui renvoyer un état OK,
-WARNING, UNKNOWN, ou CRITICAL. Ces états issus des plugins sont directement
-traduits en états de service. Par exemple, un plugin qui renvoie un état
-WARNING donnera au service un état WARNING.</para>
-	</section>
-	<section>
-		<title>Changements d'états des services</title>
-		<para>Quand Nagios contrôle le statut des services, il sera capable de détecter
-lorsqu'un service change entre les états OK, WARNING, UNKNOWN, et CRITICAL
-et prendra les mesures appropriées. De ces changements d'état en résultent
-des <link linkend="thebasics-statetypes">types d'état</link> (HARD or SOFT),
-qui peuvent déclencher des <link
+            WARNING, UNKNOWN, ou CRITICAL. Ces états issus des plugins sont directement
+            traduits en états de service. Par exemple, un plugin qui renvoie un état
+            WARNING donnera au service un état WARNING.
+        </para>
+    </section>
+    <section>
+        <title>Changements d'états des services</title>
+        <para>Quand Nagios contrôle le statut des services, il sera capable de détecter
+            lorsqu'un service change entre les états OK, WARNING, UNKNOWN, et CRITICAL
+            et prendra les mesures appropriées. De ces changements d'état en résultent
+            des <link linkend="thebasics-statetypes">types d'état</link> (HARD or SOFT),
+            qui peuvent déclencher des <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link> et
-l'envoi de <link linkend="thebasics-notifications">notifications</link>. Les
-changements d'états de service peuvent également déclencher à la demande des
-<link linkend="thebasics-hostchecks">contrôles d'hôtes</link>. Détecter et
-traiter les changements d'état, c'est le boulot de Nagios.</para>
-		<para>Losque les services changent d'état trop fréquement, ils sont considérés
-comme étant <quote>oscillants</quote>. Nagios peut détecter lorsque les
-services commencent à occiller, et peut supprimer des notifications jusqu'à
-ce que l'état du service se soit stabilisé. Plus dinformation sur la
-détection d'occillation peut être trouvée <link
-linkend="advancedtopics-flapping">ici</link>.</para>
-	</section>
+            l'envoi de <link linkend="thebasics-notifications">notifications</link>. Les
+            changements d'états de service peuvent également déclencher à la demande des
+            <link linkend="thebasics-hostchecks">contrôles d'hôtes</link>. Détecter et
+            traiter les changements d'état, c'est le boulot de Nagios.
+        </para>
+        <para>Losque les services changent d'état trop fréquement, ils sont considérés
+            comme étant <quote>oscillants</quote>. Nagios peut détecter lorsque les
+            services commencent à occiller, et peut supprimer des notifications jusqu'à
+            ce que l'état du service se soit stabilisé. Plus dinformation sur la
+            détection d'occillation peut être trouvée <link
+linkend="advancedtopics-flapping">ici</link>.
+        </para>
+    </section>
 </chapter>
 

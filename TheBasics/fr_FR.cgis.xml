@@ -7,1123 +7,1637 @@
 ]
 >
 <chapter id="thebasics-cgis" xreflabel="Information On The CGIs">
- <title>Information sur les CGIs</title>
-
- <section>
-  <title>Introduction</title>
-
-  <para>Vous trouverez ici une description de l'ensemble des &acronym-cgi;s de Nagios ainsi
-que les autorisations nécessaires pour accéder à chacun d'eux. Par défaut,
-les &acronym-cgi;s ne fonctionnent que si vous vous êtes authentifiés auprès du serveur
-web et que vous êtes autorisés à accéder aux informations demandées. Pour
-plus d'informations sur la configuration des autorisations de votre serveur
-web et des &acronym-cgi;s, lisez les sections <link
+    <title>Information sur les CGIs</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>Vous trouverez ici une description de l'ensemble des &acronym-cgi;s de Nagios ainsi
+            que les autorisations nécessaires pour accéder à chacun d'eux. Par défaut,
+            les &acronym-cgi;s ne fonctionnent que si vous vous êtes authentifiés auprès du serveur
+            web et que vous êtes autorisés à accéder aux informations demandées. Pour
+            plus d'informations sur la configuration des autorisations de votre serveur
+            web et des &acronym-cgi;s, lisez les sections <link
 linkend="configuringnagios-cgiauth">Installer l'interface web et
-Authentification et autorisations dans les CGIs</link>.</para>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-status_cgi" />CGI d'état</title>
-
-  <informaltable frame="all">
-   <tgroup cols="4">
-    <colspec colname="c1" colnum="1" />
-
-    <colspec colname="c2" colnum="2" />
-
-    <colspec colname="c3" colnum="3" />
-
-    <colspec colname="c4" colnum="4" />
-
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-status-a.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-status-b.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-status-c.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-status-d.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>status.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : C'est le &acronym-cgi; le plus important de Nagios. Il vous permet de
-voir l'état de tous les hôtes et de tous les services supervisés. Le &acronym-cgi;
-d'état peut produire deux types principaux d'affichage - un aperçu de l'état
-de tous les groupes d'hôtes (ou d'un groupe particulier) et une vue
-détaillée de tous les services (ou de ceux associés à un hôte particulier).</para>
-      <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                Authentification et autorisations dans les CGIs
+            </link>
+            .
+        </para>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-status_cgi" />CGI d'état
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="4">
+                <colspec colname="c1" colnum="1" />
+                
+                <colspec colname="c2" colnum="2" />
+                
+                <colspec colname="c3" colnum="3" />
+                
+                <colspec colname="c4" colnum="4" />
+                
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-status-a.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-status-b.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-status-c.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-status-d.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>status.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : C'est le &acronym-cgi; le plus important de Nagios. Il vous permet de
+                                voir l'état de tous les hôtes et de tous les services supervisés. Le &acronym-cgi;
+                                d'état peut produire deux types principaux d'affichage - un aperçu de l'état
+                                de tous les groupes d'hôtes (ou d'un groupe particulier) et une vue
+                                détaillée de tous les services (ou de ceux associés à un hôte particulier).
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir tous les hôtes et tous les services. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir tous les hôtes et tous les services. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir tous les services. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir tous les hôtes et tous
-les services dont vous êtes un contact. </para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-statusmap_cgi" />CGI de cartographie des états</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-statusmap.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><filename>statusmap.cgi</filename></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Ce &acronym-cgi; crée une carte de tous les hôtes que vous avez défini dans votre
-réseau. Il utilise la bibliothèque <ulink url="&url-gd;">&acronym-gd;</ulink> de
-Thomas Boutell (version 1.6.3 ou plus) pour créer une image au format PNG de
-l'agencement de votre réseau. Les coordonnées utilisées pour dessiner chaque
-hôte (ainsi que les jolies icônes facultatives) sont extraites des
-définitions d' <link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir tous les services. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir tous les hôtes et tous
+                                        les services dont vous êtes un contact. 
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-statusmap_cgi" />CGI de cartographie des états
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-statusmap.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <filename>statusmap.cgi</filename>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Ce &acronym-cgi; crée une carte de tous les hôtes que vous avez défini dans votre
+                                réseau. Il utilise la bibliothèque <ulink url="&url-gd;">&acronym-gd;</ulink> de
+                                Thomas Boutell (version 1.6.3 ou plus) pour créer une image au format PNG de
+                                l'agencement de votre réseau. Les coordonnées utilisées pour dessiner chaque
+                                hôte (ainsi que les jolies icônes facultatives) sont extraites des
+                                définitions d' <link
 linkend="configuringnagios-objectdefinitions-host">hôtes</link>. Si vous
-souhaitez plutôt laisser le &acronym-cgi; dessiner automatiquement les coordonnées
-pour vous, utilisez le paramètre <link
+                                souhaitez plutôt laisser le &acronym-cgi; dessiner automatiquement les coordonnées
+                                pour vous, utilisez le paramètre <link
 linkend="configuringnagios-configcgi-default_statusmap_layout">default_statusmap_layout</link>
-pour spécifier l'algorithme à utiliser.</para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                pour spécifier l'algorithme à utiliser.
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir tous les hôtes. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
-êtes un contact.</para>
-        </listitem>
-       </itemizedlist><note><para>Les utilisateurs qui ne sont pas autorisés à voir un hôte particulier
-verront un nœud nommé unknown à la place. Je suis conscient qu'ils ne
-devraient rien voir du tout, mais ça n'a aucun sens de générer la carte si
-vous ne pouvez pas voir les dépendances entre les hôtes… </para></note></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-statuswml_cgi" />CGI d'interface WAP</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-statuswml.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><filename>statuswml.cgi</filename></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description: Ce &acronym-cgi; gère l'interface &acronym-wap; d'accès aux informations sur l'état du réseau. Si vous avez un appareil &acronym-wap; (i.e. un téléphone portable compatible Internet), vous
-pouvez accéder aux informations d'état alors que vous êtes en
-déplacement. Les vues disponibles comprennent le résumé par groupe d'hôtes,
-l'aperçu par groupe d'hôtes, le détail d'un hôte, le détail d'un service,
-tous les problèmes, et les problèmes non pris en compte. Vous pouvez de plus
-désactiver les notifications et les contrôles et acquitter des problèmes
-depuis votre portable. Plutôt cool, non ?</para>
-      <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir tous les hôtes. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
+                                        êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                            <note>
+                                <para>Les utilisateurs qui ne sont pas autorisés à voir un hôte particulier
+                                    verront un nœud nommé unknown à la place. Je suis conscient qu'ils ne
+                                    devraient rien voir du tout, mais ça n'a aucun sens de générer la carte si
+                                    vous ne pouvez pas voir les dépendances entre les hôtes… 
+                                </para>
+                            </note>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-statuswml_cgi" />CGI d'interface WAP
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para><mediaobject>
+                                    <imageobject>
+                                        <imagedata fileref="images/cgi-statuswml.png" format="PNG"/>
+                                    </imageobject>
+                                </mediaobject>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <filename>statuswml.cgi</filename>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description: Ce &acronym-cgi; gère l'interface &acronym-wap; d'accès aux informations sur l'état du réseau. Si vous avez un appareil &acronym-wap; (i.e. un téléphone portable compatible Internet), vous
+                                pouvez accéder aux informations d'état alors que vous êtes en
+                                déplacement. Les vues disponibles comprennent le résumé par groupe d'hôtes,
+                                l'aperçu par groupe d'hôtes, le détail d'un hôte, le détail d'un service,
+                                tous les problèmes, et les problèmes non pris en compte. Vous pouvez de plus
+                                désactiver les notifications et les contrôles et acquitter des problèmes
+                                depuis votre portable. Plutôt cool, non ?
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_system_information">autorisé
-pour les informations système</link> vous pouvez voir les informations sur
-le processus de Nagios.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            pour les informations système
+                                        </link>
+                                        vous pouvez voir les informations sur
+                                        le processus de Nagios.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir tous les hôtes et tous les services. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir tous les hôtes et tous les services. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir tous les services. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les données d'état de
-tous les hôtes et services dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-statuswrl_cgi" />CGI du monde des états (VRML)</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-statuswrl.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>statuswrl.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; crée une modélisation en 3D utilisant le langage VRML
-de tous les hôtes définis dans votre réseau. Les coordonnées utilisées pour
-dessiner les hôtes (ainsi que les jolies textures) sont extraites des
-définitions d'<link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir tous les services. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les données d'état de
+                                        tous les hôtes et services dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-statuswrl_cgi" />CGI du monde des états (VRML)
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-statuswrl.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>statuswrl.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; crée une modélisation en 3D utilisant le langage VRML
+                                de tous les hôtes définis dans votre réseau. Les coordonnées utilisées pour
+                                dessiner les hôtes (ainsi que les jolies textures) sont extraites des
+                                définitions d'<link
 linkend="configuringnagios-objectdefinitions-host">hôtes</link>. Si vous
-souhaitez plutôt laisser le &acronym-cgi; dessiner automatiquement les coordonnées
-pour vous, utilisez le paramètre <link
+                                souhaitez plutôt laisser le &acronym-cgi; dessiner automatiquement les coordonnées
+                                pour vous, utilisez le paramètre <link
 linkend="configuringnagios-configcgi-default_statusmap_layout">default_statusmap_layout</link>
-pour spécifier l'algorithme à utiliser. Il vous faudra un navigateur VRML
-(comme <ulink
+                                pour spécifier l'algorithme à utiliser. Il vous faudra un navigateur VRML
+                                (comme <ulink
 url="http://www.parallelgraphics.com/cortona/">Cortona</ulink>, <ulink
 url="http://www.cosmosoftware.com/">Cosmo Player</ulink> ou <ulink
 url="http://www.intervista.com/">WorldView</ulink>) installé sur votre
-système pour pouvoir visualiser ce modèle. </para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                système pour pouvoir visualiser ce modèle. 
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir tous les hôtes. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
-êtes un contact.</para>
-        </listitem>
-       </itemizedlist><note><para>Les utilisateurs qui ne sont pas autorisés à voir un hôte particulier
-verront un nœud nommé unknown à la place. Je suis conscient qu'ils ne
-devraient rien voir du tout, mais ça n'a aucun sens de générer la carte si
-vous ne pouvez pas voir les dépendances entre les hôtes… </para></note></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-tac_cgi" />CGI d'aperçu tactique</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-tac.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>tac.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description: Ce &acronym-cgi; vous donne une vue générale de toute l'activité de
-supervision du réseau. Il vous permet de repérer rapidement les
-indisponibilités du réseau, l'état des hôtes et des services. Il distingue
-les problèmes qui ont été traités d'une façon ou d'une autre (par ex. qui
-ont été acquittés, dont les notifications sont désactivées, etc.) et ceux
-qui n'ont pas été traités, et qui donc méritent attention. Très utile si
-vous avez beaucoup d'hôtes/services à superviser et que vous ne voulez
-consulter qu'un seul écran pour être averti des problèmes. </para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir tous les hôtes. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
+                                        êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                            <note>
+                                <para>Les utilisateurs qui ne sont pas autorisés à voir un hôte particulier
+                                    verront un nœud nommé unknown à la place. Je suis conscient qu'ils ne
+                                    devraient rien voir du tout, mais ça n'a aucun sens de générer la carte si
+                                    vous ne pouvez pas voir les dépendances entre les hôtes… 
+                                </para>
+                            </note>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-tac_cgi" />CGI d'aperçu tactique
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-tac.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>tac.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description: Ce &acronym-cgi; vous donne une vue générale de toute l'activité de
+                                supervision du réseau. Il vous permet de repérer rapidement les
+                                indisponibilités du réseau, l'état des hôtes et des services. Il distingue
+                                les problèmes qui ont été traités d'une façon ou d'une autre (par ex. qui
+                                ont été acquittés, dont les notifications sont désactivées, etc.) et ceux
+                                qui n'ont pas été traités, et qui donc méritent attention. Très utile si
+                                vous avez beaucoup d'hôtes/services à superviser et que vous ne voulez
+                                consulter qu'un seul écran pour être averti des problèmes. 
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir tous les hôtes et tous les services. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir tous les hôtes et tous les services. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir tous les services. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir tous les hôtes et tous
-les services dont vous êtes un contact. </para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-outages_cgi" />CGI d'indisponibilité du réseau</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-outages.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>outages.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; produit une liste des hôtes <quote>à problèmes</quote>
-de votre réseau qui sont responsables de ruptures de lien. Ceci est
-particulièrement utile sur les grands réseaux pour identifier rapidement la
-cause d'un problème. Les hôtes sont triés selon la gravité de la rupture
-dont ils sont responsables.</para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir tous les services. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir tous les hôtes et tous
+                                        les services dont vous êtes un contact. 
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-outages_cgi" />CGI d'indisponibilité du réseau
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-outages.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>outages.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                Description : Ce &acronym-cgi; produit une liste des hôtes <quote>à problèmes</quote>
+                                de votre réseau qui sont responsables de ruptures de lien. Ceci est
+                                particulièrement utile sur les grands réseaux pour identifier rapidement la
+                                cause d'un problème. Les hôtes sont triés selon la gravité de la rupture
+                                dont ils sont responsables.
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir tous les hôtes. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
-êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-config_cgi" />CGI de configuration</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-config.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>config.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> Description : Ce &acronym-cgi; permet de visualiser les définitions d'objets (par
-ex. hôtes, groupes d'hôtes, contacts, groupes de contacts, périodes,
-services et commandes) tels que spécifiés dans vos <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir tous les hôtes. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les hôtes dont vous
+                                        êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-config_cgi" />CGI de configuration
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-config.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>config.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para> Description : Ce &acronym-cgi; permet de visualiser les définitions d'objets (par
+                                ex. hôtes, groupes d'hôtes, contacts, groupes de contacts, périodes,
+                                services et commandes) tels que spécifiés dans vos <link
 linkend="configuringnagios-configobject">fichier(s) de configuration des
-objets</link>. </para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Vous devez avoir <link
+                                    objets
+                                </link>
+                                .
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Vous devez avoir <link
 linkend="configuringnagios-configcgi-authorized_for_configuration_information">l'autorisation
-d'accès aux informations de configuration</link> pour voir n'importe quelle
-information de configuration.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-cmd_cgi" />CGI de commande</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-cmd.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>scmd.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; permet d'envoyer des commandes au processus de
-Nagios. Bien que ce &acronym-cgi; accepte plusieurs arguments, mieux vaut ne pas s'y
-essayer. La plupart changent selon les révisions de Nagios. Utilisez plutôt
-les <link linkend="thebasics-cgis-extinfo_cgi">informations complémentaires
-des CGIs</link> comme point de départ pour envoyer des commandes. </para>
-      <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Vous devez être <link
+                                            d'accès aux informations de configuration
+                                        </link>
+                                        pour voir n'importe quelle
+                                        information de configuration.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-cmd_cgi" />CGI de commande
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-cmd.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>scmd.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; permet d'envoyer des commandes au processus de
+                                Nagios. Bien que ce &acronym-cgi; accepte plusieurs arguments, mieux vaut ne pas s'y
+                                essayer. La plupart changent selon les révisions de Nagios. Utilisez plutôt
+                                les <link linkend="thebasics-cgis-extinfo_cgi">informations complémentaires
+                                    des CGIs
+                                </link>
+                                comme point de départ pour envoyer des commandes. 
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Vous devez être <link
 linkend="configuringnagios-configcgi-authorized_for_system_commands">autorisé
-pour les commandes système</link> pour envoyer des commandes affectant le
-processus de Nagios (redémarrage, arrêt, changement de mode, etc.). </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            pour les commandes système
+                                        </link>
+                                        pour envoyer des commandes affectant le
+                                        processus de Nagios (redémarrage, arrêt, changement de mode, etc.). 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_host_commands">autorisé
-pour toutes les commandes d'hôtes</link> vous pouvez envoyer des commandes à
-tous les hôtes et à tous les services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            pour toutes les commandes d'hôtes
+                                        </link>
+                                        vous pouvez envoyer des commandes à
+                                        tous les hôtes et à tous les services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_service_commands">autorisé
-pour toutes les commandes de services</link> vous pouvez envoyer des
-commandes à tous les services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez envoyer des commandes à tous
-les hôtes et services dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist> <para>Notes :</para> <itemizedlist>
-        <listitem>
-         <para>Si vous avez choisi de ne pas <link
+                                            pour toutes les commandes de services
+                                        </link>
+                                        vous pouvez envoyer des
+                                        commandes à tous les services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez envoyer des commandes à tous
+                                        les hôtes et services dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                             <para>Notes :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous avez choisi de ne pas <link
 linkend="configuringnagios-configcgi-use_authentication">utiliser
-l'authentification</link> dans les &acronym-cgi;s, ce &acronym-cgi; ne permettra à personne
-d'envoyer des commandes à Nagios, et ce dans votre propre intérêt. Je
-suggère dans ce cas de supprimer le &acronym-cgi;. </para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-extinfo_cgi" />CGI d'informations complémentaires</title>
-
-  <informaltable frame="all">
-   <tgroup cols="4">
-    <colspec colname="c1" colnum="1" />
-
-    <colspec colname="c2" colnum="2" />
-
-    <colspec colname="c3" colnum="3" />
-
-    <colspec colname="c4" colnum="4" />
-
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-extinfo-a.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-extinfo-b.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-extinfo-c.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-extinfo-d.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>extinfo.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; permet de voir les informations relatives au processus
-de Nagios, aux statistiques sur les hôtes et les services, aux commentaires
-sur les hôtes et les services, et plus encore. C'est également un point
-d'entrée pour envoyer des commandes à Nagios via le <link
+                                            l'authentification
+                                        </link>
+                                        dans les &acronym-cgi;s, ce &acronym-cgi; ne permettra à personne
+                                        d'envoyer des commandes à Nagios, et ce dans votre propre intérêt. Je
+                                        suggère dans ce cas de supprimer le &acronym-cgi;. 
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-extinfo_cgi" />CGI d'informations complémentaires
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="4">
+                <colspec colname="c1" colnum="1" />
+                
+                <colspec colname="c2" colnum="2" />
+                
+                <colspec colname="c3" colnum="3" />
+                
+                <colspec colname="c4" colnum="4" />
+                
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-extinfo-a.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-extinfo-b.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-extinfo-c.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-extinfo-d.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>extinfo.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; permet de voir les informations relatives au processus
+                                de Nagios, aux statistiques sur les hôtes et les services, aux commentaires
+                                sur les hôtes et les services, et plus encore. C'est également un point
+                                d'entrée pour envoyer des commandes à Nagios via le <link
 linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Bien que ce &acronym-cgi;
-accepte plusieurs arguments, mieux vaut ne pas s'y essayer : la plupart
-changent selon les révisions de Nagios. Vous pouvez accéder à ce &acronym-cgi; en
-cliquant sur les liens appelés 'Network Health' [NdT: Santé/Etat du réseau]
-et 'Process Information' [NdT: Information sur le processus Nagios] de la
-barre latérale de navigation, ou en cliquant sur un lien hôte ou service
-dans l'affichage du <link linkend="thebasics-cgis-status_cgi">CGI
-d'état</link>. </para>
-      <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Vous devez être <link
+                                accepte plusieurs arguments, mieux vaut ne pas s'y essayer : la plupart
+                                changent selon les révisions de Nagios. Vous pouvez accéder à ce &acronym-cgi; en
+                                cliquant sur les liens appelés 'Network Health' [NdT: Santé/Etat du réseau]
+                                et 'Process Information' [NdT: Information sur le processus Nagios] de la
+                                barre latérale de navigation, ou en cliquant sur un lien hôte ou service
+                                dans l'affichage du <link linkend="thebasics-cgis-status_cgi">CGI
+                                    d'état
+                                </link>
+                                .
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Vous devez être <link
 linkend="configuringnagios-configcgi-authorized_for_system_information">autorisé
-pour les informations système</link> pour voir les informations sur le
-processus de Nagios. </para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            pour les informations système
+                                        </link>
+                                        pour voir les informations sur le
+                                        processus de Nagios. 
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir les informations complémentaires de
-tous les hôtes et de tous les services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir les informations complémentaires de
+                                        tous les hôtes et de tous les services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir les informations
-complémentaires de tous les services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les informations
-complémentaires de tous les hôtes et de tous les services dont vous êtes un
-contact. </para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-showlog_cgi" />CGI du fichier journal</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-showlog.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>showlog.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; affiche le <link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir les informations
+                                        complémentaires de tous les services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les informations
+                                        complémentaires de tous les hôtes et de tous les services dont vous êtes un
+                                        contact. 
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-showlog_cgi" />CGI du fichier journal
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-showlog.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>showlog.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                Description : Ce &acronym-cgi; affiche le <link
 linkend="configuringnagios-configmain-log_file">fichier journal</link>. Si
-vous avez activé la <link
+                                vous avez activé la <link
 linkend="configuringnagios-configmain-log_rotation_method">rotation du
-journal</link>, vous pouvez voir le contenu des journaux archivés en
-utilisant les liens de navigation situés en haut de la page. </para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Vous devez être <link
+                                    journal
+                                </link>
+                                ,vous pouvez voir le contenu des journaux archivés en
+                                utilisant les liens de navigation situés en haut de la page. 
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Vous devez être <link
 linkend="configuringnagios-configcgi-authorized_for_system_information">autorisé
-pour les informations système</link> pour voir le fichier journal.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-history_cgi" />CGI d'historique d'alerte</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-history.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>history.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; affiche l'historique des problèmes relatifs soit à un
-hôte particulier soit à tous les hôtes. L'affichage est un sous-ensemble de
-ce que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
-journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
-types de problèmes (i.e. alertes hard et/ou soft, les différents types
-d'alertes sur les services et les hôtes, tous les types d'alertes, etc.). Si
-vous avez activé la <link
+                                            pour les informations système
+                                        </link>
+                                        pour voir le fichier journal.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-history_cgi" />CGI d'historique d'alerte
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-history.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>history.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; affiche l'historique des problèmes relatifs soit à un
+                                hôte particulier soit à tous les hôtes. L'affichage est un sous-ensemble de
+                                ce que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
+                                    journal
+                                </link>
+                                .Vous pouvez filtrer l'affichage pour n'obtenir que certains
+                                types de problèmes (i.e. alertes hard et/ou soft, les différents types
+                                d'alertes sur les services et les hôtes, tous les types d'alertes, etc.). Si
+                                vous avez activé la <link
 linkend="configuringnagios-configmain-log_rotation_method">rotation du
-journal</link>, vous pouvez voir l'historique contenu dans les journaux
-archivés en utilisant les liens de navigation situés en haut de la page. </para> <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                    journal
+                                </link>
+                                ,vous pouvez voir l'historique contenu dans les journaux
+                                archivés en utilisant les liens de navigation situés en haut de la page. 
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir l'historique de tous les hôtes et de
-tous les services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir l'historique de tous les hôtes et de
+                                        tous les services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir l'historique de tous les
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir l'historique de tous
-les hôtes et tous les services dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-notifications_cgi" />CGI des notifications</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-notifications.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>notifications.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; affiche les notifications envoyées aux différents
-contacts d'un hôte ou d'un service. L'affichage est un sous-ensemble de ce
-que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
-journal</link>. Vous pouvez filtrer l'affichage pour n'obtenir que certains
-types de problèmes (i.e. notifications relatives aux services, aux hôtes,
-envoyées à des contacts spécifiques, etc). Si vous avez activé la <link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir l'historique de tous les
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir l'historique de tous
+                                        les hôtes et tous les services dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-notifications_cgi" />CGI des notifications
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-notifications.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>notifications.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; affiche les notifications envoyées aux différents
+                                contacts d'un hôte ou d'un service. L'affichage est un sous-ensemble de ce
+                                que produit le <link linkend="thebasics-cgis-showlog_cgi">CGI du fichier
+                                    journal
+                                </link>
+                                .Vous pouvez filtrer l'affichage pour n'obtenir que certains
+                                types de problèmes (i.e. notifications relatives aux services, aux hôtes,
+                                envoyées à des contacts spécifiques, etc). Si vous avez activé la <link
 linkend="configuringnagios-configmain-log_rotation_method">rotation du
-journal</link>, vous pouvez voir les notifications contenues dans les
-journaux archivés en utilisant les liens de navigation situés en haut de la
-page. </para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                    journal
+                                </link>
+                                ,vous pouvez voir les notifications contenues dans les
+                                journaux archivés en utilisant les liens de navigation situés en haut de la
+                                page. 
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir les notifications de tous les hôtes
-et tous les services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir les notifications de tous les hôtes
+                                        et tous les services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir les notifications de tous les
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les notifications
-relatives à tous les hôtes et tous les services dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-trends_cgi" />CGI de tendances</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-trends.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>strends.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; crée un graphique des états des hôtes et des services
-sur une période donnée. Pour que ce &acronym-cgi; soit pertinent, vous devez activer
-la <link linkend="configuringnagios-configmain-log_rotation_method">rotation
-du journal</link> et archiver les journaux dans le répertoire défini par la
-variable <link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir les notifications de tous les
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les notifications
+                                        relatives à tous les hôtes et tous les services dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-trends_cgi" />CGI de tendances
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-trends.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>strends.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; crée un graphique des états des hôtes et des services
+                                sur une période donnée. Pour que ce &acronym-cgi; soit pertinent, vous devez activer
+                                la <link linkend="configuringnagios-configmain-log_rotation_method">rotation
+                                    du journal
+                                </link>
+                                et archiver les journaux dans le répertoire défini par la
+                                variable <link
 linkend="configuringnagios-configmain-log_archive_path">&config-log_archive_path;</link>.
-Ce &acronym-cgi; utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
-Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.</para> <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                Ce &acronym-cgi; utilise la bibliothèque <ulink url="&url-gd;">gd</ulink> de Thomas
+                                Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir les tendances de tous les hôtes et de
-tous les services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir les tendances de tous les hôtes et de
+                                        tous les services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir les tendances de tous les
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les tendances de tous
-les hôtes et tous les services dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-avail_cgi" />CGI de rapport de disponibilité</title>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-avail-a.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-avail-b.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>avail.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description: Ce &acronym-cgi; permet de créer un rapport sur la disponibilité des
-hôtes et des services sur une période donnée. Pour que ce &acronym-cgi; soit
-pertinent, vous devez activer la <link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir les tendances de tous les
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les tendances de tous
+                                        les hôtes et tous les services dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-avail_cgi" />CGI de rapport de disponibilité
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-avail-a.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-avail-b.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>avail.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description: Ce &acronym-cgi; permet de créer un rapport sur la disponibilité des
+                                hôtes et des services sur une période donnée. Pour que ce &acronym-cgi; soit
+                                pertinent, vous devez activer la <link
 linkend="configuringnagios-configmain-log_rotation_method">rotation du
-journal</link> et archiver les journaux dans le répertoire défini par la
-variable <link
-linkend="configuringnagios-configmain-log_archive_path">&config-log_archive_path;</link>.</para> <para>Autorisation requises :</para>
-      <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
-linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir la disponibilité de tous les hôtes et
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
-linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir la disponibilité de tous les
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir la disponibilité de
-tous les services et hôtes dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-histogram_cgi" />CGI d'histogramme des alertes</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-histogram.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>histogram.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; permet d'afficher l'histogramme de disponibilité
-d'hôtes et services sur une période de temps. Pour que ce &acronym-cgi; soit
-pertinent, vous devez activer la <link
-linkend="configuringnagios-configmain-log_rotation_method">rotation du
-journal</link> et archiver les journaux dans le répertoire défini par la
-variable <link
+                                    journal
+                                </link>
+                                et archiver les journaux dans le répertoire défini par la
+                                variable <link
 linkend="configuringnagios-configmain-log_archive_path">&config-log_archive_path;</link>.
-Ce &acronym-cgi; utilise la bibliothèque <ulink url="&url-gd;">&acronym-gd;</ulink> de Thomas
-Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.</para>
-      <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                            </para>
+                            <para>Autorisation requises :</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir les histogrammes de tous les hôtes et
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir la disponibilité de tous les hôtes et
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir les histogrammes de tous les
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir les histogrammes de
-tous les services et hôtes dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
-
- <section>
-  <title><anchor id="thebasics-cgis-summary_cgi" />CGI du récapitulatif des alertes</title>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para> <screenshot><mediaobject>
-        <imageobject>
-         <imagedata fileref="images/cgi-summary.png" format="PNG"/>
-        </imageobject>
-       </mediaobject></screenshot> </para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="2">
-    <tbody>
-     <row>
-      <entry><para>Nom du fichier :</para></entry>
-
-      <entry><para><filename>summary.cgi</filename></para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <informaltable frame="all">
-   <tgroup cols="1">
-    <tbody>
-     <row>
-      <entry><para>Description : Ce &acronym-cgi; fournit des rapports synthétiques sur les alertes
-concernant les hôtes et services, ainsi que le nombre total d'alertes, les
-services/hôtes générant le plus d'alertes, etc.</para> <para>Autorisation requises :</para> <itemizedlist>
-        <listitem>
-         <para>Si vous êtes <link
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir la disponibilité de tous les
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir la disponibilité de
+                                        tous les services et hôtes dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-histogram_cgi" />CGI d'histogramme des alertes
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-histogram.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>histogram.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; permet d'afficher l'histogramme de disponibilité
+                                d'hôtes et services sur une période de temps. Pour que ce &acronym-cgi; soit
+                                pertinent, vous devez activer la <link
+linkend="configuringnagios-configmain-log_rotation_method">rotation du
+                                    journal
+                                </link>
+                                et archiver les journaux dans le répertoire défini par la
+                                variable <link
+linkend="configuringnagios-configmain-log_archive_path">&config-log_archive_path;</link>.
+                                Ce &acronym-cgi; utilise la bibliothèque <ulink url="&url-gd;">&acronym-gd;</ulink> de Thomas
+                                Boutell (version 1.6.3 ou plus) pour créer l'image des tendances.
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
-tous les hôtes</link> vous pouvez voir le récapitulatif de tous les hôtes et
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes <link
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir les histogrammes de tous les hôtes et
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
-pour tous les services</link> vous pouvez voir le récapitulatif de tous les
-services.</para>
-        </listitem>
-
-        <listitem>
-         <para>Si vous êtes un contact authentifié vous pouvez voir le récapitulatif de
-tous les services et hôtes dont vous êtes un contact.</para>
-        </listitem>
-       </itemizedlist></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir les histogrammes de tous les
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir les histogrammes de
+                                        tous les services et hôtes dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    
+    <section>
+        <title>
+            <anchor id="thebasics-cgis-summary_cgi" />CGI du récapitulatif des alertes
+        </title>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>
+                                 
+                                <screenshot><mediaobject>
+                                        <imageobject>
+                                            <imagedata fileref="images/cgi-summary.png" format="PNG"/>
+                                        </imageobject>
+                                    </mediaobject>
+                                </screenshot>
+                                 
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Nom du fichier :</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <filename>summary.cgi</filename>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <informaltable frame="all">
+            <tgroup cols="1">
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Description : Ce &acronym-cgi; fournit des rapports synthétiques sur les alertes
+                                concernant les hôtes et services, ainsi que le nombre total d'alertes, les
+                                services/hôtes générant le plus d'alertes, etc.
+                            </para>
+                            <para>Autorisation requises :</para> <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_hosts">autorisé pour
+                                            tous les hôtes
+                                        </link>
+                                        vous pouvez voir le récapitulatif de tous les hôtes et
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>
+                                        Si vous êtes <link
+linkend="configuringnagios-configcgi-authorized_for_all_services">autorisé
+                                            pour tous les services
+                                        </link>
+                                        vous pouvez voir le récapitulatif de tous les
+                                        services.
+                                    </para>
+                                </listitem>
+                                
+                                <listitem>
+                                    <para>Si vous êtes un contact authentifié vous pouvez voir le récapitulatif de
+                                        tous les services et hôtes dont vous êtes un contact.
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
 </chapter>

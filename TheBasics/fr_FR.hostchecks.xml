@@ -7,263 +7,312 @@
 ]
 >
 <chapter id="thebasics-hostchecks" xreflabel="Host Checks">
-	<title>Les contrôles d'hôtes</title>
-	<section>
-		<title>Introduction</title>
-		<para>Le fonctionnement de base des contrôles d'hôte est décrit ci-après…</para>
-	</section>
-	<section>
-		<title>Quand sont effectués les contrôles d'hôtes ?</title>
-		<para>Les hôtes sont contrôlés par le démon Nagios:</para>
-		<itemizedlist>
-			<listitem>
-				<para>A intervalles réguliers, tel que défini par les options <varname>check_interval</varname> et
-<varname>retry_interval</varname> dans vos <link
+    <title>Les contrôles d'hôtes</title>
+    <section>
+        <title>Introduction</title>
+        <para>Le fonctionnement de base des contrôles d'hôte est décrit ci-après…</para>
+    </section>
+    <section>
+        <title>Quand sont effectués les contrôles d'hôtes ?</title>
+        <para>Les hôtes sont contrôlés par le démon Nagios:</para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    A intervalles réguliers, tel que défini par les options <varname>check_interval</varname> et
+                    <varname>retry_interval</varname> dans vos <link
 linkend="configuringnagios-objectdefinitions-host">définitions
-d'hôtes</link>.</para>
-			</listitem>
-			<listitem>
-				<para>A la demande quand un service associé avec l'hôte change d'état.</para>
-			</listitem>
-			<listitem>
-				<para>A la demande, au besoin dans le cadre de la logique <link
+                        d'hôtes
+                    </link>
+                    .
+                </para>
+            </listitem>
+            <listitem>
+                <para>A la demande quand un service associé avec l'hôte change d'état.</para>
+            </listitem>
+            <listitem>
+                <para>
+                    A la demande, au besoin dans le cadre de la logique <link
 linkend="thebasics-networkreachability">accessibilité réseau de
-l'hôte</link>.</para>
-			</listitem>
-			<listitem>
-				<para>Sur demande au besoin des <link
+                        l'hôte
+                    </link>
+                    .
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Sur demande au besoin des <link
 linkend="advancedtopics-dependencychecks">contrôles en prévision des
-dépendances des hôtes</link>.</para>
-			</listitem>
-		</itemizedlist>
-		<para>Les contrôles d'hôtes planifiés régulièrement sont optionels. Si vous avez
-positionnez l'option check_interva à zérp (0), Nagios ne fera pas les
-contrôles d'hôtes de façon régulière. Il fera toutefois des contrôles des
-hôtes à la demande pour les besoins de la supervision.</para>
-		<para>Les contrôles à la demande sont effectués lorsqu'un service associé à l'hôte
-change d'état parce que Nagios a besoin de savoir si l'hôte a également
-changé d'état. Les services qui changent d'état sont souvent un indicateur
-du fait que l'hôte a peut-être aussi changé d'état. Par exemple, si Nagios
-détecte que le service &protocol-http; associé avec un hôte vient juste de
-passer d'un état CRITICAL à un état OK, cela peut indiquer que l'hôte est
-redevenu à la normale et fonctionne suite à un redémarrage.</para>
-		<para>Les contrôles à la demande des hôtes sont auss effectués dans le cadre de la
-logique <link linkend="thebasics-networkreachability">d'accessibilité de
-l'hôte via le réseau</link>. Nagios est conçu pour détecter les coupures
-réseau aussi rapidement possible, en distinguant un état DOWN d'un état
-UNREACHABLE pour l'hôte. Ce sont deux états très différents et qui peuvent
-aider rapidement un adminuistrateur à localiser la l'origine de la coupure
-réseau.</para>
-		<para>Les contrôles à la demande peuvent aussi être effectués dans le cadre de la
-logique <link linkend="advancedtopics-dependencychecks">des contrôles en
-prévision des dépendances des hôtes</link>. Ces contrôles permettent
-d'assurer que la logique de dépendance soit la plus précise que possible.</para>
-	</section>
-	<section>
-		<title>Les contrôles d'hôtes mis en cache</title>
-		<para>Les performances des contrôles d'hôte à la demande peuvent être améliorées
-en implémenant l'utilisation des contrôles mis en cache, qui permettent à
-Nagios de ne pas exécuter un contrôle d'hôte s'il détermine qu'il a un
-résultat relativement récent à la place pour ce contrôle. Plus d'information
-sur les contrôles mis en cache peuvent être trouvés <link
-linkend="advancedtopics-cachedchecks">ici</link>.</para>
-	</section>
-	<section>
-		<title>Les contrôles et les dépendances</title>
-		<para>Vous pouvez définir des <link
+                        dépendances des hôtes
+                    </link>
+                    .
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>Les contrôles d'hôtes planifiés régulièrement sont optionels. Si vous avez
+            positionnez l'option check_interva à zérp (0), Nagios ne fera pas les
+            contrôles d'hôtes de façon régulière. Il fera toutefois des contrôles des
+            hôtes à la demande pour les besoins de la supervision.
+        </para>
+        <para>Les contrôles à la demande sont effectués lorsqu'un service associé à l'hôte
+            change d'état parce que Nagios a besoin de savoir si l'hôte a également
+            changé d'état. Les services qui changent d'état sont souvent un indicateur
+            du fait que l'hôte a peut-être aussi changé d'état. Par exemple, si Nagios
+            détecte que le service &protocol-http; associé avec un hôte vient juste de
+            passer d'un état CRITICAL à un état OK, cela peut indiquer que l'hôte est
+            redevenu à la normale et fonctionne suite à un redémarrage.
+        </para>
+        <para>Les contrôles à la demande des hôtes sont auss effectués dans le cadre de la
+            logique <link linkend="thebasics-networkreachability">d'accessibilité de
+                l'hôte via le réseau
+            </link>
+            .Nagios est conçu pour détecter les coupures
+            réseau aussi rapidement possible, en distinguant un état DOWN d'un état
+            UNREACHABLE pour l'hôte. Ce sont deux états très différents et qui peuvent
+            aider rapidement un adminuistrateur à localiser la l'origine de la coupure
+            réseau.
+        </para>
+        <para>Les contrôles à la demande peuvent aussi être effectués dans le cadre de la
+            logique <link linkend="advancedtopics-dependencychecks">des contrôles en
+                prévision des dépendances des hôtes
+            </link>
+            .Ces contrôles permettent
+            d'assurer que la logique de dépendance soit la plus précise que possible.
+        </para>
+    </section>
+    <section>
+        <title>Les contrôles d'hôtes mis en cache</title>
+        <para>Les performances des contrôles d'hôte à la demande peuvent être améliorées
+            en implémenant l'utilisation des contrôles mis en cache, qui permettent à
+            Nagios de ne pas exécuter un contrôle d'hôte s'il détermine qu'il a un
+            résultat relativement récent à la place pour ce contrôle. Plus d'information
+            sur les contrôles mis en cache peuvent être trouvés <link
+linkend="advancedtopics-cachedchecks">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Les contrôles et les dépendances</title>
+        <para>
+            Vous pouvez définir des <link
 linkend="configuringnagios-objectdefinitions-hostdependency">dépendances
-d'hôtes</link> qui empêchent Nagios de contrôler le statut d'un hôte
-dépendant d'un service d'un ou plusieurs autres hôtes. Plus d'informations
-sur les dépendances peuvent être trouvées <link
-linkend="advancedtopics-dependencies">ici</link>.</para>
-	</section>
-	<section>
-		<title>Parallélisation des contrôles d'hôtes</title>
-		<para>Les contrôles d'hôtes planifiés sont lancés en parallèle. Quand Nagios a
-besoin de procéder un un contrôle d'hôte planifié, il lancera le contrôle de
-l'hôte et reviendra à son travail initial (contrôle des services,
-etc…). Le contrôle de l'hôte est lancé dans un processus enfant qui a été
-dupliqué à partir du démon principal de Nagios. Quand le contrôle d'hôte est
-terminé, le processus enfant informe le processus Nagios principal (son
-parent) du résultat. Le processus principal de Nagios gère le résultat qu'il
-a reçu et prends les mesures appropriées (lancement des gestionnaires
-d'événements, envois des notifications, etc.).</para>
-		<para>Les contrôles à la demande sont également exécutés en parallèle si
-nécessaire. Comme mentionné précédement, Nagios peut renoncer à l'exécution
-d'un contrôle à la demande s'il peut utiliser un résultat relativement
-recent pour ce contrôle d'hôte.</para>
-		<para>Quand Nagios traite les résultats des contrôles d'hôtes planifiés ou à la
-demande, il peut lancer des contrôles (secondaires) sur d'autres hôtes. Ces
-contrôles peuvent être lancés pour deux raisons: <link
+                d'hôtes
+            </link>
+            qui empêchent Nagios de contrôler le statut d'un hôte
+            dépendant d'un service d'un ou plusieurs autres hôtes. Plus d'informations
+            sur les dépendances peuvent être trouvées <link
+linkend="advancedtopics-dependencies">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Parallélisation des contrôles d'hôtes</title>
+        <para>Les contrôles d'hôtes planifiés sont lancés en parallèle. Quand Nagios a
+            besoin de procéder un un contrôle d'hôte planifié, il lancera le contrôle de
+            l'hôte et reviendra à son travail initial (contrôle des services,
+            etc…). Le contrôle de l'hôte est lancé dans un processus enfant qui a été
+            dupliqué à partir du démon principal de Nagios. Quand le contrôle d'hôte est
+            terminé, le processus enfant informe le processus Nagios principal (son
+            parent) du résultat. Le processus principal de Nagios gère le résultat qu'il
+            a reçu et prends les mesures appropriées (lancement des gestionnaires
+            d'événements, envois des notifications, etc.).
+        </para>
+        <para>Les contrôles à la demande sont également exécutés en parallèle si
+            nécessaire. Comme mentionné précédement, Nagios peut renoncer à l'exécution
+            d'un contrôle à la demande s'il peut utiliser un résultat relativement
+            recent pour ce contrôle d'hôte.
+        </para>
+        <para>Quand Nagios traite les résultats des contrôles d'hôtes planifiés ou à la
+            demande, il peut lancer des contrôles (secondaires) sur d'autres hôtes. Ces
+            contrôles peuvent être lancés pour deux raisons: <link
 linkend="advancedtopics-dependencychecks">les contrôles en prévision des
-dépendances des hôtes</link> et pour déterminer le statut des hôtes qui
-utilisent la logique <link
+                dépendances des hôtes
+            </link>
+            et pour déterminer le statut des hôtes qui
+            utilisent la logique <link
 linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
-contrôles secondaires qui sont lancés sont généralement lancés en
-parallèle. Cependant, il y a une grosse exception dont vous devez être au
-courant, car elle peut avoir un effet négatif sur la performance…</para>
-		<note><para>Les hôtes qui ont leur variable <varname>max_check_attempts</varname>
-positionnée à 1 peuvent causer de sérieux problèmes de performance. La
-raison? Si Nagios a besoin de déterminer leur vrai état en utilisant la
-logique <link linkend="thebasics-networkreachability">d'accessibilité
-réseau</link> (pour voir s'ils sont DOWN ou UNREACHABLE), il va devoir
-lancer une série de contrôles sur tous ses hôtes parents immédiats. Juste
-pour rappel, ces contrôles sont exécutés en serie, plutôt qu'en parallèle,
-du coup, cela peut causer un grosse baisse de performance. Pour cette
-raison, Je vous recommande de toujours utiliser une valeur supérieure à 1
-pour le paramètre <varname>max_check_attempts</varname> dans vos définitions d'hôtes.</para></note>
-	</section>
-	<section>
-		<title>Les états d'un hôte</title>
-		<para>Les hôtes qui sont contrôlés peuvent être dans un des trois états
-differents:</para>
-		<itemizedlist>
-			<listitem>
-				<para>UP</para>
-			</listitem>
-			<listitem>
-				<para>DOWN</para>
-			</listitem>
-			<listitem>
-				<para>UNREACHABLE</para>
-			</listitem>
-		</itemizedlist>
-	</section>
-	<section>
-		<title>Détermmination de l'état d'un hôte</title>
-		<para>Les contrôles d'hôte sont réalisés par les <link
+            contrôles secondaires qui sont lancés sont généralement lancés en
+            parallèle. Cependant, il y a une grosse exception dont vous devez être au
+            courant, car elle peut avoir un effet négatif sur la performance…
+        </para>
+        <note>
+            <para>
+                Les hôtes qui ont leur variable <varname>max_check_attempts</varname>
+                positionnée à 1 peuvent causer de sérieux problèmes de performance. La
+                raison? Si Nagios a besoin de déterminer leur vrai état en utilisant la
+                logique <link linkend="thebasics-networkreachability">d'accessibilité
+                    réseau
+                </link>
+                (pour voir s'ils sont DOWN ou UNREACHABLE), il va devoir
+                lancer une série de contrôles sur tous ses hôtes parents immédiats. Juste
+                pour rappel, ces contrôles sont exécutés en serie, plutôt qu'en parallèle,
+                du coup, cela peut causer un grosse baisse de performance. Pour cette
+                raison, Je vous recommande de toujours utiliser une valeur supérieure à 1
+                pour le paramètre <varname>max_check_attempts</varname> dans vos définitions d'hôtes.
+            </para>
+        </note>
+    </section>
+    <section>
+        <title>Les états d'un hôte</title>
+        <para>Les hôtes qui sont contrôlés peuvent être dans un des trois états
+            differents:
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>UP</para>
+            </listitem>
+            <listitem>
+                <para>DOWN</para>
+            </listitem>
+            <listitem>
+                <para>UNREACHABLE</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>Détermmination de l'état d'un hôte</title>
+        <para>
+            Les contrôles d'hôte sont réalisés par les <link
 linkend="thebasics-plugins">plugins</link>, qui retournent un état OK,
-WARNING, UNKNOWN, ou CRITICAL. Comment Nagios traduit-il le code de retour
-des plugins en états d'hôte UP, DOWN, ou UNREACHABLE? Voyons cela..</para>
-		<para>Le tableau ci-dessous montre à quoi correspondent les codes de retour des
-plugin en état d'hôte préalables. Certains post-traitement (qui sont décrits
-plus loin) sont fait et peuvent changer l'état final de l'hôte.</para>
-		<informaltable frame="all">
-			<tgroup cols="2">
-				<thead>
-					<row>
-						<entry>
-							<para>Résultat du Plugin</para>
-						</entry>
-						<entry>
-							<para>Etat préalable de l'Hôte</para>
-						</entry>
-					</row>
-				</thead>
-				<tbody>
-					<row>
-						<entry>
-							<para>OK</para>
-						</entry>
-						<entry>
-							<para>UP</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>WARNING</para>
-						</entry>
-						<entry>
-							<para>UP ou DOWN*</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>UNKNOWN</para>
-						</entry>
-						<entry>
-							<para>DOWN</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>CRITICAL</para>
-						</entry>
-						<entry>
-							<para>DOWN</para>
-						</entry>
-					</row>
-				</tbody>
-			</tgroup>
-		</informaltable>
-		<note><para>Les retours WARNING signifient généralement que l'hôte est UP. Cependant,
-les retours WARNING sont interprétés pour signifier que l'hôte est DOWN si
-l'option <link
+            WARNING, UNKNOWN, ou CRITICAL. Comment Nagios traduit-il le code de retour
+            des plugins en états d'hôte UP, DOWN, ou UNREACHABLE? Voyons cela..
+        </para>
+        <para>Le tableau ci-dessous montre à quoi correspondent les codes de retour des
+            plugin en état d'hôte préalables. Certains post-traitement (qui sont décrits
+            plus loin) sont fait et peuvent changer l'état final de l'hôte.
+        </para>
+        <informaltable frame="all">
+            <tgroup cols="2">
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Résultat du Plugin</para>
+                        </entry>
+                        <entry>
+                            <para>Etat préalable de l'Hôte</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        <entry>
+                            <para>UP</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>WARNING</para>
+                        </entry>
+                        <entry>
+                            <para>UP ou DOWN*</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>UNKNOWN</para>
+                        </entry>
+                        <entry>
+                            <para>DOWN</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        <entry>
+                            <para>DOWN</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        <note>
+            <para>Les retours WARNING signifient généralement que l'hôte est UP. Cependant,
+                les retours WARNING sont interprétés pour signifier que l'hôte est DOWN si
+                l'option <link
 linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressive_host_checking</link>
-est activée.</para>
-		<para>Si l'état de l'hôte préalable est DOWN, Nagios va essayer de voir s'il est
-réellement DOWN ou s'il est UNREACHABLE. La distinction entre les états
-d'hôtes DOWN et UNREACHABLE est important, car elle peut permettre aux
-admministrateurs de determiner l'origine de la coupure réseau rapidement. Le
-tableau suivant montre comment Nagios détermine l'état final en fonction de
-l'état de l'hôte(s) parent(s). Les parents d'hôtes sont définis dans le
-paramètre <varname>parents</varname> de la définition d'hôte.</para></note>
-		<informaltable frame="all">
-			<tgroup cols="3">
-				<thead>
-					<row>
-						<entry>
-							<para>Etat préalable de l'Hôte</para>
-						</entry>
-						<entry>
-							<para>Etat de l'Hôte Parent</para>
-						</entry>
-						<entry>
-							<para>Etat Final de l'Hôte</para>
-						</entry>
-					</row>
-				</thead>
-				<tbody>
-					<row>
-						<entry>
-							<para>DOWN</para>
-						</entry>
-						<entry>
-							<para>Au moins un des parents est UP</para>
-						</entry>
-						<entry>
-							<para>DOWN</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>DOWN</para>
-						</entry>
-						<entry>
-							<para>Tous les parents sont soit DOWN soit UNREACHABLE</para>
-						</entry>
-						<entry>
-							<para>UNREACHABLE</para>
-						</entry>
-					</row>
-				</tbody>
-			</tgroup>
-		</informaltable>
-		<para>Plus d'inforamtions sur comment Nagios fait la différence entre les états
-DOWN et UNREACHABLE peuvent être trouvées <link
-linkend="thebasics-networkreachability">ici</link>.</para>
-	</section>
-	<section>
-		<title>Changements d'états d'un hôte</title>
-		<para>Comme vous probablement conscients, les hôtes ne restent pas toujours dans
-un état. Des choses arrivent, des patches sont appliqués, et les serveurs
-ont besoins d'être redémarrés. Quand Nagios contrôle les statuts des hôtes,
-il sera capable de détecter quand un hôte a changé entre les états UP, DOWN,
-ou UNREACHABLE et prendra les mesures appropriées. Ces changements d'états
-se traduisent par différents <link linkend="thebasics-statetypes">types
-d'états</link> (HARD or SOFT), qui peuvent déclencher les <link
+                est activée.
+            </para>
+            <para>Si l'état de l'hôte préalable est DOWN, Nagios va essayer de voir s'il est
+                réellement DOWN ou s'il est UNREACHABLE. La distinction entre les états
+                d'hôtes DOWN et UNREACHABLE est important, car elle peut permettre aux
+                admministrateurs de determiner l'origine de la coupure réseau rapidement. Le
+                tableau suivant montre comment Nagios détermine l'état final en fonction de
+                l'état de l'hôte(s) parent(s). Les parents d'hôtes sont définis dans le
+                paramètre <varname>parents</varname> de la définition d'hôte.
+            </para>
+        </note>
+        <informaltable frame="all">
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Etat préalable de l'Hôte</para>
+                        </entry>
+                        <entry>
+                            <para>Etat de l'Hôte Parent</para>
+                        </entry>
+                        <entry>
+                            <para>Etat Final de l'Hôte</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>DOWN</para>
+                        </entry>
+                        <entry>
+                            <para>Au moins un des parents est UP</para>
+                        </entry>
+                        <entry>
+                            <para>DOWN</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>DOWN</para>
+                        </entry>
+                        <entry>
+                            <para>Tous les parents sont soit DOWN soit UNREACHABLE</para>
+                        </entry>
+                        <entry>
+                            <para>UNREACHABLE</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        <para>Plus d'inforamtions sur comment Nagios fait la différence entre les états
+            DOWN et UNREACHABLE peuvent être trouvées <link
+linkend="thebasics-networkreachability">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Changements d'états d'un hôte</title>
+        <para>Comme vous probablement conscients, les hôtes ne restent pas toujours dans
+            un état. Des choses arrivent, des patches sont appliqués, et les serveurs
+            ont besoins d'être redémarrés. Quand Nagios contrôle les statuts des hôtes,
+            il sera capable de détecter quand un hôte a changé entre les états UP, DOWN,
+            ou UNREACHABLE et prendra les mesures appropriées. Ces changements d'états
+            se traduisent par différents <link linkend="thebasics-statetypes">types
+                d'états
+            </link>
+            (HARD or SOFT), qui peuvent déclencher les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>et
-l'envoi de <link
+            l'envoi de <link
 linkend="thebasics-notifications">notifications</link>. Détecter et traiter
-les changements d'états, c'est le boulot de Nagios.</para>
-		<para>Quand les hôtes changent trop fréquement d'état, ils sont considérés comme
-étant <quote>flapping</quote> (oscillants). Un bon exemple d'oscillation
-d'un hôte serait un serveur qui redémarrerait spontanément lors du
-chargement du système d'exploitation. C'est toujours le scénario amusant à
-traiter. Nagios peut détecter lorsque l'hôte commence à osciller, et peut
-supprimer les notifications tant que les oscillations de l'état de l'hôte ne
-sont pas stabilisées. Plus d'informations sur la détection d'oscillation
-peuvent être trouvées <link linkend="advancedtopics-flapping">ici</link>.</para>
-	</section>
+            les changements d'états, c'est le boulot de Nagios.
+        </para>
+        <para>Quand les hôtes changent trop fréquement d'état, ils sont considérés comme
+            étant <quote>flapping</quote> (oscillants). Un bon exemple d'oscillation
+            d'un hôte serait un serveur qui redémarrerait spontanément lors du
+            chargement du système d'exploitation. C'est toujours le scénario amusant à
+            traiter. Nagios peut détecter lorsque l'hôte commence à osciller, et peut
+            supprimer les notifications tant que les oscillations de l'état de l'hôte ne
+            sont pas stabilisées. Plus d'informations sur la détection d'oscillation
+            peuvent être trouvées <link linkend="advancedtopics-flapping">ici</link>.
+        </para>
+    </section>
 </chapter>
 

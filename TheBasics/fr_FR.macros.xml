@@ -7,292 +7,378 @@
 ]
 >
 <chapter id="thebasics-macros" xreflabel="Understanding Macros and How They Work">
-	<title>Utilisation des macros dans les commandes</title>
-	<section>
-		<title>Macros</title>
-		<para>Une des fonctionalités disponibles dans Nagios est la possibilité
-d'utiliser des macros [NdT: macro-commandes] dans les définitions de
-commandes. Avant d'exécuter une commande, Nagios remplacera toutes les
-macros dans celle-ci par les valeurs correspondantes. Cela vous permet de
-définir quelques commandes génériques que vous manipulerez à votre guise.</para>
-	</section>
-	<section>
-		<title>Substitution des macros</title>
-		<para>Avant qu'une commande (contrôles d'hôte et de service, notifications,
-gestionnaires d'événements, etc.) soit exécutée, Nagios va remplacer toutes
-les macros qu'il trouvera dans la définition de la commande par les valeurs
-correspondantes.</para>
-		<para>Certaines macros peuvent contenir elles-mêmes d'autres macros. Celles-ci
-incluent les macros &macro-hostnotes;,
-		&macro-hostnotesurl;, &macro-hostactionurl;, &macro-servicenotes;, 
-		&macro-servicenotesurl;, et &macro-serviceactionurl; .</para>
-	</section>
-	<section>
-		<title>Exemple 1: La macro d'adresse de l'hôte</title>
-		<para>
-		Quand vous utilisez des macros d'hôte et de service dans les définitions de
-commandes, elles font référence aux valeurs de l'hôte ou du service pour
-lequel s'exécute la commande. Prenons un exemple. Supposons que nous ayons
-une définition d'hôte et une commande check_ping définies de la manière
-suivante :
-		</para>
-		<programlisting>
-		define host{
-		   host_name         linuxbox
-		   address           192.168.1.2
-		   check_command     check_ping
-		…
-		}
-
-		define command{
-		   command_name   check_ping
-		   command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w 100.0,90% -c 200.0,60%
-		}
-		</programlisting>
-		<para>La ligne de commande finale, après substitution, qui sera exécutée pour le
-contrôle de l'hôte ressemblera à ceci :</para>
-		<para><code>/usr/local/nagios/libexec/check_ping -H 192.168.1.2 -w 100.0,90% -c 200.0,60%</code></para>
-		<para>Ce qui est beau c'est que vous pouvez utilisez une simple commande de
-contrôle pour un nombre illimité d'hôtes. Chaque hôte va être contrôlé
-avec cette même commande parce que chaque adresse de vos hôtes seront
-automatiquement soumis pendant l'exécution de votre commande.</para>
-	</section>
-	<section>
-		<title>Exemple 2: Les commandes d'Argument de macros </title>
-		<para>Vous pouvez aussi passer des paramètres aux commandes, ce qui est pratique
-si vous voulez avoir des définitions de commandes plus génériques. Les
-paramètres sont spécifiés dans la définition de l'objet (c.-à-d. de l'hôte
-ou du service), en les séparant du nom de la commande par des points
-d'exclamation (!) comme ceci :</para>
-		<programlisting>
-		define service{	
-		   host_name             linuxbox
-		   service_description   PING
-		   check_command         check_ping!200.0,80%!400.0,40%
-		…
-		}
-		</programlisting>
-		<para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
-paramètres (auxquels on fait référence par les macros &macro-argn;). La macro
-<literal>$ARG1$</literal> vaudra <quote>200.0,80%</quote> et <literal>$ARG2$</literal> vaudra <quote>400.0,40%</quote> (sans les guillemets).
-Supposons que nous utilisons la définition d'hôte ci-dessus et une commande <command>check_ping</command> définie comme ceci :</para>
-		<programlisting>
-		define command{
-		   command_name   check_ping
-		   command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$
-		</programlisting>
-		<para>La ligne de commande finale à exécuter pour le contrôle du service sera :</para>
-		<para><code>/usr/local/nagios/libexec/check_ping -H 192.168.1.2 -w 200.0,80% -c 400.0,40%</code></para>
-		<para><tip><para>Si vous devez passer des points d'exclamations (!) dans vos arguments de
-commandes, vous pouvez faire ainsi en les espaçant avec un backslash (\). Si
-vous devez inclure des backslashes dans vos arguments de commandes, ils
-devront aussi être espacés avec un backslash.</para></tip></para>
-	</section>
-	<section>
-		<title>Macro à la demande</title>
-		<para>Normalement, quand vous utilisez des macros d'hôte ou de service dans les
-définitions de commandes, elles font référence aux valeurs de l'hôte ou du
-service pour lequel s'exécute la commande. Par exemple, si la commande de
-contrôle d'un hôte s'exécute pour l'hôte appelé <quote>linuxbox</quote>, toutes les
-macros d'hôte listées dans le tableau ci-après font référence aux valeurs de
-cet hôte (<quote>linuxbox</quote>).</para>
-		<para>Si vous souhaitez faire référence aux valeurs d'un autre hôte ou service
-dans une commande (pour lequel ne s'exécute pas la commande), vous pouvez
-utiliser ce qu'on appellle des macros <quote>à la demande</quote>. Les macros à la
-demande ressemblent aux macros normales, mis à part qu'elle contiennent
-l'identifiant de l'hôte ou du service où aller chercher leur valeur. Voici
-la syntaxe de base pour les macros à la demande :</para>
-		<itemizedlist>
-			<listitem>
-				<para><literal>$HOSTMACRONAME:host_name$</literal></para>
-			</listitem>
-			<listitem>
-				<para><literal>$SERVICEMACRONAME:host_name:service_description$</literal></para>
-			</listitem>
-		</itemizedlist>
-		<para>Remplacez <literal>HOSTMACRONAME</literal> et <literal>SERVICEMACRONAME</literal> avec le nom d'une des macros standard d'hôte ou de service trouvé <link
-linkend="thebasics-macrolist">ici</link>.</para>
-		<para>Notez que le nom de la macro est séparé de l'identifiant de l'hôte ou du
-service par deux points (:). Pour les macros de service à la demande,
-l'identifiant du service est composé d'un nom d'hôte et d'une description de
-service - qui sont séparés par deux point (:) également.</para>
-		<para><tip><para>Le service de macros à la demande peut contenir un champ de nom d'hôte
-vide. Dans ce cas, le nom de l'hôte est automatiquement associé dès que le
-service est utilisé.</para></tip></para>
-		<para>Voici des exemples de macros d'hôte et de service à la demande :</para>
-		<example><title>Macro à la demande d'hôte</title>
-		<para><literal>$HOSTDOWNTIME:myhost$</literal></para>
-		</example>
-		<example><title>Macro à la demande de service</title>
-		<para><literal>$SERVICESTATEID:novellserver:DS Database$</literal></para>
-		</example>
-		<example><title>Macro à la demande de service, sans le champ d'hôte</title>
-		<para><literal>$SERVICESTATEID::CPU Load$</literal></para>
-		</example>
-
-		<para>Les macros à la demande sont aussi valables pour les macros des groupes
-d'hôtes, des groupes de services, des contacts et des groupes de
-contacts. Par exemple:</para>
-		<example><title>Macro à la demande de contact</title>
-		<para><literal>$CONTACTEMAIL:john$</literal></para>
-		</example>
-		<example><title>Macro à la demande de groupe de contacts</title>
-		<para><literal>$CONTACTGROUPMEMBERS:linux-admins$</literal></para>
-		</example>
-		<example><title>Macro à la demande de groupe d'hôtes</title>
-		<para><literal>$HOSTGROUPALIAS:linux-servers$</literal></para>
-		</example>
-		<example><title>Macro à la demande de groupe de services</title>
-		<para><literal>$SERVICEGROUPALIAS:DNS-Cluster$</literal></para>
-		</example>
-	</section>
-	<section>
-		<title>Les groupes de macros à la demande</title>
-		<para>Vous pouvez obtenir les valeurs d'une macro à travers tous les contacts, les
-hôtes, ou les services dans un groupe spécifique en utilisant un format
-spécial dans votre déclaration de macro à la demande. Vous le faites en vous
-référant à un groupe d'hôte spécifique, un groupe de service, ou le nom du
-groupe de contact dans une macro à la demande, comme ceci :</para>
-		<itemizedlist>
-			<listitem>
-				<para><literal>$HOSTMACRONAME:hostgroup_name:delimiter$</literal></para>
-			</listitem>
-			<listitem>
-				<para><literal>$SERVICEMACRONAME:servicegroup_name:delimiter$</literal></para>
-			</listitem>
-			<listitem>
-				<para><literal>$CONTACTMACRONAME:contactgroup_name:delimiter$</literal></para>
-			</listitem>
-		</itemizedlist>
-		<para>Remplacez <literal>HOSTMACRONAME</literal>, <literal>SERVICEMACRONAME</literal>, et <literal>CONTACTMACRONAME</literal> avec le nom de macro d'un hôte standard, un service, ou le contact trouvé
-<link linkend="thebasics-macrolist">ici</link>. Le délimiteur que vous
-spécifiez est utilisé pour séparer des valeurs de macro pour chaque membre
-d'un groupe.</para>
-		<para>Par exemple, la macro suivante retournera une liste d'états hôtes séparés par
-des virgules pour les hôtes membres du groupe hg1:</para>
-		<para><literal>$HOSTSTATEID:hg1:,$</literal></para>
-		<para>La définition de cette macro retournera quelque chose ressemblant à ça:</para>
-		<para><code>0,2,1,1,0,0,2</code></para>
-	</section>
-	<section>
-		<title>Les macros de variable personnalisée</title>
-		<para>N'importe laquelle des <link
+    <title>Utilisation des macros dans les commandes</title>
+    <section>
+        <title>Macros</title>
+        <para>Une des fonctionalités disponibles dans Nagios est la possibilité
+            d'utiliser des macros [NdT: macro-commandes] dans les définitions de
+            commandes. Avant d'exécuter une commande, Nagios remplacera toutes les
+            macros dans celle-ci par les valeurs correspondantes. Cela vous permet de
+            définir quelques commandes génériques que vous manipulerez à votre guise.
+        </para>
+    </section>
+    <section>
+        <title>Substitution des macros</title>
+        <para>Avant qu'une commande (contrôles d'hôte et de service, notifications,
+            gestionnaires d'événements, etc.) soit exécutée, Nagios va remplacer toutes
+            les macros qu'il trouvera dans la définition de la commande par les valeurs
+            correspondantes.
+        </para>
+        <para>Certaines macros peuvent contenir elles-mêmes d'autres macros. Celles-ci
+            incluent les macros &macro-hostnotes;,
+            &macro-hostnotesurl;, &macro-hostactionurl;, &macro-servicenotes;, 
+            &macro-servicenotesurl;, et &macro-serviceactionurl; .
+        </para>
+    </section>
+    <section>
+        <title>Exemple 1: La macro d'adresse de l'hôte</title>
+        <para>
+            Quand vous utilisez des macros d'hôte et de service dans les définitions de
+            commandes, elles font référence aux valeurs de l'hôte ou du service pour
+            lequel s'exécute la commande. Prenons un exemple. Supposons que nous ayons
+            une définition d'hôte et une commande check_ping définies de la manière
+            suivante :
+        </para>
+        <programlisting>
+            define host{
+            host_name         linuxbox
+            address           192.168.1.2
+            check_command     check_ping
+            …
+            }
+            
+            define command{
+            command_name   check_ping
+            command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w 100.0,90% -c 200.0,60%
+            }
+        </programlisting>
+        <para>La ligne de commande finale, après substitution, qui sera exécutée pour le
+            contrôle de l'hôte ressemblera à ceci :
+        </para>
+        <para>
+            <code>/usr/local/nagios/libexec/check_ping -H 192.168.1.2 -w 100.0,90% -c 200.0,60%</code>
+        </para>
+        <para>Ce qui est beau c'est que vous pouvez utilisez une simple commande de
+            contrôle pour un nombre illimité d'hôtes. Chaque hôte va être contrôlé
+            avec cette même commande parce que chaque adresse de vos hôtes seront
+            automatiquement soumis pendant l'exécution de votre commande.
+        </para>
+    </section>
+    <section>
+        <title>Exemple 2: Les commandes d'Argument de macros </title>
+        <para>Vous pouvez aussi passer des paramètres aux commandes, ce qui est pratique
+            si vous voulez avoir des définitions de commandes plus génériques. Les
+            paramètres sont spécifiés dans la définition de l'objet (c.-à-d. de l'hôte
+            ou du service), en les séparant du nom de la commande par des points
+            d'exclamation (!) comme ceci :
+        </para>
+        <programlisting>
+            define service{	
+            host_name             linuxbox
+            service_description   PING
+            check_command         check_ping!200.0,80%!400.0,40%
+            …
+            }
+        </programlisting>
+        <para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
+            paramètres (auxquels on fait référence par les macros &macro-argn;). La macro
+            <literal>$ARG1$</literal> vaudra <quote>200.0,80%</quote> et <literal>$ARG2$</literal> vaudra <quote>400.0,40%</quote> (sans les guillemets).
+            Supposons que nous utilisons la définition d'hôte ci-dessus et une commande <command>check_ping</command> définie comme ceci :
+        </para>
+        <programlisting>
+            define command{
+            command_name   check_ping
+            command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$
+        </programlisting>
+        <para>La ligne de commande finale à exécuter pour le contrôle du service sera :</para>
+        <para>
+            <code>/usr/local/nagios/libexec/check_ping -H 192.168.1.2 -w 200.0,80% -c 400.0,40%</code>
+        </para>
+        <para>
+            <tip>
+                <para>Si vous devez passer des points d'exclamations (!) dans vos arguments de
+                    commandes, vous pouvez faire ainsi en les espaçant avec un backslash (\). Si
+                    vous devez inclure des backslashes dans vos arguments de commandes, ils
+                    devront aussi être espacés avec un backslash.
+                </para>
+            </tip>
+        </para>
+    </section>
+    <section>
+        <title>Macro à la demande</title>
+        <para>Normalement, quand vous utilisez des macros d'hôte ou de service dans les
+            définitions de commandes, elles font référence aux valeurs de l'hôte ou du
+            service pour lequel s'exécute la commande. Par exemple, si la commande de
+            contrôle d'un hôte s'exécute pour l'hôte appelé <quote>linuxbox</quote>, toutes les
+            macros d'hôte listées dans le tableau ci-après font référence aux valeurs de
+            cet hôte (<quote>linuxbox</quote>).
+        </para>
+        <para>Si vous souhaitez faire référence aux valeurs d'un autre hôte ou service
+            dans une commande (pour lequel ne s'exécute pas la commande), vous pouvez
+            utiliser ce qu'on appellle des macros <quote>à la demande</quote>. Les macros à la
+            demande ressemblent aux macros normales, mis à part qu'elle contiennent
+            l'identifiant de l'hôte ou du service où aller chercher leur valeur. Voici
+            la syntaxe de base pour les macros à la demande :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <literal>$HOSTMACRONAME:host_name$</literal>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <literal>$SERVICEMACRONAME:host_name:service_description$</literal>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>
+            Remplacez <literal>HOSTMACRONAME</literal> et <literal>SERVICEMACRONAME</literal> avec le nom d'une des macros standard d'hôte ou de service trouvé <link
+linkend="thebasics-macrolist">ici</link>.
+        </para>
+        <para>Notez que le nom de la macro est séparé de l'identifiant de l'hôte ou du
+            service par deux points (:). Pour les macros de service à la demande,
+            l'identifiant du service est composé d'un nom d'hôte et d'une description de
+            service - qui sont séparés par deux point (:) également.
+        </para>
+        <para>
+            <tip>
+                <para>Le service de macros à la demande peut contenir un champ de nom d'hôte
+                    vide. Dans ce cas, le nom de l'hôte est automatiquement associé dès que le
+                    service est utilisé.
+                </para>
+            </tip>
+        </para>
+        <para>Voici des exemples de macros d'hôte et de service à la demande :</para>
+        <example>
+            <title>Macro à la demande d'hôte</title>
+            <para>
+                <literal>$HOSTDOWNTIME:myhost$</literal>
+            </para>
+        </example>
+        <example>
+            <title>Macro à la demande de service</title>
+            <para>
+                <literal>$SERVICESTATEID:novellserver:DS Database$</literal>
+            </para>
+        </example>
+        <example>
+            <title>Macro à la demande de service, sans le champ d'hôte</title>
+            <para>
+                <literal>$SERVICESTATEID::CPU Load$</literal>
+            </para>
+        </example>
+        
+        <para>Les macros à la demande sont aussi valables pour les macros des groupes
+            d'hôtes, des groupes de services, des contacts et des groupes de
+            contacts. Par exemple:
+        </para>
+        <example>
+            <title>Macro à la demande de contact</title>
+            <para>
+                <literal>$CONTACTEMAIL:john$</literal>
+            </para>
+        </example>
+        <example>
+            <title>Macro à la demande de groupe de contacts</title>
+            <para>
+                <literal>$CONTACTGROUPMEMBERS:linux-admins$</literal>
+            </para>
+        </example>
+        <example>
+            <title>Macro à la demande de groupe d'hôtes</title>
+            <para>
+                <literal>$HOSTGROUPALIAS:linux-servers$</literal>
+            </para>
+        </example>
+        <example>
+            <title>Macro à la demande de groupe de services</title>
+            <para>
+                <literal>$SERVICEGROUPALIAS:DNS-Cluster$</literal>
+            </para>
+        </example>
+    </section>
+    <section>
+        <title>Les groupes de macros à la demande</title>
+        <para>Vous pouvez obtenir les valeurs d'une macro à travers tous les contacts, les
+            hôtes, ou les services dans un groupe spécifique en utilisant un format
+            spécial dans votre déclaration de macro à la demande. Vous le faites en vous
+            référant à un groupe d'hôte spécifique, un groupe de service, ou le nom du
+            groupe de contact dans une macro à la demande, comme ceci :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <literal>$HOSTMACRONAME:hostgroup_name:delimiter$</literal>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <literal>$SERVICEMACRONAME:servicegroup_name:delimiter$</literal>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <literal>$CONTACTMACRONAME:contactgroup_name:delimiter$</literal>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>
+            Remplacez <literal>HOSTMACRONAME</literal>, <literal>SERVICEMACRONAME</literal>, et <literal>CONTACTMACRONAME</literal> avec le nom de macro d'un hôte standard, un service, ou le contact trouvé
+            <link linkend="thebasics-macrolist">ici</link>. Le délimiteur que vous
+            spécifiez est utilisé pour séparer des valeurs de macro pour chaque membre
+            d'un groupe.
+        </para>
+        <para>Par exemple, la macro suivante retournera une liste d'états hôtes séparés par
+            des virgules pour les hôtes membres du groupe hg1:
+        </para>
+        <para>
+            <literal>$HOSTSTATEID:hg1:,$</literal>
+        </para>
+        <para>La définition de cette macro retournera quelque chose ressemblant à ça:</para>
+        <para>
+            <code>0,2,1,1,0,0,2</code>
+        </para>
+    </section>
+    <section>
+        <title>Les macros de variable personnalisée</title>
+        <para>
+            N'importe laquelle des <link
 linkend="configuringnagios-customobjectvars">variables d'objet
-personnalisées</link> que vous spécifiez dans la définition de l'hôte, du
-service, ou du contact est aussi disponible comme macro. La macro de
-variable personnalisée est appelée comme suit :</para>
-		<itemizedlist>
-			<listitem>
-				<para><literal>$_HOSTvarname$</literal></para>
-			</listitem>
-			<listitem>
-				<para><literal>$_SERVICEvarname$</literal></para>
-			</listitem>
-			<listitem>
-				<para><literal>$_CONTACTvarnaem$</literal></para>
-			</listitem>
-		</itemizedlist>
-		<para>Prenez la définition d'hôte suivante avec une variable personnalisée appelée
-<quote><literal>_MACADDRESS</literal></quote>…</para>
-		<programlisting>
-		define host{
-		   host_name      linuxbox
-		   address        192.168.1.1
-		   _MACADDRESS    00:01:02:03:04:05
-		   …
-		}
-		</programlisting>
-		<para>La variable <literal>_MACADDRESS</literal> serait disponible dans une macro appelée <literal>$_HOSTMACADDRESS$</literal>. Plus d'informations sur les variables personnalisées d'objets et comment
-les utiliser dans des macros peuvent être trouvées <link
-linkend="configuringnagios-customobjectvars">ici</link>.</para>
-	</section>
-	<section>
-		<title>Nettoyage des macros</title>
-		<para>Les valeurs de certaines macros sont dépouillées des métacaractères du shell
-potentiellement dangereux, avant d'être remplacées dans la commande à
-exécuter. Les caractères qui seront supprimés dans les macros sont définis
-par le paramètre <link
+                personnalisées
+            </link>
+            que vous spécifiez dans la définition de l'hôte, du
+            service, ou du contact est aussi disponible comme macro. La macro de
+            variable personnalisée est appelée comme suit :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <literal>$_HOSTvarname$</literal>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <literal>$_SERVICEvarname$</literal>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <literal>$_CONTACTvarnaem$</literal>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>Prenez la définition d'hôte suivante avec une variable personnalisée appelée
+            <quote>
+                <literal>_MACADDRESS</literal>
+            </quote>
+            …
+        </para>
+        <programlisting>
+            define host{
+            host_name      linuxbox
+            address        192.168.1.1
+            _MACADDRESS    00:01:02:03:04:05
+            …
+            }
+        </programlisting>
+        <para>
+            La variable <literal>_MACADDRESS</literal> serait disponible dans une macro appelée <literal>$_HOSTMACADDRESS$</literal>. Plus d'informations sur les variables personnalisées d'objets et comment
+            les utiliser dans des macros peuvent être trouvées <link
+linkend="configuringnagios-customobjectvars">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Nettoyage des macros</title>
+        <para>Les valeurs de certaines macros sont dépouillées des métacaractères du shell
+            potentiellement dangereux, avant d'être remplacées dans la commande à
+            exécuter. Les caractères qui seront supprimés dans les macros sont définis
+            par le paramètre <link
 linkend="configuringnagios-configmain-illegal_macro_output_chars">illegal_macro_output_chars</link>.
-Ce nettoyage s'applique aux macros suivantes :</para>
-		<orderedlist>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-hostoutput">&macro-hostoutput;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-longhostoutput">&macro-longhostoutput;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-hostperfdata">&macro-hostperfdata;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-hostackauthor">&macro-hostackauthor;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-hostackcomment">&macro-hostackcomment;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link
+            Ce nettoyage s'applique aux macros suivantes :
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-macrolist-hostoutput">&macro-hostoutput;</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-macrolist-longhostoutput">&macro-longhostoutput;</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-macrolist-hostperfdata">&macro-hostperfdata;</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-macrolist-hostackauthor">&macro-hostackauthor;</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-macrolist-hostackcomment">&macro-hostackcomment;</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link
 linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link
 linkend="thebasics-macrolist-serviceackauthor">&macro-serviceackauthor;</link>
-				</para>
-			</listitem>
-			<listitem>
-				<para>
-					<link
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link
 linkend="thebasics-macrolist-serviceackcomment">&macro-serviceackcomment;</link>
-				</para>
-			</listitem>
-		</orderedlist>
-	</section>
-	<section>
-		<title>Macros et variables d'environnement</title>
-		<para>A partir de la version 2.0 de Nagios, la plupart des macros sont
-disponibles sous forme de variables d'environnement. Cela signifie que les
-scripts lancés par Nagios (c.-à-d. les commandes de contrôle de service et
-d'hôte, les commandes de notification, etc...) peuvent faire référence à ces
-macros directement en tant que variables d'environnement standard. Pour des
-raisons de sécurité et de bon sens, <link
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Macros et variables d'environnement</title>
+        <para>A partir de la version 2.0 de Nagios, la plupart des macros sont
+            disponibles sous forme de variables d'environnement. Cela signifie que les
+            scripts lancés par Nagios (c.-à-d. les commandes de contrôle de service et
+            d'hôte, les commandes de notification, etc...) peuvent faire référence à ces
+            macros directement en tant que variables d'environnement standard. Pour des
+            raisons de sécurité et de bon sens, <link
 linkend="thebasics-macrolist-usern">&macro-usern;</link> et les macros d'hôte et de
-service à la demande ne sont pas disponibles comme variables
-d'environnement.</para>
-		<para>Les variables d'environnement qui contiennent des macros sont nommées comme
-les macros correspondantes (listées <link
+            service à la demande ne sont pas disponibles comme variables
+            d'environnement.
+        </para>
+        <para>Les variables d'environnement qui contiennent des macros sont nommées comme
+            les macros correspondantes (listées <link
 linkend="thebasics-macrolist">ici</link>), avec le préfixe <literal>NAGIOS_</literal>. Par
-exemple, la macro <link
+            exemple, la macro <link
 linkend="thebasics-macrolist-hostname">&macro-hostname;</link> est disponible à
-travers la variable d'environnement nommée <literal>NAGIOS_HOSTNAME</literal>.</para>
-	</section>
-	<section>
-		<title>Validité des macros</title>
-		<para>Une liste de tous les macros qui sont disponibles dans Nagios, aussi bien
-qu'un graphique d'utilisation, peut être trouvée <link
-linkend="thebasics-macrolist">ici</link>.</para>
-	</section>
+            travers la variable d'environnement nommée <literal>NAGIOS_HOSTNAME</literal>.
+        </para>
+    </section>
+    <section>
+        <title>Validité des macros</title>
+        <para>Une liste de tous les macros qui sont disponibles dans Nagios, aussi bien
+            qu'un graphique d'utilisation, peut être trouvée <link
+linkend="thebasics-macrolist">ici</link>.
+        </para>
+    </section>
 </chapter>
 

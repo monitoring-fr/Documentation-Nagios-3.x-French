@@ -7,82 +7,93 @@
 ]
 >
 <chapter id="thebasics-activechecks" xreflabel="Active Checks">
- <title>les contrôles actifs</title>
-
- <section>
-  <title>Introduction</title>
-
-  <para>Nagios est capable de contrôler des hôtes et des services de deux façons;
-activement et passivement. Les contrôles passifs sont décrits <link
+    <title>les contrôles actifs</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>Nagios est capable de contrôler des hôtes et des services de deux façons;
+            activement et passivement. Les contrôles passifs sont décrits <link
 linkend="thebasics-passivechecks">ailleurs</link>, aussi allons-nous nous
-concentrer ici sur les contrôles actifs. Les contrôles actifs représentent
-la méthode la plus commune pour superviser des hôtes et services. Les
-principales fonctionnalités des contrôles actifs sont les suivantes :</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Les contrôles actifs sont inités par le processus Nagios.</para>
-   </listitem>
-
-   <listitem>
-    <para>Les contrôles actifs sont exécutés à intervalles réguliers</para>
-   </listitem>
-  </itemizedlist>
- </section>
-
- <section>
-  <title>Comment sont faits les contrôles actifs ?</title>
-
-  <para><informalfigure>
-	<mediaobject>
-    <imageobject>
-     <imagedata fileref="images/activechecks.png" format="PNG"/>
-    </imageobject>
-   </mediaobject></informalfigure>Les contrôles actifs sont initiés par la logique de contrôle du démon
-Nagios. Quand Nagios a besoin de connaître l'état d'un hôte ou d'un service,
-il va exécuter un plugin et lui passer les informations sur ce qu'il a
-besoin de contrôler. Le plugin contrôle alors l'état opérationnel de l'hôte
-ou du service et renvoie les résultats en retour au démon Nagios. Nagios va
-traiter les résultats du contrôle d'hôte ou de service et conduire les
-actions appropriées (par exemple envoyer des notifications, lancer un
-gestionnaire d'événements, etc.).</para>
-
-  <para>Plus d'informations sur le fonctionnement des plugins peut être trouvé <link
-linkend="thebasics-plugins">ici</link>.</para>
- </section>
-
- <section>
-  <title>Quand sont exécutés les contrôles actifs ?</title>
-
-  <para>Les contrôles actifs sont exécutés :</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>À intervalles réguliers, comme définit dans les options 
-    <varname>check_interval</varname> et <varname>retry_interval</varname> de vos définitions d'hôtes et de services</para>
-   </listitem>
-
-   <listitem>
-    <para>à la demand quand nécessaire</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les contrôles réguliers sont faits à intervalles réguliers soit quand
-  <code>check_interval</code> ou le <code>retry_interval</code> dans vos défintions d'hôtes et de services, dépendant du <link
+            concentrer ici sur les contrôles actifs. Les contrôles actifs représentent
+            la méthode la plus commune pour superviser des hôtes et services. Les
+            principales fonctionnalités des contrôles actifs sont les suivantes :
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Les contrôles actifs sont inités par le processus Nagios.</para>
+            </listitem>
+            
+            <listitem>
+                <para>Les contrôles actifs sont exécutés à intervalles réguliers</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    
+    <section>
+        <title>Comment sont faits les contrôles actifs ?</title>
+        
+        <para><informalfigure>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/activechecks.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </informalfigure>
+            Les contrôles actifs sont initiés par la logique de contrôle du démon
+            Nagios. Quand Nagios a besoin de connaître l'état d'un hôte ou d'un service,
+            il va exécuter un plugin et lui passer les informations sur ce qu'il a
+            besoin de contrôler. Le plugin contrôle alors l'état opérationnel de l'hôte
+            ou du service et renvoie les résultats en retour au démon Nagios. Nagios va
+            traiter les résultats du contrôle d'hôte ou de service et conduire les
+            actions appropriées (par exemple envoyer des notifications, lancer un
+            gestionnaire d'événements, etc.).
+        </para>
+        
+        <para>
+            Plus d'informations sur le fonctionnement des plugins peut être trouvé <link
+linkend="thebasics-plugins">ici</link>.
+        </para>
+    </section>
+    
+    <section>
+        <title>Quand sont exécutés les contrôles actifs ?</title>
+        
+        <para>Les contrôles actifs sont exécutés :</para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>À intervalles réguliers, comme définit dans les options 
+                    <varname>check_interval</varname> et <varname>retry_interval</varname> de vos définitions d'hôtes et de services
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>à la demand quand nécessaire</para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Les contrôles réguliers sont faits à intervalles réguliers soit quand
+            <code>check_interval</code> ou le <code>retry_interval</code> dans vos défintions d'hôtes et de services, dépendant du <link
 linkend="thebasics-statetypes">type d'état</link> dans lequel se trouve
-l'hôte ou le service. Si l'hôte ou le service se trouve dans un état HARD,
-il sera activement contrôlé à intervalles réguliers <code>check_interval</code> option. Si il est dans un état SOFT, il sera contrôlé à intervalles égaux à
-l'option retry_interval.</para>
-
-  <para>Les contrôles à la demande sont faits quand Nagios estime avoir besoin de
-connaître le dernier état d'un hôte ou service particulier. Par exemple,
-quand Nagios détermine <link
+            l'hôte ou le service. Si l'hôte ou le service se trouve dans un état HARD,
+            il sera activement contrôlé à intervalles réguliers <code>check_interval</code> option. Si il est dans un état SOFT, il sera contrôlé à intervalles égaux à
+            l'option retry_interval.
+        </para>
+        
+        <para>Les contrôles à la demande sont faits quand Nagios estime avoir besoin de
+            connaître le dernier état d'un hôte ou service particulier. Par exemple,
+            quand Nagios détermine <link
 linkend="thebasics-networkreachability">l'accesibilité</link> d'un hôte, il
-va souvent faire un contrôle à la demande des hôtes parents et enfants pour
-avoir un état exact de ce segment particulier de réseau. Les contrôles à la
-demande peuvent aussi être faits par la logique de <link
+            va souvent faire un contrôle à la demande des hôtes parents et enfants pour
+            avoir un état exact de ce segment particulier de réseau. Les contrôles à la
+            demande peuvent aussi être faits par la logique de <link
 linkend="advancedtopics-dependencychecks">contrôle prédictif de
-dépendances</link> pour s'assurer que Nagios a bien les derniers états
-disponibles.</para>
- </section>
+                dépendances
+            </link>
+            pour s'assurer que Nagios a bien les derniers états
+            disponibles.
+        </para>
+    </section>
 </chapter>

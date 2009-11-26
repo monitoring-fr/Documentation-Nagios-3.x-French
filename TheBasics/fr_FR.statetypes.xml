@@ -7,358 +7,532 @@
 ]
 >
 <chapter id="thebasics-statetypes" xreflabel="State Types">
- <title>Types d'états</title>
-
- <section>
-  <title>Introduction</title>
-
-  <para>L'état courant d'un service ou d'un hôte supervisé est déterminé par deux
-composants:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>L'état du service ou de l'hôte (ex: OK, WARNING, UP, DOWN, etc.)</para>
-   </listitem>
-
-   <listitem>
-    <para>Le type d'état dans lequel l'hôte ou le service se trouve</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Il y a seux type d'état dans Nagios - les états SOFT et les états HARD. Ces
-types d'états sont un élément crucial de la logique de supervision, ils sont
-utilisés pour déterminer quand les <link
+    <title>Types d'états</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>L'état courant d'un service ou d'un hôte supervisé est déterminé par deux
+            composants:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>L'état du service ou de l'hôte (ex: OK, WARNING, UP, DOWN, etc.)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Le type d'état dans lequel l'hôte ou le service se trouve</para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Il y a seux type d'état dans Nagios - les états SOFT et les états HARD. Ces
+            types d'états sont un élément crucial de la logique de supervision, ils sont
+            utilisés pour déterminer quand les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
-sont exécutés et quand les <link
+            sont exécutés et quand les <link
 linkend="thebasics-notifications">notifications</link> sont initialement
-envoyées.</para>
-
-  <para>Ce document décrit les différences qu'il existe entre les états SOFT et
-HARD, comment ils surviennent, et ce qu'il se passe lorsqu'ils ont lieu.</para>
- </section>
-
- <section>
-  <title>Tentatives de contrôle des Services et des hôtes</title>
-
-  <para>Afin de prévenir des fausses alarmes dues à des problèmes transitoires,
-Nagios vous permet de définir combien de fois un service ou un hôte devra
-être (re)contrôlé avant d'être considéré comme ayant un <quote>réel</quote>
-problème. Ceci est contrôlé par l'option max_check_attempts des définitions
-d'hôtes et de services. Comprendre comment les hôtes et les services sont
-(re)contrôlés afin de déterminer si un réel problème existe est important
-dans la compréhension de comment les type d'états fonctionnent.</para>
- </section>
-
- <section>
-  <title>Les états Soft</title>
-
-  <para>Les états Soft surviennent dans les situations suivantes…</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Quand le contrôle d'un service ou d'un hôte retournre un état non-OK ou
-non-UP et quand le service n'a pas été (re)contrôlé le nombre de fois
-spécifié par le paramètre <varname>max_check_attempts</varname> des définitions des hôtes ou
-des services. C'est ce qu'on appelle une erreur Soft.</para>
-   </listitem>
-
-   <listitem>
-    <para>Quand un service ou un hôte se rétablit suite à un état d'erreur soft. Ceci
-est considéré comme un rétablissement soft. </para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les choses suivantes se produisent lorsque des hôtes ou des services
-rencontrent des changements d'état SOFT:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>L'état SOFT est journalisé.</para>
-   </listitem>
-
-   <listitem>
-    <para>Les gestionnaires d'événements sont exécutés pour traiter l'état SOFT.</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les états SOFT sont seulement journalisés si vous avez activé les options
-<link
+            envoyées.
+        </para>
+        
+        <para>Ce document décrit les différences qu'il existe entre les états SOFT et
+            HARD, comment ils surviennent, et ce qu'il se passe lorsqu'ils ont lieu.
+        </para>
+    </section>
+    
+    <section>
+        <title>Tentatives de contrôle des Services et des hôtes</title>
+        
+        <para>Afin de prévenir des fausses alarmes dues à des problèmes transitoires,
+            Nagios vous permet de définir combien de fois un service ou un hôte devra
+            être (re)contrôlé avant d'être considéré comme ayant un <quote>réel</quote>
+            problème. Ceci est contrôlé par l'option max_check_attempts des définitions
+            d'hôtes et de services. Comprendre comment les hôtes et les services sont
+            (re)contrôlés afin de déterminer si un réel problème existe est important
+            dans la compréhension de comment les type d'états fonctionnent.
+        </para>
+    </section>
+    
+    <section>
+        <title>Les états Soft</title>
+        
+        <para>Les états Soft surviennent dans les situations suivantes…</para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Quand le contrôle d'un service ou d'un hôte retournre un état non-OK ou
+                    non-UP et quand le service n'a pas été (re)contrôlé le nombre de fois
+                    spécifié par le paramètre <varname>max_check_attempts</varname> des définitions des hôtes ou
+                    des services. C'est ce qu'on appelle une erreur Soft.
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Quand un service ou un hôte se rétablit suite à un état d'erreur soft. Ceci
+                    est considéré comme un rétablissement soft. 
+                </para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Les choses suivantes se produisent lorsque des hôtes ou des services
+            rencontrent des changements d'état SOFT:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>L'état SOFT est journalisé.</para>
+            </listitem>
+            
+            <listitem>
+                <para>Les gestionnaires d'événements sont exécutés pour traiter l'état SOFT.</para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Les états SOFT sont seulement journalisés si vous avez activé les options
+            <link
 linkend="configuringnagios-configmain-log_service_retries">&config-log_service_retries;</link>
-ou <link
+            ou <link
 linkend="configuringnagios-configmain-log_host_retries">&config-log_host_retries;</link>
-dans le fichier de configuration principal.</para>
-
-  <para>La seule chose importante qui se passe réellement lors d'un état soft, c'est
-l'exécution des gestionnaires d'événements. L'utilisation des gestionaires
-d'évéenements peut être particulièrement utile si vous voulez essayer et
-résoudre un problème de façon proactive avant qu'il ne se transforme en état
-HARD. Les macros <link
+            dans le fichier de configuration principal.
+        </para>
+        
+        <para>La seule chose importante qui se passe réellement lors d'un état soft, c'est
+            l'exécution des gestionnaires d'événements. L'utilisation des gestionaires
+            d'évéenements peut être particulièrement utile si vous voulez essayer et
+            résoudre un problème de façon proactive avant qu'il ne se transforme en état
+            HARD. Les macros <link
 linkend="thebasics-macrolist-hoststatetype">&macro-hoststatetype;</link> ou <link
 linkend="thebasics-macrolist-servicestatetype">&macro-servicestatetype;</link>
-auront alors la valeur <quote>SOFT</quote>quand les gestionnaires d'événement seront
-exécutés, ce qui permettra aux gestionnaires d'événements de savoir quand
-ils devraont prendre des mesures correctives. Plus d'informations sur les
-gestionnaires d'événements sont disponibles <link
-linkend="advancedtopics-eventhandlers">ici</link>.</para>
- </section>
-
- <section>
-  <title>Les états Hard</title>
-
-  <para>Les états Hard surviennent pour les hôtes et les services dans les
-situations suivantes:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Quand un contrôle d'hôte retourne un état non-OK et qu'il a été (re)contrôlé
-autant de fois que spécifié par l'option max_check_attempts de la définition
-de l'hôte. C'est un état d'erreur hard.</para>
-   </listitem>
-
-   <listitem>
-    <para>Lorsqu'un hôte ou un service passe d'un état hard à un autre état (ex:
-WARNING vers CRITICAL).</para>
-   </listitem>
-
-   <listitem>
-    <para>Lorsqu'un contrôle de service revoie un état non-OK et que son hôte
-correspondant est soit DOWN ou UNREACHABLE.</para>
-   </listitem>
-
-   <listitem>
-    <para>Lorsqu'un hôte ou un service redevient OK après un état non-OK hard. Ceci
-est considéré comme un retour à la normale hard</para>
-   </listitem>
-
-   <listitem>
-    <para>Lorsqu'un <link linkend="thebasics-passivechecks">contrôle passif d'un
-hôte</link> est reçu. Les contrôles passifs des hôtes sont traités comme
-HARD sauf si l'option <link
+            auront alors la valeur <quote>SOFT</quote>quand les gestionnaires d'événement seront
+            exécutés, ce qui permettra aux gestionnaires d'événements de savoir quand
+            ils devraont prendre des mesures correctives. Plus d'informations sur les
+            gestionnaires d'événements sont disponibles <link
+linkend="advancedtopics-eventhandlers">ici</link>.
+        </para>
+    </section>
+    
+    <section>
+        <title>Les états Hard</title>
+        
+        <para>Les états Hard surviennent pour les hôtes et les services dans les
+            situations suivantes:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Quand un contrôle d'hôte retourne un état non-OK et qu'il a été (re)contrôlé
+                    autant de fois que spécifié par l'option max_check_attempts de la définition
+                    de l'hôte. C'est un état d'erreur hard.
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Lorsqu'un hôte ou un service passe d'un état hard à un autre état (ex:
+                    WARNING vers CRITICAL).
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Lorsqu'un contrôle de service revoie un état non-OK et que son hôte
+                    correspondant est soit DOWN ou UNREACHABLE.
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Lorsqu'un hôte ou un service redevient OK après un état non-OK hard. Ceci
+                    est considéré comme un retour à la normale hard
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    Lorsqu'un <link linkend="thebasics-passivechecks">contrôle passif d'un
+                        hôte
+                    </link>
+                    est reçu. Les contrôles passifs des hôtes sont traités comme
+                    HARD sauf si l'option <link
 linkend="configuringnagios-configmain-passive_host_checks_are_soft">&config-passive_host_checks_are_soft;</link>
-est activée.</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les choses suivantes se produisent lorsque des hôtes ou des services
-rencontrent des changements d'état HARD:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>L'état HARD est journalisé</para>
-   </listitem>
-
-   <listitem>
-    <para>Les gestionnaires d'événements sont exécutés pour traiter l'état HARD.</para>
-   </listitem>
-
-   <listitem>
-    <para>Les contacts sont notifiés d'un problème ou d'un retour à la normale d'un
-hôte ou d'un service.</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les macros <link
+                    est activée.
+                </para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Les choses suivantes se produisent lorsque des hôtes ou des services
+            rencontrent des changements d'état HARD:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>L'état HARD est journalisé</para>
+            </listitem>
+            
+            <listitem>
+                <para>Les gestionnaires d'événements sont exécutés pour traiter l'état HARD.</para>
+            </listitem>
+            
+            <listitem>
+                <para>Les contacts sont notifiés d'un problème ou d'un retour à la normale d'un
+                    hôte ou d'un service.
+                </para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>
+            Les macros <link
 linkend="thebasics-macrolist-hoststatetype">&macro-hoststatetype;</link> ou <link
 linkend="thebasics-macrolist-servicestatetype">&macro-servicestatetype;</link>
-auront la valeur <quote>HARD</quote> quand les gestionnaires d'événement seront exécutés,
-ce qui permettra aux gestionnaires d'événement de savoir qu'ils doivent
-effectuer une action corrective. Plus d'informations sur les gestionnaires
-d'événement peuvent être trouvées <link
-linkend="advancedtopics-eventhandlers">ici</link>.</para>
- </section>
-
- <section>
-  <title>Exemple</title>
-
-  <para>Voici un exemple de comment sont déterminés les types d'état, quand les
-changement d'états surviennent, et quand les gestionnaires d'événements et
-les notifications sont envoyées. Le tableau ci-dessous montre les contrôles
-consécutifs dans le temps. Le max_check_attempt du service contrôlé est
-positionné à 3.</para>
-
-  <informaltable frame="all">
-   <tgroup cols="6">
-    <thead>
-     <row>
-      <entry><para>Echelle de temps</para></entry>
-
-      <entry><para>Contrôle #</para></entry>
-
-      <entry><para>Etat</para></entry>
-
-      <entry><para>Type d'état</para></entry>
-
-      <entry><para>Changement d'état</para></entry>
-
-      <entry><para>Notes</para></entry>
-     </row>
-		</thead>
-		<tbody>
-     <row>
-      <entry><para>0</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>OK</para></entry>
-
-      <entry><para>HARD</para></entry>
-
-      <entry><para>Non</para></entry>
-
-      <entry><para>Etat initial du service</para></entry>
-     </row>
-
-     <row>
-      <entry><para>1</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>CRITICAL</para></entry>
-
-      <entry><para>SOFT</para></entry>
-
-      <entry><para>Oui</para></entry>
-
-      <entry><para>Première détection d'un état non-OK. Le gestionnaire d'événement s'exécute.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>2</para></entry>
-
-      <entry><para>2</para></entry>
-
-      <entry><para>WARNING</para></entry>
-
-      <entry><para>SOFT</para></entry>
-
-      <entry><para>Oui</para></entry>
-
-      <entry><para>Le service continue d'être dans un état non-OK. Le gestionnaire d'événement
-s'exécute.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>3</para></entry>
-
-      <entry><para>3</para></entry>
-
-      <entry><para>CRITICAL</para></entry>
-
-      <entry><para>HARD</para></entry>
-
-      <entry><para>Oui</para></entry>
-
-      <entry><para>Le nombre maximum de tentatives a été atteint, le service passe dans un état
-HARD. Le gestionnaire d'événement s'exécute et une notification est
-envoyée. Le compteur de tentavive repasse immédiatement à 1.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>4</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>WARNING</para></entry>
-
-      <entry><para>HARD</para></entry>
-
-      <entry><para>Oui</para></entry>
-
-      <entry><para>Le service passe à un état WARNING HARD. Le gestionnaire d'événement
-s'exécute et une notifiaction du problème est envoyée.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>5</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>WARNING</para></entry>
-
-      <entry><para>HARD</para></entry>
-
-      <entry><para>Non</para></entry>
-
-      <entry><para>Le service se stabilise dans un état HARD. Selon l'intervalle de notification
-spécifié pour le service, d'autres notivications peuvent être envoyées.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>6</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>OK</para></entry>
-
-      <entry><para>HARD</para></entry>
-
-      <entry><para>Oui</para></entry>
-
-      <entry><para>Le service passe à un état OK HARD. Le gestionnaire d'événement s'exécute et
-une notification de retour à la normale est envoyée.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>7</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>OK</para></entry>
-
-      <entry><para>HARD</para></entry>
-
-      <entry><para>Non</para></entry>
-
-      <entry><para>Le service est toujours OK.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>8</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>UNKNOWN</para></entry>
-
-      <entry><para>SOFT</para></entry>
-
-      <entry><para>Oui</para></entry>
-
-      <entry><para>Le service est détecté comme ayant basculé vers un état SOFT non-OK. Le
-gestionnaire d'événement s'exécute.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>9</para></entry>
-
-      <entry><para>2</para></entry>
-
-      <entry><para>OK</para></entry>
-
-      <entry><para>SOFT</para></entry>
-
-      <entry><para>Oui</para></entry>
-
-      <entry><para>Le service passe à un état de retour à la normale SOFT. Le gestionnaire
-d'événement s'exécute, mais aucune notification n'est envoyée, comme ce
-n'est pas un <quote>réel</quote> problème. Le type d'état est positionné à HARD et le
-compteur de tentative est positionné à 1 immédiatement après.</para></entry>
-     </row>
-
-     <row>
-      <entry><para>10</para></entry>
-
-      <entry><para>1</para></entry>
-
-      <entry><para>OK</para></entry>
-
-      <entry><para>HARD</para></entry>
-
-      <entry><para>Non</para></entry>
-
-      <entry><para>Service stabilisé dans un état OK.</para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
- </section>
+            auront la valeur <quote>HARD</quote> quand les gestionnaires d'événement seront exécutés,
+            ce qui permettra aux gestionnaires d'événement de savoir qu'ils doivent
+            effectuer une action corrective. Plus d'informations sur les gestionnaires
+            d'événement peuvent être trouvées <link
+linkend="advancedtopics-eventhandlers">ici</link>.
+        </para>
+    </section>
+    
+    <section>
+        <title>Exemple</title>
+        
+        <para>Voici un exemple de comment sont déterminés les types d'état, quand les
+            changement d'états surviennent, et quand les gestionnaires d'événements et
+            les notifications sont envoyées. Le tableau ci-dessous montre les contrôles
+            consécutifs dans le temps. Le max_check_attempt du service contrôlé est
+            positionné à 3.
+        </para>
+        
+        <informaltable frame="all">
+            <tgroup cols="6">
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Echelle de temps</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Contrôle #</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Etat</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Type d'état</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Changement d'état</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Notes</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>0</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>HARD</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Non</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Etat initial du service</para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>SOFT</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Oui</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Première détection d'un état non-OK. Le gestionnaire d'événement s'exécute.</para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>2</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>2</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>WARNING</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>SOFT</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Oui</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le service continue d'être dans un état non-OK. Le gestionnaire d'événement
+                                s'exécute.
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>3</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>3</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>HARD</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Oui</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le nombre maximum de tentatives a été atteint, le service passe dans un état
+                                HARD. Le gestionnaire d'événement s'exécute et une notification est
+                                envoyée. Le compteur de tentavive repasse immédiatement à 1.
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>4</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>WARNING</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>HARD</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Oui</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le service passe à un état WARNING HARD. Le gestionnaire d'événement
+                                s'exécute et une notifiaction du problème est envoyée.
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>5</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>WARNING</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>HARD</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Non</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le service se stabilise dans un état HARD. Selon l'intervalle de notification
+                                spécifié pour le service, d'autres notivications peuvent être envoyées.
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>6</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>HARD</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Oui</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le service passe à un état OK HARD. Le gestionnaire d'événement s'exécute et
+                                une notification de retour à la normale est envoyée.
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>7</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>HARD</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Non</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le service est toujours OK.</para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>8</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>UNKNOWN</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>SOFT</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Oui</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le service est détecté comme ayant basculé vers un état SOFT non-OK. Le
+                                gestionnaire d'événement s'exécute.
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>9</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>2</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>SOFT</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Oui</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Le service passe à un état de retour à la normale SOFT. Le gestionnaire
+                                d'événement s'exécute, mais aucune notification n'est envoyée, comme ce
+                                n'est pas un <quote>réel</quote> problème. Le type d'état est positionné à HARD et le
+                                compteur de tentative est positionné à 1 immédiatement après.
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>10</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>HARD</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Non</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Service stabilisé dans un état OK.</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
 </chapter>
