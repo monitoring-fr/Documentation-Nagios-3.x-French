@@ -7,23 +7,26 @@
 ]
 >
 <chapter id="about-knowissues" xreflabel="Known Issues">
- <title>Problèmes connus</title>
-
- <section>
-  <title><anchor id="knownissue" />Problèmes connus</title>
-
-  <orderedlist>
-   <listitem>
-    <para>Période de temps</para>
-    <para>Exclusions dans les contrôles d'hôtes/services - Il y a un problème dans la logique d'ordonnancement qui survient quand vous souhaitez 
-utiliser des périodes de temps conjoitement à des paramètres d'exclusion.
-Il survient quand Nagios Core essaye de réordonnancer le prochain contrôle.
-Dans ce cas, la logique d'ordonnancement est peut ordonnancer de façon incorrecte le prochain contrôle en le positionnant beaucoup plus loin dans le futur qu'il ne devrait l'être.
-Dans les faits, il court-circuite la logique d'exclusion; alors qu'il devrait pouvoir placer le contrôle plus tôt en utilisant les exceptions. Solution de contournement imparfaite :
-N'utilisez pas de périodes de temps qui excluent d'autres périodes de temps pour vos plages de contrôle des hôtes/services.
-Un correctif est en cours préparation, et sera certainement inclus dans la version 3.4.x.</para>
-   </listitem>
-  </orderedlist>
- </section>
+    <title>Problèmes connus</title>
+    
+    <section>
+        <title>
+            <anchor id="knownissue" />Problèmes connus
+        </title>
+        
+        <orderedlist>
+            <listitem>
+                <para>Période de temps</para>
+                <para>Exclusions dans les contrôles d'hôtes/services - Il y a un problème dans la logique d'ordonnancement qui survient quand vous souhaitez 
+                    utiliser des périodes de temps conjoitement à des paramètres d'exclusion.
+                    Il survient quand Nagios Core essaye de réordonnancer le prochain contrôle.
+                    Dans ce cas, la logique d'ordonnancement est peut ordonnancer de façon incorrecte le prochain contrôle en le positionnant beaucoup plus loin dans le futur qu'il ne devrait l'être.
+                    Dans les faits, il court-circuite la logique d'exclusion; alors qu'il devrait pouvoir placer le contrôle plus tôt en utilisant les exceptions. Solution de contournement imparfaite :
+                    N'utilisez pas de périodes de temps qui excluent d'autres périodes de temps pour vos plages de contrôle des hôtes/services.
+                    Un correctif est en cours préparation, et sera certainement inclus dans la version 3.4.x.
+                </para>
+            </listitem>
+        </orderedlist>
+    </section>
 </chapter>
 
