@@ -8,74 +8,90 @@
 >
 
 <glossary>
-<title>Glossaire</title>
-<para>Ce glossaire, lexique définit les termes utilisés dans la documentation.</para>
-
-<glossdiv><title>A</title>
-
-<glossentry id="addon"><glossterm>Addon</glossterm>
-<glossdef>
-  <para>Un addon est un logiciel prévu pour fonctionner avec Nagios et qui en étend les possibilités, fonctionnalités.</para>
-</glossdef>
-</glossentry>
-</glossdiv>
-
-<glossdiv><title>C</title>
-
-<glossentry id="contact"><glossterm>Contact</glossterm>
-<glossdef>
-  <para>Le contact permet de déterminer qui est prévenu lors d'un problème
-  sur un hôte ou un service</para>
-</glossdef>
-</glossentry>
-</glossdiv>
-
-<glossdiv><title>H</title>
-
-<glossentry id="host"><glossterm>Hôte</glossterm>
-<glossdef>
-<para>Un hôte est tout élément actif du réseau dont l'état peut être défini (up, down,unreachable). 
-Généralement, tout élément actif du réseau possédant une addresse IP est considéré comme hôte.</para>
-</glossdef>
-
-</glossentry>
-
-</glossdiv>
-
-
-<glossdiv><title>N</title>
-
-<glossentry><glossterm>NRPE</glossterm>
-<glosssee otherterm="nrpe"/>
-</glossentry>
-
-<glossentry id="nrpe"><glossterm>Nagios Remote Plugin Executor</glossterm>
-<acronym>NRPE</acronym>
-<glossdef>
-<para>NRPE est le composant de Nagios qui permet de déclencher une prise de mesure active sur un hôte distant. 
-C'est un élément de supervision de type actif.</para>
-</glossdef>
-</glossentry>
-
-</glossdiv>
-
-<glossdiv><title>P</title>
-
-<glossentry id="plugin"><glossterm>Plugin</glossterm>
-<glossdef>
-  <para>Un plugin est un script écrit dans n'importe quel langage capable de renvoyer à Nagios un état, un indicateur.</para>
-</glossdef>
-</glossentry>
-</glossdiv>
-
-<glossdiv><title>S</title>
-
-<glossentry id="service"><glossterm>Service</glossterm>
-<glossdef>
-<para>Au sens Nagios du terme, un service est....</para>
-</glossdef>
-
-</glossentry>
-
-</glossdiv>
+    <title>Glossaire</title>
+    <para>Ce glossaire, lexique définit les termes utilisés dans la documentation.</para>
+    
+    <glossdiv>
+        <title>A</title>
+        
+        <glossentry id="addon">
+            <glossterm>Addon</glossterm>
+            <glossdef>
+                <para>Un addon est un logiciel prévu pour fonctionner avec Nagios et qui en étend les possibilités, fonctionnalités.</para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>
+    
+    <glossdiv>
+        <title>C</title>
+        
+        <glossentry id="contact">
+            <glossterm>Contact</glossterm>
+            <glossdef>
+                <para>Le contact permet de déterminer qui est prévenu lors d'un problème
+                    sur un hôte ou un service
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>
+    
+    <glossdiv>
+        <title>H</title>
+        
+        <glossentry id="host">
+            <glossterm>Hôte</glossterm>
+            <glossdef>
+                <para>Un hôte est tout élément actif du réseau dont l'état peut être défini (up, down,unreachable). 
+                    Généralement, tout élément actif du réseau possédant une addresse IP est considéré comme hôte.
+                </para>
+            </glossdef>
+            
+        </glossentry>
+        
+    </glossdiv>
+    
+    
+    <glossdiv>
+        <title>N</title>
+        
+        <glossentry>
+            <glossterm>NRPE</glossterm>
+            <glosssee otherterm="nrpe"/>
+        </glossentry>
+        
+        <glossentry id="nrpe">
+            <glossterm>Nagios Remote Plugin Executor</glossterm>
+            <acronym>NRPE</acronym>
+            <glossdef>
+                <para>NRPE est le composant de Nagios qui permet de déclencher une prise de mesure active sur un hôte distant. 
+                    C'est un élément de supervision de type actif.
+                </para>
+            </glossdef>
+        </glossentry>
+        
+    </glossdiv>
+    
+    <glossdiv>
+        <title>P</title>
+        
+        <glossentry id="plugin">
+            <glossterm>Plugin</glossterm>
+            <glossdef>
+                <para>Un plugin est un script écrit dans n'importe quel langage capable de renvoyer à Nagios un état, un indicateur.</para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>
+    
+    <glossdiv>
+        <title>S</title>
+        
+        <glossentry id="service">
+            <glossterm>Service</glossterm>
+            <glossdef>
+                <para>Au sens Nagios du terme, un service est....</para>
+            </glossdef>
+            
+        </glossentry>
+        
+    </glossdiv>
 </glossary>
