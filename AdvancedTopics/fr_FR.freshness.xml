@@ -6,22 +6,22 @@
  %all.entities;
 ]
 >
-<chapter id="advancedtopics-freshness" xreflabel="Service and Host Freshness Checks">
+<chapter id="advancedtopics-freshness" xreflabel="Contrôle de la fraîcheur des résultats d'hôtes et de services">
     <title>Contrôle de la fraîcheur des résultats d'hôtes et de services</title>
     <section>
         <title>Introduction</title>
         <para>Nagios propose une fonctionnalité de vérification de la
-            <quote>fraîcheur</quote> des résultats de contrôles d'hôtes et de
+            <emphasis>fraîcheur</emphasis> des résultats de contrôles d'hôtes et de
             services. Cette fonctionnalité est utile pour vous assurer que des contrôles
             passifs sont reçus à la fréquence que vous souhaitez.
         </para>
         <para>
-            Le but du contrôle de <quote>fraîcheur</quote> est de s'assurer que les
-            contrôles d'hôte et de service sont soumis régulièrement de <link
-linkend="thebasics-passivechecks">manière passive</link>. Ceci est très
-            utile dans les environnements de supervision <link
-linkend="advancedtopics-distributed">distribué</link> ou <link
-linkend="advancedtopics-redundancy">hautement disponible</link>.
+            Le but du contrôle de <emphasis>fraîcheur</emphasis> est de s'assurer que les
+            contrôles d'hôte et de service sont soumis régulièrement de
+            <link linkend="thebasics-passivechecks">manière passive</link>. 
+            Ceci est très utile dans les environnements de supervision 
+            <link linkend="advancedtopics-distributed">distribué</link> ou 
+            <link linkend="advancedtopics-redundancy">hautement disponible</link>.
         </para>
     </section>
     <section>
@@ -30,12 +30,11 @@ linkend="advancedtopics-redundancy">hautement disponible</link>.
             <inlinemediaobject>
                  
                 <imageobject>
-                     <imagedata fileref="images/freshness.png"
-format="PNG"/>
+                     <imagedata fileref="images/freshness.png" format="PNG"/>
                 </imageobject>
             </inlinemediaobject>
              Nagios contrôle
-            régulièrement la <quote>fraîcheur</quote> des résultats de tous les services dont le
+            régulièrement la <emphasis>fraîcheur</emphasis> des résultats de tous les services dont le
             contrôle de fraîcheur est activé.
         </para>
         <itemizedlist>
@@ -49,13 +48,13 @@ format="PNG"/>
             </listitem>
             <listitem>
                 <para>Si l'heure du dernier contrôle est supérieure au seuil de fraîcheur, le
-                    résultat du contrôle est considéré comme <quote>périmé</quote>.
+                    résultat du contrôle est considéré comme <emphasis>périmé</emphasis>.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Si le résultat du contrôle est déclaré périmé, Nagios va forcer un <link
-linkend="thebasics-activechecks">contrôle actif</link> de l'hôte ou du
+                    Si le résultat du contrôle est déclaré périmé, Nagios va forcer un 
+                    <link linkend="thebasics-activechecks">contrôle actif</link> de l'hôte ou du
                     service en exécutant la commande précisée dans la définition de l'hôte ou du
                     service.
                 </para>
@@ -68,7 +67,7 @@ linkend="thebasics-activechecks">contrôle actif</link> de l'hôte ou du
         </tip>
         <para>Par exemple, si vous donnez la valeur 60 au paramètre freshness_threshold de
             l'un de vos services, Nagios considérera que le service est
-            <quote>périmé</quote> si le dernier résultat obtenu date de plus de 60
+            <emphasis>périmé</emphasis> si le dernier résultat obtenu date de plus de 60
             secondes (1 minute).
         </para>
     </section>
@@ -78,38 +77,39 @@ linkend="thebasics-activechecks">contrôle actif</link> de l'hôte ou du
         <itemizedlist>
             <listitem>
                 <para>
-                    Activez le contrôle de fraîcheur par les paramètres <link
-linkend="configuringnagios-configmain-check_service_freshness">&config-check_service_freshness;</link>
-                    et <link
-linkend="configuringnagios-configmain-check_host_freshness">&config-check_host_freshness;</link>
+                    Activez le contrôle de fraîcheur par les paramètres 
+                    <xref linkend="configuringnagios-configmain-check_service_freshness"
+                    endterm="configuringnagios-configmain-check_service_freshness-tech"/>
+                    et <xref linkend="configuringnagios-configmain-check_host_freshness"
+                    endterm="configuringnagios-configmain-check_host_freshness-tech"/>
                     du fichier de configuration principal.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Utilisez les paramètres <link
-linkend="configuringnagios-configmain-service_freshness_check_interval">&config-service_freshness_check_interval;</link>
-                    et <link
-linkend="configuringnagios-configmain-host_freshness_check_interval">&config-host_freshness_check_interval;</link>
+                    Utilisez les paramètres <xref linkend="configuringnagios-configmain-service_freshness_check_interval"
+                    endterm="configuringnagios-configmain-service_freshness_check_interval-tech"/>
+                    et <xref linkend="configuringnagios-configmain-host_freshness_check_interval"
+                    endterm="configuringnagios-configmain-host_freshness_check_interval-tech"/>
                     pour indiquer à Nagios l'intervalle auquel il doit contrôler la fraîcheur
                     des résultats d'hôtes et de services.
                 </para>
             </listitem>
             <listitem>
                 <para>Activer le contrôle de la fraîcheur d'un hôte ou d'un service en particulier
-                    en passant le paramètre <varname>check_freshness</varname> à 1 dans le
+                    en passant le paramètre <literal>check_freshness</literal> à 1 dans le
                     fichier de définition de l'hôte ou du service.
                 </para>
             </listitem>
             <listitem>
                 <para>Configurez les seuils de fraîcheur en réglant le paramètre
-                    <varname>freshness_threshold</varname> dans le fichier de définition de
+                    <literal>freshness_threshold</literal> dans le fichier de définition de
                     l'hôte ou du service.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Configurez le paramètre <varname>check_command</varname> dans votre fichier
+                    Configurez le paramètre <literal>check_command</literal> dans votre fichier
                     de définition d'hôte ou de service pourc indiquer la commande valide à
                     utiliser pour contrôler activement le service ou l'hôte lorsque celui-ci est
                     déclaré périmé.
@@ -117,7 +117,7 @@ linkend="configuringnagios-configmain-host_freshness_check_interval">&config-hos
             </listitem>
             <listitem>
                 <para>
-                    Le paramètre <varname>check_period</varname> dans votre fichier de
+                    Le paramètre <literal>check_period</literal> dans votre fichier de
                     définition d'hôte ou de service est utilisé quand Nagios doit déterminer
                     lorsque'un hôte ou service doit être contrôlé au niveau fraîcheur, aussi
                     assurez-vous de le régler sur une période de temps valide.
@@ -126,7 +126,7 @@ linkend="configuringnagios-configmain-host_freshness_check_interval">&config-hos
         </itemizedlist>
         <tip>
             <para>Si vous ne spécifiez pas de valeur pour le paramètre
-                <varname>freshness_threshold</varname> (ou si vous le mettez à zéro), Nagios
+                <literal>freshness_threshold</literal> (ou si vous le mettez à zéro), Nagios
                 calculera automatiquement un seuil de fraîcheur à utiliser en se basant sur
                 la fréquence de scontrôle utilisé pour cet hôte ou service. je vous
                 recommande d'explicitement préciser un niveau de fraîcheur plutôt que de
@@ -167,18 +167,21 @@ linkend="configuringnagios-configmain-host_freshness_check_interval">&config-hos
             seuil de fraîcheur a été positionné à 26 heures. C'est un peu plus de 24
             heures parce que la durée des travaux de sauvegarde varie selon les jours
             (en fonction du volume de données à sauvegarder, de l'encombrement du
-            réseau, etc.). La <code>no-backup-report</code> commande est exécutée seulement si les résultats du service sont considérés
-            comme périmés. La définition de la <code>no-backup-report</code> commande pourrait ressembler à ceci…
+            réseau, etc.). La <literal>no-backup-report</literal> commande est 
+            exécutée seulement si les résultats du service sont considérés
+            comme périmés. La définition de la <literal>no-backup-report</literal>
+            commande pourrait ressembler à ceci…
         </para>
         <programlisting>define command{
                     command_name    no-backup-report
                     command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Results of backup job were not reported!"
                     }
         </programlisting>
-        <para>Si Nagios détecte que les résultats du service sont périmés, il va lancer la 
-            <code>no-backup-report</code> commande comme un contrôle actif de service. Cela exécute le plugin
-            &plugin-dummy; qui retourne un état critique à Nagios. Le service passe en
-            état critique (s'il n'y était pas déjà) et quelqu'un sera probablement
+        <para>Si Nagios détecte que les résultats du service sont périmés, il
+            va lancer la <literal>no-backup-report</literal> commande comme un
+            contrôle actif de service. Cela exécute le plugin &plugin-dummy;
+            qui retourne un état critique à Nagios. Le service passe en état 
+            critique (s'il n'y était pas déjà) et quelqu'un sera probablement
             notifié du problème.
         </para>
     </section>

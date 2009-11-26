@@ -8,27 +8,23 @@
 >
 <chapter id="advancedtopics-objecttricks" xreflabel="Time-Saving Tricks For Object Definitions">
     <title>
-        Trucs et astuces <quote>gain de temps</quote> dans les définitions de
+        Trucs et astuces <emphasis>gain de temps</emphasis> dans les définitions de
         modèles d'objets
     </title>
     <note>
         <para>
-            <quote>Comment ne pas pêter les plombs</quote>
+            <emphasis>Comment ne pas pêter les plombs</emphasis>
         </para>
     </note>
     <section>
         <title>Introduction</title>
         <para>Cette documentation va essayer de vous expliquer comment vous pouvez
-            exploiter les fonctionnalités (quelque peu) cachées des <link
-linkend="configuringnagios-objectdefinitions">définitions d'objets basées
-                sur des modèles
-            </link>
-            histoire de <quote>ne pas pêter les
-                plombs
-            </quote>
-            .Comment, me demanderez vous ? Plusieurs types d'objets
-            permettent de spécifier de multiples noms d'hôtes et/ou de groupes d'hôtes
-            dans les définitions, vous permettant de <quote>copier</quote> la défintion
+            exploiter les fonctionnalités (quelque peu) cachées des 
+            <link linkend="configuringnagios-objectdefinitions">définitions d'objets basées sur des modèles</link>
+            histoire de <emphasis>ne pas pêter les plombs</emphasis>. Comment, me 
+            demanderez vous ? Plusieurs types d'objets permettent de spécifier de
+            multiples noms d'hôtes et/ou de groupes d'hôtes dans les 
+            définitions, vous permettant de <emphasis>copier</emphasis> la défintion
             de l'objet dans de multiples hôtes ou services. Je vais parcourir séparement
             chaque type d'objet permettant cette fonctionnalité. Pour commencer, les
             types d'objets concernés sont les suivants :
@@ -41,30 +37,22 @@ linkend="configuringnagios-objectdefinitions">définitions d'objets basées
             </listitem>
             <listitem>
                 <para>
-                    <link linkend="advancedtopics-objecttricks-serviceescalation">Escalades de
-                        service
-                    </link>
+                    <link linkend="advancedtopics-objecttricks-serviceescalation">Escalades de service</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <link linkend="advancedtopics-objecttricks-servicedependency">Dépendances de
-                        service
-                    </link>
+                    <link linkend="advancedtopics-objecttricks-servicedependency">Dépendances de service</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <link linkend="advancedtopics-objecttricks-hostescalation">Escalades
-                        d'hôte
-                    </link>
+                    <link linkend="advancedtopics-objecttricks-hostescalation">Escalades d'hôte</link>
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <link linkend="advancedtopics-objecttricks-hostdependency">Dépendances
-                        d'hôte
-                    </link>
+                    <link linkend="advancedtopics-objecttricks-hostdependency">Dépendances d'hôte</link>
                 </para>
             </listitem>
             <listitem>
@@ -75,23 +63,23 @@ linkend="configuringnagios-objectdefinitions">définitions d'objets basées
         </itemizedlist>
         <para>Les types d'objets qui ne sont pas listés ci-dessus (par exexmple les
             périodes de temps, les commandes) ne supportent pas les fonctionnalités que
-            je vais vous décrire maintenant. 
+            je vais vous décrire maintenant.
         </para>
     </section>
     <section>
         <title>Correspondance avec des expressions régulières </title>
         <para>Les exemples que je donne ci-dessous utilisent une correspondance
-            <quote>standard</quote> avec les noms des objets. Si vous le souhaitez, vous
+            <emphasis>standard</emphasis> avec les noms des objets. Si vous le souhaitez, vous
             pouvez activer la correspondance des noms d'objets avec des expressions
-            régulières grâce au paramètre de configuration <xref
-linkend="configuringnagios-configmain-use_regexp_matching"/>
-            &config-use_regexp_matching;.
+            régulières grâce au paramètre de configuration 
+            <xref linkend="configuringnagios-configmain-use_regexp_matching"
+            endterm="configuringnagios-configmain-use_regexp_matching-tech"/>
             Par défaut, les expressions régulières ne sont utilisées que dans les noms
             d'objets contenant les caractères de remplacement *, ?, + ou \.. Si vous
             souhaitez voir les expressions régulières appliquées sur tous les noms
-            d'objets, activez le paramètre de configuration <xref
-linkend="configuringnagios-configmain-use_true_regexp_matching"/>
-            &config-use_true_regexp_matching;.
+            d'objets, activez le paramètre de configuration 
+            <xref linkend="configuringnagios-configmain-use_true_regexp_matching"
+            endterm="configuringnagios-configmain-use_true_regexp_matching-tech"/>.
             Les expressions régulières peuvent être utilisées dans n'importe quel champ
             des exemples ci-dessous (noms d'hôtes, noms de groupe d'hôtes, noms de
             service, et noms de groupes de service). 
@@ -113,21 +101,21 @@ linkend="configuringnagios-configmain-use_true_regexp_matching"/>
         <section>
             <title>Hôtes multiples</title>
             <para>
-                Si vous voulez créer des <link
-linkend="configuringnagios-objectdefinitions-service">services</link>
+                Si vous voulez créer des <link linkend="configuringnagios-objectdefinitions-service">services</link>
                 identiques assignés à plusieurs hôtes, vous pouvez préciser plusieurs hôtes
-                dans le paramètre <varname>host_name</varname>. La définition ci-dessous va
-                créer une service nommé SOMESERVICE sur les hôtes HOST1 jusqu'à
-                HOSTN. Toutes les instances du service SOMESERVICE devraient être identiques
-                (c.-à-d. auront la même commande de contrôle, le même nombre maximum
-                d'essais, la même période de notification).
+                dans le paramètre <literal>host_name</literal>. La définition ci-dessous va
+                créer une service nommé <literal>SOMESERVICE</literal> sur les hôtes 
+                <literal>HOST1</literal> jusqu'à <literal>HOSTN</literal>. 
+                Toutes les instances du service <literal>SOMESERVICE</literal> 
+                devraient être identiques (c.-à-d. auront la même commande de
+                contrôle, le même nombre maximum d'essais, la même période de notification).
             </para>
             <programlisting>
-                define service{
-                host_name        HOST1,HOST2,HOST3,…,HOSTN
-                service_description   SOMESERVICE
-                other service directives …
-                }
+define service {
+    host_name                HOST1,HOST2,HOST3,…,HOSTN
+    service_description      SOMESERVICE
+    other service directives …
+}
             </programlisting>
         </section>
         <section>
@@ -135,37 +123,40 @@ linkend="configuringnagios-objectdefinitions-service">services</link>
             <para>Si vous voulez créer des services identiques, assignés à tous les hôtes d'un
                 ou de plusieurs groupes d'hôtes, vous pouvez le faire en une seule
                 définition de service. Comment ? Le paramètre
-                <varname>hostgroup_name</varname> vous permet de spécifier un ou plusieurs
+                <literal>hostgroup_name</literal> vous permet de spécifier un ou plusieurs
                 groupes d'hôtes pour lesquels le service doit être créé. La définition
-                ci-dessous va créer un service appellé SOMESERVICE sur tous les hôtes membre
-                des groupes d'hôtes HOSTGROUP1 à HOSTGROUPN. Toutes les instances du service
-                SOMESERVICE seront identiques (c.-à-d. auront la même commande de contrôle,
-                le même nombre maximum d'essais, la même période de notification, etc.). 
+                ci-dessous va créer un service appellé <literal>SOMESERVICE</literal>
+                sur tous les hôtes membre des groupes d'hôtes <literal>HOSTGROUP1</literal>
+                à <literal>HOSTGROUPN</literal>. Toutes les instances du service
+                <literal>SOMESERVICE</literal> seront identiques (c.-à-d. auront 
+                la même commande de contrôle, le même nombre maximum d'essais, la
+                même période de notification, etc.). 
             </para>
             <programlisting>
-                define service{
-                hostgroup_name     HOSTGROUP1,HOSTGROUP2,…,HOSTGROUPN
-                service_description   SOMESERVICE
-                other service directives …
-                }
+define service {  
+    hostgroup_name           HOSTGROUP1,HOSTGROUP2,…,HOSTGROUPN
+    service_description      SOMESERVICE
+    other service directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les hôtes :</title>
             <para>Si vous voulez créer des services identiques, assignés à tous les hôtes de
                 vos fichiers de configurations, vous pouvez utiliser un caractère de
-                remplacement dans le paramètre <varname>host_name</varname>. La définition
-                ci-dessous va créer un service appellé SOMESERVICE sur tous les hôtes
-                définis dans vos fichiers de configurations. Toutes les instances du service
-                SOMESERVICE seront identiques (c.-à-d. auront la même commande de contrôle,
+                remplacement dans le paramètre <literal>host_name</literal>. La définition
+                ci-dessous va créer un service appellé <literal>SOMESERVICE</literal> 
+                sur tous les hôtes définis dans vos fichiers de configurations.
+                Toutes les instances du service <literal>SOMESERVICE</literal> 
+                seront identiques (c.-à-d. auront la même commande de contrôle,
                 le même nombre maximum d'essais, la même période de notification, etc.). 
             </para>
             <programlisting>
-                define service{
-                host_name        *
-                service_description   SOMESERVICE
-                other service directives …
-                }
+define service {
+    host_name                *
+    service_description      SOMESERVICE
+    other service directives …
+}
             </programlisting>
         </section>
         <section>
@@ -175,42 +166,40 @@ linkend="configuringnagios-objectdefinitions-service">services</link>
                 le faire en précédant l'hôte ou le groupe d'hôte du symbole !.
             </para>
             <programlisting>
-                define service{
-                host_name       HOST1,HOST2,!HOST3,!HOST4,…,HOSTN
-                hostgroup_name    HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,…,HOSTGROUPN
-                service_description  SOMESERVICE
-                other service directives …
-                }
+define service {
+    host_name                HOST1,HOST2,!HOST3,!HOST4,…,HOSTN
+    hostgroup_name           HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,…,HOSTGROUPN
+    service_description      SOMESERVICE
+    other service directives …
+}
             </programlisting>
         </section>
     </section>
     <section>
         <title>
             <anchor id="advancedtopics-objecttricks-serviceescalation"/>
-            Définitions
-            d'escalade de service
+            Définitions d'escalade de service
         </title>
         <section>
             <title>Hôtes multiples</title>
             <para>
-                Si vous voulez créer des <link
-linkend="configuringnagios-objectdefinitions-serviceescalation">service
-                    escalations
-                </link>
+                Si vous voulez créer des 
+                <link linkend="configuringnagios-objectdefinitions-serviceescalation">service escalations</link>
                 pour des services portant le même nom/description, et qui
                 sont assignés à plusieurs hôtes, vous pouvez spécifier des hôtes multiples
-                dans le paramètre <varname>host_name</varname> La définition ci-dessous va
-                créer une escalade pour les services appelés SOMESERVICE sur les hôtes HOST1
-                à HOSTN. Toutes les instances de l'escalade de service seront identiques
+                dans le paramètre <literal>host_name</literal> La définition ci-dessous va
+                créer une escalade pour les services appelés <literal>SOMESERVICE</literal>
+                sur les hôtes <literal>HOST1</literal> à <literal>HOSTN</literal>.
+                Toutes les instances de l'escalade de service seront identiques
                 (c.-à-d. auront le même groupe de contact, le même intervalle de
                 notification, etc.). .
             </para>
             <programlisting>
-                define serviceescalation{
-                host_name        HOST1,HOST2,HOST3,…,HOSTN
-                service_description   SOMESERVICE
-                other escalation directives …
-                }
+define serviceescalation {
+    host_name                   HOST1,HOST2,HOST3,…,HOSTN
+    service_description         SOMESERVICE
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
@@ -218,18 +207,19 @@ linkend="configuringnagios-objectdefinitions-serviceescalation">service
             <para>Si vous voulez créer une escalade de service pour des services portant le
                 même nom/description et qui sont assignés à tous les hôtes dans un ou
                 plusieurs groupes d'hôtes, vous pouvez le faire avec le paramètre
-                <varname>hostgroup_name</varname>. La définition ci-dessous va créer une
-                escalade pour les services appelés SOMESERVICE sur tous les hôtes membres
-                des groupes HOSTGROUP1 à HOSTGROUPN. Toutes les instances de l'escalade de
+                <literal>hostgroup_name</literal>. La définition ci-dessous va créer une
+                escalade pour les services appelés <literal>SOMESERVICE</literal> sur
+                tous les hôtes membres des groupes <literal>HOSTGROUP1</literal> à
+                <literal>HOSTGROUPN</literal>. Toutes les instances de l'escalade de
                 service seront identiques (c.-à-d. auront le même groupe de contact, le même
                 intervalle de notification, etc.). 
             </para>
             <programlisting>
-                define serviceescalation{
-                hostgroup_name     HOSTGROUP1,HOSTGROUP2,…,HOSTGROUPN
-                service_description   SOMESERVICE
-                other escalation directives …
-                }
+define serviceescalation {
+    hostgroup_name              HOSTGROUP1,HOSTGROUP2,…,HOSTGROUPN
+    service_description         SOMESERVICE
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
@@ -237,19 +227,19 @@ linkend="configuringnagios-objectdefinitions-serviceescalation">service
             <para>Si vous voulez créer une escalade de service identique pour des services
                 portant le même nom/description et qui sont assignés à tous les hôtes
                 définis dans vos fichiers de configuration, vous pouvez utiliser un
-                caractère de remplacement dans le paramètre <varname>host_name</varname>. La
+                caractère de remplacement dans le paramètre <literal>host_name</literal>. La
                 définition ci-dessous va créer une escalade pour tous les services appelés
-                SOMESERVICE de tous les hôtes définis dans vos fichiers de
+                <literal>SOMESERVICE</literal> de tous les hôtes définis dans vos fichiers de
                 configuration. Toutes les instances de l'escalade de service seront
                 identiques (c.-à-d. auront le même groupe de contact, le même intervalle de
                 notification, etc.). 
             </para>
             <programlisting>
-                define serviceescalation{
-                host_name        *
-                service_description   SOMESERVICE
-                other escalation directives …
-                }
+define serviceescalation {
+    host_name                   *
+    service_description         SOMESERVICE
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
@@ -260,112 +250,108 @@ linkend="configuringnagios-objectdefinitions-serviceescalation">service
                 symbole !.
             </para>
             <programlisting>
-                define serviceescalation{
-                host_name       HOST1,HOST2,!HOST3,!HOST4,…,HOSTN
-                hostgroup_name    HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,…,HOSTGROUPN
-                service_description  SOMESERVICE
-                other escalation directives …
-                }
+define serviceescalation {
+    host_name                   HOST1,HOST2,!HOST3,!HOST4,…,HOSTN
+    hostgroup_name              HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,…,HOSTGROUPN
+    service_description         SOMESERVICE
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les services d'un même hôte :</title>
             <para>
-                Si vous voulez créer des <link
-linkend="configuringnagios-objectdefinitions-serviceescalation">escalades de
-                    service
-                </link>
+                Si vous voulez créer des 
+                <link linkend="configuringnagios-objectdefinitions-serviceescalation">escalades de service</link>
                 pour tous les services assignés à un hôte précis, vous pouvez
                 utiliser un caractère de remplacement dans le paramètre
-                <varname>service_description</varname>. La définition ci-dessous va créer
-                une escalade de service pour tous les services de l'hôte HOST1. Toutes les
-                instances de l'escalade de service seront identiques (c.-à-d. auront le même
-                groupe de contact, le même intervalle de notification, etc.). 
+                <literal>service_description</literal>. La définition ci-dessous va créer
+                une escalade de service pour tous les services de l'hôte <literal>HOST1</literal>.
+                Toutes les instances de l'escalade de service seront identiques 
+                (c.-à-d. auront le même groupe de contact, le même intervalle de notification, etc.). 
             </para>
             <para>Si vous vous sentez l'esprit particulièrement aventureux, vous pouvez
                 spécifier un caractère de remplacement à la fois dans les paramètres
-                <varname>host_name</varname> et <varname>service_description</varname>. Cela
+                <literal>host_name</literal> et <literal>service_description</literal>. Cela
                 va créer une escalade de service pour tous les services définis dans vos
                 fichiers de configuration.
             </para>
             <programlisting>
-                define serviceescalation{
-                host_name        HOST1
-                service_description   *
-                other escalation directives …
-                }
+define serviceescalation {
+    host_name                   HOST1
+    service_description         *
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Services multiples du même hôte :</title>
             <para>
-                Si vous voulez créer des <link
-linkend="configuringnagios-objectdefinitions-serviceescalation">escalades de
-                    service
-                </link>
+                Si vous voulez créer des 
+                <link linkend="configuringnagios-objectdefinitions-serviceescalation">escalades de service</link>
                 pour plusieurs services assignés à un hôte précis, vous
                 pouvez spécfier plusieurs descriptions de service dans le paramètre
-                <varname>service_description</varname>. La définition ci-dessous va créer
-                une escalade pour les services SERVICE1 à SERVICEN de l'hôte HOST1. Toutes
-                les instances de l'escalade de service seront identiques (c.-à-d. auront le
+                <literal>service_description</literal>. La définition ci-dessous va créer
+                une escalade pour les services <literal>SERVICE1</literal> à 
+                <literal>SERVICEN</literal> de l'hôte <literal>tHOST1</literal>. 
+                Toutes les instances de l'escalade de service seront identiques (c.-à-d. auront le
                 même groupe de contact, le même intervalle de notification, etc.). 
             </para>
             <programlisting>
-                define serviceescalation{
-                host_name        HOST1
-                service_description   SERVICE1,SERVICE2,…,SERVICEN
-                other escalation directives …
-                }
+define serviceescalation {
+    host_name                   HOST1
+    service_description         SERVICE1,SERVICE2,…,SERVICEN
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les Services de multiples groupes de services :</title>
             <para>Si vous voulez créer des escalades de service pour tous les services
                 appartenant à un ou plusieurs groupes de services, vous pouvez utiliser le
-                paramètre <varname>servicegroup_name</varname>. La définition ci-dessous va
+                paramètre <literal>servicegroup_name</literal>. La définition ci-dessous va
                 créer une escalade pour tous les services membres des groupes de services
-                SERVICEGROUP1 à SERVICEGROUPN. Toutes les instances de l'escalade de service
-                seront identiques (c.-à-d. auront le même groupe de contact, le même
-                intervalle de notification, etc.). 
+                SERVICEGROUP1 à <literal>SERVICEGROUPN</literal>. Toutes les instances 
+                de l'escalade de service seront identiques (c.-à-d. auront le même
+                groupe de contact, le même intervalle de notification, etc.). 
             </para>
             <programlisting>
-                define serviceescalation{
-                servicegroup_name     SERVICEGROUP1,SERVICEGROUP2,…,SERVICEGROUPN
-                other escalation directives …
-                }
+define serviceescalation {
+    servicegroup_name           SERVICEGROUP1,SERVICEGROUP2,…,SERVICEGROUPN
+    other escalation directives …
+}
             </programlisting>
         </section>
     </section>
     <section>
         <title>
             <anchor id="advancedtopics-objecttricks-servicedependency"/>
-            Définitions de
-            dépendance de service
+            Définitions de dépendance de service
         </title>
         <section>
             <title>Hôtes multiples</title>
             <para>
-                Si vous voulez créer des <link
-linkend="configuringnagios-objectdefinitions-servicedependency">dépendances
-                    de service
-                </link>
+                Si vous voulez créer des 
+                <link linkend="configuringnagios-objectdefinitions-servicedependency">dépendances de service</link>
                 pour des services portant le même nom/description, et qui
                 sont assignés à plusieurs hôtes, vous pouvez spécifier de multiples hôtes
-                dans les paramètres <varname>host_name</varname> et/ou
-                <varname>dependent_host_name</varname>. Dans l'exemple ci-dessous, le
-                service SERVICE2 des hôtes HOST3 et HOST4 sera dépendant du service SERVICE1
-                des hôtes HOST1 et HOST2. Toutes les instances de la dépendance de service
+                dans les paramètres <literal>host_name</literal> et/ou
+                <literal>dependent_host_name</literal>. Dans l'exemple ci-dessous, le
+                service <literal>SERVICE2</literal> des hôtes <literal>HOST3</literal>
+                et <literal>HOST4</literal> sera dépendant du service <literal>SERVICE1</literal>
+                des hôtes <literal>HOST1</literal> et <literal>HOST2</literal>. 
+                Toutes les instances de la dépendance de service
                 seront identiques, mis à part les noms d'hôtes (c.-à-d. auront le même
                 critère d'échec de notification, etc.). 
             </para>
             <programlisting>
-                define servicedependency{
-                host_name            HOST1,HOST2
-                service_description       SERVICE1
-                dependent_host_name       HOST3,HOST4
-                dependent_service_description  SERVICE2
-                other dependency directives …
-                }
+define servicedependency {
+    host_name                      HOST1,HOST2
+    service_description            SERVICE1
+    dependent_host_name            HOST3,HOST4
+    dependent_service_description  SERVICE2
+    other dependency directives …
+}
             </programlisting>
         </section>
         <section>
@@ -373,162 +359,167 @@ linkend="configuringnagios-objectdefinitions-servicedependency">dépendances
             <para>Si vous voulez créer des dépendances de service pour des services portant le
                 même nom/description, et qui sont assignés à tous les hôtes d'un ou
                 plusieurs groupes d'hôtes, vous pouvez utiliser le paramètre
-                <varname>hostgroup_name</varname> et/ou
-                <varname>dependent_hostgroup_name</varname>. Dans l'exemple ci-dessous, le
-                service SERVICE2 de tous les hôtes membres des groupes d'hôtes HOSTGROUP3 et
-                HOSTGROUP4 seront dépendant du service SERVICE1 de tous les hôtes membres
-                des groupes d'hôtes HOSTGROUP1 et HOSTGROUP2. Si l'on suppose qu'il y a cinq
-                hôtes dans chacun des groupes d'hôtes, cette définition équivaut à créer 100
-                définitions simples de dépendance de service ! Toutes les instances de la
-                dépendance de service seront identiques, mis à part les noms d'hôtes
-                (c.-à-d. auront le même critère d'échec de notification, etc.). 
+                <literal>hostgroup_name</literal> et/ou
+                <literal>dependent_hostgroup_name</literal>. Dans l'exemple ci-dessous, le
+                service <literal>SERVICE2</literal> de tous les hôtes membres des
+                groupes d'hôtes <literal>HOSTGROUP3</literal> et <literal>HOSTGROUP4</literal>
+                sera dépendant du service <literal>SERVICE1</literal> de tous les hôtes membres
+                des groupes d'hôtes <literal>HOSTGROUP1</literal> et <literal>HOSTGROUP2</literal>.
+                Si l'on suppose qu'il y a cinq hôtes dans chacun des groupes d'hôtes, cette
+                définition équivaut à créer 100 définitions simples de dépendance de service !
+                Toutes les instances de la dépendance de service seront identiques, mis à part
+                les noms d'hôtes (c.-à-d. auront le même critère d'échec de notification, etc.). 
             </para>
             <programlisting>
-                define servicedependency{
-                hostgroup_name         HOSTGROUP1,HOSTGROUP2
-                service_description       SERVICE1
-                dependent_hostgroup_name    HOSTGROUP3,HOSTGROUP4
-                dependent_service_description  SERVICE2
-                other dependency directives …
-                }
+define servicedependency {
+    hostgroup_name                 HOSTGROUP1,HOSTGROUP2
+    service_description            SERVICE1
+    dependent_hostgroup_name       HOSTGROUP3,HOSTGROUP4
+    dependent_service_description  SERVICE2
+    other dependency directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les services d'un même hôte :</title>
             <para>Si vous voulez créer des dépendances de service pour tous les services
                 assignés à un hôte précis, vous pouvez utiliser un caractère de remplacement
-                dans les paramètres <varname>service_description</varname> et/ou
-                <varname>dependent_service_description</varname>. Dans l'exemple ci-dessous,
-                tous les services de l'hôte HOST2 seront dépendants de tous les services de
-                l'hôte HOST1. Toutes les instances de la dépendance de service seront
-                identiques (c.-à-d. auront le même critère d'échec de notification, etc.). 
+                dans les paramètres <literal>service_description</literal> et/ou
+                <literal>dependent_service_description</literal>. Dans l'exemple ci-dessous,
+                tous les services de l'hôte <literal>HOST2</literal> seront dépendants
+                de tous les services de l'hôte <literal>HOST1</literal>. Toutes les 
+                instances de la dépendance de service seront identiques (c.-à-d.
+                auront le même critère d'échec de notification, etc.). 
             </para>
             <programlisting>
-                define servicedependency{
-                host_name            HOST1
-                service_description       *
-                dependent_host_name       HOST2
-                dependent_service_description  *
-                other dependency directives …
-                }
+define servicedependency {
+    host_name                      HOST1
+    service_description            *
+    dependent_host_name            HOST2
+    dependent_service_description  *
+    other dependency directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Services multiples d'un même hôte :</title>
             <para>Si vous voulez créer des dépendances de service pour plusieurs services
                 assignés à un hôte précis, vous pouvez spécifier plusieurs descriptions de
-                service dans les paramètres <varname>service_description</varname> et/ou
-                <varname>dependent_service_description</varname> comme suit : 
+                service dans les paramètres <literal>service_description</literal> et/ou
+                <literal>dependent_service_description</literal> comme suit : 
             </para>
             <programlisting>
-                define servicedependency{
-                host_name            HOST1
-                service_description       SERVICE1,SERVICE2,…,SERVICEN
-                dependent_host_name       HOST2
-                dependent_service_description  SERVICE1,SERVICE2,…,SERVICEN
-                other dependency directives …
-                }
+define servicedependency {
+    host_name                      HOST1
+    service_description            SERVICE1,SERVICE2,…,SERVICEN
+    dependent_host_name            HOST2
+    dependent_service_description  SERVICE1,SERVICE2,…,SERVICEN
+    other dependency directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les Services de multiples groupes de services :</title>
             <para>Si vous voulez créer des dépendances de service pour tous les services
                 appartenant à un ou plusieurs groupes de services, vous pouvez utiliser les
-                paramètres <varname>servicegroup_name</varname> et/ou
-                <varname>dependent_servicegroup_name</varname> comme suit : 
+                paramètres <literal>servicegroup_name</literal> et/ou
+                <literal>dependent_servicegroup_name</literal> comme suit : 
             </para>
             <programlisting>
-                define servicedependency{
-                servicegroup_name        SERVICEGROUP1,SERVICEGROUP2,…,SERVICEGROUPN
-                dependent_servicegroup_name   SERVICEGROUP3,SERVICEGROUP4,…SERVICEGROUPN
-                other dependency directives …
-                }
+define servicedependency {
+    servicegroup_name             SERVICEGROUP1,SERVICEGROUP2,…,SERVICEGROUPN
+    dependent_servicegroup_name   SERVICEGROUP3,SERVICEGROUP4,…SERVICEGROUPN
+    other dependency directives …
+}
             </programlisting>
         </section>
         <section>
             <title>
                 <anchor id="advancedtopics-objecttricks-same_host_dependency"/>
-                Dépendances
-                sur le même hôte :
+                Dépendances sur le même hôte :
             </title>
             <para>Si vous voulez créer des dépendances de service pour plusieurs services
                 dépendants de services sur le même hôte, laissez les paramètres
-                <varname>dependent_host_name</varname> et
-                <varname>dependent_hostgroup_name</varname> vides. L'exemple ci-dessous
+                <literal>dependent_host_name</literal> et
+                <literal>dependent_hostgroup_name</literal> vides. L'exemple ci-dessous
                 part du principe que les hôtes HOST1 et HOST2 ont un minimum de quatre
-                services associés avec eux : SERVICE1, SERVICE2, SERVICE3, et SERVICE4. Dans
-                cet exemple, SERVICE3 et SERVICE4 sur HOST1 seront dépendants à la fois de
-                SERVICE1 et SERVICE2 sur HOST1. De façon identique, SERVICE3 et SERVICE4 sur
-                HOST2 seront dépendants à la fois de SERVICE1 et SERVICE2 sur HOST2.
+                services associés avec eux : <literal>SERVICE1</literal>, <literal>SERVICE2</literal>, 
+                <literal>SERVICE3</literal>, et <literal>SERVICE4</literal>. Dans
+                cet exemple, <literal>SERVICE3</literal> et <literal>SERVICE4</literal>
+                sur <literal>HOST1</literal> seront dépendants à la fois de
+                <literal>SERVICE1</literal> et <literal>SERVICE2</literal> sur 
+                <literal>HOST1</literal>. De façon identique, <literal>SERVICE3</literal>
+                et <literal>SERVICE4</literal> sur <literal>HOST2</literal> seront
+                dépendants à la fois de <literal>SERVICE1</literal> et <literal>SERVICE2</literal>
+                sur <literal>HOST2</literal>.
             </para>
             <programlisting>
-                define servicedependency{
-                host_name            HOST1,HOST2
-                service_description       SERVICE1,SERVICE2
-                dependent_service_description  SERVICE3,SERVICE4
-                other dependency directives …
-                }
+define servicedependency {
+    host_name                      HOST1,HOST2
+    service_description            SERVICE1,SERVICE2
+    dependent_service_description  SERVICE3,SERVICE4
+    other dependency directives …
+}
             </programlisting>
         </section>
     </section>
     <section>
         <title>
             <anchor id="advancedtopics-objecttricks-hostescalation"/>
-            Définitions
-            d'escalade d'hôte
+            Définitions d'escalade d'hôte
         </title>
         <section>
             <title>Hôtes multiples</title>
             <para>
-                Si vous souhaitez créer des <link
-linkend="configuringnagios-objectdefinitions-hostescalation">escalades
-                    d'hôte
-                </link>
+                Si vous souhaitez créer des 
+                <link linkend="configuringnagios-objectdefinitions-hostescalation">escalades d'hôte</link>
                 pour plusieurs hôtes, vos pouvez spécifier plusieurs hôtes
-                dans le paramètre <varname>host_name</varname>. La définition ci-dessous va
-                créer une escalade d'hôte pour les hôtes HOST1 à HOSTN. Toutes les instances
+                dans le paramètre <literal>host_name</literal>. La définition ci-dessous va
+                créer une escalade d'hôte pour les hôtes <literal>HOST1</literal>
+                à <literal>HOSTN</literal>. Toutes les instances
                 de l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de
                 contacts, le même intervalle de notification, etc.). 
             </para>
             <programlisting>
-                define hostescalation{
-                host_name       HOST1,HOST2,HOST3,…,HOSTN
-                other escalation directives …
-                }
+define hostescalation {
+    host_name                   HOST1,HOST2,HOST3,…,HOSTN
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les hôtes situés dans de multiples groupes d'hôtes : </title>
             <para>Si vous voulez créer des escalades d'hôte pour tous les hôtes d'un ou
                 plusieurs groupes d'hôtes, vos pouvez utiliser le paramètre
-                <varname>hostgroup_name</varname>. La définition ci-dessous va créer une
-                escalade d'hôte sur tous les hôtes membres des groupes d'hôtes HOSTGROUP1 à
-                HOSTGROUPN. Toutes les instances de l'escalade d'hôte seront identiques
+                <literal>hostgroup_name</literal>. La définition ci-dessous va créer une
+                escalade d'hôte sur tous les hôtes membres des groupes d'hôtes 
+                <literal>HOSTGROUP1</literal> à <literal>HOSTGROUPN</literal>.
+                Toutes les instances de l'escalade d'hôte seront identiques
                 (c.-à-d. auront les mêmes groupes de contacts, le même intervalle de
                 notification, etc.). 
             </para>
             <programlisting>
-                define hostescalation{
-                hostgroup_name      HOSTGROUP1,HOSTGROUP2,…,HOSTGROUPN
-                other escalation directives …
-                }
+define hostescalation {
+    hostgroup_name              HOSTGROUP1,HOSTGROUP2,…,HOSTGROUPN
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les hôtes :</title>
             <para>Si vous voulez créer des escalades d'hôte identiques pour tous les hôtes
                 définis dans vos fichiers de configuration, vous pouvez utiliser un
-                caractère de remplacement dans le paramètre <varname>host_name</varname>. La
+                caractère de remplacement dans le paramètre <literal>host_name</literal>. La
                 définition ci-dessous va créer une escalade d'hôte sur tous les hôtes
                 définis dans vos fichiers de configuration. Toutes les instances de
                 l'escalade d'hôte seront identiques (c.-à-d. auront les mêmes groupes de
                 contacts, le même intervalle de notification, etc.). 
             </para>
             <programlisting>
-                define hostescalation{
-                host_name        *
-                other escalation directives …
-                }
+define hostescalation {
+    host_name                   *
+    other escalation directives …
+}
             </programlisting>
         </section>
         <section>
@@ -538,61 +529,61 @@ linkend="configuringnagios-objectdefinitions-hostescalation">escalades
                 pouvez le faire en précédant l'hôte ou le groupe d'hôte du symbole !.
             </para>
             <programlisting>
-                define hostescalation{
-                host_name       HOST1,HOST2,!HOST3,!HOST4,…,HOSTN
-                hostgroup_name    HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,…,HOSTGROUPN
-                other escalation directives …
-                }
+define hostescalation{
+    host_name          HOST1,HOST2,!HOST3,!HOST4,…,HOSTN
+    hostgroup_name     HOSTGROUP1,HOSTGROUP2,!HOSTGROUP3,!HOSTGROUP4,…,HOSTGROUPN
+    other escalation directives …
+}
             </programlisting>
         </section>
     </section>
     <section>
         <title>
             <anchor id="advancedtopics-objecttricks-hostdependency"/>
-            Définitions de
-            dépendance d'hôte
+            Définitions de dépendance d'hôte
         </title>
         <section>
             <title>Hôtes multiples</title>
             <para>
-                Si vous voulez créer des <link
-linkend="configuringnagios-objectdefinitions-hostdependency">dépendances
-                    d'hôte
-                </link>
+                Si vous voulez créer des 
+                <link linkend="configuringnagios-objectdefinitions-hostdependency">dépendances d'hôte</link>
                 pour plusieurs hôtes, vous pouvez spécifier plusieurs hôtes
-                dans les paramètres <varname>host_name</varname> et/ou
-                <varname>dependent_host_name</varname>. La définition ci-dessous équivaut à
+                dans les paramètres <literal>host_name</literal> et/ou
+                <literal>dependent_host_name</literal>. La définition ci-dessous équivaut à
                 créer six dépendances d'hôte distinctes. Dans l'exemple ci-dessus, les hôtes
-                HOST3, HOST4 et HOST5 seront dépendants à la fois d'HOST1 et de
-                HOST2. Toutes les instances de la dépendance d'hôte seront identiques, à
+                <literal>HOST3</literal>, <literal>HOST4</literal> et <literal>HOST5</literal>
+                seront dépendants à la fois d'<literal>HOST1</literal> et de
+                <literal>HOST2</literal>. Toutes les instances de la dépendance d'hôte seront identiques, à
                 l'exception des noms d'hôtes (c.-à-d. auront le même critère d'échec de
                 notification, etc.). 
             </para>
             <programlisting>
-                define hostdependency{
-                host_name        HOST1,HOST2
-                dependent_host_name   HOST3,HOST4,HOST5
-                other dependency directives …
-                }
+define hostdependency {
+    host_name                   HOST1,HOST2
+    dependent_host_name         HOST3,HOST4,HOST5
+    other dependency directives …
+}
             </programlisting>
         </section>
         <section>
             <title>Tous les hôtes situés dans de multiples groupes d'hôtes : </title>
             <para>Si vous désire créer des dépendances d'hôte pour tous les hôtes d'un ou
                 plusieurs groupes d'hôtes, vous pouvez utiliser les paramètres
-                <varname>hostgroup_name</varname> et/ou
-                <varname>dependent_hostgroup_name</varname>. Dans l'exemple ci-dessous, tous
-                les hôtes des groupes d'hôtes HOSTGROUP3 et HOSTGROUP4 seront dépendants de
-                tous les hôtes des groupes d'hôtes HOSTGROUP1 et HOSTGROUP2. Toutes les
-                instances de la dépendance d'hôte seront identiques, à l'exception des noms
+                <literal>hostgroup_name</literal> et/ou
+                <literal>dependent_hostgroup_name</literal>. Dans l'exemple ci-dessous, tous
+                les hôtes des groupes d'hôtes <literal>HOSTGROUP3</literal> et 
+                <literal>HOSTGROUP4</literal> seront dépendants de
+                tous les hôtes des groupes d'hôtes <literal>HOSTGROUP1</literal> et
+                <literal>HOSTGROUP2</literal>. Toutes les instances de la dépendance
+                d'hôte seront identiques, à l'exception des noms
                 d'hôtes (c.-à-d. auront le même critère d'échec de notification, etc.). 
             </para>
             <programlisting>
-                define hostdependency{
-                hostgroup_name         HOSTGROUP1,HOSTGROUP2
-                dependent_hostgroup_name    HOSTGROUP3,HOSTGROUP4
-                other dependency directives …
-                }
+define hostdependency {
+    hostgroup_name              HOSTGROUP1,HOSTGROUP2
+    dependent_hostgroup_name    HOSTGROUP3,HOSTGROUP4
+    other dependency directives …
+}
             </programlisting>
         </section>
     </section>
@@ -605,16 +596,16 @@ linkend="configuringnagios-objectdefinitions-hostdependency">dépendances
             <title>Tous les hôtes :</title>
             <para>Si vous voulez créer un groupe d'hôte contenant tous les hôtes définis dans
                 vos fichiers de configuration, vous pouvez utiliser un caractère de
-                remplacement dans le paramètre <varname>members</varname>. La définition
-                ci-dessous créera un groupe d'hôtes appelé HOSTGROUP1 contenant tous les
-                hôtes définis dans vos fichiers de configuration. 
+                remplacement dans le paramètre <literal>members</literal>. La définition
+                ci-dessous créera un groupe d'hôtes appelé <literal>HOSTGROUP1</literal>
+                contenant tous les hôtes définis dans vos fichiers de configuration. 
             </para>
             <programlisting>
-                define hostgroup{
-                hostgroup_name     HOSTGROUP1
-                members         *
-                other hostgroup directives …
-                }
+define hostgroup {
+    hostgroup_name             HOSTGROUP1
+    members                    *
+    other hostgroup directives …
+}
             </programlisting>
         </section>
     </section>
