@@ -7,80 +7,94 @@
 ]
 >
 <chapter id="gettingstarted-monitoring-netware" xreflabel="Monitoring Netware servers">
- <title>Supervision des serveurs Netware</title>
-<note>
-  <title>Introduction</title>
-  <para>
-   Ce document fournit les informations sur la façon de superviser des serveurs
-Novell Netware.
-  </para>
-</note>
- <section>
-  <title>Ressources externes</title>
-  <para>
-   Vous pouvez trouver de la documentation sur la façon de superviser des
-serveurs Netware avec Nagios sur le site Novell's <ulink
+    <title>Supervision des serveurs Netware</title>
+    <note>
+        <title>Introduction</title>
+        <para>
+            Ce document fournit les informations sur la façon de superviser des serveurs
+            Novell Netware.
+        </para>
+    </note>
+    <section>
+        <title>Ressources externes</title>
+        <para>
+            Vous pouvez trouver de la documentation sur la façon de superviser des
+            serveurs Netware avec Nagios sur le site Novell's <ulink
 url="&url-novell-coolsolutions;">Cool Solutions</ulink>, couvrant:
-  </para>
-  <itemizedlist>
-   <listitem>
-    <para>
-     <ulink url="http://developer.novell.com/wiki/index.php/MRTGEXT">MRTGEXT:
-module NLM pour MRTG et Nagios</ulink>
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     <ulink url="&url-novell-coolsolutions;feature/16723.html">Nagios: Outil de
-supervision des hôtes et services</ulink>
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     <ulink url="&url-novell-coolsolutions;appnote/17494.html">Nagios et NetWare:
-Supervision basée sur SNMP</ulink>
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     <ulink url="&url-novell-coolsolutions;tools/17255.html">Supervision de
-l'état du pilote DirXML/IDM avec Nagios</ulink>
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     <ulink url="&url-novell-coolsolutions;tools/17038.html">Contrôle de
-l'authentification NDS Login avec Nagios</ulink>
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     <ulink url="&url-novell-coolsolutions;tools/17580.html">Supervision de la
-queue d'impression NDPS/iPrint par Nagios</ulink>
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     <ulink url="&url-novell-coolsolutions;tools/16935.html">Plugin check_gwiaRL
-pour Nagios 2.0</ulink>
-    </para>
-   </listitem>
-  </itemizedlist>
-  <tip>
-  <para>
-Quand vous visitez le site Novell's <ulink
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <ulink url="http://developer.novell.com/wiki/index.php/MRTGEXT">MRTGEXT:
+                        module NLM pour MRTG et Nagios
+                    </ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="&url-novell-coolsolutions;feature/16723.html">Nagios: Outil de
+                        supervision des hôtes et services
+                    </ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="&url-novell-coolsolutions;appnote/17494.html">Nagios et NetWare:
+                        Supervision basée sur SNMP
+                    </ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="&url-novell-coolsolutions;tools/17255.html">Supervision de
+                        l'état du pilote DirXML/IDM avec Nagios
+                    </ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="&url-novell-coolsolutions;tools/17038.html">Contrôle de
+                        l'authentification NDS Login avec Nagios
+                    </ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="&url-novell-coolsolutions;tools/17580.html">Supervision de la
+                        queue d'impression NDPS/iPrint par Nagios
+                    </ulink>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <ulink url="&url-novell-coolsolutions;tools/16935.html">Plugin check_gwiaRL
+                        pour Nagios 2.0
+                    </ulink>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <tip>
+            <para>
+                Quand vous visitez le site Novell's <ulink
 url="&url-novell-coolsolutions;">Cool Solutions</ulink>, faîtes une
-recherche sur <quote>Nagios</quote> pour trouver plus d'articles et de
-composants logiciels relatifs à la supervision.
-  </para>
-  </tip>
-  <para>
-   Merci à <ulink url="&url-novell-coolsolutions;author/1301.html">
-<personname><firstname>Christian</firstname><surname>Mies</surname></personname></ulink>, <ulink url="&url-novell-coolsolutions;author/1525.html">
-<personname><firstname>Rainer</firstname><surname>Brunold</surname></personname>
-</ulink>, et aux autres pour leurs contributions à la documentation
-sur Nagios et Netware, aux extensions, etc. sur le site de Novell!
-  </para>
- </section>
+                recherche sur <quote>Nagios</quote> pour trouver plus d'articles et de
+                composants logiciels relatifs à la supervision.
+            </para>
+        </tip>
+        <para>
+            Merci à <ulink url="&url-novell-coolsolutions;author/1301.html">
+                <personname>
+                    <firstname>Christian</firstname><surname>Mies</surname>
+                </personname>
+            </ulink>
+            ,<ulink url="&url-novell-coolsolutions;author/1525.html">
+                <personname>
+                    <firstname>Rainer</firstname><surname>Brunold</surname>
+                </personname>
+            </ulink>
+            ,et aux autres pour leurs contributions à la documentation
+            sur Nagios et Netware, aux extensions, etc. sur le site de Novell!
+        </para>
+    </section>
 </chapter>
 

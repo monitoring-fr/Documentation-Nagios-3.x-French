@@ -7,242 +7,264 @@
 ]
 >
 <chapter>
- <title id="upgrading">Mise à jour de Nagios</title>
- <section>
-  <title>Mise à jour depuis une version 3.x de Nagios</title>
-  <para>
-   Dès que des versions alpha, beta, ou stable de Nagios sont sorties, vous
-pouvez sérieusement envisager dès que possible de mettre à jour votre
-Nagios. Les nouvelles versions contiennent habituellement des corrections de
-bugs critiques, du coup, il est important de rester à jour. Si vous avez
-déjà installé Nagios à partir du code source tel que décrit dans le <link
+    <title id="upgrading">Mise à jour de Nagios</title>
+    <section>
+        <title>Mise à jour depuis une version 3.x de Nagios</title>
+        <para>
+            Dès que des versions alpha, beta, ou stable de Nagios sont sorties, vous
+            pouvez sérieusement envisager dès que possible de mettre à jour votre
+            Nagios. Les nouvelles versions contiennent habituellement des corrections de
+            bugs critiques, du coup, il est important de rester à jour. Si vous avez
+            déjà installé Nagios à partir du code source tel que décrit dans le <link
 linkend="gettingstarted-quickstart">guide de démarrage rapide</link>, vous
-pouvez installer les nouvelles versions de Nagios 3.x facilement. Vous
-n'avez même pas besoin d'un accès root pour le faire, tout ce qui doit être
-fait en tant que root a été fait lors de l'instalation initiale. Voici le
-processus de mise à niveau…
-  </para>
-  <para>
-   Assurez-vous d'avoir une bonne sauvegarde de votre installation de Nagios
-existante ainsi que des fichiers de configuration. Si quelque chose se passe
-mal ou ne fonctionne pas, ce qui vous permettra de revenir à votre
-ancienne version.
-  </para>
-  <para>
-   Devenez l'utilisateur nagios. Les utilisateurs de &name-debian;/&name-ubuntu;
-devront utiliser <userinput>sudo -s nagios</userinput>.
-  </para>
-<screen>
-<prompt>$ </prompt><userinput>su -l nagios</userinput>
-</screen>
-  <para>
-   Téléchargez le code source de la dernière version de Nagios (visitez <ulink
+            pouvez installer les nouvelles versions de Nagios 3.x facilement. Vous
+            n'avez même pas besoin d'un accès root pour le faire, tout ce qui doit être
+            fait en tant que root a été fait lors de l'instalation initiale. Voici le
+            processus de mise à niveau…
+        </para>
+        <para>
+            Assurez-vous d'avoir une bonne sauvegarde de votre installation de Nagios
+            existante ainsi que des fichiers de configuration. Si quelque chose se passe
+            mal ou ne fonctionne pas, ce qui vous permettra de revenir à votre
+            ancienne version.
+        </para>
+        <para>
+            Devenez l'utilisateur nagios. Les utilisateurs de &name-debian;/&name-ubuntu;
+            devront utiliser <userinput>sudo -s nagios</userinput>.
+        </para>
+        <screen>
+            <prompt>$ </prompt><userinput>su -l nagios</userinput>
+        </screen>
+        <para>
+            Téléchargez le code source de la dernière version de Nagios (visitez <ulink
 url="&url-nagios;download/">&url-nagios;download/</ulink> pour avoir le lien
-vers la dernière version).
-  </para>
-<screen>
-<prompt>$ </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.x.tar.gz</userinput>
-</screen>
-  <para>
-   Extrayez le code source de Nagios de l'archive.
-  </para>
-<screen>
-<prompt>$ </prompt><userinput>tar xzf nagios-3.x.tar.gz</userinput>
-<prompt>$ </prompt><userinput>cd nagios-3.x</userinput>
-</screen>
-  <para>
-   Exécutez le script de configuration de Nagios, en passant le nom du groupe
-utilisé pour contrôler les permissions du fichiers de commande comme ceci:
-  </para>
-<screen>
-<prompt>$ </prompt><userinput>./configure --with-command-group=nagcmd</userinput>
-</screen>
-  <para>
-   Compilez le code source de Nagios.
-  </para>
-<screen>
-<prompt>$ </prompt><userinput>make all</userinput>
-</screen>
-  <para>
-   Installation de la mise à jour des binaires, de la documentation et
-l'interface web. Vos fichiers de configuration ne seront pas écrasés par
-cette étape.
-  </para>
-<screen>
-<prompt>$ </prompt><userinput>make install</userinput>
-</screen>
-  <para>
-   Vérifiez votre configuration et relancer Nagios.
-  </para>
-<screen>
-<prompt>$ </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
-<prompt>$ </prompt><userinput>/sbin/service nagios restart</userinput>
-</screen>
-  <para>
-   Ca y est - C'est fait !
-  </para>
- </section>
- <section>
-  <title>Mise à jour depuis une version 2.x de Nagios</title>
-  <para>
-   Il ne devrait pas être trop difficile de faire la mise à niveau de Nagios
-2.x à Nagios 3. La mise à jour est essentiellement la même que celle qui est
-décrite ci-dessus pour la mise à niveau d'une version 3.x. Cependant, vous
-allez avoir à changer un peu vos fichiers de configuration pour qu'ils
-soient totalement compatibles avec Nagios 3:
-  </para>
-  <itemizedlist>
-   <listitem>
-    <para>
-     L'ancienne variable <literal>service_reaper_frequency</literal> dans le
-fichier de configuration princpal a été renommée en <link
+            vers la dernière version).
+        </para>
+        <screen>
+            <prompt>$ </prompt><userinput>wget http://osdn.dl.sourceforge.net/sourceforge/nagios/nagios-3.x.tar.gz</userinput>
+        </screen>
+        <para>
+            Extrayez le code source de Nagios de l'archive.
+        </para>
+        <screen>
+            <prompt>$ </prompt><userinput>tar xzf nagios-3.x.tar.gz</userinput>
+            <prompt>$ </prompt><userinput>cd nagios-3.x</userinput>
+        </screen>
+        <para>
+            Exécutez le script de configuration de Nagios, en passant le nom du groupe
+            utilisé pour contrôler les permissions du fichiers de commande comme ceci:
+        </para>
+        <screen>
+            <prompt>$ </prompt><userinput>./configure --with-command-group=nagcmd</userinput>
+        </screen>
+        <para>
+            Compilez le code source de Nagios.
+        </para>
+        <screen>
+            <prompt>$ </prompt><userinput>make all</userinput>
+        </screen>
+        <para>
+            Installation de la mise à jour des binaires, de la documentation et
+            l'interface web. Vos fichiers de configuration ne seront pas écrasés par
+            cette étape.
+        </para>
+        <screen>
+            <prompt>$ </prompt><userinput>make install</userinput>
+        </screen>
+        <para>
+            Vérifiez votre configuration et relancer Nagios.
+        </para>
+        <screen>
+            <prompt>$ </prompt><userinput>/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg</userinput>
+            <prompt>$ </prompt><userinput>/sbin/service nagios restart</userinput>
+        </screen>
+        <para>
+            Ca y est - C'est fait !
+        </para>
+    </section>
+    <section>
+        <title>Mise à jour depuis une version 2.x de Nagios</title>
+        <para>
+            Il ne devrait pas être trop difficile de faire la mise à niveau de Nagios
+            2.x à Nagios 3. La mise à jour est essentiellement la même que celle qui est
+            décrite ci-dessus pour la mise à niveau d'une version 3.x. Cependant, vous
+            allez avoir à changer un peu vos fichiers de configuration pour qu'ils
+            soient totalement compatibles avec Nagios 3:
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    L'ancienne variable <literal>service_reaper_frequency</literal> dans le
+                    fichier de configuration princpal a été renommée en <link
 linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link>.
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     L'ancienne macro <literal>$NOTIFICATIONNUMBER$</literal> a été remplacée par
-les deux nouvelles macros <link
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    L'ancienne macro <literal>$NOTIFICATIONNUMBER$</literal> a été remplacée par
+                    les deux nouvelles macros <link
 linkend="thebasics-macrolist-hostnotificationnumber">&macro-hostnotificationnumber;</link>
-et <link
+                    et <link
 linkend="thebasics-macrolist-servicenotificationnumber">&macro-servicenotificationnumber;</link>
-.
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     L'ancien paramètre <literal>parallelize</literal> des définitions de
-services est maintenant devenue obsolète et n'est plus utilisé, du fait que
-les contrôles de services se font désormais en parallèle.
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     L'ancienne option <literal>aggregate_status_updates</literal> a été
-supprimée. Toutes les mises à jour du fichier de statut sont maintenant
-regroupées dans un intervalle de temps minimum d'une seconde.
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     Les définitions étendues des hôtes et des services sont devenues
-obsolètes. Elles sont tout de même lues et traitées par Nagios, mais il est
-recommandé de déplacer les paramètres situés dans ces fichiers de
-définitions vers les définitions des hôtes et des services, respectivement.
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     L'ancienne variable du fichier <literal>downtime_file</literal> dans le
-fichier de configuration principal n'est plus utilisée, les entrées
-correspondant aux arrêts planifiés sont maintenant sauvegardées dans le <link
+                    .
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    L'ancien paramètre <literal>parallelize</literal> des définitions de
+                    services est maintenant devenue obsolète et n'est plus utilisé, du fait que
+                    les contrôles de services se font désormais en parallèle.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    L'ancienne option <literal>aggregate_status_updates</literal> a été
+                    supprimée. Toutes les mises à jour du fichier de statut sont maintenant
+                    regroupées dans un intervalle de temps minimum d'une seconde.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Les définitions étendues des hôtes et des services sont devenues
+                    obsolètes. Elles sont tout de même lues et traitées par Nagios, mais il est
+                    recommandé de déplacer les paramètres situés dans ces fichiers de
+                    définitions vers les définitions des hôtes et des services, respectivement.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    L'ancienne variable du fichier <literal>downtime_file</literal> dans le
+                    fichier de configuration principal n'est plus utilisée, les entrées
+                    correspondant aux arrêts planifiés sont maintenant sauvegardées dans le <link
 linkend="configuringnagios-configmain-state_retention_file">fichier de
-rétention</link>. Pour garder les entrées concernant les arrêts programmés,
-arrêtez Nagios 2.x et ajoutez le contenu de l'ancien fichier d'arrêts
-programmés au fichier de rétention.
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-     L'ancienne variable du fichier <literal>comment_file</literal> dans le
-fichier de configuration principal n'est plus utilisé, les commentaires
-sont maintenant sauvegardés dans le <link
+                        rétention
+                    </link>
+                    .Pour garder les entrées concernant les arrêts programmés,
+                    arrêtez Nagios 2.x et ajoutez le contenu de l'ancien fichier d'arrêts
+                    programmés au fichier de rétention.
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    L'ancienne variable du fichier <literal>comment_file</literal> dans le
+                    fichier de configuration principal n'est plus utilisé, les commentaires
+                    sont maintenant sauvegardés dans le <link
 linkend="configuringnagios-configmain-state_retention_file">fichier de
-rétention</link>. Pour garder les anciens commentaires, arrêtez Nagios 2.x
-et ajoutez le contenu de l'ancien fichier de commentaires au fichier de
-rétention.
-    </para>
-   </listitem>
-  </itemizedlist>
-  <para>
-   Soyez-sûrs d'avoir lu la section <quote><link linkend="about-whatsnew">Quoi
-de neuf</link></quote> de la documentation. Celle-ci décrit tous les
-changements qui ont été appliqués au code de Nagios 3 depuis la dernière
-version stable de Nagios 2.x. Nagios 3 a quelque peu changé, soyez-sûrs de
-l'avoir lu.
-  </para>
- </section>
- <section>
-  <title>Mise à jour depuis une installation par RPM</title>
-  <para>
-   Si vous avez actuellement une installation de Nagios basée sur des packages
-RPM &name-debian;/&name-ubuntu; ou APT et que vous souhaitez passer à une
-installation de Nagios à partir du code source officiel, voici la méthode à
-suivre:
-  </para>
-    <orderedlist>
-
-  <listitem>
-   <para>Sauvegardez votre installation de Nagios existante</para>
-
-   <itemizedlist>
-    <listitem>
-     <para>Les fichiers de configuration</para>
-
-     <itemizedlist>
-      <listitem>
-       <para>Le fichier de configuration principal (normalement nommé
-<filename>nagios.cfg</filename>)</para>
-      </listitem>
-
-      <listitem>
-       <para>Le fichier de configuration des ressources (normalement nommé
-<filename>resource.cfg</filename>)</para>
-      </listitem>
-
-      <listitem>
-       <para>Le fichier de configuration des &acronym-cgi;s (normalement nommé
-<filename>cgi.cfg</filename>)</para>
-      </listitem>
-
-      <listitem>
-       <para>Tous les autres fichiers de définition d'objets</para>
-      </listitem>
-     </itemizedlist>
-    </listitem>
-
-    <listitem>
-     <para>Le fichier de rétention (normalement nommé
-<filename>retention.dat</filename>)</para>
-    </listitem>
-
-    <listitem>
-     <para>Le fichier de log en cours de Nagios (normalement nommé
-<filename>nagios.log</filename>)</para>
-    </listitem>
-
-    <listitem>
-     <para>Les fichiers de log Nagios archivés</para>
-    </listitem>
-   </itemizedlist>
-  </listitem>
-
-  <listitem>
-   <para>Désinstaller les packages RPM ou APT originaux </para>
-  </listitem>
-
-  <listitem>
-   <para>Installez Nagios depuis les sources en suivant le <link
-linkend="gettingstarted-quickstart">guide de démarrage rapide</link></para>
-  </listitem>
-
-  <listitem>
-   <para>Restaurez vos fichiers originaux de configuration Nagios, de rétention et de
-logs</para>
-  </listitem>
-
-  <listitem>
-   <para><link linkend="runningnagios-verifyconfig">Vérifiez</link> votre
-configuration et <link linkend="runningnagios-startstop">démarrez</link>
-Nagios</para>
-  </listitem>
- </orderedlist>
-<note><para>Différents packages RPM ou APT peuvent installer Nagios de façons
-différentes et à différents endroits. Soyez sûrs d'avoir correctement
-sauvegardé vos fichiers Nagios <quote>critiques</quote> avant de supprimer les packages
-RPM ou APT originaux, vous ne pourrez pas revenir en arrière si vous
-rencontrez des problèmes.</para></note>
- </section>
+                        rétention
+                    </link>
+                    .Pour garder les anciens commentaires, arrêtez Nagios 2.x
+                    et ajoutez le contenu de l'ancien fichier de commentaires au fichier de
+                    rétention.
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>
+            Soyez-sûrs d'avoir lu la section 
+            <quote>
+                <link linkend="about-whatsnew">Quoi
+                    de neuf
+                </link>
+            </quote>
+             de la documentation. Celle-ci décrit tous les
+            changements qui ont été appliqués au code de Nagios 3 depuis la dernière
+            version stable de Nagios 2.x. Nagios 3 a quelque peu changé, soyez-sûrs de
+            l'avoir lu.
+        </para>
+    </section>
+    <section>
+        <title>Mise à jour depuis une installation par RPM</title>
+        <para>
+            Si vous avez actuellement une installation de Nagios basée sur des packages
+            RPM &name-debian;/&name-ubuntu; ou APT et que vous souhaitez passer à une
+            installation de Nagios à partir du code source officiel, voici la méthode à
+            suivre:
+        </para>
+        <orderedlist>
+            
+            <listitem>
+                <para>Sauvegardez votre installation de Nagios existante</para>
+                
+                <itemizedlist>
+                    <listitem>
+                        <para>Les fichiers de configuration</para>
+                        
+                        <itemizedlist>
+                            <listitem>
+                                <para>Le fichier de configuration principal (normalement nommé
+                                    <filename>nagios.cfg</filename>)
+                                </para>
+                            </listitem>
+                            
+                            <listitem>
+                                <para>Le fichier de configuration des ressources (normalement nommé
+                                    <filename>resource.cfg</filename>)
+                                </para>
+                            </listitem>
+                            
+                            <listitem>
+                                <para>Le fichier de configuration des &acronym-cgi;s (normalement nommé
+                                    <filename>cgi.cfg</filename>)
+                                </para>
+                            </listitem>
+                            
+                            <listitem>
+                                <para>Tous les autres fichiers de définition d'objets</para>
+                            </listitem>
+                        </itemizedlist>
+                    </listitem>
+                    
+                    <listitem>
+                        <para>Le fichier de rétention (normalement nommé
+                            <filename>retention.dat</filename>)
+                        </para>
+                    </listitem>
+                    
+                    <listitem>
+                        <para>Le fichier de log en cours de Nagios (normalement nommé
+                            <filename>nagios.log</filename>)
+                        </para>
+                    </listitem>
+                    
+                    <listitem>
+                        <para>Les fichiers de log Nagios archivés</para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+            
+            <listitem>
+                <para>Désinstaller les packages RPM ou APT originaux </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    Installez Nagios depuis les sources en suivant le <link
+linkend="gettingstarted-quickstart">guide de démarrage rapide</link>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Restaurez vos fichiers originaux de configuration Nagios, de rétention et de
+                    logs
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    <link linkend="runningnagios-verifyconfig">Vérifiez</link> votre
+                    configuration et <link linkend="runningnagios-startstop">démarrez</link>
+                    Nagios
+                </para>
+            </listitem>
+        </orderedlist>
+        <note>
+            <para>Différents packages RPM ou APT peuvent installer Nagios de façons
+                différentes et à différents endroits. Soyez sûrs d'avoir correctement
+                sauvegardé vos fichiers Nagios <quote>critiques</quote> avant de supprimer les packages
+                RPM ou APT originaux, vous ne pourrez pas revenir en arrière si vous
+                rencontrez des problèmes.
+            </para>
+        </note>
+    </section>
 </chapter>
 
 

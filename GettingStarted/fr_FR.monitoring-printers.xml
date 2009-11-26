@@ -8,274 +8,316 @@
 >
 <chapter id="gettingstarted-monitoring-printers"
      xreflabel="Monitoring network printers">
- <title>Supervision des imprimantes réseaux</title>
-
- <note>
-  <para>Ce document décrit la façon de superviser l'état d'imprimantes réseaux. Plus
-particulièrement, les imprimantes <productname
+    <title>Supervision des imprimantes réseaux</title>
+    
+    <note>
+        <para>Ce document décrit la façon de superviser l'état d'imprimantes réseaux. Plus
+            particulièrement, les imprimantes <productname
 class="trade">HP</productname> qui ont une carte interne/externe
-<productname class="registered">JetDirect</productname>, ou toute autres
-imprimantes (comme la <productname class="trade">Troy</productname>
-<productname class="registered">PocketPro 100S</productname> ou la
-<productname class="trade">Netgear</productname> <productname
-class="registered">PS101</productname>) supportant le protocole JetDirect.</para>
- </note>
-
- <section>
-  <title>Introduction</title>
-
-  <para><inlinemediaobject> <imageobject> <imagedata fileref="images/printer.png"
-format="PNG"/> </imageobject> </inlinemediaobject></para>
-
-  <para>Le plugin &plugin-hpjd; (qui fait partie de la distribution des plugins
-standards Nagios) vous permettent de superviser l'état de toutes imprimantes
-compatibles JetDirect avec &protocol-snmp; activé. Le plugin est capable de
-détecter les états suivants de l'imprimante:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Bourrage papier</para>
-   </listitem>
-
-   <listitem>
-    <para>Plus de papier</para>
-   </listitem>
-
-   <listitem>
-    <para>Imprimante hors ligne</para>
-   </listitem>
-
-   <listitem>
-    <para>Intervention requise</para>
-   </listitem>
-
-   <listitem>
-    <para>Toner presque vide</para>
-   </listitem>
-
-   <listitem>
-    <para>Mémoire insuffisante</para>
-   </listitem>
-
-   <listitem>
-    <para>Porte ouverte</para>
-   </listitem>
-
-   <listitem>
-    <para>Le plateau de sortie papier est plein</para>
-   </listitem>
-
-   <listitem>
-    <para>Et bien d'autres…</para>
-   </listitem>
-  </itemizedlist>
-
-  <note>
-   <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
-le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
-exemples de configuration ci-dessous font référence aux objets de
-configuration définis dans les fichiers d'exemples
-(<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
-etc.) qui ont été installés si vous avez suivi le guide rapide.</para>
-  </note>
- </section>
-
- <section>
-  <title>Vue globale</title>
-
-  <para><informalfigure><mediaobject>
-    <imageobject>
-     <imagedata fileref="images/monitoring-printers.png" format="PNG"/>
-    </imageobject>
-   </mediaobject></informalfigure></para>
-
-  <para>Superviser l'état d'une imprimante réseau est simple. Les imprimantes
-compatibles JetDirect ont en général &protocol-snmp; activé, ce qui permet
-à Nagios de les superviser en utilisant le plugin &plugin-hpjd;.</para>
-
-  <para>Le plugin &plugin-hpjd; sera compilé et installé seulement si vous avez les
-paquets <application>net-snmp</application> et
-<application>net-snmp-utils</application> installés sur votre
-système. Assurez-vous que le plugin soit présent dans <filename
+            <productname class="registered">JetDirect</productname>, ou toute autres
+            imprimantes (comme la <productname class="trade">Troy</productname>
+            <productname class="registered">PocketPro 100S</productname> ou la
+            <productname class="trade">Netgear</productname> <productname
+class="registered">PS101</productname>) supportant le protocole JetDirect.
+        </para>
+    </note>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>
+            <inlinemediaobject>
+                 
+                <imageobject>
+                     <imagedata fileref="images/printer.png"
+format="PNG"/>
+                </imageobject>
+            </inlinemediaobject>
+        </para>
+        
+        <para>Le plugin &plugin-hpjd; (qui fait partie de la distribution des plugins
+            standards Nagios) vous permettent de superviser l'état de toutes imprimantes
+            compatibles JetDirect avec &protocol-snmp; activé. Le plugin est capable de
+            détecter les états suivants de l'imprimante:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Bourrage papier</para>
+            </listitem>
+            
+            <listitem>
+                <para>Plus de papier</para>
+            </listitem>
+            
+            <listitem>
+                <para>Imprimante hors ligne</para>
+            </listitem>
+            
+            <listitem>
+                <para>Intervention requise</para>
+            </listitem>
+            
+            <listitem>
+                <para>Toner presque vide</para>
+            </listitem>
+            
+            <listitem>
+                <para>Mémoire insuffisante</para>
+            </listitem>
+            
+            <listitem>
+                <para>Porte ouverte</para>
+            </listitem>
+            
+            <listitem>
+                <para>Le plateau de sortie papier est plein</para>
+            </listitem>
+            
+            <listitem>
+                <para>Et bien d'autres…</para>
+            </listitem>
+        </itemizedlist>
+        
+        <note>
+            <para>Ces instructions impliquent que vous ayez installé Nagios comme précisé dans
+                le <link linkend="gettingstarted-quickstart">guide rapide</link>. Les
+                exemples de configuration ci-dessous font référence aux objets de
+                configuration définis dans les fichiers d'exemples
+                (<filename>commands.cfg</filename>, <filename>templates.cfg</filename>,
+                etc.) qui ont été installés si vous avez suivi le guide rapide.
+            </para>
+        </note>
+    </section>
+    
+    <section>
+        <title>Vue globale</title>
+        
+        <para>
+            <informalfigure><mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/monitoring-printers.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </informalfigure>
+        </para>
+        
+        <para>Superviser l'état d'une imprimante réseau est simple. Les imprimantes
+            compatibles JetDirect ont en général &protocol-snmp; activé, ce qui permet
+            à Nagios de les superviser en utilisant le plugin &plugin-hpjd;.
+        </para>
+        
+        <para>Le plugin &plugin-hpjd; sera compilé et installé seulement si vous avez les
+            paquets <application>net-snmp</application> et
+            <application>net-snmp-utils</application> installés sur votre
+            système. Assurez-vous que le plugin soit présent dans <filename
 class="directory">/usr/local/nagios/libexec</filename> avant de
-continuer. Si ce n'est pas le cas, installez
-<application>net-snmp</application>,
-<application>net-snmp-utils</application> et recompilez/réinstallez les
-plugins Nagios.</para>
- </section>
-
- <section>
-  <title>Étapes</title>
-
-  <para>Il y a plusieurs étapes à suivre pour pouvoir superviser une nouvelle
-imprimante réseau. Les voici:</para>
-
-  <procedure>
-   <step>
-    <para>Procéder aux pré-requis nécessaires la première fois</para>
-   </step>
-
-   <step>
-    <para>Créez de nouvelles définitions d'hôte et service pour la supervision de
-l'imprimante</para>
-   </step>
-
-   <step>
-    <para>Redémarrez le démon Nagios</para>
-   </step>
-  </procedure>
- </section>
-
- <section>
-  <title>Ce qui est déjà fait pour vous</title>
-
-  <para>Pour vous rendre la vie un peu plus facile, quelques tâches de configuration ont déjà été faites pour vous :</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Une définition de commande <emphasis>check_hpjd</emphasis> a déjà été créé
-dans le fichier <filename>commands.cfg</filename>. Cela permet
-d'utiliser le plugin &plugin-hpjd; pour superviser des imprimantes réseaux.</para>
-   </listitem>
-
-   <listitem>
-    <para>Un gabarit d'hôte de type imprimante (nommé
-<emphasis>generic-printer</emphasis>) a déjà été créé dans le fichier
-<filename>templates.cfg</filename>. Cela vous permet de rajouter des
-définitions d'hôtes de type imprimante de façon simple.</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans
-le répertoire <filename
+            continuer. Si ce n'est pas le cas, installez
+            <application>net-snmp</application>,
+            <application>net-snmp-utils</application> et recompilez/réinstallez les
+            plugins Nagios.
+        </para>
+    </section>
+    
+    <section>
+        <title>Étapes</title>
+        
+        <para>Il y a plusieurs étapes à suivre pour pouvoir superviser une nouvelle
+            imprimante réseau. Les voici:
+        </para>
+        
+        <procedure>
+            <step>
+                <para>Procéder aux pré-requis nécessaires la première fois</para>
+            </step>
+            
+            <step>
+                <para>Créez de nouvelles définitions d'hôte et service pour la supervision de
+                    l'imprimante
+                </para>
+            </step>
+            
+            <step>
+                <para>Redémarrez le démon Nagios</para>
+            </step>
+        </procedure>
+    </section>
+    
+    <section>
+        <title>Ce qui est déjà fait pour vous</title>
+        
+        <para>Pour vous rendre la vie un peu plus facile, quelques tâches de configuration ont déjà été faites pour vous :</para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>
+                    Une définition de commande <emphasis>check_hpjd</emphasis> a déjà été créé
+                    dans le fichier <filename>commands.cfg</filename>. Cela permet
+                    d'utiliser le plugin &plugin-hpjd; pour superviser des imprimantes réseaux.
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Un gabarit d'hôte de type imprimante (nommé
+                    <emphasis>generic-printer</emphasis>) a déjà été créé dans le fichier
+                    <filename>templates.cfg</filename>. Cela vous permet de rajouter des
+                    définitions d'hôtes de type imprimante de façon simple.
+                </para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Les fichiers de configuration mentionnés ci-dessus peuvent être trouvés dans
+            le répertoire <filename
 class="directory">/usr/local/nagios/etc/objects/</filename>. Vous pouvez
-modifier les définitions de ceux-ci ou en créez de nouvelles pour répondre
-le mieux à votre besoin. Quoi qu'il en soit, je vous recommande d'attendre
-d'avoir une meilleure connaissance de la configuration de Nagios avant de le
-faire. Pour le moment, contentez-vous de suivre les directions précisées
-ci-dessous et vous pourrez superviser vos imprimantes réseaux en un rien de
-temps.</para>
- </section>
-
- <section>
-  <title>Pré-requis</title>
-
-  <para>La première fois que vous configurez Nagios pour superviser une imprimante
-réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez
-à le faire que pour la *première* imprimante à superviser.</para>
-
-  <para>Éditez le fichier de configuration principal de Nagios.</para>
-
-  <screen><prompt># </prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput></screen>
-
-  <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
-
-  <programlisting>
-#cfg_file=/usr/local/nagios/etc/objects/printer.cfg
-</programlisting>
-
-  <para>Enregistrez le fichier et quittez.</para>
-
-  <para>Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier
-<filename>/usr/local/nagios/etc/objects/printer.cfg</filename> pour y
-trouver des définitions d'objets additionnels. C'est là que vous ajouterez
-des définitions pour l'imprimante. Ce fichier de configuration contient déjà
-un exemple de définitions d'hôte, de groupe d'hôtes et de service. Pour la
-*première* imprimante que vous supervisez, vous pouvez simplement modifier
-les définitions d'exemples d'hôte et de service dans ce fichier plutôt que
-d'en créer de nouvelles.</para>
- </section>
-
- <section>
-  <title>Configuration de Nagios</title>
-
-  <para>Vous allez devoir créer quelques <link
+            modifier les définitions de ceux-ci ou en créez de nouvelles pour répondre
+            le mieux à votre besoin. Quoi qu'il en soit, je vous recommande d'attendre
+            d'avoir une meilleure connaissance de la configuration de Nagios avant de le
+            faire. Pour le moment, contentez-vous de suivre les directions précisées
+            ci-dessous et vous pourrez superviser vos imprimantes réseaux en un rien de
+            temps.
+        </para>
+    </section>
+    
+    <section>
+        <title>Pré-requis</title>
+        
+        <para>La première fois que vous configurez Nagios pour superviser une imprimante
+            réseau, vous avez un peu plus de travail à faire. Souvenez-vous, vous n'avez
+            à le faire que pour la *première* imprimante à superviser.
+        </para>
+        
+        <para>Éditez le fichier de configuration principal de Nagios.</para>
+        
+        <screen>
+            <prompt>#</prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput>
+        </screen>
+        
+        <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
+        
+        <programlisting>
+            #cfg_file=/usr/local/nagios/etc/objects/printer.cfg
+        </programlisting>
+        
+        <para>Enregistrez le fichier et quittez.</para>
+        
+        <para>Qu'avez-vous fait? Vous avez dit à Nagios de regarder dans le fichier
+            <filename>/usr/local/nagios/etc/objects/printer.cfg</filename> pour y
+            trouver des définitions d'objets additionnels. C'est là que vous ajouterez
+            des définitions pour l'imprimante. Ce fichier de configuration contient déjà
+            un exemple de définitions d'hôte, de groupe d'hôtes et de service. Pour la
+            *première* imprimante que vous supervisez, vous pouvez simplement modifier
+            les définitions d'exemples d'hôte et de service dans ce fichier plutôt que
+            d'en créer de nouvelles.
+        </para>
+    </section>
+    
+    <section>
+        <title>Configuration de Nagios</title>
+        
+        <para>
+            Vous allez devoir créer quelques <link
 linkend="configuringnagios-objectdefinitions">définitions d'objets</link>
-pour pouvoir superviser une nouvelle imprimante.</para>
-
-  <para>Éditez le fichier <filename>printer.cfg</filename>.</para>
-
-  
-  	<screen>
-	<prompt># </prompt><userinput>vi /usr/local/nagios/etc/objects/printer.cfg</userinput>
-	</screen>
-
-  <para>Ajouter une nouvelle définition d'<link
+            pour pouvoir superviser une nouvelle imprimante.
+        </para>
+        
+        <para>
+            Éditez le fichier <filename>printer.cfg</filename>.
+        </para>
+        
+        
+        <screen>
+            <prompt># </prompt><userinput>vi /usr/local/nagios/etc/objects/printer.cfg</userinput>
+        </screen>
+        
+        <para>
+            Ajouter une nouvelle définition d'<link
 linkend="configuringnagios-objectdefinitions-host">hôte</link> pour
-l'imprimante réseau que vous souhaitez superviser. Si c'est la *première*
-que vous supervisez, vous pouvez simplement modifier l'exemple de définition
-d'hôte dans <filename>printer.cfg</filename>. Remplacez les champs
-<varname>host_name</varname>, <varname>alias</varname>, et
-<varname>address</varname> par les valeurs appropriées pour votre
-imprimante.</para>
-
-  <programlisting>
-define host{
-  use     generic-printer   ; Inherit default values from a template
-  host_name  hplj2605dn     ; The name we're giving to this printer
-  alias    HP LaserJet 2605dn ; A longer name associated with the printer
-  address   192.168.1.30    ; IP address of the printer
-  hostgroups allhosts      ; Host groups this printer is associated with
-}
-</programlisting>
-
-  <para>Vous pouvez ajouter maintenant quelques définitions de services (dans le
-même fichier de configuration) pour superviser différents aspects de votre
-imprimante. Si c'est la *première* imprimante que vous supervisez, vous
-pouvez simplement modifier l'exemple de définition d'hôte dans
-<filename>printer.cfg</filename>.</para>
-
-  <note>
-   <para>Remplacez <quote><replaceable>hplj2605dn</replaceable></quote> dans les
-exemples de définitions ci-dessous par le nom que vous avez renseigné dans
-le paramètre <varname>host_name</varname> que vous venez d'ajouter dans la
-définition d'hôte.</para>
-  </note>
-
-  <para>Ajoutez cette définition de service pour pouvoir superviser l'état de
-l'imprimante. Le service utilise le plugin &plugin-hpjd; pour vérifier
-l'état de l'imprimante toutes les 10 minutes par défaut. La communauté
-&protocol-snmp; utilisée dans cet exemple pour interroger l'imprimante est
-<quote>public</quote>.</para>
-
-  <programlisting>
-define service{
-  use          generic-service    ; Inherit values from a template
-  host_name       hplj2605dn       ; The name of the host the service is associated with
-  service_description  Printer Status     ; The service description
-  check_command     check_hpjd!-C public  ; The command used to monitor the service
-  normal_check_interval 10 ; Check the service every 10 minutes under normal conditions
-  retry_check_interval 1  ; Re-check the service every minute until its final/hard state is determined
-}
-</programlisting>
-
-  <para>Ajoutez la définition de service suivante pour pinger l'imprimante toutes
-les 10 minutes par défaut. C'est utile pour superviser le &acronym-rta;, les paquets perdus et la connectivité réseau. </para>
-
-  <programlisting>
-define service{
-    use           generic-service
-    host_name        hplj2605dn
-    service_description   PING
-    check_command      check_ping!3000.0,80%!5000.0,100%
-    normal_check_interval  10
-    retry_check_interval  1
-}
-</programlisting>
-
-  <para>Enregistrez le fichier.</para>
- </section>
-
- <section>
-    <title>Redémarrage de Nagios</title>
-
-  <para>Une fois que vous avez ajouté les définitions d'hôte et de service au
-fichier <filename>printer.cfg</filename>, vous êtes prêt à commencer la
-supervision de l'imprimante. Pour cela, vous aurez besoin de <link
+            l'imprimante réseau que vous souhaitez superviser. Si c'est la *première*
+            que vous supervisez, vous pouvez simplement modifier l'exemple de définition
+            d'hôte dans <filename>printer.cfg</filename>. Remplacez les champs
+            <varname>host_name</varname>, <varname>alias</varname>, et
+            <varname>address</varname> par les valeurs appropriées pour votre
+            imprimante.
+        </para>
+        
+        <programlisting>
+            define host{
+            use     generic-printer   ; Inherit default values from a template
+            host_name  hplj2605dn     ; The name we're giving to this printer
+            alias    HP LaserJet 2605dn ; A longer name associated with the printer
+            address   192.168.1.30    ; IP address of the printer
+            hostgroups allhosts      ; Host groups this printer is associated with
+            }
+        </programlisting>
+        
+        <para>Vous pouvez ajouter maintenant quelques définitions de services (dans le
+            même fichier de configuration) pour superviser différents aspects de votre
+            imprimante. Si c'est la *première* imprimante que vous supervisez, vous
+            pouvez simplement modifier l'exemple de définition d'hôte dans
+            <filename>printer.cfg</filename>.
+        </para>
+        
+        <note>
+            <para>
+                Remplacez 
+                <quote>
+                    <replaceable>hplj2605dn</replaceable>
+                </quote>
+                dans les
+                exemples de définitions ci-dessous par le nom que vous avez renseigné dans
+                le paramètre <varname>host_name</varname> que vous venez d'ajouter dans la
+                définition d'hôte.
+            </para>
+        </note>
+        
+        <para>Ajoutez cette définition de service pour pouvoir superviser l'état de
+            l'imprimante. Le service utilise le plugin &plugin-hpjd; pour vérifier
+            l'état de l'imprimante toutes les 10 minutes par défaut. La communauté
+            &protocol-snmp; utilisée dans cet exemple pour interroger l'imprimante est
+            <quote>public</quote>.
+        </para>
+        
+        <programlisting>
+            define service{
+            use          generic-service    ; Inherit values from a template
+            host_name       hplj2605dn       ; The name of the host the service is associated with
+            service_description  Printer Status     ; The service description
+            check_command     check_hpjd!-C public  ; The command used to monitor the service
+            normal_check_interval 10 ; Check the service every 10 minutes under normal conditions
+            retry_check_interval 1  ; Re-check the service every minute until its final/hard state is determined
+            }
+        </programlisting>
+        
+        <para>Ajoutez la définition de service suivante pour pinger l'imprimante toutes
+            les 10 minutes par défaut. C'est utile pour superviser le &acronym-rta;, les paquets perdus et la connectivité réseau. 
+        </para>
+        
+        <programlisting>
+            define service{
+            use           generic-service
+            host_name        hplj2605dn
+            service_description   PING
+            check_command      check_ping!3000.0,80%!5000.0,100%
+            normal_check_interval  10
+            retry_check_interval  1
+            }
+        </programlisting>
+        
+        <para>Enregistrez le fichier.</para>
+    </section>
+    
+    <section>
+        <title>Redémarrage de Nagios</title>
+        
+        <para>Une fois que vous avez ajouté les définitions d'hôte et de service au
+            fichier <filename>printer.cfg</filename>, vous êtes prêt à commencer la
+            supervision de l'imprimante. Pour cela, vous aurez besoin de <link
 linkend="runningnagios-verifyconfig">vérifier votre configuration</link> et
-de <link linkend="runningnagios-startstop">redémarrer Nagios</link>.</para>
-
-  <para>Si le processus de vérification produit n'importe quel message d'erreur, réglez d'abord vos problèmes de configuration avant de continuer.
-  Assurez-vous de ne pas redémarrer Nagios avant que le processus de vérification ne se déroule sans erreur!</para>
- </section>
+            de <link linkend="runningnagios-startstop">redémarrer Nagios</link>.
+        </para>
+        
+        <para>Si le processus de vérification produit n'importe quel message d'erreur, réglez d'abord vos problèmes de configuration avant de continuer.
+            Assurez-vous de ne pas redémarrer Nagios avant que le processus de vérification ne se déroule sans erreur!
+        </para>
+    </section>
 </chapter>

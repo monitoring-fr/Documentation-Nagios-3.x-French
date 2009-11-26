@@ -7,94 +7,121 @@
 ]
 >
 <chapter id="gettingstarted-quickstart" xreflabel="Guides d'installation rapide">
- <title>Guides d'installation rapide</title>
- <remark>Chapitre finalisé</remark>
- <note>
-  <para>
-   Ces guides sont prévus pour vous fournir les instructions simples sur la
-façon d'installer Nagios depuis le code source et d'avoir la supervision de
-votre machine locale prête en moins de 20 minutes. Aucune option
-d'installation avancée n'est abordée ici - juste les notions basiques qui
-fonctionneront pour 95% des utilisateurs qui veulent démarrer.
-  </para>
- </note>
- <section>
-  <title>Guides d'installation</title>
-  <para>
-   Les guides d'installation rapide sont actuellement disponibles pour les
-distributions Linux suivantes:
-  </para>
-  <itemizedlist>
-   <listitem>
-    <para><link linkend="gettingstarted-quickstart-fedora">Guide rapide pour
-Fedora</link></para>
-   </listitem>
-   <listitem>
-    <para><link linkend="gettingstarted-quickstart-opensuse">Guide rapide
-openSUSE</link></para>
-   </listitem>
-   <listitem>
-    <para><link linkend="gettingstarted-quickstart-ubuntu">Guide rapide
-Ubuntu</link></para>
-   </listitem>
-  </itemizedlist>
-  <para>
-   Vous pouvez aussi trouver des guides d'installation rapide sur le <ulink
+    <title>Guides d'installation rapide</title>
+    <remark>Chapitre finalisé</remark>
+    <note>
+        <para>
+            Ces guides sont prévus pour vous fournir les instructions simples sur la
+            façon d'installer Nagios depuis le code source et d'avoir la supervision de
+            votre machine locale prête en moins de 20 minutes. Aucune option
+            d'installation avancée n'est abordée ici - juste les notions basiques qui
+            fonctionneront pour 95% des utilisateurs qui veulent démarrer.
+        </para>
+    </note>
+    <section>
+        <title>Guides d'installation</title>
+        <para>
+            Les guides d'installation rapide sont actuellement disponibles pour les
+            distributions Linux suivantes:
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-quickstart-fedora">Guide rapide pour
+                        Fedora
+                    </link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-quickstart-opensuse">Guide rapide
+                        openSUSE
+                    </link>
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-quickstart-ubuntu">Guide rapide
+                        Ubuntu
+                    </link>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <para>
+            Vous pouvez aussi trouver des guides d'installation rapide sur le <ulink
 url="&url-nagios-community;">wiki NagiosCommunity.org</ulink>. Vous ne trouvez
-pas de guide rapide pour un <acronym>OS</acronym> particulier? Écrivez-en un et posez le sur
-le wiki à l'attention des autres!
-  </para>
-  <para>
-   Si vous installez Nagios sur un système d'exploitation qui n'est pas dans la
-liste ci-dessus, lisez le <link
+            pas de guide rapide pour un <acronym>OS</acronym> particulier? Écrivez-en un et posez le sur
+            le wiki à l'attention des autres!
+        </para>
+        <para>
+            Si vous installez Nagios sur un système d'exploitation qui n'est pas dans la
+            liste ci-dessus, lisez le <link
 linkend="gettingstarted-quickstart-fedora">guide rapide Fedora</link>
-pour une vue générale de ce qu'il y a à faire. Les noms de commandes, chemin
-d'accès, etc. varient selon les différents systèmes
-d'exploitation/distributions, vous aurez donc certainement à triturer un peu
-les docs d'installation pour votre cas particulier.
-  </para>
- </section>
- <section>
-  <title>Modifications post installation</title>
-  <para>
-   Une fois que Nagios est installé et fonctionne correctement, il ne fait
-aucun doute que vous souhaiterez superviser plus que votre seule machine
-locale. Parcourez les documentations suivantes pour voir comment superviser
-autre chose…
-  </para>
-  <itemizedlist>
-   <listitem>
-    <para><link linkend="gettingstarted-monitoring-windows">Superviser des machines
-Windows</link></para>
-   </listitem>
-
-   <listitem>
-    <para><link linkend="gettingstarted-monitoring-linux">Superviser des machines
-Linux/Unix</link></para>
-   </listitem>
-
-   <listitem>
-    <para><link linkend="gettingstarted-monitoring-netware">Superviser des serveurs
-Netware</link></para>
-   </listitem>
-
-   <listitem>
-    <para><link linkend="gettingstarted-monitoring-routers">Superviser des
-routeurs/switchs</link></para>
-   </listitem>
-
-   <listitem>
-    <para><link linkend="gettingstarted-monitoring-printers">Supervision d'imprimantes
-réseaux</link></para>
-   </listitem>
-      
-   <listitem>
-    <para><link linkend="gettingstarted-monitoring-publicservices">Superviser des
-services disponibles publiquement (<systemitem role='protocol'>HTTP</systemitem>, <systemitem role='protocol'>FTP</systemitem>,
-<systemitem role='protocol'>SSH</systemitem>, etc.)</link></para>
-   </listitem>
-  </itemizedlist>
- </section>
+            pour une vue générale de ce qu'il y a à faire. Les noms de commandes, chemin
+            d'accès, etc. varient selon les différents systèmes
+            d'exploitation/distributions, vous aurez donc certainement à triturer un peu
+            les docs d'installation pour votre cas particulier.
+        </para>
+    </section>
+    <section>
+        <title>Modifications post installation</title>
+        <para>
+            Une fois que Nagios est installé et fonctionne correctement, il ne fait
+            aucun doute que vous souhaiterez superviser plus que votre seule machine
+            locale. Parcourez les documentations suivantes pour voir comment superviser
+            autre chose…
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-monitoring-windows">Superviser des machines
+                        Windows
+                    </link>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-monitoring-linux">Superviser des machines
+                        Linux/Unix
+                    </link>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-monitoring-netware">Superviser des serveurs
+                        Netware
+                    </link>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-monitoring-routers">Superviser des
+                        routeurs/switchs
+                    </link>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-monitoring-printers">Supervision d'imprimantes
+                        réseaux
+                    </link>
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>
+                    <link linkend="gettingstarted-monitoring-publicservices">Superviser des
+                        services disponibles publiquement (<systemitem role='protocol'>HTTP</systemitem>, <systemitem role='protocol'>FTP</systemitem>,
+                        <systemitem role='protocol'>SSH</systemitem>, etc.)
+                    </link>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
 </chapter>
 
 
