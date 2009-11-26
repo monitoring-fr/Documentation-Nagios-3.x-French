@@ -7,1133 +7,1344 @@
 ]
 >
 <chapter id="configuringnagios-configcgi" xreflabel="CGI Configuration File Options">
-	<title>Options du fichier de configuration des CGIs</title>
-		<note>
-		<para>Lors de la création et/ou l'édition des fichiers de configuration, gardez ce qui suit à 
-l'esprit:</para>
-		<itemizedlist>
-			<listitem>
-				<para>Les lignes commençant par le caractère '#' sont considérées comme des
-commentaires et ne sont donc pas traitées</para>
-			</listitem>
-			<listitem>
-				<para>Les noms des variables doivent commencer au début de la ligne - ne mettez
-pas d'espace avant le nom</para>
-			</listitem>
-			<listitem>
-				<para>Les noms des variables respectent la casse (majuscule/minuscule)</para>
-			</listitem>
-		</itemizedlist>
-		</note>
-		<section>
-		<title>Exemple de configuration</title>
-		<tip><para>Un exemple de fichier de configuration pour les &acronym-cgi;s
-(<filename>/usr/local/nagios/etc/cgi.cfg</filename>) est créé pour vous
-quand vous suivez le <link linkend="gettingstarted-quickstart">guide rapide
-d'installation</link>.
-		</para></tip>
-	</section>
-	<section>
-		<title>Emplacement du fichier de configuration</title>
-		<para>Par défaut, Nagios s'attend à trouver le fichier de configuration des &acronym-cgi;s
-sous le nom <filename>cgi.cfg</filename> dans le répertoire de configuration
-avec le <link linkend="configuringnagios-configmain">fichier de
-configuration principal</link>. Si vous changez le nom ou l'emplacement du
-fichier, vous devez configurer Apache pour qu'il passe une variable
-d'environnement nommée <varname>NAGIOS_CGI_CONFIG</varname> (contenant
-l'emplacement correct du fichier) aux &acronym-cgi;s de Nagios. Voir la configuration
-d'Apache pour plus de détails.</para>
-	</section>
-	<section>
-		<title>Variables du fichier de configuration</title>
-		<para>Ci-dessous, vous trouverez les descriptions de chaque option de configuration du fichier principal de 
-Nagios…</para>
-		<section>
-			<title>
-			<anchor id="configuringnagios-configcgi-main_cfg_file"/>Emplacement du
-fichier de configuration principal</title>
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>main_config_file=&lt;file_name&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>main_config_file=/usr/local/nagios/etc/nagios.cfg</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option détermine le chemin d'accès à votre <link
+    <title>Options du fichier de configuration des CGIs</title>
+    <note>
+        <para>Lors de la création et/ou l'édition des fichiers de configuration, gardez ce qui suit à 
+            l'esprit:
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Les lignes commençant par le caractère '#' sont considérées comme des
+                    commentaires et ne sont donc pas traitées
+                </para>
+            </listitem>
+            <listitem>
+                <para>Les noms des variables doivent commencer au début de la ligne - ne mettez
+                    pas d'espace avant le nom
+                </para>
+            </listitem>
+            <listitem>
+                <para>Les noms des variables respectent la casse (majuscule/minuscule)</para>
+            </listitem>
+        </itemizedlist>
+    </note>
+    <section>
+        <title>Exemple de configuration</title>
+        <tip>
+            <para>Un exemple de fichier de configuration pour les &acronym-cgi;s
+                (<filename>/usr/local/nagios/etc/cgi.cfg</filename>) est créé pour vous
+                quand vous suivez le <link linkend="gettingstarted-quickstart">guide rapide
+                    d'installation
+                </link>
+                .
+            </para>
+        </tip>
+    </section>
+    <section>
+        <title>Emplacement du fichier de configuration</title>
+        <para>Par défaut, Nagios s'attend à trouver le fichier de configuration des &acronym-cgi;s
+            sous le nom <filename>cgi.cfg</filename> dans le répertoire de configuration
+            avec le <link linkend="configuringnagios-configmain">fichier de
+                configuration principal
+            </link>
+            .Si vous changez le nom ou l'emplacement du
+            fichier, vous devez configurer Apache pour qu'il passe une variable
+            d'environnement nommée <varname>NAGIOS_CGI_CONFIG</varname> (contenant
+            l'emplacement correct du fichier) aux &acronym-cgi;s de Nagios. Voir la configuration
+            d'Apache pour plus de détails.
+        </para>
+    </section>
+    <section>
+        <title>Variables du fichier de configuration</title>
+        <para>Ci-dessous, vous trouverez les descriptions de chaque option de configuration du fichier principal de 
+            Nagios…
+        </para>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-main_cfg_file"/>
+                Emplacement du
+                fichier de configuration principal
+            </title>
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>main_config_file=&lt;file_name&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>main_config_file=/usr/local/nagios/etc/nagios.cfg</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>
+                Cette option détermine le chemin d'accès à votre <link
 linkend="configuringnagios-configmain">fichier de configuration
-principal</link>. Les &acronym-cgi;s doivent savoir où trouver ce fichier pour
-récupérer les informations de configuration, l'état courant des hôtes et des
-services, etc.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-physical_html_path"/>Chemin d'accès
-physique aux fichiers HTML</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>physical_html_path=&lt;path&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>physical_html_path=/usr/local/nagios/share</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est le chemin du répertoire physique de votre serveur où sont stockés les
-fichiers HTML de Nagios. Nagios suppose que la documentation et les images
-(utilisées par les &acronym-cgi;s) sont stockées dans des sous-répertoires nommés
-respectivement <filename class="directory">docs/</filename> et <filename
-class="directory">images/</filename>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-url_html_path"/>URL d'accès aux
-pages HTML</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>url_html_path=&lt;path&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>url_html_path=/nagios</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Si, lors de l'accès à Nagios via un navigateur web, vous pointez sur une URL
-du type 
-			<uri>http://www.myhost.com/nagios</uri>, cette variable doit avoir pour valeur /nagios. En fait, il s'agit de la
-partie contenant le chemin d'accès aux pages HTML de Nagios dans l'URL
-utilisée pour accéder aux pages HTML de Nagios.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-use_authentication"/>Utilisation de
-l'authentification</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>use_authentication=&lt;0/1&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>use_authentication=1</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option détermine si les &acronym-cgi;s utiliseront l'authentification et les
-autorisations pour déterminer les informations et les commandes auxquelles
-les utilisateurs auront accès. Je vous recommande vivement d'utiliser
-l'authentification dans les &acronym-cgi;s. Si vous choisissez de ne pas le faire,
-assurez-vous de supprimer le <link linkend="thebasics-cgis-cmd_cgi">CGI de
-commande</link> pour empêcher les utilisateurs non autorisés d'envoyer des
-commandes à Nagios. Ce &acronym-cgi; ne devrait pas envoyer de commandes à Nagios si
-l'authentification est désactivée, mais deux précautions valent mieux
-qu'une. Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations dans les &acronym-cgi;s <link
-linkend="configuringnagios-cgiauth">ici</link>.</para>
-			<itemizedlist>
-				<listitem>
-					<para>0 = Ne pas utiliser l'authentification</para>
-				</listitem>
-				<listitem>
-					<para>1 = Utiliser l'authentification et les autorisations (par défaut)</para>
-				</listitem>
-			</itemizedlist>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-default_user_name"/>Nom
-d'utilisateur par défaut</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>default_user_name=&lt;username&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>default_user_name=guest</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette variable définit un nom d'utilisateur par défaut pour accéder aux
-&acronym-cgi;s. Ainsi les utilisateurs d'un domaine sécurisé (i.e., derrière un
-firewall) peuvent accéder aux &acronym-cgi;s sans avoir à s'authentifier auprès du
-serveur web. Vous pouvez choisir cette fonctionnalité pour éviter le recours
-à l'authentification de base si vous n'utilisez pas un serveur web sécurisé,
-car l'authentification de base transmet les mots de passe en clair sur
-Internet.</para>
-			<important><para>Ne définissez pas un utilisateur par défaut à moins que vous n'utilisiez un
-serveur web sécurisé et que vous soyez sûr que tous ceux qui ont accès aux
-&acronym-cgi;s ont été authentifiés d'une manière ou d'une autre ! Si vous définissez
-cette variable, ceux qui ne se sont pas authentifiés auprès du serveur web
-hériteront de tous les droits que vous donnez à cet utilisateur !</para></important>
-		</section>
-		<section>
-			<title>
-				<anchor
-id="configuringnagios-configcgi-authorized_for_system_information"/>Accès
-aux informations sur le système et le processus</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_system_information=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_system_information=nagiosadmin,theboss</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
-virgules, qui peuvent voir les informations sur le système et le processus
-dans les &acronym-cgi;s d'informations complémentaires. Les utilisateurs de cette liste
-ne sont pas automatiquement autorisés à passer des commandes
-système/processus. Si vous voulez que des utilisateurs puissent aussi passer
-ces commandes, il faut les ajouter à la variable <link
+                    principal
+                </link>
+                .Les &acronym-cgi;s doivent savoir où trouver ce fichier pour
+                récupérer les informations de configuration, l'état courant des hôtes et des
+                services, etc.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-physical_html_path"/>
+                Chemin d'accès
+                physique aux fichiers HTML
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>physical_html_path=&lt;path&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>physical_html_path=/usr/local/nagios/share</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est le chemin du répertoire physique de votre serveur où sont stockés les
+                fichiers HTML de Nagios. Nagios suppose que la documentation et les images
+                (utilisées par les &acronym-cgi;s) sont stockées dans des sous-répertoires nommés
+                respectivement <filename class="directory">docs/</filename> et <filename
+class="directory">images/</filename>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-url_html_path"/>
+                URL d'accès aux
+                pages HTML
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>url_html_path=&lt;path&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>url_html_path=/nagios</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Si, lors de l'accès à Nagios via un navigateur web, vous pointez sur une URL
+                du type 
+                <uri>http://www.myhost.com/nagios</uri>, cette variable doit avoir pour valeur /nagios. En fait, il s'agit de la
+                partie contenant le chemin d'accès aux pages HTML de Nagios dans l'URL
+                utilisée pour accéder aux pages HTML de Nagios.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-use_authentication"/>
+                Utilisation de
+                l'authentification
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>use_authentication=&lt;0/1&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>use_authentication=1</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option détermine si les &acronym-cgi;s utiliseront l'authentification et les
+                autorisations pour déterminer les informations et les commandes auxquelles
+                les utilisateurs auront accès. Je vous recommande vivement d'utiliser
+                l'authentification dans les &acronym-cgi;s. Si vous choisissez de ne pas le faire,
+                assurez-vous de supprimer le <link linkend="thebasics-cgis-cmd_cgi">CGI de
+                    commande
+                </link>
+                pour empêcher les utilisateurs non autorisés d'envoyer des
+                commandes à Nagios. Ce &acronym-cgi; ne devrait pas envoyer de commandes à Nagios si
+                l'authentification est désactivée, mais deux précautions valent mieux
+                qu'une. Vous trouverez plus d'informations sur la façon de configurer
+                l'authentification et les autorisations dans les &acronym-cgi;s <link
+linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+            <itemizedlist>
+                <listitem>
+                    <para>0 = Ne pas utiliser l'authentification</para>
+                </listitem>
+                <listitem>
+                    <para>1 = Utiliser l'authentification et les autorisations (par défaut)</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-default_user_name"/>
+                Nom
+                d'utilisateur par défaut
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>default_user_name=&lt;username&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>default_user_name=guest</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette variable définit un nom d'utilisateur par défaut pour accéder aux
+                &acronym-cgi;s. Ainsi les utilisateurs d'un domaine sécurisé (i.e., derrière un
+                firewall) peuvent accéder aux &acronym-cgi;s sans avoir à s'authentifier auprès du
+                serveur web. Vous pouvez choisir cette fonctionnalité pour éviter le recours
+                à l'authentification de base si vous n'utilisez pas un serveur web sécurisé,
+                car l'authentification de base transmet les mots de passe en clair sur
+                Internet.
+            </para>
+            <important>
+                <para>Ne définissez pas un utilisateur par défaut à moins que vous n'utilisiez un
+                    serveur web sécurisé et que vous soyez sûr que tous ceux qui ont accès aux
+                    &acronym-cgi;s ont été authentifiés d'une manière ou d'une autre ! Si vous définissez
+                    cette variable, ceux qui ne se sont pas authentifiés auprès du serveur web
+                    hériteront de tous les droits que vous donnez à cet utilisateur !
+                </para>
+            </important>
+        </section>
+        <section>
+            <title>
+                <anchor
+id="configuringnagios-configcgi-authorized_for_system_information"/>
+                Accès
+                aux informations sur le système et le processus
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_system_information=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_system_information=nagiosadmin,theboss</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
+                virgules, qui peuvent voir les informations sur le système et le processus
+                dans les &acronym-cgi;s d'informations complémentaires. Les utilisateurs de cette liste
+                ne sont pas automatiquement autorisés à passer des commandes
+                système/processus. Si vous voulez que des utilisateurs puissent aussi passer
+                ces commandes, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_system_commands">authorized_for_system_commands</link>.
-Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des &acronym-cgi;s <link
-linkend="configuringnagios-cgiauth">ici</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor
-id="configuringnagios-configcgi-authorized_for_system_commands"/>Accès aux
-commandes du système/processus</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_system_commands=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_system_commands=nagiosadmin</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est une liste de nom d'utilisateurs authentifiés, séparés par des
-virgules, qui peuvent passer des commandes système/processus via le <link
+                Vous trouverez plus d'informations sur la façon de configurer
+                l'authentification et les autorisations des &acronym-cgi;s <link
+linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor
+id="configuringnagios-configcgi-authorized_for_system_commands"/>
+                Accès aux
+                commandes du système/processus
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_system_commands=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_system_commands=nagiosadmin</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est une liste de nom d'utilisateurs authentifiés, séparés par des
+                virgules, qui peuvent passer des commandes système/processus via le <link
 linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Les utilisateurs de
-cette liste ne sont pas automatiquement autorisés à visualiser les
-informations sur le système et le processus. Si vous voulez que des
-utilisateurs puissent visualiser ces informations aussi, il faut les ajouter
-à la variable <link
+                cette liste ne sont pas automatiquement autorisés à visualiser les
+                informations sur le système et le processus. Si vous voulez que des
+                utilisateurs puissent visualiser ces informations aussi, il faut les ajouter
+                à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_system_information">authorized_for_system_information</link>.
-Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des &acronym-cgi; <link
-linkend="configuringnagios-cgiauth">ici</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor
-id="configuringnagios-configcgi-authorized_for_configuration_information"/>Accès
-aux informations de configuration</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_configuration_information=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_configuration_information=nagiosadmin</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
-virgules, qui peuvent voir les informations liées à la configuration via le
-<link linkend="thebasics-cgis-config_cgi">CGI de configuration</link>. Les
-utilisateurs de cette liste peuvent voir les informations sur tous les hôtes
-configurés, les groupes d'hôtes, les services, les contacts, les groupes de
-contacts, les périodes, et les commandes. Vous trouverez plus d'informations
-sur la façon de configurer l'authentification et les autorisations dans les
-&acronym-cgi; <link linkend="configuringnagios-cgiauth">ici</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-authorized_for_all_hosts"/>Accès
-global aux informations sur les hôtes</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_hosts=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_hosts=nagiosadmin,theboss</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
-virgules, qui peuvent voir l'état et la configuration de tous les hôtes. Les
-utilisateurs de cette liste sont également automatiquement autorisés à voir
-les informations de tous les services. Les utilisateurs de cette liste ne
-sont pas automatiquement autorisés à envoyer des commandes aux hôtes ou aux
-services. Si vous voulez que des utilisateurs puissent aussi envoyer des
-commandes, il faut les ajouter à la variable <link
+                Vous trouverez plus d'informations sur la façon de configurer
+                l'authentification et les autorisations des &acronym-cgi; <link
+linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor
+id="configuringnagios-configcgi-authorized_for_configuration_information"/>
+                Accès
+                aux informations de configuration
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_configuration_information=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_configuration_information=nagiosadmin</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
+                virgules, qui peuvent voir les informations liées à la configuration via le
+                <link linkend="thebasics-cgis-config_cgi">CGI de configuration</link>. Les
+                utilisateurs de cette liste peuvent voir les informations sur tous les hôtes
+                configurés, les groupes d'hôtes, les services, les contacts, les groupes de
+                contacts, les périodes, et les commandes. Vous trouverez plus d'informations
+                sur la façon de configurer l'authentification et les autorisations dans les
+                &acronym-cgi; <link linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-authorized_for_all_hosts"/>
+                Accès
+                global aux informations sur les hôtes
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_hosts=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_hosts=nagiosadmin,theboss</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
+                virgules, qui peuvent voir l'état et la configuration de tous les hôtes. Les
+                utilisateurs de cette liste sont également automatiquement autorisés à voir
+                les informations de tous les services. Les utilisateurs de cette liste ne
+                sont pas automatiquement autorisés à envoyer des commandes aux hôtes ou aux
+                services. Si vous voulez que des utilisateurs puissent aussi envoyer des
+                commandes, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_host_commands">authorized_for_all_host_commands</link>.
-Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des &acronym-cgi;s <link
-linkend="configuringnagios-cgiauth">ici</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor
-id="configuringnagios-configcgi-authorized_for_all_host_commands"/>Accès
-global aux commandes des hôtes</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_host_commands=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_host_commands=nagiosadmin</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
-virgules, qui peuvent envoyer des commandes à tous les hôtes via le <link
+                Vous trouverez plus d'informations sur la façon de configurer
+                l'authentification et les autorisations des &acronym-cgi;s <link
+linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor
+id="configuringnagios-configcgi-authorized_for_all_host_commands"/>
+                Accès
+                global aux commandes des hôtes
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_host_commands=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_host_commands=nagiosadmin</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
+                virgules, qui peuvent envoyer des commandes à tous les hôtes via le <link
 linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Les utilisateurs de
-cette liste sont également automatiquement autorisés à envoyer des commandes
-à tous les services. Les utilisateurs de cette liste ne sont pas
-automatiquement autorisés à voir l'état ou la configuration de tous les
-hôtes ou services. Si vous voulez que des utilisateurs puissent voir ces
-informations aussi, il faut les ajouter à la variable <link
+                cette liste sont également automatiquement autorisés à envoyer des commandes
+                à tous les services. Les utilisateurs de cette liste ne sont pas
+                automatiquement autorisés à voir l'état ou la configuration de tous les
+                hôtes ou services. Si vous voulez que des utilisateurs puissent voir ces
+                informations aussi, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_hosts">authorized_for_all_hosts</link>.
-Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des &acronym-cgi;s <link
-linkend="configuringnagios-cgiauth">ici</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-authorized_for_all_services"/>Accès
-global aux informations sur les services</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_services=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_services=nagiosadmin,theboss</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
-virgules, qui peuvent voir l'état et la configuration de tous les
-services. Les utilisateurs de cette liste ne sont pas automatiquement
-autorisés à voir les informations de tous les hôtes. Les utilisateurs de
-cette liste ne sont pas automatiquement autorisés à envoyer des commandes à
-tous les services. Si vous voulez que des utilisateurs puissent aussi
-envoyer des commandes, il faut les ajouter à la variable <link
+                Vous trouverez plus d'informations sur la façon de configurer
+                l'authentification et les autorisations des &acronym-cgi;s <link
+linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-authorized_for_all_services"/>
+                Accès
+                global aux informations sur les services
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_services=&lt;user1&gt;,&lt;user2&gt;,…&lt;usern&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_services=nagiosadmin,theboss</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
+                virgules, qui peuvent voir l'état et la configuration de tous les
+                services. Les utilisateurs de cette liste ne sont pas automatiquement
+                autorisés à voir les informations de tous les hôtes. Les utilisateurs de
+                cette liste ne sont pas automatiquement autorisés à envoyer des commandes à
+                tous les services. Si vous voulez que des utilisateurs puissent aussi
+                envoyer des commandes, il faut les ajouter à la variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_service_commands">authorized_for_all_service_commands</link>.
-Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des &acronym-cgi;s <link
-linkend="configuringnagios-cgiauth">ici</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor
-id="configuringnagios-configcgi-authorized_for_all_service_commands"/>Accès
-global aux commandes des services</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_service_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,…&lt;usern&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>authorized_for_all_service_commands=nagiosadmin</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
-virgules, qui peuvent envoyer des commandes à tous les services via le <link
+                Vous trouverez plus d'informations sur la façon de configurer
+                l'authentification et les autorisations des &acronym-cgi;s <link
+linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor
+id="configuringnagios-configcgi-authorized_for_all_service_commands"/>
+                Accès
+                global aux commandes des services
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_service_commands=&lt;user1&gt;,&lt;user2&gt;,&lt;user3&gt;,…&lt;usern&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>authorized_for_all_service_commands=nagiosadmin</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>C'est une liste de noms d'utilisateurs authentifiés, séparés par des
+                virgules, qui peuvent envoyer des commandes à tous les services via le <link
 linkend="thebasics-cgis-cmd_cgi">CGI de commande</link>. Ils ne sont pas non
-plus automatiquement autorisés à envoyer des commandes aux hôtes. Les
-utilisateurs de cette liste ne sont pas automatiquement autorisés à voir
-l'état ou la configuration de tous les services. Si vous voulez que des
-utilisateurs puissent aussi voir ces informations, il faut les ajouter à la
-variable <link
+                plus automatiquement autorisés à envoyer des commandes aux hôtes. Les
+                utilisateurs de cette liste ne sont pas automatiquement autorisés à voir
+                l'état ou la configuration de tous les services. Si vous voulez que des
+                utilisateurs puissent aussi voir ces informations, il faut les ajouter à la
+                variable <link
 linkend="configuringnagios-configcgi-authorized_for_all_services">authorized_for_all_services</link>.
-Vous trouverez plus d'informations sur la façon de configurer
-l'authentification et les autorisations des &acronym-cgi;s <link
-linkend="configuringnagios-cgiauth">ici</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-lock_author_names"/>Vérouillage des
-noms d'auteur</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>lock_author_names=[0/1]</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>lock_author_names=1</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option vous autorise à restreindre le fait que les utilisateurs
-puissent changer le nom de l'auteur quand ils soumettent des commentaires,
-des acquittements, et une période de maintenance planifiée depuis
-l'interface web. Quand cette option est activée, les utilisateurs peuvent
-changer le nom de l'auteur associé à la requête.</para>
-			<itemizedlist>
-				<listitem>
-					<para>0 = Autorise les utilisateurs à changer les noms d'auteur quand ils
-soumettent des commandes</para>
-				</listitem>
-				<listitem>
-					<para>1 = Empêche les utilisateurs de changer les noms d'auteur quand ils
-soumettent des commandes (défaut)</para>
-				</listitem>
-			</itemizedlist>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-statusmap_background_image"/>Image
-de fond du &acronym-cgi; de cartographie des états (Statusmap)</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>statusmap_background_image=&lt;image_file&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>statusmap_background_image=smbackground.gd2</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option permet de spécifier une image qui sera utilisée comme fond
-d'image dans le <link linkend="thebasics-cgis-statusmap_cgi">CGI de
-cartographie des états</link> si vous utilisez la méthode de dessin des
-coordonnées définies par l'utilisateur. L'image de fond n'est disponible
-dans aucune autre méthode. Il est supposé que l'image est située dans le
-chemin des images HTML ( c.a.d <filename
+                Vous trouverez plus d'informations sur la façon de configurer
+                l'authentification et les autorisations des &acronym-cgi;s <link
+linkend="configuringnagios-cgiauth">ici</link>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-lock_author_names"/>
+                Vérouillage des
+                noms d'auteur
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>lock_author_names=[0/1]</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>lock_author_names=1</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option vous autorise à restreindre le fait que les utilisateurs
+                puissent changer le nom de l'auteur quand ils soumettent des commentaires,
+                des acquittements, et une période de maintenance planifiée depuis
+                l'interface web. Quand cette option est activée, les utilisateurs peuvent
+                changer le nom de l'auteur associé à la requête.
+            </para>
+            <itemizedlist>
+                <listitem>
+                    <para>0 = Autorise les utilisateurs à changer les noms d'auteur quand ils
+                        soumettent des commandes
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>1 = Empêche les utilisateurs de changer les noms d'auteur quand ils
+                        soumettent des commandes (défaut)
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-statusmap_background_image"/>
+                Image
+                de fond du &acronym-cgi; de cartographie des états (Statusmap)
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>statusmap_background_image=&lt;image_file&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>statusmap_background_image=smbackground.gd2</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option permet de spécifier une image qui sera utilisée comme fond
+                d'image dans le <link linkend="thebasics-cgis-statusmap_cgi">CGI de
+                    cartographie des états
+                </link>
+                si vous utilisez la méthode de dessin des
+                coordonnées définies par l'utilisateur. L'image de fond n'est disponible
+                dans aucune autre méthode. Il est supposé que l'image est située dans le
+                chemin des images HTML ( c.a.d <filename
 class="directory">/usr/local/nagios/share/images</filename>). Ce chemin est
-automatiquement déterminé en ajoutant <quote>/images</quote> au chemin
-défini dans le paramètre <link
-linkend="configuringnagios-configcgi-physical_html_path">physical_html_path</link>.</para>
-			<note><para>Cette image peut être au format GIF, JPEG, PNG, ou GD2. Cependant, le format
-GD2 (de préférence en format non compressé) est recommandé, en raison de la
-faible charge &acronym-cpu; requise quand le &acronym-cgi; génère l'image.</para></note>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-default_statusmap_layout"/>Dessin de
-la cartographie des états: valeur par défaut</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>default_statusmap_layout=&lt;layout_number&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>default_statusmap_layout=4</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option définit la méthode de dessin utilisée par défaut par le <link
+                automatiquement déterminé en ajoutant <quote>/images</quote> au chemin
+                défini dans le paramètre <link
+linkend="configuringnagios-configcgi-physical_html_path">physical_html_path</link>.
+            </para>
+            <note>
+                <para>Cette image peut être au format GIF, JPEG, PNG, ou GD2. Cependant, le format
+                    GD2 (de préférence en format non compressé) est recommandé, en raison de la
+                    faible charge &acronym-cpu; requise quand le &acronym-cgi; génère l'image.
+                </para>
+            </note>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-default_statusmap_layout"/>
+                Dessin de
+                la cartographie des états: valeur par défaut
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>default_statusmap_layout=&lt;layout_number&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>default_statusmap_layout=4</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>
+                Cette option définit la méthode de dessin utilisée par défaut par le <link
 linkend="thebasics-cgis-statusmap_cgi">CGI de cartographie des
-états</link>. Les valeurs autorisées sont:</para>
-			<informaltable frame="all">
-				<tgroup cols="2">
-					<thead>
-						<row>
-							<entry>
-								<para>Valeur &lt;layout_number&gt;</para>
-							</entry>
-							<entry>
-								<para>Méthode de dessin</para>
-							</entry>
-						</row>
-					</thead>
-					<tbody>
-						<row>
-							<entry>
-								<para>0</para>
-							</entry>
-							<entry>
-								<para>Coordonnées définies par l'utilisateur</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>1</para>
-							</entry>
-							<entry>
-								<para>Couches imbriquées</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>2</para>
-							</entry>
-							<entry>
-								<para>Arbre réduit</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>3</para>
-							</entry>
-							<entry>
-								<para>Arbre équilibré</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>4</para>
-							</entry>
-							<entry>
-								<para>Circulaire</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>5</para>
-							</entry>
-							<entry>
-								<para>Circulaire (avec marque supérieure)</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>6</para>
-							</entry>
-							<entry>
-								<para>Circulaire (sous forme de ballon)</para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-statuswrl_include"/>Monde inclus
-dans le CGI du monde des états (Statuswrl)</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>statuswrl_include=&lt;vrml_file&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>statuswrl_include=myworld.wrl</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option permet d'inclure ses propres objets dans le monde VRML
-généré. Elle suppose que le fichier est situé dans le chemin défini par le
-paramètre <link
-linkend="configuringnagios-configcgi-physical_html_path">physical_html_path</link>.</para>
-			<note><para>Ce fichier doit être un monde VRML valide (c.a.d que vous devez pouvoir le
-visualiser avec un navigateur VRML)</para></note>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-default_statuswrl_layout"/>Dessin du
-monde des états: valeur par défaut</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>default_statuswrl_layout=&lt;layout_number&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>default_statuswrl_layout=4</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option définit la méthode utilisée par défaut pour dessiner le monde
-VRML avec le <link linkend="thebasics-cgis-statuswrl_cgi">CGI concerné
-(Statusvrml)</link>. Les options autorisées sont:</para>
-			<informaltable frame="all">
-				<tgroup cols="2">
-					<thead>
-						<row>
-							<entry>
-								<para>Valeur &lt;layout_number&gt;</para>
-							</entry>
-							<entry>
-								<para>Méthode de dessin</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>0</para>
-							</entry>
-							<entry>
-								<para>Coordonnées définies par l'utilisateur</para>
-							</entry>
-						</row>
-					</thead>
-					<tbody>
-						<row>
-							<entry>
-								<para>2</para>
-							</entry>
-							<entry>
-								<para>Arbre réduit</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>3</para>
-							</entry>
-							<entry>
-								<para>Arbre équilibré</para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>4</para>
-							</entry>
-							<entry>
-								<para>Circulaire</para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-refresh_rate"/>Fréquence de
-rafraîchissement des CGIs</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>refresh_rate=&lt;rate_in_seconds&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>refresh_rate=90</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option vous permet de spécifier le délai en secondes entre deux
-rafraîchissements de page dans les <link
+                    états
+                </link>
+                .Les valeurs autorisées sont:
+            </para>
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <thead>
+                        <row>
+                            <entry>
+                                <para>Valeur &lt;layout_number&gt;</para>
+                            </entry>
+                            <entry>
+                                <para>Méthode de dessin</para>
+                            </entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>0</para>
+                            </entry>
+                            <entry>
+                                <para>Coordonnées définies par l'utilisateur</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>1</para>
+                            </entry>
+                            <entry>
+                                <para>Couches imbriquées</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>2</para>
+                            </entry>
+                            <entry>
+                                <para>Arbre réduit</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>3</para>
+                            </entry>
+                            <entry>
+                                <para>Arbre équilibré</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>4</para>
+                            </entry>
+                            <entry>
+                                <para>Circulaire</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>5</para>
+                            </entry>
+                            <entry>
+                                <para>Circulaire (avec marque supérieure)</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>6</para>
+                            </entry>
+                            <entry>
+                                <para>Circulaire (sous forme de ballon)</para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-statuswrl_include"/>
+                Monde inclus
+                dans le CGI du monde des états (Statuswrl)
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>statuswrl_include=&lt;vrml_file&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>statuswrl_include=myworld.wrl</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option permet d'inclure ses propres objets dans le monde VRML
+                généré. Elle suppose que le fichier est situé dans le chemin défini par le
+                paramètre <link
+linkend="configuringnagios-configcgi-physical_html_path">physical_html_path</link>.
+            </para>
+            <note>
+                <para>Ce fichier doit être un monde VRML valide (c.a.d que vous devez pouvoir le
+                    visualiser avec un navigateur VRML)
+                </para>
+            </note>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-default_statuswrl_layout"/>
+                Dessin du
+                monde des états: valeur par défaut
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>default_statuswrl_layout=&lt;layout_number&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>default_statuswrl_layout=4</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option définit la méthode utilisée par défaut pour dessiner le monde
+                VRML avec le <link linkend="thebasics-cgis-statuswrl_cgi">CGI concerné
+                    (Statusvrml)
+                </link>
+                .Les options autorisées sont:
+            </para>
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <thead>
+                        <row>
+                            <entry>
+                                <para>Valeur &lt;layout_number&gt;</para>
+                            </entry>
+                            <entry>
+                                <para>Méthode de dessin</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>0</para>
+                            </entry>
+                            <entry>
+                                <para>Coordonnées définies par l'utilisateur</para>
+                            </entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>2</para>
+                            </entry>
+                            <entry>
+                                <para>Arbre réduit</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>3</para>
+                            </entry>
+                            <entry>
+                                <para>Arbre équilibré</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>4</para>
+                            </entry>
+                            <entry>
+                                <para>Circulaire</para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-refresh_rate"/>
+                Fréquence de
+                rafraîchissement des CGIs
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>refresh_rate=&lt;rate_in_seconds&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>refresh_rate=90</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option vous permet de spécifier le délai en secondes entre deux
+                rafraîchissements de page dans les <link
 linkend="thebasics-cgis-status_cgi">CGI d'état</link>, de <link
 linkend="thebasics-cgis-statusmap_cgi">cartographie des états</link>, et
-<link linkend="thebasics-cgis-extinfo_cgi">d'informations
-complémentaires</link>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-audio_alerts"/>Alertes sonores</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Formats:</para>
-							</entry>
-							<entry>
-								<para><code>host_unreachable_sound=&lt;sound_file&gt;</code>
-								<code>host_down_sound=&lt;sound_file&gt;</code>
-								<code>service_critical_sound=&lt;sound_file&gt;</code>
-								<code>service_warning_sound=&lt;sound_file&gt;</code>
-								<code>service_unknown_sound=&lt;sound_file&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemples:</para>
-							</entry>
-							<entry>
-								<para>
-								<code>host_unreachable_sound=hostu.wav</code>
-								<code>host_down_sound=hostd.wav</code>
-								<code>service_critical_sound=critical.wav</code>
-								<code>service_warning_sound=warning.wav</code>
-								<code>service_unknown_sound=unknown.wav</code>
-								</para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option vous permet de spécifier un fichier audio à jouer dans votre
-navigateur lorsqu'il y a des problèmes dans le <link
+                <link linkend="thebasics-cgis-extinfo_cgi">d'informations
+                    complémentaires
+                </link>
+                .
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-audio_alerts"/>
+                Alertes sonores
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Formats:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>host_unreachable_sound=&lt;sound_file&gt;</code>
+                                    <code>host_down_sound=&lt;sound_file&gt;</code>
+                                    <code>service_critical_sound=&lt;sound_file&gt;</code>
+                                    <code>service_warning_sound=&lt;sound_file&gt;</code>
+                                    <code>service_unknown_sound=&lt;sound_file&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemples:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>host_unreachable_sound=hostu.wav</code>
+                                    <code>host_down_sound=hostd.wav</code>
+                                    <code>service_critical_sound=critical.wav</code>
+                                    <code>service_warning_sound=warning.wav</code>
+                                    <code>service_unknown_sound=unknown.wav</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option vous permet de spécifier un fichier audio à jouer dans votre
+                navigateur lorsqu'il y a des problèmes dans le <link
 linkend="thebasics-cgis-status_cgi">CGI d'état</link>. En cas de problèmes
-multiples, le fichier audio joué est celui du problème le plus critique. Un
-problème est considéré comme le plus critique lorsqu'un ou plusieurs hôtes
-sont inaccessibles, alors qu'il est le moins critique lorsqu'un ou plusieurs
-services sont dans un état inconnu (voyez l'ordre dans l'exemple
-ci-dessus). Les fichiers audios sont censés se trouver dans le
-sous-répertoire media/ de votre répertoire HTML (i.e. <filename
-class="directory">/usr/local/nagios/share/media</filename>).</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-ping_syntax"/>Syntaxe Ping</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>ping_syntax=&lt;command&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>ping_syntax=/bin/ping -n -U -c 5 $HOSTADDRESS$</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option définit quelle syntaxe doit être utilisée quand on veut tester
-un hôte avec ping à travers l'interface &acronym-wap; en utilisant le <link linkend="thebasics-cgis-statuswml_cgi">CGI
-statuswml</link>. Vous devez inclure le chemin complet vers le fichier
-binaire exécutable de ping, ainsi que les paramètres passés à la
-commande. La macro &macro-hostaddress; est remplacée par
-l'adresse de l'hôte avant que la commande ne soit exécutée.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-escape_html_tags"/>Option
-d'échappement des balises HTML</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>escape_html_tags=[0/1]</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>escape_html_tags=1</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option détermine si les balises HTML contenues dans le message retour
-des plugins de services et d'hôtes doivent être ou non échappées dans les
-&acronym-cgi;. Si vous activez cette option, votre message retour de plugin ne peut
-pas contenir de liens hypertexte.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-notes_url_target"/>URL cible des
-notes</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>notes_url_target=[target]</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>notes_url_target=_blank</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option détermine le nom du cadre cible dans lequel doit être affiché
-les URL des notes. Les options acceptables sont _blank, _self, _top,
-_parent, ou n'importe quel nom de cadre valide.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-action_url_target"/>URL cible
-d'action</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>action_url_target=[target]</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>action_url_target=_blank</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option détermine le nom du cadre cible dans lequel doit être affiché
-les URL d'action. Les options acceptables sont _blank, _self, _top, _parent,
-ou n'importe quel nom de cadre valide.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-enable_splunk_integration"/>Option
-d'intégration Splunk</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>enable_splunk_integration=[0/1]</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>enable_splunk_integration=1</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option détermine si la fonctionnalité d'intégration avec Splunk est
-activée dans l'interface web. Si activée, il vous sera présenté un lien
-<quote>Splunk It</quote> à divers endroits dans les &acronym-cgi;s (fichier journal,
-historique d'alerte, détail d'hôte/service, etc.). Utile si vous essayez de
-rechercher pourquoi un problème particulier est survenu. Pour plus
-d'informations sur Splunk, visitez <ulink
-url="http://www.splunk.com/">http://www.splunk.com/</ulink>.</para>
-		</section>
-		<section>
-			<title>
-				<anchor id="configuringnagios-configcgi-splunk_url"/>URL Splunk</title>
-			
-			<informaltable frame="all">
-				<tgroup cols="2">
-				<colspec colnum="1" colwidth="10*"/>
-				<colspec colnum="2" colwidth="90*"/>
-					<tbody>
-						<row>
-							<entry>
-								<para>Format:</para>
-							</entry>
-							<entry>
-								<para><code>splunk_url=&lt;path&gt;</code></para>
-							</entry>
-						</row>
-						<row>
-							<entry>
-								<para>Exemple:</para>
-							</entry>
-							<entry>
-								<para><code>splunk_url=http://127.0.0.1:8000/</code></para>
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</informaltable>
-			<para>Cette option est utilisée pour définir l'URL de base de votre interface
-Splunk. Cet URL est utilisé par les &acronym-cgi;s pour créer les liens si l'option
-<link
+                multiples, le fichier audio joué est celui du problème le plus critique. Un
+                problème est considéré comme le plus critique lorsqu'un ou plusieurs hôtes
+                sont inaccessibles, alors qu'il est le moins critique lorsqu'un ou plusieurs
+                services sont dans un état inconnu (voyez l'ordre dans l'exemple
+                ci-dessus). Les fichiers audios sont censés se trouver dans le
+                sous-répertoire media/ de votre répertoire HTML (i.e. <filename
+class="directory">/usr/local/nagios/share/media</filename>).
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-ping_syntax"/>
+                Syntaxe Ping
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>ping_syntax=&lt;command&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>ping_syntax=/bin/ping -n -U -c 5 $HOSTADDRESS$</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option définit quelle syntaxe doit être utilisée quand on veut tester
+                un hôte avec ping à travers l'interface &acronym-wap; en utilisant le <link linkend="thebasics-cgis-statuswml_cgi">CGI
+                    statuswml
+                </link>
+                .Vous devez inclure le chemin complet vers le fichier
+                binaire exécutable de ping, ainsi que les paramètres passés à la
+                commande. La macro &macro-hostaddress; est remplacée par
+                l'adresse de l'hôte avant que la commande ne soit exécutée.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-escape_html_tags"/>
+                Option
+                d'échappement des balises HTML
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>escape_html_tags=[0/1]</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>escape_html_tags=1</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option détermine si les balises HTML contenues dans le message retour
+                des plugins de services et d'hôtes doivent être ou non échappées dans les
+                &acronym-cgi;. Si vous activez cette option, votre message retour de plugin ne peut
+                pas contenir de liens hypertexte.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-notes_url_target"/>
+                URL cible des
+                notes
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>notes_url_target=[target]</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>notes_url_target=_blank</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option détermine le nom du cadre cible dans lequel doit être affiché
+                les URL des notes. Les options acceptables sont _blank, _self, _top,
+                _parent, ou n'importe quel nom de cadre valide.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-action_url_target"/>
+                URL cible
+                d'action
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>action_url_target=[target]</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>action_url_target=_blank</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option détermine le nom du cadre cible dans lequel doit être affiché
+                les URL d'action. Les options acceptables sont _blank, _self, _top, _parent,
+                ou n'importe quel nom de cadre valide.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-enable_splunk_integration"/>
+                Option
+                d'intégration Splunk
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>enable_splunk_integration=[0/1]</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>enable_splunk_integration=1</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option détermine si la fonctionnalité d'intégration avec Splunk est
+                activée dans l'interface web. Si activée, il vous sera présenté un lien
+                <quote>Splunk It</quote> à divers endroits dans les &acronym-cgi;s (fichier journal,
+                historique d'alerte, détail d'hôte/service, etc.). Utile si vous essayez de
+                rechercher pourquoi un problème particulier est survenu. Pour plus
+                d'informations sur Splunk, visitez <ulink
+url="http://www.splunk.com/">http://www.splunk.com/</ulink>.
+            </para>
+        </section>
+        <section>
+            <title>
+                <anchor id="configuringnagios-configcgi-splunk_url"/>
+                URL Splunk
+            </title>
+            
+            <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colnum="1" colwidth="10*"/>
+                    <colspec colnum="2" colwidth="90*"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>Format:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>splunk_url=&lt;path&gt;</code>
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Exemple:</para>
+                            </entry>
+                            <entry>
+                                <para>
+                                    <code>splunk_url=http://127.0.0.1:8000/</code>
+                                </para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+            <para>Cette option est utilisée pour définir l'URL de base de votre interface
+                Splunk. Cet URL est utilisé par les &acronym-cgi;s pour créer les liens si l'option
+                <link
 linkend="configuringnagios-configcgi-enable_splunk_integration">enable_splunk_integration</link>
-est activée.</para>
-		</section>
-	</section>
+                est activée.
+            </para>
+        </section>
+    </section>
 </chapter>
 

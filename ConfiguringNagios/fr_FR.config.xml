@@ -7,94 +7,102 @@
 ]
 >
 <chapter id="configuringnagios-config" xreflabel="Configuration Overview">
-	<title>Survol de la configuration</title>
-	
-	<section>
-		<title>Introduction</title>
-		
-		<para>Il va falloir créer et éditer plusieurs fichiers de configuration avant de
-pouvoir surveiller quoique ce soit. Soyez patient! La configuration de
-Nagios peut prendre du temps, surtout si vous êtes nouvel utilisateur. Quand
-vous aurez compris comment fonctionne les choses, vous ne regretterez pas le
-temps passé. :-)
-		</para>
-		
-		<note>
-			<para>Des fichiers exemples de configuration sont installés dans le répertoire
-<filename class="directory">/usr/local/nagios/etc/</filename>, si vous avez
-suivi le <link linkend="gettingstarted-quickstart"> guide de démarrage
-rapide</link>.			</para>
-		</note>
-	</section>
-	
-	<section>
-		<title>Fichier de configuration principal</title>
-		
-		<para>Le fichier de configuration principal contient un certain nombre de
-paramètres qui affectent la manière dont Nagios fonctionne. Ce fichier est
-lu par le processus Nagios et par les &acronym-cgi;. C'est ici que commence vos aventures de configuration.
-		</para>
-		
-		<para>La documentation du fichier de configuration principal se trouve <link
+    <title>Survol de la configuration</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>Il va falloir créer et éditer plusieurs fichiers de configuration avant de
+            pouvoir surveiller quoique ce soit. Soyez patient! La configuration de
+            Nagios peut prendre du temps, surtout si vous êtes nouvel utilisateur. Quand
+            vous aurez compris comment fonctionne les choses, vous ne regretterez pas le
+            temps passé. :-)
+        </para>
+        
+        <note>
+            <para>Des fichiers exemples de configuration sont installés dans le répertoire
+                <filename class="directory">/usr/local/nagios/etc/</filename>, si vous avez
+                suivi le <link linkend="gettingstarted-quickstart"> guide de démarrage
+                    rapide
+                </link>
+                .
+            </para>
+        </note>
+    </section>
+    
+    <section>
+        <title>Fichier de configuration principal</title>
+        
+        <para>Le fichier de configuration principal contient un certain nombre de
+            paramètres qui affectent la manière dont Nagios fonctionne. Ce fichier est
+            lu par le processus Nagios et par les &acronym-cgi;. C'est ici que commence vos aventures de configuration.
+        </para>
+        
+        <para>
+            La documentation du fichier de configuration principal se trouve <link
 linkend="configuringnagios-configmain">ici</link>.
-		</para>
-	</section>
-	
-	<section>
-		<title>Fichier de configuration des ressources</title>
-		
-		<para><informalfigure><mediaobject>
-			<imageobject>
-				<imagedata fileref="images/configoverview.png" format="PNG"/>
-			</imageobject>
-		</mediaobject></informalfigure>
-		Les fichiers des ressources sont utilisés pour stocker les macros définies
-par les utilisateurs. L'avantage de ces fichiers est de pouvoir y mettre des
-données sensibles de configuration (comme des mots de passe) qui ne seront
-pas accessibles à travers les &acronym-cgi;s.
-		</para>
-		
-		<para>Vous pouvez définir un ou plusieurs fichiers optionnels de ressources avec
-le paramètre <link
+        </para>
+    </section>
+    
+    <section>
+        <title>Fichier de configuration des ressources</title>
+        
+        <para>
+            <informalfigure><mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/configoverview.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </informalfigure>
+            Les fichiers des ressources sont utilisés pour stocker les macros définies
+            par les utilisateurs. L'avantage de ces fichiers est de pouvoir y mettre des
+            données sensibles de configuration (comme des mots de passe) qui ne seront
+            pas accessibles à travers les &acronym-cgi;s.
+        </para>
+        
+        <para>Vous pouvez définir un ou plusieurs fichiers optionnels de ressources avec
+            le paramètre <link
 linkend="configuringnagios-configmain-resource_file">&config-resource_file;</link>
-dans le fichier de configuration principal. 
-		</para>
-	</section>
-	
-	<section>
-		<title>Fichier de définition des objets</title>
-		
-		<para>Les fichiers de définitions des objets définissent les hôtes, services,
-groupes d'hôtes, contacts, groupes de contacts, commandes, etc. C'est là
-que vous définissez les choses que vous souhaitez surveiller et comment vous
-désirez le faire.
-		</para>
-		
-		<para>Vous pouvez définir un ou plusieurs fichiers de définitions des objets avec
-les paramètres <link
+            dans le fichier de configuration principal. 
+        </para>
+    </section>
+    
+    <section>
+        <title>Fichier de définition des objets</title>
+        
+        <para>Les fichiers de définitions des objets définissent les hôtes, services,
+            groupes d'hôtes, contacts, groupes de contacts, commandes, etc. C'est là
+            que vous définissez les choses que vous souhaitez surveiller et comment vous
+            désirez le faire.
+        </para>
+        
+        <para>Vous pouvez définir un ou plusieurs fichiers de définitions des objets avec
+            les paramètres <link
 linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> et/ou <link
 linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link> dans le
-fichier de configuration principal. 
-		</para>
-		
-		<para>Une introduction aux définitions d'objets et à la façon dont ils sont en
-relation les uns les autres peut être consultée <link
+            fichier de configuration principal. 
+        </para>
+        
+        <para>Une introduction aux définitions d'objets et à la façon dont ils sont en
+            relation les uns les autres peut être consultée <link
 linkend="configuringnagios-configobject">ici</link>.
-		</para>
-	</section>
-	
-	<section>
-		<title>Fichier de configuration des CGIs</title>
-		
-		<para>Le fichier de configuration des &acronym-cgi;s contient un certain nombre de
-paramètres qui affectent le mode de fonctionnement des <link
+        </para>
+    </section>
+    
+    <section>
+        <title>Fichier de configuration des CGIs</title>
+        
+        <para>Le fichier de configuration des &acronym-cgi;s contient un certain nombre de
+            paramètres qui affectent le mode de fonctionnement des <link
 linkend="thebasics-cgis">CGIs</link>. Il contient également une référence au
-fichier de configuration principal, de façon à ce que les &acronym-cgi;s sachent
-comment est configuré Nagios et où trouver les objets de configuration.
-		</para>
-		
-		<para>La documentation du fichier de configuration des &acronym-cgi;s se trouve <link
-linkend="configuringnagios-configcgi">ici</link>. </para>
-	</section>
+            fichier de configuration principal, de façon à ce que les &acronym-cgi;s sachent
+            comment est configuré Nagios et où trouver les objets de configuration.
+        </para>
+        
+        <para>
+            La documentation du fichier de configuration des &acronym-cgi;s se trouve <link
+linkend="configuringnagios-configcgi">ici</link>. 
+        </para>
+    </section>
 </chapter>
 

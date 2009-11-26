@@ -7,218 +7,230 @@
 ]
 >
 <chapter id="configuringnagios-customobjectvars" xreflabel="Custom Object Variables">
-	<title>Variables personnalisées d'objet</title>
-	<section>
-		<title>Introduction</title>
-		<para>Les utilisateurs demandent souvent que de nouvelles variables puissent être
-ajoutées aux définitions d'hôtes, de services et de contacts. Ceci inclut des
-variables comme la communauté du protocole &protocol-snmp; l'adresse MAC, le
-nom d'utilisateur AIM, le numéro Skype ou une simple adresse. Le problème
-que je vois à faire ça est que Nagios devient alors moins générique et plus
-spécifique à un type d'infrasctructure. Nagios a été prévu pour être
-flexible, ce qui sous-entend que les choses doivent être pensées de façon
-générique. Par exemple, les définitions d'hôtes dans Nagios ont une variable
-générique <quote>address</quote> qui peut contenir n'importe quoi; de la
-simple adresse IP à l'adresse complète de type FQDN; quoique soit
-d'approprié à l'utilisateur.</para>
-		<para>Pourtant, il y a bien un besoin pour les administrateurs d'avoir la
-possibilité de stocker des informations à propos des composants de leur
-infrastructure dans la configuration de Nagios sans imposer un ensemble de
-variables spécifiques pour les autres. Nagios essaie de solutionner ce
-problème en autorisant les utilisateurs à définir des variables
-personnalisées dans leurs définitions d'objets. Les variables personnalisées
-permettent aux utilisateurs de définir des propriétés supplémentaires pour
-leurs hôtes, services et définitions de contacts et d'utiliser leurs valeurs
-dans les notifications, les gestionnaires d'événements et les contrôles
-d'hôtes et de services.</para>
-	</section>
-	<section>
-		<title>Principes de base des variables personnalisées</title>
-		<para>Il y a quelques points importants que vous devriez connaître sur les
-variables personnalisées :</para>
-		<itemizedlist>
-			<listitem>
-				<para>Les noms de variables personnalisées doivent commencer par un underscore (_)
-pour prévenir tout conflit avec les variables standards.</para>
-			</listitem>
-			<listitem>
-				<para>Les noms de variables personnalisées sont insensibles à la casse</para>
-			</listitem>
-			<listitem>
-				<para>Les variables personnalisées sont <link
+    <title>Variables personnalisées d'objet</title>
+    <section>
+        <title>Introduction</title>
+        <para>Les utilisateurs demandent souvent que de nouvelles variables puissent être
+            ajoutées aux définitions d'hôtes, de services et de contacts. Ceci inclut des
+            variables comme la communauté du protocole &protocol-snmp; l'adresse MAC, le
+            nom d'utilisateur AIM, le numéro Skype ou une simple adresse. Le problème
+            que je vois à faire ça est que Nagios devient alors moins générique et plus
+            spécifique à un type d'infrasctructure. Nagios a été prévu pour être
+            flexible, ce qui sous-entend que les choses doivent être pensées de façon
+            générique. Par exemple, les définitions d'hôtes dans Nagios ont une variable
+            générique <quote>address</quote> qui peut contenir n'importe quoi; de la
+            simple adresse IP à l'adresse complète de type FQDN; quoique soit
+            d'approprié à l'utilisateur.
+        </para>
+        <para>Pourtant, il y a bien un besoin pour les administrateurs d'avoir la
+            possibilité de stocker des informations à propos des composants de leur
+            infrastructure dans la configuration de Nagios sans imposer un ensemble de
+            variables spécifiques pour les autres. Nagios essaie de solutionner ce
+            problème en autorisant les utilisateurs à définir des variables
+            personnalisées dans leurs définitions d'objets. Les variables personnalisées
+            permettent aux utilisateurs de définir des propriétés supplémentaires pour
+            leurs hôtes, services et définitions de contacts et d'utiliser leurs valeurs
+            dans les notifications, les gestionnaires d'événements et les contrôles
+            d'hôtes et de services.
+        </para>
+    </section>
+    <section>
+        <title>Principes de base des variables personnalisées</title>
+        <para>Il y a quelques points importants que vous devriez connaître sur les
+            variables personnalisées :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Les noms de variables personnalisées doivent commencer par un underscore (_)
+                    pour prévenir tout conflit avec les variables standards.
+                </para>
+            </listitem>
+            <listitem>
+                <para>Les noms de variables personnalisées sont insensibles à la casse</para>
+            </listitem>
+            <listitem>
+                <para>
+                    Les variables personnalisées sont <link
 linkend="advancedtopics-objectinheritance">héritées</link> des gabarits
-d'objets comme n'importe quelle variable standard</para>
-			</listitem>
-			<listitem>
-				<para>Les scripts peuvent référencer des valeurs de variables personnalisées avec
-les <link linkend="thebasics-macros">variables d'environnement et les
-macros</link>
-				</para>
-			</listitem>
-		</itemizedlist>
-	</section>
-	<section>
-		<title>Exemples</title>
-		<para>Voici un exemple de la façon dont peuvent être définies les variables
-personnalisées dans différents types de définitions d'objets</para>
-		<programlisting>
-define host{
-  host_name    linuxserver
-  _mac_address  00:06:5B:A6:AD:AA ; &lt;-- Custom MAC_ADDRESS variable
-  _rack_number  R32        ; &lt;-- Custom RACK_NUMBER variable
-…
-}
-		</programlisting>
-
-		<programlisting>
-define service{
-  host_name    linuxserver
-  description   Memory Usage
-  _SNMP_community public     ; &lt;-- Custom SNMP_COMMUNITY variable
-  _TechContact   Jane Doe    ; &lt;-- Custom TECHCONTACT variable
-  ….
-}
-		</programlisting>
-
-		<programlisting>
-define contact{
-  contact_name  john
-  _AIM_username  john16    ; &lt;-- Custom AIM_USERNAME variable
-  _YahooID    john32    ; &lt;-- Custom YAHOOID variable
-  …
-}
-		</programlisting>
-	</section>
-	<section>
-		<title>Les variables personnalisées comme macro</title>
-		<para>Les variables personnalisées peuvent être référencées dans des scripts et
-exécutables que Nagios utilisent pour exécuter les contrôles, notifications,
-etc… en utilisant les <link linkend="thebasics-macros">macros</link> ou
-variables d'environnement.</para>
-		<para>Pour éviter tous conflits de noms parmi les variables personnalisées de
-différents types d'objets, Nagios ajoute <quote>_HOST</quote>,
-<quote>_SERVICE</quote> ou <quote>_CONTACT</quote> au début des variables
-personnalisées d'hôtes, de services et de contacts des macros et des
-variables d'environnement. Le tableau ci-dessous montre la correspondance
-entre les variables personnalisées et leur macro ou variable d'environnement
-respectives pour les variables personnalisées définies dans l'exemple
-précédent.</para>
-		<informaltable frame="all">
-			<tgroup cols="4">
-			<colspec colnum="1" colwidth="12*"/>
-			<colspec colnum="2" colwidth="20*"/>
-			<colspec colnum="3" colwidth="32*"/>
-			<colspec colnum="4" colwidth="36*"/>
-				<thead>
-					<row>
-						<entry>
-							<para>Type d'objet</para>
-						</entry>
-						<entry>
-							<para>Nom de la variable</para>
-						</entry>
-						<entry>
-							<para>Nom de la macro</para>
-						</entry>
-						<entry>
-							<para>Variable d'environnement</para>
-						</entry>
-					</row>
-				</thead>
-				<tbody>
-					<row>
-						<entry>
-							<para>Hôte</para>
-						</entry>
-						<entry>
-							<para>MAC_ADDRESS</para>
-						</entry>
-						<entry>
-							<para>$_HOSTMAC_ADDRESS$</para>
-						</entry>
-						<entry>
-							<para>NAGIOS__HOSTMAC_ADDRESS</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>Hôte</para>
-						</entry>
-						<entry>
-							<para>RACK_NUMBER</para>
-						</entry>
-						<entry>
-							<para>$_HOSTRACK_NUMBER$</para>
-						</entry>
-						<entry>
-							<para>NAGIOS__HOSTRACK_NUMBER</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>Service</para>
-						</entry>
-						<entry>
-							<para>SNMP_COMMUNITY</para>
-						</entry>
-						<entry>
-							<para>$_SERVICESNMP_COMMUNITY$</para>
-						</entry>
-						<entry>
-							<para>NAGIOS__SERVICESNMP_COMMUNITY</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>Service</para>
-						</entry>
-						<entry>
-							<para>TECHCONTACT</para>
-						</entry>
-						<entry>
-							<para>$_SERVICETECHCONTACT$</para>
-						</entry>
-						<entry>
-							<para>NAGIOS__SERVICETECHCONTACT</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>Contact</para>
-						</entry>
-						<entry>
-							<para>AIM_USERNAME</para>
-						</entry>
-						<entry>
-							<para>$_CONTACTAIM_USERNAME$</para>
-						</entry>
-						<entry>
-							<para>NAGIOS__CONTACTAIM_USERNAME</para>
-						</entry>
-					</row>
-					<row>
-						<entry>
-							<para>Contact</para>
-						</entry>
-						<entry>
-							<para>YAHOOID</para>
-						</entry>
-						<entry>
-							<para>$_CONTACTYAHOOID$</para>
-						</entry>
-						<entry>
-							<para>NAGIOS__CONTACTYAHOOID</para>
-						</entry>
-					</row>
-				</tbody>
-			</tgroup>
-		</informaltable>
-	</section>
-	<section>
-		<title>Variables personnalisées et héritage</title>
-		<para>Les variables personnalisées d'objets peuvent être <link
+                    d'objets comme n'importe quelle variable standard
+                </para>
+            </listitem>
+            <listitem>
+                <para>Les scripts peuvent référencer des valeurs de variables personnalisées avec
+                    les <link linkend="thebasics-macros">variables d'environnement et les
+                        macros
+                    </link>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>Exemples</title>
+        <para>Voici un exemple de la façon dont peuvent être définies les variables
+            personnalisées dans différents types de définitions d'objets
+        </para>
+        <programlisting>
+            define host{
+            host_name    linuxserver
+            _mac_address  00:06:5B:A6:AD:AA ; &lt;-- Custom MAC_ADDRESS variable
+            _rack_number  R32        ; &lt;-- Custom RACK_NUMBER variable
+            …
+            }
+        </programlisting>
+        
+        <programlisting>
+            define service{
+            host_name    linuxserver
+            description   Memory Usage
+            _SNMP_community public     ; &lt;-- Custom SNMP_COMMUNITY variable
+            _TechContact   Jane Doe    ; &lt;-- Custom TECHCONTACT variable
+            ….
+            }
+        </programlisting>
+        
+        <programlisting>
+            define contact{
+            contact_name  john
+            _AIM_username  john16    ; &lt;-- Custom AIM_USERNAME variable
+            _YahooID    john32    ; &lt;-- Custom YAHOOID variable
+            …
+            }
+        </programlisting>
+    </section>
+    <section>
+        <title>Les variables personnalisées comme macro</title>
+        <para>Les variables personnalisées peuvent être référencées dans des scripts et
+            exécutables que Nagios utilisent pour exécuter les contrôles, notifications,
+            etc… en utilisant les <link linkend="thebasics-macros">macros</link> ou
+            variables d'environnement.
+        </para>
+        <para>Pour éviter tous conflits de noms parmi les variables personnalisées de
+            différents types d'objets, Nagios ajoute <quote>_HOST</quote>,
+            <quote>_SERVICE</quote> ou <quote>_CONTACT</quote> au début des variables
+            personnalisées d'hôtes, de services et de contacts des macros et des
+            variables d'environnement. Le tableau ci-dessous montre la correspondance
+            entre les variables personnalisées et leur macro ou variable d'environnement
+            respectives pour les variables personnalisées définies dans l'exemple
+            précédent.
+        </para>
+        <informaltable frame="all">
+            <tgroup cols="4">
+                <colspec colnum="1" colwidth="12*"/>
+                <colspec colnum="2" colwidth="20*"/>
+                <colspec colnum="3" colwidth="32*"/>
+                <colspec colnum="4" colwidth="36*"/>
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Type d'objet</para>
+                        </entry>
+                        <entry>
+                            <para>Nom de la variable</para>
+                        </entry>
+                        <entry>
+                            <para>Nom de la macro</para>
+                        </entry>
+                        <entry>
+                            <para>Variable d'environnement</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Hôte</para>
+                        </entry>
+                        <entry>
+                            <para>MAC_ADDRESS</para>
+                        </entry>
+                        <entry>
+                            <para>$_HOSTMAC_ADDRESS$</para>
+                        </entry>
+                        <entry>
+                            <para>NAGIOS__HOSTMAC_ADDRESS</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>Hôte</para>
+                        </entry>
+                        <entry>
+                            <para>RACK_NUMBER</para>
+                        </entry>
+                        <entry>
+                            <para>$_HOSTRACK_NUMBER$</para>
+                        </entry>
+                        <entry>
+                            <para>NAGIOS__HOSTRACK_NUMBER</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>Service</para>
+                        </entry>
+                        <entry>
+                            <para>SNMP_COMMUNITY</para>
+                        </entry>
+                        <entry>
+                            <para>$_SERVICESNMP_COMMUNITY$</para>
+                        </entry>
+                        <entry>
+                            <para>NAGIOS__SERVICESNMP_COMMUNITY</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>Service</para>
+                        </entry>
+                        <entry>
+                            <para>TECHCONTACT</para>
+                        </entry>
+                        <entry>
+                            <para>$_SERVICETECHCONTACT$</para>
+                        </entry>
+                        <entry>
+                            <para>NAGIOS__SERVICETECHCONTACT</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>Contact</para>
+                        </entry>
+                        <entry>
+                            <para>AIM_USERNAME</para>
+                        </entry>
+                        <entry>
+                            <para>$_CONTACTAIM_USERNAME$</para>
+                        </entry>
+                        <entry>
+                            <para>NAGIOS__CONTACTAIM_USERNAME</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>Contact</para>
+                        </entry>
+                        <entry>
+                            <para>YAHOOID</para>
+                        </entry>
+                        <entry>
+                            <para>$_CONTACTYAHOOID$</para>
+                        </entry>
+                        <entry>
+                            <para>NAGIOS__CONTACTYAHOOID</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+    </section>
+    <section>
+        <title>Variables personnalisées et héritage</title>
+        <para>
+            Les variables personnalisées d'objets peuvent être <link
 linkend="advancedtopics-objectinheritance">héritées</link> comme n'importe
-quelle variable standard d'hôte, de service ou de contact.</para>
-	</section>
+            quelle variable standard d'hôte, de service ou de contact.
+        </para>
+    </section>
 </chapter>
 
