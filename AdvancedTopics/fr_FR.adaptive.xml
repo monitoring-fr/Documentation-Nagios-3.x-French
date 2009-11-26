@@ -7,122 +7,133 @@
 ]
 >
 <chapter id="advancedtopics-adaptative" xreflabel="Adaptive Monitoring">
- <title>Supervision adaptative</title>
-
- <section>
-  <title>Introduction</title>
-
-  <para>Nagios vous permet de modifier certains attributs de check des commandes,
-hôtes et services à l'exécution. Je ferais référence à cette fonctionnalité
-comme <quote>monitoring adaptif</quote>. Veuillez noter que la
-fonctionnalité de monitoring adaptif présente dans nagios ne sera pas
-vraiment utile à 99% des utilisateurs, mais elle vous permet de realiser des
-choses assez élégantes.</para>
- </section>
-
- <section>
-  <title>Qu'est ce qui peut être modifié?</title>
-
-  <para>Les attributs de check de services suivant peuvent être modifiés à
-l'exécution:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Commandes de check (et arguments de commandes)</para>
-   </listitem>
-
-   <listitem>
-    <para>Intervalles de check</para>
-   </listitem>
-
-   <listitem>
-    <para>Nombre maximal de tentative de check</para>
-   </listitem>
-
-   <listitem>
-    <para>Période de contrôle</para>
-   </listitem>
-
-   <listitem>
-    <para>Commande de gestionnaire d'évennement (et arguments de commande)</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les attributs de check d'hôtes suivants peuvent être modifié pendant
-l'exécution:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Commandes de check (et arguments de commandes)</para>
-   </listitem>
-
-   <listitem>
-    <para>Intervalles de check</para>
-   </listitem>
-
-   <listitem>
-    <para>Nombre maximal de tentative de check</para>
-   </listitem>
-
-   <listitem>
-    <para>Période de contrôle</para>
-   </listitem>
-
-   <listitem>
-    <para>Commande de gestionnaire d'évennement (et arguments de commande)</para>
-   </listitem>
-  </itemizedlist>
-
-  <para>Les attributs globaux suivants peuvent être modifiés à l'exécution:</para>
-
-  <itemizedlist>
-   <listitem>
-    <para>Commandes globales de gestionnaire d'évènnement d'hôte (et argumments de
-commande)</para>
-   </listitem>
-
-   <listitem>
-    <para>Commandes globales de gestionnaire d'évènnement de services (et argumments
-de commande)</para>
-   </listitem>
-  </itemizedlist>
- </section>
-
- <section>
-  <title>Commandes externe pour le monitoring adaptif</title>
-
-  <para>Afin de modifier les atributs spécifiques d'hôtes ou de services pendant
-l'exécution, vous devez soumettre à Nagios la <link
+    <title>Supervision adaptative</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>Nagios vous permet de modifier certains attributs de check des commandes,
+            hôtes et services à l'exécution. Je ferais référence à cette fonctionnalité
+            comme <quote>monitoring adaptif</quote>. Veuillez noter que la
+            fonctionnalité de monitoring adaptif présente dans nagios ne sera pas
+            vraiment utile à 99% des utilisateurs, mais elle vous permet de realiser des
+            choses assez élégantes.
+        </para>
+    </section>
+    
+    <section>
+        <title>Qu'est ce qui peut être modifié?</title>
+        
+        <para>Les attributs de check de services suivant peuvent être modifiés à
+            l'exécution:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Commandes de check (et arguments de commandes)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Intervalles de check</para>
+            </listitem>
+            
+            <listitem>
+                <para>Nombre maximal de tentative de check</para>
+            </listitem>
+            
+            <listitem>
+                <para>Période de contrôle</para>
+            </listitem>
+            
+            <listitem>
+                <para>Commande de gestionnaire d'évennement (et arguments de commande)</para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Les attributs de check d'hôtes suivants peuvent être modifié pendant
+            l'exécution:
+        </para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Commandes de check (et arguments de commandes)</para>
+            </listitem>
+            
+            <listitem>
+                <para>Intervalles de check</para>
+            </listitem>
+            
+            <listitem>
+                <para>Nombre maximal de tentative de check</para>
+            </listitem>
+            
+            <listitem>
+                <para>Période de contrôle</para>
+            </listitem>
+            
+            <listitem>
+                <para>Commande de gestionnaire d'évennement (et arguments de commande)</para>
+            </listitem>
+        </itemizedlist>
+        
+        <para>Les attributs globaux suivants peuvent être modifiés à l'exécution:</para>
+        
+        <itemizedlist>
+            <listitem>
+                <para>Commandes globales de gestionnaire d'évènnement d'hôte (et argumments de
+                    commande)
+                </para>
+            </listitem>
+            
+            <listitem>
+                <para>Commandes globales de gestionnaire d'évènnement de services (et argumments
+                    de commande)
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    
+    <section>
+        <title>Commandes externe pour le monitoring adaptif</title>
+        
+        <para>Afin de modifier les atributs spécifiques d'hôtes ou de services pendant
+            l'exécution, vous devez soumettre à Nagios la <link
 linkend="advancedtopics-extcommands">commande externe</link> appropriée via
-le <link linkend="advancedtopics-extcommands">fichier de commande
-externe</link>. Le tableau ci-dessous répertorie les différents attributs
-qui peuvent être modifiés en cours d'exécution, accompagné de la commande
-externe pour accomplir le travail.</para>
-
-  <para>Une liste complète de commandes externes qui peuvent être utilisées pour le
-contrôle adaptatif (avec des exemples d'utilisation) est dsponible en ligne
-à l'adresse suivante : <ulink
-url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/externalcommands/</ulink></para>
-
-  <note>
-   <itemizedlist>
-    <listitem>
-     <para>Lorsque les commandes de contrôles [check command] ou de gestionnaires
-d'événements [event handler] sont modifiées, il est important de noter que
-ces commandes doivent avoir été configurées en utilisant des définitions de
-commande avant que Nagios n'ai été démarré. Si une commande non configurée
-est entrée, elle sera ignorée.</para>
-    </listitem>
-
-    <listitem>
-     <para>Vous pouvez spécifier les arguments de commande avec le nom de la commande -
-séparrez juste les différents arguments du nom de commande (et des autres
-arguments) à l'aide du caractère bang (!). Des informations supplémentaires
-sur la façon dont sont traités les arguments dans la définition des
-commandes durant l'exécution peuvent être trouvés dans la documentation des
-<link linkend="thebasics-macros">macros</link>.</para>
-    </listitem>
-   </itemizedlist>
-  </note>
- </section>
+            le <link linkend="advancedtopics-extcommands">fichier de commande
+                externe
+            </link>
+            .Le tableau ci-dessous répertorie les différents attributs
+            qui peuvent être modifiés en cours d'exécution, accompagné de la commande
+            externe pour accomplir le travail.
+        </para>
+        
+        <para>Une liste complète de commandes externes qui peuvent être utilisées pour le
+            contrôle adaptatif (avec des exemples d'utilisation) est dsponible en ligne
+            à l'adresse suivante : <ulink
+url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/externalcommands/</ulink>
+        </para>
+        
+        <note>
+            <itemizedlist>
+                <listitem>
+                    <para>Lorsque les commandes de contrôles [check command] ou de gestionnaires
+                        d'événements [event handler] sont modifiées, il est important de noter que
+                        ces commandes doivent avoir été configurées en utilisant des définitions de
+                        commande avant que Nagios n'ai été démarré. Si une commande non configurée
+                        est entrée, elle sera ignorée.
+                    </para>
+                </listitem>
+                
+                <listitem>
+                    <para>Vous pouvez spécifier les arguments de commande avec le nom de la commande -
+                        séparrez juste les différents arguments du nom de commande (et des autres
+                        arguments) à l'aide du caractère bang (!). Des informations supplémentaires
+                        sur la façon dont sont traités les arguments dans la définition des
+                        commandes durant l'exécution peuvent être trouvés dans la documentation des
+                        <link linkend="thebasics-macros">macros</link>.
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </note>
+    </section>
 </chapter>

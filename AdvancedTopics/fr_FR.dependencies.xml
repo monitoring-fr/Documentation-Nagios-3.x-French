@@ -11,61 +11,74 @@
     <section>
         <title>Introduction</title>
         <para>Les dépendances d'hôtes et de services sont une fonctionnalité avancée qui
-        vous permet de contrôler le comportement des hôtes et des services selon
-        l'état d'un ou plusieurs autres hôtes ou services. Je vais expliquer comment
-        les dépe   ndances fonctionnent, ainsi que les différences entre les
-        dépendances d'hôtes ou de services.</para>
+            vous permet de contrôler le comportement des hôtes et des services selon
+            l'état d'un ou plusieurs autres hôtes ou services. Je vais expliquer comment
+            les dépe   ndances fonctionnent, ainsi que les différences entre les
+            dépendances d'hôtes ou de services.
+        </para>
     </section>
-
+    
     <section>
         <title>Aperçu des dépendances de services</title>
         <para>Il y a quelques points qu'il faut savoir concernant la dépendances de
-        service:</para>
+            service:
+        </para>
         <orderedlist>
             <listitem>
                 <para>Un service peut être dépendant d'un ou plusieurs autres services</para>
             </listitem>
             <listitem>
                 <para>Un service peut être dépendant de services qui ne sont pas associés au même
-                hôte</para>
+                    hôte
+                </para>
             </listitem>
             <listitem>
                 <para>Les dépendances de service ne se sont pas héritées (à moins que ce ne soit
-                explicitement spécifié)</para>
+                    explicitement spécifié)
+                </para>
             </listitem>
             <listitem>
                 <para>Les dépendances de service permettent de supprimer l'exécution de services
-                et de notifications de service selon différents critères (états OK, WARNING,
-                UNKNOWN, et/ou CRITICAL)</para>
+                    et de notifications de service selon différents critères (états OK, WARNING,
+                    UNKNOWN, et/ou CRITICAL)
+                </para>
             </listitem>
             <listitem>
-                <para>Les dépendances d'un service ne sont seulement valable durant le <link linkend="thebasics-timeperiods">timeperiods</link> spécifié
+                <para>
+                    Les dépendances d'un service ne sont seulement valable durant le <link linkend="thebasics-timeperiods">timeperiods</link> spécifié
                 </para>
             </listitem>
         </orderedlist>
     </section>
-
+    
     <section>
         <title>Définition de dépendances de services</title>
         <para>Tout d'abord, les bases. Vous créez des dépendances de service en ajoutant
-        des <link linkend="configuringnagios-objectdefinitions-servicedependency">définitions
-        de dépendance de service</link> dans votre (vos) <link linkend="configuringnagios-configobject">fichier(s) de configuration des
-        objets</link>. Dans chaque définition, vous spécifiez le service
-        <emphasis>dépendant</emphasis>, le service dont il
-        <emphasis>dépend</emphasis>, et la condition (s'il y a lieu) qui provoque
-        l'échec des dépendances d'exécution et de notification (ces notions sont
-        décrites plus loin).</para>
+            des <link linkend="configuringnagios-objectdefinitions-servicedependency">définitions
+                de dépendance de service
+            </link>
+            dans votre (vos) <link linkend="configuringnagios-configobject">fichier(s) de configuration des
+                objets
+            </link>
+            .Dans chaque définition, vous spécifiez le service
+            <emphasis>dépendant</emphasis>, le service dont il
+            <emphasis>dépend</emphasis>, et la condition (s'il y a lieu) qui provoque
+            l'échec des dépendances d'exécution et de notification (ces notions sont
+            décrites plus loin).
+        </para>
         <para>Vous pouvez créer plusieurs dépendances pour un même service, mais il vous
-        faut une définition de dépendance de service séparée pour chaque dépendance
-        créée.</para>
+            faut une définition de dépendance de service séparée pour chaque dépendance
+            créée.
+        </para>
     </section>
-
+    
     <section>
         <title>Exemple de dépendances de services</title>
         <para>L'image suivante nous montre un exemple d'une trame typique de notification
-de service et d'éxécution de ses dépendances. Différents services dépendent
-d'autres services pour que l'éxécution des checks et des notifications se
-réalise.</para>
+            de service et d'éxécution de ses dépendances. Différents services dépendent
+            d'autres services pour que l'éxécution des checks et des notifications se
+            réalise.
+        </para>
         <para>
             <informalfigure>
                 <mediaobject>
@@ -75,208 +88,245 @@ réalise.</para>
                 </mediaobject>
             </informalfigure>
         </para>
-        <para>Dans l'exemple ci-dessus, les définitions de dépendance du <emphasis>Service
-        F</emphasis> sur <emphasis>l'hôte C</emphasis> seraient écrites comme ceci :</para>
+        <para>
+            Dans l'exemple ci-dessus, les définitions de dépendance du <emphasis>Service
+                F
+            </emphasis>
+            sur <emphasis>l'hôte C</emphasis> seraient écrites comme ceci :
+        </para>
         <programlisting>
-        define servicedependency{
-                host_name                       Host B
-                service_description             Service D
-                dependent_host_name             Host C
-                dependent_service_description   Service F
-                execution_failure_criteria      o
-                notification_failure_criteria   w,u
-                }
-
-        define servicedependency{
-                host_name                       Host B
-                service_description             Service E
-                dependent_host_name             Host C
-                dependent_service_description   Service F
-                execution_failure_criteria      n
-                notification_failure_criteria   w,u,c
-                }
-
-        define servicedependency{
-                host_name                       Host B
-                service_description             Service C
-                dependent_host_name             Host C
-                dependent_service_description   Service F
-                execution_failure_criteria      w
-                notification_failure_criteria   c
-                }
+            define servicedependency{
+                    host_name                       Host B
+                    service_description             Service D
+                    dependent_host_name             Host C
+                    dependent_service_description   Service F
+                    execution_failure_criteria      o
+                    notification_failure_criteria   w,u
+                    }
+            
+            define servicedependency{
+                    host_name                       Host B
+                    service_description             Service E
+                    dependent_host_name             Host C
+                    dependent_service_description   Service F
+                    execution_failure_criteria      n
+                    notification_failure_criteria   w,u,c
+                    }
+            
+            define servicedependency{
+                    host_name                       Host B
+                    service_description             Service C
+                    dependent_host_name             Host C
+                    dependent_service_description   Service F
+                    execution_failure_criteria      w
+                    notification_failure_criteria   c
+                    }
         </programlisting>
         <para>Les autres définitions de dépendances décrites dans l'image précédente
-s'écriraient comme suit :</para>
+            s'écriraient comme suit :
+        </para>
         <programlisting>
-        define servicedependency{
-                host_name                       Host A
-                service_description             Service A
-                dependent_host_name             Host B
-                dependent_service_description   Service D
-                execution_failure_criteria      u
-                notification_failure_criteria   n
-                }
-
-        define servicedependency{
-                host_name                       Host A
-                service_description             Service B
-                dependent_host_name             Host B
-                dependent_service_description   Service E
-                execution_failure_criteria      w,u
-                notification_failure_criteria   c
-                }
-
-        define servicedependency{
-                host_name                       Host B
-                service_description             Service C
-                dependent_host_name             Host B
-                dependent_service_description   Service E
-                execution_failure_criteria      n
-                notification_failure_criteria   w,u,c
-                }
+            define servicedependency{
+                    host_name                       Host A
+                    service_description             Service A
+                    dependent_host_name             Host B
+                    dependent_service_description   Service D
+                    execution_failure_criteria      u
+                    notification_failure_criteria   n
+                    }
+            
+            define servicedependency{
+                    host_name                       Host A
+                    service_description             Service B
+                    dependent_host_name             Host B
+                    dependent_service_description   Service E
+                    execution_failure_criteria      w,u
+                    notification_failure_criteria   c
+                    }
+            
+            define servicedependency{
+                    host_name                       Host B
+                    service_description             Service C
+                    dependent_host_name             Host B
+                    dependent_service_description   Service E
+                    execution_failure_criteria      n
+                    notification_failure_criteria   w,u,c
+                    }
         </programlisting>
     </section>
-
+    
     <section>
         <title>Comment les dépendances d'un service sont testées</title>
         <para>Avant que Nagios n'exécute un contrôle de service ou n'envoie des
-        notifications concernant un service, il vérifiera si le service comporte des
-        dépendances. Si ce n'est pas le cas, le contrôle est exécuté ou la
-        notification est envoyée comme en temps normal. Si le service a bien une ou
-        plusieurs dépendances, Nagios vérifiera chacune de la manière suivante :</para>
+            notifications concernant un service, il vérifiera si le service comporte des
+            dépendances. Si ce n'est pas le cas, le contrôle est exécuté ou la
+            notification est envoyée comme en temps normal. Si le service a bien une ou
+            plusieurs dépendances, Nagios vérifiera chacune de la manière suivante :
+        </para>
         <orderedlist>
             <listitem>
-                <para>Nagios récupère l'état courant<link linkend="advancedtopics-dependencies-hard_dependencies">*</link> du service
-                dont il <emphasis>dépend</emphasis>.</para>
+                <para>
+                    Nagios récupère l'état courant<link linkend="advancedtopics-dependencies-hard_dependencies">*</link> du service
+                    dont il <emphasis>dépend</emphasis>.
+                </para>
             </listitem>
             <listitem>
-                <para>Nagios compare l'état courant du service dont il <emphasis>dépend</emphasis>
-                aux options d'échec soit d'exécution soit de notification dans la définition
-                de dépendance (selon ce qui adapté).</para>
+                <para>
+                    Nagios compare l'état courant du service dont il <emphasis>dépend</emphasis>
+                    aux options d'échec soit d'exécution soit de notification dans la définition
+                    de dépendance (selon ce qui adapté).
+                </para>
             </listitem>
             <listitem>
-                <para>Si l'état courant du service dont il <emphasis>dépend</emphasis> correspond
-                à une des options d'échec, la dépendance est réputée avoir échoué et Nagios
-                sortira de la boucle de vérification des dépendances.</para>
+                <para>
+                    Si l'état courant du service dont il <emphasis>dépend</emphasis> correspond
+                    à une des options d'échec, la dépendance est réputée avoir échoué et Nagios
+                    sortira de la boucle de vérification des dépendances.
+                </para>
             </listitem>
             <listitem>
-                <para>Si l'état courant du service dont il <emphasis>dépend</emphasis> ne
-                correspond à aucune des options d'échec de la dépendance, la dépendance est
-                réputée avoir réussi et Nagios continuera avec la prochaine dépendance.</para>
+                <para>
+                    Si l'état courant du service dont il <emphasis>dépend</emphasis> ne
+                    correspond à aucune des options d'échec de la dépendance, la dépendance est
+                    réputée avoir réussi et Nagios continuera avec la prochaine dépendance.
+                </para>
             </listitem>
         </orderedlist>
         <para>Ce cycle continue jusqu'à ce que toutes les dépendances du service aient été
-        vérifiées, ou jusqu'à ce qu'une dépendance échoue.</para>
+            vérifiées, ou jusqu'à ce qu'une dépendance échoue.
+        </para>
         <note>
             <para>
-                <anchor id="advancedtopics-dependencies-hard_dependencies"/>*Il est
-            important de noter que par défaut, Nagios utilisera <link linkend="thebasics-statetypes">l'état hard</link> courant du (des)
-            service(s) dont il dépend lors de ses vérifications de dépendance. Si vous
-            voulez que Nagios utilise l'état le plus récent des services (que ce soit un
-            état soft ou hard), activez l'option 
-            <xref linkend="configuringnagios-configmain-soft_state_dependencies" endterm="configuringnagios-configmain-soft_state_dependencies-tech"/>.</para>
+                <anchor id="advancedtopics-dependencies-hard_dependencies"/>
+                *Il est
+                important de noter que par défaut, Nagios utilisera <link linkend="thebasics-statetypes">l'état hard</link> courant du (des)
+                service(s) dont il dépend lors de ses vérifications de dépendance. Si vous
+                voulez que Nagios utilise l'état le plus récent des services (que ce soit un
+                état soft ou hard), activez l'option 
+                <xref linkend="configuringnagios-configmain-soft_state_dependencies" endterm="configuringnagios-configmain-soft_state_dependencies-tech"/>
+                .
+            </para>
         </note>
     </section>
-
+    
     <section>
         <title>Dépendances d'exécution</title>
-        <para>Les dépendances d'exécution permettent de limiter les <link linkend="thebasics-activechecks">vérifications de service
-        actives</link>. Les <link linkend="thebasics-passivechecks">vérifications de
-        service passives</link> ne sont pas affectées par les dépendances
-        d'exécution.</para>
+        <para>
+            Les dépendances d'exécution permettent de limiter les <link linkend="thebasics-activechecks">vérifications de service
+                actives
+            </link>
+            .Les <link linkend="thebasics-passivechecks">vérifications de
+                service passives
+            </link>
+            ne sont pas affectées par les dépendances
+            d'exécution.
+        </para>
         <para>Si tous les tests de dépendance d'exécution du service réussissent, Nagios
-        exécute le contrôle du service comme à l'accoutumée. Si ne serait-ce qu'une
-        dépendance d'exécution du service échoue, Nagios arrêtera temporairement
-        l'exécution des contrôles pour ce service (dépendant). Par la suite, les
-        tests des dépendances d'exécution du service vont réussir. Alors, Nagios
-        recommencera les contrôles de ce service de manière normale. Pour plus
-        d'informations sur l'algorithme d'ordonnancement des contrôles , lisez 
-        <link linkend="advancedtopics-checkscheduling">ceci</link>.</para>
-        <para>Dans l'exemple ci-dessus, les dépendances d'exécution du <emphasis role="bold">Service E</emphasis> échoueraient si le <emphasis role="bold">Service B</emphasis> est dans un état WARNING ou UNKNOWN. Si
-        c'était le cas, le contrôle de service ne serait pas réalisé et serait
-        ordonnancé pour une future exécution (potentielle).</para>
+            exécute le contrôle du service comme à l'accoutumée. Si ne serait-ce qu'une
+            dépendance d'exécution du service échoue, Nagios arrêtera temporairement
+            l'exécution des contrôles pour ce service (dépendant). Par la suite, les
+            tests des dépendances d'exécution du service vont réussir. Alors, Nagios
+            recommencera les contrôles de ce service de manière normale. Pour plus
+            d'informations sur l'algorithme d'ordonnancement des contrôles , lisez 
+            <link linkend="advancedtopics-checkscheduling">ceci</link>.
+        </para>
+        <para>
+            Dans l'exemple ci-dessus, les dépendances d'exécution du <emphasis role="bold">Service E</emphasis> échoueraient si le <emphasis role="bold">Service B</emphasis> est dans un état WARNING ou UNKNOWN. Si
+            c'était le cas, le contrôle de service ne serait pas réalisé et serait
+            ordonnancé pour une future exécution (potentielle).
+        </para>
     </section>
-
+    
     <section>
         <title>Dépendances de notification</title>
         <para>Si tous les tests de dépendance de notification du service
-        <emphasis>réussissent</emphasis>, Nagios enverra les notifications pour ce
-        service comme à l'accoutumée. Si, ne serait-ce qu'une dépendance de
-        notification du service échoue, Nagios arrêtera temporairement l'émission de
-        notifications pour ce service (dépendant). Plus tard, les tests des
-        dépendances de notifications du service vont réussir. Alors, Nagios
-        recommencera à envoyer des notifications pour ce service de manière
-        normale. Pour plus d'informations sur l'algorithme de notification, lisez
-        <link linkend="thebasics-notifications">ceci</link>.</para>
+            <emphasis>réussissent</emphasis>, Nagios enverra les notifications pour ce
+            service comme à l'accoutumée. Si, ne serait-ce qu'une dépendance de
+            notification du service échoue, Nagios arrêtera temporairement l'émission de
+            notifications pour ce service (dépendant). Plus tard, les tests des
+            dépendances de notifications du service vont réussir. Alors, Nagios
+            recommencera à envoyer des notifications pour ce service de manière
+            normale. Pour plus d'informations sur l'algorithme de notification, lisez
+            <link linkend="thebasics-notifications">ceci</link>.
+        </para>
         <para>
-        Dans l'exemple ci-dessus, les dépendances de notification du 
-        <emphasis role="bold">Service F</emphasis> échoueraient si le 
-        <emphasis role="bold">Service C</emphasis> est dans un état CRITICAL,
-        <emphasis>et/ou</emphasis> si le <emphasis role="bold">Service D</emphasis>
-        est dans un état WARNING ou UNKNOWN, <emphasis>et/ou</emphasis> si le
-        <emphasis role="bold">Service E</emphasis> est dans un état WARNING,
-        UNKNOWN, ou CRITICAL. Si c'était le cas, les notifications pour ce service
-        ne seraient pas envoyées.
+            Dans l'exemple ci-dessus, les dépendances de notification du 
+            <emphasis role="bold">Service F</emphasis> échoueraient si le 
+            <emphasis role="bold">Service C</emphasis> est dans un état CRITICAL,
+            <emphasis>et/ou</emphasis> si le <emphasis role="bold">Service D</emphasis>
+            est dans un état WARNING ou UNKNOWN, <emphasis>et/ou</emphasis> si le
+            <emphasis role="bold">Service E</emphasis> est dans un état WARNING,
+            UNKNOWN, ou CRITICAL. Si c'était le cas, les notifications pour ce service
+            ne seraient pas envoyées.
         </para>
     </section>
-
+    
     <section>
         <title>Héritage de dépendance</title>
         <para>Comme je l'ai déjà dit, par défaut les dépendances de service ne sont pas
-        héritées. Dans l'exemple ci-dessus, vous pouvez voir que le Service F est
-        dépendant du Service E. Toutefois, il n'hérite pas automatiquement des
-        dépendances du Service E sur le Service B et le Service C. Pour rendre le
-        Service F dépendant du Service C, nous avons dû ajouter une autre définition
-        de dépendance. Il n'y a pas de définition de dépendance pour le Service B,
-        donc le Service F n'est pas dépendant du Service B.</para>
+            héritées. Dans l'exemple ci-dessus, vous pouvez voir que le Service F est
+            dépendant du Service E. Toutefois, il n'hérite pas automatiquement des
+            dépendances du Service E sur le Service B et le Service C. Pour rendre le
+            Service F dépendant du Service C, nous avons dû ajouter une autre définition
+            de dépendance. Il n'y a pas de définition de dépendance pour le Service B,
+            donc le Service F n'est pas dépendant du Service B.
+        </para>
         <para>Si vous voulez rendre les dépendances de service héritables, utilisez le
-        paramètre inherits_parent dans la définition de la <link linkend="configuringnagios-objectdefinitions-servicedependency">dépendance
-        du service</link>. Quand ce paramètre est activé, il indique que la
-        dépendance hérite des dépendances du service dont elle dépend (également
-        appelé le service maître). En d'autres termes, si le service maître dépend
-        d'autres services et qu'une de ces dépendances est en échec, la dépendance
-        sera aussi en échec.</para>
+            paramètre inherits_parent dans la définition de la <link linkend="configuringnagios-objectdefinitions-servicedependency">dépendance
+                du service
+            </link>
+            .Quand ce paramètre est activé, il indique que la
+            dépendance hérite des dépendances du service dont elle dépend (également
+            appelé le service maître). En d'autres termes, si le service maître dépend
+            d'autres services et qu'une de ces dépendances est en échec, la dépendance
+            sera aussi en échec.
+        </para>
         <para>Dans l'exemple ci-dessus, imaginez que vous vouliez ajouter une nouvelle
-        dépendance au service F qui le rende dépendant du service A. Vous pourriez
-        créer une nouvelle définition de dépendance qui indique le service F comme
-        le service dépendant et le service A comme le service maître (c'est-à-dire
-        le service dont il est dépendant). Vous pourriez également modifier la
-        définition de dépendance des services D et F de la manière suivante :</para>
-
+            dépendance au service F qui le rende dépendant du service A. Vous pourriez
+            créer une nouvelle définition de dépendance qui indique le service F comme
+            le service dépendant et le service A comme le service maître (c'est-à-dire
+            le service dont il est dépendant). Vous pourriez également modifier la
+            définition de dépendance des services D et F de la manière suivante :
+        </para>
+        
         <programlisting>
-        define servicedependency{
-                host_name                       Host B
-                service_description             Service D
-                dependent_host_name             Host C
-                dependent_service_description   Service F
-                execution_failure_criteria      o
-                notification_failure_criteria   n
-                inherits_parent         1
-                }
+            define servicedependency{
+                    host_name                       Host B
+                    service_description             Service D
+                    dependent_host_name             Host C
+                    dependent_service_description   Service F
+                    execution_failure_criteria      o
+                    notification_failure_criteria   n
+                    inherits_parent         1
+                    }
         </programlisting>
-
+        
         <para>Comme le paramètre inherits_parent est activé, la dépendance entre les
-        services A et D sera testée quand la dépendance entre les services F et D le
-        sera.</para>
+            services A et D sera testée quand la dépendance entre les services F et D le
+            sera.
+        </para>
         <para>Les dépendances peuvent avoir de multiples niveaux d'héritage. Si la
-        définition de dépendance entre A et D avait le paramètre inherits_parent
-        activé, et que le service A était dépendant d'un autre service (appelons-le
-        service G), le service F serait dépendant des services D, A, et G (et le
-        serait potentiellement avec chacun selon des critères différents).</para>
+            définition de dépendance entre A et D avait le paramètre inherits_parent
+            activé, et que le service A était dépendant d'un autre service (appelons-le
+            service G), le service F serait dépendant des services D, A, et G (et le
+            serait potentiellement avec chacun selon des critères différents).
+        </para>
     </section>
-
+    
     <section>
         <title>Dépendances d'hôtes</title>
         <para>Comme vous vous y attendez probablement, les dépendances d'hôtes
-        fonctionnent d'une manière similaire à celles de services. La principale
-        différence est que ce sont des hôtes et pas des services. Une autre
-        différence est que la dépendance d'hôte ne sert qu'à supprimer des
-        notifications d'hôtes et non pas des controles d'hôtes.</para>
+            fonctionnent d'une manière similaire à celles de services. La principale
+            différence est que ce sont des hôtes et pas des services. Une autre
+            différence est que la dépendance d'hôte ne sert qu'à supprimer des
+            notifications d'hôtes et non pas des controles d'hôtes.
+        </para>
         <tip>
             <para>ATTENTION ! Ne confondez pas les dépendance d'hôtes avec les relations
-            parent/enfant. Vous utiliserez les relations parent/enfant (définies avec le
-            paramètre parents dans la définition d'hôte) dans la plupart des cas, plutôt
-            que des dépendances d'hôtes.</para>
+                parent/enfant. Vous utiliserez les relations parent/enfant (définies avec le
+                paramètre parents dans la définition d'hôte) dans la plupart des cas, plutôt
+                que des dépendances d'hôtes.
+            </para>
         </tip>
         <para>Les bases de ce qu'il faut savoir sur les dépendances d'hôtes:</para>
         <orderedlist>
@@ -285,23 +335,27 @@ s'écriraient comme suit :</para>
             </listitem>
             <listitem>
                 <para>Les dépendances d'hôtes ne se sont pas héritées (à moins que ce ne soit
-                explicitement spécifié)</para>
+                    explicitement spécifié)
+                </para>
             </listitem>
             <listitem>
                 <para>Les dépendances d'hôtes peuvent désactiver l'éxécution des vérifications et
-                notifications dans certains circonstances (état UP, DOWN, et/ou UNREACHABLE)</para>
+                    notifications dans certains circonstances (état UP, DOWN, et/ou UNREACHABLE)
+                </para>
             </listitem>
             <listitem>
-                <para>Les dépendances d'un hôte ne sont seulement valable durant la <link linkend="thebasics-timeperiods">période de temps</link> spécifiée
+                <para>
+                    Les dépendances d'un hôte ne sont seulement valable durant la <link linkend="thebasics-timeperiods">période de temps</link> spécifiée
                 </para>
             </listitem>
         </orderedlist>
     </section>
-
+    
     <section>
         <title>Exemple de dépendances d'hôtes</title>
         <para>L'image suivante nous montre une trame de l'acheminement logique des
-        dépendances de notifications d'hôtes.</para>
+            dépendances de notifications d'hôtes.
+        </para>
         <para>
             <informalfigure>
                 <mediaobject>
@@ -312,34 +366,37 @@ s'écriraient comme suit :</para>
             </informalfigure>
         </para>
         <para>Dans l'image ci-dessus, les définitions de dépendances pour l'hôte C
-        devraient être définies ainsi:</para>
+            devraient être définies ainsi:
+        </para>
         <programlisting>
-        define hostdependency{
-                host_name                       Host A
-                dependent_host_name             Host C
-                notification_failure_criteria   d
-                }
-
-        define hostdependency{
-                host_name                       Host B
-                dependent_host_name             Host C
-                notification_failure_criteria   d,u
-                }
+            define hostdependency{
+                    host_name                       Host A
+                    dependent_host_name             Host C
+                    notification_failure_criteria   d
+                    }
+            
+            define hostdependency{
+                    host_name                       Host B
+                    dependent_host_name             Host C
+                    notification_failure_criteria   d,u
+                    }
         </programlisting>
         <para>Comme pour les dépendances de services, les dépendances d'hôtes ne sont pas
-        héritées. Dans l'exemple de cette image, vous pouvez voir que l'hôte C
-        n'hérite pas des dépendances de l'hôte B. Pour que C soit dépendant de A,
-        une autre définition d'hôte doit être précisée.</para>
+            héritées. Dans l'exemple de cette image, vous pouvez voir que l'hôte C
+            n'hérite pas des dépendances de l'hôte B. Pour que C soit dépendant de A,
+            une autre définition d'hôte doit être précisée.
+        </para>
         <para>Les dépendances de notifications d'hôtes marchent d'une manière similaire à
-        celles de services. Si <emphasis>toutes</emphasis> les notifications de
-        dépendance d'un hôte <emphasis>réussissent</emphasis>, Nagios enverra les
-        notifications comme à l'accoutumée. Si ne serait-ce qu'une de ces
-        dépendances échoue, Nagios supprimera temporairement toutes les
-        notifications pour cet hôte (dépendant). Par la suite, les dépendances
-        réussiront à nouveau. Nagios recommencera alors à envoyer les notifications
-        de manière habituelle. Vous trouverez <link linkend="thebasics-notifications">ici</link> 
-        plus d'informations sur la l'algorithme de notification.</para>
+            celles de services. Si <emphasis>toutes</emphasis> les notifications de
+            dépendance d'un hôte <emphasis>réussissent</emphasis>, Nagios enverra les
+            notifications comme à l'accoutumée. Si ne serait-ce qu'une de ces
+            dépendances échoue, Nagios supprimera temporairement toutes les
+            notifications pour cet hôte (dépendant). Par la suite, les dépendances
+            réussiront à nouveau. Nagios recommencera alors à envoyer les notifications
+            de manière habituelle. Vous trouverez <link linkend="thebasics-notifications">ici</link> 
+            plus d'informations sur la l'algorithme de notification.
+        </para>
     </section>
-
+    
 </chapter>
 

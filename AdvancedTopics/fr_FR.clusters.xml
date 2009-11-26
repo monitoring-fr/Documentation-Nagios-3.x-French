@@ -7,167 +7,203 @@
 ]
 >
 <chapter id="advancedtopics-clusters" xreflabel="Monitoring Service and Host Clusters">
-	<title>Supervision de clusters d'hôtes et de services</title>
-	<section>
-		<title>Introduction</title>
-		<para>Plusieurs personnes ont demandé comment il est possible de superviser des
-clusters d'hôtes ou de services, aussi ai-je décidé d'écrire une petite
-documentation sur comment le faire. C'est plutôt simple aussi ne
-devriez-vous pas avoir de problème de compréhension…</para>
-		<para>Premièrement, nous devons définri ce que nous entendons par
-<quote>cluster</quote>. La façon la plus simple pour comprendre est de
-prendere un exemple. Disons que votre organisation possède cinq serveurs qui
-fournissent la redondance des services &protocol-dns;. Si l'un d'eux tombe,
-ce n'est pas un gros problème parce que les serveurs restants vont continuer
-à assurer le service de résolution de noms. Si vous êtes concerné par la
-supervision et la disponibilité des services &protocol-dns; de votre
-organisation, vous souhaiterez superviser les cinq serveurs
-&protocol-dns;. C'est ce que je considère être un cluster de services. Le
-service cluster consiste en cinq services &protocol-dns; séparés que vous
-supervisez. Même si vous souhaitez superviser chacun de ces services, votre
-principale préoccupation concerne le statut global du cluster de services
-&protocol-dns; plutôt que la disponibilité d'un service en particulier.</para>
-		<para>Si votre organisation possède un groupe d'hôtes assurant une solution de
-haute disponibilité (clustering), je considèrerais ceux-ci comme un cluster
-d'hôtes. Si l'un des ces hôtes tombe, un autre va prendre le relais pour
-assurer les tâches dévolus au serveur tombé. En apparté, vous pouvez
-consulter le <ulink url="http://www.linux-ha.org/">High-Availability Linux
-Project</ulink> pour des informations sur la façon d'assurer la redondance
-avec Linux.</para>
-	</section>
-	<section>
-		<title>Plan d'attaque</title>
-		<para>Il y plusieurs potentiellement plusieurs méthodes pour superviser des
-clusters d'hôtes ou de services. Je vais décrire la méthode que je crois
-être la plus simple. La supervision de clusters d'hôtes ou de services
-impliquent deux choses:</para>
-		<itemizedlist>
-			<listitem>
-				<para>La supervision de chacun des éléments du cluster</para>
-			</listitem>
-			<listitem>
-				<para>La supervision du cluster comme une entité globale</para>
-			</listitem>
-		</itemizedlist>
-		<para>Superviser les éléments constituant un cluster d'hôtes ou de services est
-plus facile que ce que vous pensez. En fait, vous le faîtes déjà
-sûrement. Pour les clusters de services, assurez-vous simplement de
-superviser chacun des éléments constituant le service en cluster. Si vous
-avez un cluster de cinq serveurs &protocol-dns;, assurez-vous d'avoir cinq
-définitions de services séparées (probablement en utilisant le plugin
-&plugin-dns;). Pour un cluster d'hôtes, assurez-vous d'avoir configuré les
-définitions d'hôtes appropriées pour chacun des serveurs du cluster (vous
-aurez aussi à définir au minimum un service pour chacun de ces hôtes).</para><important><para>Vous souhaiterez certainement désactiver les notifications pour chacun des
-éléments formant le cluster (définitions d'hôtes et de services). Même si
-aucune notification n'est envoyée pour les éléments de façon individuelle,
-vous continuez à avoir une vue de chacun des hôtes et services dans le <link
+    <title>Supervision de clusters d'hôtes et de services</title>
+    <section>
+        <title>Introduction</title>
+        <para>Plusieurs personnes ont demandé comment il est possible de superviser des
+            clusters d'hôtes ou de services, aussi ai-je décidé d'écrire une petite
+            documentation sur comment le faire. C'est plutôt simple aussi ne
+            devriez-vous pas avoir de problème de compréhension…
+        </para>
+        <para>Premièrement, nous devons définri ce que nous entendons par
+            <quote>cluster</quote>. La façon la plus simple pour comprendre est de
+            prendere un exemple. Disons que votre organisation possède cinq serveurs qui
+            fournissent la redondance des services &protocol-dns;. Si l'un d'eux tombe,
+            ce n'est pas un gros problème parce que les serveurs restants vont continuer
+            à assurer le service de résolution de noms. Si vous êtes concerné par la
+            supervision et la disponibilité des services &protocol-dns; de votre
+            organisation, vous souhaiterez superviser les cinq serveurs
+            &protocol-dns;. C'est ce que je considère être un cluster de services. Le
+            service cluster consiste en cinq services &protocol-dns; séparés que vous
+            supervisez. Même si vous souhaitez superviser chacun de ces services, votre
+            principale préoccupation concerne le statut global du cluster de services
+            &protocol-dns; plutôt que la disponibilité d'un service en particulier.
+        </para>
+        <para>Si votre organisation possède un groupe d'hôtes assurant une solution de
+            haute disponibilité (clustering), je considèrerais ceux-ci comme un cluster
+            d'hôtes. Si l'un des ces hôtes tombe, un autre va prendre le relais pour
+            assurer les tâches dévolus au serveur tombé. En apparté, vous pouvez
+            consulter le <ulink url="http://www.linux-ha.org/">High-Availability Linux
+                Project
+            </ulink>
+            pour des informations sur la façon d'assurer la redondance
+            avec Linux.
+        </para>
+    </section>
+    <section>
+        <title>Plan d'attaque</title>
+        <para>Il y plusieurs potentiellement plusieurs méthodes pour superviser des
+            clusters d'hôtes ou de services. Je vais décrire la méthode que je crois
+            être la plus simple. La supervision de clusters d'hôtes ou de services
+            impliquent deux choses:
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>La supervision de chacun des éléments du cluster</para>
+            </listitem>
+            <listitem>
+                <para>La supervision du cluster comme une entité globale</para>
+            </listitem>
+        </itemizedlist>
+        <para>Superviser les éléments constituant un cluster d'hôtes ou de services est
+            plus facile que ce que vous pensez. En fait, vous le faîtes déjà
+            sûrement. Pour les clusters de services, assurez-vous simplement de
+            superviser chacun des éléments constituant le service en cluster. Si vous
+            avez un cluster de cinq serveurs &protocol-dns;, assurez-vous d'avoir cinq
+            définitions de services séparées (probablement en utilisant le plugin
+            &plugin-dns;). Pour un cluster d'hôtes, assurez-vous d'avoir configuré les
+            définitions d'hôtes appropriées pour chacun des serveurs du cluster (vous
+            aurez aussi à définir au minimum un service pour chacun de ces hôtes).
+        </para>
+        <important>
+            <para>Vous souhaiterez certainement désactiver les notifications pour chacun des
+                éléments formant le cluster (définitions d'hôtes et de services). Même si
+                aucune notification n'est envoyée pour les éléments de façon individuelle,
+                vous continuez à avoir une vue de chacun des hôtes et services dans le <link
 linkend="thebasics-cgis-status_cgi">status CGI</link>. Cela sera utile pour
-détecter la source du problème à l'intérieur du cluster dans le futur.</para></important>
-		
-		<para>La supervision globale du cluster peut être faite en utilisant les
-précédents résultats mis en cache pour chacun des éléments du cluster. Même
-si vous pourriez déterminer le statut du cluster en recontrôlant tous les
-éléments du cluster, pourquoi consommer de la bande passante et des
-ressources alors que vous avez déjà les résultats en cache? Où sont les
-résultats mis en cache ? Les résultats mis en cache pour chacun des éléments
-peuvent être trouvés dans le <link
+                détecter la source du problème à l'intérieur du cluster dans le futur.
+            </para>
+        </important>
+        
+        <para>La supervision globale du cluster peut être faite en utilisant les
+            précédents résultats mis en cache pour chacun des éléments du cluster. Même
+            si vous pourriez déterminer le statut du cluster en recontrôlant tous les
+            éléments du cluster, pourquoi consommer de la bande passante et des
+            ressources alors que vous avez déjà les résultats en cache? Où sont les
+            résultats mis en cache ? Les résultats mis en cache pour chacun des éléments
+            peuvent être trouvés dans le <link
 linkend="configuringnagios-configmain-status_file">fichier de statut</link>
-(en partant du principe que vous supervisez chaque élément). Le
-&plugin-cluster; est spécialement prévu pour contrôler les états d'hôtes et
-de services mis en cache dans le fichier de statut. </para>
-		<important><para>Même si vous n'avez pas activé les notifications individuellement pour
-chacun des éléments du cluster, vous souhaiterez les activer pour le
-contrôle du statut global du cluster.</para></important>
-	</section>
-	<section>
-	<title>Utilisation du plugin check_cluster</title><para>Le plugin &plugin-cluster; est étudié pour rapporter l'état général d'un
-cluster d'hôtes ou de services en contrôlant individuellement l'état de
-chacun des éléments composant le cluster. </para>
-		<para>Plus à venir… Le plugin &plugin-cluster; peut être trouvé dans le
-répertoire <filename class="directory">contrib</filename> de la distribution
-des Plugins Nagios à l'adresse <ulink
-url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug/</ulink>.</para>
-	</section>
-	<section>
-		<title>Supervision de clusters de services</title>
-		<para>Disons que vous avez trois serveurs &protocol-dns; qui apportent une
-redondance de services sur votre réseau. Premièrement, vous avez besoin de
-superviser chacun des trois serveurs &protocol-dns; individuellement avant
-de pouvoir les superviser en tant que cluster. Je pars du principe que vous
-avez trois services séparés (tous appelés <quote>Service
-&protocol-dns;</quote>) associés à vos hôtes &protocol-dns; (appelés
-<quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>).</para>
-		<para>Pour pouvoir superviser ces services en tant que cluster, vous devez créer
-un nouveau service <quote>cluster</quote>. Cependant, avant de faire ça,
-assurez-vous d'avoir une commande de contrôle de cluster configurée. Partons
-du principe que vous avez la définition de commande check_cluster suivante:</para>
-		<programlisting>define command{
-        command_name    check_service_cluster
-        command_line    /usr/local/nagios/libexec/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
-        }</programlisting>
-		<para>Maintenant, vous avez besoin de créer le service <quote>cluster</quote> et
-d'utiliser la <code>check_service_cluster</code> commande que vous venez juste de créer comme commande de contrôle de
-cluster. L'exemple suivant montre une mainère de faire ça. Cet exemple va
-générer une alerte CRITICAL si deux services au moins du cluster sont dans
-un état non-OK et une alerte WARNING si un seul des services est dans un
-état non-OK. Si tous les services faisant parti du cluster sont OK, le
-contrôle du cluster renvoie également un état OK.</para>
-		<programlisting>define service{
-	…
-	check_command   check_service_cluster!"DNS Cluster"!1!2!$SERVICESTATEID:host1:DNS Service$,$SERVICESTATEID:host2:DNS Service$,$SERVICESTATEID:host3:DNS Service$
-	…
-	}</programlisting>
-		<para>Il est important de noter que nous passons une liste séparée par des
-virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
-de services <link linkend="thebasics-macros">macros</link> à <code>$ARG4$</code> la macro dans la commande de contrôle de cluster. C'est important! Nagios va
-compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des
-chaînes de caractères) l'état courant de chacun des membres du cluster.</para>
-	</section>
-	<section>
-		<title>Supervision de clusters d'hôtes</title>
-		<para>La supervision des clusters d'hôtes est très similaire à celle pour les
-clusters de services. La principale différence est que les membres du
-cluster sont des hôtes et non des services. Pour pouvoir contrôler l'état
-d'un cluster d'hôte, vous devez définir un service qui utilise le plugin
-&plugin-cluster;. Le service ne devrait être associé à aucun des hôtes du
-cluster car cela provoquerait des problèmes avec les notifications pour le
-cluster si cet hôte tombe. Une bonne idée peut être d'associer le service
-avec l'hôte sur lequel Nagios fonctionne. Après tout, si l'hôte sur lequel
-fonctionne Nagios tombe, Nagios ne fonctionne plus, il n'y a donc plus grand
-chose à faire (à moins d'avoir mis en place une <link
+            (en partant du principe que vous supervisez chaque élément). Le
+            &plugin-cluster; est spécialement prévu pour contrôler les états d'hôtes et
+            de services mis en cache dans le fichier de statut. 
+        </para>
+        <important>
+            <para>Même si vous n'avez pas activé les notifications individuellement pour
+                chacun des éléments du cluster, vous souhaiterez les activer pour le
+                contrôle du statut global du cluster.
+            </para>
+        </important>
+    </section>
+    <section>
+        <title>Utilisation du plugin check_cluster</title><para>Le plugin &plugin-cluster; est étudié pour rapporter l'état général d'un
+            cluster d'hôtes ou de services en contrôlant individuellement l'état de
+            chacun des éléments composant le cluster. 
+        </para>
+        <para>Plus à venir… Le plugin &plugin-cluster; peut être trouvé dans le
+            répertoire <filename class="directory">contrib</filename> de la distribution
+            des Plugins Nagios à l'adresse <ulink
+url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug/</ulink>.
+        </para>
+    </section>
+    <section>
+        <title>Supervision de clusters de services</title>
+        <para>Disons que vous avez trois serveurs &protocol-dns; qui apportent une
+            redondance de services sur votre réseau. Premièrement, vous avez besoin de
+            superviser chacun des trois serveurs &protocol-dns; individuellement avant
+            de pouvoir les superviser en tant que cluster. Je pars du principe que vous
+            avez trois services séparés (tous appelés <quote>Service
+                &protocol-dns;
+            </quote>
+            )associés à vos hôtes &protocol-dns; (appelés
+            <quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>).
+        </para>
+        <para>Pour pouvoir superviser ces services en tant que cluster, vous devez créer
+            un nouveau service <quote>cluster</quote>. Cependant, avant de faire ça,
+            assurez-vous d'avoir une commande de contrôle de cluster configurée. Partons
+            du principe que vous avez la définition de commande check_cluster suivante:
+        </para>
+        <programlisting>define command{
+                    command_name    check_service_cluster
+                    command_line    /usr/local/nagios/libexec/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
+                    }
+        </programlisting>
+        <para>
+            Maintenant, vous avez besoin de créer le service <quote>cluster</quote> et
+            d'utiliser la <code>check_service_cluster</code> commande que vous venez juste de créer comme commande de contrôle de
+            cluster. L'exemple suivant montre une mainère de faire ça. Cet exemple va
+            générer une alerte CRITICAL si deux services au moins du cluster sont dans
+            un état non-OK et une alerte WARNING si un seul des services est dans un
+            état non-OK. Si tous les services faisant parti du cluster sont OK, le
+            contrôle du cluster renvoie également un état OK.
+        </para>
+        <programlisting>define service{
+            …
+            check_command   check_service_cluster!"DNS Cluster"!1!2!$SERVICESTATEID:host1:DNS Service$,$SERVICESTATEID:host2:DNS Service$,$SERVICESTATEID:host3:DNS Service$
+            …
+            }
+        </programlisting>
+        <para>Il est important de noter que nous passons une liste séparée par des
+            virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
+            de services <link linkend="thebasics-macros">macros</link> à <code>$ARG4$</code> la macro dans la commande de contrôle de cluster. C'est important! Nagios va
+            compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des
+            chaînes de caractères) l'état courant de chacun des membres du cluster.
+        </para>
+    </section>
+    <section>
+        <title>Supervision de clusters d'hôtes</title>
+        <para>La supervision des clusters d'hôtes est très similaire à celle pour les
+            clusters de services. La principale différence est que les membres du
+            cluster sont des hôtes et non des services. Pour pouvoir contrôler l'état
+            d'un cluster d'hôte, vous devez définir un service qui utilise le plugin
+            &plugin-cluster;. Le service ne devrait être associé à aucun des hôtes du
+            cluster car cela provoquerait des problèmes avec les notifications pour le
+            cluster si cet hôte tombe. Une bonne idée peut être d'associer le service
+            avec l'hôte sur lequel Nagios fonctionne. Après tout, si l'hôte sur lequel
+            fonctionne Nagios tombe, Nagios ne fonctionne plus, il n'y a donc plus grand
+            chose à faire (à moins d'avoir mis en place une <link
 linkend="advancedtopics-redundancy">redondance de vos serveurs de
-supervision</link>)…</para>
-		<para>Qu'importe, partons du principe que vous avez une <code>check_host_cluster</code> commande définie comme suit:</para>
-		<programlisting>define command{
-	command_name    check_host_cluster
-	command_line    /usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
-	}</programlisting>
-		<para>Disons que vous avez trois hôtes dans le cluster d'hôtes (appelés
-<quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>). Si vous
-voulez que Nagios génère une alerte warning si l'un des hôtes du cluster
-n'est pas UP et une alerte critical si deux sont non UP, la définition de
-servie à utiliser pour contrôler le cluster d'hôtes pourrait ressembler à
-celle-ci:</para>
-		<programlisting>define service{
-       …
-       check_command   check_host_cluster!"Super Host Cluster"!1!2!$HOSTSTATEID:host1$,$HOSTSTATEID:host2$,$HOSTSTATEID:host3$
-       …
-        }</programlisting>
-		<para>Il est important de noter que nous passons une liste séparée par des
-virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
-d'hôtes <link linkend="thebasics-macros">macros</link> à <code>$ARG4$</code> la macro dans la commande de contrôle de cluster. C'est important! Nagios va
-compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des
-chaînes de caractères) l'état courant de chacun des membres du cluster.</para>
-		<para>Voilà! Nagios va régulièrement contrôler l'état du cluster d'hôtes et vous
-envoyer des notifications quand l'état de celui-ci est dégradé (en partant
-du principe que vous avez activé la notification pour le service). Notez que
-pour chacune des définitions individuelles d'hôtes appartenant au cluster,
-vous souhaiterez désactiver les notifications quand l'hôte
-tombe. Souvenez-vous que vous ne tenez pas tant que ça à l'état individuel
-de chacun des hôtres composant le cluster mais plutôt à l'état général de
-cleui-ci. En fonction de la topologie de votre réseau et de ce que vous
-souhaitez accomplir, vous pourriez souhaiter conserver les notifications
-pour des hôtes inaccessibles dans les définitions d'hôtes.</para>
-	</section>
+                supervision
+            </link>
+            )…
+        </para>
+        <para>
+            Qu'importe, partons du principe que vous avez une <code>check_host_cluster</code> commande définie comme suit:
+        </para>
+        <programlisting>define command{
+            command_name    check_host_cluster
+            command_line    /usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
+            }
+        </programlisting>
+        <para>Disons que vous avez trois hôtes dans le cluster d'hôtes (appelés
+            <quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>). Si vous
+            voulez que Nagios génère une alerte warning si l'un des hôtes du cluster
+            n'est pas UP et une alerte critical si deux sont non UP, la définition de
+            servie à utiliser pour contrôler le cluster d'hôtes pourrait ressembler à
+            celle-ci:
+        </para>
+        <programlisting>define service{
+                  …
+                  check_command   check_host_cluster!"Super Host Cluster"!1!2!$HOSTSTATEID:host1$,$HOSTSTATEID:host2$,$HOSTSTATEID:host3$
+                  …
+                    }
+        </programlisting>
+        <para>Il est important de noter que nous passons une liste séparée par des
+            virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
+            d'hôtes <link linkend="thebasics-macros">macros</link> à <code>$ARG4$</code> la macro dans la commande de contrôle de cluster. C'est important! Nagios va
+            compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des
+            chaînes de caractères) l'état courant de chacun des membres du cluster.
+        </para>
+        <para>Voilà! Nagios va régulièrement contrôler l'état du cluster d'hôtes et vous
+            envoyer des notifications quand l'état de celui-ci est dégradé (en partant
+            du principe que vous avez activé la notification pour le service). Notez que
+            pour chacune des définitions individuelles d'hôtes appartenant au cluster,
+            vous souhaiterez désactiver les notifications quand l'hôte
+            tombe. Souvenez-vous que vous ne tenez pas tant que ça à l'état individuel
+            de chacun des hôtres composant le cluster mais plutôt à l'état général de
+            cleui-ci. En fonction de la topologie de votre réseau et de ce que vous
+            souhaitez accomplir, vous pourriez souhaiter conserver les notifications
+            pour des hôtes inaccessibles dans les définitions d'hôtes.
+        </para>
+    </section>
 </chapter>
 

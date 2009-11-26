@@ -7,231 +7,385 @@
 ]
 >
 <chapter id="advancedtopics-stalking" xreflabel="State Stalking">
- <title>Suivi précis des changements d'état</title>
-
- <section>
-  <title>Introduction</title>
-
-  <para>Le suivi précis des changements d'état est une fonctionnalité qui ne sera
-probablement pas utilisée par beaucoup d'entre vous. Quand elle est activée,
-elle permet d'enregistrer des changements dans le contrôle d'un service ou
-d'un hôte, même si l'état de celui-ci ne change pas. Nagios va alors
-surveiller plus particulièrement ce service ou cet hôte et enregistrer tout
-changement. Comme vous allez le constater, ceci peut être très utile plus
-tard, lors d'une analyse de vos fichiers de logs. </para>
- </section>
-
- <section>
-  <title>Principes de fonctionnement</title>
-
-  <para>Dans des conditions de fonctionnement normales, le résultat de la
-surveillance d'un hôte ou d'un service n'est enregistré que lorsqu'il a
-changé d'état depuis le dernier contrôle. Il y a quelques exceptions à cette
-règle, mais c'est comme cela que cela se passe la plupart du temps.</para>
-
-  <para>Si vous activez le suivi précis des changements d'état pour un ou plusieurs
-états d'un hôte ou d'un service en particulier, Nagios enregistrera dans ses
-journaux toute différence entre le contrôle actuel et le précédent. Examinez
-l'exemple suivant, sur 8 tests consécutifs d'un service :</para>
-
-  <informaltable frame="all">
-   <tgroup cols="5">
-    <thead>
-     <row>
-      <entry><para>Contrôle du Service #:</para></entry>
-
-      <entry><para>État du Service:</para></entry>
-
-      <entry><para>Message de sortie de Contrôle:</para></entry>
-
-      <entry><para>Journalisé normalement</para></entry>
-
-      <entry><para>Journalisé avec le suivi précis des changements d'état</para></entry>
-     </row>
-		</thead>
-		<tbody>
-     <row>
-      <entry><para>x</para></entry>
-
-      <entry><para>OK</para></entry>
-
-      <entry><para>grappe RAID optimale</para></entry>
-
-      <entry><para>-</para></entry>
-
-      <entry><para>-</para></entry>
-     </row>
-
-     <row>
-      <entry><para>x+1</para></entry>
-
-      <entry><para>OK</para></entry>
-
-      <entry><para>grappe RAID optimale</para></entry>
-
-      <entry><para>-</para></entry>
-
-      <entry><para>-</para></entry>
-     </row>
-
-     <row>
-      <entry><para>x+2</para></entry>
-
-      <entry><para>WARNING</para></entry>
-
-      <entry><para>Grappe RAID dégradée (1 disque hors d'usage, 1 disque de secours en cours de
-reconstruction)</para></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
-format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
-format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
-     </row>
-
-     <row>
-      <entry><para>x+3</para></entry>
-
-      <entry><para>CRITICAL</para></entry>
-
-      <entry><para>Grappe RAID dégradée (2 disques hors d'usage, 1 disque de secours mis en
-ligne, 1 disque de secours en cours de reconstruction)</para></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
-format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
-format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
-     </row>
-
-     <row>
-      <entry><para>x+4</para></entry>
-
-      <entry><para>CRITICAL</para></entry>
-
-      <entry><para>Grappe RAID dégradée (3 disque hors d'usage, 2 disque de secours mis en
-ligne)</para></entry>
-
-      <entry><para>-</para></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
-format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
-     </row>
-
-     <row>
-      <entry><para>x+5</para></entry>
-
-      <entry><para>CRITICAL</para></entry>
-
-      <entry><para>Grappe RAID hors d'usage</para></entry>
-
-      <entry><para>-</para></entry>
-
-      <entry><para><inlinemediaobject> <imageobject> <imagedata fileref="images/checkmark.png"
-format="PNG"/> </imageobject> </inlinemediaobject></para></entry>
-     </row>
-
-     <row>
-      <entry><para>x+6</para></entry>
-
-      <entry><para>CRITICAL</para></entry>
-
-      <entry><para>Grappe RAID hors d'usage</para></entry>
-
-      <entry><para>-</para></entry>
-
-      <entry><para>-</para></entry>
-     </row>
-
-     <row>
-      <entry><para>x+7</para></entry>
-
-      <entry><para>CRITICAL</para></entry>
-
-      <entry><para>Grappe RAID hors d'usage</para></entry>
-
-      <entry><para>-</para></entry>
-
-      <entry><para>-</para></entry>
-     </row>
-    </tbody>
-   </tgroup>
-  </informaltable>
-
-  <para>Vu cette séquence de contrôles, vous devriez seulement voir deux entrées
-dans vos journaux, concernant cette catastrophe. La première arrivera à X+2
-quand le service basculera de l'état OK à l'état WARNING. Le deuxième
-arrivera (trop tard), au moment du passage de WARNING à CRITICAL.</para>
-
-  <para>Vous pouriez avoir envie, pour une raison quelconque, d'avoir un historique
-complet de cet accident dans vos journaux. Peut être pour expliquer à votre
-patron comment tout cela est arrivé soudainement, ou aller en rire au bar du
-coin devant quelques coups à boire ….</para>
-
-  <para>Ceci dit, si le suivi précis avait été activé pour les états CRITICAL, les
-états x+4 et x+5 auraient été enregistrés en plus de x+2 et x+3. Pourquoi ?
-parce que dans ce cas-là, Nagios aurait examiné les message émis pour
-vérifier s'ils différaient des précédents. Si le message émis change alors
-que l'état ne change pas, le message sera quand même enregistré. </para>
-
-  <para>Un exemple similaire peut être donné avec un service qui contrôle un serveur
-web. Si le plugin &plugin-http; retourne d'abord un WARNING sur une erreur
-404, puis ensuite des WARNING à cause d'une suite de caractères manquants
-sur la page, vous pouvez avoir envie de le savoir. Si vous n'avez pas activé
-le suivi précis, seul le premier WARNING (celui de l'erreur 404) sera
-enregistré dans les logs et vous n'aurez aucune idée (en analysant les logs
-archivés) que les WARNING suivants ne sont pas dûs à une erreur 404, mais
-plutôt à une suite de caractères manquants de la page web retournée. </para>
- </section>
-
- <section>
-  <title>Dois je activer le suivi précis?</title>
-
-  <para>Tout d'abord, vous devez décider si vous avez réellement besoin d'examiner
-vos logs pour trouver la cause d'un problème. Vous pouvez décider d'activer
-le suivi précis des changements d'état pour quelques services ou hôtes, mais
-pas pour tous. Vous pouvez aussi décider que vous ne surveillerez que
-quelques états d'hôtes ou de services, mais pas tous. Par exemple,
-surveiller les états WARNING et CRITICAL d'un service, et pas les états OK
-ou UNKNOWN.</para>
-
-  <para>La décision d'activer le suivi précis des changements d'état dépend
-principalement du plugin que vous allez utiliser pour contrôler cet hôte ou
-service. Si le plugin retourne toujours le même texte/message pour un état
-particulier, il n'y a aucune raison d'activer ce type de suivi.</para>
- </section>
-
- <section>
-  <title>Comment activer le suivi précis des changements d'état?</title>
-
-  <para>Vous pouvez activer le suivi précis des services et des hôtes en utilisant le
-paramètre <varname>stalking_options</varname> dans les <link
+    <title>Suivi précis des changements d'état</title>
+    
+    <section>
+        <title>Introduction</title>
+        
+        <para>Le suivi précis des changements d'état est une fonctionnalité qui ne sera
+            probablement pas utilisée par beaucoup d'entre vous. Quand elle est activée,
+            elle permet d'enregistrer des changements dans le contrôle d'un service ou
+            d'un hôte, même si l'état de celui-ci ne change pas. Nagios va alors
+            surveiller plus particulièrement ce service ou cet hôte et enregistrer tout
+            changement. Comme vous allez le constater, ceci peut être très utile plus
+            tard, lors d'une analyse de vos fichiers de logs. 
+        </para>
+    </section>
+    
+    <section>
+        <title>Principes de fonctionnement</title>
+        
+        <para>Dans des conditions de fonctionnement normales, le résultat de la
+            surveillance d'un hôte ou d'un service n'est enregistré que lorsqu'il a
+            changé d'état depuis le dernier contrôle. Il y a quelques exceptions à cette
+            règle, mais c'est comme cela que cela se passe la plupart du temps.
+        </para>
+        
+        <para>Si vous activez le suivi précis des changements d'état pour un ou plusieurs
+            états d'un hôte ou d'un service en particulier, Nagios enregistrera dans ses
+            journaux toute différence entre le contrôle actuel et le précédent. Examinez
+            l'exemple suivant, sur 8 tests consécutifs d'un service :
+        </para>
+        
+        <informaltable frame="all">
+            <tgroup cols="5">
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Contrôle du Service #:</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>État du Service:</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Message de sortie de Contrôle:</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Journalisé normalement</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Journalisé avec le suivi précis des changements d'état</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>x</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>grappe RAID optimale</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>x+1</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>OK</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>grappe RAID optimale</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>x+2</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>WARNING</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Grappe RAID dégradée (1 disque hors d'usage, 1 disque de secours en cours de
+                                reconstruction)
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata fileref="images/checkmark.png"
+format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata fileref="images/checkmark.png"
+format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>x+3</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Grappe RAID dégradée (2 disques hors d'usage, 1 disque de secours mis en
+                                ligne, 1 disque de secours en cours de reconstruction)
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata fileref="images/checkmark.png"
+format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata fileref="images/checkmark.png"
+format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>x+4</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Grappe RAID dégradée (3 disque hors d'usage, 2 disque de secours mis en
+                                ligne)
+                            </para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata fileref="images/checkmark.png"
+format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>x+5</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Grappe RAID hors d'usage</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>
+                                <inlinemediaobject>
+                                     
+                                    <imageobject>
+                                         <imagedata fileref="images/checkmark.png"
+format="PNG"/>
+                                    </imageobject>
+                                </inlinemediaobject>
+                            </para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>x+6</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Grappe RAID hors d'usage</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                    </row>
+                    
+                    <row>
+                        <entry>
+                            <para>x+7</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>CRITICAL</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>Grappe RAID hors d'usage</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                        
+                        <entry>
+                            <para>-</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </informaltable>
+        
+        <para>Vu cette séquence de contrôles, vous devriez seulement voir deux entrées
+            dans vos journaux, concernant cette catastrophe. La première arrivera à X+2
+            quand le service basculera de l'état OK à l'état WARNING. Le deuxième
+            arrivera (trop tard), au moment du passage de WARNING à CRITICAL.
+        </para>
+        
+        <para>Vous pouriez avoir envie, pour une raison quelconque, d'avoir un historique
+            complet de cet accident dans vos journaux. Peut être pour expliquer à votre
+            patron comment tout cela est arrivé soudainement, ou aller en rire au bar du
+            coin devant quelques coups à boire ….
+        </para>
+        
+        <para>Ceci dit, si le suivi précis avait été activé pour les états CRITICAL, les
+            états x+4 et x+5 auraient été enregistrés en plus de x+2 et x+3. Pourquoi ?
+            parce que dans ce cas-là, Nagios aurait examiné les message émis pour
+            vérifier s'ils différaient des précédents. Si le message émis change alors
+            que l'état ne change pas, le message sera quand même enregistré. 
+        </para>
+        
+        <para>Un exemple similaire peut être donné avec un service qui contrôle un serveur
+            web. Si le plugin &plugin-http; retourne d'abord un WARNING sur une erreur
+            404, puis ensuite des WARNING à cause d'une suite de caractères manquants
+            sur la page, vous pouvez avoir envie de le savoir. Si vous n'avez pas activé
+            le suivi précis, seul le premier WARNING (celui de l'erreur 404) sera
+            enregistré dans les logs et vous n'aurez aucune idée (en analysant les logs
+            archivés) que les WARNING suivants ne sont pas dûs à une erreur 404, mais
+            plutôt à une suite de caractères manquants de la page web retournée. 
+        </para>
+    </section>
+    
+    <section>
+        <title>Dois je activer le suivi précis?</title>
+        
+        <para>Tout d'abord, vous devez décider si vous avez réellement besoin d'examiner
+            vos logs pour trouver la cause d'un problème. Vous pouvez décider d'activer
+            le suivi précis des changements d'état pour quelques services ou hôtes, mais
+            pas pour tous. Vous pouvez aussi décider que vous ne surveillerez que
+            quelques états d'hôtes ou de services, mais pas tous. Par exemple,
+            surveiller les états WARNING et CRITICAL d'un service, et pas les états OK
+            ou UNKNOWN.
+        </para>
+        
+        <para>La décision d'activer le suivi précis des changements d'état dépend
+            principalement du plugin que vous allez utiliser pour contrôler cet hôte ou
+            service. Si le plugin retourne toujours le même texte/message pour un état
+            particulier, il n'y a aucune raison d'activer ce type de suivi.
+        </para>
+    </section>
+    
+    <section>
+        <title>Comment activer le suivi précis des changements d'état?</title>
+        
+        <para>Vous pouvez activer le suivi précis des services et des hôtes en utilisant le
+            paramètre <varname>stalking_options</varname> dans les <link
 linkend="configuringnagios-configobject">définitions d'hôtes et de
-services</link>.</para>
- </section>
-
- <section>
-  <title>Différences entre services volatiles et suivi précis?</title>
-
-  <para>Les <link linkend="advancedtopics-volatileservices">services
-volatiles</link> sont similaires, mais provoqueront les envois de
-notifications et les déclenchements d'actions sur événements. Le suivi
-précis des changements d'état ne sert que pour la journalisation</para>
- </section>
-
- <section>
-  <title>Inconvénients</title>
-
-  <para>Vous devez être conscients du fait qu'activer ce type de suivi amène
-quelques inconvénients. Ils sont relatifs aux fonctions d'enregistrement
-trouvées dans les différents <link linkend="thebasics-cgis">CGIs</link>
-(histogramme, résumé des alertes, etc.). Comme le suivi précis va apporter
-des entrées supplémentaires dans les journaux, les données retournées
-montreront un accroissement sensible du nombre d'alertes. </para>
-
-  <para>D'une manière générale, je vous conseille de ne <emphasis>pas</emphasis>
-activer le suivi précis sans avoir mené auparavant une réflexion profonde
-sur le sujet. Mais, bien entendu, c'est là pour servir si vous en avez
-besoin. </para>
- </section>
+                services
+            </link>
+            .
+        </para>
+    </section>
+    
+    <section>
+        <title>Différences entre services volatiles et suivi précis?</title>
+        
+        <para>
+            Les <link linkend="advancedtopics-volatileservices">services
+                volatiles
+            </link>
+            sont similaires, mais provoqueront les envois de
+            notifications et les déclenchements d'actions sur événements. Le suivi
+            précis des changements d'état ne sert que pour la journalisation
+        </para>
+    </section>
+    
+    <section>
+        <title>Inconvénients</title>
+        
+        <para>Vous devez être conscients du fait qu'activer ce type de suivi amène
+            quelques inconvénients. Ils sont relatifs aux fonctions d'enregistrement
+            trouvées dans les différents <link linkend="thebasics-cgis">CGIs</link>
+            (histogramme, résumé des alertes, etc.). Comme le suivi précis va apporter
+            des entrées supplémentaires dans les journaux, les données retournées
+            montreront un accroissement sensible du nombre d'alertes. 
+        </para>
+        
+        <para>
+            D'une manière générale, je vous conseille de ne <emphasis>pas</emphasis>
+            activer le suivi précis sans avoir mené auparavant une réflexion profonde
+            sur le sujet. Mais, bien entendu, c'est là pour servir si vous en avez
+            besoin. 
+        </para>
+    </section>
 </chapter>

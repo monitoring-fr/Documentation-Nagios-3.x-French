@@ -7,226 +7,276 @@
 ]
 >
 <chapter id="advancedtopics-oncallrotation" xreflabel="On-Call Rotations">
-	<title>Les astreintes à la demande</title>
-	<section>
-		<title>Introduction</title>
-		<para>
-			<inlinemediaobject> <imageobject> <imagedata
-fileref="images/objects-contacts.png" format="PNG"/> </imageobject>
-</inlinemediaobject> <inlinemediaobject> <imageobject> <imagedata
-fileref="images/objects-timeperiods.png" format="PNG"/> </imageobject>
-</inlinemediaobject>Les Administrateurs peuvent souvent être dérangés au
-téléphone, les appels de téléphone cellulaire, etc. à n'importe quel
-moment. Personne n'aime être réveillé à 4h00 pour fixer un problème. Mais
-c'est souvent mieux pour régler le problème dans le milieu de la nuit,
-plutôt que de voir le visage en colère du patron malheureux quand vous vous
-promenez à 9h le matin suivant.</para>
-		<para>Pour ces administrateurs chanceux qui peuvent se partager la responsabilité
-de répondre aux alertes, les astreintes à la demande est souvent le choix
-judicieux. Plusieurs administrateurs vont alternativement gérer les
-notifications les week-end, les nuits, les vacances, ect…</para>
-		<para>Nous allons vous montrer comment créer des définitions de <link
+    <title>Les astreintes à la demande</title>
+    <section>
+        <title>Introduction</title>
+        <para>
+            <inlinemediaobject>
+                 
+                <imageobject>
+                     <imagedata
+fileref="images/objects-contacts.png" format="PNG"/>
+                </imageobject>
+            </inlinemediaobject>
+             
+            <inlinemediaobject>
+                 
+                <imageobject>
+                    <imagedata
+fileref="images/objects-timeperiods.png" format="PNG"/>
+                </imageobject>
+            </inlinemediaobject>
+            Les Administrateurs peuvent souvent être dérangés au
+            téléphone, les appels de téléphone cellulaire, etc. à n'importe quel
+            moment. Personne n'aime être réveillé à 4h00 pour fixer un problème. Mais
+            c'est souvent mieux pour régler le problème dans le milieu de la nuit,
+            plutôt que de voir le visage en colère du patron malheureux quand vous vous
+            promenez à 9h le matin suivant.
+        </para>
+        <para>Pour ces administrateurs chanceux qui peuvent se partager la responsabilité
+            de répondre aux alertes, les astreintes à la demande est souvent le choix
+            judicieux. Plusieurs administrateurs vont alternativement gérer les
+            notifications les week-end, les nuits, les vacances, ect…
+        </para>
+        <para>
+            Nous allons vous montrer comment créer des définitions de <link
 linkend="thebasics-timeperiods">période de temps</link> pour vous faciliter
-le plus possible la rotation de l'astreinte. Ces définitions ne pourront pas
-remplacer une intervention humaine (un administrateur appelé est malade, un
-changement de dernière minute, un lançé de téléphone dans la rivière), mais
-ceci permettra d'avoir une installation concordant avec le fonctionnement de
-votre planning d'entreprise.</para>
-	</section>
-	<section>
-		<title>Scénario 1: Les vacances et les week-ends</title>
-		<para>2 Administrateurs - John et Bob - sont responsable de répondre aux alertes
-Nagios. John recoit toutes les notifications de la semaine (et les nuits de
-la semaine) - excepté les vancances - et Bob quant à lui gérera celle du
-week-end et des vacances. Bonne pioche Bob! Nous allons voir comment définir
-ce type astreinte en utilisant les périodes de temps…</para>
-		<para>Premièrement, définissons les périodes de temps pour les vances:</para>
-		<programlisting>define timeperiod{
-		        name    holidays
-		        timeperiod_name holidays
-		        january 1               00:00-24:00     ; New Year's Day
-		        2008-03-23              00:00-24:00     ; Easter (2008)
-		        2009-04-12              00:00-24:00     ; Easter (2009)
-		        monday -1 may           00:00-24:00     ; Memorial Day (Last Monday in May)
-		        july 4                  00:00-24:00     ; Independence Day
-		        monday 1 september      00:00-24:00     ; Labor Day (1st Monday in September)
-		        thursday 4 november     00:00-24:00     ; Thanksgiving (4th Thursday in November)
-		        december 25             00:00-24:00     ; Christmas
-		        december 31             17:00-24:00     ; New Year's Eve (5pm onwards)
-		        }</programlisting>
-		<para>Ensuite, définissons les périodes d'astreintes de John incluant les jours et
-les nuits de la semaine tout en excluant les dates qu'il aura définit pour
-ces vacances:</para>
-		<programlisting>define timeperiod{
-		        timeperiod_name       john-oncall
-		        monday             00:00-24:00
-		        tuesday            00:00-24:00
-		        wednesday             00:00-24:00
-		        thursday              00:00-24:00
-		        friday             00:00-24:00
-		        exclude            holidays       ; Exclude holiday dates/times defined elsewhere
-		        }</programlisting>
-		<para>Nous pouvons référencer cette période de temps dans la définition du contact
-John:</para>
-		<programlisting>define contact{
-		        contact_name                  john
-		        …
-		        host_notification_period            john-oncall
-		        service_notification_period         john-oncall
-		        }</programlisting>
-		<para>Définissons une nouvelle période de temps pour les astreintes de Bob
-incluant le week-end et les dates définies dans la période de temps
-<quote>holidays</quote>:</para>
-		<programlisting>define timeperiod{
-		        timeperiod_name         bob-oncall
-		        friday              00:00-24:00
-		        saturday                00:00-24:00
-		        use                 holidays        ; Also include holiday date/times defined elsewhere
-		        }</programlisting>
-		<para>Nous pouvons référencer cette période de temps dans la définition du contact
-Bob:</para>
-		<programlisting>define contact{
-		        contact_name                  bob
-		        …
-		        host_notification_period           bob-oncall
-		        service_notification_period       bob-oncall
-		        }</programlisting>
-	</section>
-	<section>
-		<title>Scénario 2: Jours alternés: </title>
-		<para>Dans ce scénario, John et Bob se partage les alertes à tours de rôle sans
-être regardant sur la semaine, le week-end, ou les vacances.</para>
-		<para>Définissons une période de temps de quand John recevra les
-notifications. Admettons qu'aujourd'hui nous sommes le 1er aout 2007 et que
-john commence son astreinte aujourd'hui. La définition ressemberait à ceci:</para>
-		<programlisting>define timeperiod{
-		        timeperiod_name         john-oncall
-		        2007-08-01 / 2  00:00-24:00     ; Every two days, starting August 1st, 2007
-		        }</programlisting>
-		<para>Maintenant, au tour de Bob. Bob reçoit les notifications les jours où John
-n'en reçoit pas. Son astreinte commencera donc le lendemain (2 aout 2007).</para>
-		<programlisting>define timeperiod{
-		        timeperiod_name         bob-oncall
-		        2007-08-02 / 2  00:00-24:00     ; Every two days, starting August 2nd, 2007
-		        }</programlisting>
-		<para>Maintenant, vous avez besoin de renseigner ces périodes de temps dans la
-définition des contacts John et Bob:</para>
-		<programlisting>define contact{
-		        contact_name            john
-		        …
-		        host_notification_period                john-oncall
-		        service_notification_period             john-oncall
-		        }
-		define contact{
-		        contact_name            bob
-		        …
-		        host_notification_period                bob-oncall
-		        service_notification_period             bob-oncall
-		        }</programlisting>
-	</section>
-	<section>
-		<title>Scénario 3: Semaines alternées</title>
-		<para>Dans ce scénario, les astreintes de John et Bob sont alternées par
-semaine. John débute son astreinte du dimanche jusqu'au samedi d'après, et
-Bob prend le relais la semaine suivante pendant 7 jours … Ainsi de suite.</para>
-		<para>Nous allons définir l'astreinte de John. Admettons que nous sommes le
-dimanche 29 juillet 2007 et John doit débuter son astreinte cette semaine
-(débute aujourd'hui), la définition ressemblerait à ceci:</para>
-		<programlisting>define timeperiod{
-		        timeperiod_name         john-oncall
-		        2007-07-29 / 14 00:00-24:00     ; Every 14 days (two weeks), starting Sunday, July 29th, 2007
-		        2007-07-30 / 14 00:00-24:00     ; Every other Monday starting July 30th, 2007
-		        2007-07-31 / 14 00:00-24:00     ; Every other Tuesday starting July 31st, 2007
-		        2007-08-01 / 14 00:00-24:00     ; Every other Wednesday starting August 1st, 2007
-		        2007-08-02 / 14 00:00-24:00     ; Every other Thursday starting August 2nd, 2007
-		        2007-08-03 / 14 00:00-24:00     ; Every other Friday starting August 3rd, 2007
-		        2007-08-04 / 14 00:00-24:00     ; Every other Saturday starting August 4th, 2007
-		        }</programlisting>
-		<para>Maintenant, au tour de Bob, Quant à lui, son astreinte débutera le dimanche
-d'après (le 5 aout 2007).</para>
-		<programlisting>define timeperiod{
-		        timeperiod_name         bob-oncall
-		        2007-08-05 / 14 00:00-24:00     ; Every 14 days (two weeks), starting Sunday, August 5th, 2007
-		        2007-08-06 / 14 00:00-24:00     ; Every other Monday starting August 6th, 2007
-		        2007-08-07 / 14 00:00-24:00     ; Every other Tuesday starting August 7th, 2007
-		        2007-08-08 / 14 00:00-24:00     ; Every other Wednesday starting August 8th, 2007
-		        2007-08-09 / 14 00:00-24:00     ; Every other Thursday starting August 9th, 2007
-		        2007-08-10 / 14 00:00-24:00     ; Every other Friday starting August 10th, 2007
-		        2007-08-11 / 14 00:00-24:00     ; Every other Saturday starting August 11th, 2007
-		        }</programlisting>
-		<para>Maintenant, vous avez besoin de renseigner ces périodes de temps dans la
-définition des contacts John et Bob:</para>
-		<programlisting>define contact{
-		        contact_name            john
-		        …
-		        host_notification_period                john-oncall
-		        service_notification_period             john-oncall
-		        }
-		define contact{
-		        contact_name            bob
-		        …
-		        host_notification_period                bob-oncall
-		        service_notification_period             bob-oncall
-		        }</programlisting>
-	</section>
-	<section>
-		<title>Scénario 4: Les jours de vacances</title>
-		<para>Dans ce scénario, John prend les alertes tous les jours sauf quand il est
-absent. Il a le droit à plusieurs jours de congés chaque mois, et il a
-planifié ces vacances. Bob prendra les notifications when John sera absent.</para>
-		<para>Premièrement, définissons les périodes de temps où john s'absente:</para>
-		<programlisting>define timeperiod{
-			        name    john-out-of-office
-			        timeperiod_name john-out-of-office
-			        day 15                  00:00-24:00             ; 15th day of each month
-			        day -1                  00:00-24:00             ; Last day of each month (28th, 29th, 30th, or 31st)
-			        day -2                  00:00-24:00             ; 2nd to last day of each month (27th, 28th, 29th, or 30th)
-			        january 2               00:00-24:00             ; January 2nd each year
-			        june 1 - july 5         00:00-24:00             ; Yearly camping trip (June 1st - July 5th)
-			        2007-11-01 - 2007-11-10 00:00-24:00             ; Vacation to the US Virgin Islands (November 1st-10th, 2007)
-			        }</programlisting>
-		<para>Ensuite, définissons une période de temps pour l'astreinte de john tout en
-excluant ces jours de repos: </para>
-		<programlisting>define timeperiod{
-			        timeperiod_name         john-oncall
-			        monday              00:00-24:00
-			        tuesday             00:00-24:00
-			        wednesday               00:00-24:00
-			        thursday                00:00-24:00
-			        friday              00:00-24:00
-			        exclude            john-out-of-office     ; Exclude dates/times John is out
-			        }</programlisting>
-		<para>Nous pouvons référencer cette période de temps dans la définition du contact
-John:</para>
-		<programlisting>define contact{
-			        contact_name                 john
-			        …
-			        host_notification_period          john-oncall
-			        service_notification_period       john-oncall
-			        }</programlisting>
-		<para>Définissons la nouvelle période de temps de l'astreinte de Bob en incluant
-les dates d'absence de John:</para>
-		<programlisting>define timeperiod{
-			        timeperod_name     bob-oncall
-			        use              john-out-of-office      ; Include holiday date/times that John is out
-			        }</programlisting>
-		<para>Nous pouvons référencer cette période de temps dans la définition du contact
-Bob:</para>
-		<programlisting>define contact{
-			        contact_name                 bob
-			        …
-			        host_notification_period         bob-oncall
-			        service_notification_period       bob-oncall
-			        }</programlisting>
-	</section>
-	<section>
-		<title>Autres scénarios</title>
-		<para>IL y a une multitude de scénario de période d'astreintes possible. Le
-paramètre d'exception de date dans la <link
+            le plus possible la rotation de l'astreinte. Ces définitions ne pourront pas
+            remplacer une intervention humaine (un administrateur appelé est malade, un
+            changement de dernière minute, un lançé de téléphone dans la rivière), mais
+            ceci permettra d'avoir une installation concordant avec le fonctionnement de
+            votre planning d'entreprise.
+        </para>
+    </section>
+    <section>
+        <title>Scénario 1: Les vacances et les week-ends</title>
+        <para>2 Administrateurs - John et Bob - sont responsable de répondre aux alertes
+            Nagios. John recoit toutes les notifications de la semaine (et les nuits de
+            la semaine) - excepté les vancances - et Bob quant à lui gérera celle du
+            week-end et des vacances. Bonne pioche Bob! Nous allons voir comment définir
+            ce type astreinte en utilisant les périodes de temps…
+        </para>
+        <para>Premièrement, définissons les périodes de temps pour les vances:</para>
+        <programlisting>define timeperiod{
+                    name    holidays
+                    timeperiod_name holidays
+                    january 1               00:00-24:00     ; New Year's Day
+                    2008-03-23              00:00-24:00     ; Easter (2008)
+                    2009-04-12              00:00-24:00     ; Easter (2009)
+                    monday -1 may           00:00-24:00     ; Memorial Day (Last Monday in May)
+                    july 4                  00:00-24:00     ; Independence Day
+                    monday 1 september      00:00-24:00     ; Labor Day (1st Monday in September)
+                    thursday 4 november     00:00-24:00     ; Thanksgiving (4th Thursday in November)
+                    december 25             00:00-24:00     ; Christmas
+                    december 31             17:00-24:00     ; New Year's Eve (5pm onwards)
+                    }
+        </programlisting>
+        <para>Ensuite, définissons les périodes d'astreintes de John incluant les jours et
+            les nuits de la semaine tout en excluant les dates qu'il aura définit pour
+            ces vacances:
+        </para>
+        <programlisting>define timeperiod{
+                    timeperiod_name       john-oncall
+                    monday             00:00-24:00
+                    tuesday            00:00-24:00
+                    wednesday             00:00-24:00
+                    thursday              00:00-24:00
+                    friday             00:00-24:00
+                    exclude            holidays       ; Exclude holiday dates/times defined elsewhere
+                    }
+        </programlisting>
+        <para>Nous pouvons référencer cette période de temps dans la définition du contact
+            John:
+        </para>
+        <programlisting>define contact{
+                    contact_name                  john
+                    …
+                    host_notification_period            john-oncall
+                    service_notification_period         john-oncall
+                    }
+        </programlisting>
+        <para>Définissons une nouvelle période de temps pour les astreintes de Bob
+            incluant le week-end et les dates définies dans la période de temps
+            <quote>holidays</quote>:
+        </para>
+        <programlisting>define timeperiod{
+                    timeperiod_name         bob-oncall
+                    friday              00:00-24:00
+                    saturday                00:00-24:00
+                    use                 holidays        ; Also include holiday date/times defined elsewhere
+                    }
+        </programlisting>
+        <para>Nous pouvons référencer cette période de temps dans la définition du contact
+            Bob:
+        </para>
+        <programlisting>define contact{
+                    contact_name                  bob
+                    …
+                    host_notification_period           bob-oncall
+                    service_notification_period       bob-oncall
+                    }
+        </programlisting>
+    </section>
+    <section>
+        <title>Scénario 2: Jours alternés: </title>
+        <para>Dans ce scénario, John et Bob se partage les alertes à tours de rôle sans
+            être regardant sur la semaine, le week-end, ou les vacances.
+        </para>
+        <para>Définissons une période de temps de quand John recevra les
+            notifications. Admettons qu'aujourd'hui nous sommes le 1er aout 2007 et que
+            john commence son astreinte aujourd'hui. La définition ressemberait à ceci:
+        </para>
+        <programlisting>define timeperiod{
+                    timeperiod_name         john-oncall
+                    2007-08-01 / 2  00:00-24:00     ; Every two days, starting August 1st, 2007
+                    }
+        </programlisting>
+        <para>Maintenant, au tour de Bob. Bob reçoit les notifications les jours où John
+            n'en reçoit pas. Son astreinte commencera donc le lendemain (2 aout 2007).
+        </para>
+        <programlisting>define timeperiod{
+                    timeperiod_name         bob-oncall
+                    2007-08-02 / 2  00:00-24:00     ; Every two days, starting August 2nd, 2007
+                    }
+        </programlisting>
+        <para>Maintenant, vous avez besoin de renseigner ces périodes de temps dans la
+            définition des contacts John et Bob:
+        </para>
+        <programlisting>define contact{
+                    contact_name            john
+                    …
+                    host_notification_period                john-oncall
+                    service_notification_period             john-oncall
+                    }
+            define contact{
+                    contact_name            bob
+                    …
+                    host_notification_period                bob-oncall
+                    service_notification_period             bob-oncall
+                    }
+        </programlisting>
+    </section>
+    <section>
+        <title>Scénario 3: Semaines alternées</title>
+        <para>Dans ce scénario, les astreintes de John et Bob sont alternées par
+            semaine. John débute son astreinte du dimanche jusqu'au samedi d'après, et
+            Bob prend le relais la semaine suivante pendant 7 jours … Ainsi de suite.
+        </para>
+        <para>Nous allons définir l'astreinte de John. Admettons que nous sommes le
+            dimanche 29 juillet 2007 et John doit débuter son astreinte cette semaine
+            (débute aujourd'hui), la définition ressemblerait à ceci:
+        </para>
+        <programlisting>define timeperiod{
+                    timeperiod_name         john-oncall
+                    2007-07-29 / 14 00:00-24:00     ; Every 14 days (two weeks), starting Sunday, July 29th, 2007
+                    2007-07-30 / 14 00:00-24:00     ; Every other Monday starting July 30th, 2007
+                    2007-07-31 / 14 00:00-24:00     ; Every other Tuesday starting July 31st, 2007
+                    2007-08-01 / 14 00:00-24:00     ; Every other Wednesday starting August 1st, 2007
+                    2007-08-02 / 14 00:00-24:00     ; Every other Thursday starting August 2nd, 2007
+                    2007-08-03 / 14 00:00-24:00     ; Every other Friday starting August 3rd, 2007
+                    2007-08-04 / 14 00:00-24:00     ; Every other Saturday starting August 4th, 2007
+                    }
+        </programlisting>
+        <para>Maintenant, au tour de Bob, Quant à lui, son astreinte débutera le dimanche
+            d'après (le 5 aout 2007).
+        </para>
+        <programlisting>define timeperiod{
+                    timeperiod_name         bob-oncall
+                    2007-08-05 / 14 00:00-24:00     ; Every 14 days (two weeks), starting Sunday, August 5th, 2007
+                    2007-08-06 / 14 00:00-24:00     ; Every other Monday starting August 6th, 2007
+                    2007-08-07 / 14 00:00-24:00     ; Every other Tuesday starting August 7th, 2007
+                    2007-08-08 / 14 00:00-24:00     ; Every other Wednesday starting August 8th, 2007
+                    2007-08-09 / 14 00:00-24:00     ; Every other Thursday starting August 9th, 2007
+                    2007-08-10 / 14 00:00-24:00     ; Every other Friday starting August 10th, 2007
+                    2007-08-11 / 14 00:00-24:00     ; Every other Saturday starting August 11th, 2007
+                    }
+        </programlisting>
+        <para>Maintenant, vous avez besoin de renseigner ces périodes de temps dans la
+            définition des contacts John et Bob:
+        </para>
+        <programlisting>define contact{
+                    contact_name            john
+                    …
+                    host_notification_period                john-oncall
+                    service_notification_period             john-oncall
+                    }
+            define contact{
+                    contact_name            bob
+                    …
+                    host_notification_period                bob-oncall
+                    service_notification_period             bob-oncall
+                    }
+        </programlisting>
+    </section>
+    <section>
+        <title>Scénario 4: Les jours de vacances</title>
+        <para>Dans ce scénario, John prend les alertes tous les jours sauf quand il est
+            absent. Il a le droit à plusieurs jours de congés chaque mois, et il a
+            planifié ces vacances. Bob prendra les notifications when John sera absent.
+        </para>
+        <para>Premièrement, définissons les périodes de temps où john s'absente:</para>
+        <programlisting>define timeperiod{
+                    name    john-out-of-office
+                    timeperiod_name john-out-of-office
+                    day 15                  00:00-24:00             ; 15th day of each month
+                    day -1                  00:00-24:00             ; Last day of each month (28th, 29th, 30th, or 31st)
+                    day -2                  00:00-24:00             ; 2nd to last day of each month (27th, 28th, 29th, or 30th)
+                    january 2               00:00-24:00             ; January 2nd each year
+                    june 1 - july 5         00:00-24:00             ; Yearly camping trip (June 1st - July 5th)
+                    2007-11-01 - 2007-11-10 00:00-24:00             ; Vacation to the US Virgin Islands (November 1st-10th, 2007)
+                    }
+        </programlisting>
+        <para>Ensuite, définissons une période de temps pour l'astreinte de john tout en
+            excluant ces jours de repos: 
+        </para>
+        <programlisting>define timeperiod{
+                    timeperiod_name         john-oncall
+                    monday              00:00-24:00
+                    tuesday             00:00-24:00
+                    wednesday               00:00-24:00
+                    thursday                00:00-24:00
+                    friday              00:00-24:00
+                    exclude            john-out-of-office     ; Exclude dates/times John is out
+                    }
+        </programlisting>
+        <para>Nous pouvons référencer cette période de temps dans la définition du contact
+            John:
+        </para>
+        <programlisting>define contact{
+                    contact_name                 john
+                    …
+                    host_notification_period          john-oncall
+                    service_notification_period       john-oncall
+                    }
+        </programlisting>
+        <para>Définissons la nouvelle période de temps de l'astreinte de Bob en incluant
+            les dates d'absence de John:
+        </para>
+        <programlisting>define timeperiod{
+                    timeperod_name     bob-oncall
+                    use              john-out-of-office      ; Include holiday date/times that John is out
+                    }
+        </programlisting>
+        <para>Nous pouvons référencer cette période de temps dans la définition du contact
+            Bob:
+        </para>
+        <programlisting>define contact{
+                    contact_name                 bob
+                    …
+                    host_notification_period         bob-oncall
+                    service_notification_period       bob-oncall
+                    }
+        </programlisting>
+    </section>
+    <section>
+        <title>Autres scénarios</title>
+        <para>IL y a une multitude de scénario de période d'astreintes possible. Le
+            paramètre d'exception de date dans la <link
 linkend="thebasics-timeperiods">définition de période de temps</link> est
-capable de tout et n'importe quelle période, format de date dont vous avez
-besoin. Si vous faites une erreur en créant vos période de temps, elle sera
-bénéfique pour quelqu'un et moins pour une autre. :-)</para>
-	</section>
+            capable de tout et n'importe quelle période, format de date dont vous avez
+            besoin. Si vous faites une erreur en créant vos période de temps, elle sera
+            bénéfique pour quelqu'un et moins pour une autre. :-)
+        </para>
+    </section>
 </chapter>
 

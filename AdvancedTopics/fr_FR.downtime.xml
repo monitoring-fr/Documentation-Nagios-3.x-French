@@ -7,123 +7,148 @@
 ]
 >
 <chapter id="advancedtopics-downtime" xreflabel="Scheduled Downtime">
-	<title>Période de maintenance planifiée</title>
-	<section>
-		<title>Introduction</title>
-		<para>
-			<inlinemediaobject> <imageobject> <imagedata fileref="images/downtime.png"
-format="PNG"/> </imageobject> </inlinemediaobject> Nagios vous permet de
-planifier des periodes de maintenance programmée pour les hôtes et les
-services que vous monitorer. C'est pratique dans le cas où vous allez
-arrêter des serveurs pour une mise à jour, etc.</para>
-	</section>
-	<section>
-		<title>Programmer une maintenance </title>
-		<para>Vous pouvez programmer des maintenances pour les hôtes et service à travers
-le <link linkend="thebasics-cgis-extinfo_cgi">CGI extinfo</link> ( en
-regardant soit les informations de l'hôtes ou du service). Cliquez sur le
-lien <guimenu>Schedule downtime for this host/service</guimenu> pour
-programmer une maintenance. </para>
-		<para>Lorsque vous programmez une maintenance pour un hôte ou un service, Nagios
-ajoutera un commentaire à cet l'hôte/service pour indiquer qu'il est
-programmé en maintenance pour la période que vous avez définie. Quand cette
-période est écoulée, Nagios va automatiquement supprimer ce commentaire. Pas
-mal, hein?</para>
-	</section>
-	<section>
-		<title>Maintenance fixe ou flexible</title>
-		<para>Quand vous programmerez une maitenance pour un hôte ou un service à travers
-l'interface web, il vous sera demandé si la maintenance est fixe ou
-flexible. Voilà une explication sur les différence entre les maintenance
-<quote>fixe</quote> et <quote>flexible</quote> :</para>
-		<para>les maintenance <quote>fixe</quote> commencent et finissent à l'heure exacte de début et
-de fin que vous avez programmée. Bon, ça c'était facile…</para>
-		<para>La maintenance <quote>Flexible</quote> est utilisé pour les périodes où vous savez que
-l'hôte ou le service sera arrêté pour X minutes (ou heures), mais vous ne
-savez pas exactement quand celà commencera. Quand vous programmez une
-maintenance flexible, Nagios va commencer la maintenance programmée dans
-l'intervalle de debut et de fin que vous avez programmé. La maintenance va
-durée aussi longtemps que la durée que vous avez spécifié quand vous avez
-programmé la maintenance. Celà implique que l'hôte ou le service sur lequel
-vous avez programmé une maintenance se coupera (ou deviendra unreachable),
-ou passe par un état non-OK entre les date de début et de fin que vous avez
-spécifié. Le moment auquel l'hôte ou le service passen dans un état de
-problème détermine l'heure à laquelle Nagios commencera effectivement la
-maintenance. La maitenance durera pour le temps que vous avez spécifié, même
-si l'hôte ou le service est remonté avant que la durée de maintenance
-expire. Celà est fait pour une bonne raison. Comme vous le savez, vous
-pouvez penser que vous avez réglé le problème, mais quand vous à redémarrer
-le serveur 10 fois avant qu'il marche de nouveau bien. Intelligent n'est-ce
-pas!</para>
-	</section>
-	<section>
-		<title>Maintenance déclenchée</title>
-		<para>Quand vous programmez une maintenance pour un hôte ou un service, vous avez
-l'option de faire une maintenance <quote>triggered</quote>. Vous vous demandez ce qu'est
-une maintenance déclenchés (triggered). Avec des maintenances déclenchéss,
-le début d'une maintenance est déclenché par le début d'une autre
-maintenance d'un hôte ou d'un service. C'est extrêmement utile si vous
-programmez une maintenance pour un grand nombre d'hôtes ou de services et
-que le début de la période de maintenance dépend du début d'une autre
-maintenance. Par exemple, vous programmez une maintenance flexible pour un
-hôte particulier (parce que vous aller l'arrêter pour une mise à jour), vous
-voulez peut-être programmer une maintenance déclanchés pour tous les hôtes
-"fils"</para>
-	</section>
-	<section>
-		<title>Comment les maintenances programmées affectent les notifications</title>
-		<para>Quand un hôte ou un service est dans une période de maitenance programmée,
-Nagios n'autorisera pas l'envoi de notifcations pour cet hôte ou
-service. Cependant une notification de <quote>DOWNTIMESTART</quote> sera envoyé pour cet
-hôte ou service, qui sert à indiquer aux administrateurs qu'ils ne
-receveront plus d'alerte pour cet hôte/service.</para>
-		<para>Quand une maintenance programmée est finie, Nagios va autorisé de nouveau
-l'envoit des notifications pour l'hôte ou le service.. Une notification de
-<quote>DOWNTIMEEND</quote> sera envoyé pour notifier aux adiminstrateurs que la
-maintenance programmée est terminé, et qu'ils receveront les alertes de
-nouveau. </para>
-		<para>Si une maintenance programmée est annulé prématurément (avant qu'il expire)
-une notification de <quote>DOWNTIMECANCELLED</quote> sera envoyé aux administrateurs
-concernés. </para>
-	</section>
-	<section>
-		<title>Maintenances programmées qui se superposent</title>
-		<para>Je préfère appeller ça le syndrome du <quote>Oh merde, ça ne marche pas</quote>. Vous
-savez de quoi je parle. Vous arrêtez un serveur pour faire une mise à jour
-de <quote>routine</quote>, et vous vous rendez-compte plus tard que les driver de l'OS ne
-marche pas, que les RAID array ont explosé ou que l'image disque à échoué et
-que vous avez un disque inutile. La moral de l'histoire est qu'une opération
-de routine peut parfois prendre trois à quatre fois plus de temps que vous
-n'aviez prévu. </para>
-		<para>Regardons le scénario suivant : </para>
-		<orderedlist>
-			<listitem>
-				<para>Vous programmez une maintenance pour l'hote A de 7:30pm-9:30pm un lundu</para>
-			</listitem>
-			<listitem>
-				<para>Vous arrêtez le serveur à 7:45pm lundi soir pour commencer une mise à jour
-du disque dur</para>
-			</listitem>
-			<listitem>
-				<para>Après avoir perdu une heure et demi à vous battre avec des erreurs SCSI et
-des incomptibilité de drivers, vous relancez finalement la machine. </para>
-			</listitem>
-			<listitem>
-				<para>à 9:15pm vous vous rendez-compte qu'une de vos partitions a été cachée soit
-ne semble plus exister sur le disque. </para>
-			</listitem>
-			<listitem>
-				<para>Sachant que vous y êtes pour une longue nui, vous revenez et vous programmez
-une maintenance additionnelle pour l'hôte A de 9:20pm le lundi soir à 1:30am
-le mardi matin. </para>
-			</listitem>
-		</orderedlist>
-		<para>Si vous programmez des periodes de maintenance qui se superposent pour un
-hôte ou un service (Dans ce cas les periodes étaient 7:40pm-9:30pm et
-9:20pm-1:30am), Nagios attendra jusqu'à la fin de la dernière periode avant
-d'autoriser de nouveau l'envoi des notifications pour cet hôte ou
-service. Dans cette exemple, les notifications aurait été supprimées pour
-l'hôte A jusqu'à mardi matin 1:30am. </para>
-	</section>
+    <title>Période de maintenance planifiée</title>
+    <section>
+        <title>Introduction</title>
+        <para>
+            <inlinemediaobject>
+                 
+                <imageobject>
+                     <imagedata fileref="images/downtime.png"
+format="PNG"/>
+                </imageobject>
+            </inlinemediaobject>
+             Nagios vous permet de
+            planifier des periodes de maintenance programmée pour les hôtes et les
+            services que vous monitorer. C'est pratique dans le cas où vous allez
+            arrêter des serveurs pour une mise à jour, etc.
+        </para>
+    </section>
+    <section>
+        <title>Programmer une maintenance </title>
+        <para>Vous pouvez programmer des maintenances pour les hôtes et service à travers
+            le <link linkend="thebasics-cgis-extinfo_cgi">CGI extinfo</link> ( en
+            regardant soit les informations de l'hôtes ou du service). Cliquez sur le
+            lien <guimenu>Schedule downtime for this host/service</guimenu> pour
+            programmer une maintenance. 
+        </para>
+        <para>Lorsque vous programmez une maintenance pour un hôte ou un service, Nagios
+            ajoutera un commentaire à cet l'hôte/service pour indiquer qu'il est
+            programmé en maintenance pour la période que vous avez définie. Quand cette
+            période est écoulée, Nagios va automatiquement supprimer ce commentaire. Pas
+            mal, hein?
+        </para>
+    </section>
+    <section>
+        <title>Maintenance fixe ou flexible</title>
+        <para>Quand vous programmerez une maitenance pour un hôte ou un service à travers
+            l'interface web, il vous sera demandé si la maintenance est fixe ou
+            flexible. Voilà une explication sur les différence entre les maintenance
+            <quote>fixe</quote> et <quote>flexible</quote> :
+        </para>
+        <para>
+            les maintenance <quote>fixe</quote> commencent et finissent à l'heure exacte de début et
+            de fin que vous avez programmée. Bon, ça c'était facile…
+        </para>
+        <para>
+            La maintenance <quote>Flexible</quote> est utilisé pour les périodes où vous savez que
+            l'hôte ou le service sera arrêté pour X minutes (ou heures), mais vous ne
+            savez pas exactement quand celà commencera. Quand vous programmez une
+            maintenance flexible, Nagios va commencer la maintenance programmée dans
+            l'intervalle de debut et de fin que vous avez programmé. La maintenance va
+            durée aussi longtemps que la durée que vous avez spécifié quand vous avez
+            programmé la maintenance. Celà implique que l'hôte ou le service sur lequel
+            vous avez programmé une maintenance se coupera (ou deviendra unreachable),
+            ou passe par un état non-OK entre les date de début et de fin que vous avez
+            spécifié. Le moment auquel l'hôte ou le service passen dans un état de
+            problème détermine l'heure à laquelle Nagios commencera effectivement la
+            maintenance. La maitenance durera pour le temps que vous avez spécifié, même
+            si l'hôte ou le service est remonté avant que la durée de maintenance
+            expire. Celà est fait pour une bonne raison. Comme vous le savez, vous
+            pouvez penser que vous avez réglé le problème, mais quand vous à redémarrer
+            le serveur 10 fois avant qu'il marche de nouveau bien. Intelligent n'est-ce
+            pas!
+        </para>
+    </section>
+    <section>
+        <title>Maintenance déclenchée</title>
+        <para>Quand vous programmez une maintenance pour un hôte ou un service, vous avez
+            l'option de faire une maintenance <quote>triggered</quote>. Vous vous demandez ce qu'est
+            une maintenance déclenchés (triggered). Avec des maintenances déclenchéss,
+            le début d'une maintenance est déclenché par le début d'une autre
+            maintenance d'un hôte ou d'un service. C'est extrêmement utile si vous
+            programmez une maintenance pour un grand nombre d'hôtes ou de services et
+            que le début de la période de maintenance dépend du début d'une autre
+            maintenance. Par exemple, vous programmez une maintenance flexible pour un
+            hôte particulier (parce que vous aller l'arrêter pour une mise à jour), vous
+            voulez peut-être programmer une maintenance déclanchés pour tous les hôtes
+            "fils"
+        </para>
+    </section>
+    <section>
+        <title>Comment les maintenances programmées affectent les notifications</title>
+        <para>Quand un hôte ou un service est dans une période de maitenance programmée,
+            Nagios n'autorisera pas l'envoi de notifcations pour cet hôte ou
+            service. Cependant une notification de <quote>DOWNTIMESTART</quote> sera envoyé pour cet
+            hôte ou service, qui sert à indiquer aux administrateurs qu'ils ne
+            receveront plus d'alerte pour cet hôte/service.
+        </para>
+        <para>Quand une maintenance programmée est finie, Nagios va autorisé de nouveau
+            l'envoit des notifications pour l'hôte ou le service.. Une notification de
+            <quote>DOWNTIMEEND</quote> sera envoyé pour notifier aux adiminstrateurs que la
+            maintenance programmée est terminé, et qu'ils receveront les alertes de
+            nouveau. 
+        </para>
+        <para>Si une maintenance programmée est annulé prématurément (avant qu'il expire)
+            une notification de <quote>DOWNTIMECANCELLED</quote> sera envoyé aux administrateurs
+            concernés. 
+        </para>
+    </section>
+    <section>
+        <title>Maintenances programmées qui se superposent</title>
+        <para>
+            Je préfère appeller ça le syndrome du <quote>Oh merde, ça ne marche pas</quote>. Vous
+            savez de quoi je parle. Vous arrêtez un serveur pour faire une mise à jour
+            de <quote>routine</quote>, et vous vous rendez-compte plus tard que les driver de l'OS ne
+            marche pas, que les RAID array ont explosé ou que l'image disque à échoué et
+            que vous avez un disque inutile. La moral de l'histoire est qu'une opération
+            de routine peut parfois prendre trois à quatre fois plus de temps que vous
+            n'aviez prévu. 
+        </para>
+        <para>Regardons le scénario suivant : </para>
+        <orderedlist>
+            <listitem>
+                <para>Vous programmez une maintenance pour l'hote A de 7:30pm-9:30pm un lundu</para>
+            </listitem>
+            <listitem>
+                <para>Vous arrêtez le serveur à 7:45pm lundi soir pour commencer une mise à jour
+                    du disque dur
+                </para>
+            </listitem>
+            <listitem>
+                <para>Après avoir perdu une heure et demi à vous battre avec des erreurs SCSI et
+                    des incomptibilité de drivers, vous relancez finalement la machine. 
+                </para>
+            </listitem>
+            <listitem>
+                <para>à 9:15pm vous vous rendez-compte qu'une de vos partitions a été cachée soit
+                    ne semble plus exister sur le disque. 
+                </para>
+            </listitem>
+            <listitem>
+                <para>Sachant que vous y êtes pour une longue nui, vous revenez et vous programmez
+                    une maintenance additionnelle pour l'hôte A de 9:20pm le lundi soir à 1:30am
+                    le mardi matin. 
+                </para>
+            </listitem>
+        </orderedlist>
+        <para>Si vous programmez des periodes de maintenance qui se superposent pour un
+            hôte ou un service (Dans ce cas les periodes étaient 7:40pm-9:30pm et
+            9:20pm-1:30am), Nagios attendra jusqu'à la fin de la dernière periode avant
+            d'autoriser de nouveau l'envoi des notifications pour cet hôte ou
+            service. Dans cette exemple, les notifications aurait été supprimées pour
+            l'hôte A jusqu'à mardi matin 1:30am. 
+        </para>
+    </section>
 </chapter>
 

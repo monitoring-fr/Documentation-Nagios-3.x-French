@@ -85,13 +85,15 @@
             <listitem>
                 <para>Les contrôles prédictifs de dépendances d'hôtes sont gérés par l'option
                     <xref linkend="configuringnagios-configmain-enable_predictive_host_dependency_checks"
-                    endterm="configuringnagios-configmain-enable_predictive_host_dependency_checks-tech"/>.
+                    endterm="configuringnagios-configmain-enable_predictive_host_dependency_checks-tech"/>
+                    .
                 </para>
             </listitem>
             <listitem>
                 <para>Les contrôles prédictifs de dépendances de services sont gérés par l'option
                     <xref linkend="configuringnagios-configmain-enable_predictive_service_dependency_checks"
-                    endterm="configuringnagios-configmain-enable_predictive_service_dependency_checks-tech"/>.
+                    endterm="configuringnagios-configmain-enable_predictive_service_dependency_checks-tech"/>
+                    .
                 </para>
             </listitem>
         </itemizedlist>
@@ -100,7 +102,9 @@
         <title>Contrôles mis en cache</title>
         <para>Les contrôles prédictifs sont des contrôles faits à la demande et sont donc
             régis par les mêmes règles que les <link linkend="advancedtopics-cachedchecks">
-            contrôles mis en cache</link>. Les contrôles mis en cache peuvent vous permettre 
+                contrôles mis en cache
+            </link>
+            .Les contrôles mis en cache peuvent vous permettre 
             d'améliorer les performances en autorisant Nagios a utiliser un résultat de
             contrôle assez récent plutôt que d'exécuter le contrôle de l'hôte ou du service. 
             Plus d'informations sur les contrôles mis en cache sont disponibles 

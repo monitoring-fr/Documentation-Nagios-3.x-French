@@ -7,274 +7,314 @@
 ]
 >
 <chapter id="advancedtopics-eventhandlers" xreflabel="Event Handlers">
-	<title>Gestionnaires d'événements</title>
-	<section>
-		<title>Introduction</title>
-		<para>
-		    <inlinemediaobject> <imageobject> <imagedata
-fileref="images/eventhandlers.png" format="PNG"/> </imageobject>
-</inlinemediaobject> Les gestionnaires d'événements sont des commandes
-optionnelles qui sont exécutées à chaque fois qu'un changement d'état d'un
-hôte ou d'un service a lieu.</para>
-		<para>Une première utilité de ces gestionnaires d'événements réside dans la
-capacité de Nagios à résoudre les problèmes de manière préventive avant que
-quelqu'un ne reçoive une notification. D'autres utilisations possibles des
-gestionnaires d'événements sont :</para>
-		<itemizedlist>
-			<listitem>
-				<para>Redémarrer un service en erreur</para>
-			</listitem>
-			<listitem>
-				<para>Créer un nouveau ticket dans un système de helpdesk</para>
-			</listitem>
-			<listitem>
-				<para>Enregistrer des événements dans une base de données</para>
-			</listitem>
-			<listitem>
-				<para>Reboot d'un hôte</para>
-			</listitem>
-			<listitem>
-				<para>etc.</para>
-			</listitem>
-		</itemizedlist>
-		<important><para>Le reboot d'un hôte ayant des problèmes de façon automatique par un script
-ne devrait pas être implémenté à la légère. Considérez les conséquences avec
-exactitude avant d'implémenter des reboots automatiques. :-)</para></important>
-	</section>
-	<section>
-		<title>Quand les commandes de gestionnaires d'événements sont-elles exécutées ? </title>
-		<para>Les commandes de gestionnaires d'événements de service et d'hôte sont
-exécutées lorsqu'un service ou un hôte : </para>
-		<itemizedlist>
-			<listitem>
-				<para>Est dans un état d'erreur SOFT </para>
-			</listitem>
-			<listitem>
-				<para>Entre dans un état d'erreur HARD</para>
-			</listitem>
-			<listitem>
-				<para>Se rétablit après un état d'erreur SOFT ou HARD</para>
-			</listitem>
-		</itemizedlist>
-		<para>Les états SOFT et HARD sont décrits en détails <link
-linkend="thebasics-statetypes">ici</link>.</para>
-	</section>
-	<section>
-		<title>Types de gestionnaires d'événements</title>
-		<para>Il ya différents types de gestionnaires d'événements optionnels qui peuvent
-être définis pour prendre en compte les changements d'états et d'hôtes :</para>
-		<itemizedlist>
-			<listitem>
-				<para>Gestionnaires d'événements global d'hôte</para>
-			</listitem>
-			<listitem>
-				<para>Gestionnaires d'événements global de service</para>
-			</listitem>
-			<listitem>
-				<para>Gestionnaires d'événements spécifique à un hôte</para>
-			</listitem>
-			<listitem>
-				<para>Gestionnaires d'événements spécifique à un service</para>
-			</listitem>
-		</itemizedlist>
-		<para>Les gestionnaires d'événements globaux sont exécutés à chaque changement
-d'état d'hôte ou de service, immédiatement avant d'exécuter n'importe quel
-gestionnaire d'événements spécifique d'hôte ou de service. Vous pouvez
-préciser les commandes de gestionnaires d'événements globaux en utilisant
-les options <link
+    <title>Gestionnaires d'événements</title>
+    <section>
+        <title>Introduction</title>
+        <para>
+            <inlinemediaobject>
+                 
+                <imageobject>
+                     <imagedata
+fileref="images/eventhandlers.png" format="PNG"/>
+                </imageobject>
+            </inlinemediaobject>
+             Les gestionnaires d'événements sont des commandes
+            optionnelles qui sont exécutées à chaque fois qu'un changement d'état d'un
+            hôte ou d'un service a lieu.
+        </para>
+        <para>Une première utilité de ces gestionnaires d'événements réside dans la
+            capacité de Nagios à résoudre les problèmes de manière préventive avant que
+            quelqu'un ne reçoive une notification. D'autres utilisations possibles des
+            gestionnaires d'événements sont :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Redémarrer un service en erreur</para>
+            </listitem>
+            <listitem>
+                <para>Créer un nouveau ticket dans un système de helpdesk</para>
+            </listitem>
+            <listitem>
+                <para>Enregistrer des événements dans une base de données</para>
+            </listitem>
+            <listitem>
+                <para>Reboot d'un hôte</para>
+            </listitem>
+            <listitem>
+                <para>etc.</para>
+            </listitem>
+        </itemizedlist>
+        <important>
+            <para>Le reboot d'un hôte ayant des problèmes de façon automatique par un script
+                ne devrait pas être implémenté à la légère. Considérez les conséquences avec
+                exactitude avant d'implémenter des reboots automatiques. :-)
+            </para>
+        </important>
+    </section>
+    <section>
+        <title>Quand les commandes de gestionnaires d'événements sont-elles exécutées ? </title>
+        <para>Les commandes de gestionnaires d'événements de service et d'hôte sont
+            exécutées lorsqu'un service ou un hôte : 
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Est dans un état d'erreur SOFT </para>
+            </listitem>
+            <listitem>
+                <para>Entre dans un état d'erreur HARD</para>
+            </listitem>
+            <listitem>
+                <para>Se rétablit après un état d'erreur SOFT ou HARD</para>
+            </listitem>
+        </itemizedlist>
+        <para>
+            Les états SOFT et HARD sont décrits en détails <link
+linkend="thebasics-statetypes">ici</link>.
+        </para>
+    </section>
+    <section>
+        <title>Types de gestionnaires d'événements</title>
+        <para>Il ya différents types de gestionnaires d'événements optionnels qui peuvent
+            être définis pour prendre en compte les changements d'états et d'hôtes :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Gestionnaires d'événements global d'hôte</para>
+            </listitem>
+            <listitem>
+                <para>Gestionnaires d'événements global de service</para>
+            </listitem>
+            <listitem>
+                <para>Gestionnaires d'événements spécifique à un hôte</para>
+            </listitem>
+            <listitem>
+                <para>Gestionnaires d'événements spécifique à un service</para>
+            </listitem>
+        </itemizedlist>
+        <para>Les gestionnaires d'événements globaux sont exécutés à chaque changement
+            d'état d'hôte ou de service, immédiatement avant d'exécuter n'importe quel
+            gestionnaire d'événements spécifique d'hôte ou de service. Vous pouvez
+            préciser les commandes de gestionnaires d'événements globaux en utilisant
+            les options <link
 linkend="configuringnagios-configmain-global_host_event_handler">&config-global_host_event_handler;</link>
-et <link
+            et <link
 linkend="configuringnagios-configmain-global_service_event_handler">&config-global_service_event_handler;</link>
-de votre fichier de configuration principal.</para>
-		<para>Les hôtes et les services peuvent avoir leur propre commande de gestionnaire
-d'événements qui s'exécute à chaque changement d'état. Vous pouvez préciser
-un gestionnaire d'événements qui doit être exécuté en utilisant l'option
-<varname>event_handler</varname> dans les définitions d'<link
+            de votre fichier de configuration principal.
+        </para>
+        <para>Les hôtes et les services peuvent avoir leur propre commande de gestionnaire
+            d'événements qui s'exécute à chaque changement d'état. Vous pouvez préciser
+            un gestionnaire d'événements qui doit être exécuté en utilisant l'option
+            <varname>event_handler</varname> dans les définitions d'<link
 linkend="configuringnagios-objectdefinitions-host">hôtes</link> and <link
 linkend="configuringnagios-objectdefinitions-service">services</link>. Ces
-gestionnaires spécifiques d'hôtes et de services sont exécutés juste après
-l'exécution du gestionnaire global (optionnel) d'hôtes et de services.</para>
-	</section>
-	<section>
-		<title>Activation des gestionnaires d'événements</title>
-		<para>Les gestionnaires d'événements peuvent être activés et désactivés au niveau
-général du programme en utilisant <link
+            gestionnaires spécifiques d'hôtes et de services sont exécutés juste après
+            l'exécution du gestionnaire global (optionnel) d'hôtes et de services.
+        </para>
+    </section>
+    <section>
+        <title>Activation des gestionnaires d'événements</title>
+        <para>Les gestionnaires d'événements peuvent être activés et désactivés au niveau
+            général du programme en utilisant <link
 linkend="configuringnagios-configmain-enable_event_handlers">&config-enable_event_handlers;</link>
-dans votre fichier de configuration principal.</para>
-		<para>Les gestionnaires d'événements spécifiques aux hôtes et services peuvent
-être activés et désactivés en utilisant les paramètres
-<varname>event_handler_enabled</varname> dans vos définitions d'<link
+            dans votre fichier de configuration principal.
+        </para>
+        <para>Les gestionnaires d'événements spécifiques aux hôtes et services peuvent
+            être activés et désactivés en utilisant les paramètres
+            <varname>event_handler_enabled</varname> dans vos définitions d'<link
 linkend="configuringnagios-objectdefinitions-host">hôtes</link> et de <link
 linkend="configuringnagios-objectdefinitions-service">services</link>. Les
-gestionnaires d'événements spécifiques aux hôtes et services ne peuvent pas
-être exécutés si l'option globale <link
+            gestionnaires d'événements spécifiques aux hôtes et services ne peuvent pas
+            être exécutés si l'option globale <link
 linkend="configuringnagios-configmain-enable_event_handlers">&config-enable_event_handlers;</link>
-est désactivée.</para>
-	</section>
-	<section>
-		<title>Ordre d'exécution des gestionnaires d'événements</title>
-		<para>Comme précédemment indiqué, les gestionnaires d'événements globaux d'hôtes
-et de services sont exécutés juste avant les gestionnaires d'événements
-spécifiques d'hôtes et de services.</para>
-		<para>Pour l'entrée dans un état d'erreur HARD et le retour à la normale, les
-gestionnaires d'événements sont exécutés immédiatement après l'envoi des
-notifications.</para>
-	</section>
-	<section>
-		<title>Écriture d'une commande de gestionnaire d'événements</title>
-		<para>Les commandes de gestionnaires d'événements seront certainement des scripts
-shell ou perl, mais ils peuvent être n'importe quoi d'exécutable depuis la
-ligne de commande. Au minimum, les scripts devraient prendre les <link
-linkend="thebasics-macros">macros</link> suivantes comme arguments :</para>
-		<para>Pour les services: <link
+            est désactivée.
+        </para>
+    </section>
+    <section>
+        <title>Ordre d'exécution des gestionnaires d'événements</title>
+        <para>Comme précédemment indiqué, les gestionnaires d'événements globaux d'hôtes
+            et de services sont exécutés juste avant les gestionnaires d'événements
+            spécifiques d'hôtes et de services.
+        </para>
+        <para>Pour l'entrée dans un état d'erreur HARD et le retour à la normale, les
+            gestionnaires d'événements sont exécutés immédiatement après l'envoi des
+            notifications.
+        </para>
+    </section>
+    <section>
+        <title>Écriture d'une commande de gestionnaire d'événements</title>
+        <para>Les commandes de gestionnaires d'événements seront certainement des scripts
+            shell ou perl, mais ils peuvent être n'importe quoi d'exécutable depuis la
+            ligne de commande. Au minimum, les scripts devraient prendre les <link
+linkend="thebasics-macros">macros</link> suivantes comme arguments :
+        </para>
+        <para>
+            Pour les services: <link
 linkend="thebasics-macrolist-servicestate">&macro-servicestate;</link>, <link
 linkend="thebasics-macrolist-servicestatetype">&macro-servicestatetype;</link>,
-<link
+            <link
 linkend="thebasics-macrolist-serviceattempt">&macro-serviceattempt;</link>Pour les
-hôtes: <link linkend="thebasics-macrolist-hoststate">&macro-hoststate;</link>,
-<link linkend="thebasics-macrolist-hoststatetype">&macro-hoststatetype;</link>,
-<link linkend="thebasics-macrolist-hostattempt">&macro-hostattempt;</link>
-		</para>
-		<para>Les scripts devraient être capables d'examiner les valeurs des arguments qui
-lui ont été passé et de prendre toute action nécessaire basée sur ces
-valeurs. La meilleure façon de comprendre comment fonctionne les
-gestionnaires d'événements est de voir un exemple. Heureusement pour vous,
-en voici un <link
-linkend="advancedtopics-eventhandlers-example">ci-dessous</link>.</para>
-		<tip><para>D'autres exemples de scripts de gestionanires d'événements peuvent être
-trouvés dans le sous-répertoire <filename
+            hôtes: <link linkend="thebasics-macrolist-hoststate">&macro-hoststate;</link>,
+            <link linkend="thebasics-macrolist-hoststatetype">&macro-hoststatetype;</link>,
+            <link linkend="thebasics-macrolist-hostattempt">&macro-hostattempt;</link>
+        </para>
+        <para>Les scripts devraient être capables d'examiner les valeurs des arguments qui
+            lui ont été passé et de prendre toute action nécessaire basée sur ces
+            valeurs. La meilleure façon de comprendre comment fonctionne les
+            gestionnaires d'événements est de voir un exemple. Heureusement pour vous,
+            en voici un <link
+linkend="advancedtopics-eventhandlers-example">ci-dessous</link>.
+        </para>
+        <tip>
+            <para>D'autres exemples de scripts de gestionanires d'événements peuvent être
+                trouvés dans le sous-répertoire <filename
 class="directory">contrib/eventhandlers/</filename> de la distribution
-Nagios. Quelques uns de ces scripts d'exemple démontrent l'utilisation des
-<link linkend="advancedtopics-extcommands">commandes externes</link> pour
-mettre en place des environnements de supervision <link
+                Nagios. Quelques uns de ces scripts d'exemple démontrent l'utilisation des
+                <link linkend="advancedtopics-extcommands">commandes externes</link> pour
+                mettre en place des environnements de supervision <link
 linkend="advancedtopics-redundancy">redondés</link> et <link
-linkend="advancedtopics-distributed">distribués</link>.</para></tip>
-	</section>
-	<section>
-		<title>Autorisations d'exécution des commandes de gestionnaires d'événements </title>
-		<para>Les commandes de gestionnaires d'événements s'exécuteront normalement avec
-les mêmes permissions que l'utilisateur grâce auquel Nagios tourne sur votre
-machine. Cela présente un problème pour les scripts qui essaient de
-redémarrer les services du système, car, pour ce genre de tâches, les
-privilèges de root sont généralement nécessaires. </para>
-		<para>Idéalement, vous devriez être capable d'évaluer les types de gestionnaires
-d'événements que vous allez implémenter et donc de donner juste ce qu'il
-faut comme droit à l'utilisateur Nagios pour pouvoir exécuter les commande
-système nécessaires. Vous pourriez essayer d'utiliser <ulink
-url="http://www.courtesan.com/sudo/sudo.html">sudo</ulink> pour cela.</para>
-	</section>
-	<section>
-		<title>
-			<anchor id="advancedtopics-eventhandlers-example"/>Exemple de gestionnaire
-d'événement de service </title>
-		<para>L'exemple ci-dessous suppose que vous supervisez le serveur &protocol-http;
-de la machine locale et que vous avez spécifié restart-httpd comme commande
-de gestionnaire d'événement pour la définition du service
-&protocol-http;. Je supposerai également que vous avez donné à l'option
-max_check_attempts du service une valeur supérieure ou égale à 4 (i.e le
-service est contrôlé 4 fois avant qu'on ne considère qu'il a un réel
-problème). Un exemple de définition (avec uniquement les champs concernés)
-ressemblerait à ceci … </para>
-		<programlisting>define service{
-		        host_name               somehost
-		        service_description     HTTP
-		        max_check_attempts      4
-		        event_handler           restart-httpd
-		        …
-		        }</programlisting>
-		<para>Une fois que le service a été défini avec un gestionnaire d'événement, nous
-devons définir le gestionnaire d'événement comme une commande. Un exemple de
-définition de commande pour restart-https est donné ci-dessous. Remarquez
-les macros de la ligne de commande que je passe au gestionnaire
-d'événements, elles sont importantes ! </para>
-		<programlisting>define command{
-		        command_name    restart-httpd
-		        command_line    /usr/local/nagios/libexec/eventhandlers/restart-httpd  $SERVICESTATE$ $SERVICESTATETYPE$ $SERVICEATTEMPT$
-		        }</programlisting>
-		<para>Maintenant, nous allons écrire le script de gestionnaire d'événement (c'est
-le fichier
-<filename>/usr/local/nagios/libexec/eventhandlers/restart-httpd</filename>). </para>
-		<programlisting>	#!/bin/sh
-			#
-			# Event handler script for restarting the web server on the local machine
-			#
-			# Note: This script will only restart the web server if the service is
-			#       retried 3 times (in a "soft" state) or if the web service somehow
-			#       manages to fall into a "hard" error state.
-			#
-			# What state is the HTTP service in?
-			case "$1" in
-			OK)
-			        # The service just came back up, so don't do anything…
-			        ;;
-			WARNING)
-			        # We don't really care about warning states, since the service is probably still running…
-			        ;;
-			UNKNOWN)
-			        # We don't know what might be causing an unknown error, so don't do anything…
-			        ;;
-			CRITICAL)
-			        # Aha!  The HTTP service appears to have a problem - perhaps we should restart the server…
-			        # Is this a "soft" or a "hard" state?
-			        case "$2" in
-
-			        # We're in a "soft" state, meaning that Nagios is in the middle of retrying the
-			        # check before it turns into a "hard" state and contacts get notified…
-			        SOFT)
-
-			                # What check attempt are we on?  We don't want to restart the web server on the first
-			                # check, because it may just be a fluke!
-			                case "$3" in
-
-			                # Wait until the check has been tried 3 times before restarting the web server.
-			                # If the check fails on the 4th time (after we restart the web server), the state
-			                # type will turn to "hard" and contacts will be notified of the problem.
-			                # Hopefully this will restart the web server successfully, so the 4th check will
-			                # result in a "soft" recovery.  If that happens no one gets notified because we
-			                # fixed the problem!
-			                3)
-			                        echo -n "Restarting HTTP service (3rd soft critical state)…"
-			                        # Call the init script to restart the HTTPD server
-			                        /etc/rc.d/init.d/httpd restart
-			                        ;;
-			                        esac
-			                ;;
-
-			        # The HTTP service somehow managed to turn into a hard error without getting fixed.
-			        # It should have been restarted by the code above, but for some reason it didn't.
-			        # Let's give it one last try, shall we?  
-			        # Note: Contacts have already been notified of a problem with the service at this
-			        # point (unless you disabled notifications for this service)
-			        HARD)
-			                echo -n "Restarting HTTP service…"
-			                # Call the init script to restart the HTTPD server
-			                /etc/rc.d/init.d/httpd restart
-			                ;;
-			        esac
-			        ;;
-			esac
-			exit 0</programlisting>
-		<para>Le script donné à titre d'exemple ci-dessus essaiera de redémarrer le
-serveur web sur la machine locale à deux occasions différentes :</para>
-		<itemizedlist>
-			<listitem>
-				<para>Après que le le service soit essayé pour la troisième fois (dans un état
-SOFT CRITICAL)</para>
-			</listitem>
-			<listitem>
-				<para>après que le service soit tombé dans un état HARD CRITICAL</para>
-			</listitem>
-		</itemizedlist>
-		<para>Le script devrait en théorie redémarrer le serveur web et régler le problème
-avant que le service ne passe en état d'erreur HARD, mais nous avons inclus
-une solution de repli au cas où il ne fonctionne pas la première fois. Notez
-bien que le gestionnaire d'événement ne sera exécuté que la première fois
-que le service passe en état d'erreur HARD. Cela permet d'éviter que Nagios
-réessaie continuellement de redémarrer le serveur web alors que le service
-reste dans un état d'erreur HARD. Vous ne voulez pas ça. :-)</para>
-		<para>C'est tout ce qu'il y a à dire! Les gestionnaires d'événements sont simples
-à écrire et implémenter, aussi faîtes l'essai et voyez ce que vous pouvez en
-faire.</para>
-	</section>
+linkend="advancedtopics-distributed">distribués</link>.
+            </para>
+        </tip>
+    </section>
+    <section>
+        <title>Autorisations d'exécution des commandes de gestionnaires d'événements </title>
+        <para>Les commandes de gestionnaires d'événements s'exécuteront normalement avec
+            les mêmes permissions que l'utilisateur grâce auquel Nagios tourne sur votre
+            machine. Cela présente un problème pour les scripts qui essaient de
+            redémarrer les services du système, car, pour ce genre de tâches, les
+            privilèges de root sont généralement nécessaires. 
+        </para>
+        <para>Idéalement, vous devriez être capable d'évaluer les types de gestionnaires
+            d'événements que vous allez implémenter et donc de donner juste ce qu'il
+            faut comme droit à l'utilisateur Nagios pour pouvoir exécuter les commande
+            système nécessaires. Vous pourriez essayer d'utiliser <ulink
+url="http://www.courtesan.com/sudo/sudo.html">sudo</ulink> pour cela.
+        </para>
+    </section>
+    <section>
+        <title>
+            <anchor id="advancedtopics-eventhandlers-example"/>
+            Exemple de gestionnaire
+            d'événement de service 
+        </title>
+        <para>L'exemple ci-dessous suppose que vous supervisez le serveur &protocol-http;
+            de la machine locale et que vous avez spécifié restart-httpd comme commande
+            de gestionnaire d'événement pour la définition du service
+            &protocol-http;. Je supposerai également que vous avez donné à l'option
+            max_check_attempts du service une valeur supérieure ou égale à 4 (i.e le
+            service est contrôlé 4 fois avant qu'on ne considère qu'il a un réel
+            problème). Un exemple de définition (avec uniquement les champs concernés)
+            ressemblerait à ceci … 
+        </para>
+        <programlisting>define service{
+                    host_name               somehost
+                    service_description     HTTP
+                    max_check_attempts      4
+                    event_handler           restart-httpd
+                    …
+                    }
+        </programlisting>
+        <para>Une fois que le service a été défini avec un gestionnaire d'événement, nous
+            devons définir le gestionnaire d'événement comme une commande. Un exemple de
+            définition de commande pour restart-https est donné ci-dessous. Remarquez
+            les macros de la ligne de commande que je passe au gestionnaire
+            d'événements, elles sont importantes ! 
+        </para>
+        <programlisting>define command{
+                    command_name    restart-httpd
+                    command_line    /usr/local/nagios/libexec/eventhandlers/restart-httpd  $SERVICESTATE$ $SERVICESTATETYPE$ $SERVICEATTEMPT$
+                    }
+        </programlisting>
+        <para>Maintenant, nous allons écrire le script de gestionnaire d'événement (c'est
+            le fichier
+            <filename>/usr/local/nagios/libexec/eventhandlers/restart-httpd</filename>). 
+        </para>
+        <programlisting>	#!/bin/sh
+            #
+            # Event handler script for restarting the web server on the local machine
+            #
+            # Note: This script will only restart the web server if the service is
+            #       retried 3 times (in a "soft" state) or if the web service somehow
+            #       manages to fall into a "hard" error state.
+            #
+            # What state is the HTTP service in?
+            case "$1" in
+            OK)
+                    # The service just came back up, so don't do anything…
+                    ;;
+            WARNING)
+                    # We don't really care about warning states, since the service is probably still running…
+                    ;;
+            UNKNOWN)
+                    # We don't know what might be causing an unknown error, so don't do anything…
+                    ;;
+            CRITICAL)
+                    # Aha!  The HTTP service appears to have a problem - perhaps we should restart the server…
+                    # Is this a "soft" or a "hard" state?
+                    case "$2" in
+            
+                    # We're in a "soft" state, meaning that Nagios is in the middle of retrying the
+                    # check before it turns into a "hard" state and contacts get notified…
+                    SOFT)
+            
+                            # What check attempt are we on?  We don't want to restart the web server on the first
+                            # check, because it may just be a fluke!
+                            case "$3" in
+            
+                            # Wait until the check has been tried 3 times before restarting the web server.
+                            # If the check fails on the 4th time (after we restart the web server), the state
+                            # type will turn to "hard" and contacts will be notified of the problem.
+                            # Hopefully this will restart the web server successfully, so the 4th check will
+                            # result in a "soft" recovery.  If that happens no one gets notified because we
+                            # fixed the problem!
+                            3)
+                                    echo -n "Restarting HTTP service (3rd soft critical state)…"
+                                    # Call the init script to restart the HTTPD server
+                                    /etc/rc.d/init.d/httpd restart
+                                    ;;
+                                    esac
+                            ;;
+            
+                    # The HTTP service somehow managed to turn into a hard error without getting fixed.
+                    # It should have been restarted by the code above, but for some reason it didn't.
+                    # Let's give it one last try, shall we?  
+                    # Note: Contacts have already been notified of a problem with the service at this
+                    # point (unless you disabled notifications for this service)
+                    HARD)
+                            echo -n "Restarting HTTP service…"
+                            # Call the init script to restart the HTTPD server
+                            /etc/rc.d/init.d/httpd restart
+                            ;;
+                    esac
+                    ;;
+            esac
+            exit 0
+        </programlisting>
+        <para>Le script donné à titre d'exemple ci-dessus essaiera de redémarrer le
+            serveur web sur la machine locale à deux occasions différentes :
+        </para>
+        <itemizedlist>
+            <listitem>
+                <para>Après que le le service soit essayé pour la troisième fois (dans un état
+                    SOFT CRITICAL)
+                </para>
+            </listitem>
+            <listitem>
+                <para>après que le service soit tombé dans un état HARD CRITICAL</para>
+            </listitem>
+        </itemizedlist>
+        <para>Le script devrait en théorie redémarrer le serveur web et régler le problème
+            avant que le service ne passe en état d'erreur HARD, mais nous avons inclus
+            une solution de repli au cas où il ne fonctionne pas la première fois. Notez
+            bien que le gestionnaire d'événement ne sera exécuté que la première fois
+            que le service passe en état d'erreur HARD. Cela permet d'éviter que Nagios
+            réessaie continuellement de redémarrer le serveur web alors que le service
+            reste dans un état d'erreur HARD. Vous ne voulez pas ça. :-)
+        </para>
+        <para>C'est tout ce qu'il y a à dire! Les gestionnaires d'événements sont simples
+            à écrire et implémenter, aussi faîtes l'essai et voyez ce que vous pouvez en
+            faire.
+        </para>
+    </section>
 </chapter>
 
