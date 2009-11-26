@@ -6,7 +6,7 @@
  %all.entities;
 ]
 >
-<chapter id="advancedtopics-embeddedperl" xreflabel="Using The Embedded Perl Interpreter">
+<chapter id="advancedtopics-embeddedperl" xreflabel="Utilisation de l'interpréteur Perl intégré">
     <title>Utilisation de l'interpréteur Perl intégré</title>
     <section>
         <title>Introduction</title>
@@ -124,7 +124,7 @@
             </listitem>
             <listitem>
                 <para>
-                    Il vous faudra connaître <quote>plus d'une façon de le faire</quote>, et
+                    Il vous faudra connaître <emphasis>plus d'une façon de le faire</emphasis>, et
                     peut-être choisir celle qui semble la moins attirante ou évidente.
                 </para>
             </listitem>
@@ -149,18 +149,17 @@
             </listitem>
             <listitem>
                 <para>
-                    Activer l'option <link
-linkend="configuringnagios-configmain-enable_embedded_perl">&config-enable_embedded_perl;</link>
+                    Activer l'option <xref linkend="configuringnagios-configmain-enable_embedded_perl"
+                    endterm="configuringnagios-configmain-enable_embedded_perl-tech"/>
                     dans le fichier principal de configuration.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Réglez l'option <link
-linkend="configuringnagios-configmain-use_embedded_perl_implicitly">&config-use_embedded_perl_implicitly;</link>
+                    Réglez l'option <xref linkend="configuringnagios-configmain-use_embedded_perl_implicitly"
+                    endterm="configuringnagios-configmain-use_embedded_perl_implicitly-tech"/>
                     en fonction de vos besoins. Cette option détermine si l'interpréteur Perl
-                    intégré doit être utilisé ou pas par défaut pour les plugins et scripts
-                    Perl.
+                    intégré doit être utilisé ou pas par défaut pour les plugins et scripts Perl.
                 </para>
             </listitem>
             <listitem>
@@ -175,8 +174,10 @@ linkend="configuringnagios-configmain-use_embedded_perl_implicitly">&config-use_
     <section>
         <title>Compilation de Nagios avec l'interpréteur Perl intégré</title>
         <para> Si vous voulez compiler Nagios avec l'interpréteur Perl intégré il vous
-            faut relancer le script de configuration (configure) avec le paramètre <option>--enable-embedded-perl. </option> Si vous voulez que l'interpréteur Perl intégré utilise un cache interne pour
-            les scripts compilés, ajoutez également le paramètre <option>--with-perlcache.</option>
+            faut relancer le script de configuration (configure) avec le paramètre 
+            <option>--enable-embedded-perl. </option> Si vous voulez que l'interpréteur 
+            Perl intégré utilise un cache interne pour les scripts compilés, ajoutez 
+            également le paramètre <option>--with-perlcache.</option>
             Par exemple : 
         </para>
         <screen>
@@ -212,8 +213,8 @@ linkend="configuringnagios-configmain-use_embedded_perl_implicitly">&config-use_
             <para>Si vous n'utilisez pas explicitement la méthode précédente pour indiquer à
                 Nagios qu'un plugin peut être lancé par l'interpréteur Perl, Nagios prendra
                 la décision pour vous. Ce processus de décision est contrôlé par la variable
-                <link
-linkend="configuringnagios-configmain-use_embedded_perl_implicitly">&config-use_embedded_perl_implicitly;</link>.
+                <xref linkend="configuringnagios-configmain-use_embedded_perl_implicitly"
+                endterm="configuringnagios-configmain-use_embedded_perl_implicitly-tech"/>.
                 Avec une valeur fixée à 1, tous les plugins/scripts Perl (tous ceux qui
                 n'activent/désactivent pas explicitement ePN) seront lancés par
                 l'interpréteur Perl. Avec une valeur fixée à 0, ils ne seront PAS lancés par
@@ -224,8 +225,7 @@ linkend="configuringnagios-configmain-use_embedded_perl_implicitly">&config-use_
     <section>
         <title>Développement de plugins pour être utilisés avec Perl intégré à Nagios</title>
         <para>Les informations pour développer des plugins utilisant l'interpréteur Perl
-            intégré peuvent être trouvées <link
-linkend="development-epnplugins">ici</link>.
+            intégré peuvent être trouvées <link linkend="development-epnplugins">ici</link>.
         </para>
     </section>
 </chapter>
