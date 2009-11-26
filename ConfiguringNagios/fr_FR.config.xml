@@ -22,9 +22,7 @@
         <note>
             <para>Des fichiers exemples de configuration sont installés dans le répertoire
                 <filename class="directory">/usr/local/nagios/etc/</filename>, si vous avez
-                suivi le <link linkend="gettingstarted-quickstart"> guide de démarrage
-                    rapide
-                </link>
+                suivi le <link linkend="gettingstarted-quickstart"> guide de démarrage rapide</link>
                 .
             </para>
         </note>
@@ -39,8 +37,8 @@
         </para>
         
         <para>
-            La documentation du fichier de configuration principal se trouve <link
-linkend="configuringnagios-configmain">ici</link>.
+            La documentation du fichier de configuration principal se trouve 
+            <link linkend="configuringnagios-configmain">ici</link>.
         </para>
     </section>
     
@@ -61,8 +59,8 @@ linkend="configuringnagios-configmain">ici</link>.
         </para>
         
         <para>Vous pouvez définir un ou plusieurs fichiers optionnels de ressources avec
-            le paramètre <link
-linkend="configuringnagios-configmain-resource_file">&config-resource_file;</link>
+            le paramètre <xref linkend="configuringnagios-configmain-resource_file"
+            endterm="configuringnagios-configmain-resource_file-tech"/>
             dans le fichier de configuration principal. 
         </para>
     </section>
@@ -77,15 +75,16 @@ linkend="configuringnagios-configmain-resource_file">&config-resource_file;</lin
         </para>
         
         <para>Vous pouvez définir un ou plusieurs fichiers de définitions des objets avec
-            les paramètres <link
-linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> et/ou <link
-linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link> dans le
+            les paramètres <xref linkend="configuringnagios-configmain-cfg_file"
+            endterm="configuringnagios-configmain-cfg_file-tech"/> et/ou
+            <xref linkend="configuringnagios-configmain-cfg_dir" 
+            endterm="configuringnagios-configmain-cfg_dir-tech"/> dans le
             fichier de configuration principal. 
         </para>
         
         <para>Une introduction aux définitions d'objets et à la façon dont ils sont en
-            relation les uns les autres peut être consultée <link
-linkend="configuringnagios-configobject">ici</link>.
+            relation les uns les autres peut être consultée 
+            <link linkend="configuringnagios-configobject">ici</link>.
         </para>
     </section>
     
@@ -93,15 +92,15 @@ linkend="configuringnagios-configobject">ici</link>.
         <title>Fichier de configuration des CGIs</title>
         
         <para>Le fichier de configuration des &acronym-cgi;s contient un certain nombre de
-            paramètres qui affectent le mode de fonctionnement des <link
-linkend="thebasics-cgis">CGIs</link>. Il contient également une référence au
+            paramètres qui affectent le mode de fonctionnement des 
+            <link linkend="thebasics-cgis">CGIs</link>. Il contient également une référence au
             fichier de configuration principal, de façon à ce que les &acronym-cgi;s sachent
             comment est configuré Nagios et où trouver les objets de configuration.
         </para>
         
         <para>
-            La documentation du fichier de configuration des &acronym-cgi;s se trouve <link
-linkend="configuringnagios-configcgi">ici</link>. 
+            La documentation du fichier de configuration des &acronym-cgi;s se trouve 
+            <link linkend="configuringnagios-configcgi">ici</link>. 
         </para>
     </section>
 </chapter>
