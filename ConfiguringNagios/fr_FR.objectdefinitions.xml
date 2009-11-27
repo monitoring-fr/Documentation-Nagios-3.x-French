@@ -15,14 +15,11 @@
         <para>Une des fonctionnalités du format de configuration des objets de Nagios est
             que vous pouvez créer des définitions d'objets qui héritent leurs propriétés
             d'autres objets de configuration. Une explication sur le fonctionnement de
-            l'héritage peut être trouvée <link
-linkend="advancedtopics-objectinheritance">ici</link>. Je recommande
-            vivement que vous vous familiarisez avec l'héritage des objets une fois que
+            l'héritage peut être trouvée <link linkend="advancedtopics-objectinheritance">ici</link>.
+            Je recommande vivement que vous vous familiarisez avec l'héritage des objets une fois que
             vous aurez lu la documentation présentée ci-dessous, du fait que cela
             permet une maintenance des définitions d'objets beaucoup plus facile que
-            sans. Lisez aussi les <link linkend="advancedtopics-objecttricks">trucs et
-                astuces pour les objets
-            </link>
+            sans. Lisez aussi les <link linkend="advancedtopics-objecttricks">trucs et astuces pour les objets</link>
             qui offrent des raccourcis pour des tâches de
             configuration qui seraient autrement ingrates.
         </para>
@@ -46,35 +43,28 @@ linkend="advancedtopics-objectinheritance">ici</link>. Je recommande
     
     <section>
         <title>
-            <anchor id="configuringnagios-objectdefinitions-retention_notes" />Notes sur
-            la rétention
+            <anchor id="configuringnagios-objectdefinitions-retention_notes" />
+            Notes sur la rétention
         </title>
         
         <para>Il est important de noter que plusieurs variables dans les définitions
             d'hôtes, de services et de contacts peuvent ne pas être prise en compte par
             Nagios quand vous les changez dans les fichiers de configuration. Les objets
-            de configuration concernés sont indiqués par une astérisque (<link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>). La
-            raison de ce comportement est que Nagios prend les valeurs contenues dans le
-            <link linkend="configuringnagios-configmain-state_retention_file">fichier de
-                rétention d'état
-            </link>
+            de configuration concernés sont indiqués par une astérisque 
+            (<link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>). 
+            La raison de ce comportement est que Nagios prend les valeurs contenues dans le
+            <link linkend="configuringnagios-configmain-state_retention_file">fichier de rétention d'état</link>
             plutôt que celles contenues dans les fichiers de
-            configuration, à condition d'avoir activé la <link
-linkend="configuringnagios-configmain-retain_state_information">rétention
-                d'états
-            </link>
+            configuration, à condition d'avoir activé la 
+            <link linkend="configuringnagios-configmain-retain_state_information">rétention d'états</link>
             au niveau global du programme et que la valeur de la variable
-            soit changée pendant l'exécution du programme par une <link
-linkend="configuringnagios-configmain-check_external_commands">commande
-                externe
-            </link>
-            .
+            soit changée pendant l'exécution du programme par une 
+            <link linkend="configuringnagios-configmain-check_external_commands">commande externe</link>.
         </para>
         
         <para>Une façon de contourner le problème est de désactiver la rétention des
             informations différentes de l'état en utilisant la variable
-            <varname>retain_nonstatus_information</varname> dans les définitions
+            <literal>retain_nonstatus_information</literal> dans les définitions
             d'hôtes, de services et de contacts. Désactiver cette variable permettra à
             Nagios de prendre les valeurs de vos fichiers de configuration comme valeurs
             initiales plutôt que du fichier de rétention d'états au moment du
@@ -100,100 +90,59 @@ linkend="configuringnagios-configmain-check_external_commands">commande
         <title>Types d'objets</title>
         
         <para>
-            <link linkend="configuringnagios-objectdefinitions-host">Définitions
-                d'hôtes
-            </link>
+            <link linkend="configuringnagios-objectdefinitions-host">Définitions d'hôtes</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-hostgroup">Définitions de
-                groupes d'hôtes
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-hostgroup">Définitions de groupes d'hôtes</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-service">Définitions de
-                services
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-service">Définitions de services</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-servicegroup">Définitions de
-                groupes de services
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-servicegroup">Définitions de groupes de services</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-contact">Définitions de
-                contacts
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-contact">Définitions de contacts</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-contactgroup">Définitions de
-                groupes de contacts
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-contactgroup">Définitions de groupes de contacts</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-timeperiod">Définitions de
-                périodes de temps
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-timeperiod">Définitions de périodes de temps</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-command">Définitions de
-                commandes
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-command">Définitions de commandes</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-servicedependency">Définitions
-                de dépendances de services
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-servicedependency">Définitions de dépendances de services</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-serviceescalation">Définitions
-                d'escalades de services
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-serviceescalation">Définitions d'escalades de services</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-hostdependency">Définitions de
-                dépendances d'hotes
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-hostdependency">Définitions de dépendances d'hotes</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-hostescalation">Définitions
-                d'escalades d'hôtes
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-hostescalation">Définitions d'escalades d'hôtes</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-hostextinfo">Définitions
-                d'informations étendues d'hôtes
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-hostextinfo">Définitions d'informations étendues d'hôtes</link>
         </para>
          
         <para>
-             <link
-linkend="configuringnagios-objectdefinitions-serviceextinfo">Définitions
-                d'informations étendues de services
-            </link>
+             <link linkend="configuringnagios-objectdefinitions-serviceextinfo">Définitions d'informations étendues de services</link>
         </para>
         
         <section>
@@ -675,23 +624,23 @@ linkend="configuringnagios-objectdefinitions-serviceextinfo">Définitions
                 
                 <para>
                     <programlisting>
-                        define host{
-                        host_name           bogus-router
-                        alias             Bogus Router #1
-                        address            192.168.1.254
-                        parents            server-backbone
-                        check_command         check-host-alive
-                        check_interval         5
-                        retry_interval         1
-                        max_check_attempts       5
-                        check_period          24x7
-                        process_perf_data       0
-                        retain_nonstatus_information  0
-                        contact_groups         router-admins
-                        notification_interval     30
-                        notification_period      24x7
-                        notification_options      d,u,r
-                        }
+define host {
+    host_name                      bogus-router
+    alias                          Bogus Router #1
+    address                        192.168.1.254
+    parents                        server-backbone
+    check_command                  check-host-alive
+    check_interval                 5
+    retry_interval                 1
+    max_check_attempts             5
+    check_period                   24x7
+    process_perf_data              0
+    retain_nonstatus_information   0
+    contact_groups                 router-admins
+    notification_interval          30
+    notification_period            24x7
+    notification_options           d,u,r
+}
                     </programlisting>
                 </para>
             </section>
@@ -709,8 +658,8 @@ linkend="configuringnagios-objectdefinitions-serviceextinfo">Définitions
                                 Cette variable est utilisée pour définir le nom court identifiant l'hôte. Ce
                                 nom est utilisé dans les définitions de groupes d'hôtes et de services pour
                                 faire référence à cet hôte en particulier. Les hôtes peuvent avoir plusieurs
-                                services (qui sont supervisés) associés à eux. Bien utilisée, la <link
-linkend="thebasics-macros">macro</link> &macro-hostname; contiendra ce nom court.
+                                services (qui sont supervisés) associés à eux. Bien utilisée, la 
+                                <link linkend="thebasics-macros">macro</link> &macro-hostname; contiendra ce nom court.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -759,7 +708,7 @@ linkend="thebasics-macros">macro</link> &macro-hostname; contiendra ce nom court
                         <listitem>
                             <para>Cette variables est utilisée pour afficher un nom différent à l'affichage
                                 dans l'interface web pour cet hôte. Si non précisée, la valeur par défaut
-                                est prise depuis la variable <varname>host_name</varname>.
+                                est prise depuis la variable <literal>host_name</literal>.
                             </para>
                             <note>
                                 <para>Les &acronym-cgi;s actuels n'utilise pas cette option, mais les futurs versions de
@@ -774,16 +723,15 @@ linkend="thebasics-macros">macro</link> &macro-hostname; contiendra ce nom court
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir une liste séparée par des virgules
-                                de noms courts représentant les hôtes <quote>parents</quote> de cet hôte en
+                                de noms courts représentant les hôtes <emphasis>parents</emphasis> de cet hôte en
                                 particulier. Les hôtes parents sont typiquement des routeurs, des pare-feux,
                                 etc… qui se trouvent sur la route entre le serveur de supervision et les
                                 hôtes à superviser. Un routeur, switch, etc… qui se trouve le plus près de
-                                l'hôte à superviser est considéré comme le <quote>parent</quote> de cet
-                                hôte. Lisez le document <quote>Déterminer l'état et l'accessibilité du
+                                l'hôte à superviser est considéré comme le <emphasis>parent</emphasis> de cet
+                                hôte. Lisez le document <emphasis>Déterminer l'état et l'accessibilité du
                                     réseau des hôtes
-                                </quote>
-                                situé <link
-linkend="thebasics-networkreachability">ici</link> pour plus
+                                </emphasis>
+                                situé <link linkend="thebasics-networkreachability">ici</link> pour plus
                                 d'informations. Si l'hôte appartient au même segment réseau que le serveur
                                 de supervision (sans routeur intermédiaire, etc.), alors l'hôte est
                                 considéré comme membre du réseau local et il n'aura pas d'hôte
@@ -803,17 +751,12 @@ linkend="thebasics-networkreachability">ici</link> pour plus
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                des <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupes
-                                    d'hôtes
-                                </link>
+                                des <link linkend="configuringnagios-objectdefinitions-hostgroup">groupes d'hôtes</link>
                                 auxquels appartient cet hôte. Plusieurs noms de groupes
                                 doivent être séparés par des virgules. Cette variable peut être utilisée
                                 comme alternative (ou en complément) à la variable
-                                <emphasis>members</emphasis> des définitions de <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupes
-                                    d'hôtes
-                                </link>
+                                <emphasis>members</emphasis> des définitions de 
+                                <link linkend="configuringnagios-objectdefinitions-hostgroup">groupes d'hôtes</link>
                                 .
                             </para>
                         </listitem>
@@ -824,21 +767,19 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupes
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour identifier le <emphasis>nom
-                                    court
-                                </emphasis>
-                                de la <link
-linkend="configuringnagios-objectdefinitions-command">commande</link> à
+                                Cette variable est utilisée pour identifier le <emphasis>nom court</emphasis>
+                                de la <link linkend="configuringnagios-objectdefinitions-command">commande</link> à
                                 utiliser pour contrôler si l'hôte répond ou non. Typiquement, cette commande
-                                essayera de pinguer l'hôte pour voir s'il est <quote>vivant</quote>. La
+                                essayera de pinguer l'hôte pour voir s'il est <emphasis>vivant</emphasis>. La
                                 commande doit retourner un état OK (0) ou Nagios pensera que l'hôte ne
                                 répond pas. Si vous laissez cette variable vide, cet hôte ne sera
                                 <emphasis>pas</emphasis> contrôlé activement. Du coup, Nagios partira
                                 certainement du principe que cet hôte répond (il peut être indiqué en état
-                                <quote>PENDING</quote> dans l'interface web). C'est utile si vous supervisez
+                                <emphasis>PENDING</emphasis> dans l'interface web). C'est utile si vous supervisez
                                 des imprimantes ou des équipements qui sont fréquemment éteints. Le temps
-                                maximal d'exécution de la commande peut être contrôlé par l'option <link
-linkend="configuringnagios-configmain-host_check_timeout">&config-host_check_timeout;</link>.
+                                maximal d'exécution de la commande peut être contrôlé par l'option 
+                                <xref linkend="configuringnagios-configmain-host_check_timeout"
+                                endterm="configuringnagios-configmain-host_check_timeout-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -849,8 +790,8 @@ linkend="configuringnagios-configmain-host_check_timeout">&config-host_check_tim
                         <listitem>
                             <para>Par défaut, Nagios part du prinicipe que tous les hôtes sont dans un état UP
                                 au démarrage. Vous pouvez préciser l'état intitial souhaité de l'hôte avec
-                                cette variable. Les options valables sont : <emphasis
-role="strong">o</emphasis> = UP, <emphasis role="bold">d</emphasis> =
+                                cette variable. Les options valables sont : 
+                                <emphasis role="strong">o</emphasis> = UP, <emphasis role="bold">d</emphasis> =
                                 DOWN, et <emphasis role="bold">u</emphasis> = UNREACHABLE.
                             </para>
                         </listitem>
@@ -869,7 +810,7 @@ role="strong">o</emphasis> = UP, <emphasis role="bold">d</emphasis> =
                                 <para>Si vous ne souhaitez pas contrôler l'état de l'hôte, vous devez quand même
                                     placer cette variable à une valeure minimale de 1. Pour court-circuiter le
                                     contrôle de l'hôte, laissez simplement vide l'option
-                                    <varname>check_command</varname>.
+                                    <literal>check_command</literal>.
                                 </para>
                             </note>
                         </listitem>
@@ -880,12 +821,12 @@ role="strong">o</emphasis> = UP, <emphasis role="bold">d</emphasis> =
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour définir le nombre d'<quote>unités de
+                                Cette variable est utilisée pour définir le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 entre les contrôles réguliers d'un hôte. Sauf si vous avez
-                                changé la variable <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                changé la variable <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
                                 d'informations sur cette valeur peut être trouvée dans la documentation sur
                                 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -901,18 +842,18 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                         </term>
                         <listitem>
                             <para>
-                                Ce paramètre est utilisé pour définir le nombre d'<quote>unités de
+                                Ce paramètre est utilisé pour définir le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 à attendre avant d'ordonnancer un nouveau contrôle des
                                 hôtes. Les hôtes sont recontrôlés à l'intervalle de réessai quand ils sont
                                 passés dans un état non UP. Une fois que l'hôte à été recontrôlé le nombre de
                                 fois précisé dans <emphasis role="bold">max_check_attempts</emphasis> sans
                                 changement d'état, il sera contrôlé à nouveau sur une fréquence
-                                <quote>normale</quote> telle que définie dans la valeur <emphasis
-role="bold">check_interval</emphasis>. Sauf si vous avez changé la variable
-                                <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                <emphasis>normale</emphasis> telle que définie dans la valeur 
+                                <emphasis role="bold">check_interval</emphasis>. Sauf si vous avez changé la variable
+                                <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
                                 d'informations sur cette valeur peut être trouvée dans la documentation sur
                                 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -924,8 +865,7 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            active_checks_enabled<link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            active_checks_enabled<link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir si les contrôles actifs (soit
@@ -936,8 +876,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            passive_checks_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            passive_checks_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir si les contrôles passifs sont
@@ -952,10 +891,8 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour définir le nom court de la <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour définir le nom court de la 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle peuvent se dérouler les contrôles actifs de cet
                                 hôte.
                             </para>
@@ -963,25 +900,23 @@ linkend="configuringnagios-objectdefinitions-timeperiod">période de
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            obsess_over_host <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            obsess_over_host <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir si les contrôles pour cet hôte
-                                seront ou non <quote>obsessed</quote> en utilisant la commande <link
-linkend="configuringnagios-configmain-ochp_command">&config-ochp_command;</link>.
+                                seront ou non <emphasis>obsessed</emphasis> en utilisant la commande 
+                                <xref linkend="configuringnagios-configmain-ochp_command"
+                                endterm="configuringnagios-configmain-ochp_command-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            check_freshness <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            check_freshness <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour définir si les <link
-linkend="advancedtopics-freshness">contrôle de fraîcheur</link> sont
+                                Cette variable est utilisée pour définir si les <link linkend="advancedtopics-freshness">contrôle de fraîcheur</link> sont
                                 possibles pour cet hôte. Valeurs : 0 = contrôles de la fraîcheur désactivés,
                                 1 = contrôles de la fraîcheur activés.
                             </para>
@@ -1005,24 +940,21 @@ linkend="advancedtopics-freshness">contrôle de fraîcheur</link> sont
                         <listitem>
                             <para>
                                 Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis>
-                                d'une <link
-linkend="configuringnagios-objectdefinitions-command">commande</link> à
+                                d'une <link linkend="configuringnagios-objectdefinitions-command">commande</link> à
                                 exécuter à chaque changement d'état de l'hôte (par exemple quand il n'est
                                 plus disponible ou qu'il redevient disponible). Lisez la documentation sur
-                                les <link linkend="advancedtopics-eventhandlers">gestionnaires
-                                    d'événenements
-                                </link>
+                                les <link linkend="advancedtopics-eventhandlers">gestionnaires d'événenements</link>
                                 pour plus d'explications sur la façon d'écrire des
                                 scripts pour gérer les événements. Le temps maximal d'exécution d'une
-                                commande de gestion d'événements est contrôlé par l'option <link
-linkend="configuringnagios-configmain-event_handler_timeout">&config-event_handler_timeout;</link>.
+                                commande de gestion d'événements est contrôlé par l'option 
+                                <xref linkend="configuringnagios-configmain-event_handler_timeout"
+                                endterm="configuringnagios-configmain-event_handler_timeout-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            event_handler_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            event_handler_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer si le gestionnaire d'événements
@@ -1038,10 +970,10 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         <listitem>
                             <para>Cette variable est utilisée pour préciser le seuil bas de détection
                                 d'oscillation pour l'hôte. Plus d'informations sur la détection
-                                d'ocillations se trouvent <link
-linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
-                                à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
+                                d'ocillations se trouvent <link linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
+                                à 0, la valeur précisée avec 
+                                <xref linkend="configuringnagios-configmain-low_host_flap_threshold"
+                                endterm="configuringnagios-configmain-low_host_flap_threshold-tech"/>
                                 au niveau global du logiciel sera utilisée.
                             </para>
                         </listitem>
@@ -1053,24 +985,21 @@ linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_
                         <listitem>
                             <para>Cette variable est utilisée pour préciser le seuil haut de détection
                                 d'oscillation pour l'hôte. Plus d'informations sur la détection
-                                d'ocillations se trouvent <link
-linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
-                                à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
+                                d'ocillations se trouvent <link linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
+                                à 0, la valeur précisée avec <xref linkend="configuringnagios-configmain-low_host_flap_threshold"
+                                endterm="configuringnagios-configmain-low_host_flap_threshold-tech"/>
                                 au niveau global du logiciel sera utilisée.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            flap_detection_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            flap_detection_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer si la détection d'oscillation
                                 est activée ou non pour l'hôte. Plus d'informations sur la détection
-                                d'ocillations se trouvent <link
-linkend="advancedtopics-flapping">ici</link>. Valeurs : 0 = détection
+                                d'ocillations se trouvent <link linkend="advancedtopics-flapping">ici</link>. Valeurs : 0 = détection
                                 d'ocillation pour l'hôte désactivée, 1 = détection d'ocillation pour l'hôte
                                 activée.
                             </para>
@@ -1086,16 +1015,15 @@ linkend="advancedtopics-flapping">ici</link>. Valeurs : 0 = détection
                                     détection d'oscillations
                                 </link>
                                 .Les options valides sont une combinaison
-                                d'un ou plusieurs états parmi les suivants : <emphasis
-role="bold">o</emphasis> = états UP, <emphasis role="bold">d</emphasis> =
+                                d'un ou plusieurs états parmi les suivants : 
+                                <emphasis role="bold">o</emphasis> = états UP, <emphasis role="bold">d</emphasis> =
                                 états DOWN, <emphasis role="bold">u</emphasis> = états UNREACHABLE.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            process_perf_data <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            process_perf_data <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utlisée pour déterminer si le traitement des données de
@@ -1113,8 +1041,8 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                             <para>Cette variable est utlisée pour déterminer si les informations relatives aux
                                 états de l'hôte sont conservées ou non après redémarrage du programme. C'est
                                 seulement utile si vous avez activé la rétention d'états en utilisant la
-                                variable <link
-linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
+                                variable <xref linkend="configuringnagios-configmain-retain_state_information"
+                                endterm="configuringnagios-configmain-retain_state_information-tech"/>.
                                 Valeur : 0 = rétention des données d'états désactivée, 1 = rétention des
                                 données d'états activée.
                             </para>
@@ -1128,8 +1056,8 @@ linkend="configuringnagios-configmain-retain_state_information">&config-retain_s
                             <para>Cette variable est utlisée pour déterminer si les informations différentes
                                 des états de l'hôte sont conservées après redémarrage du programme. C'est
                                 seulement utile si vous avez activé la rétention d'états en utilisant la
-                                variable <link
-linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
+                                variable <xref linkend="configuringnagios-configmain-retain_state_information"
+                                endterm="configuringnagios-configmain-retain_state_information-tech"/>.
                                 Valeur : 0 = rétention des données différentes des états désactivée, 1 =
                                 rétention des données différentes des états activée.
                             </para>
@@ -1141,15 +1069,13 @@ linkend="configuringnagios-configmain-retain_state_information">&config-retain_s
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste des <emphasis>noms courts</emphasis> des <link
-linkend="configuringnagios-objectdefinitions-contact">contacts</link> qui
+                                C'est une liste des <emphasis>noms courts</emphasis> des 
+                                <link linkend="configuringnagios-objectdefinitions-contact">contacts</link> qui
                                 devraient être notifiés quand quand il y a des problèmes (ou retours à la
                                 normale) avec cet hôte. Plusieurs contacts peuvent être séparés par des
                                 virgules. Utile si vous souhaitez envoyer des notifications vers quelques
-                                personnes et que vous ne souhaitez pas configurer des <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
+                                personnes et que vous ne souhaitez pas configurer des 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
                                 .Vous devez préciser au moins un contact ou un groupe de
                                 contacts dans chaque définition d'hôte.
                             </para>
@@ -1161,10 +1087,8 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste des <emphasis>noms courts</emphasis> des <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
+                                C'est une liste des <emphasis>noms courts</emphasis> des 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
                                 qui devraient être notifiés quand quand il y a des problèmes
                                 (ou retours à la normale) avec cet hôte. Plusieurs groupes de contacts
                                 peuvent être séparés par des virgules. Vous devez préciser au moins un
@@ -1178,13 +1102,13 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nombre d'<quote>unités de
+                                Cette variable est utilisée pour préciser le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 à attendre avant de re-notifier un contact que ce service est
                                 <emphasis>toujours</emphasis> down ou innacessible. Sauf si vous avez changé
-                                la variable <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                la variable <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Sivous
                                 mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les
                                 contacts des problèmes pour cet hôte - une seule notification de problème
@@ -1198,12 +1122,13 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nombre d'<quote>unités de
+                                Cette variable est utilisée pour préciser le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 à attendre avant d'envoyer la première notification quand un
-                                hôte passe dans un état non-UP. Sauf si vous avez changé la variable <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                hôte passe dans un état non-UP. Sauf si vous avez changé la variable 
+                                <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
                                 mettez cette valeur à 0, Nagios commencera à envoyer des notifications
                                 immédiatement.
@@ -1216,10 +1141,8 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court des <link
-linkend="configuringnagios-objectdefinitions-timeperiod">périodes de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court des 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">périodes de temps</link>
                                 pendant lesquelles les notifications d'événements sont envoyées
                                 aux contacts de cet hôte. Si cet hôte passe en état down, inaccessible ou
                                 qu'il revient à la normale hors d'une période de temps précisée, aucune
@@ -1236,9 +1159,9 @@ linkend="configuringnagios-objectdefinitions-timeperiod">périodes de
                                 hôte doivent être envoyées. Les options valides sont une combinaison d'un ou
                                 de plusieurs des états suivants : <emphasis role="bold">d</emphasis> =
                                 envois de notifications sur état DOWN, <emphasis role="bold">u</emphasis> =
-                                envois de notifications sur état UNREACHABLE, <emphasis
-role="strong">r</emphasis> = envois de notifications sur état OK, <emphasis
-role="bold">f</emphasis> = envois de notification quand un hôte commence ou
+                                envois de notifications sur état UNREACHABLE, 
+                                <emphasis role="strong">r</emphasis> = envois de notifications sur état OK, 
+                                <emphasis role="bold">f</emphasis> = envois de notification quand un hôte commence ou
                                 arrête d'<link linkend="advancedtopics-flapping">osciller</link>, et
                                 <emphasis role="bold">s</emphasis> = envois de notifications quand une
                                 <link linkend="advancedtopics-downtime">période de maintenance
@@ -1256,8 +1179,7 @@ role="bold">f</emphasis> = envois de notification quand un hôte commence ou
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            notifications_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            notifications_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utlisée pour déterminer si les notifications pour cet
@@ -1272,13 +1194,13 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer quelle
-                                <quote>mémorisation</quote> d'états est utilisée pour l'hôte. Les options
+                                <emphasis>mémorisation</emphasis> d'états est utilisée pour l'hôte. Les options
                                 valides sont une combinaison d'un ou ou de plusieurs des états suivants :
-                                <emphasis role="bold">o</emphasis> = mémorisation des états UP, <emphasis
-role="bold">d</emphasis> = mémorisation des états DOWN et <emphasis
-role="strong">u</emphasis> = mémorisation des états UNREACHABLE. Plus
-                                d'informations sur la mémorisation d'états peuvent être trouvées <link
-linkend="advancedtopics-stalking">ici</link>.
+                                <emphasis role="bold">o</emphasis> = mémorisation des états UP, 
+                                <emphasis role="bold">d</emphasis> = mémorisation des états DOWN et 
+                                <emphasis role="strong">u</emphasis> = mémorisation des états UNREACHABLE. Plus
+                                d'informations sur la mémorisation d'états peuvent être trouvées 
+                                <link linkend="advancedtopics-stalking">ici</link>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -1319,7 +1241,7 @@ linkend="advancedtopics-stalking">ici</link>.
                         <listitem>
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 actions supplémentaires à appliquer à l'hôte. Si vous précisez une URL, vous
-                                verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand vous
+                                verrez une icône <emphasis>splat</emphasis> rouge dans les &acronym-cgi;s (quand vous
                                 regardez les informations de l'hôte) qui renverra vers l'URL précisée
                                 ici. N'importe quelle URL valide peut être utilisé. Si vous pensez utiliser
                                 des chemins relatifs, le chemin de base sera le même que celui utilisé pour
@@ -1337,8 +1259,7 @@ linkend="advancedtopics-stalking">ici</link>.
                                 endroits des &acronym-cgi;s. Le rendu de l'image sera maximal si celle-ci est au
                                 format 40x40 pixels. Les images des hôtes sont censées se trouver dans le
                                 sous-répertoire <emphasis role="bold">logos/</emphasis> de votre dossier
-                                d'images HTML (par exemple <filename
-class="directory">/usr/local/nagios/share/images/logos</filename>).
+                                d'images HTML (par exemple <filename class="directory">/usr/local/nagios/share/images/logos</filename>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -1360,15 +1281,13 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                         <listitem>
                             <para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
                                 PNG ou JPG à associer à l'hôte. Cette image sera utilisée comme fond de
-                                carte pour l'hôte spécifié dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Au contraire de
-                                l'image utilisée dans la variable <emphasis>&lt;icon_image&gt;</emphasis>,
+                                carte pour l'hôte spécifié dans le &acronym-cgi; <link linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. 
+                                Au contraire de l'image utilisée dans la variable <emphasis>&lt;icon_image&gt;</emphasis>,
                                 celle-ci ne devrait <emphasis>pas</emphasis> avoir d'attribut de
                                 transparence. Si c'est le cas, le rendu de l'hôte sera un peu bizarre. Les
-                                images des hôtes sont censées se trouver dans le sous-répertoire <emphasis
-role="strong">logos/</emphasis> de votre dossier d'images HTML (par exemple
-                                <filename
-class="directory">/usr/local/nagios/share/images/logos</filename>).
+                                images des hôtes sont censées se trouver dans le sous-répertoire 
+                                <emphasis role="strong">logos/</emphasis> de votre dossier d'images HTML 
+                                (par exemple <filename class="directory">/usr/local/nagios/share/images/logos</filename>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -1378,23 +1297,20 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                         </term>
                         <listitem>
                             <para>Cette variable est utlisée pour définir le nom d'une image à associer à
-                                l'hôte dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
-                                utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
+                                l'hôte dans le &acronym-cgi; <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. 
+                                Vous pouvez utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
                                 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
                                 temps &acronym-cpu; en calcul (comme c'est le cas avec les autres formats) quand vous
                                 générez la carte d'états. Les images GD2 peuvent être créées à partir
-                                d'image PNG en utilisant l'utilitaire <emphasis
-role="bold">pngtogd2</emphasis> fourni avec la <ulink
-url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format
+                                d'image PNG en utilisant l'utilitaire <emphasis role="bold">pngtogd2</emphasis> fourni 
+                                avec la <ulink url="&url-gd;">librairie gd</ulink> de Thomas Boutell. Les images au format
                                 GD2 doivent être créées dans un format <emphasis>non compressé</emphasis>
                                 toujours pour minimiser la charge &acronym-cpu; au moment de charger la carte
                                 réseau. Le rendu de l'image sera maximal si vous utilisez une taille de
                                 40x40 pixels. Vous pouvez laisser cette option vide si vous n'utilisez pas
                                 le &acronym-cgi; de carte d'états. Les images des hôtes sont censées se trouver dans
                                 le sous-répertoire <emphasis role="bold">logos/</emphasis> de votre
-                                dossier d'images HTML (par exemple <filename
-class="directory">/usr/local/nagios/share/images/logos</filename>).
+                                dossier d'images HTML (par exemple <filename class="directory">/usr/local/nagios/share/images/logos</filename>).
                             </para>
                         </listitem>
                     </varlistentry>
@@ -1404,8 +1320,7 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir les coordonnées à utiliser pour
-                                l'hôte dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
+                                l'hôte dans le &acronym-cgi; <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
                                 doivent être données en entier positif car correpsondant aux pixels dans
                                 l'image générée. Le départ de la carte (0,0) se trouve dans le coin
                                 supérieur gauche de l'image et s'étend en positif dans la direction x (à
@@ -1430,8 +1345,7 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir les coordonnées de l'hôte à
-                                utiliser dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
+                                utiliser dans le &acronym-cgi; <link linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
                                 peuvent être des nombres positifs ou négatifs. Le départ du dessin est
                                 (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5
                                 unités de chaque côté (les textes rennent un plus d'espace). Les coordonnées
@@ -1441,13 +1355,13 @@ linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
                     </varlistentry>
                     
                     <!--
-	<varlistentry>
-		<term>
-		</term>
-		<listitem>
-		</listitem>
-	</varlistentry>
-	-->
+    <varlistentry>
+        <term>
+        </term>
+        <listitem>
+        </listitem>
+    </varlistentry>
+    -->
                 </variablelist>
                 
             </section>
@@ -1463,10 +1377,9 @@ linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
                 <title>Description</title>
                 
                 <para>Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs
-                    hôtes ensemble de façon à simplifier la configuration avec les <link
-linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
-                    ou pour des besoins de visualisation dans les <link
-linkend="thebasics-cgis">CGIs</link>.
+                    hôtes ensemble de façon à simplifier la configuration avec les 
+                    <link linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
+                    ou pour des besoins de visualisation dans les <link linkend="thebasics-cgis">CGIs</link>.
                 </para>
             </section>
             
@@ -1584,11 +1497,11 @@ linkend="thebasics-cgis">CGIs</link>.
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define hostgroup{
-                    hostgroup_name     novell-servers
-                    alias          Novell Servers
-                    members         netware1,netware2,netware3,netware4
-                    }
+define hostgroup {
+    hostgroup_name     novell-servers
+    alias              Novell Servers
+    members            netware1,netware2,netware3,netware4
+}
                 </programlisting>
             </section>
             
@@ -1623,14 +1536,12 @@ linkend="thebasics-cgis">CGIs</link>.
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste de <emphasis>noms courts</emphasis> d'<link
-linkend="configuringnagios-objectdefinitions-host">hôtes</link> qui doivent
+                                C'est une liste de <emphasis>noms courts</emphasis> d'
+                                <link linkend="configuringnagios-objectdefinitions-host">hôtes</link> qui doivent
                                 faire partie de ce groupe. Plusieurs noms d'hôtes peuvent être séparés par
                                 des virgules. Cette variable peut être utilisée comme une alternative (ou en
-                                complément) à la variable <emphasis>hostgroups</emphasis> dans les <link
-linkend="configuringnagios-objectdefinitions-host">définitions
-                                    d'hôtes
-                                </link>
+                                complément) à la variable <emphasis>hostgroups</emphasis> dans les 
+                                <link linkend="configuringnagios-objectdefinitions-host">définitions d'hôtes</link>
                                 .
                             </para>
                         </listitem>
@@ -1641,7 +1552,7 @@ linkend="configuringnagios-objectdefinitions-host">définitions
                         </term>
                         <listitem>
                             <para>Cette variable optionnelle peut être utilisée pour inclure des hôtes depuis
-                                des <quote>sous</quote>-groupes dans ce groupe d'hôtes. Précisez une liste
+                                des <emphasis>sous</emphasis>-groupes dans ce groupe d'hôtes. Précisez une liste
                                 séparée par des virgules de noms courts d'autres groupes d'hôtes à inclure
                                 dans ce groupe.
                             </para>
@@ -1684,7 +1595,7 @@ linkend="configuringnagios-objectdefinitions-host">définitions
                         <listitem>
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 actions supplémentaires à appliquer aux groupes d'hôtes. Si vous précisez une
-                                URL, vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand
+                                URL, vous verrez une icône <emphasis>splat</emphasis> rouge dans les &acronym-cgi;s (quand
                                 vous regardez les informations du groupe d'hôtes) qui renverra vers l'URL
                                 précisée ici. N'importe quelle URL valide peut être utilisée. Si vous pensez
                                 utiliser des chemins relatifs, le chemin de base sera le même que celui
@@ -1707,8 +1618,8 @@ linkend="configuringnagios-objectdefinitions-host">définitions
                 <title>Description</title>
                 
                 <para>Une définition de service est utilisée pour identifier un
-                    <quote>service</quote> qui fonctionne sur cet hôte. le terme
-                    <quote>service</quote> est utilisé de façon générale. Cela peut désigner un
+                    <emphasis>service</emphasis> qui fonctionne sur cet hôte. le terme
+                    <emphasis>service</emphasis> est utilisé de façon générale. Cela peut désigner un
                     service qui fonctionne sur l'hôte (POP, &protocol-smtp;, &protocol-http;,
                     etc.) ou tout autre type de métrique associé à l'hôte (réponse au ping,
                     nombre d'utilisateurs connectés, espace disque dur libre, etc.). Les
@@ -2134,19 +2045,19 @@ linkend="configuringnagios-objectdefinitions-host">définitions
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define service{
-                    host_name        linux-server
-                    service_description   check-disk-sda1
-                    check_command      check-disk!/dev/sda1
-                    max_check_attempts   5
-                    check_interval     5
-                    retry_interval     3
-                    check_period      24x7
-                    notification_interval  30
-                    notification_period   24x7
-                    notification_options  w,c,r
-                    contact_groups     linux-admins
-                    }
+define service {
+    host_name              linux-server
+    service_description    check-disk-sda1
+    check_command          check-disk!/dev/sda1
+    max_check_attempts     5
+    check_interval         5
+    retry_interval         3
+    check_period           24x7
+    notification_interval  30
+    notification_period    24x7
+    notification_options   w,c,r
+    contact_groups         linux-admins
+}
                 </programlisting>
             </section>
             
@@ -2161,9 +2072,8 @@ linkend="configuringnagios-objectdefinitions-host">définitions
                         <listitem>
                             <para>
                                 Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis>
-                                de(s) l'<link
-linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
-                                le service <quote>tourne</quote> ou avec lequel il est associé. Plusieurs
+                                de(s) l'<link linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
+                                le service <emphasis>tourne</emphasis> ou avec lequel il est associé. Plusieurs
                                 hôtes doivent être séparés par des virgules.
                             </para>
                         </listitem>
@@ -2175,11 +2085,8 @@ linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
                         <listitem>
                             <para>
                                 Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis>
-                                de(s) <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
-                                    d'hôtes
-                                </link>
-                                sur lequel le service <quote>tourne</quote> ou avec lequel il
+                                de(s) <link linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s) d'hôtes</link>
+                                sur lequel le service <emphasis>tourne</emphasis> ou avec lequel il
                                 est associé. Plusieurs groupes d'hôtes doivent être séparés par des
                                 virgules.
                             </para>
@@ -2224,17 +2131,11 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                des <link
-linkend="configuringnagios-objectdefinitions-servicegroup">groupe(s) de
-                                    services
-                                </link>
+                                des <link linkend="configuringnagios-objectdefinitions-servicegroup">groupe(s) de services</link>
                                 auxquels appartient ce service. Plusieurs groupes de
                                 services peuvent être séparés par des virgules. Cette variable peut être
                                 utilisée comme alternative à la variable <emphasis>members</emphasis> des
-                                définitions de <link
-linkend="configuringnagios-objectdefinitions-servicegroup">groupes de
-                                    services
-                                </link>
+                                définitions de <link linkend="configuringnagios-objectdefinitions-servicegroup">groupes de services</link>
                                 .
                             </para>
                         </listitem>
@@ -2245,7 +2146,7 @@ linkend="configuringnagios-objectdefinitions-servicegroup">groupes de
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour préciser si un service doit être considéré
-                                comme <quote>volatile</quote>. Les services ne sont normalement
+                                comme <emphasis>volatile</emphasis>. Les services ne sont normalement
                                 <emphasis>pas</emphasis> volatiles. Plus d'informations sur les services
                                 volatiles et en quoi ils différent des services normaux peuvent être trouvées
                                 <link linkend="advancedtopics-volatileservices">ici</link>. Valeur : 0 =
@@ -2260,11 +2161,11 @@ linkend="configuringnagios-objectdefinitions-servicegroup">groupes de
                         <listitem>
                             <para>
                                 Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis>
-                                d'une <link
-linkend="configuringnagios-objectdefinitions-command">commande</link> à
+                                d'une <link linkend="configuringnagios-objectdefinitions-command">commande</link> à
                                 utiliser pour contrôler l'état du service. Le temps maximal d'exécution
-                                d'une commande de contrôle de service est contrôlé par l'option <link
-linkend="configuringnagios-configmain-service_check_timeout">&config-service_check_timeout;</link>.
+                                d'une commande de contrôle de service est contrôlé par l'option 
+                                <xref linkend="configuringnagios-configmain-service_check_timeout"
+                                 endterm="configuringnagios-configmain-service_check_timeout-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -2319,17 +2220,17 @@ linkend="configuringnagios-configmain-service_check_timeout">&config-service_che
                         </term>
                         <listitem>
                             <para>
-                                Ce paramètre est utilisé pour définir le nombre d'<quote>unités de
+                                Ce paramètre est utilisé pour définir le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 à attendre avant d'ordonnancer le contrôle
-                                <quote>régulier</quote> suivant du service. Les contrôles
-                                <quote>réguliers</quote> sont ceux qui sont exécutés quand un service est
+                                <emphasis>régulier</emphasis> suivant du service. Les contrôles
+                                <emphasis>réguliers</emphasis> sont ceux qui sont exécutés quand un service est
                                 dans un état OK ou non-OK mais qu'il a déjà été recontrôlé le nombre de fois
                                 précisé dans la variable <emphasis
 role="bold">max_check_attempts</emphasis>. Sauf si vous avez changé la
-                                variable <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                variable <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
                                 d'informations sur cette valeur peuvent être trouvées dans la documentation sur
                                 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -2345,18 +2246,18 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                         </term>
                         <listitem>
                             <para>
-                                Ce paramètre est utilisé pour définir le nombre d'<quote>unités de
+                                Ce paramètre est utilisé pour définir le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 à attendre avant d'ordonnancer un nouveau contrôle du
                                 service. Les services sont recontrôlés à l'intervalle de réessai quand ils
                                 sont passés dans un état non UP. Une fois que le service à été réessayé le
                                 nombre de fois précisé dans la variable <emphasis
 role="bold">max_check_attempts</emphasis> sans changement d'état, il sera
-                                contrôlé à nouveau sur une fréquence <quote>normale</quote> telle que
+                                contrôlé à nouveau sur une fréquence <emphasis>normale</emphasis> telle que
                                 définie dans la valeur <emphasis role="bold">check_interval</emphasis>. Sauf
-                                si vous avez changé la variable <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                si vous avez changé la variable <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre indique des minutes. Plus
                                 d'informations sur cette valeur peuvent être trouvées dans la documentation sur
                                 <link linkend="advancedtopics-checkscheduling">l'ordonnancement des
@@ -2368,8 +2269,7 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            active_checks_enabled<link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            active_checks_enabled<link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer si les contrôles actifs sont
@@ -2387,8 +2287,7 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            passive_checks_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            passive_checks_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer si les contrôles passifs sont
@@ -2410,35 +2309,32 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court de la <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court de la 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle les contrôles actifs sont possibles.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            obsess_over_service <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            obsess_over_service <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer si les contrôles de ce service
-                                seront ou non <quote>obsessed</quote> en utilisant la commande <link
-linkend="configuringnagios-configmain-ocsp_command">&config-ocsp_command;</link>.
+                                seront ou non <emphasis>obsessed</emphasis> en utilisant la commande 
+                                <xref linkend="configuringnagios-configmain-ocsp_command"
+                                endterm="configuringnagios-configmain-ocsp_command-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            check_freshness <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            check_freshness <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour déterminer si les <link
-linkend="advancedtopics-freshness">contrôles de fraîcheur</link> sont activés
+                                Cette variable est utilisée pour déterminer si les 
+                                <link linkend="advancedtopics-freshness">contrôles de fraîcheur</link> sont activés
                                 ou non pour ce service. Valeurs : 
                                 <itemizedlist>
                                     <listitem>
@@ -2469,8 +2365,7 @@ linkend="advancedtopics-freshness">contrôles de fraîcheur</link> sont activés
                         <listitem>
                             <para>
                                 Cette variable est utilisée pour préciser le <emphasis>nom court</emphasis>
-                                d'une <link
-linkend="configuringnagios-objectdefinitions-command">commande</link> à
+                                d'une <link linkend="configuringnagios-objectdefinitions-command">commande</link> à
                                 exécuter à chaque changement d'état du service (par exemple quand il n'est
                                 plus disponible ou qu'il redevient disponible). Lisez la documentation sur
                                 les <link linkend="advancedtopics-eventhandlers">gestionnaires
@@ -2478,15 +2373,15 @@ linkend="configuringnagios-objectdefinitions-command">commande</link> à
                                 </link>
                                 pour plus d'explications sur la façon d'écrire des
                                 scripts pour gérer les événements. Le temps maximal d'exécution d'une
-                                commande de gestion d'événements est contrôlé par l'option <link
-linkend="configuringnagios-configmain-event_handler_timeout">&config-event_handler_timeout;</link>.
+                                commande de gestion d'événements est contrôlé par l'option 
+                                <xref linkend="configuringnagios-configmain-event_handler_timeout"
+                                endterm="configuringnagios-configmain-event_handler_timeout-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            event_handler_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            event_handler_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer si le gestionnaire d'événements
@@ -2509,10 +2404,9 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         <listitem>
                             <para>Cette variable est utilisée pour préciser le seuil bas de détection
                                 d'oscillation pour ce service. Plus d'informations sur la détection
-                                d'ocillations se trouvent <link
-linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
-                                à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
+                                d'ocillations se trouvent <link linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
+                                à 0, la valeur précisée avec <xref linkend="configuringnagios-configmain-low_host_flap_threshold"
+                                endterm="configuringnagios-configmain-low_host_flap_threshold-tech"/>
                                 au niveau global du logiciel sera utilisée.
                             </para>
                         </listitem>
@@ -2524,24 +2418,21 @@ linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_
                         <listitem>
                             <para>Cette variable est utilisée pour préciser le seuil haut de détection
                                 d'oscillation pour ce service. Plus d'informations sur la détection
-                                d'ocillations se trouvent <link
-linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
-                                à 0, la valeur précisée avec <link
-linkend="configuringnagios-configmain-low_host_flap_threshold">&config-low_host_flap_threshold;</link>
+                                d'ocillations se trouvent <link linkend="advancedtopics-flapping">ici</link>. Si vous mettez cette variable
+                                à 0, la valeur précisée avec <xref linkend="configuringnagios-configmain-low_host_flap_threshold"
+                                endterm="configuringnagios-configmain-low_host_flap_threshold-tech"/>
                                 au niveau global du logiciel sera utilisée.
                             </para>
                         </listitem>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            flap_detection_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            flap_detection_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer si la détection d'oscillation
                                 est activée ou non pour ce service. Plus d'informations sur la détection
-                                d'ocillations se trouvent <link
-linkend="advancedtopics-flapping">ici</link>. Valeurs : 
+                                d'ocillations se trouvent <link linkend="advancedtopics-flapping">ici</link>. Valeurs : 
                                 <itemizedlist>
                                     <listitem>
                                         <para>0= disable service flap detection</para>
@@ -2591,8 +2482,7 @@ linkend="advancedtopics-flapping">ici</link>. Valeurs :
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            process_perf_data <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            process_perf_data <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utlisée pour déterminer si le traitement des données de
@@ -2616,8 +2506,8 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                             <para>Cette variable est utlisée pour déterminer si les informations relatives aux
                                 états de service sont conservées ou non après redémarrage du
                                 programme. C'est seulement utile si vous avez activé la rétention d'états en
-                                utilisant la variable <link
-linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
+                                utilisant la variable <xref linkend="configuringnagios-configmain-retain_state_information"
+                                endterm="configuringnagios-configmain-retain_state_information-tech"/>.
                                 Valeur :
                                 <itemizedlist>
                                     <listitem>
@@ -2638,8 +2528,8 @@ linkend="configuringnagios-configmain-retain_state_information">&config-retain_s
                             <para>Cette variable est utlisée pour déterminer si les informations différentes
                                 des états de service sont conservées après redémarrage du programme. C'est
                                 seulement utile si vous avez activé la rétention d'états en utilisant la
-                                variable <link
-linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
+                                variable <xref linkend="configuringnagios-configmain-retain_state_information"
+                                endterm="configuringnagios-configmain-retain_state_information-tech"/>.
                                 Valeur : 
                                 <itemizedlist>
                                     <listitem>
@@ -2658,13 +2548,13 @@ linkend="configuringnagios-configmain-retain_state_information">&config-retain_s
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nombre d'<quote>unités de
+                                Cette variable est utilisée pour préciser le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 à attendre avant de re-notifier un contact que ce service est
                                 <emphasis>tojours</emphasis> dans un état non-OK. Sauf si vous avez changé
-                                la variable <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                la variable <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
                                 mettez cette valeur à 0, Nagios ne re-notifiera <emphasis>pas</emphasis> les
                                 contacts des problèmes pour cet hôte - une seule notification de problème
@@ -2678,13 +2568,13 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nombre d'<quote>unités de
+                                Cette variable est utilisée pour préciser le nombre d'<emphasis>unités de
                                     temps
-                                </quote>
+                                </emphasis>
                                 à attendre avant d'envoyer la première notification quand un
                                 service passe dans un état non-UP. Sauf si vous avez changé la variable
-                                <link
-linkend="configuringnagios-configmain-interval_length">&config-interval_length;</link>
+                                <xref linkend="configuringnagios-configmain-interval_length"
+                                endterm="configuringnagios-configmain-interval_length-tech"/>
                                 de sa valeur par défaut qui est 60, ce nombre signifie des minutes. Si vous
                                 mettez cette valeur à 0, Nagios commencera à envoyer des notifications
                                 immédiatement.
@@ -2697,10 +2587,8 @@ linkend="configuringnagios-configmain-interval_length">&config-interval_length;<
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court des <link
-linkend="configuringnagios-objectdefinitions-timeperiod">périodes de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court des 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">périodes de temps</link>
                                 pendant lesquelles les notifications d'événements sont envoyées
                                 aux contacts de ce service. Aucune notification ne sera envoyée hors
                                 couverture d'une période de temps.
@@ -2744,8 +2632,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">périodes de
                                     <listitem>
                                         <para>
                                             <emphasis role="bold">f</emphasis> = envois de notifications quand le
-                                            service commence ou s'arrête d'<link
-linkend="advancedtopics-flapping">osciller</link>
+                                            service commence ou s'arrête d'<link linkend="advancedtopics-flapping">osciller</link>
                                         </para>
                                     </listitem>
                                     <listitem>
@@ -2780,8 +2667,7 @@ linkend="advancedtopics-flapping">osciller</link>
                     </varlistentry>
                     <varlistentry>
                         <term>
-                            notifications_enabled <link
-linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
+                            notifications_enabled <link linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>Cette variable est utlisée pour déterminer si les notifications pour ce
@@ -2803,16 +2689,14 @@ linkend="configuringnagios-objectdefinitions-retention_notes">*</link>
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste des <emphasis>noms courts</emphasis> des <link
-linkend="configuringnagios-objectdefinitions-contact">contacts</link> qui
+                                C'est une liste des <emphasis>noms courts</emphasis> des 
+                                <link linkend="configuringnagios-objectdefinitions-contact">contacts</link> qui
                                 devraient être notifiés quand il y a des problèmes (ou retours à la
                                 normale) avec ce service. Plusieurs contacts peuvent être séparés par des
                                 virgules. Utile si vous souhaitez envoyer des notifications vers quelques
-                                personnes et que vous ne souhaitez pas configurer des <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
-                                .Vous devez préciser au moins un contact ou un groupe de
+                                personnes et que vous ne souhaitez pas configurer des 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>.
+                                Vous devez préciser au moins un contact ou un groupe de
                                 contacts dans chaque définition de service.
                             </para>
                         </listitem>
@@ -2823,10 +2707,8 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste des <emphasis>noms courts</emphasis> des <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
+                                C'est une liste des <emphasis>noms courts</emphasis> des 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
                                 qui devraient être notifiés quand il y a des problèmes
                                 (ou retours à la normale) avec ce service. Plusieurs groupes de contacts
                                 peuvent être séparés par des virgules. Vous devez préciser au moins un
@@ -2840,7 +2722,7 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour déterminer quelle
-                                <quote>mémorisation</quote> d'états est utilisée pour le service. Les
+                                <emphasis>mémorisation</emphasis> d'états est utilisée pour le service. Les
                                 options valides sont une combinaison d'un ou ou de plusieurs des états
                                 suivants : 
                                 <itemizedlist>
@@ -2857,8 +2739,8 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                                         <para>c= mémorisation sur états CRITICAL</para>
                                     </listitem>
                                 </itemizedlist>
-                                Plus d'informations sur la mémorisation d'états peuvent être trouvées <link
-linkend="advancedtopics-stalking">ici</link>.
+                                Plus d'informations sur la mémorisation d'états peuvent être trouvées 
+                                <link linkend="advancedtopics-stalking">ici</link>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -2899,7 +2781,7 @@ linkend="advancedtopics-stalking">ici</link>.
                         <listitem>
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 actions supplémentaires à appliquer au service. Si vous précisez une URL,
-                                vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s (quand vous
+                                vous verrez une icône <emphasis>splat</emphasis> rouge dans les &acronym-cgi;s (quand vous
                                 regardez les informations du service) qui renverra vers l'URL précisée
                                 ici. N'importe quelle URL valide peut être utilisée. Si vous pensez utiliser
                                 des chemins relatifs, le chemin de base sera le même que celui utilisé pour
@@ -2914,8 +2796,8 @@ linkend="advancedtopics-stalking">ici</link>.
                         <listitem>
                             <para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
                                 PNG ou JPG à associer au service. Cette image sera affichée dans les &acronym-cgi;s
-                                <link linkend="thebasics-cgis-status_cgi">status</link> et <link
-linkend="thebasics-cgis-extinfo_cgi">extended information</link>. Le rendu
+                                <link linkend="thebasics-cgis-status_cgi">status</link> et 
+                                <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>. Le rendu
                                 de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images
                                 des services sont censées se trouver dans le sous-répertoire <emphasis
 role="strong">logos/</emphasis> de votre dossier d'images HTML (par exemple
@@ -2932,9 +2814,9 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                             <para>Cette variable est utilisée pour définir une chaîne de caractères optionnelle
                                 à utiliser dans l'attribut ALT de l'image précisée par l'argument
                                 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
-                                dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
-linkend="thebasics-cgis-extinfo_cgi">extended information</link> et <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
+                                dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, 
+                                <link linkend="thebasics-cgis-extinfo_cgi">extended information</link> et 
+                                <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -2953,10 +2835,9 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
                 <title>Description</title>
                 
                 <para>Une définition de groupe d'hôtes est utilisée pour grouper un ou plusieurs
-                    services ensemble de façon à simplifier la configuration avec les <link
-linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
-                    ou pour des besoins de visualisation dans les <link
-linkend="thebasics-cgis">CGIs</link>.
+                    services ensemble de façon à simplifier la configuration avec les 
+                    <link linkend="advancedtopics-objecttricks">trucs et astuces sur les objets</link>
+                    ou pour des besoins de visualisation dans les <link linkend="thebasics-cgis">CGIs</link>.
                 </para>
             </section>
             
@@ -3073,11 +2954,11 @@ linkend="thebasics-cgis">CGIs</link>.
                 <title>Exemple de définition</title>
                 
                 <programlisting>    
-                    define servicegroup{
-                    servicegroup_name    dbservices
-                    alias          Database Services
-                    members         ms1,SQL Server,ms1,SQL Serverc Agent,ms1,SQL DTC
-                    }
+define servicegroup {
+    servicegroup_name    dbservices
+    alias                Database Services
+    members              ms1,SQL Server,ms1,SQL Serverc Agent,ms1,SQL DTC
+}
                 </programlisting>
             </section>
             
@@ -3111,16 +2992,14 @@ linkend="thebasics-cgis">CGIs</link>.
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste de <emphasis>noms courts</emphasis> de <link
-linkend="configuringnagios-objectdefinitions-service">service</link> (et le
+                                C'est une liste de <emphasis>noms courts</emphasis> de 
+                                <link linkend="configuringnagios-objectdefinitions-service">service</link> (et le
                                 nom des hôtes correspondants) qui doivent faire partie de ce
                                 groupe. Plusieurs noms d'hôtes et de services peuvent être séparés par des
                                 virgules. Cette variable peut être utilisée comme une alternative (ou en
-                                complément) à la variable <emphasis>servicegroups</emphasis> dans les <link
-linkend="configuringnagios-objectdefinitions-service">définitions de
-                                    service
-                                </link>
-                                .Le format de la variable <varname>members</varname> est le
+                                complément) à la variable <emphasis>servicegroups</emphasis> dans les 
+                                <link linkend="configuringnagios-objectdefinitions-service">définitions de service</link>.
+                                Le format de la variable <literal>members</literal> est le
                                 suivant (notez que le nom de l'hôte doit précéder le nom/description du
                                 service) :
                                 <programlisting>
@@ -3135,7 +3014,7 @@ linkend="configuringnagios-objectdefinitions-service">définitions de
                         </term>
                         <listitem>
                             <para>Cette variable optionnelle peut être utilisée pour inclure des services
-                                depuis des <quote>sous</quote>-groupes dans ce groupe de services. Précisez
+                                depuis des <emphasis>sous</emphasis>-groupes dans ce groupe de services. Précisez
                                 une liste séparée par des virgules de noms courts d'autres groupes de
                                 services à inclure dans ce groupe.
                             </para>
@@ -3181,7 +3060,7 @@ linkend="configuringnagios-objectdefinitions-service">définitions de
                         <listitem>
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 actions supplémentaires à appliquer au groupe de services. Si vous précisez
-                                une URL, vous verrez une icône <quote>splat</quote> rouge dans les &acronym-cgi;s
+                                une URL, vous verrez une icône <emphasis>splat</emphasis> rouge dans les &acronym-cgi;s
                                 (quand vous regardez les informations du groupe de services) qui renverra
                                 vers l'URL précisée ici. N'importe quelle URL valide peut être utilisée. Si
                                 vous pensez utiliser des chemins relatifs, le chemin de base sera le même
@@ -3421,23 +3300,23 @@ linkend="configuringnagios-objectdefinitions-service">définitions de
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define contact{
-                    contact_name          jdoe
-                    alias              John Doe
-                    host_notifications_enabled   1
-                    service_notifications_enabled  1
-                    service_notification_period   24x7
-                    host_notification_period    24x7
-                    service_notification_options  w,u,c,r
-                    host_notification_options    d,u,r
-                    service_notification_commands  notify-by-email
-                    host_notification_commands   host-notify-by-email
-                    email              jdoe@localhost.localdomain
-                    pager              555-5555@pagergateway.localhost.localdomain
-                    address1            xxxxx.xyyy@icq.com
-                    address2            555-555-5555
-                    can_submit_commands       1
-                    }
+define contact {
+    contact_name          jdoe
+    alias              John Doe
+    host_notifications_enabled   1
+    service_notifications_enabled  1
+    service_notification_period   24x7
+    host_notification_period    24x7
+    service_notification_options  w,u,c,r
+    host_notification_options    d,u,r
+    service_notification_commands  notify-by-email
+    host_notification_commands   host-notify-by-email
+    email              jdoe@localhost.localdomain
+    pager              555-5555@pagergateway.localhost.localdomain
+    address1            xxxxx.xyyy@icq.com
+    address2            555-555-5555
+    can_submit_commands       1
+}
                 </programlisting>
             </section>
             
@@ -3451,12 +3330,10 @@ linkend="configuringnagios-objectdefinitions-service">définitions de
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir un nom court pour identifer le
-                                contact. Ceci est référencé dans les définitions de <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
-                                .Dans les bonnes circonstances, la <link
-linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
+                                contact. Ceci est référencé dans les définitions de 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
+                                .Dans les bonnes circonstances, la 
+                                <link linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
                                 valeur.
                             </para>
                         </listitem>
@@ -3467,8 +3344,8 @@ linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir un nom long ou une description
-                                identifiant le contact. Dans les bonnes circonstances, la <link
-linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
+                                identifiant le contact. Dans les bonnes circonstances, la 
+                                <link linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
                                 valeur. Si non précisée, la variable <emphasis>contact_name</emphasis> sera
                                 utilisée comme alias.
                             </para>
@@ -3483,18 +3360,12 @@ linkend="thebasics-macros">macro</link> &macro-contactname; contiendra cette
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                des <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
+                                des <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
                                 auxquels appartient ce contact. Plusieurs noms de groupes
                                 doivent être séparés par des virgules. Cette variable peut être utilisée
                                 comme alternative (ou en complément) à la variable
-                                <emphasis>members</emphasis> des définitions de <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
-                                .
+                                <emphasis>members</emphasis> des définitions de 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -3542,16 +3413,13 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court d'une <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court d'une 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle un contact peut être notifié des problèmes
                                 d'hôtes et des retours à la normale. Vous pouvez penser à ceci comme une
-                                heure <quote>d'appel</quote> du contact pour les notifications
-                                d'hôtes. Lisez la documentation sur les <link
-linkend="thebasics-timeperiods">périodes de temps</link> pour plus
-                                d'informations sur le fonctionnement de celles-ci et sur les problèmes
+                                heure <emphasis>d'appel</emphasis> du contact pour les notifications
+                                d'hôtes. Lisez la documentation sur les <link linkend="thebasics-timeperiods">périodes de temps</link>
+                                pour plus d'informations sur le fonctionnement de celles-ci et sur les problèmes
                                 pouvant survenir en cas d'utilisation incorrecte de celles-ci.
                             </para>
                         </listitem>
@@ -3562,15 +3430,12 @@ linkend="thebasics-timeperiods">périodes de temps</link> pour plus
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court d'une <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court d'une 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle un contact peut être notifié des problèmes de
                                 services et des retours à la normale. Vous pouvez penser à ceci comme une
-                                heure <quote>d'appel</quote> du contact pour les notifications de
-                                services. Lisez la documentation sur les <link
-linkend="thebasics-timeperiods">périodes de temps</link> pour plus
+                                heure <emphasis>d'appel</emphasis> du contact pour les notifications de
+                                services. Lisez la documentation sur les <link linkend="thebasics-timeperiods">périodes de temps</link> pour plus
                                 d'informations sur le fonctionnement de celles-ci et sur les problèmes
                                 pouvant survenir en cas d'utilisation incorrecte de celles-ci.
                             </para>
@@ -3585,14 +3450,13 @@ linkend="thebasics-timeperiods">périodes de temps</link> pour plus
                                 Cette variable est utilisée pour préciser les <emphasis>noms
                                     courts
                                 </emphasis>
-                                de <link
-linkend="configuringnagios-objectdefinitions-command">commandes</link> à
+                                de <link linkend="configuringnagios-objectdefinitions-command">commandes</link> à
                                 utiliser pour notifier le contact des problèmes d'<emphasis>hôtes</emphasis>
                                 et des retours à la normale. Plusieurs notifications peuvent être séparés
                                 par des virgules. Toutes les commandes de notification sont exécutées quand
                                 les contacts ont besoin d'être notifiés. Le durée maximale d'exécution de la
-                                commande est contrôlée par l'option <link
-linkend="configuringnagios-configmain-notification_timeout">&config-notification_timeout;</link>.
+                                commande est contrôlée par l'option <xref linkend="configuringnagios-configmain-notification_timeout"
+                                endterm="configuringnagios-configmain-notification_timeout-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -3616,8 +3480,7 @@ linkend="configuringnagios-configmain-notification_timeout">&config-notification
                                     </listitem>
                                     <listitem>
                                         <para>
-                                            f= notification quand un hôte commence ou s'arrête d'<link
-linkend="advancedtopics-flapping">osciller</link>,
+                                            f= notification quand un hôte commence ou s'arrête d'<link linkend="advancedtopics-flapping">osciller</link>,
                                         </para>
                                     </listitem>
                                     <listitem>
@@ -3656,8 +3519,7 @@ linkend="advancedtopics-flapping">osciller</link>,
                                     </listitem>
                                     <listitem>
                                         <para>
-                                            f= notification quand le service commence et s'arrête d'<link
-linkend="advancedtopics-flapping">osciller</link>.
+                                            f= notification quand le service commence et s'arrête d'<link linkend="advancedtopics-flapping">osciller</link>.
                                         </para>
                                     </listitem>
                                     <listitem>
@@ -3676,15 +3538,14 @@ linkend="advancedtopics-flapping">osciller</link>.
                                 Cette variable est utilisée pour préciser les <emphasis>noms
                                     courts
                                 </emphasis>
-                                de <link
-linkend="configuringnagios-objectdefinitions-command">commandes</link> à
+                                de <link linkend="configuringnagios-objectdefinitions-command">commandes</link> à
                                 utiliser pour notifier le contact des problèmes
                                 de <emphasis>services</emphasis> et des retours à la normale. Plusieurs commandes 
                                 de notifications peuvent être séparées par des virgules. Toutes les commandes de
                                 notification sont exécutées quand les contacts ont besoin d'être
                                 notifiés. Le durée maximale d'exécution de la commande est contrôlée par
-                                l'option <link
-linkend="configuringnagios-configmain-notification_timeout">&config-notification_timeout;</link>.
+                                l'option <xref linkend="configuringnagios-configmain-notification_timeout"
+                                endterm="configuringnagios-configmain-notification_timeout-tech"/>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -3696,8 +3557,7 @@ linkend="configuringnagios-configmain-notification_timeout">&config-notification
                             <para>Cette variable est utilisée pour définir une adresse email pour le
                                 contact. En fonction de la façon dont vous avez configuré les commandes de
                                 notifications, cela peut être utilisé pour envoyer une alerte par email au
-                                contact. Dans les bonnes circonstances, la <link
-linkend="thebasics-macros">macro</link> &macro-contactemail; contiendra cette
+                                contact. Dans les bonnes circonstances, la <link linkend="thebasics-macros">macro</link> &macro-contactemail; contiendra cette
                                 valeur.
                             </para>
                         </listitem>
@@ -3724,16 +3584,15 @@ url="mailto:pagejoe@pagenet.com">pagejoe@pagenet.com</ulink>). En fonction
                         </term>
                         <listitem>
                             <para>
-                                Les variables <varname>address</varname> sont utilisées pour définir des
-                                <quote>adresses</quote> supplémentaires pour le contact. Ces adresses
+                                Les variables <literal>address</literal> sont utilisées pour définir des
+                                <emphasis>adresses</emphasis> supplémentaires pour le contact. Ces adresses
                                 peuvent être n'importe quoi - numéro de téléphone mobile, adresse de
                                 messagerie instantanée, etc. En fonction de la façon dont vous avez
                                 configuré les commandes de notifications, cela peut être utilisé pour
                                 envoyer une alerte au contact. Il est possible de définir jusqu'à six
                                 adresses en utilisant ces variables (<emphasis>address1</emphasis> jusqu'à
-                                <emphasis>address6</emphasis>). La <link
-linkend="thebasics-macros">macro</link>
-                                <literal>$CONTACTADDRESS</literal><emphasis>x</emphasis><varname>$</varname> contiendra cette valeur.
+                                <emphasis>address6</emphasis>). La <link linkend="thebasics-macros">macro</link>
+                                <literal>$CONTACTADDRESS</literal><emphasis>x</emphasis><literal>$</literal> contiendra cette valeur.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -3766,8 +3625,8 @@ linkend="thebasics-macros">macro</link>
                             <para>Cette variable est utlisée pour déterminer si les informations relatives aux
                                 états du contact sont conservées ou non après redémarrage du
                                 programme. C'est seulement utile si vous avez activé la rétention d'états en
-                                utilisant la variable <link
-linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
+                                utilisant la variable <xref linkend="configuringnagios-configmain-retain_state_information"
+                                endterm="configuringnagios-configmain-retain_state_information-tech"/>.
                                 Valeur :
                                 <itemizedlist>
                                     <listitem>
@@ -3788,8 +3647,8 @@ linkend="configuringnagios-configmain-retain_state_information">&config-retain_s
                             <para>Cette variable est utlisée pour déterminer si les informations différentes
                                 des états du contact sont conservées après redémarrage du programme. C'est
                                 seulement utile si vous avez activé la rétention d'états en utilisant la
-                                variable <link
-linkend="configuringnagios-configmain-retain_state_information">&config-retain_state_information;</link>.
+                                variable <xref linkend="configuringnagios-configmain-retain_state_information"
+                                endterm="configuringnagios-configmain-retain_state_information-tech"/>.
                                 Valeur :
                                 <itemizedlist>
                                     <listitem>
@@ -3816,10 +3675,8 @@ linkend="configuringnagios-configmain-retain_state_information">&config-retain_s
                 <title>Description</title>
                 
                 <para>Une définition de groupe de contacts est utilisée pour grouper un ou
-                    plusieurs <link
-linkend="configuringnagios-objectdefinitions-contact">contacts</link>
-                    ensemble de façon à envoyer les <link
-linkend="thebasics-notifications">notifications</link> pour des problèmes et
+                    plusieurs <link linkend="configuringnagios-objectdefinitions-contact">contacts</link>
+                    ensemble de façon à envoyer les <link linkend="thebasics-notifications">notifications</link> pour des problèmes et
                     des retours à la normale.
                 </para>
             </section>
@@ -3904,11 +3761,11 @@ linkend="thebasics-notifications">notifications</link> pour des problèmes et
                 <title>Exemple de définition :</title>
                 
                 <programlisting>    
-                    define contactgroup{
-                    contactgroup_name    novell-admins
-                    alias          Novell Administrators
-                    members         jdoe,rtobert,tzach
-                    }
+define contactgroup {
+    contactgroup_name    novell-admins
+    alias                Novell Administrators
+    members              jdoe,rtobert,tzach
+}
                 </programlisting>
             </section>
             
@@ -3942,15 +3799,13 @@ linkend="thebasics-notifications">notifications</link> pour des problèmes et
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste de <emphasis>noms courts</emphasis> de <link
-linkend="configuringnagios-objectdefinitions-contact">contact</link> qui
+                                C'est une liste de <emphasis>noms courts</emphasis> de 
+                                <link linkend="configuringnagios-objectdefinitions-contact">contact</link> qui
                                 doivent faire partie de ce groupe. Plusieurs noms de contacts peuvent être
                                 séparés par des virgules. Cette variable peut être utilisée comme une
                                 alternative (ou en complément) à la variable
-                                <emphasis>contactgroups</emphasis> dans les <link
-linkend="configuringnagios-objectdefinitions-contact">définitions de
-                                    contact
-                                </link>
+                                <emphasis>contactgroups</emphasis> dans les 
+                                <link linkend="configuringnagios-objectdefinitions-contact">définitions de contact</link>
                                 .
                             </para>
                         </listitem>
@@ -3961,7 +3816,7 @@ linkend="configuringnagios-objectdefinitions-contact">définitions de
                         </term>
                         <listitem>
                             <para>Cette variable optionnelle peut être utilisée pour inclure des contacts
-                                depuis des <quote>sous</quote>-groupes dans ce groupe de contacts. Précisez
+                                depuis des <emphasis>sous</emphasis>-groupes dans ce groupe de contacts. Précisez
                                 une liste séparée par des virgules de noms courts d'autres groupes de
                                 contacts à inclure dans ce groupe.
                             </para>
@@ -3981,9 +3836,9 @@ Period Definition" />Définition de période de temps
                 <title>Description</title>
                 <para>
                     Une période de temps est une liste de plages horaires comprises sur
-                    plusieurs jours qui sont considérées comme <quote>valides</quote> pour les
+                    plusieurs jours qui sont considérées comme <emphasis>valides</emphasis> pour les
                     notifications et les contrôles de services. Cela consiste en plages horaires
-                    définies pour chaque jour de la semaine qui <quote>tournent</quote> une fois
+                    définies pour chaque jour de la semaine qui <emphasis>tournent</emphasis> une fois
                     la semaine finie. Différents types d'exceptions aux heurs normales de la
                     semaine sont supportées : jours de la semaine en particulier, jours de mois
                     généraux à tous les mois, jours de certains mois et dates de calendrier.
@@ -4081,52 +3936,52 @@ Period Definition" />Définition de période de temps
                 <title>Exemples de définitions</title>
                 
                 <programlisting>
-                    define timeperiod{
-                    timeperiod_name     nonworkhours
-                    alias          Non-Work Hours
-                    sunday         00:00-24:00       ; Every Sunday of every week
-                    monday         00:00-09:00,17:00-24:00 ; Every Monday of every week
-                    tuesday         00:00-09:00,17:00-24:00 ; Every Tuesday of every week
-                    wednesday        00:00-09:00,17:00-24:00 ; Every Wednesday of every week
-                    thursday        00:00-09:00,17:00-24:00 ; Every Thursday of every week
-                    friday         00:00-09:00,17:00-24:00 ; Every Friday of every week
-                    saturday        00:00-24:00       ; Every Saturday of every week
-                    }
+define timeperiod {
+    timeperiod_name   nonworkhours
+    alias             Non-Work Hours
+    sunday            00:00-24:00       ; Every Sunday of every week
+    monday            00:00-09:00,17:00-24:00 ; Every Monday of every week
+    tuesday           00:00-09:00,17:00-24:00 ; Every Tuesday of every week
+    wednesday         00:00-09:00,17:00-24:00 ; Every Wednesday of every week
+    thursday          00:00-09:00,17:00-24:00 ; Every Thursday of every week
+    friday            00:00-09:00,17:00-24:00 ; Every Friday of every week
+    saturday          00:00-24:00       ; Every Saturday of every week
+}
                     
-                    define timeperiod{
-                    timeperiod_name     misc-single-days
-                    alias          Misc Single Days
-                    1999-01-28       00:00-24:00       ; January 28th, 1999
-                    monday 3        00:00-24:00       ; 3rd Monday of every month
-                    day 2          00:00-24:00       ; 2nd day of every month
-                    february 10       00:00-24:00       ; February 10th of every year
-                    february -1       00:00-24:00       ; Last day in February of every year
-                    friday -2        00:00-24:00       ; 2nd to last Friday of every month
-                    thursday -1 november  00:00-24:00       ; Last Thursday in November of every year
-                    }
+define timeperiod {
+    timeperiod_name   misc-single-days
+    alias             Misc Single Days
+    1999-01-28        00:00-24:00       ; January 28th, 1999
+    monday 3          00:00-24:00       ; 3rd Monday of every month
+    day 2             00:00-24:00       ; 2nd day of every month
+    february 10       00:00-24:00       ; February 10th of every year
+    february -1       00:00-24:00       ; Last day in February of every year
+    friday -2         00:00-24:00       ; 2nd to last Friday of every month
+    thursday          -1 november  00:00-24:00 ; Last Thursday in November of every year
+}
                     
-                    define timeperiod{
-                    timeperiod_name         misc-date-ranges
-                    alias              Misc Date Ranges
-                    2007-01-01 - 2008-02-01     00:00-24:00   ; January 1st, 2007 to February 1st, 2008
-                    monday 3 - thursday 4      00:00-24:00   ; 3rd Monday to 4th Thursday of every month
-                    day 1 - 15           00:00-24:00   ; 1st to 15th day of every month
-                    day 20 - -1           00:00-24:00   ; 20th to the last day of every month
-                    july 10 - 15          00:00-24:00   ; July 10th to July 15th of every year
-                    april 10 - may 15        00:00-24:00   ; April 10th to May 15th of every year
-                    tuesday 1 april - friday 2 may 00:00-24:00   ; 1st Tuesday in April to 2nd Friday in May of every year
-                    }
+define timeperiod {
+    timeperiod_name         misc-date-ranges
+    alias                   Misc Date Ranges
+    2007-01-01 - 2008-02-01    00:00-24:00   ; January 1st, 2007 to February 1st, 2008
+    monday 3 - thursday 4      00:00-24:00   ; 3rd Monday to 4th Thursday of every month
+    day 1 - 15                 00:00-24:00   ; 1st to 15th day of every month
+    day 20 - -1                00:00-24:00   ; 20th to the last day of every month
+    july 10 - 15               00:00-24:00   ; July 10th to July 15th of every year
+    april 10 - may 15          00:00-24:00   ; April 10th to May 15th of every year
+    tuesday 1 april - friday 2 may 00:00-24:00   ; 1st Tuesday in April to 2nd Friday in May of every year
+}
                     
-                    define timeperiod{
-                    timeperiod_name           misc-skip-ranges
-                    alias                Misc Skip Ranges
-                    2007-01-01 - 2008-02-01 / 3     00:00-24:00  ; Every 3 days from January 1st, 2007 to February 1st, 2008
-                    2008-04-01 / 7            00:00-24:00  ; Every 7 days from April 1st, 2008 (continuing forever)
-                    monday 3 - thursday 4 / 2      00:00-24:00  ; Every other day from 3rd Monday to 4th Thursday of every month
-                    day 1 - 15 / 5            00:00-24:00  ; Every 5 days from the 1st to the 15th day of every month
-                    july 10 - 15 / 2           00:00-24:00  ; Every other day from July 10th to July 15th of every year
-                    tuesday 1 april - friday 2 may / 6  00:00-24:00  ; Every 6 days from the 1st Tuesday in April to the 2nd Friday in May of every year
-                    }
+define timeperiod {
+    timeperiod_name           misc-skip-ranges
+    alias                     Misc Skip Ranges
+    2007-01-01 - 2008-02-01 / 3   00:00-24:00  ; Every 3 days from January 1st, 2007 to February 1st, 2008
+    2008-04-01 / 7                00:00-24:00  ; Every 7 days from April 1st, 2008 (continuing forever)
+    monday 3 - thursday 4 / 2     00:00-24:00  ; Every other day from 3rd Monday to 4th Thursday of every month
+    day 1 - 15 / 5                00:00-24:00  ; Every 5 days from the 1st to the 15th day of every month
+    july 10 - 15 / 2              00:00-24:00  ; Every other day from July 10th to July 15th of every year
+    tuesday 1 april - friday 2 may / 6  00:00-24:00  ; Every 6 days from the 1st Tuesday in April to the 2nd Friday in May of every year
+}
                 </programlisting>
             </section>
             
@@ -4159,15 +4014,11 @@ Period Definition" />Définition de période de temps
                         <listitem>
                             <para>Les variables de jours de la semaine
                                 (
-                                <quote>
                                     <emphasis>sunday</emphasis>
-                                </quote>
                                 à
-                                <quote>
                                     <emphasis>saturday</emphasis>
-                                </quote>
                                 )sont des listes séparées par
-                                des virgules de périodes de temps <quote>valides</quote> pour un jour
+                                des virgules de périodes de temps <emphasis>valides</emphasis> pour un jour
                                 particulier de la semaine. Notez qu'il y a sept jours différents pour
                                 lesquels vous pouvez définir des périodes de temps (dimanche à lundi). Chaque
                                 période de temps est sous la forme <emphasis
@@ -4190,17 +4041,16 @@ role="bold">HH:MM-HH:MM</emphasis>, où les heures sont indiquées sur 24
                                 différentes formes comme un seul jour d'un mois particulier ou de tous les
                                 mois, une seule semaine d'un mois ou des dates de calendrier. Vous pouvez
                                 aussi préciser une plage de jours/dates et même préciser de sauter des
-                                intervalles pour obtenir un fonctionnement du type <quote>tous les trois
+                                intervalles pour obtenir un fonctionnement du type <emphasis>tous les trois
                                     jours entre ces dates
-                                </quote>
+                                </emphasis>
                                 .Plutôt que de lister tous les formats
                                 possibles pour les exceptions, je vais vous laisser regarder les quelques
                                 exemples de définitions de périodes de temps ci-dessus pour voir ce qui est
                                 possible. ;-) Les jours de la semaine et d'autres types d'exceptions ont
                                 tous des niveaux différents de précédence, aussi est-il important de
                                 comprendre comment ils interagissent les uns les autres. Plus d'informations
-                                sur ceci peuvent être trouvées dans la documentation sur les <link
-linkend="thebasics-timeperiods">périodes de temps</link>.
+                                sur ceci peuvent être trouvées dans la documentation sur les <link linkend="thebasics-timeperiods">périodes de temps</link>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -4236,9 +4086,9 @@ linkend="thebasics-timeperiods">périodes de temps</link>.
                     services, les contrôles d'hôtes, les notifications d'hôtes et les
                     gestionnaires d'événements d'hôtes. Les définitions de commandes peuvent
                     contenir des <link linkend="thebasics-timeperiods">timeperiods</link> mais
-                    vous devez vous assurez de n'utiliser que les macros <quote>valides</quote>
+                    vous devez vous assurez de n'utiliser que les macros <emphasis>valides</emphasis>
                     dans le contexte où sera utilisée la commande. Plus d'informations sur les
-                    macros disponibles et quand elles sont <quote>valides</quote> peuvent être
+                    macros disponibles et quand elles sont <emphasis>valides</emphasis> peuvent être
                     trouvées <link linkend="thebasics-macros">ici</link>. Les différents arguments
                     d'une définition de commande sont indiqués ci-dessous.
                 </para>
@@ -4303,10 +4153,10 @@ linkend="thebasics-timeperiods">périodes de temps</link>.
                 <title>Exemple de définition</title>
                 
                 <programlisting>    
-                    define command{
-                    command_name  check_pop
-                    command_line  /usr/local/nagios/libexec/check_pop -H $HOSTADDRESS$    
-                    }
+define command {
+    command_name  check_pop
+    command_line  /usr/local/nagios/libexec/check_pop -H $HOSTADDRESS$    
+}
                 </programlisting>
             </section>
             
@@ -4320,12 +4170,11 @@ linkend="thebasics-timeperiods">périodes de temps</link>.
                         </term>
                         <listitem>
                             <para>Cette variable est un nom court utilisé pour identifier la commande. Ceci
-                                est référencé dans les définitions de <link
-linkend="configuringnagios-objectdefinitions-contact">contact</link>,
+                                est référencé dans les définitions de <link linkend="configuringnagios-objectdefinitions-contact">contact</link>,
                                 d'<link linkend="configuringnagios-objectdefinitions-host">hôte</link> et de
                                 <link linkend="configuringnagios-objectdefinitions-service">service</link>
-                                (dans les variables <varname>notification</varname>,
-                                <varname>check</varname> et <varname>event handler</varname>) entre autres
+                                (dans les variables <literal>notification</literal>,
+                                <literal>check</literal> et <literal>event handler</literal>) entre autres
                                 .
                             </para>
                         </listitem>
@@ -4337,10 +4186,7 @@ linkend="configuringnagios-objectdefinitions-contact">contact</link>,
                         <listitem>
                             <para>Cette variable est utilisée pour définir ce qui est réellement exécuté par
                                 Nagios quand la commande est utilisée pour les contrôles d'hôtes et de
-                                services, les notifications ou les <link
-linkend="advancedtopics-eventhandlers">gestionnaires
-                                    d'événements
-                                </link>
+                                services, les notifications ou les <link linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
                                 .Avant que la commande ne soit exécutée, toutes les
                                 <link linkend="thebasics-macros">macros</link> valides sont remplacées par
                                 leurs valeurs respectives. Regardez la documentation des macros pour
@@ -4356,11 +4202,8 @@ linkend="advancedtopics-eventhandlers">gestionnaires
                                     (;) dans la variable <emphasis>command_line</emphasis>
                                     parce que tout ce qui se trouvera après sera considéré comme commentaire de
                                     fichier de configuration. Vous pouvez contourner cette limitation en
-                                    initialisant une macro utilisateur <link
-linkend="thebasics-macrolist-usern">&macro-usern;</link> dans votre <link
-linkend="configuringnagios-configmain-resource_file">fichier de
-                                        ressource
-                                    </link>
+                                    initialisant une macro utilisateur <link linkend="thebasics-macrolist-usern">&macro-usern;</link> dans votre 
+                                    <link linkend="configuringnagios-configmain-resource_file">fichier de ressource</link>
                                     avec un point virgule et en référençant ensuite cette macro
                                     &macro-usern; dans la variable <emphasis>command_line</emphasis> à la place du
                                     point virgule. 
@@ -4401,8 +4244,7 @@ linkend="configuringnagios-configmain-resource_file">fichier de
                     de services sont optionnelles et sont principalement destinées aux
                     utilisateurs avancés qui ont des installations de supervision
                     complexes. Plus d'informations sur le focntionnement des dépendances de
-                    services (à lire absolument!) peuvent être trouvées <link
-linkend="advancedtopics-dependencies">ici</link>.
+                    services (à lire absolument!) peuvent être trouvées <link linkend="advancedtopics-dependencies">ici</link>.
                 </para>
             </section>
             
@@ -4545,14 +4387,14 @@ linkend="advancedtopics-dependencies">ici</link>.
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define servicedependency{
-                    host_name            WWW1
-                    service_description       Apache Web Server
-                    dependent_host_name       WWW1
-                    dependent_service_description  Main Web Site
-                    execution_failure_criteria   n
-                    notification_failure_criteria  w,u,c
-                    }
+define servicedependency {
+    host_name                      WWW1
+    service_description            Apache Web Server
+    dependent_host_name            WWW1
+    dependent_service_description  Main Web Site
+    execution_failure_criteria     n
+    notification_failure_criteria  w,u,c
+}
                 </programlisting>
             </section>
             
@@ -4569,15 +4411,11 @@ linkend="advancedtopics-dependencies">ici</link>.
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                d'<link
-linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
-                                <quote>tourne</quote> le service <emphasis>dépendant</emphasis> où avec
+                                d'<link linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
+                                <emphasis>tourne</emphasis> le service <emphasis>dépendant</emphasis> où avec
                                 lequel il est associé. Plusieurs hôtes peuvent être séparés par des
-                                virgules. Laissez cette variable vide peut être utilisé pour créer des <link
-linkend="advancedtopics-objecttricks-same_host_dependency">dépendances
-                                    <quote>sur le même hôte</quote>
-                                </link>
-                                .
+                                virgules. Laissez cette variable vide peut être utilisé pour créer des 
+                                <link linkend="advancedtopics-objecttricks-same_host_dependency">dépendances <emphasis>sur le même hôte</emphasis></link>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -4587,18 +4425,13 @@ linkend="advancedtopics-objecttricks-same_host_dependency">dépendances
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
-                                    court(s)
-                                </emphasis>
-                                de <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
-                                    d'hôtes
-                                </link>
-                                sur lesquels <quote>tourne</quote> le service
+                                Cette variable est utilisée pour identifier le(s) <emphasis>nom(s) court(s)</emphasis>
+                                de <link linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s) d'hôtes</link>
+                                sur lesquels <emphasis>tourne</emphasis> le service
                                 <emphasis>dépendant</emphasis> où avec lesquels il est associé. Plusieurs
                                 groupes d'hôtes peuvent être séparés par des virgules. La variable
-                                <varname>dependent_hostgroup</varname> peut être utilisée à la place ou en
-                                conjonction avec la variable <varname>dependent_host</varname>.
+                                <literal>dependent_hostgroup</literal> peut être utilisée à la place ou en
+                                conjonction avec la variable <literal>dependent_host</literal>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -4608,8 +4441,7 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour identifier la
-                                <emphasis>description</emphasis> d'un <link
-linkend="configuringnagios-objectdefinitions-service">service</link>
+                                <emphasis>description</emphasis> d'un <link linkend="configuringnagios-objectdefinitions-service">service</link>
                                 <emphasis>dépendant</emphasis>.
                             </para>
                         </listitem>
@@ -4623,9 +4455,8 @@ linkend="configuringnagios-objectdefinitions-service">service</link>
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                d'<link
-linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
-                                <quote>tourne</quote> le service <emphasis>dont on dépend</emphasis> (aussi
+                                d'<link linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
+                                <emphasis>tourne</emphasis> le service <emphasis>dont on dépend</emphasis> (aussi
                                 appelé service maître) où avec lequel il est associé. Plusieurs hôtes
                                 peuvent être séparés par des virgules.
                             </para>
@@ -4640,17 +4471,13 @@ linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> sur lequel
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                de<link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
-                                    d'hôtes
-                                </link>
-                                sur lequel <quote>tourne</quote> le service <emphasis>dont on
-                                    dépend
-                                </emphasis>
+                                de <link linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s) d'hôtes</link>
+                                sur lequel <emphasis>tourne</emphasis> le service <emphasis>
+                                dont on dépend</emphasis>
                                 (aussi appelé service maître) où avec lequel il est
                                 associé. Plusieurs groupes hôtes peuvent être séparés par des virgules. La
-                                variable <varname>hostgroup_name</varname> peut être utilisé à la place ou
-                                en conjonction avec la variable <varname>host_name</varname>.
+                                variable <literal>hostgroup_name</literal> peut être utilisé à la place ou
+                                en conjonction avec la variable <literal>host_name</literal>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -4660,8 +4487,7 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour identifier la
-                                <emphasis>description</emphasis> du <link
-linkend="configuringnagios-objectdefinitions-service">service</link>
+                                <emphasis>description</emphasis> du <link linkend="configuringnagios-objectdefinitions-service">service</link>
                                 <emphasis>dont on dépend</emphasis> (aussi appelé service maître).
                             </para>
                         </listitem>
@@ -4803,10 +4629,8 @@ linkend="configuringnagios-objectdefinitions-service">service</link>
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court d'une <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court d'une 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle les dépendances sont valides. Si cette
                                 variable est vide, les dépendances seront considérées comme valides tout le
                                 temps.
@@ -4828,8 +4652,8 @@ linkend="configuringnagios-objectdefinitions-timeperiod">période de
                 
                 <para>Les escalades de services sont complètement optionnelles et sont utilisées
                     pour escalader les notifications d'un service particulier. Plus
-                    d'informations sur le fonctionnement des escalades peuvent être trouvées <link
-linkend="advancedtopics-escalations">ici</link>.
+                    d'informations sur le fonctionnement des escalades peuvent être trouvées 
+                    <link linkend="advancedtopics-escalations">ici</link>.
                 </para>
             </section>
             
@@ -4969,14 +4793,14 @@ linkend="advancedtopics-escalations">ici</link>.
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define serviceescalation{
-                    host_name        nt-3
-                    service_description   Processor Load
-                    first_notification   4
-                    last_notification    0
-                    notification_interval  30
-                    contact_groups     all-nt-admins,themanagers
-                    }
+define serviceescalation {
+    host_name              nt-3
+    service_description    Processor Load
+    first_notification     4
+    last_notification      0
+    notification_interval  30
+    contact_groups         all-nt-admins,themanagers
+}
                 </programlisting>
             </section>
             
@@ -4993,10 +4817,8 @@ linkend="advancedtopics-escalations">ici</link>.
                                 La variable est utilisée pour identifer le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                de(s) <link
-linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> pour
-                                lesquel(s) l'escalade de <link
-linkend="configuringnagios-objectdefinitions-service">service</link> doit
+                                de(s) <link linkend="configuringnagios-objectdefinitions-host">hôte(s)</link> pour
+                                lesquel(s) l'escalade de <link linkend="configuringnagios-objectdefinitions-service">service</link> doit
                                 s'appliquer ou auquel(s) il est associé.
                             </para>
                         </listitem>
@@ -5010,16 +4832,12 @@ linkend="configuringnagios-objectdefinitions-service">service</link> doit
                                 La variable est utilisée pour identifer le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                des <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
-                                    d'hôtes
-                                </link>
-                                pour lesquel(s) l'escalade de <link
-linkend="configuringnagios-objectdefinitions-service">service</link> doit
-                                s'appliquer ou auquel(s) il est associé. Plusieurs groupes d'hôtes peuvent
-                                être séparés par des virgules. La variable <varname>hostgroup_name</varname>
+                                des <link linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s) d'hôtes</link>
+                                pour lesquel(s) l'escalade de <link linkend="configuringnagios-objectdefinitions-service">service</link> 
+                                doit s'appliquer ou auquel(s) il est associé. Plusieurs groupes d'hôtes peuvent
+                                être séparés par des virgules. La variable <literal>hostgroup_name</literal>
                                 peut être utilisée à la place ou en conjonction avec la variable
-                                <varname>host_name</varname>.
+                                <literal>host_name</literal>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -5029,9 +4847,9 @@ linkend="configuringnagios-objectdefinitions-service">service</link> doit
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour identifier la
-                                <emphasis>description</emphasis> du <link
-linkend="configuringnagios-objectdefinitions-service">service</link> pour
-                                lequel s'applique l'escalade.
+                                <emphasis>description</emphasis> du 
+                                <link linkend="configuringnagios-objectdefinitions-service">service</link>
+                                pour lequel s'applique l'escalade.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -5070,16 +4888,14 @@ linkend="configuringnagios-objectdefinitions-service">service</link> pour
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste de <emphasis>noms courts</emphasis> de <link
-linkend="configuringnagios-objectdefinitions-contact">contacts</link> à
+                                C'est une liste de <emphasis>noms courts</emphasis> de 
+                                <link linkend="configuringnagios-objectdefinitions-contact">contacts</link> à
                                 notifier à chaque fois qu'il y a des problèmes (ou des retours à la normale)
                                 avec ce service. Plusieurs contacts peuvent être précisés en les séparant
                                 par des virgules. Utile si vous souhaitez envoyer des notifications vers
-                                quelques personnes et que vous ne souhaitez pas configurer des <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
-                                .Vous devez préciser au moins un contact ou un groupe de
+                                quelques personnes et que vous ne souhaitez pas configurer des 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>.
+                                Vous devez préciser au moins un contact ou un groupe de
                                 contacts dans chaque définition d'escalade de service.
                             </para>
                         </listitem>
@@ -5090,10 +4906,8 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste de <emphasis>noms courts</emphasis> de <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
+                                C'est une liste de <emphasis>noms courts</emphasis> de 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
                                 à notifier à chaque fois que ce service est
                                 escaladé. Plusieurs groupes de contacts peuvent être précisés en les
                                 séparant par des virgules. Vous devez préciser au moins un contact ou un
@@ -5128,10 +4942,8 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court d'une <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court d'une 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle les escalades sont valides. Si cette variable
                                 est vide, les escalades seront considérées comme valides tout le temps.
                             </para>
@@ -5320,11 +5132,11 @@ linkend="configuringnagios-objectdefinitions-timeperiod">période de
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define hostdependency{
-                    host_name            WWW1
-                    dependent_host_name       DBASE1
-                    notification_failure_criteria  d,u
-                    }
+define hostdependency {
+    host_name                      WWW1
+    dependent_host_name            DBASE1
+    notification_failure_criteria  d,u
+}
                 </programlisting>
             </section>
             
@@ -5338,8 +5150,8 @@ linkend="configuringnagios-objectdefinitions-timeperiod">période de
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour identifier la
-                                <emphasis>description</emphasis> d'un <link
-linkend="configuringnagios-objectdefinitions-host">hôte</link>
+                                <emphasis>description</emphasis> d'un 
+                                <link linkend="configuringnagios-objectdefinitions-host">hôte</link>
                                 <emphasis>dépendant</emphasis>. Plusieurs hôtes peuvent être séparés par des
                                 virgules.
                             </para>
@@ -5354,14 +5166,11 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link>
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                de <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupes
-                                    d'hôtes
-                                </link>
+                                de <link linkend="configuringnagios-objectdefinitions-hostgroup">groupes d'hôtes</link>
                                 <emphasis>dépendants</emphasis>. Plusieurs groupes d'hôtes
                                 peuvent être séparés par des virgules. La variable
-                                <varname>dependent_hostgroup_name</varname> peut être utilisée à la place ou
-                                en conjonction avec la variable <varname>dependent_host_name</varname>.
+                                <literal>dependent_hostgroup_name</literal> peut être utilisée à la place ou
+                                en conjonction avec la variable <literal>dependent_host_name</literal>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -5371,10 +5180,9 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupes
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour identifier la
-                                <emphasis>description</emphasis> d'un <link
-linkend="configuringnagios-objectdefinitions-host">hôte</link> <emphasis>don
-                                    on dépend
-                                </emphasis>
+                                <emphasis>description</emphasis> d'un 
+                                <link linkend="configuringnagios-objectdefinitions-host">hôte</link> 
+                                <emphasis>dont on dépend</emphasis>
                                 (aussi appelé hôte maître). Plusieurs hôtes peuvent
                                 être séparés par des virgules.
                             </para>
@@ -5389,14 +5197,11 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> <emphasis>don
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                de <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupes
-                                    d'hôtes
-                                </link>
+                                de <link linkend="configuringnagios-objectdefinitions-hostgroup">groupes d'hôtes</link>
                                 <emphasis>dont on dépend</emphasis> (aussi appelé hôte
                                 maître). Plusieurs groupes d'hôtes peuvent être séparés par des virgules. La
-                                variable <varname>hostgroup_name</varname> peut être utilisée à la place ou
-                                en conjonction avec la variable <varname>host_name</varname>.
+                                variable <literal>hostgroup_name</literal> peut être utilisée à la place ou
+                                en conjonction avec la variable <literal>host_name</literal>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -5523,10 +5328,8 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupes
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court d'une <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court d'une 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle les dépendances sont valides. Si cette
                                 variable est vide, les dépendances seront considérées comme valides tout le
                                 temps.
@@ -5549,8 +5352,8 @@ linkend="configuringnagios-objectdefinitions-timeperiod">période de
                 
                 <para>Les escalades d'hôtes sont complètement optionnelles et sont utilisées pour
                     escalader les notifications d'un hôte particulier. Plus d'informations sur
-                    le fonctionnement des escalades peuvent être trouvées <link
-linkend="advancedtopics-escalations">ici</link>.
+                    le fonctionnement des escalades peuvent être trouvées 
+                    <link linkend="advancedtopics-escalations">ici</link>.
                 </para>
             </section>
             
@@ -5679,13 +5482,13 @@ linkend="advancedtopics-escalations">ici</link>.
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define hostescalation{
-                    host_name        router-34
-                    first_notification   5
-                    last_notification    8
-                    notification_interval  60
-                    contact_groups     all-router-admins
-                    }
+define hostescalation {
+    host_name              router-34
+    first_notification     5
+    last_notification      8
+    notification_interval  60
+    contact_groups         all-router-admins
+}
                 </programlisting>
             </section>
             
@@ -5714,10 +5517,7 @@ linkend="advancedtopics-escalations">ici</link>.
                                 Cette variable est utilisée pour identifier le(s) <emphasis>nom(s)
                                     court(s)
                                 </emphasis>
-                                des <link
-linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
-                                    d'hôtes
-                                </link>
+                                des <link linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s) d'hôtes</link>
                                 auxquels doit s'appliquer cette escalade. Plusieurs groupes
                                 d'hôtes peuvent être séparés par des virgules. Si utilisée, l'escalade
                                 s'appliquera à tous les hôtes membres des groupes d'hôtes spécifiés.
@@ -5759,15 +5559,13 @@ linkend="configuringnagios-objectdefinitions-hostgroup">groupe(s)
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste de <emphasis>noms courts</emphasis> de <link
-linkend="configuringnagios-objectdefinitions-contact">contacts</link> à
+                                C'est une liste de <emphasis>noms courts</emphasis> de
+                                <link linkend="configuringnagios-objectdefinitions-contact">contacts</link> à
                                 notifier à chaque fois qu'il y a des problèmes (ou des retours à la normale)
                                 avec cet hôte. Plusieurs contacts peuvent être précisés en les séparant par
                                 des virgules. Utile si vous souhaitez envoyer des notifications vers
-                                quelques personnes et que vous ne souhaitez pas configurer des <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
+                                quelques personnes et que vous ne souhaitez pas configurer des 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
                                 .Vous devez préciser au moins un contact ou un groupe de
                                 contacts dans chaque définition d'escalade d'hôte.
                             </para>
@@ -5779,10 +5577,8 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                C'est une liste de <emphasis>noms courts</emphasis> de <link
-linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
-                                    contacts
-                                </link>
+                                C'est une liste de <emphasis>noms courts</emphasis> de 
+                                <link linkend="configuringnagios-objectdefinitions-contactgroup">groupes de contacts</link>
                                 à notifier à chaque escalade de l'hôte. Plusieurs groupes de
                                 contacts peuvent être précisés en les séparant par des virgules. Vous devez
                                 préciser au moins un contact ou un groupe de contacts dans chaque définition
@@ -5817,10 +5613,8 @@ linkend="configuringnagios-objectdefinitions-contactgroup">groupes de
                         </term>
                         <listitem>
                             <para>
-                                Cette variable est utilisée pour préciser le nom court d'une <link
-linkend="configuringnagios-objectdefinitions-timeperiod">période de
-                                    temps
-                                </link>
+                                Cette variable est utilisée pour préciser le nom court d'une 
+                                <link linkend="configuringnagios-objectdefinitions-timeperiod">période de temps</link>
                                 pendant laquelle les escalades sont valides. Si cette variable
                                 est vide, les escalades seront considérées comme valides tout le temps.
                             </para>
@@ -5879,20 +5673,18 @@ linkend="configuringnagios-objectdefinitions-timeperiod">période de
                 <title>Description</title>
                 
                 <para>Les entrées d'informations étendues d'hôtes sont utilisées à la base pour
-                    améliorer les vues des &acronym-cgi;s <link
-linkend="thebasics-cgis-status_cgi">status</link>, <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>, <link
-linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link> et <link
-linkend="thebasics-cgis-extinfo_cgi">extinfo</link>. Elles n'ont aucun effet
-                    sur la supervision et sont complètement optionnelles.
+                    améliorer les vues des &acronym-cgi;s 
+                    <link linkend="thebasics-cgis-status_cgi">status</link>, 
+                    <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>, 
+                    <link linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link> et 
+                    <link linkend="thebasics-cgis-extinfo_cgi">extinfo</link>. 
+                    Elles n'ont aucun effet sur la supervision et sont complètement optionnelles.
                 </para>
                 
                 <tip>
                     <para>Depuis Nagios 3.x, toutes les variables contenues dans les définitions
-                        d'informations étendues d'hôte sont aussi disponibles dans les <link
-linkend="configuringnagios-objectdefinitions-host">définitions
-                            d'hôtes
-                        </link>
+                        d'informations étendues d'hôte sont aussi disponibles dans les 
+                        <link linkend="configuringnagios-objectdefinitions-host">définitions d'hôtes</link>
                         .Vous pouvez choisir de définir ces variables sous vos
                         définitions d'hôtes si cela rend votre configuration plus simple. Des
                         définitions d'informations étendues d'hôte séparées continueront à être
@@ -6049,17 +5841,17 @@ linkend="configuringnagios-objectdefinitions-host">définitions
                 <title>Exemple de définition :</title>
                 
                 <programlisting>
-                    define hostextinfo{
-                    host_name    netware1
-                    notes      This is the primary Netware file server
-                    notes_url    http://webserver.localhost.localdomain/hostinfo.pl?host=netware1
-                    icon_image   novell40.png
-                    icon_image_alt IntranetWare 4.11
-                    vrml_image   novell40.png
-                    statusmap_image novell40.gd2
-                    2d_coords    100,250
-                    3d_coords    100.0,50.0,75.0
-                    }
+define hostextinfo {
+    host_name       netware1
+    notes           This is the primary Netware file server
+    notes_url       http://webserver.localhost.localdomain/hostinfo.pl?host=netware1
+    icon_image      novell40.png
+    icon_image_alt  IntranetWare 4.11
+    vrml_image      novell40.png
+    statusmap_image novell40.gd2
+    2d_coords       100,250
+    3d_coords       100.0,50.0,75.0
+}
                 </programlisting>
             </section>
             
@@ -6076,9 +5868,8 @@ linkend="configuringnagios-objectdefinitions-host">définitions
                                 Cette variable est utilisée pour identifier le <emphasis>nom
                                     court
                                 </emphasis>
-                                de l'<link
-linkend="configuringnagios-objectdefinitions-host">hôte</link> auquel
-                                associées les données.
+                                de l'<link linkend="configuringnagios-objectdefinitions-host">hôte</link> 
+                                auquel associées les données.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -6102,9 +5893,9 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> auquel
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 informations supplémentaires sur l'hôte. Si vous précisez une URL, vous
                                 verrez un lien indiquant 
-                                <quote>
+                                <emphasis>
                                     <guimenu>Extra Host Notes</guimenu>
-                                </quote>
+                                </emphasis>
                                 dans le &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended
                                     information
                                 </link>
@@ -6126,9 +5917,9 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> auquel
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 actions supplémentaires sur l'hôte. Si vous précisez une URL, vous verrez un
                                 lien indiquant 
-                                <quote>
+                                <emphasis>
                                     <guimenu>Extra Host Actions</guimenu>
-                                </quote>
+                                </emphasis>
                                 dans le
                                 &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>
                                 (quand vous regardez les informations de l'hôte). N'importe quelle URL
@@ -6145,8 +5936,8 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> auquel
                         <listitem>
                             <para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
                                 PNG ou JPG à associer à cet hôte. Cette image sera affichée dans les &acronym-cgi;s
-                                <link linkend="thebasics-cgis-status_cgi">status</link> et <link
-linkend="thebasics-cgis-extinfo_cgi">extended information</link>. Le rendu
+                                <link linkend="thebasics-cgis-status_cgi">status</link> et 
+                                <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>. Le rendu
                                 de l'image sera maximal si celle-ci est au format 40x40 pixels. Les images
                                 des hôtes sont censées se trouver dans le sous-répertoire <emphasis
 role="strong">logos/</emphasis> de votre dossier d'images HTML (par exemple
@@ -6163,9 +5954,9 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                             <para>Cette variable est utilisée pour définir une chaîne de caractères optionnelle
                                 à utiliser dans l'attribut ALT de l'image précisée par l'argument
                                 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
-                                dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
-linkend="thebasics-cgis-extinfo_cgi">extended information</link> et <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
+                                dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, 
+                                <link linkend="thebasics-cgis-extinfo_cgi">extended information</link> et 
+                                <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -6176,8 +5967,8 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
                         <listitem>
                             <para>Cette variable est utilisée pour définir le nom d'une image au format GIF,
                                 PNG ou JPG à associer à cet hôte. Cette image sera utilisée comme fond de
-                                carte pour l'hôte spécifié dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Au contraire de
+                                carte pour l'hôte spécifié dans le &acronym-cgi; 
+                                <link linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Au contraire de
                                 l'image utilisée dans la variable <emphasis>&lt;icon_image&gt;</emphasis>,
                                 celle-ci ne devrait <emphasis>pas</emphasis> avoir d'attribut de
                                 transparence. Si c'est le cas, le rendu de l'hôte sera un peu bizarre. Les
@@ -6194,9 +5985,8 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                         </term>
                         <listitem>
                             <para>Cette variable est utlisée pour définir le nom d'une image à associer à
-                                l'hôte dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Vous pouvez
-                                utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
+                                l'hôte dans le &acronym-cgi; <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
+                                Vous pouvez utiliser une image au format JPEG, PNG ou GIF si vous voulez, mais je vous
                                 recommande vivement d'utiliser le format d'image GD2 pour ne pas perdre de
                                 temps &acronym-cpu; en calcul (comme c'est le cas avec les autres formats) quand vous
                                 générez la carte d'états. Les images GD2 peuvent être créées à partir
@@ -6220,8 +6010,8 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir les coordonnées à utiliser pour
-                                l'hôte dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
+                                l'hôte dans le &acronym-cgi; 
+                                <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
                                 doivent être données en entier positif car correpsondant aux pixels dans
                                 l'image générée. Le départ de la carte (0,0) se trouve dans le coin
                                 supérieur gauche de l'image et s'étend en positif dans la direction x (à
@@ -6246,8 +6036,8 @@ linkend="thebasics-cgis-statusmap_cgi">statusmap</link>. Les coordonnées
                         </term>
                         <listitem>
                             <para>Cette variable est utilisée pour définir les coordonnées de l'hôte à
-                                utiliser dans le &acronym-cgi; <link
-linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
+                                utiliser dans le &acronym-cgi; <link linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>.
+                                Les coordonnées
                                 peuvent être des nombres positifs ou négatifs. Le départ du dessin est
                                 (0.0,0.0,0.0). Pour référence, la taille des cubes pour les hôtes est de 0,5
                                 unités de chaque côté (les textes prennent un plus d'espace). Les coordonnées
@@ -6270,18 +6060,16 @@ linkend="thebasics-cgis-statuswrl_cgi">statuswrl</link>. Les coordonnées
                 <title>Description</title>
                 
                 <para>Les entrées d'informations étendues de services sont utilisées à la base
-                    pour améliorer les vues des &acronym-cgi;s <link
-linkend="thebasics-cgis-status_cgi">status</link> et <link
-linkend="thebasics-cgis-extinfo_cgi">extinfo</link>. Elles n'ont aucun effet
+                    pour améliorer les vues des &acronym-cgi;s 
+                    <link linkend="thebasics-cgis-status_cgi">status</link> et 
+                    <link linkend="thebasics-cgis-extinfo_cgi">extinfo</link>. Elles n'ont aucun effet
                     sur la supervision et sont complètement optionnelles.
                 </para>
                 
                 <tip>
                     <para>Depuis Nagios 3.x, toutes les variables contenues dans les définitions
-                        d'informations étendues de service sont aussi disponibles dans les <link
-linkend="configuringnagios-objectdefinitions-service">définitions de
-                            services
-                        </link>
+                        d'informations étendues de service sont aussi disponibles dans les 
+                        <link linkend="configuringnagios-objectdefinitions-service">définitions de services</link>
                         .Vous pouvez choisir de définir ces variables sous vos
                         définitions de services si cela rend votre configuration plus simple. Des
                         définitions d'informations étendues de service séparées continueront à être
@@ -6405,14 +6193,14 @@ linkend="configuringnagios-objectdefinitions-service">définitions de
                 <title>Exemple de définition</title>
                 
                 <programlisting>
-                    define serviceextinfo{
-                    host_name        linux2
-                    service_description   Log Anomalies
-                    notes          Security-related log anomalies on secondary Linux server
-                    notes_url        http://webserver.localhost.localdomain/serviceinfo.pl?host=linux2&amp;service=Log+Anomalies
-                    icon_image       security.png
-                    icon_image_alt     Security-Related Alerts
-                    }
+define serviceextinfo {
+    host_name             linux2
+    service_description   Log Anomalies
+    notes                 Security-related log anomalies on secondary Linux server
+    notes_url             http://webserver.localhost.localdomain/serviceinfo.pl?host=linux2&amp;service=Log+Anomalies
+    icon_image            security.png
+    icon_image_alt        Security-Related Alerts
+}
                 </programlisting>
             </section>
             
@@ -6429,9 +6217,8 @@ linkend="configuringnagios-objectdefinitions-service">définitions de
                                 Cette variable est utilisée pour identifier le <emphasis>nom
                                     court
                                 </emphasis>
-                                du <link
-linkend="configuringnagios-objectdefinitions-service">service</link> auquel
-                                sont associées les données.
+                                du <link linkend="configuringnagios-objectdefinitions-service">service</link>
+                                auquel sont associées les données.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -6444,9 +6231,8 @@ linkend="configuringnagios-objectdefinitions-service">service</link> auquel
                                 Cette variable est utilisée pour identifier le <emphasis>nom
                                     court
                                 </emphasis>
-                                du <link
-linkend="configuringnagios-objectdefinitions-service">service</link> auquel
-                                sont associées les données.
+                                du <link linkend="configuringnagios-objectdefinitions-service">service</link>
+                                auquel sont associées les données.
                             </para>
                         </listitem>
                     </varlistentry>
@@ -6470,14 +6256,13 @@ linkend="configuringnagios-objectdefinitions-service">service</link> auquel
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 informations supplémentaires sur le service. Si vous précisez une URL, vous
                                 verrez un lien indiquant 
-                                <quote>
+                                <emphasis>
                                     <guimenu>Extra Service
                                         Notes
                                     </guimenu>
-                                </quote>
-                                 dans le &acronym-cgi; <link
-linkend="thebasics-cgis-extinfo_cgi">extended information</link> (quand vous
-                                regardez les informations du service). N'importe quelle URL valide peut être
+                                </emphasis>
+                                dans le &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>
+                                (quand vous regardez les informations du service). N'importe quelle URL valide peut être
                                 utilisée. Si vous pensez utiliser des chemins relatifs, le chemin de base
                                 sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
                                 <emphasis>/cgi-bin/nagios/</emphasis>). Peut être utile si vous souhaitez
@@ -6494,14 +6279,13 @@ linkend="thebasics-cgis-extinfo_cgi">extended information</link> (quand vous
                             <para>Cette variable est utilisée pour définir une URL optionnelle fournissant des
                                 actions supplémentaires sur le service. Si vous précisez une URL, vous
                                 verrez un lien indiquant 
-                                <quote>
+                                <emphasis>
                                     <guimenu>Extra Service
                                         Actions
                                     </guimenu>
-                                </quote>
-                                 dans le &acronym-cgi; <link
-linkend="thebasics-cgis-extinfo_cgi">extended information</link> (quand vous
-                                regardez les informations du service). N'importe quelle URL valide peut être
+                                </emphasis>
+                                 dans le &acronym-cgi; <link linkend="thebasics-cgis-extinfo_cgi">extended information</link>
+                                 (quand vous regardez les informations du service). N'importe quelle URL valide peut être
                                 utilisée. Si vous pensez utiliser des chemins relatifs, le chemin de base
                                 sera le même que celui utilisé pour accéder aux &acronym-cgi;s (par exemple
                                 <emphasis>/cgi-bin/nagios/</emphasis>).
@@ -6531,9 +6315,9 @@ class="directory">/usr/local/nagios/share/images/logos</filename>).
                             <para>Cette variable est utilisée pour définir une chaîne de caractères optionnelle
                                 à utiliser dans l'attribut ALT de l'image précisée par l'argument
                                 <emphasis>&lt;icon_image&gt;</emphasis>. L'attribut ALT peut être utilisé
-                                dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, <link
-linkend="thebasics-cgis-extinfo_cgi">extended information</link> et <link
-linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
+                                dans les &acronym-cgi;s <link linkend="thebasics-cgis-status_cgi">status</link>, 
+                                <link linkend="thebasics-cgis-extinfo_cgi">extended information</link> et 
+                                <link linkend="thebasics-cgis-statusmap_cgi">statusmap</link>.
                             </para>
                         </listitem>
                     </varlistentry>
