@@ -121,33 +121,33 @@ object configuration would be useful.
             
 Object Config Source: Config files (uncached)
             
-OBJECT CONFIG PROCESSING TIMES      (* = Potential for precache savings with -u option)
+OBJECT CONFIG PROCESSING TIMES      (* = Potential for precache savings with -u option)
 ----------------------------------
-Read:                 0.486780 sec
-Resolve:              0.004106 sec  *
-Recomb Contactgroups: 0.000077 sec  *
-Recomb Hostgroups:    0.000172 sec  *
-Dup Services:         0.028801 sec  *
-Recomb Servicegroups: 0.010358 sec  *
-Duplicate:            5.666932 sec  *
-Inherit:              0.003770 sec  *
-Recomb Contacts:      0.030085 sec  *
-Sort:                 2.648863 sec  *
-Register:             2.654628 sec
-Free:                 0.021347 sec
-                      ============
-TOTAL:                11.555925 sec  * = 8.393170 sec (72.63%) estimated savings
+Read:                 0.486780 sec
+Resolve:              0.004106 sec  *
+Recomb Contactgroups: 0.000077 sec  *
+Recomb Hostgroups:    0.000172 sec  *
+Dup Services:         0.028801 sec  *
+Recomb Servicegroups: 0.010358 sec  *
+Duplicate:            5.666932 sec  *
+Inherit:              0.003770 sec  *
+Recomb Contacts:      0.030085 sec  *
+Sort:                 2.648863 sec  *
+Register:             2.654628 sec
+Free:                 0.021347 sec
+                      ============
+TOTAL:               11.555925 sec  * = 8.393170 sec (72.63%) estimated savings
             
             
 Timing information on configuration verification is listed below.
             
-CONFIG VERIFICATION TIMES          (* = Potential for speedup with -x option)
+CONFIG VERIFICATION TIMES           (* = Potential for speedup with -x option)
 ----------------------------------
 Object Relationships: 1.400807 sec
-Circular Paths:       54.676622 sec  *
-Misc:                 0.006924 sec
-                      ============
-TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
+Circular Paths:       54.676622 sec  *
+Misc:                 0.006924 sec
+                      ============
+TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
         </screen>
         
         <para>Ok, voyons ce qui s'est passé. En regardant les totaux, il a fallu à peu

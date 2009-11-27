@@ -6,27 +6,21 @@
  %all.entities;
 ]
 >
-<chapter id="securityandperformancetuning-mrtggraphs"
-     xreflabel="Graphing Performance Info With MRTG">
+<chapter id="securityandperformancetuning-mrtggraphs">
     <title>Grapher les informations de performance avec MRTG</title>
     
     <section>
         <title>Introduction</title>
         
         <para>
-            L'utilitaire <link
-linkend="securityandperformancetuning-nagiostats">nagiostats</link> vous permet de grapher divers statisques de performance dans le
-            temps en utilisant 
-            <ulink
-url="http://oss.oetiker.ch/mrtg/">
-                <application>
-                    <acronym>MRTG</acronym>
-                </application>
+            L'utilitaire <link linkend="securityandperformancetuning-nagiostats">nagiostats</link>
+            vous permet de grapher divers statisques de performance dans le temps en utilisant 
+            <ulink url="http://oss.oetiker.ch/mrtg/"><application>&acronym-mrtg;</application>
             </ulink>
             <indexterm>
                 <primary>MRTG</primary>
-            </indexterm>
-            .Ceci est important car il peut vous aider à:
+            </indexterm>.
+            Ceci est important car il peut vous aider à:
         </para>
         
         <itemizedlist>
@@ -39,7 +33,7 @@ url="http://oss.oetiker.ch/mrtg/">
             </listitem>
             
             <listitem>
-                <para>Observez la performance des impacts des changements dans votre configuration
+                <para>Observer la performance des impacts des changements dans votre configuration
                     de Nagios
                 </para>
             </listitem>
@@ -51,8 +45,8 @@ url="http://oss.oetiker.ch/mrtg/">
         
         <para>Un fichier d'exemple de configuration &acronym-mrtg; pour grapher quelques
             statistiques Nagios de performance peut être trouvé dans le fichier
-            <filename>mrtg.cfg</filename> situé dans le sous-répertoire <filename
-class="directory">sample-config/</filename> du package Nagios. Vous pouvez
+            <filename>mrtg.cfg</filename> situé dans le sous-répertoire 
+            <filename class="directory">sample-config/</filename> du package Nagios. Vous pouvez
             créer des graphs d'autres informations de performance si vous voulez - Les
             exemples vous donnent juste un bon point de départ.
         </para>
@@ -70,7 +64,7 @@ class="directory">sample-config/</filename> du package Nagios. Vous pouvez
             ils peuvent être utilisés…
         </para>
         
-        <informaltable frame="all">
+        <informaltable frame="all" role="small">
             <tgroup cols="2">
                 <tbody>
                     <row>
@@ -82,15 +76,14 @@ class="directory">sample-config/</filename> du package Nagios. Vous pouvez
                             <itemizedlist>
                                 <listitem>
                                     <para>
-                                        <link
-linkend="thebasics-hostchecks">Des contrôles d'hôte</link>
+                                        <link linkend="thebasics-hostchecks">Des contrôles d'hôte</link>
                                     </para>
                                 </listitem>
                                 
                                 <listitem>
                                     <para>
-                                        <link linkend="advancedtopics-dependencychecks">Des contrôles de
-                                            prédiction de dépendance d'hôte
+                                        <link linkend="advancedtopics-dependencychecks">
+                                        Des contrôles de prédiction de dépendance d'hôte
                                         </link>
                                     </para>
                                 </listitem>
@@ -109,8 +102,7 @@ linkend="thebasics-hostchecks">Des contrôles d'hôte</link>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-activehostchecks.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-activehostchecks.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -133,8 +125,8 @@ fileref="images/mrtg-activehostchecks.png" format="PNG"/>
                                 
                                 <listitem>
                                     <para>
-                                        <link linkend="advancedtopics-dependencychecks">Des contrôles de
-                                            prédiction de dépendance de service
+                                        <link linkend="advancedtopics-dependencychecks">
+                                        Des contrôles de prédiction de dépendance de service
                                         </link>
                                     </para>
                                 </listitem>
@@ -153,8 +145,7 @@ fileref="images/mrtg-activehostchecks.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-activeservicechecks.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-activeservicechecks.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -177,8 +168,8 @@ fileref="images/mrtg-activeservicechecks.png" format="PNG"/>
                                 
                                 <listitem>
                                     <para>
-                                        <link linkend="advancedtopics-dependencychecks">Des contrôles de
-                                            prédiction de dépendance d'hôte et de service
+                                        <link linkend="advancedtopics-dependencychecks">
+                                        Des contrôles de prédiction de dépendance d'hôte et de service
                                         </link>
                                     </para>
                                 </listitem>
@@ -187,12 +178,10 @@ fileref="images/mrtg-activeservicechecks.png" format="PNG"/>
                         
                         <entry>
                             <para>
-                                 
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-cachedchecks.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-cachedchecks.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -221,8 +210,7 @@ fileref="images/mrtg-cachedchecks.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-passivechecks.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-passivechecks.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -251,8 +239,7 @@ fileref="images/mrtg-passivechecks.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-activelychecked.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-activelychecked.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -281,8 +268,7 @@ fileref="images/mrtg-activelychecked.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-passivelychecked.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-passivelychecked.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -317,22 +303,22 @@ fileref="images/mrtg-passivelychecked.png" format="PNG"/>
                             <itemizedlist>
                                 <listitem>
                                     <para>
-                                        <link
-linkend="configuringnagios-configmain-max_concurrent_checks">&config-max_concurrent_checks;</link>
+                                        <xref linkend="configuringnagios-configmain-max_concurrent_checks"
+                                         endterm="configuringnagios-configmain-max_concurrent_checks-tech"/>
                                     </para>
                                 </listitem>
                                 
                                 <listitem>
                                     <para>
-                                        <link
-linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link>
+                                        <xref linkend="configuringnagios-configmain-check_result_reaper_frequency"
+                                        endterm="configuringnagios-configmain-check_result_reaper_frequency-tech"/>
                                     </para>
                                 </listitem>
                                 
                                 <listitem>
                                     <para>
-                                        <link
-linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link>
+                                        <xref linkend="configuringnagios-configmain-max_check_result_reaper_time"
+                                        endterm="configuringnagios-configmain-max_check_result_reaper_time-tech"/>
                                     </para>
                                 </listitem>
                             </itemizedlist>
@@ -343,8 +329,7 @@ linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                         <imagedata
-fileref="images/mrtg-serviceperfstats.png" format="PNG"/>
+                                         <imagedata fileref="images/mrtg-serviceperfstats.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -373,8 +358,7 @@ fileref="images/mrtg-serviceperfstats.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                         <imagedata
-fileref="images/mrtg-servicestatechange.png" format="PNG"/>
+                                         <imagedata fileref="images/mrtg-servicestatechange.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -397,8 +381,8 @@ fileref="images/mrtg-servicestatechange.png" format="PNG"/>
                                 
                                 <listitem>
                                     <para>
-                                        <link linkend="securityandperformancetuning-tuning">De l'optimisation des
-                                            performances
+                                        <link linkend="securityandperformancetuning-tuning">
+                                        De l'optimisation des performances
                                         </link>
                                     </para>
                                 </listitem>
@@ -409,22 +393,22 @@ fileref="images/mrtg-servicestatechange.png" format="PNG"/>
                             <itemizedlist>
                                 <listitem>
                                     <para>
-                                        <link
-linkend="configuringnagios-configmain-max_concurrent_checks">&config-max_concurrent_checks;</link>
+                                        <xref linkend="configuringnagios-configmain-max_concurrent_checks"
+                                        endterm="configuringnagios-configmain-max_concurrent_checks-tech"/>
                                     </para>
                                 </listitem>
                                 
                                 <listitem>
                                     <para>
-                                        <link
-linkend="configuringnagios-configmain-check_result_reaper_frequency">&config-check_result_reaper_frequency;</link>
+                                        <xref linkend="configuringnagios-configmain-check_result_reaper_frequency"
+                                        endterm="configuringnagios-configmain-check_result_reaper_frequency-tech"/>
                                     </para>
                                 </listitem>
                                 
                                 <listitem>
                                     <para>
-                                        <link
-linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_check_result_reaper_time;</link>
+                                        <xref linkend="configuringnagios-configmain-max_check_result_reaper_time"
+                                        endterm="configuringnagios-configmain-max_check_result_reaper_time-tech"/>
                                     </para>
                                 </listitem>
                             </itemizedlist>
@@ -436,8 +420,7 @@ linkend="configuringnagios-configmain-max_check_result_reaper_time">&config-max_
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-hostperfstats.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-hostperfstats.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -467,8 +450,7 @@ fileref="images/mrtg-hostperfstats.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-hoststatechange.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-hoststatechange.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -500,8 +482,8 @@ fileref="images/mrtg-hoststatechange.png" format="PNG"/>
                                 
                                 <listitem>
                                     <para>
-                                        <link linkend="advancedtopics-redundancy">Redondance/Basculement en cas de
-                                            panne de la supervision
+                                        <link linkend="advancedtopics-redundancy">
+                                        Redondance/Basculement en cas de panne de la supervision
                                         </link>
                                     </para>
                                 </listitem>
@@ -514,8 +496,7 @@ fileref="images/mrtg-hoststatechange.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/mrtg-externalcommands.png" format="PNG"/>
+                                        <imagedata fileref="images/mrtg-externalcommands.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
@@ -529,16 +510,16 @@ fileref="images/mrtg-externalcommands.png" format="PNG"/>
                                 emplacements mémoire des tampon de commandes externes sont utilisés dans le
                                 temps. Si le nombre des tampons utilisés est proche du nombre de tampons
                                 disponibles, il semblerait qu'il faille augmenter le nombre d'emplacement
-                                mémoire pour les <link
-linkend="configuringnagios-configmain-external_command_buffer_slots">tampons
-                                    de commandes externes
-                                </link>
-                                .Chaque emplacement mémoire d'un tampon peut
+                                mémoire pour les 
+                                <link linkend="configuringnagios-configmain-external_command_buffer_slots">
+                                tampons de commandes externes
+                                </link>.
+                                Chaque emplacement mémoire d'un tampon peut
                                 contenir une commande externe. Les tampons sont utilisés pour garder
                                 temporairement en mémoire les commandes externes du moment où elles ont été
-                                lues à partir du <link
-linkend="configuringnagios-configmain-command_file">fichier de commandes
-                                    externes
+                                lues à partir du 
+                                <link linkend="configuringnagios-configmain-command_file">
+                                fichier de commandes externes
                                 </link>
                                 jusqu'à ce qu'elles soient traitées par le démon Nagios.
                             </para>
@@ -549,8 +530,7 @@ linkend="configuringnagios-configmain-command_file">fichier de commandes
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                         <imagedata
-fileref="images/mrtg-commandbuffers.png" format="PNG"/>
+                                         <imagedata fileref="images/mrtg-commandbuffers.png" format="PNG"/>
                                     </imageobject>
                                 </inlinemediaobject>
                                  
