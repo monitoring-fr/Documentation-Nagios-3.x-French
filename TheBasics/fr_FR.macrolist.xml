@@ -15,7 +15,7 @@
     <section>
         <title>Validité des macros</title>
         <para>Bien que toutes les macros puissent être utilisées dans toutes les commandes
-            que vous définissez, elles ne sont pas toutes <quote>valables</quote> pour
+            que vous définissez, elles ne sont pas toutes <emphasis>valables</emphasis> pour
             une commande en particulier. Par exemple, certaines macros ne sont valables
             que dans les commandes de notification de service, alors que d'autres ne
             sont valables que dans les commandes de contrôle d'hôte. Il y a dix types de
@@ -115,7 +115,7 @@
             </informaltable>
         </para>
         <para>
-            <informaltable frame="all">
+            <informaltable frame="all" role="tiny">
                 <tgroup cols="9">
                     <colspec colnum="1" colname="c1"/>
                     <colspec colnum="2" colname="c2"/>
@@ -5529,7 +5529,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Nom court de l'hôte (par exemple <quote>biglinuxbox</quote>). Cette valeur
+                                Nom court de l'hôte (par exemple <emphasis>biglinuxbox</emphasis>). Cette valeur
                                 provient du paramètre host_name de la
                                 <link linkend="configuringnagios-objectdefinitions-host">définition de l'hôte</link>.
                             </para>
@@ -5584,8 +5584,8 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Une chaîne représentant l'état actuel de l'hôte (<quote>UP</quote>,
-                                <quote>DOWN</quote>, ou <quote>UNREACHABLE</quote>).
+                                Une chaîne représentant l'état actuel de l'hôte (<emphasis>UP</emphasis>,
+                                <emphasis>DOWN</emphasis>, ou <emphasis>UNREACHABLE</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -5611,8 +5611,8 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Une chaîne représentant le dernier état de l'hôte (<quote>UP</quote>,
-                                <quote>DOWN</quote>, ou <quote>UNREACHABLE</quote>).
+                                Une chaîne représentant le dernier état de l'hôte (<emphasis>UP</emphasis>,
+                                <emphasis>DOWN</emphasis>, ou <emphasis>UNREACHABLE</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -5641,8 +5641,8 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                                 Une chaîne indiquant le <link linkend="thebasics-statetypes">type
                                     d'état
                                 </link>
-                                actuel du contrôle d'hôte (<quote>HARD</quote> ou
-                                <quote>SOFT</quote>). L'état est SOFT lorsque le contrôle a renvoyé un état
+                                actuel du contrôle d'hôte (<emphasis>HARD</emphasis> ou
+                                <emphasis>SOFT</emphasis>). L'état est SOFT lorsque le contrôle a renvoyé un état
                                 non-OK (non-UP) et va être réessayé. L'état est HARD lorsque le contrôle
                                 d'hôte a été tenté le nombre de fois maximum défini.
                             </para>
@@ -5659,7 +5659,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <para>Le nombre d'essais de contrôle d'hôte actuel. Par exemple, si c'est la
                                 seconde fois que l'hôte est contrôlé, ce sera le nombre 2. Le nombre actuel
                                 d'essai n'est réellement utile que pour l'écriture de gestionnaires
-                                d'événements d'hôte pour des états <quote>SOFT</quote>, qui agiraient de
+                                d'événements d'hôte pour des états <emphasis>SOFT</emphasis>, qui agiraient de
                                 manière spécifique selon le nombre de tentatives.
                             </para>
                         </entry>
@@ -5674,7 +5674,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Le nombre maximum d'essais de contrôles défini pour l'hôte actuel. Utile
                                 lors de l'écriture de gestionnaire d'événements d'hôte pour les états
-                                <quote>SOFT</quote> qui ont besoin de prendre une action basée sur le numéro
+                                <emphasis>SOFT</emphasis> qui ont besoin de prendre une action basée sur le numéro
                                 de l'essai.
                             </para>
                         </entry>
@@ -5778,7 +5778,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Une chaîne indiquant le temps qu'a passé l'hôte dans sont état actuel. Le
-                                format est <quote>XXh YYm ZZs</quote>, pour les heures, les minutes et les
+                                format est <emphasis>XXh YYm ZZs</emphasis>, pour les heures, les minutes et les
                                 secondes.
                             </para>
                         </entry>
@@ -5805,7 +5805,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Un nombre indiquant la <quote>profondeur d'arrêt planifié</quote> pour
+                                Un nombre indiquant la <emphasis>profondeur d'arrêt planifié</emphasis> pour
                                 l'hôte. Si cet hôte est actuellement dans une 
                                 <link linkend="advancedtopics-downtime">période d'arrêt planifié</link>, la 
                                 valeur sera supérieure à zéro. Si l'hôte n'est pas en cours d'arrêt 
@@ -5930,7 +5930,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>La première ligne du texte en sortie du dernier contrôle d'hôte
-                                (p. ex. <quote>Ping OK</quote>).
+                                (p. ex. <emphasis>Ping OK</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -5986,7 +5986,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Une chaîne contenant le nom de l'utilisateur qui a acquitté le problème de
                                 l'hôte. Cette macro n'est valable que dans les notifications dont la macro
-                                &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.
+                                &macro-notificationtype; vaut <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6001,7 +6001,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Une chaîne contenant le nom court du contact (si applicable) qui a acquitté
                                 le problème de l'hôte. Cette macro n'est valable que dans les notifications
-                                dont la macro &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.
+                                dont la macro &macro-notificationtype; vaut <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6016,7 +6016,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Une chaîne contenant l'alias du contact (si applicable) qui a acquitté le
                                 problème de l'hôte. Cette macro n'est valable que dans les notifications
-                                dont la macro &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.
+                                dont la macro &macro-notificationtype; vaut <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6031,7 +6031,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <para>Une chaîne contenant le commentaire associé à l'acquittement saisi par
                                 l'utilisateur qui a acquitté le problème de l'hôte. Cette macro n'est
                                 valable que dans les notifications dont la macro &macro-notificationtype; vaut
-                                <quote>ACKNOWLEDGEMENT</quote>.
+                                <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6248,9 +6248,9 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Le nom long/description du service (p. ex. <quote>Main
+                                Le nom long/description du service (p. ex. <emphasis>Main
                                     Website
-                                </quote>
+                                </emphasis>
                                 ). Cette valeur provient du paramètre description de la 
                                 <link linkend="configuringnagios-objectdefinitions-service">définition du service</link>.
                             </para>
@@ -6279,8 +6279,8 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Une chaîne indiquant l'état actuel du service (<quote>OK</quote>,
-                                <quote>WARNING</quote>, <quote>UNKNOWN</quote>, ou <quote>CRITICAL</quote>).
+                                Une chaîne indiquant l'état actuel du service (<emphasis>OK</emphasis>,
+                                <emphasis>WARNING</emphasis>, <emphasis>UNKNOWN</emphasis>, ou <emphasis>CRITICAL</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -6306,8 +6306,8 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Une chaîne indiquant l'état précédent du service (<quote>OK</quote>,
-                                <quote>WARNING</quote>, <quote>UNKNOWN</quote>, ou <quote>CRITICAL</quote>).
+                                Une chaîne indiquant l'état précédent du service (<emphasis>OK</emphasis>,
+                                <emphasis>WARNING</emphasis>, <emphasis>UNKNOWN</emphasis>, ou <emphasis>CRITICAL</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -6334,8 +6334,8 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>
                                 Une chaîne indiquant le <link linkend="thebasics-statetypes">type d'état </link>
-                                actuel du contrôle de service (<quote>HARD</quote> ou
-                                <quote>SOFT</quote>). L'état est SOFT quand le contrôle de service renvoie
+                                actuel du contrôle de service (<emphasis>HARD</emphasis> ou
+                                <emphasis>SOFT</emphasis>). L'état est SOFT quand le contrôle de service renvoie
                                 un état non-OK state et va être réessayé. L'état est HARD quand le contrôle
                                 de service a été tenté le nombre de fois maximum défini.
                             </para>
@@ -6352,7 +6352,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <para>Le nombre actuel d'essais de contrôle du service. Par exemple, si c'est la
                                 seconde fois que le service est contrôlé, ce sera le nombre deux. Le nombre
                                 actuel d'essai n'est réellement utile que pour l'écriture de gestionnaires
-                                d'événements d'hôte pour des états <quote>SOFT</quote>, qui agiraient de
+                                d'événements d'hôte pour des états <emphasis>SOFT</emphasis>, qui agiraient de
                                 manière spécifique selon le nombre de tentatives.
                             </para>
                         </entry>
@@ -6367,7 +6367,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Le nombre maximum d'essais de contrôle du service actuel. Utile pour
                                 l'écriture de gestionnaires d'événements d'hôte pour des états
-                                <quote>SOFT</quote>, qui agiraient de manière spécifique selon le nombre de
+                                <emphasis>SOFT</emphasis>, qui agiraient de manière spécifique selon le nombre de
                                 tentatives de contrôle de service.
                             </para>
                         </entry>
@@ -6483,7 +6483,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Une chaîne indiquant le temps qu'a passé le service dans son état
-                                actuel. Le format est <quote>XXh YYm ZZs</quote>, pour les heures, les
+                                actuel. Le format est <emphasis>XXh YYm ZZs</emphasis>, pour les heures, les
                                 minutes et les secondes.
                             </para>
                         </entry>
@@ -6510,7 +6510,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Un nombre indiquant la <quote>profondeur d'arrêt planifié</quote> pour le
+                                Un nombre indiquant la <emphasis>profondeur d'arrêt planifié</emphasis> pour le
                                 service. Si ce service est actuellement dans une période d'
                                 <link linkend="advancedtopics-downtime">arrêt planifié</link>, la valeur sera
                                 supérieure à zéro. Si le service n'est pas en cours d'arrêt planifié, la
@@ -6648,7 +6648,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>La première ligne du texte en sortie du dernier contrôle de service
-                                (p. ex. <quote>Ping OK</quote>).
+                                (p. ex. <emphasis>Ping OK</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -6661,7 +6661,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Le texte complet (en plus de la première ligne) en sortie du dernier
-                                contrôle de service (p. ex. <quote>Ping OK</quote>).
+                                contrôle de service (p. ex. <emphasis>Ping OK</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -6705,7 +6705,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Une chaîne contenant le nom de l'utilisateur qui a acquitté le problème du
                                 service. Cette macro n'est valable que dans les notifications dont la macro
-                                &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.
+                                &macro-notificationtype; vaut <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6720,7 +6720,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <para>Une chaîne contenant le nom court de l'utilisateur (si applicable) qui a
                                 acquitté le problème du service. Cette macro n'est valable que dans les
                                 notifications dont la macro &macro-notificationtype; vaut
-                                <quote>ACKNOWLEDGEMENT</quote>.
+                                <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6735,7 +6735,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Une chaîne contenant l'alias de l'utilisateur (si applicable) qui a acquitté
                                 le problème du service. Cette macro n'est valable que dans les notifications
-                                dont la macro &macro-notificationtype; vaut <quote>ACKNOWLEDGEMENT</quote>.
+                                dont la macro &macro-notificationtype; vaut <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6751,7 +6751,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <para>Une chaîne contenant le commentaire associé à l'acquittement saisi par
                                 l'utilisateur qui a acquitté le problème du service. Cette macro n'est
                                 valable que dans les notifications dont la macro &macro-notificationtype; vaut
-                                <quote>ACKNOWLEDGEMENT</quote>.
+                                <emphasis>ACKNOWLEDGEMENT</emphasis>.
                             </para>
                         </entry>
                     </row>
@@ -6911,7 +6911,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Nom court du contact (p. ex. <quote>jdoe</quote>) qui est notifié pour un
+                                Nom court du contact (p. ex. <emphasis>jdoe</emphasis>) qui est notifié pour un
                                 problème d'hôte ou de service. Cette valeur provient du paramètre
                                 contact_name de la <link linkend="configuringnagios-objectdefinitions-contact">définition de contact</link>.
                             </para>
@@ -6926,7 +6926,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>
-                                Nom long/description du contact (p. ex. <quote>John Doe</quote>) qui est
+                                Nom long/description du contact (p. ex. <emphasis>John Doe</emphasis>) qui est
                                 notifié. Cette valeur provient du paramètre alias de la 
                                 <link linkend="configuringnagios-objectdefinitions-contact">définition de contact</link>.
                             </para>
@@ -7297,11 +7297,11 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Une chaîne représentant le type de notification envoyée
-                                (<quote>PROBLEM</quote>, <quote>RECOVERY</quote>,
-                                <quote>ACKNOWLEDGEMENT</quote>, <quote>FLAPPINGSTART</quote>,
-                                <quote>FLAPPINGSTOP</quote> <quote>FLAPPINGDISABLED</quote>,
-                                <quote>DOWNTIMESTART</quote>, <quote>DOWNTIMEEND</quote> ou
-                                <quote>DOWNTIMECANCELLED</quote>).
+                                (<emphasis>PROBLEM</emphasis>, <emphasis>RECOVERY</emphasis>,
+                                <emphasis>ACKNOWLEDGEMENT</emphasis>, <emphasis>FLAPPINGSTART</emphasis>,
+                                <emphasis>FLAPPINGSTOP</emphasis> <emphasis>FLAPPINGDISABLED</emphasis>,
+                                <emphasis>DOWNTIMESTART</emphasis>, <emphasis>DOWNTIMEEND</emphasis> ou
+                                <emphasis>DOWNTIMECANCELLED</emphasis>).
                             </para>
                         </entry>
                     </row>
@@ -7341,12 +7341,12 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Une chaîne contenant le nom de l'utilisateur qui a écrit la notification. Si
-                                la macro &macro-notificationtype; est égale à <quote>DOWNTIMESTART</quote> ou
-                                <quote>DOWNTIMEEND</quote>, ce sera le nom de l'utilisateur qui a programmé
+                                la macro &macro-notificationtype; est égale à <emphasis>DOWNTIMESTART</emphasis> ou
+                                <emphasis>DOWNTIMEEND</emphasis>, ce sera le nom de l'utilisateur qui a programmé
                                 la maintenance de l' hôte ou du service. Si la macro &macro-notificationtype; est
-                                égale à <quote>ACKNOWLEDGEMENT</quote>, ce sera le nom de l'utilisateur qui
+                                égale à <emphasis>ACKNOWLEDGEMENT</emphasis>, ce sera le nom de l'utilisateur qui
                                 a acquitté le problème de'hôte ou de service. Si la macro &macro-notificationtype;
-                                est égale à <quote>CUSTOM</quote>, ce sera le nom de l'utilisateur qui a
+                                est égale à <emphasis>CUSTOM</emphasis>, ce sera le nom de l'utilisateur qui a
                                 initié la notification personnalisée de l'hôte ou du service.
                             </para>
                         </entry>
@@ -7387,12 +7387,12 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Une chaîne contenant le commentaire entré par l'auteur de la
                                 notification. Si la macro &macro-notificationtype; est égale à
-                                <quote>DOWNTIMESTART</quote> ou <quote>DOWNTIMEEND</quote>, ce sera le
+                                <emphasis>DOWNTIMESTART</emphasis> ou <emphasis>DOWNTIMEEND</emphasis>, ce sera le
                                 commentaire de l'utilisateur qui a programmé la maintenance de l' hôte ou du
                                 service. Si la macro &macro-notificationtype; est égale à
-                                <quote>ACKNOWLEDGEMENT</quote>, ce sera le commentaire de l'utilisateur qui
+                                <emphasis>ACKNOWLEDGEMENT</emphasis>, ce sera le commentaire de l'utilisateur qui
                                 a acquitté le problème de'hôte ou de service. Si la macro &macro-notificationtype;
-                                est égale à <quote>CUSTOM</quote>, ce sera le commentaire de l'utilisateur
+                                est égale à <emphasis>CUSTOM</emphasis>, ce sera le commentaire de l'utilisateur
                                 qui a initié la notification personnalisée de l'hôte ou du service.
                             </para>
                         </entry>
@@ -7563,17 +7563,17 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <orderedlist>
                                 <listitem>
                                     <para>
-                                        <literal>$ISVALIDTIME:24x7$</literal> est égale à <quote>1</quote>si l'heure courante est
-                                        valide dans la période de temps <quote>24x7</quote>. Égale à
-                                        <quote>0</quote> dans le cas contraire.
+                                        <literal>$ISVALIDTIME:24x7$</literal> est égale à <emphasis>1</emphasis>si l'heure courante est
+                                        valide dans la période de temps <emphasis>24x7</emphasis>. Égale à
+                                        <emphasis>0</emphasis> dans le cas contraire.
                                     </para>
                                 </listitem>
                                 <listitem>
                                     <para>
-                                        <literal>$ISVALIDTIME:24x7:timestamp$</literal> est égale à <quote>1</quote>si l'heure donnée
-                                        par l'argument <quote>timestamp</quote> (qui doit être au format time_t) est
-                                        valide dans la période de temps <quote>24x7</quote>. Égale à
-                                        <quote>0</quote> dans le cas contraire.
+                                        <literal>$ISVALIDTIME:24x7:timestamp$</literal> est égale à <emphasis>1</emphasis>si l'heure donnée
+                                        par l'argument <emphasis>timestamp</emphasis> (qui doit être au format time_t) est
+                                        valide dans la période de temps <emphasis>24x7</emphasis>. Égale à
+                                        <emphasis>0</emphasis> dans le cas contraire.
                                     </para>
                                 </listitem>
                             </orderedlist>
@@ -7595,20 +7595,20 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                                 <listitem>
                                     <para>
                                         <literal>$NEXTVALIDTIME:24x7$</literal> renvoie la prochaine heure valide - depuis et en
-                                        incluant l'heure courante - dans la période de temps <quote>24x7</quote>.
+                                        incluant l'heure courante - dans la période de temps <emphasis>24x7</emphasis>.
                                     </para>
                                 </listitem>
                                 <listitem>
                                     <para>
                                         <literal>$NEXTVALIDTIME:24x7:timestamp$</literal> renvoie la prochaine heure valide - depuis et
-                                        en incluant l'heure précisée par l'argument <quote>timestamp</quote> (qui
+                                        en incluant l'heure précisée par l'argument <emphasis>timestamp</emphasis> (qui
                                         doit être précisé dans le format time_t - dans la période de temps
-                                        <quote>24x7</quote>.
+                                        <emphasis>24x7</emphasis>.
                                     </para>
                                 </listitem>
                             </orderedlist>
                             <para>Si une prochaine période de temps valide ne peut être trouvé dans la période
-                                de temps précisée, la valeur d ela macro est égale à <quote>0</quote>.
+                                de temps précisée, la valeur d ela macro est égale à <emphasis>0</emphasis>.
                             </para>
                         </entry>
                     </row>
