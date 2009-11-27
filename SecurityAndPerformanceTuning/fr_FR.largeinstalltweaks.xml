@@ -6,13 +6,14 @@
  %all.entities;
 ]
 >
-<chapter id="securityandperformancetuning-largeinstalltweaks" xreflabel="Large Installation Tweaks">
+<chapter id="securityandperformancetuning-largeinstalltweaks">
     <title>Trucs et astuces pour les installations de grande dimension</title>
     <section>
         <title>Introduction</title>
         <para>Les utilisateurs ayant des installations de grande dimension peuvent tirer
-            quelques bénéfices de l'option de configuration <link
-linkend="configuringnagios-configmain-use_large_installation_tweaks">&config-use_large_installation_tweaks;</link>.
+            quelques bénéfices de l'option de configuration 
+            <xref linkend="configuringnagios-configmain-use_large_installation_tweaks"
+            endterm="configuringnagios-configmain-use_large_installation_tweaks-tech"/>.
             Activer cette option permet à Nagios d'utiliser quelques raccourcis dont les
             résultats sont une moindre consommation système et de meilleures
             performances.
@@ -21,16 +22,17 @@ linkend="configuringnagios-configmain-use_large_installation_tweaks">&config-use
     <section>
         <title>Effets</title>
         <para>
-            Quand vous activez l'option <link
-linkend="configuringnagios-configmain-use_large_installation_tweaks">&config-use_large_installation_tweaks;</link>
+            Quand vous activez l'option 
+            <xref linkend="configuringnagios-configmain-use_large_installation_tweaks"
+            endterm="configuringnagios-configmain-use_large_installation_tweaks-tech"/>
             dans votre fichier de configuration Nagios, plusieurs choses changent dans
             le fonctionnement du démon Nagios:
         </para>
         <orderedlist>
             <listitem>
                 <para>
-                    Pas de macros de résumé dans les variables d'environnement - les <link
-linkend="thebasics-macrolist-summary_macros">macros de résumé</link> ne
+                    Pas de macros de résumé dans les variables d'environnement - les 
+                    <link linkend="thebasics-macrolist-summary_macros">macros de résumé</link> ne
                     seront pas disponibles comme variables d'environnement. Calculer les valeurs
                     de ces macros peut devenir assez consommateur de temps dans des
                     installations de grande dimension, aussi ne sont elles pas disponibles quand
