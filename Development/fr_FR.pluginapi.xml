@@ -6,7 +6,7 @@
  %all.entities;
 ]
 >
-<chapter id="development-pluginapi" xreflabel="Nagios Plugin API">
+<chapter id="development-pluginapi" xreflabel="API pour les plugins Nagios">
     <title>API pour les plugins Nagios</title>
     <section>
         <title>Autres Ressources</title>
@@ -18,9 +18,7 @@
                 <para>
                     Le 
                     <ulink url="&url-sourceforge-projects;nagiosplug/">
-                        site officiel <quote>Nagios
-                            plugin project
-                        </quote>
+                        site officiel <emphasis>Nagios plugin project</emphasis>
                     </ulink>
                 </para>
             </listitem>
@@ -43,7 +41,7 @@
             </listitem>
             <listitem>
                 <para>
-                    Retourner au moins une ligne de texte vers le <varname>STDOUT</varname>
+                    Retourner au moins une ligne de texte vers le <literal>STDOUT</literal>
                 </para>
             </listitem>
         </itemizedlist>
@@ -125,13 +123,12 @@
         </informaltable>
         <note>
             <para>
-                Si l'option <link
-linkend="configuringnagios-configmain-use_aggressive_host_checking">&config-use_aggressive_host_checking;</link>
+                Si l'option <link linkend="configuringnagios-configmain-use_aggressive_host_checking"
+                endterm="configuringnagios-configmain-use_aggressive_host_checking-tech"/>
                 est activée, les codes de retour 1 donneront un état DOWN ou UNREACHABLE
                 pour l'hôte. Sinon, les codes de retour 1 donneront un état UP pour
                 l'hôte. Le processus par lequel Nagios détermine si une machine est DOWN ou
-                UNREACHABLE est traité <link
-linkend="thebasics-networkreachability">ici</link>.
+                UNREACHABLE est traité <link linkend="thebasics-networkreachability">ici</link>.
             </para>
         </note>
     </section>
@@ -141,7 +138,7 @@ linkend="thebasics-networkreachability">ici</link>.
             partir de Nagios 3, les plugins peuvent optionnellement retourner plusieurs
             lignes de texte en sortie. Les plugins peuvent aussi retourner
             optionnellement des données de performance qui pourront être traitées par
-            une applicaiotn externe. Le format basique pour la sortie d'un plugin est
+            une application externe. Le format basique pour la sortie d'un plugin est
             décrit ci-dessous:
         </para>
         <para>TEXT OUTPUT | OPTIONAL PERFDATALONG TEXT LINE 1LONG TEXT LINE 2…LONG TEXT
@@ -157,23 +154,17 @@ linkend="thebasics-networkreachability">ici</link>.
         <title>Exemples de sorties de plugin</title>
         <para>Voyons quelques exemples de sorties de plugin possibles…</para>
         <para>
-            <emphasis role="bold">Cas 1: Une ligne en sortie (texte
-                seulement)
-            </emphasis>
+            <emphasis role="bold">Cas 1: Une ligne en sortie (texte seulement)</emphasis>
         </para>
         <para>Imaginons que notre plugin ne retourne qu'une seule ligne de texte en
             sortie, cela ressemblerait à ceci:
         </para>
         <screen>DISK OK - free space: / 3326 MB (56%);</screen>
         <para>Si le plugin est utilisé pour effectuer un contrôle d'un service, la ligne
-            entière de sortie sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
-            .
+            entière de sortie sera écrite dans la macro &macro-serviceoutput;.
         </para>
         <para>
-            <emphasis role="bold">Cas 2: Une ligne en sortie (texte et données de
-                performance)
-            </emphasis>
+            <emphasis role="bold">Cas 2: Une ligne en sortie (texte et données de performance)</emphasis>
         </para>
         <para>Un plugin peut retourner optionnelement des données de performance pouvant
             être utilisées par des applications externes. Pour ce faire, les données de
@@ -185,11 +176,9 @@ linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link>
         <screen>/=2643MB;5948;5958;0;5968</screen>
         <para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
             rouge du message de sortie du plugin (à gauche du séparateur 'pipe') sera
-            écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link> et la
+            écrite dans la macro &macro-serviceoutput; et la
             partie orange du message de sortie du plugin (à droite du séparateur 'pipe'
-            ) sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> .
+            ) sera écrite dans la macro &macro-serviceperfdata; .
         </para>
         <para>
             <emphasis role="bold">Cas 3: Plusieurs lignes de sortie (texte et données de
@@ -202,15 +191,12 @@ linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> .
         <screen>DISK OK - free space: / 3326 MB (56%); | /=2643MB;5948;5958;0;5968/ 15272 MB (77%);/boot 68 MB (69%);/home 69357 MB (27%);/var/log 819 MB (84%); | /boot=68MB;88;93;0;98/home=69357MB;253404;253409;0;253414 /var/log=818MB;970;975;0;980</screen>
         <para>Si le plugin est utilisé pour effectuer un contrôle de service, la partie en
             rouge de la première ligne du message de sortie du plugin (à gauche du
-            séparateur 'pipe') sera écrite dans la macro <link
-linkend="thebasics-macrolist-serviceoutput">&macro-serviceoutput;</link> . Les
-            parties oranges de la première ligne et suivantes seront concaténées (avec
-            des espaces) et seront stockées dans la macro <link
-linkend="thebasics-macrolist-serviceperfdata">&macro-serviceperfdata;</link> . Les
-            parties bleues de la 2ème à la 5ème ligne du message de sortie du plugin
+            séparateur 'pipe') sera écrite dans la macro &macro-serviceoutput;.
+            Les parties oranges de la première ligne et suivantes seront concaténées (avec
+            des espaces) et seront stockées dans la macro &macro-serviceperfdata;.
+            es parties bleues de la 2ème à la 5ème ligne du message de sortie du plugin
             seront concaténées (avec comme séparateur le caractère 'nouvelle ligne' [
-            ] ) et seront stockées dans la macro <link
-linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link> .
+            ] ) et seront stockées dans la macro &macro-longserviceoutput;.
         </para>
         <para>Le contenu final de chaque macro est listé ci-dessous:</para>
         <informaltable frame="all">
@@ -300,9 +286,8 @@ linkend="thebasics-macrolist-longserviceoutput">&macro-longserviceoutput;</link>
     <section>
         <title>Plugins Perl</title>
         <para>
-            Nagios peut utiliser en option un <link
-linkend="advancedtopics-embeddedperl">interpréteur Perl intégré</link> qui
-            peut accélérer l'exécution des plugins codés en Perl. Plus d'informations
+            Nagios peut utiliser en option un <link linkend="advancedtopics-embeddedperl">interpréteur Perl intégré</link>
+            qui peut accélérer l'exécution des plugins codés en Perl. Plus d'informations
             sur le développement des plugins en Perl utilisant l'interpréteur Perl
             intégré disponibles <link linkend="advancedtopics-embeddedperl">ici</link>.
         </para>
