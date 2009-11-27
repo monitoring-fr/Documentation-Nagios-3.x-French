@@ -10,7 +10,7 @@
     <title>Supervision des services publiquement disponibles</title>
     <note>
         <para>Ce document décrit la façon de superviser des services, applications et
-            protocoles rendus disponibles publiquement. Par <quote>public</quote>
+            protocoles rendus disponibles publiquement. Par <emphasis>public</emphasis>
             j'entends les services qui sont accessibles à travers le réseau - que ce
             soit votre réseau local ou plus grand avec Internet. Les exemples de ce type
             de services incluent &protocol-http;, &protocol-pop3;, &protocol-imap;,
@@ -84,23 +84,20 @@
     <section>
         <title>Plugins pour la supervision des services</title>
         <para>Quand vous avez besoin de superviser un services, application, protocole
-            particulier, les chances sont grandes qu'un <link
-linkend="thebasics-plugins">plugin</link> existe pour le faire. La
-            distribution officielle des plugins Nagios fournit des plugins qui peuvent
+            particulier, les chances sont grandes qu'un <link linkend="thebasics-plugins">plugin</link>
+            existe pour le faire. La distribution officielle des plugins Nagios fournit des plugins qui peuvent
             être utilisés pour contrôler une grande variété de services et
             protocoles. Il y a aussi toute une collection de plugins qui peut être
-            trouvée dans le sous répertoire <filename
-class="directory">contrib/</filename> de la distribution des plugins. Le
-            site <ulink url="&url-nagiosexchange;">NagiosExchange.org</ulink> héberge
-            aussi de nombreux plugins additionnels écrits par des utilisateurs,
+            trouvée dans le sous répertoire <filename class="directory">contrib/</filename> 
+            de la distribution des plugins. Le site <ulink url="&url-nagiosexchange;">NagiosExchange.org</ulink>
+            héberge aussi de nombreux plugins additionnels écrits par des utilisateurs,
             n'hésitez pas à y tenter votre chance.
         </para>
         <para>Si vous ne parvenez pas à trouver un plugin approprié pour superviser ce
             dont vous avez besoin, vous pouvez toujours écrire le vôtre. Les plugins
             sont faciles à écrire, ne vous laissez donc pas effrayer par cette
-            idée. Lisez la documentation sur le <link
-linkend="development-pluginapi">développement de plugins</link> pour plus
-            d'informations.
+            idée. Lisez la documentation sur le <link linkend="development-pluginapi">développement de plugins</link>
+            pour plus d'informations.
         </para>
         <para>Je vais passer en revue la supervision de services basiques que vous aurez
             probablement à faire tôt au tard. Chacun de ces services peut être supervisé
@@ -111,13 +108,15 @@ linkend="development-pluginapi">développement de plugins</link> pour plus
         <title>Création d'une définition d'hôte</title>
         
         <para>
-            Avant de pouvoir superviser un service, vous devez d'abord définir un <link
-linkend="configuringnagios-objectdefinitions-host">host</link> associé à ce
-            service. Vous pouvez mettre les définitions d'hôtes dans n'importe quel
-            fichier de configuration spécifié avec le paramètre <link
-linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> ou les
-            mettre dans un dossier précisé par le paramètre <link
-linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>. Si vous avez
+            Avant de pouvoir superviser un service, vous devez d'abord définir un 
+            <link linkend="configuringnagios-objectdefinitions-host">host</link> 
+            associé à ce service. Vous pouvez mettre les définitions d'hôtes dans
+            n'importe quel fichier de configuration spécifié avec le paramètre 
+            <xref linkend="configuringnagios-configmain-cfg_file"
+            endterm="configuringnagios-configmain-cfg_file-tech"/>
+            ou les mettre dans un dossier précisé par le paramètre 
+            <xref linkend="configuringnagios-configmain-cfg_dir"
+            endterm="configuringnagios-configmain-cfg_dir-tech"/>. Si vous avez
             déjà créé une définition d'hôte, vous pouvez passer cette étape.
         </para>
         
@@ -129,13 +128,13 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>. Si vous 
         </para>
         
         <programlisting>
-            define host{
-            use      generic-host    ; Inherit default values from a template
-            host_name   remotehost     ; The name we're giving to this host
-            alias     Some Remote Host  ; A longer name associated with the host
-            address    192.168.1.50    ; IP address of the host
-            hostgroups  allhosts      ; Host groups this host is associated with
-            }
+define host {
+    use         generic-host      ; Inherit default values from a template
+    host_name   remotehost        ; The name we're giving to this host
+    alias       Some Remote Host  ; A longer name associated with the host
+    address     192.168.1.50      ; IP address of the host
+    hostgroups  allhosts          ; Host groups this host is associated with
+}
         </programlisting>
         
         <para>Maintenant qu'une définition d'hôte a été ajoutée pour l'hôte à superviser,
@@ -149,14 +148,16 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>. Si vous 
         <title>Création d'une définition de service</title>
         
         <para>
-            Pour chaque service à superviser, vous devez créer un <link
-linkend="configuringnagios-objectdefinitions-service">service</link> dans
-            Nagios associé à la définition d'hôte que vous avez juste créé. Vous pouvez
-            mettre des définitions de services dans n'importe quel fichier de
-            configuration précisé par le paramètre <link
-linkend="configuringnagios-configmain-cfg_file">&config-cfg_file;</link> ou dans
-            n'importe quel dossier précisé par le paramètre <link
-linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
+            Pour chaque service à superviser, vous devez créer un 
+            <link linkend="configuringnagios-objectdefinitions-service">service</link>
+            dans Nagios associé à la définition d'hôte que vous avez juste créé.
+            Vous pouvez mettre des définitions de services dans n'importe quel 
+            fichier de configuration précisé par le paramètre 
+            <xref linkend="configuringnagios-configmain-cfg_file"
+            endterm="configuringnagios-configmain-cfg_file-tech"/> ou dans
+            n'importe quel dossier précisé par le paramètre 
+            <xref linkend="configuringnagios-configmain-cfg_dir"
+            endterm="configuringnagios-configmain-cfg_dir-tech"/>.
         </para>
         
         <para>Quelques exemples de définitions de services pour superviser des services
@@ -182,11 +183,11 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define command{
-            name      check_http
-            command_name  check_http
-            command_line  $USER1$/check_http -I $HOSTADDRESS$ $ARG1$
-            }
+define command {
+    name          check_http
+    command_name  check_http
+    command_line  $USER1$/check_http -I $HOSTADDRESS$ $ARG1$
+}
         </programlisting>
         
         <para>Une définition simple de service pour superviser un service &protocol-http;
@@ -194,12 +195,12 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service   ; Inherit default values from a template
-            host_name      remotehost
-            service_description HTTP
-            check_command    check_http
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description HTTP
+    check_command       check_http
+}
         </programlisting>
         
         <para>Cette simple définition de service va superviser le service &protocol-http;
@@ -211,27 +212,28 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         
         <tip>
             <para>Pour des possibilités plus avancées de supervision, utilisez le plugin
-                &plugin-http; manuellement avec
-                <option>--help</option> comme argument de la lligne de commande pour voir toutes les options que
-                peut vous fournir ce plugin. Cette syntaxe <option>--help</option> fonctionne avec tous les plugins couverts par cette documentation. 
+                &plugin-http; manuellement avec <option>--help</option> comme argument
+                de la ligne de commande pour voir toutes les options que peut 
+                vous fournir ce plugin. Cette syntaxe <option>--help</option>
+                fonctionne avec tous les plugins couverts par cette documentation. 
             </para>
         </tip>
         
         <para>Une définition plus avancée pour superviser le service &protocol-http; est
             donnée ci-dessous. Cette définition de service va vérifier que l'adresse URI
-            /download/index.php contient la chaîne de caractères
-            <quote>latest-version.tar.gz</quote>. Une erreur sera produite si la chaîne n'est pas
+            <uri>/download/index.php</uri> contient la chaîne de caractères
+            <emphasis>latest-version.tar.gz</emphasis>. Une erreur sera produite si la chaîne n'est pas
             trouvée, si l'URI n'est pas valable, ou si le serveur web met plus de 5
             secondes à répondre.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service  ; Inherit default values from a template
-            host_name      remotehost
-            service_description Product Download Link
-            check_command    check_http!-u /download/index.php -t 5 -s "latest-version.tar.gz"
-            }
+define service {
+    use                 generic-service  ; Inherit default values from a template
+    host_name           remotehost
+    service_description Product Download Link
+    check_command       check_http!-u /download/index.php -t 5 -s "latest-version.tar.gz"
+}
         </programlisting>
     </section>
     
@@ -245,10 +247,10 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define command{
-            command_name  check_ftp
-            command_line  $USER1$/check_ftp -H $HOSTADDRESS$ $ARG1$
-            }
+define command {
+    command_name  check_ftp
+    command_line  $USER1$/check_ftp -H $HOSTADDRESS$ $ARG1$
+}
         </programlisting>
         
         <para>Une définition simple de service pour superviser un serveur &protocol-ftp;
@@ -256,12 +258,12 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define service{
-            use          generic-service ; Inherit default values from a template
-            host_name       remotehost
-            service_description  FTP
-            check_command     check_ftp
-            }
+define service {
+    use                  generic-service ; Inherit default values from a template
+    host_name            remotehost
+    service_description  FTP
+    check_command        check_ftp
+}
         </programlisting>
         
         <para>Cette définition de service va superviser le service &protocol-ftp; et
@@ -273,16 +275,16 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
             vérifier le serveur &protocol-ftp; en écoute sur le port 1023 de
             <emphasis>remotehost</emphasis>. Une alerte sera émise si le serveur ne
             répond pas dans les 5 secondes ou si la réponse que fait le serveur ne
-            contient pas la chaîne de caractère <quote>Pure-FTPd [TLS]</quote>.
+            contient pas la chaîne de caractère <emphasis>Pure-FTPd [TLS]</emphasis>.
         </para>
         
         <programlisting>
-            define service{
-            use          generic-service  ; Inherit default values from a template
-            host_name       remotehost
-            service_description  Special FTP 
-            check_command     check_ftp!-p 1023 -t 5 -e "Pure-FTPd [TLS]"
-            }
+define service {
+    use                  generic-service  ; Inherit default values from a template
+    host_name            remotehost
+    service_description  Special FTP 
+    check_command        check_ftp!-p 1023 -t 5 -e "Pure-FTPd [TLS]"
+}
         </programlisting>
     </section>
     
@@ -296,10 +298,10 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define command{
-            command_name  check_ssh
-            command_line  $USER1$/check_ssh $ARG1$ $HOSTADDRESS$
-            }
+define command {
+    command_name  check_ssh
+    command_line  $USER1$/check_ssh $ARG1$ $HOSTADDRESS$
+}
         </programlisting>
         
         <para>Une définition simple de service pour superviser un serveur &protocol-ssh;
@@ -307,12 +309,12 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service ; Inherit default values from a template
-            host_name      remotehost
-            service_description SSH
-            check_command    check_ssh
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description SSH
+    check_command       check_ssh
+}
         </programlisting>
         
         <para>Cette définition de service va superviser le service &protocol-ssh; et
@@ -322,16 +324,16 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
             vérifier le serveur &protocol-ssh; et générer une alerte si le serveur ne
             répond pas dans les 5 secondes ou si le numéro de version ne correspond pas
-            à <quote>OpenSSH_4.2</quote>.
+            à <emphasis>OpenSSH_4.2</emphasis>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service  ; Inherit default values from a template
-            host_name      remotehost
-            service_description SSH Version Check 
-            check_command    check_ssh!-t 5 -r "OpenSSH_4.2"
-            }
+define service {
+    use                 generic-service  ; Inherit default values from a template
+    host_name           remotehost
+    service_description SSH Version Check 
+    check_command       check_ssh!-t 5 -r "OpenSSH_4.2"
+}
         </programlisting>
     </section>
     
@@ -344,10 +346,10 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define command{
-            command_name  check_smtp
-            command_line  $USER1$/check_smtp -H $HOSTADDRESS$ $ARG1$
-            }
+define command {
+    command_name  check_smtp
+    command_line  $USER1$/check_smtp -H $HOSTADDRESS$ $ARG1$
+}
         </programlisting>
         
         <para>Une définition simple de service pour superviser un serveur &protocol-smtp;
@@ -355,12 +357,12 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service ; Inherit default values from a template
-            host_name      remotehost
-            service_description SMTP
-            check_command    check_smtp
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description SMTP
+    check_command       check_smtp
+}
         </programlisting>
         
         <para>Cette définition de service va superviser le service &protocol-smtp; et
@@ -371,16 +373,16 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
             vérifier le serveur &protocol-smtp; et générer une alerte si le serveur ne
             répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
-            la chaîne de caractères <quote>mygreatmailserver.com</quote>.
+            la chaîne de caractères <emphasis>mygreatmailserver.com</emphasis>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service ; Inherit default values from a template
-            host_name      remotehost
-            service_description SMTP Response Check 
-            check_command    check_smtp!-t 5 -e "mygreatmailserver.com"
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description SMTP Response Check 
+    check_command       check_smtp!-t 5 -e "mygreatmailserver.com"
+}
         </programlisting>
     </section>
     
@@ -394,10 +396,10 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define command{
-            command_name  check_pop
-            command_line  $USER1$/check_pop -H $HOSTADDRESS$ $ARG1$
-            }
+define command {
+    command_name  check_pop
+    command_line  $USER1$/check_pop -H $HOSTADDRESS$ $ARG1$
+}
         </programlisting>
         
         <para>Une définition simple de service pour superviser un serveur &protocol-pop3;
@@ -405,12 +407,12 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service ; Inherit default values from a template
-            host_name      remotehost
-            service_description POP3
-            check_command    check_pop
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description POP3
+    check_command       check_pop
+}
         </programlisting>
         
         <para>Cette définition de service va superviser le service &protocol-pop3; et
@@ -421,16 +423,16 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
             vérifier le serveur &protocol-pop3; et générer une alerte si le serveur ne
             répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
-            la chaîne de caractères <quote>mygreatmailserver.com</quote>.
+            la chaîne de caractères <emphasis>mygreatmailserver.com</emphasis>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service ; Inherit default values from a template
-            host_name      remotehost
-            service_description POP3 Response Check 
-            check_command    check_pop!-t 5 -e "mygreatmailserver.com"
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description POP3 Response Check 
+    check_command       check_pop!-t 5 -e "mygreatmailserver.com"
+}
         </programlisting>
     </section>
     
@@ -444,10 +446,10 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define command{
-            command_name  check_imap
-            command_line  $USER1$/check_imap -H $HOSTADDRESS$ $ARG1$
-            }
+define command {
+    command_name  check_imap
+    command_line  $USER1$/check_imap -H $HOSTADDRESS$ $ARG1$
+}
         </programlisting>
         
         <para>Une définition simple de service pour superviser un serveur &protocol-imap4;
@@ -455,12 +457,12 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service ; Inherit default values from a template
-            host_name      remotehost
-            service_description IMAP
-            check_command    check_imap
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description IMAP
+    check_command       check_imap
+}
         </programlisting>
         
         <para>Cette définition de service va superviser le service &protocol-imap4; et
@@ -471,16 +473,16 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         <para>Une définition de service plus avancée est donnée ci-dessous. Ce service va
             vérifier le service &protocol-imap4; et générer une alerte si le serveur ne
             répond pas dans les 5 secondes ou si la réponse du serveur ne contient pas
-            la chaîne de caractères <quote>mygreatmailserver.com</quote>.
+            la chaîne de caractères <emphasis>mygreatmailserver.com</emphasis>.
         </para>
         
         <programlisting>
-            define service{
-            use         generic-service ; Inherit default values from a template
-            host_name      remotehost
-            service_description IMAP4 Response Check 
-            check_command    check_imap!-t 5 -e "mygreatmailserver.com"
-            }
+define service {
+    use                 generic-service ; Inherit default values from a template
+    host_name           remotehost
+    service_description IMAP4 Response Check 
+    check_command       check_imap!-t 5 -e "mygreatmailserver.com"
+}
         </programlisting>
     </section>
     
@@ -489,8 +491,8 @@ linkend="configuringnagios-configmain-cfg_dir">&config-cfg_dir;</link>.
         
         <para>Une fois que vous avez ajouté les définitions du nouvel hôte et du service à
             vos fichiers de configuration d'objets, vous êtes prêt à démarrer la
-            supervision de ceux-ci. Pour cela, vous devez <link
-linkend="runningnagios-verifyconfig">vérifier votre configuration</link> et
+            supervision de ceux-ci. Pour cela, vous devez 
+            <link linkend="runningnagios-verifyconfig">vérifier votre configuration</link> et
             <link linkend="runningnagios-startstop">redémarrer Nagios</link>.
         </para>
         
