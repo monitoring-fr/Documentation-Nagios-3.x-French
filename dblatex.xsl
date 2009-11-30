@@ -21,6 +21,12 @@
 <!-- pour forcer les variablelists sur deux lignes -->
 <xsl:param name="term.breakline">1</xsl:param>
 
+<!-- pour modifier l'apparence des tables -->
+<xsl:param name="newtbl.autowitdth">1</xsl:param>
+<xsl:param name="newtbl.default.colsep">0</xsl:param>
+<xsl:param name="newtbl.default.rowsep">0</xsl:param>
+<xsl:param name="newtbl.use.hhline">1</xsl:param>
+
 <!-- How to handle the tag linking. Avoids hyphenation in the link,
      and prevents from putting too much thing in the margin (\sloppy)
 -->
