@@ -6,8 +6,7 @@
  %all.entities;
 ]
 >
-<chapter id="securityandperformancetuning-security"
-     xreflabel="Security Considerations">
+<chapter id="securityandperformancetuning-security">
     <title>Considérations sur la sécurité</title>
     
     <section>
@@ -19,8 +18,7 @@
             <inlinemediaobject>
                  
                 <imageobject>
-                     <imagedata fileref="images/security.png"
-format="PNG"/>
+                     <imagedata fileref="images/security.png" format="PNG"/>
                 </imageobject>
             </inlinemediaobject>
              Ce paragraphe est un
@@ -70,17 +68,14 @@ format="PNG"/>
     
     <section>
         <title>
-            <anchor id="securityandperformancetuning-security-bestpractices"
-/>Meilleures pratiques
+            <anchor id="securityandperformancetuning-security-bestpractices"/>Meilleures pratiques
         </title>
         
         <orderedlist>
             <listitem>
                 <para>
-                    <emphasis role="bold">Utilisez un serveur de supervision
-                        dédié
-                    </emphasis>
-                    .Je vous recommande d'installer Nagios sur un serveur dédié
+                    <emphasis role="bold">Utilisez un serveur de supervision dédié</emphasis>.
+                    Je vous recommande d'installer Nagios sur un serveur dédié
                     à la supervision (et à d'autres tâches d'administration
                     éventuellement). Protégez votre serveur de supervision comme si c'était l'un
                     des plus importants de votre réseau. Maintenez le nombre de services à
@@ -103,34 +98,29 @@ format="PNG"/>
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Ne pas faire fonctionner Nagios en tant que
-                        Root!
-                    </emphasis>
-                    .Il n'est pas nécessaire d'être root pour faire fonctionner
+                    <emphasis role="bold">Ne pas faire fonctionner Nagios en tant que  root !</emphasis>.
+                    Il n'est pas nécessaire d'être root pour faire fonctionner
                     Nagios, alors ne le faîtes pas. Vous pouvez obliger Nagios à abandonner des
                     privilèges après le lancement et à fonctionner avec les droits d'un autre
-                    utilisateur/groupe en utilisant les paramètres <link
-linkend="configuringnagios-configmain-nagios_user">&config-nagios_user;</link>et
-                    <link
-linkend="configuringnagios-configmain-nagios_group">&config-nagios_group;</link> dans
+                    utilisateur/groupe en utilisant les paramètres 
+                    <xref linkend="configuringnagios-configmain-nagios_user"
+                    endterm="configuringnagios-configmain-nagios_user-tech"/> et
+                    <xref linkend="configuringnagios-configmain-nagios_group"
+                    endterm="configuringnagios-configmain-nagios_group-tech"/> dans
                     le fichier principal de configuration. Si vous avez besoin d'exécuter des
                     gestionnaires d'événements ou des plugins qui requièrent des accès root,
-                    vous pouvez essayer d'utiliser <ulink
-url="http://www.courtesan.com/sudo/sudo.html">sudo</ulink>.
+                    vous pouvez essayer d'utiliser
+                    <ulink url="http://www.courtesan.com/sudo/sudo.html"><command>sudo</command></ulink>.
                 </para>
             </listitem>
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Vérouillez le répertoire des résultats de
-                        contrôle
-                    </emphasis>
-                    .Assurez-vous que seul l'utilisateur nagios à le doirt
-                    de lecture/écriture sur le <link
-linkend="configuringnagios-configmain-check_result_path">répertoire des
-                        résultats de contrôle
-                    </link>
-                    .Si d'autres utilisateurs que nagios (ou root)
+                    <emphasis role="bold">Vérouillez le répertoire des résultats de contrôle</emphasis>.
+                    Assurez-vous que seul l'utilisateur nagios à le doirt
+                    de lecture/écriture sur le 
+                    <link linkend="configuringnagios-configmain-check_result_path">répertoire des résultats de contrôle</link>.
+                    Si d'autres utilisateurs que nagios (ou root)
                     sont capables d'écrire dans ce répertoire, ils peuvent potentiellement
                     envoyer des résultats de contrôles erronées au démon Nagios. Cela pourrait
                     vous valoir quelques désagréments comme des notifications erronées ou des
@@ -140,13 +130,10 @@ linkend="configuringnagios-configmain-check_result_path">répertoire des
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Vérrouillez le fichier des commandes
-                        externes
-                    </emphasis>
-                    .Si vous activez les <link
-linkend="advancedtopics-extcommands">commandes externes</link>, assurez-vous
-                    d'avoir les permissions appropriées sur le répertoire <filename
-class="directory">/usr/local/nagios/var/rw</filename>. Vous voulez
+                    <emphasis role="bold">Verrouillez le fichier des commandes externes</emphasis>.
+                    Si vous activez les <link linkend="advancedtopics-extcommands">commandes externes</link>,
+                    assurez-vous d'avoir les permissions appropriées sur le répertoire 
+                    <filename class="directory">/usr/local/nagios/var/rw</filename>. Vous voulez
                     uniquement que les utilisateurs Nagios (habituellement nagios) et web
                     (habituellement nobody, http, apache2 ou www-data) puissent écrire dans le
                     fichier des commandes. Si vous avez installé Nagios sur une machine dédiée à
@@ -169,20 +156,14 @@ class="directory">/usr/local/nagios/var/rw</filename>. Vous voulez
                     authentification. Ceci fait, lisez la documentation sur les droits par
                     défaut dont disposent les contacts autorisés et n'accordez
                     qu'exceptionnellement une autorisation à des contacts spécifiques. Les
-                    instructions pour la configuration des droits se trouvent <link
-linkend="configuringnagios-cgiauth">ici</link>. Si vous désactivez
+                    instructions pour la configuration des droits se trouvent 
+                    <link linkend="configuringnagios-cgiauth">ici</link>. Si vous désactivez
                     l'authentification préalable à l'accès aux &acronym-cgi;s par la commande 
-                    <link
-linkend="configuringnagios-configcgi-use_authentication">
-                        <varname>use_authentication</varname>
-                    </link>
-                    dans le fichier de configuration des &acronym-cgi;s, le <link
-linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> refusera d'écrire la
-                    moindre commande dans le <link
-linkend="configuringnagios-configmain-command_file">fichier des commandes
-                        externes
-                    </link>
-                    .De toutes façons, vous ne souhaitez pas que tout le monde
+                    <link linkend="configuringnagios-configcgi-use_authentication"><literal>use_authentication</literal></link>
+                    dans le fichier de configuration des &acronym-cgi;s, le 
+                    <link linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> refusera d'écrire la
+                    moindre commande dans le <link linkend="configuringnagios-configmain-command_file">fichier des commandes externes</link>.
+                    De toutes façons, vous ne souhaitez pas que tout le monde
                     puisse contrôler vôtre Nagios ? 
                 </para>
             </listitem>
@@ -193,8 +174,8 @@ linkend="configuringnagios-configmain-command_file">fichier des commandes
                         GCIs
                     </emphasis>
                     .Je vous recommande chaudement de considérer
-                    l'implémentation des mesures de sécurité pour les &acronym-cgi;s comme indiqué <link
-linkend="securityandperformancetuning-cgisecurity">ici</link>. Ces mesures
+                    l'implémentation des mesures de sécurité pour les &acronym-cgi;s comme indiqué 
+                    <link linkend="securityandperformancetuning-cgisecurity">ici</link>. Ces mesures
                     peuvent aider à s'assurer que l'utilisateur/mot de passe que vous utilisez
                     pour accéder à l'interface web de Nagios ne puissent intercepter par de
                     tierces parties.
@@ -203,10 +184,8 @@ linkend="securityandperformancetuning-cgisecurity">ici</link>. Ces mesures
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Utilisez les chemins complets dans la définition des
-                        commandes
-                    </emphasis>
-                    .Lorsque vous définissez des commandes, assurez-vous
+                    <emphasis role="bold">Utilisez les chemins complets dans la définition des commandes</emphasis>.
+                    Lorsque vous définissez des commandes, assurez-vous
                     d'avoir bien précisé le chemin d'accès complet de tous les scripts ou
                     binaires que vous exécutez.
                 </para>
@@ -214,26 +193,15 @@ linkend="securityandperformancetuning-cgisecurity">ici</link>. Ces mesures
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Cachez les informations sensibles à l'aide des macros
-                        &macro-argn;
-                    </emphasis>
-                    .Les &acronym-cgi;s parcourent le <link
-linkend="configuringnagios-configmain">fichier de configuration
-                        principal
-                    </link>
-                    et le(s) <link
-linkend="configuringnagios-configobject">fichier(s) de configuration des
-                        objets
-                    </link>
-                    ,n'y laissez donc pas d'informations sensibles (noms
-                    d'utilisateur, mots de passe, etc.). Si vous avez besoin de préciser un
-                    mot de passe ou un nom d'utilisateur dans une définition de commande,
+                    <emphasis role="bold">Cachez les informations sensibles à l'aide des macros &macro-argn;</emphasis>.
+                    Les &acronym-cgi;s parcourent le <link linkend="configuringnagios-configmain">fichier de configuration principal</link>
+                    et le(s) <link linkend="configuringnagios-configobject">fichier(s) de configuration des objets</link>,
+                    n'y laissez donc pas d'informations sensibles (noms d'utilisateur, mots de passe, etc.). 
+                    Si vous avez besoin de préciser un mot de passe ou un nom d'utilisateur dans une définition de commande,
                     utilisez &macro-usern; <link linkend="thebasics-macros">macro pour le cacher</link>. &macro-usern;
-                    Les macros &macro-usern; sont définies dans un ou plusieurs <link
-linkend="configuringnagios-configmain-resource_file">fichiers de
-                        ressources
-                    </link>
-                    .Les &acronym-cgi;s ne parcourant pas les fichiers de ressources,
+                    Les macros &macro-usern; sont définies dans un ou plusieurs 
+                    <link linkend="configuringnagios-configmain-resource_file">fichiers de ressources</link>.
+                    Les &acronym-cgi;s ne parcourant pas les fichiers de ressources,
                     vous pouvez leur donner des permissions beaucoup plus restrictives (600 ou
                     660). Consultez le fichier <filename>resource.cfg</filename> dans la
                     distribution de base de Nagios, il vous donnera un exemple de définition de
@@ -243,38 +211,32 @@ linkend="configuringnagios-configmain-resource_file">fichiers de
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Éliminez les caractères dangereux des
-                        macros
-                    </emphasis>
-                    .Utilisez le paramètre <link
-linkend="configuringnagios-configmain-illegal_macro_output_chars">&config-illegal_macro_output_chars;</link>
-                    pour filtrer les caractères dangereux 
-                    des chaînes issues des macros &macro-hostoutput;, &macro-serviceoutput;,
-                    &macro-hostperfdata;, et &macro-serviceperfdata;  avant qu'elles ne
-                    soient utilisées pour des notifications, etc. 
-                    Des caractères dangereux
-                    peuvent être tout caractère qui peut être interprété par un shell, ouvrant
-                    ainsi un trou de sécurité. Un bon exemple est la présence de la quote
-                    inverse (`) dans &macro-hostoutput;,
-                    &macro-serviceoutput;, &macro-hostperfdata;, et/ou
-                    &macro-serviceperfdata;, qui pourrait permettre à un attaquant d'exécuter un commande
-                    arbitraire comme l'utilisateur nagios (une autre bonne raison pour ne pas
-                    exécuter Nagios comme l'utilisateur root). 
+                    <emphasis role="bold">Éliminez les caractères dangereux des macros</emphasis>.
+                    Utilisez le paramètre 
+                    <xref linkend="configuringnagios-configmain-illegal_macro_output_chars"
+                    endterm="configuringnagios-configmain-illegal_macro_output_chars-tech"/>
+                    pour filtrer les caractères dangereux des chaînes issues des macros 
+                    &macro-hostoutput;, &macro-serviceoutput;, &macro-hostperfdata; et 
+                    &macro-serviceperfdata;  avant qu'elles ne soient utilisées pour des 
+                    notifications, etc. 
+                    Des caractères dangereux peuvent être tout caractère qui peut être 
+                    interprété par un shell, ouvrant ainsi un trou de sécurité. 
+                    Un bon exemple est la présence de la quote inverse (`) dans &macro-hostoutput;,
+                    &macro-serviceoutput;, &macro-hostperfdata;, et/ou &macro-serviceperfdata; qui 
+                    pourrait permettre à un attaquant d'exécuter un commande arbitraire comme 
+                    l'utilisateur nagios (une autre bonne raison pour ne pas exécuter Nagios comme l'utilisateur root). 
                 </para>
             </listitem>
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Sécurisez l'accès aux agents
-                        distants
-                    </emphasis>
-                    .Assurez-vous d'avoir verrouiller l'accès aux agents
-                    (&name-nrpe;, NSClient, &protocol-snmp;, etc.) sur les sytèmes distants en
-                    utilisant des pares-feu, des listes d'accès, etc. Vous ne voulez pas que
-                    n'importe qui soit capable d'interroger vos système sur leurs états. Cette
-                    information peut être utilisé par un attaquant pour exécuter des
-                    gestionnaires d'événements distants ou pour déterminer une fenêtre de temps
-                    pour une attaque discrète.
+                    <emphasis role="bold">Sécurisez l'accès aux agents distants</emphasis>.
+                    Assurez-vous d'avoir verrouiller l'accès aux agents (&name-nrpe;, NSClient, 
+                    &protocol-snmp;, etc.) sur les sytèmes distants en utilisant des pares-feu, 
+                    des listes d'accès, etc. Vous ne voulez pas que n'importe qui soit capable 
+                    d'interroger vos systèmes sur leurs états. Cette information peut être utilisée 
+                    par un attaquant pour exécuter des gestionnaires d'événements distants ou
+                    pour déterminer une fenêtre de temps pour une attaque discrète.
                     <informalfigure>
                         <mediaobject>
                             <imageobject>
@@ -287,10 +249,8 @@ linkend="configuringnagios-configmain-illegal_macro_output_chars">&config-illega
             
             <listitem>
                 <para>
-                    <emphasis role="bold">Sécurisez vos canaux de
-                        communication
-                    </emphasis>
-                    .Assurez-vous d'avoir chiffré les canaux de
+                    <emphasis role="bold">Sécurisez vos canaux de communication</emphasis>.
+                    Assurez-vous d'avoir chiffré les canaux de
                     communication entre vos différents serveurs Nagios et entre Nagios et les
                     agents de supervision quand cela est possible. Vous ne voulez pas que
                     quelqu'un puisse sniffer les informations d'états lorsqu'elle transite sur
