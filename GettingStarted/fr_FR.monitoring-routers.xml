@@ -11,9 +11,9 @@
     
     <note>
         <para>Ce document décrit la façon dont vous pouvez superviser des routeurs et
-            switchs réseaux. Quelques switchs et hubs bon marché <quote>non
+            switchs réseaux. Quelques switchs et hubs bon marché <emphasis>non
                 manageables
-            </quote>
+            </emphasis>
             n'ont pas d'adresse &acronym-ip; et sont invisibles sur votre réseau, il n'y a donc aucun moyen de
             les superviser. Les routeurs et switchs plus chers ont une adresse assignée
             et peuvent donc être supervisés en les pingant ou en utilisant
@@ -82,7 +82,7 @@ format="PNG"/>
         </para>
         
         <para>Les switchs et les routeurs peuvent facilement être supervisés en les
-            <quote>pingant</quote> pour déterminer le nombre de paquets perdus, &acronym-rta;, etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser
+            <emphasis>pingant</emphasis> pour déterminer le nombre de paquets perdus, &acronym-rta;, etc. Si votre switch supporte &protocol-snmp;, vous pouvez superviser
             l'état des ports, etc. avec le plugin &plugin-snmp; et la bande passante
             avec &plugin-mrtgtraf; plugin (si vous utilisez &acronym-mrtg;).
         </para>
@@ -241,9 +241,9 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour le
         <note>
             <para>
                 Remplacez 
-                <quote>
+                <emphasis>
                     <replaceable>linksys-srw224p</replaceable>
-                </quote>
+                </emphasis>
                 dans les
                 exemples de définitions ci-dessous par le nom que vous avez renseigné dans
                 le paramètre <varname>host_name</varname> que vous venez d'ajouter dans la
@@ -378,7 +378,7 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour le
         <para>
             L'option <option>-r 1</option> indique au plugin &plugin-snmp; de retourner un état OK si
             <computeroutput>1</computeroutput> est trouvé dans la réponse
-            &protocol-snmp; (1 indique que le port est <quote>up</quote>) et CRITICAL sinon.
+            &protocol-snmp; (1 indique que le port est <emphasis>up</emphasis>) et CRITICAL sinon.
         </para>
         <para>
             L'option <option>-m RFC1213-MIB</option> est optionnel et indique la 

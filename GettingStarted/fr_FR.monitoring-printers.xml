@@ -260,9 +260,9 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour
         <note>
             <para>
                 Remplacez 
-                <quote>
+                <emphasis>
                     <replaceable>hplj2605dn</replaceable>
-                </quote>
+                </emphasis>
                 dans les
                 exemples de définitions ci-dessous par le nom que vous avez renseigné dans
                 le paramètre <varname>host_name</varname> que vous venez d'ajouter dans la
@@ -274,7 +274,7 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour
             l'imprimante. Le service utilise le plugin &plugin-hpjd; pour vérifier
             l'état de l'imprimante toutes les 10 minutes par défaut. La communauté
             &protocol-snmp; utilisée dans cet exemple pour interroger l'imprimante est
-            <quote>public</quote>.
+            <emphasis>public</emphasis>.
         </para>
         
         <programlisting>

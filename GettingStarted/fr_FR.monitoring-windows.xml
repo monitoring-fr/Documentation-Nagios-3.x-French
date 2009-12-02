@@ -12,7 +12,7 @@
     
     <note>
         <para>Ce document décrit la façon dont vous pouvez superviser les attributs et
-            services <quote>privés</quote> de machines Windows comme:
+            services <emphasis>privés</emphasis> de machines Windows comme:
         </para>
         
         <para><itemizedlist>
@@ -375,11 +375,11 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         
         <note>
             <para>Remplacez
-                <quote>
+                <emphasis>
                     <varname>
                         <replaceable>winserver</replaceable>
                     </varname>
-                </quote>
+                </emphasis>
                  dans
                 les définitions d'exemples ci-dessous par le nom que vous avez précisé dans
                 le paramètre de la définition de l'hôte que vous venez d'ajouter.
@@ -508,9 +508,9 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         
         <para>
             Modifiez la définition de la commande &plugin-nt; pour inclure l'argument 
-            <quote>
+            <emphasis>
                 <option>-s</option> &lt;PASSWORD&gt;
-            </quote>
+            </emphasis>
             (où PASSWORD est le mot de passe précisé sur la machine
             Windows) comme suit:
         </para>
