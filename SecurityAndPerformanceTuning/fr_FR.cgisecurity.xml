@@ -56,7 +56,7 @@ url="&url-apache-docs;2.2/mod/mod_auth_basic.html">fondamentaux
                         d'authentification Apache
                     </ulink>
                     .L'authentification basique envoie en
-                    <quote>texte clair</quote> le nom d'utilisateur et le mot de passe de connexion avec
+                    <emphasis>texte clair</emphasis> le nom d'utilisateur et le mot de passe de connexion avec
                     chacune des requêtes http. Considérez que d'utiliser la <ulink
 url="&url-apache-docs;2.2/mod/mod_auth_digest.html">technologie
                         Digest
@@ -92,10 +92,10 @@ url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink>. &acronym-tls;/&acro
             
             <para>L'implémentation de l'authentification Digest est simple. Vous devez créer
                 un nouveau type de mot de passe en utilisant l'outil 
-                <quote>
+                <emphasis>
                     <ulink
 url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink>
-                </quote>
+                </emphasis>
                 ,puis
                 modifiez la configuration apache pour Nagios (par défaut
                 <filename>/etc/httpd/conf.d/nagios.conf</filename>).
@@ -103,10 +103,10 @@ url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink>
             
             <para>
                 Créer un nouveau mot de passe en utilisant l'outil 
-                <quote>
+                <emphasis>
                     <ulink
 url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink>
-                </quote>
+                </emphasis>
                 .
             </para>
             
@@ -283,15 +283,15 @@ class="directory">share</filename>.
                 <para>
                     <emphasis role="bold">
                         &acronym-tls;/&acronym-ssl; a le potentiel pour 
-                        <quote>
+                        <emphasis>
                             <ulink
 url="&url-wikipedia;Man-in-the-middle_attack">man-in-the-middle
                                 attacks
                             </ulink>
-                        </quote>
+                        </emphasis>
                     </emphasis>
                     .Les attaques &acronym-mitm; sont vulnérables si l'attaquant est obligé de s'imisser entre le
-                    serveur et le client tout comme une attaque par <quote>Phishing</quote>, l'&acronym-isp; monitoring
+                    serveur et le client tout comme une attaque par <emphasis>Phishing</emphasis>, l'&acronym-isp; monitoring
                     ou &acronym-lan; un certificat de pare-feu arrivant à expiration. Lire ci-dessus la
                     vérification des certificats !
                 </para>
@@ -315,9 +315,9 @@ url="http://www.netfilter.org/projects/iptables/index.html">IPtables</ulink>
                         développement
                     </emphasis>
                     !Peut-être en vous inscrivant aux newsletters comme
-                    <quote>
+                    <emphasis>
                         <ulink url="http://www.grc.com/securitynow.htm">Security Now!</ulink>
-                    </quote>
+                    </emphasis>
                     .
                 </para>
             </listitem>
