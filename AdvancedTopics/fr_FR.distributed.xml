@@ -19,8 +19,8 @@
         <title>Buts</title>
         <para>Le but de l'environnement de supervision distribué que je vais décrire est
             de décharger l'excès de charge induit par les contrôle de services (sur la
-            &acronym-cpu;, etc.) du serveur <quote>central</quote> sur un ou plusieurs serveurs
-            <quote>distribués</quote>. La plupart des petites et moyennes entreprises
+            &acronym-cpu;, etc.) du serveur <emphasis>central</emphasis> sur un ou plusieurs serveurs
+            <emphasis>distribués</emphasis>. La plupart des petites et moyennes entreprises
             n'auront pas réellement besoin de mettre en œuvre cet
             environnement. Cependant, quand vous voulez superviser des centaines, voire
             des milliers d'hôtes (et plusieurs fois cette valeur en termes de services)
@@ -53,7 +53,7 @@
             différents serveurs… 
         </para>
         <para>Le rôle d'un serveur distribué est de contrôler tous les services définis
-            pour une grappe [cluster] d'hôtes. J'utilise ce terme <quote>grappe</quote>
+            pour une grappe [cluster] d'hôtes. J'utilise ce terme <emphasis>grappe</emphasis>
             de manière inappropriée : il désigne simplement un groupe d'hôtes de votre
             réseau. Selon la topographie de votre réseau, vous pouvez avoir plusieurs
             grappes en un seul lieu, ou chaque grappe peut être séparée par un WAN, un
