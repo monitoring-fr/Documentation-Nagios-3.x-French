@@ -14,9 +14,9 @@
         <title>Introduction</title>
         
         <para>Sivous avez déjà travaillé dans une équipe de support technique, vous avez
-            alors sûrement entendu les utilisateurs vous dire que <quote>Internet est
+            alors sûrement entendu les utilisateurs vous dire que <emphasis>Internet est
                 coupé
-            </quote>
+            </emphasis>
             .En tant que technicien, vous pouvez être quasiment sûr que ce
             n'est pas quelqu'un qui a débranché le câble Internet. Il y a certainement
             quelque chose qui ne fonctionne pas entre le siège de l'utilisateur et
@@ -67,7 +67,7 @@
             démon Nagios. Pour cela, tracer le chemin que devrait prendre un paquet de
             données pour aller du démon Nagios à chaque hôte supervisé. Chaque switch,
             routeur, et serveur que le paquet doit traverser est considéré comme une
-            <quote>étape</quote> et requiert que vous définissiez une relation
+            <emphasis>étape</emphasis> et requiert que vous définissiez une relation
             parent/enfant dans Nagios.
         </para>
         
@@ -177,12 +177,12 @@ linkend="configuringnagios-objectdefinitions-host">définitions
         </para>
         
         <para>Dans cet exemple, Nagios va déterminer que Web et Router1 sont tous les deux
-            en état DOWN parce que le <quote>chemin</quote> vers ces hôtes n'est pas
+            en état DOWN parce que le <emphasis>chemin</emphasis> vers ces hôtes n'est pas
             bloqué.
         </para>
         
         <para>
-            Nagios va déterminer que les hôtes <quote>derrière</quote> Router1 sont tous
+            Nagios va déterminer que les hôtes <emphasis>derrière</emphasis> Router1 sont tous
             dans un état UNREACHABLE parce que Nagios ne peut les joindre. Router1 est
             tombé et bloque le chemin vers les autre shôtes. Ces hôtes fonctionnent
             peut-être, ou pas - Nagios ne le sait pas parce qu'il ne peut pas les

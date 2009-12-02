@@ -82,7 +82,7 @@
         </programlisting>
         <para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
             paramètres (auxquels on fait référence par les macros &macro-argn;). La macro
-            <literal>$ARG1$</literal> vaudra <quote>200.0,80%</quote> et <literal>$ARG2$</literal> vaudra <quote>400.0,40%</quote> (sans les guillemets).
+            <literal>$ARG1$</literal> vaudra <emphasis>200.0,80%</emphasis> et <literal>$ARG2$</literal> vaudra <emphasis>400.0,40%</emphasis> (sans les guillemets).
             Supposons que nous utilisons la définition d'hôte ci-dessus et une commande <command>check_ping</command> définie comme ceci :
         </para>
         <programlisting>
@@ -109,13 +109,13 @@
         <para>Normalement, quand vous utilisez des macros d'hôte ou de service dans les
             définitions de commandes, elles font référence aux valeurs de l'hôte ou du
             service pour lequel s'exécute la commande. Par exemple, si la commande de
-            contrôle d'un hôte s'exécute pour l'hôte appelé <quote>linuxbox</quote>, toutes les
+            contrôle d'un hôte s'exécute pour l'hôte appelé <emphasis>linuxbox</emphasis>, toutes les
             macros d'hôte listées dans le tableau ci-après font référence aux valeurs de
-            cet hôte (<quote>linuxbox</quote>).
+            cet hôte (<emphasis>linuxbox</emphasis>).
         </para>
         <para>Si vous souhaitez faire référence aux valeurs d'un autre hôte ou service
             dans une commande (pour lequel ne s'exécute pas la commande), vous pouvez
-            utiliser ce qu'on appellle des macros <quote>à la demande</quote>. Les macros à la
+            utiliser ce qu'on appellle des macros <emphasis>à la demande</emphasis>. Les macros à la
             demande ressemblent aux macros normales, mis à part qu'elle contiennent
             l'identifiant de l'hôte ou du service où aller chercher leur valeur. Voici
             la syntaxe de base pour les macros à la demande :
@@ -269,9 +269,9 @@ linkend="configuringnagios-customobjectvars">variables d'objet
             </listitem>
         </itemizedlist>
         <para>Prenez la définition d'hôte suivante avec une variable personnalisée appelée
-            <quote>
+            <emphasis>
                 <literal>_MACADDRESS</literal>
-            </quote>
+            </emphasis>
             …
         </para>
         <programlisting>

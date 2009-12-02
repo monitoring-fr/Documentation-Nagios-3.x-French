@@ -10,7 +10,7 @@
     <title>Les périodes de temps</title>
     <note>
         <para>
-            Ou… <quote>Est-ce le bon moment?</quote>
+            Ou… <emphasis>Est-ce le bon moment?</emphasis>
         </para>
     </note>
     <section>
@@ -118,7 +118,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
             Nagios va tenter de replanifier un contrôle d'hôte ou de service, il va
             s'assurer que le prochain contrôle tombe bien dans la plage horaire
             définie. Si ce n'est pas le cas, Nagios va ajuster l'heure du prochain
-            contrôle pour qu'elle coïncide avec la prochaine heure <quote>valide</quote>
+            contrôle pour qu'elle coïncide avec la prochaine heure <emphasis>valide</emphasis>
             dans la plage horaire spécifiée. Ce qui signifie que l'hôte ou le service ne
             sera contrôlé à nouveau que dans plusieurs heures, jours, semaines, etc.
         </para>
@@ -135,7 +135,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
             surveiller tous les hôtes et les services en utilisant des plages horaires
             qui couvrent une période de temps 24x7. Si vous ne le faites pas, vous
             pouvez rencontrer certains problèmes au cours de ces périodes de
-            <quote>non-contrôle</quote> (lorsque l'on ne se trouve pas dans la plage horaire
+            <emphasis>non-contrôle</emphasis> (lorsque l'on ne se trouve pas dans la plage horaire
             définie):
         </para>
         
@@ -181,9 +181,9 @@ linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
 linkend="configuringnagios-objectdefinitions-contact">la définition d'un
                 contact
             </link>
-            ,vous serez en mesure de définir une plage horaire <quote>sur
+            ,vous serez en mesure de définir une plage horaire <emphasis>sur
                 mesure
-            </quote>
+            </emphasis>
             pour chaque contact. Les contacts recevront les notifications pour
             les hôtes et les services seulement pendant la plage horaire que vous leur
             aurez spécifié.
