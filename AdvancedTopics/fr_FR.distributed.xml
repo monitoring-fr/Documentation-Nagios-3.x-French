@@ -394,15 +394,15 @@ linkend="configuringnagios-configmain-accept_passive_service_checks">contrôles
     <section>
         <title>Le contrôle de validité des données</title>
         <para>Nagios offre une fonctionnalité qui teste la validité des résultats d'un
-            test (<quote>freshness</quote> checking). On peut trouver plus
+            test (<emphasis>freshness</emphasis> checking). On peut trouver plus
             d'informations à ce sujet <link
 linkend="advancedtopics-freshness">ici</link>. Cette fonctionnalité apporte
             une solution aux situations ou les hôtes distants peuvent arrêter d'envoyer
             le résultat des tests passifs au serveur central. Elle
-            (<quote>freshness</quote>) permet d'assurer que le test est soit fourni
+            (<emphasis>freshness</emphasis>) permet d'assurer que le test est soit fourni
             passivement par les serveurs distribués, soit exécuté activement par le
             serveur central si nécessaire. Si les résultats fournis par le test du
-            service deviennent <quote>figés</quote>, Nagios peut être configuré pour
+            service deviennent <emphasis>figés</emphasis>, Nagios peut être configuré pour
             forcer un contrôle actif depuis le serveur central.
         </para>
         <para>Comment fait-on cela ? Sur le serveur central, il faut configurer ainsi les
@@ -412,7 +412,7 @@ linkend="advancedtopics-freshness">ici</link>. Cette fonctionnalité apporte
             <listitem>
                 <para>
                     L'option <literal>check_freshness</literal> dans la définition des services
-                    doit être à 1. Ceci active le test de validité (<quote>freshness</quote>
+                    doit être à 1. Ceci active le test de validité (<emphasis>freshness</emphasis>
                     checking)
                 </para>
             </listitem>
@@ -420,7 +420,7 @@ linkend="advancedtopics-freshness">ici</link>. Cette fonctionnalité apporte
                 <para>
                     L'option <literal>freshness_threshold</literal> dans la définition des
                     services doit être positionné à une valeur qui indique le niveau de validité
-                    ([NdT] : la traduction littérale est la <quote>fraîcheur</quote>, mais il ne me semble
+                    ([NdT] : la traduction littérale est la <emphasis>fraîcheur</emphasis>, mais il ne me semble
                     pas adapté) des données (telles que fournies par les serveurs distribués).
                 </para>
             </listitem>
@@ -436,13 +436,13 @@ linkend="advancedtopics-freshness">ici</link>. Cette fonctionnalité apporte
             option est activée. L'option <literal>freshness_threshold</literal>dans
             chaque service détermine le niveau de validité pour celui-ci. Par exemple,
             si sa valeur est 300 pour un de vos services, Nagios va considérer que les
-            résultats du service sont <quote>figés</quote> s'ils ont plus de 5 minutes
+            résultats du service sont <emphasis>figés</emphasis> s'ils ont plus de 5 minutes
             (300 secondes). Si vous ne spécifiez pas la valeur de
             <literal>freshness_threshold</literal>, Nagios calculera un seuil à partir
             de la valeur des options <literal>normal_check_interval</literal> ou de
             <literal>retry_check_interval</literal> (en fonction de <link
 linkend="thebasics-statetypes">l'état du service</link>). Si les résultats
-            sont <quote>figés</quote>, Nagos exécutera la commande spécifiée dans
+            sont <emphasis>figés</emphasis>, Nagos exécutera la commande spécifiée dans
             <literal>check_command</literal> dans la définition du service, vérifiant
             ainsi activement ce service.
         </para>

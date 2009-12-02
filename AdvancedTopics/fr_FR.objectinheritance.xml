@@ -42,7 +42,7 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         </programlisting>
         
         <para>
-            La première variable est <varname>name</varname>. C'est le nom du <quote>gabarit</quote>
+            La première variable est <varname>name</varname>. C'est le nom du <emphasis>gabarit</emphasis>
             qui peut être référencé dans d'autre définition d'objet, de manière à ce
             qu'ils héritent des propriétés/variables de cet objet. 
         </para>
@@ -57,9 +57,9 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         
         <para>
             La troisième variable est <varname>register</varname>. Cette variable est
-            utilisée pour indiquer si la définition de l'objet doit être <quote>Prise en
+            utilisée pour indiquer si la définition de l'objet doit être <emphasis>Prise en
                 compte
-            </quote>
+            </emphasis>
             par Nagios ou non. Par défaut, toutes les défintions d'objet sont
             prise en compte. Si vous utilisez une définition d'objet partiel comme
             gabarit, vous voulez éviter qu'il soit prise en compte (Un exemple de ce
@@ -78,7 +78,7 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         <title>Variables locales vs Variables héritées</title>
         
         <para>Une chose importante à comprendre avec l'héritage c'est que les variable
-            <quote>local</quote> ont toujours autorité sur les variables définies dans
+            <emphasis>local</emphasis> ont toujours autorité sur les variables définies dans
             un gabarit d'objet. Regardez l'exemple suivant avec deux définition d'hotes
             (toutes les variables nécessaire n'ont pas été indiqué)
         </para>
@@ -195,7 +195,7 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         </programlisting>
         
         <para>
-            Il n'y a pas de limite de <quote>profondeur</quote> d'héritage, mais vous
+            Il n'y a pas de limite de <emphasis>profondeur</emphasis> d'héritage, mais vous
             voudrez probabliment vous limitez à au plus quelques niveaux, de façon à
             garder votre santé mental. 
         </para>
@@ -206,7 +206,7 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         
         <para>Il est possible d'utiliser une définition incomplète d'object comme gabarit
             afin de les utiliser dans d'autres définitions d'objets. Par définition
-            <quote>incomplète</quote>, je veux dire que toutes les variables requises pour l'objet
+            <emphasis>incomplète</emphasis>, je veux dire que toutes les variables requises pour l'objet
             n'ont pas été mises dans la définition de l'objet. Celà peut paraitre
             bizarre d'utiliser des définitions incomplètes comme gabarit, mais c'est en
             fait recommandé de les utiliser. Pourquoi? Et bien ils servent d'ensemble
@@ -238,7 +238,7 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         <para>Notez que la 1er définition d'hotes est incomplète car il manque le variable
             requise <varname>host_name</varname>. Nous n'avons pas besoin de définir un
             nom d'hôte car nous voulons juste utiliser cette définition comme un gabarit
-            d'hôte générique. Afin de prévenir cette defintion d'être <quote>registered</quote> par
+            d'hôte générique. Afin de prévenir cette defintion d'être <emphasis>registered</emphasis> par
             nagios comme un hôte normal, nous devons définir la variable
             <varname>register</varname> à 0. 
         </para>
@@ -331,9 +331,9 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         <para>Dans certain cas, vous ne voulez pas que votre défintion d'hôte, service ou
             contact hérite de la valeur d'une variable du gabarit qu'il référence. Dans
             ce cas, vous pouvez spécifier
-            <quote>
+            <emphasis>
                 <emphasis role="bold">null</emphasis>
-            </quote>
+            </emphasis>
             (sans les quotes) comme valeur
             pour cette variable. Regardez l'exemple suivant : 
         </para>
@@ -380,7 +380,7 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         </para>
         
         <para>
-            Cette <quote>héritage additif</quote> peut être réalisé en rajoutant devant la valeur
+            Cette <emphasis>héritage additif</emphasis> peut être réalisé en rajoutant devant la valeur
             de la variable local un signe plus (+). Cette fonctionnalité est uniquement
             accessible pour les variables standards (non-personnels) qui contiennent des
             valeurs sous forme de chaine. Regardez l'exemple suivant : 

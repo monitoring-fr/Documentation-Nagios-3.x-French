@@ -13,11 +13,11 @@
         <title>Introduction</title>
         
         <para>Nagios a la capacité de faire la distinction entre les services
-            <quote>normaux</quote> et les services <quote>volatiles</quote>. L'option
+            <emphasis>normaux</emphasis> et les services <emphasis>volatiles</emphasis>. L'option
             is_volatil de chaque définition de service vous permet de spécifier si ou
             non un service spécifique est volatile. Pour la plupart des gens, la
             majorité des services supervisés sera de type non-volatile (par
-            ex. <quote>normal</quote>). Toutefois, des services volatiles peuvent se
+            ex. <emphasis>normal</emphasis>). Toutefois, des services volatiles peuvent se
             révéler très utiles lorsqu'ils sont bien utilisés… 
         </para>
     </section>
@@ -30,7 +30,7 @@
         <itemizedlist>
             <listitem>
                 <para>
-                    des choses qui se remettent automatiquement en état <quote>OK</quote> chaque
+                    des choses qui se remettent automatiquement en état <emphasis>OK</emphasis> chaque
                     fois qu'ils sont contrôlés
                 </para>
             </listitem>
@@ -47,7 +47,7 @@
         <title>Qu'est-ce que les services volatiles ont de si particulier ?</title>
         
         <para>
-            Les services volatiles diffèrent des services <quote>normaux</quote> de
+            Les services volatiles diffèrent des services <emphasis>normaux</emphasis> de
             trois façons importantes. Chaque fois qu'ils sont contrôlés quand ils sont
             dans un état <link linkend="thebasics-statetypes">hard</link> non-OK, et que
             le contrôle retourne un état non-OK (par ex. aucun changement d'état n'a eu

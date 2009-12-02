@@ -78,7 +78,7 @@ linkend="configuringnagios-configobject"/>
         </programlisting>
         
         <para>
-            Remarquez qu'il y a des <quote>trous</quote> dans les définitions d'escalade de
+            Remarquez qu'il y a des <emphasis>trous</emphasis> dans les définitions d'escalade de
             notification. En particulier, les notifications 1 et 2 ne sont pas prises en
             compte par les escalades, ni celles au-delà de 10. Pour la première et la
             seconde notification, de même que pour celles au-delà de la dixième, le
@@ -94,10 +94,10 @@ linkend="configuringnagios-configobject"/>
         
         <para>En définissant des escalades de notification, il est important d'être
             conscient que n'importe quels groupes de contact qui étaient des membres de
-            <quote>plus bas niveaux</quote> d'escalades (c'est-à-dire ceux avec les nombres de
-            notification plus basses) devraient aussi être inclus dans les niveaux <quote>plus
+            <emphasis>plus bas niveaux</emphasis> d'escalades (c'est-à-dire ceux avec les nombres de
+            notification plus basses) devraient aussi être inclus dans les niveaux <emphasis>plus
                 haut
-            </quote>
+            </emphasis>
             des définitions d'escalade. Cela devrait être fait pour garantir que
             quelqu'un qui est notifié d'un problème continue à suivre ce problème
             jusqu'à sa résolution. Exemple :
@@ -126,17 +126,17 @@ linkend="configuringnagios-configobject"/>
         </programlisting>
         
         <para>
-            Le premier (ou <quote>plus bas</quote>) niveau d'escalade comprend à la fois les groupes
-            de contact nt-admins et managers. Le dernier (ou <quote>plus haut</quote>) niveau
+            Le premier (ou <emphasis>plus bas</emphasis>) niveau d'escalade comprend à la fois les groupes
+            de contact nt-admins et managers. Le dernier (ou <emphasis>plus haut</emphasis>) niveau
             d'escalade comprend les groupes de contact nt-admins, managers, et
             everyone. Remarquez que le groupe de contact nt-admins fait partie des deux
             définitions d'escalade. C'est pour qu'il continue à être prévenu s'il reste
             des problèmes après que les deux premières notifications de service aient
             été envoyées. Le groupe de contact managers apparaît d'abord dans la
-            définition d'escalade la <quote>plus basse</quote> - il reçoit sa première notification
+            définition d'escalade la <emphasis>plus basse</emphasis> - il reçoit sa première notification
             lorsque la troisième notification de problème est envoyée. Nous voulons que
             le groupe managers continue de recevoir des notifications si le problème
-            persiste après cinq notifications, il fait donc partie de la <quote>plus haute</quote>
+            persiste après cinq notifications, il fait donc partie de la <emphasis>plus haute</emphasis>
             définition d'escalade.
         </para>
     </section>
@@ -364,12 +364,12 @@ linkend="configuringnagios-configobject"/>
         
         <para>Dans des circonstances normales, les escalades peuvent servir aux heures où
             une notification pourrait normalement être envoyée pour le service. Cette
-            <quote>fenêtre d'heures de notification</quote> est déterminée par le paramètre
+            <emphasis>fenêtre d'heures de notification</emphasis> est déterminée par le paramètre
             <varname>notification_period</varname> de la définition de service.Notez que
             la notification est toujours soumise aux restrictions d'heure normales
             imposées par le paramètre <varname>notification_period</varname> de l'escalade de service, et
             donc que la période de temps que vous spécifiez dans l'escalade doit être
-            comprise dans une plus grande <quote>fenêtre d'heures de notification</quote>.
+            comprise dans une plus grande <emphasis>fenêtre d'heures de notification</emphasis>.
         </para>
         
         <para>Vous pouvez optionnellement restreindre l'escalade pour qu'elle ne soit
@@ -382,7 +382,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod"/>
             utiliser l'escalade, l'escalade sera prise en compte uniquement pendant ces
             heures. Si vous ne spécifiez aucun paramètre
             <varname>escalation_period</varname>, l'escalade peut être prise en compte à
-            n'importe quelle heure pendant la <quote>fenêtre d'heures de notification</quote> pour le
+            n'importe quelle heure pendant la <emphasis>fenêtre d'heures de notification</emphasis> pour le
             service.
         </para>
         
@@ -392,7 +392,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod"/>
                 </varname>
                  dans une défintion d'hôte ou de service, donc le timeperiod que
                 vous spécifiez dans une définition d'escalade correspond à une sorte de
-                sous-ensemble de ce qu'on appelerait <quote>la fenêtre de temps de notification</quote>.
+                sous-ensemble de ce qu'on appelerait <emphasis>la fenêtre de temps de notification</emphasis>.
             </para>
         </note>
     </section>

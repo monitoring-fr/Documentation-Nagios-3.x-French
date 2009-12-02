@@ -16,7 +16,7 @@
             devriez-vous pas avoir de problème de compréhension…
         </para>
         <para>Premièrement, nous devons définri ce que nous entendons par
-            <quote>cluster</quote>. La façon la plus simple pour comprendre est de
+            <emphasis>cluster</emphasis>. La façon la plus simple pour comprendre est de
             prendere un exemple. Disons que votre organisation possède cinq serveurs qui
             fournissent la redondance des services &protocol-dns;. Si l'un d'eux tombe,
             ce n'est pas un gros problème parce que les serveurs restants vont continuer
@@ -111,14 +111,14 @@ url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug
             redondance de services sur votre réseau. Premièrement, vous avez besoin de
             superviser chacun des trois serveurs &protocol-dns; individuellement avant
             de pouvoir les superviser en tant que cluster. Je pars du principe que vous
-            avez trois services séparés (tous appelés <quote>Service
+            avez trois services séparés (tous appelés <emphasis>Service
                 &protocol-dns;
-            </quote>
+            </emphasis>
             )associés à vos hôtes &protocol-dns; (appelés
-            <quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>).
+            <emphasis>host1</emphasis>, <emphasis>host2</emphasis> et <emphasis>host3</emphasis>).
         </para>
         <para>Pour pouvoir superviser ces services en tant que cluster, vous devez créer
-            un nouveau service <quote>cluster</quote>. Cependant, avant de faire ça,
+            un nouveau service <emphasis>cluster</emphasis>. Cependant, avant de faire ça,
             assurez-vous d'avoir une commande de contrôle de cluster configurée. Partons
             du principe que vous avez la définition de commande check_cluster suivante:
         </para>
@@ -128,7 +128,7 @@ url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug
                     }
         </programlisting>
         <para>
-            Maintenant, vous avez besoin de créer le service <quote>cluster</quote> et
+            Maintenant, vous avez besoin de créer le service <emphasis>cluster</emphasis> et
             d'utiliser la <code>check_service_cluster</code> commande que vous venez juste de créer comme commande de contrôle de
             cluster. L'exemple suivant montre une mainère de faire ça. Cet exemple va
             générer une alerte CRITICAL si deux services au moins du cluster sont dans
@@ -175,7 +175,7 @@ linkend="advancedtopics-redundancy">redondance de vos serveurs de
             }
         </programlisting>
         <para>Disons que vous avez trois hôtes dans le cluster d'hôtes (appelés
-            <quote>host1</quote>, <quote>host2</quote> et <quote>host3</quote>). Si vous
+            <emphasis>host1</emphasis>, <emphasis>host2</emphasis> et <emphasis>host3</emphasis>). Si vous
             voulez que Nagios génère une alerte warning si l'un des hôtes du cluster
             n'est pas UP et une alerte critical si deux sont non UP, la définition de
             servie à utiliser pour contrôler le cluster d'hôtes pourrait ressembler à

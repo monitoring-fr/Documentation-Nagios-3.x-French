@@ -108,7 +108,7 @@
             Nagios exécute des contrôles à la volée parce que il a besoin de connaitre
             l'état dans lequel se trouve l'hôte ou le service à un moment précis. En
             utilisant le contrôle mémorisé, vous autorisez à Nagios de considérer que
-            l'état du contrôle antérieur est <quote>relativement correcte</quote> pour
+            l'état du contrôle antérieur est <emphasis>relativement correcte</emphasis> pour
             déterminer l'état actuel de vos hôtes. Pour cela il n'a pas besoin de
             contrôler via plugin et de vraiment revérifier le statut de cet hôte ou de
             service.
@@ -123,7 +123,7 @@
         <simpara>
             Le nombre de contrôle mémorisé que Nagios peut utiliser comparer au nombre
             de contrôle à la demande qu'il doit vraiment exécuter peut être interprété
-            sur forme de <quote>taux</quote>. En augmentant la valeur du cycle de mise
+            sur forme de <emphasis>taux</emphasis>. En augmentant la valeur du cycle de mise
             en cache des contrôles à l'équivalence de celle du check_interval d'un hôte,
             nous pouvons théoriquement en conclure que le taux sera de 100%. Dans ce
             cas, tous les contrôles à la demande utiliseront les résultats des contrôles
