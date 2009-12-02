@@ -24,7 +24,7 @@
         </para>
         
         <para>
-             Notez que <quote>ePN</quote>, tel qu'il est utilisé dans cette
+             Notez que <emphasis>ePN</emphasis>, tel qu'il est utilisé dans cette
             documentation, fait référence à Perl intégré à Nagios [embedded Perl
             Nagios], ou si vous préférez, Nagios compilé avec un interpréteur Perl
             intégré.
@@ -180,16 +180,16 @@ url='http://perl.apache.org/docs/1.0/guide/'>recommande en
                         </para>
                         <programlisting><![CDATA[remplacez ceci        par 
 
-	my $x = 1 ;          my $x = 1 ;
-	sub a { .. Process $x … }  $a_cr = sub { … Process $x … } ;
-	.               .
-	.               .
-	a ;              &$a_cr ;
-	$x = 2            $x = 2 ;
-	a ;              &$a_cr ;
+    my $x = 1 ;          my $x = 1 ;
+    sub a { .. Process $x … }  $a_cr = sub { … Process $x … } ;
+    .               .
+    .               .
+    a ;              &$a_cr ;
+    $x = 2            $x = 2 ;
+    a ;              &$a_cr ;
 
-	# les encapsulations anonymes reprennent __toujours__ la valeur lexicale courante
-	]]></programlisting>
+    # les encapsulations anonymes reprennent __toujours__ la valeur lexicale courante
+    ]]></programlisting>
                     </listitem>
                     <listitem>
                         <para>mettez la variable globale et la fonction qui l'utilise dans leur propre
@@ -213,7 +213,7 @@ url='http://perl.apache.org/docs/1.0/guide/'>recommande en
                 <para>Sachez où trouvez plus d'informations.</para>
                 
                 <para>Vous pouvez obtenir des informations utiles des indices habituels (les
-                    livres O'Reilly, plus <quote>Object Oriented Perl</quote> de Damien Conways)
+                    livres O'Reilly, plus <emphasis>Object Oriented Perl</emphasis> de Damien Conways)
                     mais pour les bonnes réponses dans ce contexte commencez par le guide du
                     mod_perl de Stas Bekman sur <ulink
 url="http://perl.apache.org/guide/">http://perl.apache.org/guide/</ulink>.
@@ -225,14 +225,14 @@ url="http://perl.apache.org/guide/">http://perl.apache.org/guide/</ulink>.
                 </para>
                 
                 <para>
-                    La page <quote>man</quote> perlembed est essentielle pour le contexte et les
+                    La page <emphasis>man</emphasis> perlembed est essentielle pour le contexte et les
                     encouragements.
                 </para>
                 
                 <para>Si l'on considère que Lincoln Stein et Doug MacEachern savent deux-trois
-                    choses sur Perl et l'intégration de Perl, leur livre <quote>Writing Apache
+                    choses sur Perl et l'intégration de Perl, leur livre <emphasis>Writing Apache
                         Modules with Perl and C
-                    </quote>
+                    </emphasis>
                     vaut certainement d'être lu. 
                 </para>
             </listitem>
@@ -267,9 +267,9 @@ url="http://perl.apache.org/guide/">http://perl.apache.org/guide/</ulink>.
                     </listitem>
                     <listitem>
                         <para>
-                            utilisant le module <quote>Deparse</quote> sur votre plugin pour voir
+                            utilisant le module <emphasis>Deparse</emphasis> sur votre plugin pour voir
                             comment l'analyseur syntaxique l'a optimisé, et ce que l'interpréteur reçoit
-                            réellement (voir <quote>Constants in Perl</quote> de Sean M. Burke, The Perl
+                            réellement (voir <emphasis>Constants in Perl</emphasis> de Sean M. Burke, The Perl
                             Journal, automne 2001) 
                         </para>
                         <screen>perl -MO::Deparse &lt;votre_programme&gt;</screen>
@@ -284,7 +284,7 @@ url="http://perl.apache.org/guide/">http://perl.apache.org/guide/</ulink>.
                 
                 <para>Comme vous pouvez le constater ci-dessous p1.pl réécrit votre plugin comme
                     une fonction appelé 'hndlr' dans le paquetage nommé
-                    <quote>Embed::&lt;quelque-chose-ayant-rapport-avec-le-nom-de-fichier-de-votre-plugin&gt;</quote>.
+                    <emphasis>Embed::&lt;quelque-chose-ayant-rapport-avec-le-nom-de-fichier-de-votre-plugin&gt;</emphasis>.
                 </para>
                 
                 <para>Votre plugin attend peut-être des paramètres de la ligne de commande dans
@@ -292,7 +292,7 @@ url="http://perl.apache.org/guide/">http://perl.apache.org/guide/</ulink>.
                 </para>
                 
                 <para>
-                    Ceci à son tour est évalué et si <quote>eval</quote> remonte une erreur
+                    Ceci à son tour est évalué et si <emphasis>eval</emphasis> remonte une erreur
                     (qu'elle soit syntaxique ou d'exécution), le plugin est jeté dehors. 
                 </para>
                 
@@ -337,7 +337,7 @@ url="http://perl.apache.org/guide/">http://perl.apache.org/guide/</ulink>.
             
             <listitem>
                 <para>
-                    Ne pas utiliser <quote>use diagnostics</quote> dans un plugin lancé par
+                    Ne pas utiliser <emphasis>use diagnostics</emphasis> dans un plugin lancé par
                     votre ePN de production. Je pense qu'il force la valeur de retour à CRITICAL
                     dans tous les plugins Perl.
                 </para>
