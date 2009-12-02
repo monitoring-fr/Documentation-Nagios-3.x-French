@@ -18,7 +18,7 @@
             spécifique à un type d'infrasctructure. Nagios a été prévu pour être
             flexible, ce qui sous-entend que les choses doivent être pensées de façon
             générique. Par exemple, les définitions d'hôtes dans Nagios ont une variable
-            générique <quote>address</quote> qui peut contenir n'importe quoi; de la
+            générique <emphasis>address</emphasis> qui peut contenir n'importe quoi; de la
             simple adresse IP à l'adresse complète de type FQDN; quoique soit
             d'approprié à l'utilisateur.
         </para>
@@ -105,8 +105,8 @@ linkend="advancedtopics-objectinheritance">héritées</link> des gabarits
             variables d'environnement.
         </para>
         <para>Pour éviter tous conflits de noms parmi les variables personnalisées de
-            différents types d'objets, Nagios ajoute <quote>_HOST</quote>,
-            <quote>_SERVICE</quote> ou <quote>_CONTACT</quote> au début des variables
+            différents types d'objets, Nagios ajoute <emphasis>_HOST</emphasis>,
+            <emphasis>_SERVICE</emphasis> ou <emphasis>_CONTACT</emphasis> au début des variables
             personnalisées d'hôtes, de services et de contacts des macros et des
             variables d'environnement. Le tableau ci-dessous montre la correspondance
             entre les variables personnalisées et leur macro ou variable d'environnement

@@ -337,7 +337,7 @@ linkend="securityandperformancetuning-faststartup">ici</link>.
             </variablelist>
             
             <para>
-                C'est un répertoire que Nagios peut utiliser comme espace <quote>scratch</quote> pour
+                C'est un répertoire que Nagios peut utiliser comme espace <emphasis>scratch</emphasis> pour
                 créer des fichiers temporaires utilisés durant le processus de
                 supervision. Vous pouvez exécuter <command>tmpwatch</command>, ou un outil
                 similaire sur ce réperoire pour effacer les fichiers plus vieux de 24
@@ -568,9 +568,9 @@ linkend="configuringnagios-configmain-use_retained_program_state" />
             
             <para>Cette option détermine, si Nagios effectuera les contrôles des services
                 lorsqu'il (re)démarrera. Si cette option est désactivée, Nagios
-                n'effectuera aucun contrôle de service, et restera dans un mode <quote>de
+                n'effectuera aucun contrôle de service, et restera dans un mode <emphasis>de
                     sommeil
-                </quote>
+                </emphasis>
                 (il peut quand même recevoir les <link
 linkend="thebasics-passivechecks">contrôles passifs</link> à moins qu'ils ne
                 soient désactivés). Cette option est surtout utile pour définir des serveurs
@@ -1094,9 +1094,9 @@ linkend="advancedtopics-extcommands">ici</link>.
             </variablelist>
             
             <para>
-                Si vous spécifiez un nombre suivi d'un <quote>s</quote> (par exemple 30s), c'est le
+                Si vous spécifiez un nombre suivi d'un <emphasis>s</emphasis> (par exemple 30s), c'est le
                 nombre de secondes qui séparera deux contrôles de commandes externes. Si
-                vous ne mettez pas de <quote>s</quote>, c''est le nombre d'<quote>unités de temps</quote>
+                vous ne mettez pas de <emphasis>s</emphasis>, c''est le nombre d'<emphasis>unités de temps</emphasis>
                 à laisser entre deux contrôles de commandes externes. Si vous n'avez pas
                 modifié la valeur de la<xref
 linkend="configuringnagios-configmain-interval_length" />
@@ -1510,7 +1510,7 @@ linkend="configuringnagios-configmain-retain_state_information" />
             <para>Ces options détermine quels sont les attributs d'hôtes et services qui ne
                 seront PAS conservés entre les redémarrages du programme. Les valeurs pour
                 ces options sont au niveau du bit (bitwise) ET les valeurs spécifiées par
-                les définitions de <quote>MODATTR_</quote> dans le fichier du code source
+                les définitions de <emphasis>MODATTR_</emphasis> dans le fichier du code source
                 <filename>include/common.h</filename>. Par défaut, tous les attributs
                 d'hôtes et services sont conservés.
             </para>
@@ -1573,7 +1573,7 @@ linkend="configuringnagios-configmain-retain_state_information" />
                 hôtes et services. Par exemple, les contrôles d'hôtes peuvent être
                 désactivés au niveau du programme, alors que les services restent eux
                 activés. Les valeurs pour ces options sont au niveau du bit (bitwise) ET les
-                valeurs spécifiées par les définitions de <quote>MODATTR_</quote> dans le
+                valeurs spécifiées par les définitions de <emphasis>MODATTR_</emphasis> dans le
                 fichier du code source <filename>include/common.h</filename>. Par défaut,
                 tous les attributs de processus sont conservés.
             </para>
@@ -1635,7 +1635,7 @@ linkend="configuringnagios-configmain-retain_state_information" />
                 parce qu'il y a souvent des attributs séparés qui peuvent être changés pour
                 les contacts d'hôtes et de services. Les valeurs pour ces options sont au
                 niveau du bit (bitwise) ET les valeurs spécifiées par les définitions de
-                <quote>MODATTR_</quote> dans le fichier du code source
+                <emphasis>MODATTR_</emphasis> dans le fichier du code source
                 <filename>include/common.h</filename>. Par défaut, tous les attributs de
                 contact sont conservés.
             </para>
@@ -1752,7 +1752,7 @@ linkend="configuringnagios-configmain-retain_state_information" />
                 sont journalisées. Ces tentatives ont lieu lorsqu'un service retourne un
                 état différent de OK, mais que vous avez configuré Nagios pour essayer plus
                 d'une fois avant de considérer cela comme une erreur. Les services dans
-                cette situation sont dits en état <quote>soft</quote>. La journalisation des tentatives
+                cette situation sont dits en état <emphasis>soft</emphasis>. La journalisation des tentatives
                 de contrôle permet de déboguer Nagios ou de tester les <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>.
             </para>
@@ -2112,7 +2112,7 @@ linkend="advancedtopics-distributed">environnement de supervision
             
             <para>C'est le nombre de secondes pendant lequel Nagios va sommeiller avant de
                 vérifier si le prochain contrôle de service ou d'hôte en file d'attente doit
-                être exécuté. Notez que Nagios ne s'endormira qu'après avoir <quote>liquidé</quote> les
+                être exécuté. Notez que Nagios ne s'endormira qu'après avoir <emphasis>liquidé</emphasis> les
                 contrôles de services en retard dans la file.
             </para>
         </section>
@@ -2143,12 +2143,12 @@ linkend="advancedtopics-distributed">environnement de supervision
             </variablelist>
             
             <para>Cette option détermine comment les contrôles de service sont initialement
-                <quote>répartis</quote> dans la file d'attente. L'option de calcul
-                <quote>débrouillard</quote> [smart] du délai (par défaut), demande à Nagios
+                <emphasis>répartis</emphasis> dans la file d'attente. L'option de calcul
+                <emphasis>débrouillard</emphasis> [smart] du délai (par défaut), demande à Nagios
                 de calculer un intervalle moyen entre les contrôles, et d'ordonnancer les
                 contrôles initiaux de tous les services à cet intervalle, ce qui permet
                 d'éviter les pics d'utilisation du processeur. Il n'est pas recommandé
-                d'utiliser la méthode <quote>sans délai</quote> [no delay] à moins que vous ne vouliez
+                d'utiliser la méthode <emphasis>sans délai</emphasis> [no delay] à moins que vous ne vouliez
                 tester la parallélisation des contrôles de service. En effet, cette méthode
                 ordonnance tous les contrôles en même temps. L'exécution de tous les
                 contrôles en parallèle va provoquer d'importants pics d'utilisation du
@@ -2167,14 +2167,14 @@ linkend="advancedtopics-checkscheduling-service_inter_check_delay">ici</link>.
                 
                 <listitem>
                     <para>
-                        d = Utiliser un délai <quote>irréfléchi</quote> [dumb] d'1 seconde entre les contrôles de
+                        d = Utiliser un délai <emphasis>irréfléchi</emphasis> [dumb] d'1 seconde entre les contrôles de
                         service
                     </para>
                 </listitem>
                 
                 <listitem>
                     <para>
-                        s = Utiliser un calcul de délai <quote>débrouillard</quote> [smart] pour répartir
+                        s = Utiliser un calcul de délai <emphasis>débrouillard</emphasis> [smart] pour répartir
                         également les contrôles de service (par défaut)
                     </para>
                 </listitem>
@@ -2282,7 +2282,7 @@ linkend="advancedtopics-checkscheduling-service_interleaving">ici</link>.
                 
                 <listitem>
                     <para>
-                        s = Utiliser un calcul <quote>débrouillard</quote> du facteur
+                        s = Utiliser un calcul <emphasis>débrouillard</emphasis> du facteur
                         d'entrelacement (par défaut)
                     </para>
                 </listitem>
@@ -2353,8 +2353,8 @@ linkend="advancedtopics-checkscheduling-max_concurrent_checks">ici</link>.
             </variablelist>
             
             <para>Cette option vous permet de contrôler la fréquence en secondes des
-                événements de <quote>consolidation</quote>. Les événements de
-                <quote>consolidation</quote> traitent les résultats des contrôles d'hôtes et
+                événements de <emphasis>consolidation</emphasis>. Les événements de
+                <emphasis>consolidation</emphasis> traitent les résultats des contrôles d'hôtes et
                 de services dont l'exécution est terminée. Ces événements constituent le
                 cœur de la logique de supervision de Nagios.
             </para>
@@ -2504,12 +2504,12 @@ linkend="configuringnagios-configmain-check_result_path">répertoire de
             </variablelist>
             
             <para>Cette option détermine comment les contrôles d'hôtes (pour les hôtes qui
-                sont régulièrement contrôlés) sont initialement <quote>répartis</quote> dans
-                la file d'attente. L'option de calcul <quote>débrouillard</quote> [smart] du
+                sont régulièrement contrôlés) sont initialement <emphasis>répartis</emphasis> dans
+                la file d'attente. L'option de calcul <emphasis>débrouillard</emphasis> [smart] du
                 délai (par défaut) demande à Nagios de calculer un intervalle moyen entre
                 les contrôles et d'ordonnancer les contrôles initiaux de tous les services à
                 cet intervalle, ce qui permet d'éviter les pics d'utilisation du
-                processeur. Il n'est pas recommandé d'utiliser la méthode <quote>sans délai</quote> [no
+                processeur. Il n'est pas recommandé d'utiliser la méthode <emphasis>sans délai</emphasis> [no
                 delay]. En effet, cette méthode ordonnance tous les contrôles en même
                 temps. Vous obtiendrez plus d'informations sur la façon dont cette variable
                 affecte l'ordonnancement des contrôles d'hôte <link
@@ -2526,14 +2526,14 @@ linkend="advancedtopics-checkscheduling-host_inter_check_delay">ici</link>.
                 
                 <listitem>
                     <para>
-                        d = Utiliser un délai <quote>irréfléchi</quote> [dumb] d'1 seconde entre les contrôles
+                        d = Utiliser un délai <emphasis>irréfléchi</emphasis> [dumb] d'1 seconde entre les contrôles
                         d'hôte
                     </para>
                 </listitem>
                 
                 <listitem>
                     <para>
-                        s = Utiliser un calcul de délai <quote>débrouillard</quote> [smart] pour
+                        s = Utiliser un calcul de délai <emphasis>débrouillard</emphasis> [smart] pour
                         répartir également les contrôles d'hôte (par défaut)
                     </para>
                 </listitem>
@@ -2612,16 +2612,16 @@ linkend="configuringnagios-configmain-use_retained_scheduling_info">utilisation
             </variablelist>
             
             <para>
-                C'est le nombre de secondes que contient une <quote>unité de temps</quote>
+                C'est le nombre de secondes que contient une <emphasis>unité de temps</emphasis>
                 utilisée dans la file d'ordonnancement, les re-notifications, etc. Les
-                <quote>unités de temps</quote> sont utilisées dans le fichier de
+                <emphasis>unités de temps</emphasis> sont utilisées dans le fichier de
                 configuration des objets pour déterminer la fréquence d'exécution des
                 contrôles de service, la fréquence de re-notification d'un contact, etc.
             </para>
             
             <important>
                 <para>La valeur par défaut de cette variable est 60, ce qui veut dire
-                    qu'une <quote>unité de temps</quote> de 1 dans le fichier de configuration des hôtes vaut
+                    qu'une <emphasis>unité de temps</emphasis> de 1 dans le fichier de configuration des hôtes vaut
                     60 secondes (1 minute). Je n'ai pas vraiment testé d'autres valeurs pour
                     cette variable, donc vous la modifierez à vos risques et périls !
                 </para>
@@ -2733,7 +2733,7 @@ linkend="configuringnagios-configmain-use_retained_scheduling_info">utilisation
             </variablelist>
             
             <para>
-                Cette option détermine la <quote>fenêtre</quote> de temps (en seconde) sur
+                Cette option détermine la <emphasis>fenêtre</emphasis> de temps (en seconde) sur
                 laquelle Nagios va porter le réordonnancement automatique. Seules les
                 vérifications d'hôtes et de services qui doivent avoir lieu durant les
                 prochaines N secondes seront affectées par le réordonnancement. Cette option
@@ -2777,7 +2777,7 @@ linkend="configuringnagios-configmain-auto_reschedule_checks" />
             </variablelist>
             
             <para>
-                [NdT] : cette option comporte deux <quote>g</quote> à <quote>aggressive</quote> depuis la version
+                [NdT] : cette option comporte deux <emphasis>g</emphasis> à <emphasis>aggressive</emphasis> depuis la version
                 2. Elle n'en comprenait qu'un auparavant.Nagios essaye d'être plus malin
                 dans la façon et le moment de contrôler l'état des hôtes. En général,
                 désactiver cette option permet à Nagios d'être un peu plus malin et de
@@ -2824,7 +2824,7 @@ linkend="configuringnagios-configmain-auto_reschedule_checks" />
             </variablelist>
             
             <para>Cette option détermine si Nagios peut traduire ou non l'état
-                DOWN/UNREACHABLE d'un contrôle passif en l'état <quote>correct</quote> en
+                DOWN/UNREACHABLE d'un contrôle passif en l'état <emphasis>correct</emphasis> en
                 considérant un point de vue d'une instance Nagios locale. Cette option peut
                 s'avérer vraiment utile lors d'installation de type distribuée. Plus
                 d'informations sur la traduction d'état passif peuvent être trouvés <link
@@ -3434,7 +3434,7 @@ linkend="advancedtopics-extcommands">commande externe</link> appropriée ou
         
         <section id="configuringnagios-configmain-soft_state_dependencies">
             <title>
-                Option de dépendance <quote>soft</quote> des services
+                Option de dépendance <emphasis>soft</emphasis> des services
             </title>
             <titleabbrev id="configuringnagios-configmain-soft_state_dependencies-tech">
                 <literal>soft_state_dependencies</literal>
@@ -3460,10 +3460,10 @@ linkend="advancedtopics-extcommands">commande externe</link> appropriée ou
             </variablelist>
             
             <para>
-                Cette option détermine si Nagios utilisera les informations d'état <quote>soft</quote>
+                Cette option détermine si Nagios utilisera les informations d'état <emphasis>soft</emphasis>
                 des services lors du contrôle des <link
 linkend="advancedtopics-dependencies">dépendances de service</link>. En
-                temps normal, Nagios n'utilise que le dernier état <quote>hard</quote> du service lors
+                temps normal, Nagios n'utilise que le dernier état <emphasis>hard</emphasis> du service lors
                 du contrôle des dépendances. Si vous voulez utiliser le tout dernier état
                 (que ce soit un <link linkend="thebasics-statetypes">état de type</link>
                 hard ou soft), activez cette option.
@@ -3780,7 +3780,7 @@ linkend="configuringnagios-configmain-ocsp_command">commande de remontée de
                     contrôle de service
                 </link>
                 que vous avez définie. Je sais que c'est un drôle
-                de nom [en anglais <quote>obsessive compulsive service processor</quote>], mais c'est
+                de nom [en anglais <emphasis>obsessive compulsive service processor</emphasis>], mais c'est
                 tout ce qui m'est venu à l'esprit. Cette option est utile dans le cadre de
                 la <link linkend="advancedtopics-distributed">supervision
                     répartie
@@ -3883,7 +3883,7 @@ linkend="configuringnagios-configmain-ochp_command">commande de remontée de
                     contrôle d'hôte
                 </link>
                 que vous avez définie. Je sais que c'est un drôle de
-                nom [en anglais <quote>obsessive compulsive host processor</quote>], mais c'est tout ce
+                nom [en anglais <emphasis>obsessive compulsive host processor</emphasis>], mais c'est tout ce
                 qui m'est venu à l'esprit. Cette option est utile dans le cadre de la <link
 linkend="advancedtopics-distributed">supervision répartie</link>. Si vous ne
                 faites pas de supervision répartie, n'activez pas cette option.
@@ -5328,7 +5328,7 @@ linkend="advancedtopics-objecttricks">ceci</link>.
             </variablelist>
             
             <para>Cette option contrôle que les données (si plusieurs) seront envoyées au
-                <quote>courtier d'événement</quote> et, ensuite, chargées dans le module du
+                <emphasis>courtier d'événement</emphasis> et, ensuite, chargées dans le module du
                 courtier d'événement. Il s'agit d'une option avancée. Dans le doute, ne
                 transportez rien (si vous n'utilisez aucun modules) ou choisissez de tout
                 transporter (si vous utilisez des modules). Les valeurs possibles sont les
