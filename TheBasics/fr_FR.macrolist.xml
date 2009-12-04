@@ -5658,7 +5658,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Le nombre d'essais de contrôle d'hôte actuel. Par exemple, si c'est la
                                 seconde fois que l'hôte est contrôlé, ce sera le nombre 2. Le nombre actuel
-                                d'essai n'est réellement utile que pour l'écriture de gestionnaires
+                                d'essais n'est réellement utile que pour l'écriture de gestionnaires
                                 d'événements d'hôte pour des états <emphasis>SOFT</emphasis>, qui agiraient de
                                 manière spécifique selon le nombre de tentatives.
                             </para>
@@ -5852,7 +5852,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Une liste séparée par des virgules du nom court de tous les groupes d'hôtes
-                                auquel appartient cet hôte.
+                                auxquels appartient cet hôte.
                             </para>
                         </entry>
                     </row>
@@ -6351,7 +6351,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         <entry>
                             <para>Le nombre actuel d'essais de contrôle du service. Par exemple, si c'est la
                                 seconde fois que le service est contrôlé, ce sera le nombre deux. Le nombre
-                                actuel d'essai n'est réellement utile que pour l'écriture de gestionnaires
+                                actuel d'essais n'est réellement utile que pour l'écriture de gestionnaires
                                 d'événements d'hôte pour des états <emphasis>SOFT</emphasis>, qui agiraient de
                                 manière spécifique selon le nombre de tentatives.
                             </para>
@@ -6557,7 +6557,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Une liste séparée par des virgules du nom court de tous les groupes de
-                                services auquel appartient ce service.
+                                services auxquels appartient ce service.
                             </para>
                         </entry>
                     </row>
@@ -7343,7 +7343,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <para>Une chaîne contenant le nom de l'utilisateur qui a écrit la notification. Si
                                 la macro &macro-notificationtype; est égale à <emphasis>DOWNTIMESTART</emphasis> ou
                                 <emphasis>DOWNTIMEEND</emphasis>, ce sera le nom de l'utilisateur qui a programmé
-                                la maintenance de l' hôte ou du service. Si la macro &macro-notificationtype; est
+                                la maintenance de l'hôte ou du service. Si la macro &macro-notificationtype; est
                                 égale à <emphasis>ACKNOWLEDGEMENT</emphasis>, ce sera le nom de l'utilisateur qui
                                 a acquitté le problème de'hôte ou de service. Si la macro &macro-notificationtype;
                                 est égale à <emphasis>CUSTOM</emphasis>, ce sera le nom de l'utilisateur qui a
@@ -7388,7 +7388,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             <para>Une chaîne contenant le commentaire entré par l'auteur de la
                                 notification. Si la macro &macro-notificationtype; est égale à
                                 <emphasis>DOWNTIMESTART</emphasis> ou <emphasis>DOWNTIMEEND</emphasis>, ce sera le
-                                commentaire de l'utilisateur qui a programmé la maintenance de l' hôte ou du
+                                commentaire de l'utilisateur qui a programmé la maintenance de l'hôte ou du
                                 service. Si la macro &macro-notificationtype; est égale à
                                 <emphasis>ACKNOWLEDGEMENT</emphasis>, ce sera le commentaire de l'utilisateur qui
                                 a acquitté le problème de'hôte ou de service. Si la macro &macro-notificationtype;
@@ -7409,7 +7409,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                                 augmente par incrément de un (1) à chaque fois qu'une nouvelle notification
                                 est envoyée pour l'hôte (excepté pour les acquittements). Le numéro de
                                 notification est remis à zéro quand l'hôte revient à l'état ok (après que la
-                                notification de retour à la normale soit envoyée).Les acquittements
+                                notification de retour à la normale soit envoyée). Les acquittements
                                 n'incrémentent pas le numéro de notification, pas plus que les notifications
                                 qui ont à voir avec les oscillations et la maintenance planifiée.
                             </para>
@@ -7424,12 +7424,12 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Un numéro unique qui identifie une notification d'hôte. Les numéros
-                                identifiants de notifications sont unique à travers tout le système de
-                                notrifications pour les hôtes et services. Vous pouvez donc utiliser ce
+                                identifiants de notifications sont uniques à travers tout le système de
+                                notifications pour les hôtes et services. Vous pouvez donc utiliser ce
                                 numéro comme clé primaire dans une base de données de notifications. Ces
                                 numéros devraient rester uniques même après redémarrage de Nagios tant que
                                 vous activez l'option de rétention d'états. Le numéro identifiant de
-                                notification est incrémenté par pas de un (1) à chque fois qu'une nouvelle
+                                notification est incrémenté par pas de un (1) à chaque fois qu'une nouvelle
                                 notification pour l'hôte est envoyée, sans tenir compte du nombre de
                                 contacts notifiés.
                             </para>
@@ -7447,7 +7447,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                                 augmente par incrément de un (1) à chaque fois qu'une nouvelle notification
                                 est envoyée pour le service (excepté pour les acquittements). Le numéro de
                                 notification est remis à zéro quand le service revient à l'état ok (après
-                                que la notification de retour à la normale soit envoyée).Les acquittements
+                                que la notification de retour à la normale soit envoyée). Les acquittements
                                 n'incrémentent pas le numéro de notification, pas plus que les notifications
                                 qui ont à voir avec les oscillations et la maintenance planifiée.
                             </para>
@@ -7462,12 +7462,12 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                         </entry>
                         <entry>
                             <para>Un numéro unique qui identifie une notification des service. Les numéros
-                                identifiants de notifications sont unique à travers tout le système de
-                                notrifications pour les hôtes et services. Vous pouvez donc utiliser ce
+                                identifiants de notifications sont uniques à travers tout le système de
+                                notifications pour les hôtes et services. Vous pouvez donc utiliser ce
                                 numéro comme clé primaire dans une base de données de notifications. Ces
                                 numéros devraient rester uniques même après redémarrage de Nagios tant que
                                 vous activez l'option de rétention d'états. Le numéro identifiant de
-                                notification est incrémenté par pas de un (1) à chque fois qu'une nouvelle
+                                notification est incrémenté par pas de un (1) à chaque fois qu'une nouvelle
                                 notification pour l'hôte est envoyée, sans tenir compte du nombre de
                                 contacts notifiés.
                             </para>
@@ -7607,7 +7607,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                                     </para>
                                 </listitem>
                             </orderedlist>
-                            <para>Si une prochaine période de temps valide ne peut être trouvé dans la période
+                            <para>Si une prochaine période de temps valide ne peut être trouvée dans la période
                                 de temps précisée, la valeur d ela macro est égale à <emphasis>0</emphasis>.
                             </para>
                         </entry>
@@ -7659,7 +7659,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
                             </para>
                         </entry>
                         <entry>
-                            <para>Emplacement du fichier de commentaire.</para>
+                            <para>Emplacement du fichier de commentaires.</para>
                         </entry>
                     </row>
                     <row>
@@ -7972,7 +7972,7 @@ linkend="thebasics-macrolist-totalhostsunreachable">&macro-totalhostsunreachable
         <para>
             <anchor id="thebasics-macrolist-note9"/>
              9 Ces macros sont seulement
-            valables dans le cas de macros à la demande- par ex. Vous devez fournir un
+            valables dans le cas de macros à la demande. Vous devez fournir un
             argument supplémentaire pour les utiliser. Ces macros ne sont pas
             disponibles comme variables d'environnement.
         </para>
