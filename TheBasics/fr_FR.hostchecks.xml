@@ -49,9 +49,9 @@ linkend="advancedtopics-dependencychecks">contrôles en prévision des
             </listitem>
         </itemizedlist>
         <para>Les contrôles d'hôtes planifiés régulièrement sont optionels. Si vous avez
-            positionnez l'option check_interva à zérp (0), Nagios ne fera pas les
-            contrôles d'hôtes de façon régulière. Il fera toutefois des contrôles des
-            hôtes à la demande pour les besoins de la supervision.
+            positionnez l'option <varname>check_interval</varname> à zéro (0), 
+            Nagios ne fera pas les contrôles d'hôtes de façon régulière. Il fera toutefois 
+            des contrôles des hôtes à la demande pour les besoins de la supervision.
         </para>
         <para>Les contrôles à la demande sont effectués lorsqu'un service associé à l'hôte
             change d'état parce que Nagios a besoin de savoir si l'hôte a également
@@ -61,12 +61,12 @@ linkend="advancedtopics-dependencychecks">contrôles en prévision des
             passer d'un état CRITICAL à un état OK, cela peut indiquer que l'hôte est
             redevenu à la normale et fonctionne suite à un redémarrage.
         </para>
-        <para>Les contrôles à la demande des hôtes sont auss effectués dans le cadre de la
+        <para>Les contrôles à la demande des hôtes sont aussi effectués dans le cadre de la
             logique <link linkend="thebasics-networkreachability">d'accessibilité de
-                l'hôte via le réseau
+                l'hôte via le réseau. 
             </link>
-            .Nagios est conçu pour détecter les coupures
-            réseau aussi rapidement possible, en distinguant un état DOWN d'un état
+            Nagios est conçu pour détecter les coupures
+            réseau aussi rapidement que possible, en distinguant un état DOWN d'un état
             UNREACHABLE pour l'hôte. Ce sont deux états très différents et qui peuvent
             aider rapidement un adminuistrateur à localiser la l'origine de la coupure
             réseau.
@@ -75,7 +75,7 @@ linkend="advancedtopics-dependencychecks">contrôles en prévision des
             logique <link linkend="advancedtopics-dependencychecks">des contrôles en
                 prévision des dépendances des hôtes
             </link>
-            .Ces contrôles permettent
+            . Ces contrôles permettent
             d'assurer que la logique de dépendance soit la plus précise que possible.
         </para>
     </section>
@@ -84,8 +84,8 @@ linkend="advancedtopics-dependencychecks">contrôles en prévision des
         <para>Les performances des contrôles d'hôte à la demande peuvent être améliorées
             en implémenant l'utilisation des contrôles mis en cache, qui permettent à
             Nagios de ne pas exécuter un contrôle d'hôte s'il détermine qu'il a un
-            résultat relativement récent à la place pour ce contrôle. Plus d'information
-            sur les contrôles mis en cache peuvent être trouvés <link
+            résultat relativement récent à la place pour ce contrôle. Plus d'informations
+            sur les contrôles mis en cache peuvent être trouvées <link
 linkend="advancedtopics-cachedchecks">ici</link>.
         </para>
     </section>
@@ -107,17 +107,17 @@ linkend="advancedtopics-dependencies">ici</link>.
         <para>Les contrôles d'hôtes planifiés sont lancés en parallèle. Quand Nagios a
             besoin de procéder un un contrôle d'hôte planifié, il lancera le contrôle de
             l'hôte et reviendra à son travail initial (contrôle des services,
-            etc…). Le contrôle de l'hôte est lancé dans un processus enfant qui a été
+            etc.). Le contrôle de l'hôte est lancé dans un processus enfant qui a été
             dupliqué à partir du démon principal de Nagios. Quand le contrôle d'hôte est
             terminé, le processus enfant informe le processus Nagios principal (son
             parent) du résultat. Le processus principal de Nagios gère le résultat qu'il
-            a reçu et prends les mesures appropriées (lancement des gestionnaires
+            a reçu et prend les mesures appropriées (lancement des gestionnaires
             d'événements, envois des notifications, etc.).
         </para>
         <para>Les contrôles à la demande sont également exécutés en parallèle si
             nécessaire. Comme mentionné précédement, Nagios peut renoncer à l'exécution
             d'un contrôle à la demande s'il peut utiliser un résultat relativement
-            recent pour ce contrôle d'hôte.
+            récent pour ce contrôle d'hôte.
         </para>
         <para>Quand Nagios traite les résultats des contrôles d'hôtes planifiés ou à la
             demande, il peut lancer des contrôles (secondaires) sur d'autres hôtes. Ces
@@ -142,9 +142,9 @@ linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
                 </link>
                 (pour voir s'ils sont DOWN ou UNREACHABLE), il va devoir
                 lancer une série de contrôles sur tous ses hôtes parents immédiats. Juste
-                pour rappel, ces contrôles sont exécutés en serie, plutôt qu'en parallèle,
+                pour rappel, ces contrôles sont exécutés en série, plutôt qu'en parallèle,
                 du coup, cela peut causer un grosse baisse de performance. Pour cette
-                raison, Je vous recommande de toujours utiliser une valeur supérieure à 1
+                raison, je vous recommande de toujours utiliser une valeur supérieure à 1
                 pour le paramètre <varname>max_check_attempts</varname> dans vos définitions d'hôtes.
             </para>
         </note>
@@ -152,7 +152,7 @@ linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
     <section>
         <title>Les états d'un hôte</title>
         <para>Les hôtes qui sont contrôlés peuvent être dans un des trois états
-            differents:
+            différents:
         </para>
         <itemizedlist>
             <listitem>
@@ -172,7 +172,7 @@ linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
             Les contrôles d'hôte sont réalisés par les <link
 linkend="thebasics-plugins">plugins</link>, qui retournent un état OK,
             WARNING, UNKNOWN, ou CRITICAL. Comment Nagios traduit-il le code de retour
-            des plugins en états d'hôte UP, DOWN, ou UNREACHABLE? Voyons cela..
+            des plugins en états d'hôte UP, DOWN, ou UNREACHABLE? Voyons cela:
         </para>
         <para>Le tableau ci-dessous montre à quoi correspondent les codes de retour des
             plugin en état d'hôte préalables. Certains post-traitement (qui sont décrits
@@ -283,14 +283,14 @@ linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressi
                 </tbody>
             </tgroup>
         </informaltable>
-        <para>Plus d'inforamtions sur comment Nagios fait la différence entre les états
+        <para>Plus d'informations sur comment Nagios fait la différence entre les états
             DOWN et UNREACHABLE peuvent être trouvées <link
 linkend="thebasics-networkreachability">ici</link>.
         </para>
     </section>
     <section>
         <title>Changements d'états d'un hôte</title>
-        <para>Comme vous probablement conscients, les hôtes ne restent pas toujours dans
+        <para>Comme vous êtes probablement conscients, les hôtes ne restent pas toujours dans
             un état. Des choses arrivent, des patches sont appliqués, et les serveurs
             ont besoins d'être redémarrés. Quand Nagios contrôle les statuts des hôtes,
             il sera capable de détecter quand un hôte a changé entre les états UP, DOWN,
@@ -299,7 +299,7 @@ linkend="thebasics-networkreachability">ici</link>.
                 d'états
             </link>
             (HARD or SOFT), qui peuvent déclencher les <link
-linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>et
+linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link> et
             l'envoi de <link
 linkend="thebasics-notifications">notifications</link>. Détecter et traiter
             les changements d'états, c'est le boulot de Nagios.
