@@ -10,7 +10,7 @@
     <title>Les contrôles d'hôtes</title>
     <section>
         <title>Introduction</title>
-        <para>Le fonctionnement de base des contrôles d'hôte est décrit ci-après…</para>
+        <para>Le fonctionnement de base des contrôles d'hôtes est décrit ci-après…</para>
     </section>
     <section>
         <title>Quand sont effectués les contrôles d'hôtes ?</title>
@@ -81,7 +81,7 @@ linkend="advancedtopics-dependencychecks">contrôles en prévision des
     </section>
     <section>
         <title>Les contrôles d'hôtes mis en cache</title>
-        <para>Les performances des contrôles d'hôte à la demande peuvent être améliorées
+        <para>Les performances des contrôles d'hôtes à la demande peuvent être améliorées
             en implémenant l'utilisation des contrôles mis en cache, qui permettent à
             Nagios de ne pas exécuter un contrôle d'hôte s'il détermine qu'il a un
             résultat relativement récent à la place pour ce contrôle. Plus d'informations
@@ -169,7 +169,7 @@ linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
     <section>
         <title>Détermmination de l'état d'un hôte</title>
         <para>
-            Les contrôles d'hôte sont réalisés par les <link
+            Les contrôles d'hôtes sont réalisés par les <link
 linkend="thebasics-plugins">plugins</link>, qui retournent un état OK,
             WARNING, UNKNOWN, ou CRITICAL. Comment Nagios traduit-il le code de retour
             des plugins en états d'hôte UP, DOWN, ou UNREACHABLE? Voyons cela:
