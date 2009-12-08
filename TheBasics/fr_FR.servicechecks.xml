@@ -10,7 +10,7 @@
     <title>Les contrôles de services</title>
     <section>
         <title>Introduction</title>
-        <para>Le fonctionnement basique des contrôles de service est décrit ici…</para>
+        <para>Le fonctionnement basique des contrôles de services est décrit ici…</para>
     </section>
     <section>
         <title>Quand les contrôles de services sont-ils réalisés ?</title>
@@ -28,7 +28,7 @@ linkend="configuringnagios-objectdefinitions-service">définitions de
             </listitem>
             <listitem>
                 <para>
-                    A la demande si besoin est pour <link
+                    À la demande si besoin est pour les <link
 linkend="advancedtopics-dependencychecks">contrôles en prévision des
                         dépendances des services
                     </link>
@@ -40,25 +40,25 @@ linkend="advancedtopics-dependencychecks">contrôles en prévision des
             <link linkend="advancedtopics-dependencychecks">contrôles en prévision des
                 dépendances des services
             </link>
-            .Ces contrôles permettent de garantir que la
+            . Ces contrôles permettent de garantir que la
             logique de dépendance soit la plus précise possible. Si vous n'utilisez pas
-            les dépendances de service, Nagios ne réalisear aucun contrôle de service à
-            la demande
+            les dépendances de service, Nagios ne réalisera aucun contrôle de service à
+            la demande.
         </para>
     </section>
     <section>
         <title>Les contrôles de service mis en cache</title>
-        <para>La performance des contrôles de service à la demande peut être
+        <para>La performance des contrôles de services à la demande peut être
             considérablement améliorée par la mise en œuvre de l'utilisation des
             contrôles mis en cache, ce qui permet à Nagios de renoncer à l'exécution
             d'un contrôle de service s'il détermine qu'un résultat d'un contrôle est
             relativement récent peut convenir à la place. Les contrôles mis en cache ne
             fournissent qu'une augmentation des performances si vous utilisez les <link
 linkend="configuringnagios-objectdefinitions-servicedependency">dependances
-                de service
+                de service.
             </link>
-            .Plus d'informations sur les contrôles mis en cache
-            peuvent être trouvés <link linkend="advancedtopics-cachedchecks">ici</link>.
+            Plus d'informations sur les contrôles mis en cache
+            peuvent être trouvées <link linkend="advancedtopics-cachedchecks">ici</link>.
         </para>
     </section>
     <section>
@@ -70,7 +70,7 @@ linkend="configuringnagios-objectdefinitions-servicedependency">l'exécution
             </link>
             qui empêche Nagios de vérifier les statuts
             des services dépendants en fonction de l'état d'un ou plusieurs autres
-            services. Plus d'information sur les dépendances sont disponibles <link
+            services. Plus d'informations sur les dépendances sont disponibles <link
 linkend="advancedtopics-dependencies">ici</link>.
         </para>
     </section>
@@ -114,8 +114,8 @@ linkend="advancedtopics-dependencies">ici</link>.
     <section>
         <title>Détermination de l'état du service</title>
         <para>
-            Les contrôles de service sont par des <link
-linkend="thebasics-plugins">plugins</link>, qui renvoyer un état OK,
+            Les contrôles de services sont effectués par des <link
+linkend="thebasics-plugins">plugins</link>, qui renvoyent un état OK,
             WARNING, UNKNOWN, ou CRITICAL. Ces états issus des plugins sont directement
             traduits en états de service. Par exemple, un plugin qui renvoie un état
             WARNING donnera au service un état WARNING.
@@ -126,7 +126,7 @@ linkend="thebasics-plugins">plugins</link>, qui renvoyer un état OK,
         <para>Quand Nagios contrôle le statut des services, il sera capable de détecter
             lorsqu'un service change entre les états OK, WARNING, UNKNOWN, et CRITICAL
             et prendra les mesures appropriées. De ces changements d'état en résultent
-            des <link linkend="thebasics-statetypes">types d'état</link> (HARD or SOFT),
+            des <link linkend="thebasics-statetypes">types d'état</link> (HARD ou SOFT),
             qui peuvent déclencher des <link
 linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link> et
             l'envoi de <link linkend="thebasics-notifications">notifications</link>. Les
@@ -134,11 +134,11 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link> et
             <link linkend="thebasics-hostchecks">contrôles d'hôtes</link>. Détecter et
             traiter les changements d'état, c'est le boulot de Nagios.
         </para>
-        <para>Losque les services changent d'état trop fréquement, ils sont considérés
+        <para>Lorsque les services changent d'état trop fréquement, ils sont considérés
             comme étant <emphasis>oscillants</emphasis>. Nagios peut détecter lorsque les
-            services commencent à occiller, et peut supprimer des notifications jusqu'à
-            ce que l'état du service se soit stabilisé. Plus dinformation sur la
-            détection d'occillation peut être trouvée <link
+            services commencent à osciller, et peut supprimer des notifications jusqu'à
+            ce que l'état du service se soit stabilisé. Plus d'informations sur la
+            détection d'occillation peuvent être trouvées <link
 linkend="advancedtopics-flapping">ici</link>.
         </para>
     </section>
