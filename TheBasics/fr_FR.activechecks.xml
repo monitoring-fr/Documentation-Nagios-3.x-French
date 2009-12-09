@@ -12,9 +12,9 @@
     <section>
         <title>Introduction</title>
         
-        <para>Nagios est capable de contrôler des hôtes et des services de deux façons;
+        <para>Nagios est capable de contrôler des hôtes et des services de deux façons:
             activement et passivement. Les contrôles passifs sont décrits <link
-linkend="thebasics-passivechecks">ailleurs</link>, aussi allons-nous nous
+linkend="thebasics-passivechecks">plus tard</link>, aussi nous allons nous
             concentrer ici sur les contrôles actifs. Les contrôles actifs représentent
             la méthode la plus commune pour superviser des hôtes et services. Les
             principales fonctionnalités des contrôles actifs sont les suivantes :
@@ -22,7 +22,7 @@ linkend="thebasics-passivechecks">ailleurs</link>, aussi allons-nous nous
         
         <itemizedlist>
             <listitem>
-                <para>Les contrôles actifs sont inités par le processus Nagios.</para>
+                <para>Les contrôles actifs sont initiés par le processus Nagios.</para>
             </listitem>
             
             <listitem>
@@ -52,7 +52,7 @@ linkend="thebasics-passivechecks">ailleurs</link>, aussi allons-nous nous
         </para>
         
         <para>
-            Plus d'informations sur le fonctionnement des plugins peut être trouvé <link
+            Plus d'informations sur le fonctionnement des plugins peuvent être trouvées <link
 linkend="thebasics-plugins">ici</link>.
         </para>
     </section>
@@ -70,16 +70,16 @@ linkend="thebasics-plugins">ici</link>.
             </listitem>
             
             <listitem>
-                <para>à la demand quand nécessaire</para>
+                <para>À la demande quand nécessaire</para>
             </listitem>
         </itemizedlist>
         
-        <para>Les contrôles réguliers sont faits à intervalles réguliers soit quand
-            <code>check_interval</code> ou le <code>retry_interval</code> dans vos défintions d'hôtes et de services, dépendant du <link
+        <para>Les contrôles réguliers sont faits à intervalles réguliers lorsque le 
+            <code>check_interval</code> ou le <code>retry_interval</code> sont définis dans vos définitions d'hôtes et de services, et en fonction du <link
 linkend="thebasics-statetypes">type d'état</link> dans lequel se trouve
             l'hôte ou le service. Si l'hôte ou le service se trouve dans un état HARD,
-            il sera activement contrôlé à intervalles réguliers <code>check_interval</code> option. Si il est dans un état SOFT, il sera contrôlé à intervalles égaux à
-            l'option retry_interval.
+            il sera activement contrôlé à intervalles réguliers définis par l'option <code>check_interval</code>. Si il est dans un état SOFT, il sera contrôlé à intervalles définis par 
+            l'option <code>retry_interval</code>.
         </para>
         
         <para>Les contrôles à la demande sont faits quand Nagios estime avoir besoin de
