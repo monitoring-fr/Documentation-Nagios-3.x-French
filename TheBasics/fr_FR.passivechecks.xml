@@ -25,7 +25,7 @@
         <itemizedlist>
             <listitem>
                 <para>
-                Les contrôles passifs sont lançés et exécutés par des applications externes
+                Les contrôles passifs sont lancés et exécutés par des applications externes
                 </para>
             </listitem>
             
@@ -37,7 +37,7 @@
         </itemizedlist>
         
         <para>
-        La différence majeure entre les contrôles actifs et passifs; dans le cas des
+        La différence majeure entre les contrôles actifs et passifs; Dans le cas des
         actifs, c'est &name-nagios; qui lance et exécute les contrôles alors que dans le
         cas des passifs, cet acheminement est géré par une application externe.
         </para>
@@ -51,7 +51,7 @@
         <itemizedlist>
             <listitem>
                 <para>
-                asynchrones par nature et ne peuvent donc pas être contrôlés 
+                Asynchrones par nature et ne peuvent donc pas être contrôlés 
                 activement de manière fiable (p.ex. les interruptions 
                 &protocol-snmp;, les alertes de sécurité, etc.)
                 </para>
@@ -59,7 +59,7 @@
             
             <listitem>
                 <para>
-                situés derrière un firewall, et ne peuvent donc pas être 
+                Situés derrière un firewall, et ne peuvent donc pas être 
                 contrôlés depuis l'hôte supportant &name-nagios;
                 </para>
             </listitem>
@@ -69,7 +69,7 @@
         Les exemples de services asynchrones qui se prêtent à être contrôlés
         passivement incluent les interruptions &protocol-snmp; et alertes de 
         sécurité. Vous ne savez jamais à quels moment une faille de sécurité 
-        peut être franchie FIXME FIXME , donc il n'est pas réalisable de contrôler leur 
+        peut être franchie, donc il n'est pas réalisable de contrôler leur 
         statut toutes les deux ou trois minutes.
         </para>
         
@@ -106,7 +106,7 @@
             <listitem>
                 <para>
                 Ensuite, &name-nagios; lit ce fichier et place les résultats dans une queue pour
-                les traiter plus tard. Cette même queue est utilisé pour aussi bien stocker
+                les traiter plus tard. Cette même queue est utilisée pour aussi bien stocker
                 les résultats des contrôles actifs que passifs.
                 </para>
             </listitem>
@@ -115,7 +115,7 @@
                 <para>
                 &name-nagios; va exécuter périodiquement un 
                 <link linkend="configuringnagios-configmain-check_result_reaper_frequency">événement collecteur de résultat</link>
-                et scanner FIXME la queue. Chaque résultat de services trouvé est
+                et scanner la queue. Chaque résultat de services trouvé est
                 traité de la même manière qu'il soit actif ou passif. 
                 &name-nagios; enverra les notifications, alertes de log, etc. en fonction
                 du résultat des contrôles.
@@ -229,8 +229,8 @@
         <tip>
             <para>
             Un exemple de script shell sur comment soumettre un contrôle passif de
-            service à &name-nagios; se trouve dans la documentation au 
-            <link linkend="advancedtopics-volatileservices">volatile services</link>.
+            service à &name-nagios; se trouve dans la documentation des 
+            <link linkend="advancedtopics-volatileservices">services volatiles </link>.
             </para>
         </tip>
     </section>
@@ -308,8 +308,8 @@
         Vous pouvez dire à &name-nagios; de traduire un résultat de contrôle passif
         DOWN/UNREACHABLE par votre <emphasis>propre</emphasis> état en utilisant
         la variable <xref linkend="configuringnagios-configmain-translate_passive_host_checks"
-        endterm="configuringnagios-configmain-translate_passive_host_checks-tech"/>.
-        Vous trouverez plus d'information sur son fonctionnement 
+        endterm="configuringnagios-configmain-translate_passive_host_checks-tech"/>. 
+        Vous trouverez plus d'informations sur son fonctionnement 
         <link linkend="advancedtopics-passivestatetranslation">ici</link>.
         </para>
         
@@ -348,7 +348,7 @@
         <link linkend="nagiosaddons-addons-nsca">&name-nsca;</link>.
         L'agent &name-nsca; se compose d'un démon tournant sur le serveur 
         &name-nagios; et un client qui est exécuté par les hôtes distants. 
-        Le démon écoutera toutes les connections des hôtes distants, exécutera
+        Le démon écoutera toutes les connexions des hôtes distants, exécutera
         quelques validations fondamentales sur les résultats lui étant soumis 
         et écrira ensuite les résultats des contrôles directement dans le 
         fichier de commandes externes (comme décrit au-dessus). 
