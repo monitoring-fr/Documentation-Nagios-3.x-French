@@ -27,7 +27,7 @@
         </itemizedlist>
         
         <para>
-        Il y a deux types d'états dans &name-nagios; - les états SOFT et les 
+        Il y a deux types d'états dans &name-nagios; - les états <emphasis>SOFT</emphasis> et les 
         états HARD. Ces types d'états sont un élément crucial de la logique
         de supervision, ils sont utilisés pour déterminer quand les 
         <link linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
@@ -36,7 +36,7 @@
         </para>
         
         <para>
-        Ce document décrit les différences qu'il existe entre les états SOFT et
+        Ce document décrit les différences qu'il existe entre les états <emphasis>SOFT</emphasis> et
         HARD, comment ils surviennent, et ce qu'il se passe lorsqu'ils ont lieu.
         </para>
     </section>
@@ -48,7 +48,7 @@
         Afin de prévenir des fausses alarmes dues à des problèmes transitoires,
         &name-nagios; vous permet de définir combien de fois un service ou un hôte devra
         être (re)contrôlé avant d'être considéré comme ayant un <emphasis>réel</emphasis>
-        problème. Ceci est contrôlé par l'option max_check_attempts des définitions
+        problème. Ceci est contrôlé par l'option <literal>max_check_attempts</literal> des définitions
         d'hôtes et de services. Comprendre comment les hôtes et les services sont
         (re)contrôlés afin de déterminer si un réel problème existe est important
         dans la compréhension de comment les type d'états fonctionnent.
@@ -58,7 +58,7 @@
     <section>
         <title>Les états SOFT</title>
         
-        <para>Les états SOFT surviennent dans les situations suivantes…</para>
+        <para>Les états <emphasis>SOFT</emphasis> surviennent dans les situations suivantes:</para>
         
         <itemizedlist>
             <listitem>
@@ -66,35 +66,35 @@
                 Quand le contrôle d'un service ou d'un hôte retournre un état non-OK ou
                 non-UP et quand le service n'a pas été (re)contrôlé le nombre de fois
                 spécifié par le paramètre <literal>max_check_attempts</literal> des définitions des hôtes ou
-                des services. C'est ce qu'on appelle une erreur SOFT.
+                des services. C'est ce qu'on appelle une erreur <emphasis>SOFT</emphasis>.
                 </para>
             </listitem>
             
             <listitem>
                 <para>
-                Quand un service ou un hôte se rétablit suite à un état d'erreur SOFT. Ceci
-                est considéré comme un rétablissement SOFT. 
+                Quand un service ou un hôte se rétablit suite à un état d'erreur <emphasis>SOFT</emphasis>. Ceci
+                est considéré comme un rétablissement <emphasis>SOFT</emphasis>. 
                 </para>
             </listitem>
         </itemizedlist>
         
         <para>
         Les choses suivantes se produisent lorsque des hôtes ou des services
-        rencontrent des changements d'état SOFT :
+        rencontrent des changements d'état <emphasis>SOFT</emphasis> :
         </para>
         
         <itemizedlist>
             <listitem>
-                <para>L'état SOFT est journalisé.</para>
+                <para>L'état <emphasis>SOFT</emphasis> est journalisé.</para>
             </listitem>
             
             <listitem>
-                <para>Les gestionnaires d'événements sont exécutés pour traiter l'état SOFT.</para>
+                <para>Les gestionnaires d'événements sont exécutés pour traiter l'état <emphasis>SOFT</emphasis>.</para>
             </listitem>
         </itemizedlist>
         
         <para>
-        Les états SOFT sont seulement journalisés si vous avez activé les options
+        Les états <emphasis>SOFT</emphasis> sont seulement journalisés si vous avez activé les options
         <xref linkend="configuringnagios-configmain-log_service_retries"
         endterm="configuringnagios-configmain-log_service_retries-tech"/>
         ou <xref linkend="configuringnagios-configmain-log_host_retries"
@@ -103,13 +103,13 @@
         </para>
         
         <para>
-        La seule chose importante qui se passe réellement lors d'un état SOFT, c'est
+        La seule chose importante qui se passe réellement lors d'un état <emphasis>SOFT</emphasis>, c'est
         l'exécution des gestionnaires d'événements. L'utilisation des gestionaires
         d'événements peut être particulièrement utile si vous voulez essayer et
         résoudre un problème de façon proactive avant qu'il ne se transforme en état
         HARD. Les macros <link linkend="thebasics-macrolist-hoststatetype">&macro-hoststatetype;</link> 
         ou <link linkend="thebasics-macrolist-servicestatetype">&macro-servicestatetype;</link>
-        auront alors la valeur <emphasis>SOFT</emphasis>quand les gestionnaires 
+        auront alors la valeur <emphasis>SOFT</emphasis> quand les gestionnaires 
         d'événement seront exécutés, ce qui permettra aux gestionnaires d'événements
         de savoir quand ils devront prendre des mesures correctives. 
         Plus d'informations sur les gestionnaires d'événements sont disponibles 
@@ -121,7 +121,7 @@
         <title>Les états HARD</title>
         
         <para>
-        Les états HARD surviennent pour les hôtes et les services dans les
+        Les états <emphasis>HARD</emphasis> surviennent pour les hôtes et les services dans les
         situations suivantes:
         </para>
         
@@ -129,13 +129,13 @@
             <listitem>
                 <para>
                 Quand un contrôle d'hôte retourne un état non-OK et qu'il a été (re)contrôlé
-                autant de fois que spécifié par l'option max_check_attempts de la définition
-                de l'hôte. C'est un état d'erreur HARD.
+                autant de fois que spécifié par l'option <literal>max_check_attempts</literal> de la définition
+                de l'hôte. C'est un état d'erreur <emphasis>HARD</emphasis>.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                Lorsqu'un hôte ou un service passe d'un état HARD à un autre état (ex:
+                Lorsqu'un hôte ou un service passe d'un état <emphasis>HARD</emphasis> à un autre état (ex:
                 WARNING vers CRITICAL).
                 </para>
             </listitem>
@@ -147,14 +147,14 @@
             </listitem>
             <listitem>
                 <para>
-                Lorsqu'un hôte ou un service redevient OK après un état non-OK HARD. Ceci
-                est considéré comme un retour à la normale HARD
+                Lorsqu'un hôte ou un service redevient OK après un état non-OK <emphasis>HARD</emphasis>. Ceci
+                est considéré comme un retour à la normale <emphasis>HARD</emphasis>
                 </para>
             </listitem>
             <listitem>
                 <para>
                 Lorsqu'un <link linkend="thebasics-passivechecks">contrôle passif d'un hôte</link>
-                est reçu. Les contrôles passifs des hôtes sont traités comme HARD 
+                est reçu. Les contrôles passifs des hôtes sont traités comme <emphasis>HARD</emphasis> 
                 sauf si l'option <xref linkend="configuringnagios-configmain-passive_host_checks_are_soft"
                 endterm="configuringnagios-configmain-passive_host_checks_are_soft-tech"/>
                 est activée.
@@ -164,15 +164,15 @@
         
         <para>
         Les choses suivantes se produisent lorsque des hôtes ou des services
-        rencontrent des changements d'état HARD:
+        rencontrent des changements d'état <emphasis>HARD</emphasis>:
         </para>
         
         <itemizedlist>
             <listitem>
-                <para>L'état HARD est journalisé</para>
+                <para>L'état <emphasis>HARD</emphasis> est journalisé</para>
             </listitem>
             <listitem>
-                <para>Les gestionnaires d'événements sont exécutés pour traiter l'état HARD.</para>
+                <para>Les gestionnaires d'événements sont exécutés pour traiter l'état <emphasis>HARD</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>
@@ -197,8 +197,8 @@
         
         <para>
         Voici un exemple de comment sont déterminés les types d'état, quand les
-        changement d'états surviennent, et quand les gestionnaires d'événements et
-        les notifications sont envoyées. Le tableau ci-dessous montre les contrôles
+        changement d'états surviennent, et quand les gestionnaires d'événements sont exécutés
+        et les notifications sont envoyées. Le tableau ci-dessous montre les contrôles
         consécutifs dans le temps. Le <literal>max_check_attempt</literal> du 
         service contrôlé est positionné à 3.
         </para>
@@ -423,7 +423,9 @@
                             <para>Non</para>
                         </entry>
                         <entry>
-                            <para>Le service est toujours OK.</para>
+                            <para>
+                            Le service est toujours OK.
+                            </para>
                         </entry>
                     </row>
                     
@@ -496,7 +498,9 @@
                             <para>Non</para>
                         </entry>
                         <entry>
-                            <para>Service stabilisé dans un état OK.</para>
+                            <para>
+                            Service stabilisé dans un état OK.
+                            </para>
                         </entry>
                     </row>
                 </tbody>
