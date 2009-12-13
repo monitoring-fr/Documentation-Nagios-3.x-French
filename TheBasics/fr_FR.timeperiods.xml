@@ -25,7 +25,7 @@ fileref="images/objects-timeperiods.png" format="PNG"/>
                 </imageobject>
             </inlinemediaobject>
              Les paramètres concernant les <link
-linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
+linkend="configuringnagios-objectdefinitions-timeperiod">périodes de temps</link>
             vous permettent de maîtriser le fonctionnement logique des différents
             aspects de la supervision et de la notification. Par exemple, vous pouvez
             restreindre:
@@ -55,7 +55,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
         
         <para>
             Les <link linkend="configuringnagios-objectdefinitions-timeperiod">définitions de périodes de temps</link>
-            peuvent contenir différent types de paramètres, incluant les jours de la
+            peuvent contenir différents types de paramètres, incluant les jours de la
             semaine, certains jours dans le mois, et des dates précises du
             calendrier. Les différents types de paramètres ont des priorités différentes
             et peuvent passer outre les autres définitions de périodes. L'ordre des
@@ -102,7 +102,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
         <para>Les définitions des hôtes et des services ont un paramètre optionnel
             <varname>check_period</varname> qui vous permet de spécifier la période qui
             sera utilisée pour restreindre les moments où les contrôles actifs des hôtes
-            ou des services devront être effectués .
+            ou des services devront être effectués.
         </para>
         
         <para>
@@ -112,7 +112,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
             essentiellement d'une période de surveillance de type 24x7.
         </para>
         
-        <para>Spécifier une plage horaires dans le paramètre
+        <para>Spécifier une plage horaire dans le paramètre
             <varname>check_period</varname> vous permet de restreindre Nagios à
             planifier les contrôles actifs réguliers des hôtes ou des services. Quand
             Nagios va tenter de replanifier un contrôle d'hôte ou de service, il va
@@ -180,8 +180,8 @@ linkend="configuringnagios-objectdefinitions-timeperiod">Périodes</link>
             <varname>host_notification_period</varname> dans <link
 linkend="configuringnagios-objectdefinitions-contact">la définition d'un
                 contact
-            </link>
-            ,vous serez en mesure de définir une plage horaire <emphasis>sur
+            </link>, 
+            vous serez en mesure de définir une plage horaire <emphasis>sur
                 mesure
             </emphasis>
             pour chaque contact. Les contacts recevront les notifications pour
