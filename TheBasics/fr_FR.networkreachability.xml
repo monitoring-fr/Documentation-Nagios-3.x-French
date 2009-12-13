@@ -13,11 +13,11 @@
     <section>
         <title>Introduction</title>
         
-        <para>Sivous avez déjà travaillé dans une équipe de support technique, vous avez
+        <para>Si vous avez déjà travaillé dans une équipe de support technique, vous avez
             alors sûrement entendu les utilisateurs vous dire que <emphasis>Internet est
-                coupé
+                coupé.
             </emphasis>
-            .En tant que technicien, vous pouvez être quasiment sûr que ce
+            En tant que technicien, vous pouvez être quasiment sûr que ce
             n'est pas quelqu'un qui a débranché le câble Internet. Il y a certainement
             quelque chose qui ne fonctionne pas entre le siège de l'utilisateur et
             l'Internet.
@@ -25,15 +25,15 @@
         
         <para>Partant du principe que c'est un problème technique, vous commencez à
             chercher le problème. C'est peut-être l'ordinateur de l'utilisateur qui est
-            éteint, son câble réseaux qui est débranché, ou peut-être que c'est un des
-            routeurs de cœur de réseau de l'entreprise qu ivient de tomber. Quelque
+            éteint, son câble réseau qui est débranché, ou peut-être que c'est un des
+            routeurs de cœur de réseau de l'entreprise qui vient de tomber. Quelque
             soit le problème, une chose est sûre, l'Internet n'est pas coupé. Il est
             devenu injoignable pour cet utilisateur.
         </para>
         
         <para>Nagios est capable de déterminer si les hôtes que vous supervisez sont en
             état DOWN ou UNREACHABLE. Ces deux états sont complètement différents (mais
-            en relation) et peuvent vous aider à rapidement trouvé la cause profonde de
+            en relation) et peuvent vous aider à rapidement trouver la cause profonde de
             problèmes réseaux. Voici comment fonctionne la logique d'accessibilité des
             hôtes du réseau pour vous permettre de distinguer ces deux états…
         </para>
@@ -43,7 +43,7 @@
         <title>Exemple de réseau</title>
         
         <para>Jetez un œil au diagramme réseau ci-dessous. Pour cet exemple, partons du
-            principe que vous superviez l'ensemble des hôtes (serveurs, routeurs,
+            principe que vous supervisez l'ensemble des hôtes (serveurs, routeurs,
             switchs, etc.) figurant sur le diagramme. Nagios est installé et fonctionne
             sur le serveur Nagios.
         </para>
@@ -146,7 +146,7 @@ linkend="configuringnagios-objectdefinitions-host">définitions
         
         <para>Maintenant que Nagios est configuré avec les relations parent/enfant
             correctes pour vos hôtes, voyons ce qui se passe quand un problème
-            survient. Partons du principe que deux hôtes -Web et Router1 - sont
+            survient. Partons du principe que deux hôtes - Web et Router1 - sont
             tombés…
         </para>
         
@@ -184,7 +184,7 @@ linkend="configuringnagios-objectdefinitions-host">définitions
         <para>
             Nagios va déterminer que les hôtes <emphasis>derrière</emphasis> Router1 sont tous
             dans un état UNREACHABLE parce que Nagios ne peut les joindre. Router1 est
-            tombé et bloque le chemin vers les autre shôtes. Ces hôtes fonctionnent
+            tombé et bloque le chemin vers les autres hôtes. Ces hôtes fonctionnent
             peut-être, ou pas - Nagios ne le sait pas parce qu'il ne peut pas les
             joindre. Aussi Nagios les considère comme UNREACHABLE et non DOWN.
         </para>
