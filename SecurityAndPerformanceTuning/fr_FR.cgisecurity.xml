@@ -181,7 +181,7 @@ url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink> doit être
                 problèmes spécifique à votre installation apache. Ensuite, modifiez la
                 configuration apache pour nagios (par défaut
                 <filename>/etc/httpd/conf.d/nagios.conf</filename>) en ajoutant le paramètre
-                <varname>SSLRequireSSL</varname> aux deux instructions pour les répertoires
+                <literal>SSLRequireSSL</literal> aux deux instructions pour les répertoires
                 <filename class="directory">sbin</filename> et <filename
 class="directory">share</filename>.
             </para>
@@ -223,8 +223,8 @@ class="directory">share</filename>.
                 </ulink>
                 .Modifiez le fichier de configuration apache pour Nagios (par
                 défaut <filename>/etc/httpd/conf.d/nagios.conf</filename>) en utilisant les
-                paramètres <varname>Allow</varname>, <varname>Deny</varname>, et
-                <varname>Order</varname> en s'appuyant sur l'exemple ci-dessous.
+                paramètres <literal>Allow</literal>, <literal>Deny</literal>, et
+                <literal>Order</literal> en s'appuyant sur l'exemple ci-dessous.
             </para>
             
             <programlisting>

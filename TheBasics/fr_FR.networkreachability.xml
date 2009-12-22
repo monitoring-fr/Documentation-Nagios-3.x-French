@@ -82,7 +82,7 @@
         
         <para>Maintenant que vous savez ce que représente les relations parent/enfant pour
             les hôtes supervisés; comment configurer Nagios pour représenter celles-ci?
-            Le paramètre <varname>parents</varname> de vos <link
+            Le paramètre <literal>parents</literal> de vos <link
 linkend="configuringnagios-objectdefinitions-host">définitions
                 d'hôtes
             </link>
@@ -203,10 +203,10 @@ linkend="configuringnagios-objectdefinitions-host">définitions
         
         <para>Si vous voulez vous éviter d'être noyé sous un flot de notifications
             UNREACHABLE pendant des coupures réseaux, vous pouvez exclure l'option
-            unreachable (u) de le paramètre <varname>notification_options</varname> dans votre fichier de
+            unreachable (u) de le paramètre <literal>notification_options</literal> dans votre fichier de
             configuration d'<link
 linkend="configuringnagios-objectdefinitions-host">hôte</link> et/ou dans le
-            paramètre <varname>host_notification_options</varname> de votre fichier de définitions des
+            paramètre <literal>host_notification_options</literal> de votre fichier de définitions des
             <link linkend="configuringnagios-objectdefinitions-contact">contacts</link>.
         </para>
     </section>

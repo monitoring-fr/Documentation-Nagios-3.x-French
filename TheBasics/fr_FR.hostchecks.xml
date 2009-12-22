@@ -18,8 +18,8 @@
         <itemizedlist>
             <listitem>
                 <para>
-                    A intervalles réguliers, tel que défini par les options <varname>check_interval</varname> et
-                    <varname>retry_interval</varname> dans vos <link
+                    A intervalles réguliers, tel que défini par les options <literal>check_interval</literal> et
+                    <literal>retry_interval</literal> dans vos <link
 linkend="configuringnagios-objectdefinitions-host">définitions
                         d'hôtes
                     </link>
@@ -49,7 +49,7 @@ linkend="advancedtopics-dependencychecks">contrôles en prévision des
             </listitem>
         </itemizedlist>
         <para>Les contrôles d'hôtes planifiés régulièrement sont optionels. Si vous avez
-            positionnez l'option <varname>check_interval</varname> à zéro (0), 
+            positionnez l'option <literal>check_interval</literal> à zéro (0), 
             Nagios ne fera pas les contrôles d'hôtes de façon régulière. Il fera toutefois 
             des contrôles des hôtes à la demande pour les besoins de la supervision.
         </para>
@@ -134,7 +134,7 @@ linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
         </para>
         <note>
             <para>
-                Les hôtes qui ont leur variable <varname>max_check_attempts</varname>
+                Les hôtes qui ont leur variable <literal>max_check_attempts</literal>
                 positionnée à 1 peuvent causer de sérieux problèmes de performance. La
                 raison? Si Nagios a besoin de déterminer leur vrai état en utilisant la
                 logique <link linkend="thebasics-networkreachability">d'accessibilité
@@ -145,7 +145,7 @@ linkend="thebasics-networkreachability">d'accessibilité réseau</link>. Ces
                 pour rappel, ces contrôles sont exécutés en série, plutôt qu'en parallèle,
                 du coup, cela peut causer un grosse baisse de performance. Pour cette
                 raison, je vous recommande de toujours utiliser une valeur supérieure à 1
-                pour le paramètre <varname>max_check_attempts</varname> dans vos définitions d'hôtes.
+                pour le paramètre <literal>max_check_attempts</literal> dans vos définitions d'hôtes.
             </para>
         </note>
     </section>
@@ -239,7 +239,7 @@ linkend="configuringnagios-configmain-use_aggressive_host_checking">use_aggressi
                 admministrateurs de determiner l'origine de la coupure réseau rapidement. Le
                 tableau suivant montre comment Nagios détermine l'état final en fonction de
                 l'état de l'hôte(s) parent(s). Les parents d'hôtes sont définis dans le
-                paramètre <varname>parents</varname> de la définition d'hôte.
+                paramètre <literal>parents</literal> de la définition d'hôte.
             </para>
         </note>
         <informaltable frame="all">

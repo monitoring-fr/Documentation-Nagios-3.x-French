@@ -127,7 +127,7 @@ linkend="configuringnagios-configobject">fichiers de configuration des
                 contiennent les définitions pour les hôtes, groupes d'hôtes, contacts, groupes
                 de contacts, services, commandes etc… Vous pouvez éclater votre fichier de
                 configuration des objets en plusieurs fichiers que vous inclurez, pour leur
-                traitement, en ajoutant un paramètre <varname>cfg_file=</varname> pour chacun d'eux.
+                traitement, en ajoutant un paramètre <literal>cfg_file=</literal> pour chacun d'eux.
             </para>
         </section>
         
@@ -162,7 +162,7 @@ linkend="configuringnagios-configobject">fichiers de configuration des
                 comme objet config. En outre, Nagios procède de manière récursive tous les fichiers 
                 de config dans les sous-répertoires du répertoire que vous spécifiez ici. Vous pouvez 
                 éclater votre fichier de configuration des objets dans plusieurs répertoires que vous inclurez, 
-                pour leur traitement, en ajoutant une directive <varname>cfg_dir=</varname> pour chacun d'eux.
+                pour leur traitement, en ajoutant une directive <literal>cfg_dir=</literal> pour chacun d'eux.
             </para>
         </section>
         
@@ -273,7 +273,7 @@ linkend="securityandperformancetuning-faststartup">ici</link>.
                 chemins d'accès). Les &acronym-cgi;s ne lisent pas les fichiers de ressources, si bien
                 que vous pouvez y mettre des droits d'accès restrictifs (600 ou 660) pour
                 protéger les données sensibles. Vous pouvez inclure de nombreux fichiers de
-                ressources en ajoutant des paramètres <varname>resource_file</varname> 
+                ressources en ajoutant des paramètres <literal>resource_file</literal> 
                 au fichier de configuration principal - Nagios les traitera
                 tous. Référez-vous au fichier <filename>resource.cfg</filename> d'exemple situé à la racine de la
                 distribution de Nagios, pour voir comment utiliser les macros &macro-usern;.
@@ -4030,7 +4030,7 @@ linkend="advancedtopics-perfdata">données de performance</link> qui peuvent
                 des objets. Cette commande est exécutée si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" />
                  est
-                activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
+                activée et si le paramètre <literal>process_perf_data</literal> ([NdT] : traitement des données
                 de performance) dans la <link
 linkend="configuringnagios-objectdefinitions-host">définition de
                     l'hôte
@@ -4077,7 +4077,7 @@ linkend="configuringnagios-configmain-process_performance_data">traitement
                     des données de performance
                 </link>
                 est activée et si le paramètre
-                <varname>process_perf_data</varname> ([NdT] : traitement des données de performance) est
+                <literal>process_perf_data</literal> ([NdT] : traitement des données de performance) est
                 activé dans la définition du service. Cette commande est seulement exécuté que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" />
                  est
@@ -4124,8 +4124,8 @@ linkend="configuringnagios-configmain-host_perfdata_file_template" />
                 données ne seront écrites que si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" />
                  est
-                activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
-                de performance) est activé dans la définition de l'hôte. <varname>process_perf_data</varname> que si le paramètre dans la <link
+                activée et si le paramètre <literal>process_perf_data</literal> ([NdT] : traitement des données
+                de performance) est activé dans la définition de l'hôte. <literal>process_perf_data</literal> que si le paramètre dans la <link
 linkend="configuringnagios-objectdefinitions-host">définition de
                     l'hôte
                 </link>
@@ -4168,7 +4168,7 @@ linkend="configuringnagios-configmain-service_perfdata_file_template"
                 .Les données ne seront écrites que si l'option de <xref
 linkend="configuringnagios-configmain-process_performance_data" />
                  est
-                activée et si le paramètre <varname>process_perf_data</varname> ([NdT] : traitement des données
+                activée et si le paramètre <literal>process_perf_data</literal> ([NdT] : traitement des données
                 de performance) est activé dans la définition du service. Cette commande est seulement exécuté que si la variable <xref
 linkend="configuringnagios-configmain-obsess_over_services" />
                  est

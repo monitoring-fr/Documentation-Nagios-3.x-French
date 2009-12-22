@@ -147,7 +147,7 @@ url="&url-sourceforge-projects;nc-net">NC_Net</ulink>) si vous le souhaitez
             
             <listitem>
                 <para>
-                    Un gabarit d'hôte serveur Windows (appelé <varname>windows-server</varname>)
+                    Un gabarit d'hôte serveur Windows (appelé <literal>windows-server</literal>)
                     a déjà été créé dans le fichier <filename>templates.cfg</filename>. Cela
                     permet d'ajouter de nouvelles définitions d'hôtes Windows de façon simple.
                 </para>
@@ -277,20 +277,20 @@ class="directory">C:\NSClient++</filename>
                 <itemizedlist>
                     <listitem>
                         <para>Décommentez tous les modules listés dans la section [modules], exceptés
-                            <varname>CheckWMI.dll</varname> et
-                            <varname>RemoteConfiguration.dll</varname>
+                            <literal>CheckWMI.dll</literal> et
+                            <literal>RemoteConfiguration.dll</literal>
                         </para>
                     </listitem>
                     
                     <listitem>
                         <para>Exigez optionnellement un mot de passe des clients en remplaçant l'option
-                            <varname>password</varname> dans la section [Settings].
+                            <literal>password</literal> dans la section [Settings].
                         </para>
                     </listitem>
                     
                     <listitem>
                         <para>
-                            Décommentez l'option <varname>allowed_hosts</varname> dans la section
+                            Décommentez l'option <literal>allowed_hosts</literal> dans la section
                             [Settings]. Ajoutez l'adresse IP du serveur Nagios à cette ligne, ou laisser
                             vide pour autoriser n'importe quel hôte à se connecter.
                         </para>
@@ -298,7 +298,7 @@ class="directory">C:\NSClient++</filename>
                     
                     <listitem>
                         <para>
-                            Assurez-vous que l'option <varname>port</varname> dans la section [NSClient]
+                            Assurez-vous que l'option <literal>port</literal> dans la section [NSClient]
                             soit décommentée et réglée sur '12489' (le port par défaut).
                         </para>
                     </listitem>
@@ -352,8 +352,8 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
             machine Windows que vous souhaitez superviser. Si c'est la *première* que
             vous supervisez, vous pouvez simplement modifier l'exemple de définition
             d'hôte dans <filename>windows.cfg</filename>. Remplacez les champs
-            <varname>host_name</varname>, <varname>alias</varname>, et
-            <varname>address</varname> par les valeurs appropriées pour votre machine
+            <literal>host_name</literal>, <literal>alias</literal>, et
+            <literal>address</literal> par les valeurs appropriées pour votre machine
             Windows.
         </para>
         
@@ -376,9 +376,9 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         <note>
             <para>Remplacez
                 <emphasis>
-                    <varname>
+                    <literal>
                         <replaceable>winserver</replaceable>
-                    </varname>
+                    </literal>
                 </emphasis>
                  dans
                 les définitions d'exemples ci-dessous par le nom que vous avez précisé dans

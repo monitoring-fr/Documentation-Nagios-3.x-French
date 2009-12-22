@@ -42,13 +42,13 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         </programlisting>
         
         <para>
-            La première variable est <varname>name</varname>. C'est le nom du <emphasis>gabarit</emphasis>
+            La première variable est <literal>name</literal>. C'est le nom du <emphasis>gabarit</emphasis>
             qui peut être référencé dans d'autre définition d'objet, de manière à ce
             qu'ils héritent des propriétés/variables de cet objet. 
         </para>
         
         <para>
-            La deuxième variable est <varname>use</varname>. C'est ici que vous
+            La deuxième variable est <literal>use</literal>. C'est ici que vous
             spécifiez le nom des objets gabarit dont vous voulez héritez les
             propriétés/variables. Le nom que vous spécifiez dans cette variable doit
             être défini dans un autre gabarit d'objet nommé. (En utilisant la variable
@@ -56,7 +56,7 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         </para>
         
         <para>
-            La troisième variable est <varname>register</varname>. Cette variable est
+            La troisième variable est <literal>register</literal>. Cette variable est
             utilisée pour indiquer si la définition de l'objet doit être <emphasis>Prise en
                 compte
             </emphasis>
@@ -68,8 +68,8 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
             prendre en compte la définition de l'objet (Comportement par défaut). Cette
             variable n'est pas héritée, toutes definition d'objet (partiel) utilisé
             comme gabarits doivent explicitement avoir le paramètre
-            <varname>register</varname> à 0. Celà évite d'avoir à surcharger une
-            directective <varname>register</varname> héritée avec la valeur 1 pour tous
+            <literal>register</literal> à 0. Celà évite d'avoir à surcharger une
+            directective <literal>register</literal> héritée avec la valeur 1 pour tous
             les objets qui doivent être pris en compte. 
         </para>
     </section>
@@ -116,8 +116,8 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         </programlisting>
         
         <para>
-            Vous pouvez voir que les variables <varname>check_command</varname> et
-            <varname>notification_options</varname> sont héritées du gabarit.( où l'hôte
+            Vous pouvez voir que les variables <literal>check_command</literal> et
+            <literal>notification_options</literal> sont héritées du gabarit.( où l'hôte
             <emphasis>bighost1</emphasis> a été défini). Cependant, les variables
             <emphasis>host_name</emphasis> et <emphasis>max_check_attempts</emphasis>
             n'ont pas été héritées du gabarit car elles sont définies
@@ -236,20 +236,20 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         </programlisting>
         
         <para>Notez que la 1er définition d'hotes est incomplète car il manque le variable
-            requise <varname>host_name</varname>. Nous n'avons pas besoin de définir un
+            requise <literal>host_name</literal>. Nous n'avons pas besoin de définir un
             nom d'hôte car nous voulons juste utiliser cette définition comme un gabarit
             d'hôte générique. Afin de prévenir cette defintion d'être <emphasis>registered</emphasis> par
             nagios comme un hôte normal, nous devons définir la variable
-            <varname>register</varname> à 0. 
+            <literal>register</literal> à 0. 
         </para>
         
         <para>
             La définition des hôtes <emphasis>bighost1</emphasis> et
             <emphasis>bighost2</emphasis> héritent leurs valeurs de la définition d'hôte
             générique. La seule variable que nous avons choisi de surcharger est la
-            variable <varname>address</varname>. Celà veut dire que les deux hôtes
+            variable <literal>address</literal>. Celà veut dire que les deux hôtes
             auront exactement les mêmes propriétés, à l'exeption de leurs variables
-            <varname>host_name</varname> et <varname>address</varname>. Une fois que
+            <literal>host_name</literal> et <literal>address</literal>. Une fois que
             Nagios aura traiter les données de configuration de l'exemple, les
             définitions d'hôtes résultants seront la même chose que si nous spécifions : 
         </para>
@@ -306,8 +306,8 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         
         <para>
             l'hôte <emphasis>bighost1</emphasis> va hérité de la variable personnalisée
-            de l'hôte <varname>_customvar1</varname> et
-            <varname>_snmp_community</varname>, aussi bien que de leur valeurs
+            de l'hôte <literal>_customvar1</literal> et
+            <literal>_snmp_community</literal>, aussi bien que de leur valeurs
             respectives de la définition du <emphasis>generichosttemplate</emphasis>. Le
             résultat effectif est une définition pour<emphasis>bighost1</emphasis> qui
             ressemble à ça : 
@@ -354,7 +354,7 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         
         <para>
             Dans ce cas, l'hôte <emphasis>bighost1</emphasis> n'héritera pas de la
-            valeur de la variable <varname>event_handler</varname> qui est définie dans
+            valeur de la variable <literal>event_handler</literal> qui est définie dans
             <emphasis>generichosttemplate</emphasis>. Le résultat effective de la
             définition de <emphasis>bighost1</emphasis> est : 
         </para>
@@ -401,7 +401,7 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         
         <para>
             Dans ce cas, l'hôte <emphasis>linuxserver1</emphasis> va ajouter la valeur
-            de sa variable <varname>hostgroups</varname> local, à celui du
+            de sa variable <literal>hostgroups</literal> local, à celui du
             <emphasis>generichosttemplate</emphasis>. Le résultat effectif de la
             définition de <emphasis>linuxserver1</emphasis> est le suivant : 
         </para>
@@ -636,11 +636,11 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         <para>La superposition de défintion d'hôte et de service peuvent utiliser une
             règle spécial qui combine les fonctionnalités de l'héritage implicite et
             explicite. Si la superposition 1) n'hérite pas la valeurs de leurs paramètres
-            <varname>contact_groups</varname> ou <varname>contacts</varname> d'un autre
-            gabarit et 2) leurs paramètres <varname>contact_groups</varname> or
-            <varname>contacts</varname> commencent avec un signe (+), alors les valeurs
-            des paramètres <varname>contact_groups</varname> or
-            <varname>contacts</varname> de leurs défintions d'hôte ou service seront
+            <literal>contact_groups</literal> ou <literal>contacts</literal> d'un autre
+            gabarit et 2) leurs paramètres <literal>contact_groups</literal> or
+            <literal>contacts</literal> commencent avec un signe (+), alors les valeurs
+            des paramètres <literal>contact_groups</literal> or
+            <literal>contacts</literal> de leurs défintions d'hôte ou service seront
             utilisé avec une logique d'héritage additive. 
         </para>
         
@@ -729,16 +729,16 @@ fileref="images/multiple-templates1.png" format="PNG"/>
         </informaltable>
         
         <para>
-            Dans l'exemple ci-dessous, <varname>devweb1</varname> hérite de
+            Dans l'exemple ci-dessous, <literal>devweb1</literal> hérite de
             variables/valeurs provenant de deux sources :
-            <varname>generic-host</varname> et
-            <varname>development-server</varname>. Vous noterez qu'une variable
-            <varname>check_interval</varname> est défini dans les deux sources. Puisque
-            <varname>generic-host</varname> était le premier gabarit spécifié dans les
-            paramètres de <varname>devweb1</varname>, sa valeur pour la variable
-            <varname>check_interval</varname> est héritée par l'hôte
-            <varname>devweb1</varname>. Après l'héritage, la définition effective de
-            <varname>devweb1</varname> est la suivante : 
+            <literal>generic-host</literal> et
+            <literal>development-server</literal>. Vous noterez qu'une variable
+            <literal>check_interval</literal> est défini dans les deux sources. Puisque
+            <literal>generic-host</literal> était le premier gabarit spécifié dans les
+            paramètres de <literal>devweb1</literal>, sa valeur pour la variable
+            <literal>check_interval</literal> est héritée par l'hôte
+            <literal>devweb1</literal>. Après l'héritage, la définition effective de
+            <literal>devweb1</literal> est la suivante : 
         </para>
         
         <para># Development web server</para>

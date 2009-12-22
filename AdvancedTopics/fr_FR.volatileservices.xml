@@ -125,7 +125,7 @@ linkend="thebasics-passivechecks">contrôles passifs de service</link>, vous
                 
                 <listitem>
                     <para>
-                        Mettez l'option <varname>max_check_attempts</varname> de la définition du
+                        Mettez l'option <literal>max_check_attempts</literal> de la définition du
                         service à 1. Ceci dira à Nagios de passer immédiatement le service en <link
 linkend="thebasics-statetypes">état hard</link> quand un état non-OK est
                         retourné. 
@@ -134,7 +134,7 @@ linkend="thebasics-statetypes">état hard</link> quand un état non-OK est
                 
                 <listitem>
                     <para>
-                        Mettez l'option <varname>active_checks_enabled</varname> à 0 dans la
+                        Mettez l'option <literal>active_checks_enabled</literal> à 0 dans la
                         définition du service. Cela évite que Nagios ne contrôle activement le
                         service.
                     </para>
@@ -142,14 +142,14 @@ linkend="thebasics-statetypes">état hard</link> quand un état non-OK est
                 
                 <listitem>
                     <para>
-                        Mettez l'option <varname>passive_checks_enabled</varname> à 1 dans la
+                        Mettez l'option <literal>passive_checks_enabled</literal> à 1 dans la
                         définition du service. Cela active les contrôles passifs pour le service.
                     </para>
                 </listitem>
                 
                 <listitem>
                     <para>
-                        Mettez l'option <varname>is_volatile</varname> à 1 dans la définition du
+                        Mettez l'option <literal>is_volatile</literal> à 1 dans la définition du
                         service.
                     </para>
                 </listitem>

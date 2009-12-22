@@ -365,31 +365,31 @@ linkend="configuringnagios-configobject"/>
         <para>Dans des circonstances normales, les escalades peuvent servir aux heures où
             une notification pourrait normalement être envoyée pour le service. Cette
             <emphasis>fenêtre d'heures de notification</emphasis> est déterminée par le paramètre
-            <varname>notification_period</varname> de la définition de service.Notez que
+            <literal>notification_period</literal> de la définition de service.Notez que
             la notification est toujours soumise aux restrictions d'heure normales
-            imposées par le paramètre <varname>notification_period</varname> de l'escalade de service, et
+            imposées par le paramètre <literal>notification_period</literal> de l'escalade de service, et
             donc que la période de temps que vous spécifiez dans l'escalade doit être
             comprise dans une plus grande <emphasis>fenêtre d'heures de notification</emphasis>.
         </para>
         
         <para>Vous pouvez optionnellement restreindre l'escalade pour qu'elle ne soit
             prise ne compte pendant une période de temps spécifique en utilisant le
-            paramètre <varname>escalation_period</varname> dans la définition de
+            paramètre <literal>escalation_period</literal> dans la définition de
             l'escalade de service. Si vous utilisez le paramètre
-            <varname>escalation_period</varname> pour spécifier une <xref
+            <literal>escalation_period</literal> pour spécifier une <xref
 linkend="configuringnagios-objectdefinitions-timeperiod"/>
              pendant laquelle
             utiliser l'escalade, l'escalade sera prise en compte uniquement pendant ces
             heures. Si vous ne spécifiez aucun paramètre
-            <varname>escalation_period</varname>, l'escalade peut être prise en compte à
+            <literal>escalation_period</literal>, l'escalade peut être prise en compte à
             n'importe quelle heure pendant la <emphasis>fenêtre d'heures de notification</emphasis> pour le
             service.
         </para>
         
         <note>
             <para>Les escalades de notifications sont toujours soumises aux restrictions de
-                temps normales imposées par le paramètre <varname> notification_period
-                </varname>
+                temps normales imposées par le paramètre <literal> notification_period
+                </literal>
                  dans une défintion d'hôte ou de service, donc le timeperiod que
                 vous spécifiez dans une définition d'escalade correspond à une sorte de
                 sous-ensemble de ce qu'on appelerait <emphasis>la fenêtre de temps de notification</emphasis>.
@@ -402,9 +402,9 @@ linkend="configuringnagios-objectdefinitions-timeperiod"/>
         
         <para>Si vous voulez restreindre la définition d'escalade pour qu'elle soit prise
             en compte uniquement quand le service est dans un état donné, vous pouves
-            utiliser le paramètre <varname>escalation_options</varname> dans la
+            utiliser le paramètre <literal>escalation_options</literal> dans la
             définition de l'escalade de service. Si vous n'utilisez pas le paramètre
-            <varname>escalation_options</varname>, l'escalade peut être prise en compte
+            <literal>escalation_options</literal>, l'escalade peut être prise en compte
             quel que soit l'état du service.
         </para>
     </section>
