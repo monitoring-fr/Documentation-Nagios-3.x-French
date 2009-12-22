@@ -16,8 +16,7 @@
             <inlinemediaobject>
                  
                 <imageobject>
-                     <imagedata fileref="images/security.png"
-format="PNG"/>
+                     <imagedata fileref="images/security.png" format="PNG"/>
                 </imageobject>
             </inlinemediaobject>
              Cette page est destinée à
@@ -111,7 +110,7 @@ url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink>
             </para>
             
             <screen>
-                <prompt>#</prompt><userinput>htdigest -c /usr/local/nagios/etc/.digest_pw "Nagios Access" nagiosadmin</userinput>
+<prompt>#</prompt><userinput>htdigest -c /usr/local/nagios/etc/.digest_pw "Nagios Access" nagiosadmin</userinput>
             </screen>
             
             <para>Ensuite, éditer le fichier de configuration apache pour Nagios (typiquement
@@ -120,31 +119,31 @@ url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink>
             </para>
             
             <programlisting>
-                ## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
-                ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
-                &lt;Directory "/usr/local/nagios/sbin"&gt;
-                Options ExecCGI
-                AllowOverride None
-                Order allow,deny
-                Allow from all
-                AuthType Digest
-                AuthName "Nagios Access"
-                AuthUserFile /usr/local/nagios/etc/.digest_pw
-                Require valid-user
-                &lt;/Directory&gt;
-                
-                Alias /nagios "/usr/local/nagios/share"
-                &lt;Directory "/usr/local/nagios/share"&gt;
-                Options None
-                AllowOverride None
-                Order allow,deny
-                Allow from all
-                AuthType Digest
-                AuthName "Nagios Access"
-                AuthUserFile /usr/local/nagios/etc/.digest_pw
-                Require valid-user
-                &lt;/Directory&gt;
-                ## END APACHE CONFIG SNIPPETS
+## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
+ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
+&lt;Directory "/usr/local/nagios/sbin"&gt;
+    Options ExecCGI
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+    AuthType Digest
+    AuthName "Nagios Access"
+    AuthUserFile /usr/local/nagios/etc/.digest_pw
+    Require valid-user
+&lt;/Directory&gt;
+
+Alias /nagios "/usr/local/nagios/share"
+&lt;Directory "/usr/local/nagios/share"&gt;
+    Options None
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+    AuthType Digest
+    AuthName "Nagios Access"
+    AuthUserFile /usr/local/nagios/etc/.digest_pw
+    Require valid-user
+&lt;/Directory&gt;
+## END APACHE CONFIG SNIPPETS
             </programlisting>
             
             <para>Ensuite, redémarrer le service apache pour que la nouvelle configuration
@@ -152,7 +151,7 @@ url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink>
             </para>
             
             <screen>
-                <prompt>#</prompt><userinput>/etc/init.d/httpd restart</userinput>
+<prompt>#</prompt><userinput>/etc/init.d/httpd restart</userinput>
             </screen>
         </section>
         
@@ -187,21 +186,21 @@ class="directory">share</filename>.
             </para>
             
             <programlisting>
-                ## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
-                ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
-                &lt;Directory "/usr/local/nagios/sbin"&gt;
-                …
-                SSLRequireSSL
-                …
-                &lt;/Directory&gt;
-                
-                Alias /nagios "/usr/local/nagios/share"
-                &lt;Directory "/usr/local/nagios/share"&gt;
-                …
-                SSLRequireSSL
-                …
-                &lt;/Directory&gt;
-                ## END APACHE CONFIG SNIPPETS
+## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
+ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
+&lt;Directory "/usr/local/nagios/sbin"&gt;
+    ...
+    SSLRequireSSL
+    ...
+    &lt;/Directory&gt;
+    
+    Alias /nagios "/usr/local/nagios/share"
+    &lt;Directory "/usr/local/nagios/share"&gt;
+    ...
+    SSLRequireSSL
+    ...
+&lt;/Directory&gt;
+## END APACHE CONFIG SNIPPETS
             </programlisting>
             
             <para>Redémarrage du service Apache pour que la nouvelle configuration prenne
@@ -209,7 +208,7 @@ class="directory">share</filename>.
             </para>
             
             <screen>
-                <prompt>#</prompt><userinput>/etc/init.d/httpd restart</userinput>
+<prompt>#</prompt><userinput>/etc/init.d/httpd restart</userinput>
             </screen>
         </section>
         
@@ -228,31 +227,31 @@ class="directory">share</filename>.
             </para>
             
             <programlisting>
-                ## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
-                ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
-                &lt;Directory "/usr/local/nagios/sbin"&gt;
-                …
-                AllowOverride None
-                Order deny,allow
-                Deny from all
-                Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
-                Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
-                Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
-                …
-                &lt;/Directory&gt;
-                
-                Alias /nagios "/usr/local/nagios/share"
-                &lt;Directory "/usr/local/nagios/share"&gt;
-                …
-                AllowOverride None
-                Order deny,allow
-                Deny from all
-                Allow from 127.0.0.1 10.0.0.25		# Allow single IP addresses
-                Allow from 10.0.0.0/255.255.255.0		# Allow network/netmask pair
-                Allow from 10.0.0.0/24			# Allow network/nnn CIDR spec
-                …
-                &lt;/Directory&gt;
-                ## END APACHE CONFIG SNIPPET
+## BEGIN APACHE CONFIG SNIPPET - NAGIOS.CONF
+ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
+&lt;Directory "/usr/local/nagios/sbin"&gt;
+    ...
+    AllowOverride None
+    Order deny,allow
+    Deny from all
+    Allow from 127.0.0.1 10.0.0.25		    # Allow single IP addresses
+    Allow from 10.0.0.0/255.255.255.0     # Allow network/netmask pair
+    Allow from 10.0.0.0/24                # Allow network/nnn CIDR spec
+    ...
+&lt;/Directory&gt;
+
+Alias /nagios "/usr/local/nagios/share"
+&lt;Directory "/usr/local/nagios/share"&gt;
+    ...
+    AllowOverride None
+    Order deny,allow
+    Deny from all
+    Allow from 127.0.0.1 10.0.0.25        # Allow single IP addresses
+    Allow from 10.0.0.0/255.255.255.0     # Allow network/netmask pair
+    Allow from 10.0.0.0/24                # Allow network/nnn CIDR spec
+    ...
+&lt;/Directory&gt;
+## END APACHE CONFIG SNIPPET
             </programlisting>
         </section>
     </section>

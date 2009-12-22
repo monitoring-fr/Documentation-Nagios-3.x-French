@@ -70,31 +70,31 @@ linkend="advancedtopics-objectinheritance">héritées</link> des gabarits
             personnalisées dans différents types de définitions d'objets
         </para>
         <programlisting>
-            define host{
-            host_name    linuxserver
-            _mac_address  00:06:5B:A6:AD:AA ; &lt;-- Custom MAC_ADDRESS variable
-            _rack_number  R32        ; &lt;-- Custom RACK_NUMBER variable
-            …
-            }
+define host {
+    host_name     linuxserver
+    _mac_address  00:06:5B:A6:AD:AA ; &lt;-- Custom MAC_ADDRESS variable
+    _rack_number  R32               ; &lt;-- Custom RACK_NUMBER variable
+    ...
+}
         </programlisting>
         
         <programlisting>
-            define service{
-            host_name    linuxserver
-            description   Memory Usage
-            _SNMP_community public     ; &lt;-- Custom SNMP_COMMUNITY variable
-            _TechContact   Jane Doe    ; &lt;-- Custom TECHCONTACT variable
-            ….
-            }
+define service {
+    host_name       linuxserver
+    description     Memory Usage
+    _SNMP_community public    ; &lt;-- Custom SNMP_COMMUNITY variable
+    _TechContact    Jane Doe  ; &lt;-- Custom TECHCONTACT variable
+...
+}
         </programlisting>
         
         <programlisting>
-            define contact{
-            contact_name  john
-            _AIM_username  john16    ; &lt;-- Custom AIM_USERNAME variable
-            _YahooID    john32    ; &lt;-- Custom YAHOOID variable
-            …
-            }
+define contact {
+    contact_name   john
+    _AIM_username  john16  ; &lt;-- Custom AIM_USERNAME variable
+    _YahooID       john32  ; &lt;-- Custom YAHOOID variable
+    ...
+}
         </programlisting>
     </section>
     <section>

@@ -33,12 +33,13 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
             ci-dessous
         </para>
         
-        <programlisting>        define someobjecttype{
-                            object-specific variables …
-                            name            template_name
-                            use             name_of_template_to_use
-                            register        [0/1]
-                            }
+        <programlisting>
+define someobjecttype {
+    object-specific variables ...
+    name            template_name
+    use             name_of_template_to_use
+    register        [0/1]
+}
         </programlisting>
         
         <para>
@@ -83,19 +84,20 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
             (toutes les variables nécessaire n'ont pas été indiqué)
         </para>
         
-        <programlisting>       define host{
-                            host_name               bighost1
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      5
-                            name                    hosttemplate1
-                            }
-            
-                    define host{
-                            host_name               bighost2
-                            max_check_attempts      3
-                            use                     hosttemplate1
-                            }
+        <programlisting>
+define host {
+    host_name               bighost1
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+    name                    hosttemplate1
+}
+
+define host {
+    host_name               bighost2
+    max_check_attempts      3
+    use                     hosttemplate1
+}
         </programlisting>
         
         <para>
@@ -107,12 +109,13 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
             <emphasis>bighost2</emphasis> sera équivalent à cette définition :
         </para>
         
-        <programlisting>        define host{
-                            host_name               bighost2
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      3
-                            }
+        <programlisting>
+define host {
+    host_name               bighost2
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      3
+}
         </programlisting>
         
         <para>
@@ -127,10 +130,9 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         </para>
         
         <tip>
-            <para>Si vous voulez qu'une vaiable chaine local soit concaténé avec la valeur
+            <para>Si vous voulez qu'une variable chaîne locale soit concaténée avec la valeur
                 d'une chaine héritée, vous pouvez le faire. Pour plus de renseignements sur
-                comment réaliser ça, lisez <link
-linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
+                comment réaliser ça, lisez <link linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             </para>
         </tip>
     </section>
@@ -142,25 +144,26 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             gabarits objets. Regarder l'exemple suivant : 
         </para>
         
-        <programlisting>        define host{
-                            host_name               bighost1
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      5
-                            name                    hosttemplate1
-                            }
-            
-                    define host{
-                            host_name               bighost2
-                            max_check_attempts      3
-                            use                     hosttemplate1
-                            name                    hosttemplate2
-                            }
-            
-                    define host{
-                            host_name               bighost3
-                            use                     hosttemplate2
-                            }
+        <programlisting>
+define host {
+    host_name               bighost1
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+    name                    hosttemplate1
+}
+
+define host {
+    host_name               bighost2
+    max_check_attempts      3
+    use                     hosttemplate1
+    name                    hosttemplate2
+}
+
+define host {
+    host_name               bighost3
+    use                     hosttemplate2
+}
         </programlisting>
         
         <para>
@@ -172,26 +175,27 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             hôtes est équivalent à : 
         </para>
         
-        <programlisting>        define host{
-                            host_name               bighost1
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      5
-                            }
-            
-                    define host{
-                            host_name               bighost2
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      3
-                            }
-            
-                    define host{
-                            host_name               bighost3
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      3
-                            }
+        <programlisting>
+define host {
+    host_name               bighost1
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+}
+
+define host {
+    host_name               bighost2
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      3
+}
+
+define host {
+    host_name               bighost3
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      3
+}
         </programlisting>
         
         <para>
@@ -214,25 +218,26 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             l'exemple suivant : 
         </para>
         
-        <programlisting>        define host{
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      5
-                            name                    generichosttemplate
-                            register                        0
-                            }
-            
-                    define host{
-                            host_name               bighost1
-                            address                 192.168.1.3
-                            use                     generichosthosttemplate
-                            }
-            
-                    define host{
-                            host_name               bighost2
-                            address                 192.168.1.4
-                            use                     generichosthosttemplate
-                            }
+        <programlisting>
+define host {
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+    name                    generichosttemplate
+    register                        0
+}
+
+define host {
+    host_name               bighost1
+    address                 192.168.1.3
+    use                     generichosthosttemplate
+}
+
+define host {
+    host_name               bighost2
+    address                 192.168.1.4
+    use                     generichosthosttemplate
+}
         </programlisting>
         
         <para>Notez que la 1er définition d'hotes est incomplète car il manque le variable
@@ -254,21 +259,22 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             définitions d'hôtes résultants seront la même chose que si nous spécifions : 
         </para>
         
-        <programlisting>        define host{
-                            host_name               bighost1
-                            address                 192.168.1.3
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      5
-                            }
-            
-                    define host{
-                            host_name               bighost2
-                            address                 192.168.1.4
-                            check_command           check-host-alive
-                            notification_options    d,u,r
-                            max_check_attempts      5
-                            }
+        <programlisting>
+define host {
+    host_name               bighost1
+    address                 192.168.1.3
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+}
+
+define host {
+    host_name               bighost2
+    address                 192.168.1.4
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+}
         </programlisting>
         
         <para>Enfin, utiliser une définition de gabarit pour les variables par défaut vous
@@ -290,18 +296,19 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             variable standard. Regardez l'exemple suivant : 
         </para>
         
-        <programlisting>       define host{
-                            _customvar1             somevalue  ; &lt;-- Custom host variable
-                            _snmp_community         public  ; &lt;-- Custom host variable
-                            name                    generichosttemplate
-                            register                        0
-                            }
-            
-                    define host{
-                            host_name               bighost1
-                            address                 192.168.1.3
-                            use                     generichosthosttemplate
-                            }
+        <programlisting>
+define host {
+    _customvar1             somevalue  ; &lt;-- Custom host variable
+    _snmp_community         public  ; &lt;-- Custom host variable
+    name                    generichosttemplate
+    register                        0
+}
+
+define host {
+    host_name               bighost1
+    address                 192.168.1.3
+    use                     generichosthosttemplate
+}
         </programlisting>
         
         <para>
@@ -313,12 +320,13 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             ressemble à ça : 
         </para>
         
-        <programlisting>         define host{
-                            host_name               bighost1
-                            address                 192.168.1.3
-                            _customvar1             somevalue
-                            _snmp_community         public
-                            }
+        <programlisting>
+define host {
+    host_name               bighost1
+    address                 192.168.1.3
+    _customvar1             somevalue
+    _snmp_community         public
+}
         </programlisting>
     </section>
     
@@ -338,18 +346,19 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             pour cette variable. Regardez l'exemple suivant : 
         </para>
         
-        <programlisting>        define host{
-                            event_handler           my-event-handler-command
-                            name                    generichosttemplate
-                            register                        0
-                            }
-            
-                    define host{
-                            host_name               bighost1
-                            address                 192.168.1.3
-                            event_handler   null
-                            use                     generichosthosttemplate
-                            }
+        <programlisting>
+define host {
+    event_handler           my-event-handler-command
+    name                    generichosttemplate
+    register                0
+}
+
+define host {
+    host_name               bighost1
+    address                 192.168.1.3
+    event_handler           null
+    use                     generichosthosttemplate
+}
         </programlisting>
         
         <para>
@@ -359,10 +368,11 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             définition de <emphasis>bighost1</emphasis> est : 
         </para>
         
-        <programlisting>        define host{
-                            host_name               bighost1
-                            address                 192.168.1.3
-                            }
+        <programlisting>
+define host {
+    host_name               bighost1
+    address                 192.168.1.3
+}
         </programlisting>
     </section>
     
@@ -386,17 +396,18 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             valeurs sous forme de chaine. Regardez l'exemple suivant : 
         </para>
         
-        <programlisting>define host{
-                            hostgroups              all-servers
-                            name                    generichosttemplate
-                            register                        0
-                            }
-            
-                    define host{
-                            host_name                       linuxserver1
-                            hostgroups            +linux-servers,web-servers
-                            use                    generichosthosttemplate
-                            }
+        <programlisting>
+define host{
+    hostgroups              all-servers
+    name                    generichosttemplate
+    register                0
+}
+
+define host {
+    host_name              linuxserver1
+    hostgroups            +linux-servers,web-servers
+    use                    generichosthosttemplate
+}
         </programlisting>
         
         <para>
@@ -406,10 +417,11 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             définition de <emphasis>linuxserver1</emphasis> est le suivant : 
         </para>
         
-        <programlisting>define host{
-                            host_name                       linuxserver1
-                            hostgroups        all-servers,linux-servers,web-servers
-                            }
+        <programlisting>
+define host {
+    host_name         linuxserver1
+    hostgroups        all-servers,linux-servers,web-servers
+}
         </programlisting>
     </section>
     
@@ -457,22 +469,19 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                 </thead>
                 <tbody>
                     <row rowsep="1">
-                        <entry colsep="1" morerows="2" nameend="col_0"
-     namest="col_0" rowsep="1">
+                        <entry colsep="1" morerows="2" nameend="col_0" namest="col_0" rowsep="1">
                             <para>
                                 <emphasis role="bold">Services</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>contact_groups</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>contact_groups</emphasis> dans la définition d'hôtes associée
                             </para>
@@ -480,15 +489,13 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_interval</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_interval</emphasis> in the associated host definition
                             </para>
@@ -496,15 +503,13 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_period</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_period</emphasis> dans la définition d'hôtes associée
                             </para>
@@ -512,22 +517,19 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1" morerows="2" nameend="col_0"
-     namest="col_0" rowsep="1">
+                        <entry colsep="1" morerows="2" nameend="col_0" namest="col_0" rowsep="1">
                             <para>
                                 <emphasis role="bold">Escalade d'hôtes</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>contact_groups</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>contact_groups</emphasis> dans la définition d'hôtes associée
                             </para>
@@ -535,15 +537,13 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_interval</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_interval</emphasis> in the associated host definition
                             </para>
@@ -551,15 +551,13 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>escalation_period</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_period</emphasis> dans la définition d'hôtes associée
                             </para>
@@ -567,22 +565,19 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1" morerows="2" nameend="col_0"
-     namest="col_0" rowsep="1">
+                        <entry colsep="1" morerows="2" nameend="col_0" namest="col_0" rowsep="1">
                             <para>
                                 <emphasis role="bold">Escalade de Services</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>contact_groups</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>contact_groups</emphasis>dans la définition de services associée
                             </para>
@@ -590,15 +585,13 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_interval</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_interval</emphasis> dans la définition de services
                                 associée
@@ -607,15 +600,13 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                     </row>
                     
                     <row rowsep="1">
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>escalation_period</emphasis>
                             </para>
                         </entry>
                         
-                        <entry colsep="1"
-     rowsep="1">
+                        <entry colsep="1" rowsep="1">
                             <para>
                                 <emphasis>notification_period</emphasis> dans la définition de services
                                 associée
@@ -646,26 +637,28 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         
         <para>Perdu ? Voici un exemple :</para>
         
-        <programlisting>define host{
-                    name            linux-server
-                    contact_groups  linux-admins
-                    …
-                    }
-            
-            define hostescalation{
-                    host_name               linux-server
-                    contact_groups  +management
-                    …
-                    }
+        <programlisting>
+define host {
+    name            linux-server
+    contact_groups  linux-admins
+    ...
+}
+
+define hostescalation {
+    host_name       linux-server
+    contact_groups  +management
+    ...
+}
         </programlisting>
         
         <para>C'est un équivalent beaucoup plus simple que : </para>
         
-        <programlisting>define hostescalation{
-                    host_name               linux-server
-                    contact_groups  linux-admins,management
-                    …
-                    }
+        <programlisting>
+define hostescalation {
+    host_name       linux-server
+    contact_groups  linux-admins,management
+    ...
+}
         </programlisting>
     </section>
     
@@ -683,31 +676,36 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
         
         <informaltable frame="all">
             <tgroup cols="2">
+            <colspec colwidth="68*"/>
+            <colspec colwidth="32*"/>
                 <tbody>
                     <row>
                         <entry>
-                            <para>#Generic host template</para> <programlisting>define host{
-                                        name                 	generic-host
-                                        active_checks_enabled 	1
-                                        check_interval          10 
-                                    ...
-                                        	register                0
-                                        	}
-                            </programlisting>
-                            <para># Development web server template</para><programlisting>define host{       
-                                name                    development-server       
-                                check_interval          15  
-                                notification_options    d,u,r
-                                        	...
-                                        register                        0    
-                                  }
-                            </programlisting>
-                            <para># Development web server</para>
-                            <programlisting>define host{
-                                        use                   generic-host,development-server
-                                        host_name            devweb1
-                                      ...     
-                                }
+                            <programlisting>
+#Generic host template
+define host {
+    name                    generic-host
+    active_checks_enabled   1
+    check_interval          10 
+     ...
+    register                0
+}
+
+# Development web server template
+define host {       
+    name                    development-server       
+    check_interval          15  
+    notification_options    d,u,r
+    ...
+    register                0    
+}
+
+# Development web server
+define host {
+    use               generic-host,development-server
+    host_name         devweb1
+    ...     
+}
                             </programlisting>
                         </entry>
                         
@@ -717,8 +715,7 @@ linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/multiple-templates1.png" format="PNG"/>
+                                        <imagedata fileref="images/multiple-templates1.png" format="PNG" scale="75" />
                                     </imageobject>
                                 </inlinemediaobject>
                             </para>
@@ -743,13 +740,14 @@ fileref="images/multiple-templates1.png" format="PNG"/>
         
         <para># Development web server</para>
         
-        <programlisting>define host{
-                    host_name               devweb1
-                    active_checks_enabled   1
-                    check_interval          10
-                    notification_options    d,u,r
-                    …
-                    }
+        <programlisting>
+define host {
+    host_name               devweb1
+    active_checks_enabled   1
+    check_interval          10
+    notification_options    d,u,r
+    ...
+}
         </programlisting>
     </section>
     
@@ -767,17 +765,20 @@ fileref="images/multiple-templates1.png" format="PNG"/>
         
         <informaltable frame="all">
             <tgroup cols="2">
+            <colspec colwidth="35*"/>
+            <colspec colwidth="65*"/>
                 <tbody>
                     <row>
                         <entry>
-                            <para>Regardez la définition d'hôte suivant qui se réfère à trois gabarits. </para><para># Development web server
-                                <programlisting>define host{
-                                            use        1, 4, 8
-                                            host_name  devweb1
-                                    ...	
-                                            }
+                            <para>Regardez la définition d'hôte suivant qui se réfère à trois gabarits. </para>
+                                <programlisting>
+# Development web server
+define host {
+    use        1, 4, 8
+    host_name  devweb1
+    ...
+}
                                 </programlisting>
-                            </para>
                             <para>Si certains des gabarits héritent eux-même de variables/valeurs de un ou
                                 plusieurs autre gabarits, les règles de priorité sont montrées à droite. 
                             </para>
@@ -793,8 +794,7 @@ fileref="images/multiple-templates1.png" format="PNG"/>
                                 <inlinemediaobject>
                                      
                                     <imageobject>
-                                        <imagedata
-fileref="images/multiple-templates2.png" format="PNG"/>
+                                        <imagedata fileref="images/multiple-templates2.png" format="PNG" scale="75"/>
                                     </imageobject>
                                 </inlinemediaobject>
                             </para>

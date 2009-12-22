@@ -118,18 +118,18 @@
                 </para>
                 
                 <programlisting>
-                    my $data = &lt;&lt;DATA;
-                    portmapper 100000
-                    portmap 100000
-                    sunrpc 100000
-                    rpcbind 100000
-                    rstatd 100001
-                    rstat 100001
-                    rup 100001
-                    ..
-                    DATA
-                    
-                    %prognum = map { my($a, $b) = split; ($a, $b) } split(/\n/, $data) ;
+my $data = &lt;&lt;DATA;
+portmapper 100000
+portmap 100000
+sunrpc 100000
+rpcbind 100000
+rstatd 100001
+rstat 100001
+rup 100001
+..
+DATA
+
+%prognum = map { my($a, $b) = split; ($a, $b) } split(/\n/, $data) ;
                 </programlisting>
             </listitem>
             
@@ -304,34 +304,33 @@ url="http://perl.apache.org/guide/">http://perl.apache.org/guide/</ulink>.
                 </para>
                 
                 <programlisting>
-                                    package main;
-                                    use subs 'CORE::GLOBAL::exit';
-                                    sub CORE::GLOBAL::exit { die "ExitTrap: $_[0] 
-                    (Embed::check_5frpc)"; }
-                                    package Embed::check_5frpc; sub hndlr { shift(@_);
-                    @ARGV=@_;
-                    #! /usr/bin/perl -w
-                    #
-                    # check_rpc plugin for Nagios
-                    #
-                    # usage:
-                    #    check_rpc host service
-                    #
-                    # Check if an rpc serice is registered and running
-                    # using rpcinfo - $proto $host $prognum 2&gt;&amp;1 |";
-                    #
-                    # Use these hosts.cfg entries as examples
-                    #
-                    # command[check_nfs]=/some/path/libexec/check_rpc $HOSTADDRESS$ nfs
-                    # service[check_nfs]=NFS;24x7;3;5;5;unix-admin;60;24x7;1;1;1;;check_rpc
-                    #
-                    # initial version: 3 May 2000 by Truongchinh Nguyen and Karl DeBisschop
-                    # current status: $Revision: 1.19 $
-                    #
-                    # Copyright Notice: GPL
-                    #
-                    … rest of plugin code goes here (it was removed for brevity) …
-                    }
+package main;
+use subs 'CORE::GLOBAL::exit';
+sub CORE::GLOBAL::exit { die "ExitTrap: $_[0] (Embed::check_5frpc)"; }
+package Embed::check_5frpc; sub hndlr { shift(@_);
+@ARGV=@_;
+#! /usr/bin/perl -w
+#
+# check_rpc plugin for Nagios
+#
+# usage:
+#    check_rpc host service
+#
+# Check if an rpc serice is registered and running
+# using rpcinfo - $proto $host $prognum 2&gt;&amp;1 |";
+#
+# Use these hosts.cfg entries as examples
+#
+# command[check_nfs]=/some/path/libexec/check_rpc $HOSTADDRESS$ nfs
+# service[check_nfs]=NFS;24x7;3;5;5;unix-admin;60;24x7;1;1;1;;check_rpc
+#
+# initial version: 3 May 2000 by Truongchinh Nguyen and Karl DeBisschop
+# current status: $Revision: 1.19 $
+#
+# Copyright Notice: GPL
+#
+… rest of plugin code goes here (it was removed for brevity) …
+}
                 </programlisting>
             </listitem>
             

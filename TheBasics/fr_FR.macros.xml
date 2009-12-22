@@ -40,17 +40,17 @@
             suivante :
         </para>
         <programlisting>
-            define host{
-            host_name         linuxbox
-            address           192.168.1.2
-            check_command     check_ping
-            …
-            }
+define host {
+    host_name         linuxbox
+    address           192.168.1.2
+    check_command     check_ping
+    …
+}
             
-            define command{
-            command_name   check_ping
-            command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w 100.0,90% -c 200.0,60%
-            }
+define command {
+    command_name   check_ping
+    command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w 100.0,90% -c 200.0,60%
+}
         </programlisting>
         <para>La ligne de commande finale, après substitution, qui sera exécutée pour le
             contrôle de l'hôte ressemblera à ceci :
@@ -73,12 +73,12 @@
             d'exclamation (!) comme ceci :
         </para>
         <programlisting>
-            define service{	
-            host_name             linuxbox
-            service_description   PING
-            check_command         check_ping!200.0,80%!400.0,40%
-            …
-            }
+define service {	
+    host_name             linuxbox
+    service_description   PING
+    check_command         check_ping!200.0,80%!400.0,40%
+    …
+}
         </programlisting>
         <para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
             paramètres (auxquels on fait référence par les macros &macro-argn;). La macro
@@ -86,9 +86,10 @@
             Supposons que nous utilisons la définition d'hôte ci-dessus et une commande <command>check_ping</command> définie comme ceci :
         </para>
         <programlisting>
-            define command{
-            command_name   check_ping
-            command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$
+define command {
+    command_name   check_ping
+    command_line   /usr/local/nagios/libexec/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$
+}
         </programlisting>
         <para>La ligne de commande finale à exécuter pour le contrôle du service sera :</para>
         <para>
@@ -275,12 +276,12 @@ linkend="configuringnagios-customobjectvars">variables d'objet
             …
         </para>
         <programlisting>
-            define host{
-            host_name      linuxbox
-            address        192.168.1.1
-            _MACADDRESS    00:01:02:03:04:05
-            …
-            }
+define host {
+    host_name      linuxbox
+    address        192.168.1.1
+    _MACADDRESS    00:01:02:03:04:05
+    …
+}
         </programlisting>
         <para>
             La variable <literal>_MACADDRESS</literal> serait disponible dans une macro appelée <literal>$_HOSTMACADDRESS$</literal>. Plus d'informations sur les variables personnalisées d'objets et comment

@@ -84,16 +84,17 @@ linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
             pourrait ressembler à quelque chose comme ça :
         </para>
         
-        <programlisting>define service{
-                    host_name                       firestorm
-                    service_description             TCP Wrappers
-                    is_volatile                     1
-                    active_checks_enabled           0
-                    passive_checks_enabled          1
-                    max_check_attempts              1
-                    check_command                   check_none
-                    …
-                    }
+        <programlisting>
+define service {
+        host_name                       firestorm
+        service_description             TCP Wrappers
+        is_volatile                     1
+        active_checks_enabled           0
+        passive_checks_enabled          1
+        max_check_attempts              1
+        check_command                   check_none
+        ...
+}
         </programlisting>
         
         
@@ -133,7 +134,7 @@ linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
         <programlisting>ALL: ALL: RFC931: twist (/usr/local/nagios/libexec/eventhandlers/handle_tcp_wrapper %h %d)&amp;</programlisting>
         
         <para>Cette ligne suppose qu'il existe un script appellé handle_tcp_wrapper dans
-            le répertoire /usr/local/nagios/libexec/eventhandlers/ sur firestorm. Le
+            le répertoire <filename class="directory">/usr/local/nagios/libexec/eventhandlers/</filename> sur firestorm. Le
             répertoire et le nom du script peuvent être changés comme vous le voulez.
         </para>
     </section>
@@ -147,8 +148,8 @@ linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
         </para>
         
         <programlisting>
-            #!/bin/sh
-            /usr/local/nagios/libexec/eventhandlers/submit_check_result firestorm "TCP Wrappers" 2 "Denied $2-$1" &gt; /dev/null 2&gt; /dev/null
+#!/bin/sh
+/usr/local/nagios/libexec/eventhandlers/submit_check_result firestorm "TCP Wrappers" 2 "Denied $2-$1" &gt; /dev/null 2&gt; /dev/null
         </programlisting>
         <para>Notez que le script handle_tcp_wrapper appelle le script submit_check_result
             pour envoyer des alertes à l'hôte chargé de supervision. Supposons que votre
@@ -157,14 +158,14 @@ linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
             pour spécifier l'emplacement du programme <command>send_nsca</command> sur firestorm): 
         </para>
         <programlisting>
-            #!/bin/sh
-            # Arguments
-            #	$1 = name of host in service definition
-            #	$2 = name/description of service in service definition
-            #	$3 = return code
-            #	$4 = outputs
-            
-            /bin/echo -e "$1\t$2\t$3\t$4\n" | /usr/local/nagios/bin/send_nsca monitor -c /usr/local/nagios/etc/send_nsca.cfg
+#!/bin/sh
+# Arguments
+#	$1 = name of host in service definition
+#	$2 = name/description of service in service definition
+#	$3 = return code
+#	$4 = outputs
+
+/bin/echo -e "$1\t$2\t$3\t$4\n" | /usr/local/nagios/bin/send_nsca monitor -c /usr/local/nagios/etc/send_nsca.cfg
         </programlisting>
     </section>
     

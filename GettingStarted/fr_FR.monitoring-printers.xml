@@ -189,13 +189,13 @@ class="directory">/usr/local/nagios/etc/objects/</filename>. Vous pouvez
         <para>Éditez le fichier de configuration principal de Nagios.</para>
         
         <screen>
-            <prompt>#</prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt>#</prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput>
         </screen>
         
         <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
         
         <programlisting>
-            #cfg_file=/usr/local/nagios/etc/objects/printer.cfg
+#cfg_file=/usr/local/nagios/etc/objects/printer.cfg
         </programlisting>
         
         <para>Enregistrez le fichier et quittez.</para>
@@ -226,7 +226,7 @@ linkend="configuringnagios-objectdefinitions">définitions d'objets</link>
         
         
         <screen>
-            <prompt># </prompt><userinput>vi /usr/local/nagios/etc/objects/printer.cfg</userinput>
+<prompt># </prompt><userinput>vi /usr/local/nagios/etc/objects/printer.cfg</userinput>
         </screen>
         
         <para>
@@ -241,13 +241,13 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour
         </para>
         
         <programlisting>
-            define host{
-            use     generic-printer   ; Inherit default values from a template
-            host_name  hplj2605dn     ; The name we're giving to this printer
-            alias    HP LaserJet 2605dn ; A longer name associated with the printer
-            address   192.168.1.30    ; IP address of the printer
-            hostgroups allhosts      ; Host groups this printer is associated with
-            }
+define host {
+    use         generic-printer   ; Inherit default values from a template
+    host_name   hplj2605dn     ; The name we're giving to this printer
+    alias       HP LaserJet 2605dn ; A longer name associated with the printer
+    address     192.168.1.30    ; IP address of the printer
+    hostgroups  allhosts      ; Host groups this printer is associated with
+}
         </programlisting>
         
         <para>Vous pouvez ajouter maintenant quelques définitions de services (dans le
@@ -278,14 +278,14 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour
         </para>
         
         <programlisting>
-            define service{
-            use          generic-service    ; Inherit values from a template
-            host_name       hplj2605dn       ; The name of the host the service is associated with
-            service_description  Printer Status     ; The service description
-            check_command     check_hpjd!-C public  ; The command used to monitor the service
-            normal_check_interval 10 ; Check the service every 10 minutes under normal conditions
-            retry_check_interval 1  ; Re-check the service every minute until its final/hard state is determined
-            }
+define service {
+    use                   generic-service    ; Inherit values from a template
+    host_name             hplj2605dn       ; The name of the host the service is associated with
+    service_description   Printer Status     ; The service description
+    check_command         check_hpjd!-C public  ; The command used to monitor the service
+    normal_check_interval 10 ; Check the service every 10 minutes under normal conditions
+    retry_check_interval  1  ; Re-check the service every minute until its final/hard state is determined
+}
         </programlisting>
         
         <para>Ajoutez la définition de service suivante pour pinger l'imprimante toutes
@@ -293,14 +293,14 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour
         </para>
         
         <programlisting>
-            define service{
-            use           generic-service
-            host_name        hplj2605dn
-            service_description   PING
-            check_command      check_ping!3000.0,80%!5000.0,100%
-            normal_check_interval  10
-            retry_check_interval  1
-            }
+define service {
+    use                   generic-service
+    host_name             hplj2605dn
+    service_description   PING
+    check_command         check_ping!3000.0,80%!5000.0,100%
+    normal_check_interva  10
+    retry_check_interval  1
+}
         </programlisting>
         
         <para>Enregistrez le fichier.</para>

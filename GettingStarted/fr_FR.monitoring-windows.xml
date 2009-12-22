@@ -177,7 +177,7 @@ class="directory">/usr/local/nagios/etc/objects/</filename>. Vous pouvez
         <para>Éditez le fichier de configuration principal de Nagios.</para>
         
         <screen>
-            <prompt>#</prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput>
+<prompt>#</prompt><userinput>vi /usr/local/nagios/etc/nagios.cfg</userinput>
         </screen>
         
         <para>Supprimez le caractère (#) du début de la ligne suivante du fichier de configuration principal :</para>
@@ -236,7 +236,7 @@ class="directory">C:\NSClient++</filename>
                 <para>Installez le service système NSClient++ avec la commande suivante:</para>
                 
                 <screen>
-                    <prompt>C:\&gt; </prompt><userinput>nsclient++ /install</userinput>
+<prompt>C:\&gt; </prompt><userinput>nsclient++ /install</userinput>
                 </screen>
             </step>
             
@@ -246,7 +246,7 @@ class="directory">C:\NSClient++</filename>
                 </para>
                 
                 <screen>
-                    <prompt>C:\&gt; </prompt><userinput>nsclient++ SysTray</userinput>
+<prompt>C:\&gt; </prompt><userinput>nsclient++ SysTray</userinput>
                 </screen>
             </step>
             
@@ -309,7 +309,7 @@ class="directory">C:\NSClient++</filename>
                 <para>Démarrez le service NSClient++ avec la commande suivante:</para>
                 
                 <screen>
-                    <prompt>C:\&gt; </prompt><userinput>nsclient++ /start</userinput>
+<prompt>C:\&gt; </prompt><userinput>nsclient++ /start</userinput>
                 </screen>
             </step>
             
@@ -343,7 +343,7 @@ linkend="configuringnagios-objectdefinitions">définitions d'objets</link>
         </para>
         
         <screen>
-            <prompt>#</prompt><userinput>vi /usr/local/nagios/etc/objects/windows.cfg</userinput>
+<prompt>#</prompt><userinput>vi /usr/local/nagios/etc/objects/windows.cfg</userinput>
         </screen>
         
         <para>
@@ -358,12 +358,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define host{
-            use   windows-server ; Inherit default values from a Windows server template (make sure you keep this line!)
-            host_name    winserver
-            alias    My Windows Server
-            address   192.168.1.2
-            }
+define host {
+    use          windows-server ; Inherit default values from a Windows server template (make sure you keep this line!)
+    host_name    winserver
+    alias        My Windows Server
+    address      192.168.1.2
+}
         </programlisting>
         
         <para>Bien. Maintenant vous pouvez ajouter quelques définitions de services (dans
@@ -394,12 +394,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define service{
-            use     generic-service
-            host_name      winserver
-            service_description NSClient++ Version
-            check_command    check_nt!CLIENTVERSION
-            }
+define service {
+    use                 generic-service
+    host_name           winserver
+    service_description NSClient++ Version
+    check_command       check_nt!CLIENTVERSION
+}
         </programlisting>
         
         <para>Ajoutez la définition de service suivante pour superviser le temps écoulé
@@ -407,12 +407,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define service{
-            use     generic-service
-            host_name      winserver
-            service_description Uptime
-            check_command    check_nt!UPTIME
-            }
+define service {
+    use                 generic-service
+    host_name           winserver
+    service_description Uptime
+    check_command       check_nt!UPTIME
+}
         </programlisting>
         
         <para>Ajoutez la définition de service suivante pour superviser la charge &acronym-cpu; du
@@ -422,12 +422,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define service{
-            use     generic-service
-            host_name      winserver
-            service_description &acronym-cpu; Load
-            check_command    check_nt!&acronym-cpu;LOAD!-l 5,80,90
-            }
+define service {
+    use                 generic-service
+    host_name           winserver
+    service_description CPU Load
+    check_command       check_nt!CPULOAD!-l 5,80,90
+}
         </programlisting>
         
         <para>Ajoutez la définition de service suivante pour superviser l'utilisation de
@@ -437,12 +437,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define service{
-            use     generic-service
-            host_name      winserver
-            service_description Memory Usage
-            check_command    check_nt!MEMUSE!-w 80 -c 90
-            }
+define service {
+    use                 generic-service
+    host_name           winserver
+    service_description Memory Usage
+    check_command       check_nt!MEMUSE!-w 80 -c 90
+}
         </programlisting>
         
         <para>Ajoutez la définition de service suivante pour superviser l'espace utilisé
@@ -452,12 +452,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define service{
-            use     generic-service
-            host_name      winserver
-            service_description C:\ Drive Space
-            check_command    check_nt!USEDDISKSPACE!-l c -w 80 -c 90
-            }
+define service {
+    use                 generic-service
+    host_name           winserver
+    service_description C:\ Drive Space
+    check_command       check_nt!USEDDISKSPACE!-l c -w 80 -c 90
+}
         </programlisting>
         
         <para>Ajoutez la définition de service suivante pour superviser l'état du service
@@ -465,12 +465,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define service{
-            use     generic-service
-            host_name      winserver
-            service_description W3SVC
-            check_command    check_nt!SERVICESTATE!-d SHOWALL -l W3SVC
-            }
+define service {
+    use                 generic-service
+    host_name           winserver
+    service_description W3SVC
+    check_command       check_nt!SERVICESTATE!-d SHOWALL -l W3SVC
+}
         </programlisting>
         
         <para>Ajoutez la définition de service suivante pour superviser l'état du
@@ -479,12 +479,12 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define service{
-            use     generic-service
-            host_name      winserver
-            service_description Explorer
-            check_command    check_nt!PROCSTATE!-d SHOWALL -l Explorer.exe
-            }
+define service {
+    use                 generic-service
+    host_name           winserver
+    service_description Explorer
+    check_command       check_nt!PROCSTATE!-d SHOWALL -l Explorer.exe
+}
         </programlisting>
         
         <para>Voilà pour le moment. Vous avez ajouté des services simples qui devraient
@@ -503,7 +503,7 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <screen>
-            <prompt>#</prompt><userinput>vi /usr/local/nagios/etc/commands.cfg</userinput>
+<prompt>#</prompt><userinput>vi /usr/local/nagios/etc/commands.cfg</userinput>
         </screen>
         
         <para>
@@ -516,10 +516,10 @@ linkend="configuringnagios-objectdefinitions-host">hôte</link> pour la
         </para>
         
         <programlisting>
-            define command{
-            command_name  check_nt
-            command_line  $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s PASSWORD -v $ARG1$ $ARG2$
-            }
+define command {
+    command_name  check_nt
+    command_line  $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s PASSWORD -v $ARG1$ $ARG2$
+}
         </programlisting>
         
         <para>Enregistrez le fichier de configuration.</para>
