@@ -95,63 +95,63 @@
             sur <emphasis>l'hôte C</emphasis> seraient écrites comme ceci :
         </para>
         <programlisting>
-            define servicedependency{
-                    host_name                       Host B
-                    service_description             Service D
-                    dependent_host_name             Host C
-                    dependent_service_description   Service F
-                    execution_failure_criteria      o
-                    notification_failure_criteria   w,u
-                    }
-            
-            define servicedependency{
-                    host_name                       Host B
-                    service_description             Service E
-                    dependent_host_name             Host C
-                    dependent_service_description   Service F
-                    execution_failure_criteria      n
-                    notification_failure_criteria   w,u,c
-                    }
-            
-            define servicedependency{
-                    host_name                       Host B
-                    service_description             Service C
-                    dependent_host_name             Host C
-                    dependent_service_description   Service F
-                    execution_failure_criteria      w
-                    notification_failure_criteria   c
-                    }
+define servicedependency {
+        host_name                       Host B
+        service_description             Service D
+        dependent_host_name             Host C
+        dependent_service_description   Service F
+        execution_failure_criteria      o
+        notification_failure_criteria   w,u
+}
+
+define servicedependency {
+        host_name                       Host B
+        service_description             Service E
+        dependent_host_name             Host C
+        dependent_service_description   Service F
+        execution_failure_criteria      n
+        notification_failure_criteria   w,u,c
+}
+
+define servicedependency {
+        host_name                       Host B
+        service_description             Service C
+        dependent_host_name             Host C
+        dependent_service_description   Service F
+        execution_failure_criteria      w
+        notification_failure_criteria   c
+}
         </programlisting>
         <para>Les autres définitions de dépendances décrites dans l'image précédente
             s'écriraient comme suit :
         </para>
         <programlisting>
-            define servicedependency{
-                    host_name                       Host A
-                    service_description             Service A
-                    dependent_host_name             Host B
-                    dependent_service_description   Service D
-                    execution_failure_criteria      u
-                    notification_failure_criteria   n
-                    }
-            
-            define servicedependency{
-                    host_name                       Host A
-                    service_description             Service B
-                    dependent_host_name             Host B
-                    dependent_service_description   Service E
-                    execution_failure_criteria      w,u
-                    notification_failure_criteria   c
-                    }
-            
-            define servicedependency{
-                    host_name                       Host B
-                    service_description             Service C
-                    dependent_host_name             Host B
-                    dependent_service_description   Service E
-                    execution_failure_criteria      n
-                    notification_failure_criteria   w,u,c
-                    }
+define servicedependency {
+        host_name                       Host A
+        service_description             Service A
+        dependent_host_name             Host B
+        dependent_service_description   Service D
+        execution_failure_criteria      u
+        notification_failure_criteria   n
+}
+
+define servicedependency {
+        host_name                       Host A
+        service_description             Service B
+        dependent_host_name             Host B
+        dependent_service_description   Service E
+        execution_failure_criteria      w,u
+        notification_failure_criteria   c
+}
+
+define servicedependency {
+        host_name                       Host B
+        service_description             Service C
+        dependent_host_name             Host B
+        dependent_service_description   Service E
+        execution_failure_criteria      n
+        notification_failure_criteria   w,u,c
+}
         </programlisting>
     </section>
     
@@ -290,15 +290,15 @@
         </para>
         
         <programlisting>
-            define servicedependency{
-                    host_name                       Host B
-                    service_description             Service D
-                    dependent_host_name             Host C
-                    dependent_service_description   Service F
-                    execution_failure_criteria      o
-                    notification_failure_criteria   n
-                    inherits_parent         1
-                    }
+define servicedependency {
+        host_name                       Host B
+        service_description             Service D
+        dependent_host_name             Host C
+        dependent_service_description   Service F
+        execution_failure_criteria      o
+        notification_failure_criteria   n
+        inherits_parent                 1
+}
         </programlisting>
         
         <para>Comme le paramètre inherits_parent est activé, la dépendance entre les
@@ -369,17 +369,17 @@
             devraient être définies ainsi:
         </para>
         <programlisting>
-            define hostdependency{
-                    host_name                       Host A
-                    dependent_host_name             Host C
-                    notification_failure_criteria   d
-                    }
-            
-            define hostdependency{
-                    host_name                       Host B
-                    dependent_host_name             Host C
-                    notification_failure_criteria   d,u
-                    }
+define hostdependency {
+        host_name                       Host A
+        dependent_host_name             Host C
+        notification_failure_criteria   d
+}
+
+define hostdependency {
+        host_name                       Host B
+        dependent_host_name             Host C
+        notification_failure_criteria   d,u
+}
         </programlisting>
         <para>Comme pour les dépendances de services, les dépendances d'hôtes ne sont pas
             héritées. Dans l'exemple de cette image, vous pouvez voir que l'hôte C

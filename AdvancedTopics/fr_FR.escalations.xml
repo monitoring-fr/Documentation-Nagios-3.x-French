@@ -56,25 +56,25 @@ linkend="configuringnagios-configobject"/>
         </para>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   90
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation{
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   90
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      6
-                    last_notification       10
-                    notification_interval   60
-                    contact_groups          nt-admins,managers,everyone
-                    }
+define serviceescalation{
+    host_name               webserver
+    service_description     HTTP
+    first_notification      6
+    last_notification       10
+    notification_interval   60
+    contact_groups          nt-admins,managers,everyone
+}
         </programlisting>
         
         <para>

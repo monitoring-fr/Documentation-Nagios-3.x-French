@@ -122,10 +122,11 @@ url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug
             assurez-vous d'avoir une commande de contrôle de cluster configurée. Partons
             du principe que vous avez la définition de commande check_cluster suivante:
         </para>
-        <programlisting>define command{
-                    command_name    check_service_cluster
-                    command_line    /usr/local/nagios/libexec/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
-                    }
+        <programlisting>
+define command {
+    command_name    check_service_cluster
+    command_line    /usr/local/nagios/libexec/check_cluster --service -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
+}
         </programlisting>
         <para>
             Maintenant, vous avez besoin de créer le service <emphasis>cluster</emphasis> et
@@ -136,11 +137,12 @@ url="&url-sourceforge-projects;nagiosplug/">&url-sourceforge-projects;nagiosplug
             état non-OK. Si tous les services faisant parti du cluster sont OK, le
             contrôle du cluster renvoie également un état OK.
         </para>
-        <programlisting>define service{
-            …
-            check_command   check_service_cluster!"DNS Cluster"!1!2!$SERVICESTATEID:host1:DNS Service$,$SERVICESTATEID:host2:DNS Service$,$SERVICESTATEID:host3:DNS Service$
-            …
-            }
+        <programlisting>
+define service {
+    ...
+    check_command   check_service_cluster!"DNS Cluster"!1!2!$SERVICESTATEID:host1:DNS Service$,$SERVICESTATEID:host2:DNS Service$,$SERVICESTATEID:host3:DNS Service$
+    ...
+}
         </programlisting>
         <para>Il est important de noter que nous passons une liste séparée par des
             virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
@@ -169,10 +171,11 @@ linkend="advancedtopics-redundancy">redondance de vos serveurs de
         <para>
             Qu'importe, partons du principe que vous avez une <code>check_host_cluster</code> commande définie comme suit:
         </para>
-        <programlisting>define command{
-            command_name    check_host_cluster
-            command_line    /usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
-            }
+        <programlisting>
+define command {
+    command_name    check_host_cluster
+    command_line    /usr/local/nagios/libexec/check_cluster --host -l $ARG1$ -w $ARG2$ -c $ARG3$ -d $ARG4$
+}
         </programlisting>
         <para>Disons que vous avez trois hôtes dans le cluster d'hôtes (appelés
             <emphasis>host1</emphasis>, <emphasis>host2</emphasis> et <emphasis>host3</emphasis>). Si vous
@@ -181,11 +184,12 @@ linkend="advancedtopics-redundancy">redondance de vos serveurs de
             servie à utiliser pour contrôler le cluster d'hôtes pourrait ressembler à
             celle-ci:
         </para>
-        <programlisting>define service{
-                  …
-                  check_command   check_host_cluster!"Super Host Cluster"!1!2!$HOSTSTATEID:host1$,$HOSTSTATEID:host2$,$HOSTSTATEID:host3$
-                  …
-                    }
+        <programlisting>
+define service {
+    ...
+    check_command   check_host_cluster!"Super Host Cluster"!1!2!$HOSTSTATEID:host1$,$HOSTSTATEID:host2$,$HOSTSTATEID:host3$
+    ...
+}
         </programlisting>
         <para>Il est important de noter que nous passons une liste séparée par des
             virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
