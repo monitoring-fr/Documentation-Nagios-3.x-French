@@ -186,8 +186,8 @@ linkend="advancedtopics-eventhandlers">gestionnaires d'événements</link>
         </para>
         <programlisting>
 define command {
-    command_name    submit_check_result
-    command_line    /usr/local/nagios/libexec/eventhandlers/submit_check_result $HOSTNAME$ '$SERVICEDESC$' $SERVICESTATE$ '$SERVICEOUTPUT$'
+    command_name    submit_check_result
+    command_line    /usr/local/nagios/libexec/eventhandlers/submit_check_result $HOSTNAME$ '$SERVICEDESC$' $SERVICESTATE$ '$SERVICEOUTPUT$'
 }
         </programlisting>
         <para>
@@ -467,8 +467,8 @@ linkend="thebasics-statetypes">l'état du service</link>). Si les résultats
         </para>
         <programlisting>
 define command {
-    command_name    service-fige
-    command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Service results are stale"
+    command_name    service-fige
+    command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Service results are stale"
 }
         </programlisting>
         <para>Quand Nagios détecte que les résultats sont figés et lance la commande

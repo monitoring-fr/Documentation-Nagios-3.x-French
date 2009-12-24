@@ -104,25 +104,25 @@ define serviceescalation{
         </para>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   90
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   90
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      6
-                    last_notification       0
-                    notification_interval   60
-                    contact_groups          nt-admins,managers,everyone
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      6
+    last_notification       0
+    notification_interval   60
+    contact_groups          nt-admins,managers,everyone
+}
         </programlisting>
         
         <para>
@@ -149,25 +149,25 @@ define serviceescalation{
         </para>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   20
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   20
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      4
-                    last_notification       0
-                    notification_interval   30
-                    contact_groups          on-call-support
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      4
+    last_notification       0
+    notification_interval   30
+    contact_groups          on-call-support
+}
         </programlisting>
         
         <para>Dans l'exemple ci-dessus:</para>
@@ -202,25 +202,25 @@ define serviceescalation{
         </para>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   20
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   20
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      4
-                    last_notification       0
-                    notification_interval   30
-                    contact_groups          on-call-support
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      4
+    last_notification       0
+    notification_interval   30
+    contact_groups          on-call-support
+}
         </programlisting>
         
         <para>Si, après trois notifications de problème, une notification de reprise
@@ -243,25 +243,25 @@ define serviceescalation{
         </para>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   45
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   45
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      6
-                    last_notification       0
-                    notification_interval   60
-                    contact_groups          nt-admins,managers,everyone
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      6
+    last_notification       0
+    notification_interval   60
+    contact_groups          nt-admins,managers,everyone
+}
         </programlisting>
         
         <para>Dans cet exemple nous voyons que l'intervalle de notification par défaut
@@ -282,25 +282,25 @@ define serviceescalation{
         </para>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   45
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   45
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      4
-                    last_notification       0
-                    notification_interval   60
-                    contact_groups          nt-admins,managers,everyone
-                    }
+define serviceescalation{
+    host_name               webserver
+    service_description     HTTP
+    first_notification      4
+    last_notification       0
+    notification_interval   60
+    contact_groups          nt-admins,managers,everyone
+}
         </programlisting>
         
         <para>Nous voyons que les deux définitions d'escalade se chevauchent sur les 4ème
@@ -317,36 +317,36 @@ define serviceescalation{
         </para>
         
         <programlisting>
-            define serviceescalation{
-                  host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   45
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   45
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-                    host_name               webserver
-                    service_description     HTTP
-                    first_notification      3
-                    last_notification       5
-                    notification_interval   45
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      3
+    last_notification       5
+    notification_interval   45
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <programlisting>
-            define serviceescalation{
-            host_name               webserver
-                    service_description     HTTP
-                    first_notification      7
-                    last_notification       0
-                    notification_interval   30
-                    contact_groups          nt-admins,managers
-                    }
+define serviceescalation {
+    host_name               webserver
+    service_description     HTTP
+    first_notification      7
+    last_notification       0
+    notification_interval   30
+    contact_groups          nt-admins,managers
+}
         </programlisting>
         
         <para>Dans l'exemple ci-dessus, il y aurait au maximum 4 notifications de problème
