@@ -150,16 +150,17 @@
         <para>Voici ce à quoi la définition du service pourrait ressembler (certains
             paramètres obligatoires ont été omis)… 
         </para>
-        <programlisting>define service{
-                    host_name               backup-server
-                    service_description     ArcServe Backup Job
-                    active_checks_enabled   0               ; active checks are NOT enabled
-                    passive_checks_enabled  1               ; passive checks are enabled (this is how results are reported)
-                    check_freshness         1
-                    freshness_threshold     93600           ; 26 hour threshold, since backups may not always finish at the same time
-                    check_command           no-backup-report        ; this command is run only if the service results are "stale"
-                    …other options…
-                    }
+        <programlisting>
+define service{
+    host_name               backup-server
+    service_description     ArcServe Backup Job
+    active_checks_enabled   0           ; active checks are NOT enabled
+    passive_checks_enabled  1           ; passive checks are enabled (this is how results are reported)
+    check_freshness         1
+    freshness_threshold     93600       ; 26 hour threshold, since backups may not always finish at the same time
+    check_command           no-backup-report    ; this command is run only if the service results are "stale"
+    ...other options...
+}
         </programlisting>
         <para>Notez que les contrôles actifs sont désactivés pour ce service. En effet les
             résultats du service sont uniquement fournis par une application externe, en
@@ -172,10 +173,11 @@
             comme périmés. La définition de la <literal>no-backup-report</literal>
             commande pourrait ressembler à ceci…
         </para>
-        <programlisting>define command{
-                    command_name    no-backup-report
-                    command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Results of backup job were not reported!"
-                    }
+        <programlisting>
+define command{
+    command_name    no-backup-report
+    command_line    /usr/local/nagios/libexec/check_dummy 2 "CRITICAL: Results of backup job were not reported!"
+}
         </programlisting>
         <para>Si Nagios détecte que les résultats du service sont périmés, il
             va lancer la <literal>no-backup-report</literal> commande comme un

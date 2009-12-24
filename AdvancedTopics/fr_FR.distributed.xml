@@ -198,32 +198,32 @@ define command {
 #!/bin/sh
 
 # Arguments:
-#  $1 = host_name (Short name of host that the service is
-#       associated with)
-#  $2 = svc_description (Description of the service)
-#  $3 = state_string (A string representing the status of
-#       the given service - "OK", "WARNING", "CRITICAL"
-#       or "UNKNOWN")
-#  $4 = plugin_output (A text string that should be used
-#       as the plugin output for the service checks)
+#   $1 = host_name (Short name of host that the service is
+#        associated with)
+#   $2 = svc_description (Description of the service)
+#   $3 = state_string (A string representing the status of
+#        the given service - "OK", "WARNING", "CRITICAL"
+#        or "UNKNOWN")
+#   $4 = plugin_output (A text string that should be used
+#        as the plugin output for the service checks)
 #
 
 # Convert the state string to the corresponding return code
 return_code=-1
 
 case "$3" in
-        OK)
-            return_code=0
-                ;;
-        WARNING)
-            return_code=1
-                ;;
-        CRITICAL)
-            return_code=2
-                ;;
-        UNKNOWN)
-            return_code=-1
-                ;;
+    OK)
+        return_code=0
+        ;;
+    WARNING)
+        return_code=1
+        ;;
+    CRITICAL)
+        return_code=2
+        ;;
+    UNKNOWN)
+        return_code=-1
+        ;;
 esac
 
 # pipe the service check info into the send_nsca program, which
@@ -242,7 +242,7 @@ class="directory">/usr/local/nagios/etc/</filename>.
         <para>C'est tout ! Nous venons de configurer avec succès un hôte distant sur
             lequel tourne Nagios pour agir comme un serveur de supervision
             distribué. Voyons maintenant ce qui se passe exactement avec le serveur
-            distribué et comment il envoie des résultats de contrôle de service à Nagios
+                distribué et comment il envoie des résultats de contrôle de service à Nagios
             (les étapes soulignées ci-dessous correspondent aux numéros du schéma de
             référence ci-dessus) : 
         </para>

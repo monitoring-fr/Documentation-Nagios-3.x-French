@@ -125,30 +125,30 @@ define servicedependency {
         </para>
         <programlisting>
 define servicedependency {
-    host_name                       Host A
-    service_description             Service A
-    dependent_host_name             Host B
-    dependent_service_description   Service D
-    execution_failure_criteria      u
-    notification_failure_criteria   n
+    host_name                       Host A
+    service_description             Service A
+    dependent_host_name             Host B
+    dependent_service_description   Service D
+    execution_failure_criteria      u
+    notification_failure_criteria   n
 }
 
 define servicedependency {
-    host_name                       Host A
-    service_description             Service B
-    dependent_host_name             Host B
-    dependent_service_description   Service E
-    execution_failure_criteria      w,u
-    notification_failure_criteria   c
+    host_name                       Host A
+    service_description             Service B
+    dependent_host_name             Host B
+    dependent_service_description   Service E
+    execution_failure_criteria      w,u
+    notification_failure_criteria   c
 }
 
 define servicedependency {
-    host_name                       Host B
-    service_description             Service C
-    dependent_host_name             Host B
-    dependent_service_description   Service E
-    execution_failure_criteria      n
-    notification_failure_criteria   w,u,c
+    host_name                       Host B
+    service_description             Service C
+    dependent_host_name             Host B
+    dependent_service_description   Service E
+    execution_failure_criteria      n
+    notification_failure_criteria   w,u,c
 }
         </programlisting>
     </section>
@@ -289,13 +289,13 @@ define servicedependency {
         
         <programlisting>
 define servicedependency {
-    host_name                       Host B
-    service_description             Service D
-    dependent_host_name             Host C
-    dependent_service_description   Service F
-    execution_failure_criteria      o
-    notification_failure_criteria   n
-    inherits_parent                 1
+    host_name                       Host B
+    service_description             Service D
+    dependent_host_name             Host C
+    dependent_service_description   Service F
+    execution_failure_criteria      o
+    notification_failure_criteria   n
+    inherits_parent                 1
 }
         </programlisting>
         
@@ -368,15 +368,15 @@ define servicedependency {
         </para>
         <programlisting>
 define hostdependency {
-    host_name                       Host A
-    dependent_host_name             Host C
-    notification_failure_criteria   d
+    host_name                       Host A
+    dependent_host_name             Host C
+    notification_failure_criteria   d
 }
 
 define hostdependency {
-    host_name                       Host B
-    dependent_host_name             Host C
-    notification_failure_criteria   d,u
+    host_name                       Host B
+    dependent_host_name             Host C
+    notification_failure_criteria   d,u
 }
         </programlisting>
         <para>Comme pour les dépendances de services, les dépendances d'hôtes ne sont pas

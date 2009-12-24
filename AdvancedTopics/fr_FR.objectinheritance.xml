@@ -36,9 +36,9 @@ linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         <programlisting>
 define someobjecttype {
     object-specific variables ...
-    name            template_name
-    use             name_of_template_to_use
-    register        [0/1]
+    name            template_name
+    use             name_of_template_to_use
+    register        [0/1]
 }
         </programlisting>
         
@@ -86,17 +86,17 @@ define someobjecttype {
         
         <programlisting>
 define host {
-    host_name               bighost1
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      5
-    name                    hosttemplate1
+    host_name               bighost1
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+    name                    hosttemplate1
 }
 
 define host {
-    host_name               bighost2
-    max_check_attempts      3
-    use                     hosttemplate1
+    host_name               bighost2
+    max_check_attempts      3
+    use                     hosttemplate1
 }
         </programlisting>
         
@@ -111,10 +111,10 @@ define host {
         
         <programlisting>
 define host {
-    host_name               bighost2
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      3
+    host_name               bighost2
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      3
 }
         </programlisting>
         
@@ -146,23 +146,23 @@ define host {
         
         <programlisting>
 define host {
-    host_name               bighost1
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      5
-    name                    hosttemplate1
+    host_name               bighost1
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+    name                    hosttemplate1
 }
 
 define host {
-    host_name               bighost2
-    max_check_attempts      3
-    use                     hosttemplate1
-    name                    hosttemplate2
+    host_name               bighost2
+    max_check_attempts      3
+    use                     hosttemplate1
+    name                    hosttemplate2
 }
 
 define host {
-    host_name               bighost3
-    use                     hosttemplate2
+    host_name               bighost3
+    use                     hosttemplate2
 }
         </programlisting>
         
@@ -177,24 +177,24 @@ define host {
         
         <programlisting>
 define host {
-    host_name               bighost1
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      5
+    host_name               bighost1
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
 }
 
 define host {
-    host_name               bighost2
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      3
+    host_name               bighost2
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      3
 }
 
 define host {
-    host_name               bighost3
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      3
+    host_name               bighost3
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      3
 }
         </programlisting>
         
@@ -220,23 +220,23 @@ define host {
         
         <programlisting>
 define host {
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      5
-    name                    generichosttemplate
-    register                        0
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
+    name                    generichosttemplate
+    register                0
 }
 
 define host {
-    host_name               bighost1
-    address                 192.168.1.3
-    use                     generichosthosttemplate
+    host_name               bighost1
+    address                 192.168.1.3
+    use                     generichosthosttemplate
 }
 
 define host {
-    host_name               bighost2
-    address                 192.168.1.4
-    use                     generichosthosttemplate
+    host_name               bighost2
+    address                 192.168.1.4
+    use                     generichosthosttemplate
 }
         </programlisting>
         
@@ -261,19 +261,19 @@ define host {
         
         <programlisting>
 define host {
-    host_name               bighost1
-    address                 192.168.1.3
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      5
+    host_name               bighost1
+    address                 192.168.1.3
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
 }
 
 define host {
-    host_name               bighost2
-    address                 192.168.1.4
-    check_command           check-host-alive
-    notification_options    d,u,r
-    max_check_attempts      5
+    host_name               bighost2
+    address                 192.168.1.4
+    check_command           check-host-alive
+    notification_options    d,u,r
+    max_check_attempts      5
 }
         </programlisting>
         
@@ -298,21 +298,21 @@ define host {
         
         <programlisting>
 define host {
-    _customvar1             somevalue  ; &lt;-- Custom host variable
-    _snmp_community         public  ; &lt;-- Custom host variable
-    name                    generichosttemplate
-    register                        0
+    _customvar1         somevalue  ; &lt;-- Custom host variable
+    _snmp_community     public  ; &lt;-- Custom host variable
+    name                generichosttemplate
+    register            0
 }
 
 define host {
-    host_name               bighost1
-    address                 192.168.1.3
-    use                     generichosthosttemplate
+    host_name           bighost1
+    address             192.168.1.3
+    use                 generichosthosttemplate
 }
         </programlisting>
         
         <para>
-            l'hôte <emphasis>bighost1</emphasis> va hérité de la variable personnalisée
+            L'hôte <emphasis>bighost1</emphasis> va hériter de la variable personnalisée
             de l'hôte <literal>_customvar1</literal> et
             <literal>_snmp_community</literal>, aussi bien que de leur valeurs
             respectives de la définition du <emphasis>generichosttemplate</emphasis>. Le
@@ -322,10 +322,10 @@ define host {
         
         <programlisting>
 define host {
-    host_name               bighost1
-    address                 192.168.1.3
-    _customvar1             somevalue
-    _snmp_community         public
+    host_name               bighost1
+    address                 192.168.1.3
+    _customvar1             somevalue
+    _snmp_community         public
 }
         </programlisting>
     </section>
@@ -348,16 +348,16 @@ define host {
         
         <programlisting>
 define host {
-    event_handler           my-event-handler-command
-    name                    generichosttemplate
-    register                0
+    event_handler           my-event-handler-command
+    name                    generichosttemplate
+    register                0
 }
 
 define host {
-    host_name               bighost1
-    address                 192.168.1.3
-    event_handler           null
-    use                     generichosthosttemplate
+    host_name               bighost1
+    address                 192.168.1.3
+    event_handler           null
+    use                     generichosthosttemplate
 }
         </programlisting>
         
@@ -370,8 +370,8 @@ define host {
         
         <programlisting>
 define host {
-    host_name               bighost1
-    address                 192.168.1.3
+    host_name               bighost1
+    address                 192.168.1.3
 }
         </programlisting>
     </section>
@@ -398,15 +398,15 @@ define host {
         
         <programlisting>
 define host{
-    hostgroups              all-servers
-    name                    generichosttemplate
-    register                0
+    hostgroups              all-servers
+    name                    generichosttemplate
+    register                0
 }
 
 define host {
-    host_name              linuxserver1
-    hostgroups            +linux-servers,web-servers
-    use                    generichosthosttemplate
+    host_name               linuxserver1
+    hostgroups              +linux-servers,web-servers
+    use                     generichosthosttemplate
 }
         </programlisting>
         
@@ -419,8 +419,8 @@ define host {
         
         <programlisting>
 define host {
-    host_name         linuxserver1
-    hostgroups        all-servers,linux-servers,web-servers
+    host_name       linuxserver1
+    hostgroups      all-servers,linux-servers,web-servers
 }
         </programlisting>
     </section>
@@ -639,14 +639,14 @@ define host {
         
         <programlisting>
 define host {
-    name            linux-server
-    contact_groups  linux-admins
+    name            linux-server
+    contact_groups  linux-admins
     ...
 }
 
 define hostescalation {
-    host_name       linux-server
-    contact_groups  +management
+    host_name       linux-server
+    contact_groups  +management
     ...
 }
         </programlisting>
@@ -655,8 +655,8 @@ define hostescalation {
         
         <programlisting>
 define hostescalation {
-    host_name       linux-server
-    contact_groups  linux-admins,management
+    host_name       linux-server
+    contact_groups  linux-admins,management
     ...
 }
         </programlisting>
@@ -684,26 +684,26 @@ define hostescalation {
                             <programlisting>
 #Generic host template
 define host {
-    name                    generic-host
+    name                    generic-host
     active_checks_enabled   1
-    check_interval          10 
+    check_interval          10
      ...
-    register                0
+    register                0
 }
 
 # Development web server template
-define host {       
-    name                    development-server       
-    check_interval          15  
-    notification_options    d,u,r
+define host {
+    name                    development-server       
+    check_interval          15  
+    notification_options    d,u,r
     ...
-    register                0    
+    register                0    
 }
 
 # Development web server
 define host {
-    use               generic-host,development-server
-    host_name         devweb1
+    use                     generic-host,development-server
+    host_name               devweb1
     ...     
 }
                             </programlisting>
@@ -742,10 +742,10 @@ define host {
         
         <programlisting>
 define host {
-    host_name               devweb1
-    active_checks_enabled   1
-    check_interval          10
-    notification_options    d,u,r
+    host_name               devweb1
+    active_checks_enabled   1
+    check_interval          10
+    notification_options    d,u,r
     ...
 }
         </programlisting>
@@ -774,8 +774,8 @@ define host {
                                 <programlisting>
 # Development web server
 define host {
-    use        1, 4, 8
-    host_name  devweb1
+    use         1, 4, 8
+    host_name   devweb1
     ...
 }
                                 </programlisting>
