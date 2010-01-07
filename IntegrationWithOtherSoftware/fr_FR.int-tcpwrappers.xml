@@ -86,14 +86,14 @@ linkend="configuringnagios-objectdefinitions-host">définition d'hôte</link>
         
         <programlisting>
 define service {
-        host_name                       firestorm
-        service_description             TCP Wrappers
-        is_volatile                     1
-        active_checks_enabled           0
-        passive_checks_enabled          1
-        max_check_attempts              1
-        check_command                   check_none
-        ...
+    host_name                   firestorm
+    service_description         TCP Wrappers
+    is_volatile                 1
+    active_checks_enabled       0
+    passive_checks_enabled      1
+    max_check_attempts          1
+    check_command               check_none
+    ...
 }
         </programlisting>
         

@@ -257,7 +257,7 @@ define command {
     case "$2" in
     HARD)
         case "$1" in
-        DOWN)
+        DOWN)
             # The master host has gone down!
             # We should now become the master host and take
             # over the responsibilities of monitoring the

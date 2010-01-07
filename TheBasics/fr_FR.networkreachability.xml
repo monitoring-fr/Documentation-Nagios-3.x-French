@@ -92,52 +92,52 @@ linkend="configuringnagios-objectdefinitions-host">définitions
         
         <programlisting>
 define host {
-    host_name       Nagios   ; &lt;-- The local host has no parent - it is the topmost host
+    host_name       Nagios   ; &lt;-- The local host has no parent - it is the topmost host
 }
-            
+
 define host {
-    host_name       Switch1
-    parents         Nagios
+    host_name       Switch1
+    parents         Nagios
 }
-                   
+
 define host {
-    host_name       Web
-    parents         Switch1
+    host_name       Web
+    parents         Switch1
 }
-                   
+
 define host {
-    host_name       FTP
-    parents         Switch1
+    host_name       FTP
+    parents         Switch1
 }
-                   
+
 define host {
-    host_name       Router1
-    parents         Switch1
+    host_name       Router1
+    parents         Switch1
 }
-                   
+
 define host {
-    host_name       Switch2
-    parents         Router1
+    host_name       Switch2
+    parents         Router1
 }
-                   
+
 define host {
-    host_name       Wkstn1
-    parents         Switch2
+    host_name       Wkstn1
+    parents         Switch2
 }
-                   
+
 define host {
-    host_name       HPLJ2605
-    parents         Switch2
+    host_name       HPLJ2605
+    parents         Switch2
 }
-                   
+
 define host {
-    host_name       Router2
-    parents         Router1
+    host_name       Router2
+    parents         Router1
 }
-                   
+
 define host {
-    host_name       somewebsite.com
-    parents         Router2
+    host_name       somewebsite.com
+    parents         Router2
 }
         </programlisting>
     </section>

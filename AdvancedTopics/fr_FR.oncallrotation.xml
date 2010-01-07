@@ -57,17 +57,17 @@ linkend="thebasics-timeperiods">période de temps</link> pour vous faciliter
         <para>Premièrement, définissons les périodes de temps pour les vances:</para>
         <programlisting>
 define timeperiod {
-    name                 holidays
+    name                 holidays
     timeperiod_name      holidays
-    january 1            00:00-24:00  ; New Year's Day
-    2008-03-23           00:00-24:00  ; Easter (2008)
-    2009-04-12           00:00-24:00  ; Easter (2009)
-    monday -1 may        00:00-24:00  ; Memorial Day (Last Monday in May)
-    july 4               00:00-24:00  ; Independence Day
-    monday 1 september   00:00-24:00  ; Labor Day (1st Monday in September)
+    january 1            00:00-24:00  ; New Year's Day
+    2008-03-23           00:00-24:00  ; Easter (2008)
+    2009-04-12           00:00-24:00  ; Easter (2009)
+    monday -1 may        00:00-24:00  ; Memorial Day (Last Monday in May)
+    july 4               00:00-24:00  ; Independence Day
+    monday 1 september   00:00-24:00  ; Labor Day (1st Monday in September)
     thursday 4 november  00:00-24:00  ; Thanksgiving (4th Thursday in November)
-    december 25          00:00-24:00  ; Christmas
-    december 31          17:00-24:00  ; New Year's Eve (5pm onwards)
+    december 25          00:00-24:00  ; Christmas
+    december 31          17:00-24:00  ; New Year's Eve (5pm onwards)
 }
         </programlisting>
         <para>Ensuite, définissons les périodes d'astreintes de John incluant les jours et
@@ -76,13 +76,13 @@ define timeperiod {
         </para>
         <programlisting>
 define timeperiod {
-    timeperiod_name    john-oncall
-    monday             00:00-24:00
-    tuesday            00:00-24:00
-    wednesday          00:00-24:00
-    thursday           00:00-24:00
-    friday             00:00-24:00
-    exclude            holidays   ; Exclude holiday dates/times defined elsewhere
+    timeperiod_name    john-oncall
+    monday             00:00-24:00
+    tuesday            00:00-24:00
+    wednesday          00:00-24:00
+    thursday           00:00-24:00
+    friday             00:00-24:00
+    exclude            holidays   ; Exclude holiday dates/times defined elsewhere
 }
         </programlisting>
         <para>Nous pouvons référencer cette période de temps dans la définition du contact
@@ -90,10 +90,10 @@ define timeperiod {
         </para>
         <programlisting>
 define contact{
-    contact_name                  john
+    contact_name                  john
     ...
-    host_notification_period      john-oncall
-    service_notification_period   john-oncall
+    host_notification_period      john-oncall
+    service_notification_period   john-oncall
 }
         </programlisting>
         <para>Définissons une nouvelle période de temps pour les astreintes de Bob
@@ -102,10 +102,10 @@ define contact{
         </para>
         <programlisting>
 define timeperiod {
-    timeperiod_name   bob-oncall
-    friday            00:00-24:00
-    saturday          00:00-24:00
-    use               holidays   ; Also include holiday date/times defined elsewhere
+    timeperiod_name   bob-oncall
+    friday            00:00-24:00
+    saturday          00:00-24:00
+    use               holidays   ; Also include holiday date/times defined elsewhere
 }
         </programlisting>
         <para>Nous pouvons référencer cette période de temps dans la définition du contact
@@ -113,10 +113,10 @@ define timeperiod {
         </para>
         <programlisting>
 define contact{
-    contact_name                  bob
+    contact_name                  bob
     ...
-    host_notification_period      bob-oncall
-    service_notification_period   bob-oncall
+    host_notification_period      bob-oncall
+    service_notification_period   bob-oncall
 }
         </programlisting>
     </section>
@@ -149,10 +149,10 @@ define timeperiod{
         </para>
         <programlisting>
 define contact {
-    contact_name                   john
+    contact_name                   john
     ...
-    host_notification_period       john-oncall
-    service_notification_period    john-oncall
+    host_notification_period       john-oncall
+    service_notification_period    john-oncall
 }
 
 define contact {
@@ -175,7 +175,7 @@ define contact {
         </para>
         <programlisting>
 define timeperiod {
-    timeperiod_name     john-oncall
+    timeperiod_name             john-oncall
     2007-07-29 / 14 00:00-24:00  ; Every 14 days (two weeks), starting Sunday, July 29th, 2007
     2007-07-30 / 14 00:00-24:00  ; Every other Monday starting July 30th, 2007
     2007-07-31 / 14 00:00-24:00  ; Every other Tuesday starting July 31st, 2007
@@ -190,7 +190,7 @@ define timeperiod {
         </para>
         <programlisting>
 define timeperiod {
-    timeperiod_name     bob-oncall
+    timeperiod_name            bob-oncall
     2007-08-05 / 14 00:00-24:00 ; Every 14 days (two weeks), starting Sunday, August 5th, 2007
     2007-08-06 / 14 00:00-24:00 ; Every other Monday starting August 6th, 2007
     2007-08-07 / 14 00:00-24:00 ; Every other Tuesday starting August 7th, 2007
@@ -205,10 +205,10 @@ define timeperiod {
         </para>
         <programlisting>
 define contact {
-    contact_name                  john
+    contact_name                  john
     ...
-    host_notification_period      john-oncall
-    service_notification_period   john-oncall
+    host_notification_period      john-oncall
+    service_notification_period   john-oncall
 }
 
 define contact {
@@ -228,13 +228,13 @@ define contact {
         <para>Premièrement, définissons les périodes de temps où john s'absente:</para>
         <programlisting>
 define timeperiod {
-    name            john-out-of-office
-    timeperiod_name john-out-of-office
-    day 15                  00:00-24:00 ; 15th day of each month
-    day -1                  00:00-24:00 ; Last day of each month (28th, 29th, 30th, or 31st)
-    day -2                  00:00-24:00 ; 2nd to last day of each month (27th, 28th, 29th, or 30th)
-    january 2               00:00-24:00 ; January 2nd each year
-    june 1 - july 5         00:00-24:00 ; Yearly camping trip (June 1st - July 5th)
+    name                john-out-of-office
+    timeperiod_name     john-out-of-office
+    day 15                  00:00-24:00 ; 15th day of each month
+    day -1                  00:00-24:00 ; Last day of each month (28th, 29th, 30th, or 31st)
+    day -2                  00:00-24:00 ; 2nd to last day of each month (27th, 28th, 29th, or 30th)
+    january 2               00:00-24:00 ; January 2nd each year
+    june 1 - july 5         00:00-24:00 ; Yearly camping trip (June 1st - July 5th)
     2007-11-01 - 2007-11-10 00:00-24:00 ; Vacation to the US Virgin Islands (November 1st-10th, 2007)
 }
         </programlisting>
@@ -243,13 +243,13 @@ define timeperiod {
         </para>
         <programlisting>
 define timeperiod {
-    timeperiod_name   john-oncall
-    monday            00:00-24:00
-    tuesday           00:00-24:00
-    wednesday         00:00-24:00
-    thursday          00:00-24:00
-    friday            00:00-24:00
-    exclude           john-out-of-office ; Exclude dates/times John is out
+    timeperiod_name   john-oncall
+    monday            00:00-24:00
+    tuesday           00:00-24:00
+    wednesday         00:00-24:00
+    thursday          00:00-24:00
+    friday            00:00-24:00
+    exclude           john-out-of-office ; Exclude dates/times John is out
 }
         </programlisting>
         <para>Nous pouvons référencer cette période de temps dans la définition du contact
@@ -257,9 +257,9 @@ define timeperiod {
         </para>
         <programlisting>
 define contact {
-    contact_name                 john
+    contact_name                 john
     ...
-    host_notification_period     john-oncall
+    host_notification_period     john-oncall
     service_notification_period  john-oncall
 }
         </programlisting>
@@ -268,8 +268,8 @@ define contact {
         </para>
         <programlisting>
 define timeperiod {
-    timeperod_name  bob-oncall
-    use             john-out-of-office ; Include holiday date/times that John is out
+    timeperod_name  bob-oncall
+    use             john-out-of-office ; Include holiday date/times that John is out
 }
         </programlisting>
         <para>Nous pouvons référencer cette période de temps dans la définition du contact
@@ -277,9 +277,9 @@ define timeperiod {
         </para>
         <programlisting>
 define contact {
-    contact_name                 bob
+    contact_name                 bob
     ...
-    host_notification_period     bob-oncall
+    host_notification_period     bob-oncall
     service_notification_period  bob-oncall
 }
         </programlisting>

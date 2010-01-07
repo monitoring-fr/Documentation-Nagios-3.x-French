@@ -44,7 +44,7 @@ define host {
     host_name         linuxbox
     address           192.168.1.2
     check_command     check_ping
-    …
+    ...
 }
             
 define command {
@@ -77,7 +77,7 @@ define service {
     host_name             linuxbox
     service_description   PING
     check_command         check_ping!200.0,80%!400.0,40%
-    …
+    ...
 }
         </programlisting>
         <para>Dans l'exemple ci-dessus, la commande de contrôle du service a deux
@@ -280,7 +280,7 @@ define host {
     host_name      linuxbox
     address        192.168.1.1
     _MACADDRESS    00:01:02:03:04:05
-    …
+    ...
 }
         </programlisting>
         <para>
