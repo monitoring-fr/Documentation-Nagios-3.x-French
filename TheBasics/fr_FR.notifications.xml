@@ -69,7 +69,7 @@
         <para>
         Quand Nagios émet une notification de service, il notifie chaque contact
         membre d'un des groupes de contacts spécifiés dans le paramètre
-        <literal>contactgroups</literal>de la définition du service. 
+        <literal>contactgroups</literal> de la définition du service. 
         Nagios est conscient qu'un contact peut être membre de plus d'un 
         groupe, donc il commence par supprimer les doublons avant toute chose.
         </para>
@@ -79,7 +79,7 @@
         <title>Quels sont les filtres à traverser avant qu'une notification ne soit émise ?</title>
         
         <para>
-        Le simple fait qu'une notification d'hôte ou de service doive être émise ne
+        Le simple fait qu'une notification d'hôte ou de service doit être émise ne
         signifie pas que des contacts vont la recevoir. Il y a plusieurs filtres
         qu'une notification doit traverser avant d'être jugée valable pour
         l'émission. Même alors, des contacts peuvent ne pas la recevoir si leurs
@@ -228,7 +228,7 @@
         <para>
         Le dernier filtre à passer pour chaque contact concerne la période. Chaque
         définition de contact comprend un paramètre <literal>notification_period</literal>
-        qui spécifie la période durant laquelle on peut envoyer des notification à
+        qui spécifie la période durant laquelle on peut envoyer des notifications à
         ce contact. Si l'heure à laquelle la notification est faite n'est pas
         comprise dans la plage de temps de la période spécifiée, le contact ne
         recevra pas la notification. Dans le cas contraire, le contact la reçoit ! 
@@ -239,8 +239,8 @@
         <title>Moyens de notifications</title>
         
         <para>
-        Nagios peut vous envoyer des notificaitons sur le sproblèmes et retours à la
-        normale d'a peu près toute sles façons que vous voulez: email, pager,
+        Nagios peut vous envoyer des notificaitons sur les problèmes et retours à la
+        normale d'a peu près toutes les façons que vous voulez: email, pager,
         téléphone (<acronym>SMS</acronym>), messageries instantanées Yahoo, <acronym>ICQ</acronym>, 
         ou <acronym>MSN</acronym>, alertes sonores, décharge électrique, etc. 
         La façon dont est envoyée les notifications dépend des 
@@ -380,7 +380,7 @@
                             <para>
                             L'hôte ou le service vient de s'arrêter 
                             d'<link linkend="advancedtopics-flapping">osciller</link>
-                            parce que la détection d'oscillation a été désactivé.
+                            parce que la détection d'oscillation a été désactivée.
                             </para>
                         </entry>
                     </row>
@@ -436,7 +436,7 @@
         
         <para>
         Il y a bien des moyens de configurer Nagios pour envoyer des
-        notifications. C'et à vous de décider de la (des) méthode(s) que vous voulez
+        notifications. C'est à vous de décider de la (des) méthode(s) que vous voulez
         utiliser. Une fois ce choix fait, vous devrez installer les logiciels
         nécessaires, et définir les commandes de notification dans vos fichiers de
         configuration avant de pouvoir les utiliser. Voici quelques méthodes de
@@ -484,7 +484,7 @@
         
         <para>
         Si vous cherchez à envoyer des messages à votre pager ou à votre téléphone
-        portable sans email, jetez un coup d'Å“il aux applications suivantes. Elles
+        portable sans email, jetez un coup d'œil aux applications suivantes. Elles
         peuvent être utilisées en conjonction avec Nagios pour envoyer une
         notification via un modem quand un problème arrive. De cette façon, vous
         n'êtes pas dépendant de l'email pour émettre des notifications (gardez à
