@@ -72,7 +72,7 @@
     </section>
     <section>
         <title>Types de gestionnaires d'événements</title>
-        <para>Il ya différents types de gestionnaires d'événements optionnels qui peuvent
+        <para>Il y a différents types de gestionnaires d'événements optionnels qui peuvent
             être définis pour prendre en compte les changements d'états et d'hôtes :
             </para>
         <itemizedlist>
@@ -154,7 +154,7 @@
             <link linkend="thebasics-macrolist-hostattempt">&macro-hostattempt;</link>
         </para>
         <para>Les scripts devraient être capables d'examiner les valeurs des arguments qui
-            lui ont été passé et de prendre toute action nécessaire basée sur ces
+            lui ont été passés et de prendre toute action nécessaire basée sur ces
             valeurs. La meilleure façon de comprendre comment fonctionne les
             gestionnaires d'événements est de voir un exemple. Heureusement pour vous,
             en voici un <link linkend="advancedtopics-eventhandlers-example">ci-dessous</link>.
@@ -181,7 +181,7 @@
         </para>
         <para>Idéalement, vous devriez être capable d'évaluer les types de gestionnaires
             d'événements que vous allez implémenter et donc de donner juste ce qu'il
-            faut comme droit à l'utilisateur Nagios pour pouvoir exécuter les commande
+            faut comme droit à l'utilisateur Nagios pour pouvoir exécuter les commandes
             système nécessaires. Vous pourriez essayer d'utiliser 
             <ulink url="http://www.courtesan.com/sudo/sudo.html">sudo</ulink> pour cela.
         </para>
@@ -196,8 +196,8 @@
             de la machine locale et que vous avez spécifié restart-httpd comme commande
             de gestionnaire d'événement pour la définition du service
             &protocol-http;. Je supposerai également que vous avez donné à l'option
-            max_check_attempts du service une valeur supérieure ou égale à 4 (i.e le
-            service est contrôlé 4 fois avant qu'on ne considère qu'il a un réel
+            <option>max_check_attempts</option> du service une valeur supérieure ou égale à 4 
+            (i.e le service est contrôlé 4 fois avant qu'on ne considère qu'il a un réel
             problème). Un exemple de définition (avec uniquement les champs concernés)
             ressemblerait à ceci … 
         </para>
@@ -295,7 +295,7 @@ exit 0
         </para>
         <itemizedlist>
             <listitem>
-                <para>Après que le le service soit essayé pour la troisième fois (dans un état
+                <para>Après que le service soit essayé pour la troisième fois (dans un état
                     SOFT CRITICAL)
                 </para>
             </listitem>
