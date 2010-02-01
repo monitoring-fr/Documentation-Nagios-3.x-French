@@ -100,9 +100,8 @@
         <para>
             …où time est l'heure (au format <literal>time_t</literal> à laquelle 
             l'application externe ou le &acronym-cgi; a envoyé la commande externe au
-            fichier de commande. Certaines des commandes disponibles sont décrites dans
-            le tableau ci-dessous, ainsi que leur <option>command_id</option> et une description de leurs !!! FIXME !!!  
-            et <option>command_arguments.</option> Les arguments dépendent de la commande qui sera soumise à Nagios.
+            fichier de commande. Les valeurs pour les arguments <option>command_id</option> et
+            <option>command_arguments</option> dépendent de la commande qui sera soumise à Nagios.
         </para>
         <para>Un listing complet des commandes externes qui peuvent être utilisées (ainsi
             que des exemples d'utilisation) sont en ligne à l'adresse suivante:
