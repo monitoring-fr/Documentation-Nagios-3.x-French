@@ -14,8 +14,8 @@
         
         <para>Nagios a la capacité de faire la distinction entre les services
             <emphasis>normaux</emphasis> et les services <emphasis>volatiles</emphasis>. L'option
-            is_volatil de chaque définition de service vous permet de spécifier si ou
-            non un service spécifique est volatile. Pour la plupart des gens, la
+            <literal>is_volatil</literal> de chaque définition de service vous permet de spécifier 
+            si oui ou non un service spécifique est volatile. Pour la plupart des gens, la
             majorité des services supervisés sera de type non-volatile (par
             ex. <emphasis>normal</emphasis>). Toutefois, des services volatiles peuvent se
             révéler très utiles lorsqu'ils sont bien utilisés… 
@@ -82,7 +82,7 @@ linkend="thebasics-notifications">ce qui doit être fait</link>).
         
         <para>Ces événements ne se produisent normalement que lorsque des services sont
             dans un état non-OK et qu'un changement d'état hard vient de se produire. En
-            d'autre termes, ils ne se produisent que la première fois que le service
+            d'autres termes, ils ne se produisent que la première fois que le service
             passe dans un état non-OK. Si des contrôles ultérieurs du service conduisent
             au même état non-OK, il n'y a aucun changement d'état hard et aucun des
             événements mentionnés ne se reproduit. 
@@ -168,7 +168,7 @@ linkend="thebasics-statetypes">état hard</link> quand un état non-OK est
 KILL_RUN_CMD="/usr/local/Nagios/libexec/eventhandlers/submit_check_result host_name 'Port Scans' 2 'Port scan from host $TARGET$ on port $PORT$.  Host has been firewalled.'"
             </programlisting>
             
-            <para>Assurez-vous de remplacer host_name avec le nom court de l'hôte avec lequel
+            <para>Assurez-vous de remplacer <literal>host_name</literal> avec le nom court de l'hôte avec lequel
                 le service est associé.
             </para>
         </section>
