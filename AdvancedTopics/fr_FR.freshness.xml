@@ -20,7 +20,7 @@
             contrôles d'hôte et de service sont soumis régulièrement de
             <link linkend="thebasics-passivechecks">manière passive</link>. 
             Ceci est très utile dans les environnements de supervision 
-            <link linkend="advancedtopics-distributed">distribué</link> ou 
+            <link linkend="advancedtopics-distributed">distribuée</link> ou 
             <link linkend="advancedtopics-redundancy">hautement disponible</link>.
         </para>
     </section>
@@ -65,7 +65,7 @@
                 au niveau global ou au niveau service/hôte.
             </para>
         </tip>
-        <para>Par exemple, si vous donnez la valeur 60 au paramètre freshness_threshold de
+        <para>Par exemple, si vous donnez la valeur 60 au paramètre <literal>freshness_threshold</literal> de
             l'un de vos services, Nagios considérera que le service est
             <emphasis>périmé</emphasis> si le dernier résultat obtenu date de plus de 60
             secondes (1 minute).
@@ -110,7 +110,7 @@
             <listitem>
                 <para>
                     Configurez le paramètre <literal>check_command</literal> dans votre fichier
-                    de définition d'hôte ou de service pourc indiquer la commande valide à
+                    de définition d'hôte ou de service pour indiquer la commande valide à
                     utiliser pour contrôler activement le service ou l'hôte lorsque celui-ci est
                     déclaré périmé.
                 </para>
@@ -119,7 +119,7 @@
                 <para>
                     Le paramètre <literal>check_period</literal> dans votre fichier de
                     définition d'hôte ou de service est utilisé quand Nagios doit déterminer
-                    lorsque'un hôte ou service doit être contrôlé au niveau fraîcheur, aussi
+                    lorsqu'un hôte ou service doit être contrôlé au niveau fraîcheur, aussi
                     assurez-vous de le régler sur une période de temps valide.
                 </para>
             </listitem>
@@ -128,7 +128,7 @@
             <para>Si vous ne spécifiez pas de valeur pour le paramètre
                 <literal>freshness_threshold</literal> (ou si vous le mettez à zéro), Nagios
                 calculera automatiquement un seuil de fraîcheur à utiliser en se basant sur
-                la fréquence de scontrôle utilisé pour cet hôte ou service. je vous
+                la fréquence de contrôle utilisé pour cet hôte ou service. Je vous
                 recommande d'explicitement préciser un niveau de fraîcheur plutôt que de
                 laisser Nagios en décider un à votre place.
             </para>
@@ -168,10 +168,10 @@ define service{
             seuil de fraîcheur a été positionné à 26 heures. C'est un peu plus de 24
             heures parce que la durée des travaux de sauvegarde varie selon les jours
             (en fonction du volume de données à sauvegarder, de l'encombrement du
-            réseau, etc.). La <literal>no-backup-report</literal> commande est 
+            réseau, etc.). La commande <literal>no-backup-report</literal> est 
             exécutée seulement si les résultats du service sont considérés
-            comme périmés. La définition de la <literal>no-backup-report</literal>
-            commande pourrait ressembler à ceci…
+            comme périmés. La définition de la commande <literal>no-backup-report</literal>
+            pourrait ressembler à ceci…
         </para>
         <programlisting>
 define command{
@@ -180,7 +180,7 @@ define command{
 }
         </programlisting>
         <para>Si Nagios détecte que les résultats du service sont périmés, il
-            va lancer la <literal>no-backup-report</literal> commande comme un
+            va lancer la commande <literal>no-backup-report</literal> comme un
             contrôle actif de service. Cela exécute le plugin &plugin-dummy;
             qui retourne un état critique à Nagios. Le service passe en état 
             critique (s'il n'y était pas déjà) et quelqu'un sera probablement
