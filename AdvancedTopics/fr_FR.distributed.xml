@@ -17,7 +17,7 @@
     </section>
     <section>
         <title>Buts</title>
-        <para>Le but de l'environnement de supervision distribué que je vais décrire est
+        <para>Le but de l'environnement de supervision distribuéé que je vais décrire est
             de décharger l'excès de charge induit par les contrôle de services (sur la
             &acronym-cpu;, etc.) du serveur <emphasis>central</emphasis> sur un ou plusieurs serveurs
             <emphasis>distribués</emphasis>. La plupart des petites et moyennes entreprises
@@ -45,7 +45,7 @@
     </section>
     <section>
         <title>Serveur central ou serveurs distribués </title>
-        <para>Quand on installe l'environnement de supervision distribué avec Nagios, il y
+        <para>Quand on installe l'environnement de supervision distribuée avec Nagios, il y
             a des différences entre la configuration du serveur central et celle des
             serveurs distribués. Je vous montrerai comment configurer ces deux types de
             serveurs et j'expliquerai les effets des changements sur la supervision en
@@ -98,7 +98,7 @@ linkend="thebasics-passivechecks">contrôles passifs</link>), mais je n'ai
         <para>Afin de faciliter l'envoi de résultats de contrôles passifs à un hôte
             distant, j'ai écrit le module complémentaire <link
 linkend="nagiosaddons-addons-nsca">&name-nsca;</link>
-            .Il contient deux parties. La
+            . Il contient deux parties. La
             première est un programme client (<command>send_nsca</command>) qui tourne sur un hôte distant
             et envoi les résultats de contrôles de service à un autre serveur. La
             seconde est le démon &name-nsca;
@@ -108,9 +108,9 @@ linkend="nagiosaddons-addons-nsca">&name-nsca;</link>
             d'un client, le démon enverra l'information de contrôle à Nagios (sur le
             serveur central) en insérant une commande PROCESS_SVC_CHECK_RESULT dans le
             <link linkend="configuringnagios-configmain-command_file">fichier de
-                commande externe
+                commande externe,
             </link>
-            ,avec les résultats du contrôle. La prochaine fois
+             avec les résultats du contrôle. La prochaine fois
             que Nagios contrôlera les <link
 linkend="advancedtopics-extcommands">commandes externes</link>, il trouvera
             l'information de contrôle de service passif qui avait été envoyée par le
@@ -139,7 +139,7 @@ linkend="configuringnagios-configobject">fichier de configuration
                 <para>Le serveur distribué a son paramètre 
                     <xref linkend="configuringnagios-configmain-enable_notifications"
                 endterm="configuringnagios-configmain-enable_notifications-tech"/>
-                    initiale fixé à 0. Cela évitera d'envoyer des notifications à partir du
+                    fixé à 0. Cela évitera d'envoyer des notifications à partir du
                     serveur. 
                 </para>
             </listitem>
@@ -372,8 +372,8 @@ linkend="configuringnagios-configmain-accept_passive_service_checks">contrôles
             surveillé par un serveur distribué. Cela assure que les contrôles de service
             actifs ne sont jamais exécutés en temps normal. Les services continueront à
             être ordonnancés à leur intervalle de contrôle normal (3 minutes, 5 minutes,
-            etc…), mais ils ne seront jamais exécutés. Cette boucle de ré
-            ordonnancement continuera aussi longtemps que Nagios tourne. Je vais
+            etc…), mais ils ne seront jamais exécutés. Cette boucle de 
+            ré-ordonnancement continuera aussi longtemps que Nagios tourne. Je vais
             expliquer bientôt pourquoi ce type de fonctionnement… 
         </para>
         <para>Et voilà ! Facile, non ?</para>
@@ -433,7 +433,7 @@ linkend="advancedtopics-freshness">ici</link>. Cette fonctionnalité apporte
             </listitem>
         </itemizedlist>
         <para>Nagios teste régulièrement la validité des résultats pour lesquels cette
-            option est activée. L'option <literal>freshness_threshold</literal>dans
+            option est activée. L'option <literal>freshness_threshold</literal> dans
             chaque service détermine le niveau de validité pour celui-ci. Par exemple,
             si sa valeur est 300 pour un de vos services, Nagios va considérer que les
             résultats du service sont <emphasis>figés</emphasis> s'ils ont plus de 5 minutes
@@ -442,14 +442,14 @@ linkend="advancedtopics-freshness">ici</link>. Cette fonctionnalité apporte
             de la valeur des options <literal>normal_check_interval</literal> ou de
             <literal>retry_check_interval</literal> (en fonction de <link
 linkend="thebasics-statetypes">l'état du service</link>). Si les résultats
-            sont <emphasis>figés</emphasis>, Nagos exécutera la commande spécifiée dans
+            sont <emphasis>figés</emphasis>, Nagios exécutera la commande spécifiée dans
             <literal>check_command</literal> dans la définition du service, vérifiant
             ainsi activement ce service.
         </para>
         <para>N'oubliez pas que vous devez définir l'option
             <literal>check_command</literal> dans la définition des services, pour
             pouvoir tester activement l'état d'un service depuis le serveur
-            central. Dans des conditions normales, cette commande check_command ne sera
+            central. Dans des conditions normales, cette commande <literal>check_command</literal> ne sera
             pas exécutée (parce que les test actifs auront été désactivés globalement au
             niveau du programme, ou pour des services spécifiques). A partir du moment
             ou le contrôle de validité des données est activé, Nagios exécutera cette
@@ -472,7 +472,7 @@ define command {
 }
         </programlisting>
         <para>Quand Nagios détecte que les résultats sont figés et lance la commande
-            <command>service_fige.sh</command>, le plugin &plugin-dummy; est exécuté et
+            <command>service_fige</command>, le plugin &plugin-dummy; est exécuté et
             le service passe dans un état critique. Ceci déclenchera l'envoi de
             notifications, donc vous saurez finalement qu'il y a un problème.
         </para>
@@ -535,7 +535,7 @@ linkend="configuringnagios-configmain-ochp_command">ochp</link> définie.
         </itemizedlist>
         <para>La commande ochp utilisée pour le traitement des vérifications d'hôtes
             fonctionne de manière similaire à la commande ocsp utilisée pour le
-            traitement des vérification des services (cf documentation ci dessus). Pour
+            traitement des vérification des services (cf documentation ci-dessus). Pour
             être sûr que les vérifications passives d'hôtes sont valides et à jour, il
             est nécessaire d'activer la <link
 linkend="advancedtopics-freshness">validité des vérification pour les
