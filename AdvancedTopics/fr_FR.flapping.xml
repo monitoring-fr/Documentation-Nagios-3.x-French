@@ -36,7 +36,7 @@
             décrites ci-dessous…
         </para>
         
-        <para>Chaque fois d'un contrôle de service résulte dans un état hard ou un état de
+        <para>Chaque fois qu'un contrôle de service résulte dans un état hard ou un état de
             rétablissement soft, Nagios contrôle si le service a commencé ou arrêté
             d'osciller.
         </para>
@@ -184,7 +184,7 @@
         <title>Détection de l'oscillation pour les services</title>
         
         <para>Nagios regarde si le service est en état d'oscillation avant d'exécuter un
-            côntrôle (actif comme passif).
+            contrôle (actif comme passif).
         </para>
         
         <para>Le principe pour la détection d'oscillation des services fonctionnent de la
@@ -230,13 +230,13 @@
         <title>Seuils de détection de l'oscillation</title>
         
         <para>Nagios utilise plusieurs variables pour déterminer le pourcentage de
-            changement d'état fixer aux seuils de la détection d'oscillation. Tant pour
+            changement d'état attribué aux seuils de la détection d'oscillation. Tant pour
             les hôtes que pour les services, il y a des seuils supérieurs et inférieurs
             globaux et spécifiques que vous pouvez configurer. Nagios utilisera les
             seuils globaux par défaut si vous n'en spécifiez aucun.
         </para>
         
-        <para>La tableau ci-dessous montre les variables globales et spécifiques pour les
+        <para>Le tableau ci-dessous montre les variables globales et spécifiques pour les
             hôtes et services afin de gérer les seuils de détection. 
         </para>
         
