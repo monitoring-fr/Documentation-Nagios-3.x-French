@@ -20,7 +20,7 @@
         </para>
         
         <note>
-            <para>Note: Si vous apprenez à utiliser Nagios, je suggère de ne pas essayer
+            <para>Si vous apprenez à utiliser Nagios, je suggère de ne pas essayer
                 d’implémenter la redondance tant que vous n’êtes pas habitué aux 
                 <link linkend="advancedtopics-redundancy-prerequisites">pré-requis</link> 
                 déjà présentés. La redondance est un sujet relativement complexe, et il est
@@ -33,7 +33,7 @@
         <title>Pré-requis</title>
         <para>
             <anchor id="advancedtopics-redundancy-prerequisites" />
-            Pré-requisAvant de penser pouvoir implémenter la redondance avec 
+            Avant de penser pouvoir implémenter la redondance avec 
             Nagios, vous devez être familier avec ce qui suit…
             <itemizedlist>
                 <listitem>
@@ -192,15 +192,15 @@
                     <para>Le fichier de configuration sur le système E devrait avoir un service défini
                         pour surveiller l’état du processus Nagios sur le système A. Supposons que
                         vous ayez défini cette vérification de service pour lancer le plugin
-                        check_nagios sur le système A &acronym-faq;. !!!! FIXME !!!!
+                        check_nagios sur le système A.
                     </para>
                 </listitem>
                 
                 <listitem>
                     <para>La définition du service pour la surveillance du processus Nagios sur le
                         système A devrait être un 
-                        <link linkend="advancedtopics-eventhandlers">gestionnaire d’événement</link>
-                        .Supposons que ce service gestionnaire d’événement soit 
+                        <link linkend="advancedtopics-eventhandlers">gestionnaire d’événement</link>.
+                        Supposons que ce service gestionnaire d’événement soit 
                         <literal>handle-master-proc-event</literal>.
                     </para>
                 </listitem>
