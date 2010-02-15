@@ -8,24 +8,23 @@
 >
 <chapter id="securityandperformancetuning-security">
     <title>Considérations sur la sécurité</title>
-    
     <section>
         <title>
             <anchor id="securityandperformancetuning-security-intro" />Introduction
         </title>
-        
         <para>
             <inlinemediaobject>
-                 
                 <imageobject>
                      <imagedata fileref="images/security.png" format="PNG"/>
                 </imageobject>
-            </inlinemediaobject>
+                <textobject>
+    				 <phrase>Security</phrase>
+  				</textobject>
+  			</inlinemediaobject>
              Ce paragraphe est un
             rapide survol des éléments que vous devez conserver à l'esprit au moment
             d'installer Nagios, afin que l'installation soit sécurisée.
         </para>
-        
         <para>Vous devriez considérer votre serveur de supervision comme un porte dérobée
             de vos autres systèmes. Dans certains cas, le serveur Nagios a besoin d'être
             autorisé à traverser des pares-feu pour pouvoir contrôler des serveurs
@@ -39,7 +38,6 @@
             où vous utilisez des clés partagées &protocol-ssh; pour superviser les
             systèmes distants.
         </para>
-        
         <para>Si un intrus a la possibilité de soumettre des résultats de contrôles ou des
             commandes externes au démon Nagios, il a la possibilité de soumettre des
             données de supervision erronées, de vous rendre fou avec des notifications
@@ -48,7 +46,6 @@
             des services, allumage et extinction électrique, etc. cela peut devenir
             problématique.
         </para>
-        
         <para>Un autre champ de possibilités pour les intrus est de sniffer les données de
             supervision (information d'état) au moment où elle transite sur le
             réseau. Si les canaux de communication ne sont pas chiffrés, les attaquants
@@ -60,17 +57,14 @@
             en mesure de déterminer le meilleur moment pour compromettre un système et
             utiliser ses ressources (&acronym-cpu;, etc.) sans être découvert.
         </para>
-        
         <para>Voici quelques trucs pour vous aider à garder vos systèmes sécurisés quand
             vous implémentez une solution de supervision basée sur Nagios…
         </para>
     </section>
-    
     <section>
         <title>
             <anchor id="securityandperformancetuning-security-bestpractices"/>Meilleures pratiques
         </title>
-        
         <orderedlist>
             <listitem>
                 <para>
@@ -91,11 +85,13 @@
                             <imageobject>
                                 <imagedata fileref="images/security3.png" format="PNG"/>
                             </imageobject>
-                        </mediaobject>
+                			<textobject>
+    				 			<phrase>Security 3</phrase>
+  							</textobject>
+  						</mediaobject>
                     </informalfigure>
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Ne pas faire fonctionner Nagios en tant que  root !</emphasis>.
@@ -113,7 +109,6 @@
                     <ulink url="http://www.courtesan.com/sudo/sudo.html"><command>sudo</command></ulink>.
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Vérouillez le répertoire des résultats de contrôle</emphasis>.
@@ -127,7 +122,6 @@
                     problèmes de sécurité (gestionnaires d'événements déclenchés).
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Verrouillez le fichier des commandes externes</emphasis>.
@@ -148,7 +142,6 @@
                     pour faire fonctionner les &acronym-cgi;s avec l'utilisateur nagios plutôt que nobody.
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Authentification requise pour les &acronym-cgi;s</emphasis>. Je
@@ -167,7 +160,6 @@
                     puisse contrôler vôtre Nagios ? 
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Implémentez les mesure renforcées de sécurité des
@@ -181,7 +173,6 @@
                     tierces parties.
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Utilisez les chemins complets dans la définition des commandes</emphasis>.
@@ -190,7 +181,6 @@
                     binaires que vous exécutez.
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Cachez les informations sensibles à l'aide des macros &macro-argn;</emphasis>.
@@ -208,7 +198,6 @@
                     la macro &macro-usern;. 
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Éliminez les caractères dangereux des macros</emphasis>.
@@ -227,7 +216,6 @@
                     l'utilisateur nagios (une autre bonne raison pour ne pas exécuter Nagios comme l'utilisateur root). 
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Sécurisez l'accès aux agents distants</emphasis>.
@@ -242,11 +230,13 @@
                             <imageobject>
                                 <imagedata fileref="images/security1.png" format="PNG"/>
                             </imageobject>
-                        </mediaobject>
+                			<textobject>
+    				 			<phrase>Security 1</phrase>
+  							</textobject>
+  						</mediaobject>
                     </informalfigure>
                 </para>
             </listitem>
-            
             <listitem>
                 <para>
                     <emphasis role="bold">Sécurisez vos canaux de communication</emphasis>.
@@ -261,7 +251,10 @@
                             <imageobject>
                                 <imagedata fileref="images/security2.png" format="PNG"/>
                             </imageobject>
-                        </mediaobject>
+                			<textobject>
+    				 			<phrase>Security 2</phrase>
+  							</textobject>
+  						</mediaobject>
                     </informalfigure>
                 </para>
             </listitem>

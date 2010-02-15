@@ -8,10 +8,8 @@
 >
 <chapter id="securityandperformancetuning-mrtggraphs">
     <title>Grapher les informations de performance avec MRTG</title>
-    
     <section>
         <title>Introduction</title>
-        
         <para>
             L'utilitaire <link linkend="securityandperformancetuning-nagiostats">nagiostats</link>
             vous permet de grapher divers statisques de performance dans le temps en utilisant 
@@ -22,7 +20,6 @@
             </indexterm>.
             Ceci est important car il peut vous aider à:
         </para>
-        
         <itemizedlist>
             <listitem>
                 <para>Assurer le bon fonctionnement de Nagios</para>
@@ -39,7 +36,6 @@
             </listitem>
         </itemizedlist>
     </section>
-    
     <section>
         <title>Exemple de configuration MRTG</title>
         
@@ -79,37 +75,33 @@
                                         <link linkend="thebasics-hostchecks">Des contrôles d'hôte</link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="advancedtopics-dependencychecks">
                                         Des contrôles de prédiction de dépendance d'hôte
                                         </link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link>
                                     </para>
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
                                 <inlinemediaobject>
-                                     
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-activehostchecks.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Active Host Checks</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Les contrôles actifs des services - Ce graphique montre comment les
@@ -122,37 +114,33 @@
                                         <link linkend="thebasics-servicechecks">Des contrôles de service</link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="advancedtopics-dependencychecks">
                                         Des contrôles de prédiction de dépendance de service
                                         </link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link>
                                     </para>
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
                                 <inlinemediaobject>
-                                     
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-activeservicechecks.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Active Service Checks</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Les contrôles d'hôtes et de services mis en cache - Ce graphique montre
@@ -165,8 +153,7 @@
                                         <link linkend="advancedtopics-cachedchecks">Des contrôles mis en cache</link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="advancedtopics-dependencychecks">
                                         Des contrôles de prédiction de dépendance d'hôte et de service
@@ -175,20 +162,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
                                 <inlinemediaobject>
-                                     
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-cachedchecks.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Cached Checks</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Les contrôles passifs des services - Ce graphique montre comment les
@@ -203,21 +189,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
-                                <inlinemediaobject>
-                                     
+                                             <inlinemediaobject>
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-passivechecks.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Passive Checks</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Les hôtes/services actifs contrôlés - Ce graphique montre combien (d'un
@@ -232,21 +216,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
-                                <inlinemediaobject>
-                                     
+                                             <inlinemediaobject>
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-activelychecked.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Actively Checked</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Les hôtes/services passifs contrôlés - Ce graphique montre combien (d'un
@@ -261,21 +243,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
-                                <inlinemediaobject>
-                                     
+                                             <inlinemediaobject>
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-passivelychecked.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Passvel Checked</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>La latence et le temps d'exécution d'un contrôle de service - Ce graphique
@@ -288,8 +268,7 @@
                                         <link linkend="thebasics-servicechecks">Des contrôles de service</link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="securityandperformancetuning-tuning">De l'optimisation des
                                             performances
@@ -307,15 +286,13 @@
                                          endterm="configuringnagios-configmain-max_concurrent_checks-tech"/>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <xref linkend="configuringnagios-configmain-check_result_reaper_frequency"
                                         endterm="configuringnagios-configmain-check_result_reaper_frequency-tech"/>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <xref linkend="configuringnagios-configmain-max_check_result_reaper_time"
                                         endterm="configuringnagios-configmain-max_check_result_reaper_time-tech"/>
@@ -323,20 +300,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
                                 <inlinemediaobject>
-                                     
                                     <imageobject>
                                          <imagedata fileref="images/mrtg-serviceperfstats.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Service Performance Statistics</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Le taux moyen de changement d'état des services - Ce graphique montre le
@@ -352,20 +328,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
                                 <inlinemediaobject>
-                                     
                                     <imageobject>
                                          <imagedata fileref="images/mrtg-servicestatechange.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Service State Change</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>La latence et le temps d'exécution d'un contrôle d'un hôte - Ce graphique
@@ -378,8 +353,7 @@
                                         <link linkend="thebasics-hostchecks"> Des contrôles d'hôte</link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="securityandperformancetuning-tuning">
                                         De l'optimisation des performances
@@ -397,15 +371,13 @@
                                         endterm="configuringnagios-configmain-max_concurrent_checks-tech"/>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <xref linkend="configuringnagios-configmain-check_result_reaper_frequency"
                                         endterm="configuringnagios-configmain-check_result_reaper_frequency-tech"/>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <xref linkend="configuringnagios-configmain-max_check_result_reaper_time"
                                         endterm="configuringnagios-configmain-max_check_result_reaper_time-tech"/>
@@ -413,21 +385,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
-                                <inlinemediaobject>
-                                     
+                                             <inlinemediaobject>
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-hostperfstats.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Host Performance Statistics</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Le taux moyen de changement d'état des hôtes - Ce graphique montre le
@@ -443,21 +413,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
-                                <inlinemediaobject>
-                                     
+                                             <inlinemediaobject>
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-hoststatechange.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Host State Change</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Les commandes externes - Ce graphique montre comment les commandes externes
@@ -473,14 +441,12 @@
                                         <link linkend="thebasics-passivechecks">Des contrôles passifs</link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="advancedtopics-distributed">La supervision distribuée</link>
                                     </para>
                                 </listitem>
-                                
-                                <listitem>
+                                            <listitem>
                                     <para>
                                         <link linkend="advancedtopics-redundancy">
                                         Redondance/Basculement en cas de panne de la supervision
@@ -489,21 +455,19 @@
                                 </listitem>
                             </itemizedlist>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
-                                 
-                                <inlinemediaobject>
-                                     
+                                             <inlinemediaobject>
                                     <imageobject>
                                         <imagedata fileref="images/mrtg-externalcommands.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG External Commands</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
-                    
                     <row>
                         <entry>
                             <para>Les tampons de Commandes Externes - Ce graphique montre comment les
@@ -524,17 +488,17 @@
                                 jusqu'à ce qu'elles soient traitées par le démon Nagios.
                             </para>
                         </entry>
-                        
-                        <entry>
+                            <entry>
                             <para>
                                 <inlinemediaobject>
-                                     
                                     <imageobject>
                                          <imagedata fileref="images/mrtg-commandbuffers.png" format="PNG"/>
                                     </imageobject>
-                                </inlinemediaobject>
-                                 
-                            </para>
+                    				<textobject>
+    									<phrase>MRTG Command Buffers</phrase>
+  									</textobject>
+  								</inlinemediaobject>
+                                         </para>
                         </entry>
                     </row>
                 </tbody>

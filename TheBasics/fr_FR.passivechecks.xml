@@ -88,7 +88,10 @@
                     <imageobject>
                         <imagedata fileref="images/passivechecks.png" format="PNG"/>
                     </imageobject>
-                </mediaobject>
+                	<textobject>
+    					<phrase>Passive Checks</phrase>
+  					</textobject>
+  				</mediaobject>
             </informalfigure>
             Ci-dessous, le fonctionnement des contrôles passifs en plus détaillé : 
         </para>
@@ -333,7 +336,10 @@
                 <imageobject>
                     <imagedata fileref="images/nsca.png" format="PNG"/>
                 </imageobject>
-            </mediaobject>
+                <textobject>
+    				 <phrase>NSCA</phrase>
+  				</textobject>
+  			</mediaobject>
         </informalfigure>
         Si une application demeurant sur le même serveur que &name-nagios; veut envoyer un
         résultat de contrôle passif d'hôte ou de service, vous pouvez simplement
