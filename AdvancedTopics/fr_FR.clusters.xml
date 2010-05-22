@@ -11,11 +11,11 @@
     <section>
         <title>Introduction</title>
         <para>Plusieurs personnes ont demandé comment il est possible de superviser des
-            clusters d'hôtes ou de services, aussi ai-je décidé d'écrire une petite
-            documentation sur comment le faire. C'est plutôt simple aussi ne
-            devriez-vous pas avoir de problème de compréhension…
+            clusters d'hôtes ou de services, aussi j'ai décidé d'écrire une petite
+            documentation sur comment le faire. C'est plutôt simple, vous ne 
+            devriez pas avoir de problème de compréhension…
         </para>
-        <para>Premièrement, nous devons définri ce que nous entendons par
+        <para>Premièrement, nous devons définir ce que nous entendons par
             <emphasis>cluster</emphasis>. La façon la plus simple pour comprendre est de
             prendere un exemple. Disons que votre organisation possède cinq serveurs qui
             fournissent la redondance des services &protocol-dns;. Si l'un d'eux tombe,
@@ -32,7 +32,7 @@
         <para>Si votre organisation possède un groupe d'hôtes assurant une solution de
             haute disponibilité (clustering), je considèrerais ceux-ci comme un cluster
             d'hôtes. Si l'un des ces hôtes tombe, un autre va prendre le relais pour
-            assurer les tâches dévolus au serveur tombé. En apparté, vous pouvez
+            assurer les tâches dévolues au serveur tombé. En apparté, vous pouvez
             consulter le <ulink url="http://www.linux-ha.org/">High-Availability Linux
                 Project
             </ulink>
@@ -42,7 +42,7 @@
     </section>
     <section>
         <title>Plan d'attaque</title>
-        <para>Il y plusieurs potentiellement plusieurs méthodes pour superviser des
+        <para>Il y potentiellement plusieurs méthodes pour superviser des
             clusters d'hôtes ou de services. Je vais décrire la méthode que je crois
             être la plus simple. La supervision de clusters d'hôtes ou de services
             impliquent deux choses:
@@ -146,7 +146,7 @@ define service {
         </programlisting>
         <para>Il est important de noter que nous passons une liste séparée par des
             virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
-            de services <link linkend="thebasics-macros">macros</link> à <code>$ARG4$</code> la macro dans la commande de contrôle de cluster. C'est important! Nagios va
+            de services <link linkend="thebasics-macros">macros</link> à la macro<code>$ARG4$</code> dans la commande de contrôle de cluster. C'est important! Nagios va
             compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des
             chaînes de caractères) l'état courant de chacun des membres du cluster.
         </para>
@@ -193,7 +193,7 @@ define service {
         </programlisting>
         <para>Il est important de noter que nous passons une liste séparée par des
             virgules de <link linkend="thebasics-macros">macros</link> on-demand d'état
-            d'hôtes <link linkend="thebasics-macros">macros</link> à <code>$ARG4$</code> la macro dans la commande de contrôle de cluster. C'est important! Nagios va
+            d'hôtes <link linkend="thebasics-macros">macros</link> à la macro <code>$ARG4$</code> dans la commande de contrôle de cluster. C'est important! Nagios va
             compléter ces macros on-demand avec l'ID (valeurs numériques plutôt que des
             chaînes de caractères) l'état courant de chacun des membres du cluster.
         </para>
