@@ -13,13 +13,13 @@
     <section>
         <title>Introduction</title>
         
-        <para>Quand Nagios reçoit un checks passif d'un hôte d'une source distante
+        <para>Quand Nagios reçoit un contrôle passif d'un hôte d'une source distante
             (i.e. d'une autre instance Nagios dans une architecture distribuée ou en
-            failover), l'état de l'hôte remonté par la source distantes peut ne pas
+            failover), l'état de l'hôte remonté par la source distante peut ne pas
             refléter précisement l'état de l'hôte du point de vue de Nagios. Comme les
-            installations de monitoring distribuées ou en failover sont assez courants,
+            installations de monitoring distribuées ou en failover sont assez courantes,
             il est important d'avoir un mécanisme qui permet de s'assurer de
-            l'exactitude des état des hôtes entre les différentes instances de Nagios.
+            l'exactitude des états des hôtes entre les différentes instances de Nagios.
         </para>
     </section>
     
@@ -41,7 +41,7 @@
             <listitem>
                 <para>
                     <emphasis>Nagios-B</emphasis> et <emphasis>Nagios-C</emphasis> sont des
-                    serveurs de backup, et ils reçoivent les résultat des checks passifs depuis
+                    serveurs de backup, et ils reçoivent les résultats des checks passifs depuis
                     <emphasis>Nagios-A</emphasis>
                 </para>
             </listitem>
@@ -113,16 +113,16 @@
         <note>
             <para>Il y a des situations où vous ne voulez pas que Nagios transite les états
                 DOWN/UNREACHABLE depuis une source distante à leurs états
-                <emphasis>corrects</emphasis> d'un point de vue de l'instant local de Nagios. Par
+                <emphasis>corrects</emphasis> d'un point de vue de l'instance locale de Nagios. Par
                 exemple dans un environnment de monitoring distribué, vous pouvez vouloir
-                que l'instance central de Nagios connaisse comment les instances distribuées
+                que l'instance centrale de Nagios connaisse comment les instances distribuées
                 voient leurs parties respectives du réseau
             </para>
         </note>
     </section>
     
     <section>
-        <title>Activé la transition d'états</title>
+        <title>Activer la transition d'états</title>
         
         <para>Par défaut, Nagios ne transitera pas automatiquement les états
             DOWN/UNREACHABLE des résultats des checks passif. Vous devez activer cette
@@ -134,7 +134,7 @@
 linkend="configuringnagios-configmain-translate_passive_host_checks">translate_passive_host_checks</link>.
             Activez-la et Nagios va automatiquement transiter les états DOWN et
             UNREACHABLE depuis une source distante à leurs états corrects sur
-            l'instance local de Nagios. 
+            l'instance locale de Nagios. 
         </para>
     </section>
 </chapter>
