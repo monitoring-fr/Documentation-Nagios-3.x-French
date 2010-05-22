@@ -13,7 +13,7 @@
         <para>Les dépendances d'hôtes et de services sont une fonctionnalité avancée qui
             vous permet de contrôler le comportement des hôtes et des services selon
             l'état d'un ou plusieurs autres hôtes ou services. Je vais expliquer comment
-            les dépe   ndances fonctionnent, ainsi que les différences entre les
+            les dépendances fonctionnent, ainsi que les différences entre les
             dépendances d'hôtes ou de services.
         </para>
     </section>
@@ -21,7 +21,7 @@
     <section>
         <title>Aperçu des dépendances de services</title>
         <para>Il y a quelques points qu'il faut savoir concernant la dépendances de
-            service:
+            services:
         </para>
         <orderedlist>
             <listitem>
@@ -33,19 +33,19 @@
                 </para>
             </listitem>
             <listitem>
-                <para>Les dépendances de service ne se sont pas héritées (à moins que ce ne soit
+                <para>Les dépendances de services ne se sont pas héritées (à moins que ce ne soit
                     explicitement spécifié)
                 </para>
             </listitem>
             <listitem>
-                <para>Les dépendances de service permettent de supprimer l'exécution de services
+                <para>Les dépendances de services permettent de supprimer l'exécution de services
                     et de notifications de service selon différents critères (états OK, WARNING,
                     UNKNOWN, et/ou CRITICAL)
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Les dépendances d'un service ne sont seulement valable durant le <link linkend="thebasics-timeperiods">timeperiods</link> spécifié
+                    Les dépendances d'un service ne sont seulement valables durant la <link linkend="thebasics-timeperiods">période de temps</link> spécifiée
                 </para>
             </listitem>
         </orderedlist>
@@ -75,8 +75,8 @@
     <section>
         <title>Exemple de dépendances de services</title>
         <para>L'image suivante nous montre un exemple d'une trame typique de notification
-            de service et d'éxécution de ses dépendances. Différents services dépendent
-            d'autres services pour que l'éxécution des checks et des notifications se
+            de service et d'exécution de ses dépendances. Différents services dépendent
+            d'autres services pour que l'exécution des checks et des notifications se
             réalise.
         </para>
         <para>
