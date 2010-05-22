@@ -23,13 +23,13 @@
             améliorée de manière significative en implémentant l'utilisation des
             contrôles mémorisés. Les contrôles mémorisés permettent à Nagios de passer
             l'exécution d'un contrôle d'hôte ou de service s'il détermine qu'un résultat
-            de contrôle relativement récent le fera plutôt.
+            de contrôle relativement récent a été fait plutôt.
         </para>
     </section>
     <section>
         <title>Pour seulement des contrôles à la demande</title>
         <para>
-            L'hôte et le service régulièrement programmé ne verront pas d'amélioration
+            Les contrôles d'hôte et de service régulièrement programmés ne verront pas d'amélioration
             de performance avec l'utilisation des contrôles mémorisés. Les contrôles
             mémorisés sont seulement utiles pour améliorer la performance lors d'un
             contrôle d'hôte et de service à la demande. Les contrôles programmés aident
@@ -46,12 +46,12 @@
             </listitem>
             <listitem>
                 <para>
-                    Nécessaire dans le cadre d'une vérification <link linkend="thebasics-networkreachability">d'accessibilité de l'hôte</link>.
+                    Quand il est nécessaire de vérifier <link linkend="thebasics-networkreachability">l'accessibilité de l'hôte</link>.
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    Nécessaire pour <link linkend="advancedtopics-dependencychecks">un contrôle
+                    Quand il est nécessaire de réaliser <link linkend="advancedtopics-dependencychecks">un contrôle
                         préventif des dépendances d'hôte
                     </link>
                     .
@@ -62,7 +62,7 @@
         <itemizedlist>
             <listitem>
                 <para>
-                    Nécessaire pour un <link linkend="advancedtopics-dependencychecks">contrôle
+                    Quand il est nécessaire de réaliser un <link linkend="advancedtopics-dependencychecks">contrôle
                         préventif des dépendances de service
                     </link>
                     .
@@ -93,7 +93,7 @@
                 </mediaobject>
             </informalfigure>
             Quand Nagios a besoin d'exécuter un contrôle d'hôte ou de service à la
-            demande, il déterminera s'il peut utilisé un résultat de contrôle se
+            demande, il déterminera s'il peut utiliser un résultat de contrôle se
             trouvant dans le cache ou s'il aura besoin d'exécuter un contrôle en passant
             par un plugin. Il fait ceci en comparant depuis combien de temps le dernier
             contrôle date aux valeurs des variables du cycle de mise en cache des
@@ -116,7 +116,7 @@
             utilisant le contrôle mémorisé, vous autorisez à Nagios de considérer que
             l'état du contrôle antérieur est <emphasis>relativement correcte</emphasis> pour
             déterminer l'état actuel de vos hôtes. Pour cela il n'a pas besoin de
-            contrôler via plugin et de vraiment revérifier le statut de cet hôte ou de
+            contrôler via un plugin et de vraiment revérifier le statut de cet hôte ou de
             service.
         </para>
         <para>
@@ -127,21 +127,21 @@
             en considération le dernier contrôle mémorisé comme l'état actuel de l'hôte.
         </para>
         <simpara>
-            Le nombre de contrôle mémorisé que Nagios peut utiliser comparer au nombre
+            Le nombre de contrôle mémorisé que Nagios peut utiliser et comparer au nombre
             de contrôle à la demande qu'il doit vraiment exécuter peut être interprété
             sur forme de <emphasis>taux</emphasis>. En augmentant la valeur du cycle de mise
             en cache des contrôles à l'équivalence de celle du check_interval d'un hôte,
             nous pouvons théoriquement en conclure que le taux sera de 100%. Dans ce
             cas, tous les contrôles à la demande utiliseront les résultats des contrôles
-            mémorisés. Quel performance incroyable! Mais est-ce bien la réalité? Bien
+            mémorisés. Quelle performance incroyable! Mais est-ce bien la réalité? Bien
             sûr que non.
         </simpara>
         <simpara>
             La fiabilité de l'information d'un résultat diminue avec le temps. Un haut
             cœfficient de cache requière que vous ayez considéré que vos résultats sont
-            resté inchangé depuis un long moment. Les choses peuvent changer rapidement
-            dans certains scénario du réseau. Vous n'avez aucune garanti qu'un serveur
-            sera toujours opérationnelle 30 secondes plus tard. Il y a un échange -
+            restés inchangés depuis un long moment. Les choses peuvent changer rapidement
+            dans certains scénario du réseau. Vous n'avez aucune garantie qu'un serveur
+            sera toujours opérationnel 30 secondes plus tard. Il y a un échange -
             Fiabilité contre rapidité. Si vous mettez une valeur du cycle de contrôle du
             cache trop haute, vous risquez de voir la fiabilité de votre supervision en
             pâtir.
@@ -149,21 +149,21 @@
         <simpara>
             Nagios déterminera finalement l'état correct de tous les hôtes et des
             services, même si les résultats des contrôlés mémorisés peuvent s'avérer
-            obsolète. Nagios travaillera seulement avec les renseignements incorrects
+            obsolètes. Nagios travaillera seulement avec les renseignements incorrects
             pour une période courte. Les périodes même courtes de renseignements de
-            statut douteux peuvent s'avérer nuisante pour les administrateurs car il
-            est possible qu'ils recevront des notifications pour des problèmes qui n'ont
-            pas existé très longtemps.
+            statut douteux peuvent s'avérer nuisantes pour les administrateurs car il
+            est possible qu'ils reçoivent des notifications pour des problèmes qui n'ont
+            pas existés très longtemps.
         </simpara>
         <simpara>
             Il y a pas de valeur par défaut pour le cycle de mise en cache des contrôles
-            ou de cœfficient acceptable pour chaque utilisateurs de Nagios. Certains
+            ou de cœfficient acceptable pour chaque utilisateur de Nagios. Certains
             vont préférer une période de temps et un cœfficient bas alors que d'autres
             préféreront voir ces paramètres à la hausse. Certains utilisateurs peuvent
             même désactiver l'option du cache pour avoir une fiabilité s'approchant des
             100%. Tester différentes périodes de temps, et voir leur effet est le seul
             moyen pour un utilisateur de trouver la <emphasis>bonne</emphasis> valeur adaptée
-            à sa situation. Plus d'information sur ce paramétrage vous est détaillé
+            à sa situation. Plus d'informations sur ce paramétrage vous est détaillé
             ci-dessous.
         </simpara>
     </section>
@@ -218,8 +218,8 @@
             <link linkend="configuringnagios-objectdefinitions-host">définition
                 d'hôte
             </link>
-            .Si vous faites ça, assurez vous avoir une valeur plus grande
-            que 1 pour la variable <literal>max_check_attempts</literal>, ou ça vous
+            . Si vous faites cela, assurez vous avoir une valeur plus grande
+            que 1 pour la variable <literal>max_check_attempts</literal>, ou ceci vous
             causera de gros problèmes de performance. Cette optimisation des
             performances est décrite en détails <link linkend="thebasics-hostchecks">ici</link>.
         </para>
@@ -263,30 +263,30 @@
         </itemizedlist>
         <simpara>
             Le premier graph &acronym-mrtg; nous montre le nombre de contrôle régulier d'hôte
-            comparé à celui que le contrôle mémorisés a produit. Dans cette exemple, en
+            comparé à celui que le contrôle mémorisé a produit. Dans cette exemple, en
             moyenne, nous avons 53 contrôles qui sont réalisés toutes les 5 minutes. 9
-            entres eux sont des contrôles à la demande.
+            d'entres eux sont des contrôles à la demande.
         </simpara>
         <simpara>
-            Le second graph nous montre le nombre de contrôles mémorisés qui se produit
-            tout le temps. Dans cette exemple, en moyenne, 2 contrôles mémorisés d'hôtes
+            Le second graph nous montre le nombre de contrôles mémorisés qui se produisent
+            tout le temps. Dans cet exemple, en moyenne, 2 contrôles mémorisés d'hôtes
             sont réalisés toutes les 5 minutes.
         </simpara>
         <simpara>
             Souvenez-vous, le contrôle mémorisé n'est valable que pour le contrôle à la
             demande. Si l'on se base sur une période de 5 minutes, Nous voyons que
-            Nagios utilise les résultats de contrôle mémorisés 2 fois sur les 9 demandes
-            de contrôles qui ont été exécuté. Ca ne vous parait pas beaucoup, mais notre
+            Nagios utilise les résultats de contrôles mémorisés 2 fois sur les 9 demandes
+            de contrôles qui ont été exécuté. Ça ne vous paraît pas beaucoup, mais notre
             environement de supervision était minime. Considérons que 2 sur 9 font 22%,
             alors imaginez les performances que vous gagnerez dans des grands
-            environnements de production. Ce pourcentage se voir à la hausse if vous
+            environnements de production. Ce pourcentage peut se voir à la hausse si vous
             augmentez la valeur de la variable du cycle de mise en cache des contrôles,
             mais ça réduira la fiabilité des informations sur l'état des hôtes. 
         </simpara>
         <simpara>
             Après avoir graphé pendant quelques heures ou jours, on s'aperçoit combien
-            de contrôle d'hôte et de service sont réalisé par exécution d'un plugin
-            comparé à ceux utilisé avec les résultats de contrôle mis en cache. Utilisez
+            de contrôles d'hôte et de service sont réalisés par exécution d'un plugin
+            comparés à ceux utilisés avec les résultats de contrôles mis en cache. Utilisez
             cette information pour ajuster à votre environnement, la valeur de vos
             variables du cycle de mise en cache des contrôles. Continuez à superviser
             avec des graphs &acronym-mrtg; pour voir l'évolution en fonction de vos
