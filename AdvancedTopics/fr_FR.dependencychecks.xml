@@ -17,7 +17,7 @@
             déclenchement des contrôles et du moment d'envoi des notifications. Comme
             les dépendances sont utilisées pour contrôler plusieurs aspects du processus
             de supervision, il est crucial que les informations d'états utilisées dans
-            la logique de dépendances soit le plus à jour possibles.
+            la logique de dépendances soient le plus à jour possible.
         </para>
         <para>Nagios vous permet d'activer les contrôles prédictifs de dépendances pour
             les hôtes et services de façon à s'assurer que la logique de dépendance aura
@@ -34,7 +34,7 @@
         <para>
             L'hôte <emphasis>Switch2</emphasis> dans cet exemple vient juste de changer
             d'état de UP vers un état problématique. Nagios a besoin de déterminer si
-            l'hôtes est DOWN ou UNREACHABLE. Il va donc lanczer des contrôles parallèles
+            l'hôte est DOWN ou UNREACHABLE. Il va donc lancer des contrôles parallèles
             des hôtes parents (<emphasis>Firewall1</emphasis>) et enfants
             (<emphasis>Comp1</emphasis>, <emphasis>Comp2</emphasis>, and
             <emphasis>Switch3</emphasis>) de <emphasis>Switch2</emphasis>. C'est le
@@ -46,7 +46,7 @@
             notifications et les contrôles (ce qui n'est pas important dans cet
             exemple). Si les contrôles prédictifs d'hôtes sont activés, Nagios va lancer
             des contrôles parallèles de <emphasis>Monitor1</emphasis> et
-            <emphasis>File1</emphasis> au même moment qu'il lance des contrôles sur les
+            <emphasis>File1</emphasis> au même moment qu'il lancera des contrôles sur les
             parents et enfants directs de <emphasis>Switch2</emphasis>. Nagios le fait
             parce qu'il sait qu'il va avoir à tester la logique de dépendances dans un
             futur proche (par exemple pour des besoins de notifications) et il veut être
@@ -70,7 +70,7 @@
         </para>
         <note>
             <para>Les contrôles prédictifs de dépendances de services fonctionnent de façon
-                identique à ce qui décrit ci-dessus. Excepté bien sûr qu'ils trvaillent sur
+                identique à ce qui décrit ci-dessus. Excepté bien sûr qu'ils travaillent sur
                 les services et non les hôtes.
             </para>
         </note>
@@ -78,7 +78,7 @@
     <section>
         <title>Activation des contrôles prédictifs</title>
         <para>Les contrôles prédictifs de dépendances n'induisent que peu de charge
-            supplementaire, aussi je recommande que vou sles activiez. Dans la plupart
+            supplementaire, aussi je recommande que vous les activiez. Dans la plupart
             des cas, les bénéfices d'avoir des informations exactes pour les logique de
             dépendances contre-balance la charge supplémentaire imposée par ces
             contrôles.
@@ -107,7 +107,7 @@
             régis par les mêmes règles que les <link linkend="advancedtopics-cachedchecks">
                 contrôles mis en cache
             </link>
-            .Les contrôles mis en cache peuvent vous permettre 
+            . Les contrôles mis en cache peuvent vous permettre 
             d'améliorer les performances en autorisant Nagios a utiliser un résultat de
             contrôle assez récent plutôt que d'exécuter le contrôle de l'hôte ou du service. 
             Plus d'informations sur les contrôles mis en cache sont disponibles 
