@@ -13,10 +13,10 @@
         <title>Introduction</title>
         
         <para>Nagios vous permet de modifier certains attributs de check des commandes,
-            hôtes et services à l'exécution. Je ferais référence à cette fonctionnalité
+            hôtes et services à l'exécution. Je ferai référence à cette fonctionnalité
             comme <emphasis>monitoring adaptif</emphasis>. Veuillez noter que la
             fonctionnalité de monitoring adaptif présente dans nagios ne sera pas
-            vraiment utile à 99% des utilisateurs, mais elle vous permet de realiser des
+            vraiment utile à 99% des utilisateurs, mais elle vous permet de réaliser des
             choses assez élégantes.
         </para>
     </section>
@@ -50,7 +50,7 @@
             </listitem>
         </itemizedlist>
         
-        <para>Les attributs de check d'hôtes suivants peuvent être modifié pendant
+        <para>Les attributs de check d'hôtes suivants peuvent être modifiés pendant
             l'exécution:
         </para>
         
@@ -80,7 +80,7 @@
         
         <itemizedlist>
             <listitem>
-                <para>Commandes globales de gestionnaire d'évènnement d'hôte (et argumments de
+                <para>Commandes globales de gestionnaire d'évènnement d'hôtes (et argumments de
                     commande)
                 </para>
             </listitem>
@@ -94,21 +94,21 @@
     </section>
     
     <section>
-        <title>Commandes externe pour le monitoring adaptif</title>
+        <title>Commandes externes pour le monitoring adaptif</title>
         
         <para>Afin de modifier les atributs spécifiques d'hôtes ou de services pendant
             l'exécution, vous devez soumettre à Nagios la <link
 linkend="advancedtopics-extcommands">commande externe</link> appropriée via
-            le <link linkend="advancedtopics-extcommands">fichier de commande
-                externe
-            </link>
-            .Le tableau ci-dessous répertorie les différents attributs
+            le <link linkend="advancedtopics-extcommands">fichier de commandes
+                externes
+            </link>.
+            Le tableau ci-dessous répertorie les différents attributs
             qui peuvent être modifiés en cours d'exécution, accompagné de la commande
             externe pour accomplir le travail.
         </para>
         
         <para>Une liste complète de commandes externes qui peuvent être utilisées pour le
-            contrôle adaptatif (avec des exemples d'utilisation) est dsponible en ligne
+            contrôle adaptatif (avec des exemples d'utilisation) est disponible en ligne
             à l'adresse suivante : <ulink
 url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/externalcommands/</ulink>
         </para>
@@ -119,14 +119,14 @@ url="&url-nagios;developerinfo/externalcommands/">&url-nagios;developerinfo/exte
                     <para>Lorsque les commandes de contrôles [check command] ou de gestionnaires
                         d'événements [event handler] sont modifiées, il est important de noter que
                         ces commandes doivent avoir été configurées en utilisant des définitions de
-                        commande avant que Nagios n'ai été démarré. Si une commande non configurée
+                        commande avant que Nagios n'ait été démarré. Si une commande non configurée
                         est entrée, elle sera ignorée.
                     </para>
                 </listitem>
                 
                 <listitem>
                     <para>Vous pouvez spécifier les arguments de commande avec le nom de la commande -
-                        séparrez juste les différents arguments du nom de commande (et des autres
+                        séparrez juste les différents arguments du nom de commande (des autres
                         arguments) à l'aide du caractère bang (!). Des informations supplémentaires
                         sur la façon dont sont traités les arguments dans la définition des
                         commandes durant l'exécution peuvent être trouvés dans la documentation des
