@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" xmlns:date="http://exslt.org/dates-and-times" exclude-result-prefixes="date" version='1.0'>
 
 <!-- Path of docbook chunk stylesheets -->
-<xsl:import href="/home/olivier/Documents/docbook-xsl-1.75.2/xhtml-1_1/chunk.xsl"/>
+<xsl:import href="/home/ojan/svn/docbook-xsl-1.75.2/xhtml-1_1/chunk.xsl"/>
 
 <!-- TOC generation (to be polished) -->
 <xsl:param name="doc.lot.show">figure,table,example</xsl:param>
@@ -99,6 +99,17 @@
 
       <xsl:call-template name="user.footer.navigation"/>
     </div>
+	 <script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	 </script>
+    <script type="text/javascript">
+			try {
+			var pageTracker = _gat._getTracker("UA-15472610-1");
+			pageTracker._setDomainName(".monitoring-fr.org");
+			pageTracker._trackPageview();
+			} catch(err) {}
+    </script>
     </body>
   </html>
   <xsl:value-of select="$chunk.append"/>
