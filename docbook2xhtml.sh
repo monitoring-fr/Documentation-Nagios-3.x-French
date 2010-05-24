@@ -3,7 +3,7 @@
 OUT_PATH=html
 IN_XML=fr_FR.nagios-big.xml
 
-rm -R $OUT_PATH/*
+rm -fR $OUT_PATH/*
 mkdir $OUT_PATH/includes
 cp web_common/style.css $OUT_PATH/
 rsync -avP --exclude=.svn images $OUT_PATH/
