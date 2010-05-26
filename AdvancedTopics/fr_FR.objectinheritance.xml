@@ -12,24 +12,24 @@
     <section>
         <title>Introduction</title>
         
-        <para>Cette documentation essaye d'expliquer l'hétiage d'objet et comment il peut
+        <para>Cette documentation essaye d'expliquer l'héritage d'objet et comment il peut
             être utilisé dans vos <link
 linkend="configuringnagios-objectdefinitions">définitions d'objet</link>.
         </para>
         
-        <para>Si vous êtes perdu dans le fonctionnent des récurrence et des héritage après
-            avoir lu ça, aller voir le ficher de configuration d'un objet simple proposé
-            par la distribution Nagios. Si ça ne vous aide toujours pas, laissez un
+        <para>Si vous êtes perdu dans le fonctionnent des récurrences et des héritages après
+            avoir lu cela, allez voir le ficher de configuration d'un objet simple proposé
+            par la distribution Nagios. Si cela ne vous aide toujours pas, laissez un
             message mail à la liste de diffusion <emphasis>nagios-users</emphasis> avec
-            une description <emphasis>détaillé</emphasis> de votre problème.
+            une description <emphasis>détaillée</emphasis> de votre problème.
         </para>
     </section>
     
     <section>
         <title>Les bases</title>
         
-        <para>Il y a trois variable qui affectent la recursion et l'héritatge qui sont
-            présent dans toutes les définitions d'objet. Elles sont indiquées en rouge
+        <para>Il y a trois variables qui affectent la récursion  et l'héritage qui sont
+            présentes dans toutes les définitions d'objet. Elles sont indiquées en rouge
             ci-dessous
         </para>
         
@@ -50,7 +50,7 @@ define someobjecttype {
         
         <para>
             La deuxième variable est <literal>use</literal>. C'est ici que vous
-            spécifiez le nom des objets gabarit dont vous voulez héritez les
+            spécifiez le nom des objets gabarit dont vous voulez hériter les
             propriétés/variables. Le nom que vous spécifiez dans cette variable doit
             être défini dans un autre gabarit d'objet nommé. (En utilisant la variable
             nom) 
@@ -58,7 +58,7 @@ define someobjecttype {
         
         <para>
             La troisième variable est <literal>register</literal>. Cette variable est
-            utilisée pour indiquer si la définition de l'objet doit être <emphasis>Prise en
+            utilisée pour indiquer si la définition de l'objet doit être <emphasis>prise en
                 compte
             </emphasis>
             par Nagios ou non. Par défaut, toutes les défintions d'objet sont
@@ -67,10 +67,10 @@ define someobjecttype {
             mécanisme sera présentez plus loin). Les valeurs acceptées sont les
             suivantes : 0 = ne PAS prendre en compte la définition de l'objet, 1 =
             prendre en compte la définition de l'objet (Comportement par défaut). Cette
-            variable n'est pas héritée, toutes definition d'objet (partiel) utilisé
+            variable n'est pas héritée, toutes définitions d'objet (partiel) utilisées
             comme gabarits doivent explicitement avoir le paramètre
             <literal>register</literal> à 0. Celà évite d'avoir à surcharger une
-            directective <literal>register</literal> héritée avec la valeur 1 pour tous
+            directive <literal>register</literal> héritée avec la valeur 1 pour tous
             les objets qui doivent être pris en compte. 
         </para>
     </section>
@@ -78,10 +78,10 @@ define someobjecttype {
     <section>
         <title>Variables locales vs Variables héritées</title>
         
-        <para>Une chose importante à comprendre avec l'héritage c'est que les variable
-            <emphasis>local</emphasis> ont toujours autorité sur les variables définies dans
-            un gabarit d'objet. Regardez l'exemple suivant avec deux définition d'hotes
-            (toutes les variables nécessaire n'ont pas été indiqué)
+        <para>Une chose importante à comprendre avec l'héritage c'est que les variables
+            <emphasis>locales</emphasis> ont toujours autorité sur les variables définies dans
+            un gabarit d'objet. Regardez l'exemple suivant avec deux définitions d'hotes
+            (toutes les variables nécessaires n'ont pas été indiquées)
         </para>
         
         <programlisting>
@@ -102,10 +102,10 @@ define host {
         
         <para>
             Vous remarquerez que la définition de l'hôte <emphasis>bighost1</emphasis> a
-            été défini comme ayant <emphasis>hosttemplate1</emphasis> comme nom de
+            été définie comme ayant <emphasis>hosttemplate1</emphasis> comme nom de
             gabarit. La définition de l'hôte <emphasis>bighost2</emphasis> utilise la
             définition de <emphasis>bighost1</emphasis> comme gabarit. Une fois que
-            Nagios traite les données, le resultat de la déinition de l'hôte
+            Nagios traite les données, le résultat de la définition de l'hôte
             <emphasis>bighost2</emphasis> sera équivalent à cette définition :
         </para>
         
@@ -130,8 +130,8 @@ define host {
         </para>
         
         <tip>
-            <para>Si vous voulez qu'une variable chaîne locale soit concaténée avec la valeur
-                d'une chaine héritée, vous pouvez le faire. Pour plus de renseignements sur
+            <para>Si vous voulez qu'une variable d'une chaîne locale soit concaténée avec la valeur
+                d'une chaîne héritée, vous pouvez le faire. Pour plus de renseignements sur
                 comment réaliser ça, lisez <link linkend="advancedtopics-objectinheritance-add_string">plus bas</link>.
             </para>
         </tip>
@@ -141,7 +141,7 @@ define host {
         <title>Enchainement d'héritage</title>
         
         <para>Les objets peuvent hériter des propriétés/variables de multiples niveaux des
-            gabarits objets. Regarder l'exemple suivant : 
+            gabarits objets. Regardez l'exemple suivant : 
         </para>
         
         <programlisting>
@@ -168,10 +168,10 @@ define host {
         
         <para>
             Vous remarquerez que la définition de l'hôte <emphasis>bighost3</emphasis>
-            hérite de variables de la définition de l'hôte
-            <emphasis>bighost2</emphasis>, qui lui-même hérite de variables de la
+            hérite des variables de la définition de l'hôte
+            <emphasis>bighost2</emphasis>, qui lui-même hérite des variables de la
             définition de l'hôte <emphasis>bighost1</emphasis>. Une fois que Nagios a
-            traité ces données de configuration, le resultat de la définition de ces
+            traité ces données de configuration, le résultat de la définition de ces
             hôtes est équivalent à : 
         </para>
         
@@ -200,8 +200,8 @@ define host {
         
         <para>
             Il n'y a pas de limite de <emphasis>profondeur</emphasis> d'héritage, mais vous
-            voudrez probabliment vous limitez à au plus quelques niveaux, de façon à
-            garder votre santé mental. 
+            voudrez probablement vous limitez à tout au plus quelques niveaux, de façon à
+            garder votre santé mentale. 
         </para>
     </section>
     
@@ -211,10 +211,10 @@ define host {
         <para>Il est possible d'utiliser une définition incomplète d'object comme gabarit
             afin de les utiliser dans d'autres définitions d'objets. Par définition
             <emphasis>incomplète</emphasis>, je veux dire que toutes les variables requises pour l'objet
-            n'ont pas été mises dans la définition de l'objet. Celà peut paraitre
+            n'ont pas été mises dans la définition de l'objet. Celà peut paraître
             bizarre d'utiliser des définitions incomplètes comme gabarit, mais c'est en
-            fait recommandé de les utiliser. Pourquoi? Et bien ils servent d'ensemble
-            par défaut afin d'être utilisé dans d'autre définition d'objets. Regarder
+            fait recommandé de les utiliser. Pourquoi? Et bien, ils servent d'ensemble
+            par défaut afin d'être utilisés dans d'autres définitions d'objets. Regardez
             l'exemple suivant : 
         </para>
         
@@ -240,7 +240,7 @@ define host {
 }
         </programlisting>
         
-        <para>Notez que la 1er définition d'hotes est incomplète car il manque le variable
+        <para>Notez que la 1er définition d'hotes est incomplète car il manque la variable
             requise <literal>host_name</literal>. Nous n'avons pas besoin de définir un
             nom d'hôte car nous voulons juste utiliser cette définition comme un gabarit
             d'hôte générique. Afin de prévenir cette defintion d'être <emphasis>registered</emphasis> par
@@ -255,7 +255,7 @@ define host {
             variable <literal>address</literal>. Celà veut dire que les deux hôtes
             auront exactement les mêmes propriétés, à l'exeption de leurs variables
             <literal>host_name</literal> et <literal>address</literal>. Une fois que
-            Nagios aura traiter les données de configuration de l'exemple, les
+            Nagios aura traité les données de configuration de l'exemple, les
             définitions d'hôtes résultants seront la même chose que si nous spécifions : 
         </para>
         
@@ -278,7 +278,7 @@ define host {
         </programlisting>
         
         <para>Enfin, utiliser une définition de gabarit pour les variables par défaut vous
-            fera gagner beaucoup de temps. Celà vous évitera aussi beaucoup de maux de
+            fera gagner beaucoup de temps. Cela vous évitera aussi beaucoup de maux de
             tête ultérieurs si vous voulez changer la valeur par défaut d'une variable
             pour un grand nombre d'hôtes. 
         </para>
@@ -288,11 +288,11 @@ define host {
         <title>Variables personnalisées d'objet</title>
         
         <para>
-            Toutes les <link linkend="configuringnagios-customobjectvars">variables pesonnalisées 
+            Toutes les <link linkend="configuringnagios-customobjectvars">variables personnalisées 
                 d'objet
             </link>
             que vous définisez dans vos définitions de gabarit
-            d'hôtes, de services ou de contacts sea hérité comme n'importe quelle autre
+            d'hôtes, de services ou de contacts seront héritées comme n'importe quelle autre
             variable standard. Regardez l'exemple suivant : 
         </para>
         
@@ -333,16 +333,16 @@ define host {
     <section>
         <title>
             <anchor id="advancedtopics-objectinheritance-cancel_string" />Annulation de
-            l'héritage de la valeu de la chaine
+            l'héritage de la valeur de la chaîne
         </title>
         
-        <para>Dans certain cas, vous ne voulez pas que votre défintion d'hôte, service ou
+        <para>Dans certains cas, vous ne voulez pas que votre défintion d'hôte, service ou
             contact hérite de la valeur d'une variable du gabarit qu'il référence. Dans
             ce cas, vous pouvez spécifier
             <emphasis>
                 <emphasis role="bold">null</emphasis>
             </emphasis>
-            (sans les quotes) comme valeur
+            (sans quotes) comme valeur
             pour cette variable. Regardez l'exemple suivant : 
         </para>
         
@@ -364,7 +364,7 @@ define host {
         <para>
             Dans ce cas, l'hôte <emphasis>bighost1</emphasis> n'héritera pas de la
             valeur de la variable <literal>event_handler</literal> qui est définie dans
-            <emphasis>generichosttemplate</emphasis>. Le résultat effective de la
+            <emphasis>generichosttemplate</emphasis>. Le résultat effectif de la
             définition de <emphasis>bighost1</emphasis> est : 
         </para>
         
@@ -378,22 +378,22 @@ define host {
     
     <section>
         <title>
-            <anchor id="advancedtopics-objectinheritance-add_string" />Héritage additive
-            de la valeur de la chaine
+            <anchor id="advancedtopics-objectinheritance-add_string" />Héritage additif
+            de la valeur de la chaîne
         </title>
         
         <para>Nagios donne la préférence aux variables locales au lieu des valeurs
-            héritées par leurs templates. Dans la pluspart des cas, les valeurs locales
+            héritées par leurs gabarits. Dans la pluspart des cas, les valeurs locales
             des variables surchargent celles définies dans les gabarits. Dans certains
             cas, il peut être judicieux d'autoriser Nagios d'utiliser la valeur locale
             et héritée de la variable ensemble. 
         </para>
         
         <para>
-            Cette <emphasis>héritage additif</emphasis> peut être réalisé en rajoutant devant la valeur
+            Cet <emphasis>héritage additif</emphasis> peut être réalisé en rajoutant devant la valeur
             de la variable local un signe plus (+). Cette fonctionnalité est uniquement
             accessible pour les variables standards (non-personnels) qui contiennent des
-            valeurs sous forme de chaine. Regardez l'exemple suivant : 
+            valeurs sous forme de chaîne. Regardez l'exemple suivant : 
         </para>
         
         <programlisting>
@@ -434,8 +434,8 @@ define host {
         <para>Normalement vous devez soit explicitement spécifier la valeur de la variable
             dans la définition d'un objet, ou bien l'hériter d'un gabarit. Il existe
             quelques exceptions à cette règle, où Nagios assumera que vous voulez
-            utiliser une valeur qui vient en fait d'un objet lié. Par exemple,la valeurs
-            de certaines variables de service vont être copiée de l'hôte auquel le
+            utiliser une valeur qui vient en fait d'un objet lié. Par exemple, la valeur
+            de certaines variables de service vont être copiées de l'hôte auquel le
             service est associé si vous ne lui spécifiez pas le contraire. 
         </para>
         
@@ -497,7 +497,7 @@ define host {
                         
                         <entry colsep="1" rowsep="1">
                             <para>
-                                <emphasis>notification_interval</emphasis> in the associated host definition
+                                <emphasis>notification_interval</emphasis> dans la définition d'hôtes associée
                             </para>
                         </entry>
                     </row>
@@ -545,7 +545,7 @@ define host {
                         
                         <entry colsep="1" rowsep="1">
                             <para>
-                                <emphasis>notification_interval</emphasis> in the associated host definition
+                                <emphasis>notification_interval</emphasis> dans la définition d'hôtes associée
                             </para>
                         </entry>
                     </row>
@@ -579,7 +579,7 @@ define host {
                         
                         <entry colsep="1" rowsep="1">
                             <para>
-                                <emphasis>contact_groups</emphasis>dans la définition de services associée
+                                <emphasis>contact_groups</emphasis> dans la définition de services associée
                             </para>
                         </entry>
                     </row>
@@ -625,14 +625,14 @@ define host {
         </title>
         
         <para>La superposition de défintion d'hôte et de service peuvent utiliser une
-            règle spécial qui combine les fonctionnalités de l'héritage implicite et
+            règle spéciale qui combine les fonctionnalités de l'héritage implicite et
             explicite. Si la superposition 1) n'hérite pas la valeurs de leurs paramètres
             <literal>contact_groups</literal> ou <literal>contacts</literal> d'un autre
-            gabarit et 2) leurs paramètres <literal>contact_groups</literal> or
+            gabarit et 2) leurs paramètres <literal>contact_groups</literal> ou
             <literal>contacts</literal> commencent avec un signe (+), alors les valeurs
-            des paramètres <literal>contact_groups</literal> or
+            des paramètres <literal>contact_groups</literal> ou
             <literal>contacts</literal> de leurs défintions d'hôte ou service seront
-            utilisé avec une logique d'héritage additive. 
+            utilisées avec une logique d'héritage additive. 
         </para>
         
         <para>Perdu ? Voici un exemple :</para>
@@ -668,10 +668,10 @@ define hostescalation {
             sources d'héritage
         </title>
         
-        <para>Jusqu'à maintenant, tous les exemples d'héritage présentait l'héritage de
-            variables/valeurs à partir d'une seul source. Vous pouvez aussi hériter des
+        <para>Jusqu'à maintenant, tous les exemples d'héritage présentaient l'héritage de
+            variables/valeurs à partir d'une seule source. Vous pouvez aussi hériter des
             variables/valeurs de sources multiples pour réaliser des configurations
-            plus complexe, comme celà est présentées en dessous. 
+            plus complexes, comme cela est présenté ci-dessous. 
         </para>
         
         <informaltable frame="all">
@@ -731,7 +731,7 @@ define host {
             variables/valeurs provenant de deux sources :
             <literal>generic-host</literal> et
             <literal>development-server</literal>. Vous noterez qu'une variable
-            <literal>check_interval</literal> est défini dans les deux sources. Puisque
+            <literal>check_interval</literal> est définie dans les deux sources. Puisque
             <literal>generic-host</literal> était le premier gabarit spécifié dans les
             paramètres de <literal>devweb1</literal>, sa valeur pour la variable
             <literal>check_interval</literal> est héritée par l'hôte
@@ -753,12 +753,12 @@ define host {
     </section>
     
     <section>
-        <title>Priorité avec des sources d'héritage multiple</title>
+        <title>Priorité avec des sources d'héritage multiples</title>
         
         <para>Quand vous utilisez de multiples sources d'héritage, il est très important
             de savoir comment Nagios gère les variables qui sont définies dans ces
             sources multiples. Dans ces cas, Nagios utilisera les variables/valeurs de
-            la première source qui est spécifié dans le paramètre à utiliser. Puisque
+            la première source qui est spécifiée dans le paramètre à utiliser. Puisque
             les sources d'héritage peuvent elles-même hériter de variables/valeurs
             provement d'une ou plusieurs sources, il peut devenir très compliqué de
             trouver quelle paire de variable/valeur aura la priorité. 
