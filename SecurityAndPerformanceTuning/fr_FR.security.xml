@@ -25,13 +25,13 @@
             rapide survol des éléments que vous devez conserver à l'esprit au moment
             d'installer Nagios, afin que l'installation soit sécurisée.
         </para>
-        <para>Vous devriez considérer votre serveur de supervision comme un porte dérobée
+        <para>Vous devriez considérer votre serveur de supervision comme une porte dérobée
             de vos autres systèmes. Dans certains cas, le serveur Nagios a besoin d'être
             autorisé à traverser des pares-feu pour pouvoir contrôler des serveurs
             distants. Dans la plupart des cas, il est autorisé à interroger ces serveurs
             distants pour diverses informations. Les serveurs de supervision ont
             toujours besoin d'un certain niveau de confiance pour pouvoir interroger des
-            serveurs distants. Ceci représente un risque potentiel d'attaque avec un
+            serveurs distants. Ceci représente un risque potentiel d'attaque avec une
             porte dérobée intéressante vers vos autres systèmes. Un ataquant peut se
             rendre la vie plus facile en attaquant d'abord votre système de supervision
             avant de rebondir sur les autres. Ceci est particulièrmeent vrai dans le cas
@@ -111,8 +111,8 @@
             </listitem>
             <listitem>
                 <para>
-                    <emphasis role="bold">Vérouillez le répertoire des résultats de contrôle</emphasis>.
-                    Assurez-vous que seul l'utilisateur nagios à le doirt
+                    <emphasis role="bold">Verrouillez le répertoire des résultats de contrôle</emphasis>.
+                    Assurez-vous que seul l'utilisateur nagios à le droit
                     de lecture/écriture sur le 
                     <link linkend="configuringnagios-configmain-check_result_path">répertoire des résultats de contrôle</link>.
                     Si d'autres utilisateurs que nagios (ou root)
@@ -157,15 +157,15 @@
                     <link linkend="thebasics-cgis-cmd_cgi">CGI de commande</link> refusera d'écrire la
                     moindre commande dans le <link linkend="configuringnagios-configmain-command_file">fichier des commandes externes</link>.
                     De toutes façons, vous ne souhaitez pas que tout le monde
-                    puisse contrôler vôtre Nagios ? 
+                    puisse contrôler votre Nagios ? 
                 </para>
             </listitem>
             <listitem>
                 <para>
-                    <emphasis role="bold">Implémentez les mesure renforcées de sécurité des
-                        GCIs
+                    <emphasis role="bold">Implémentez les mesures renforcées de sécurité des
+                        GCIs.
                     </emphasis>
-                    .Je vous recommande chaudement de considérer
+                    Je vous recommande chaudement de considérer
                     l'implémentation des mesures de sécurité pour les &acronym-cgi;s comme indiqué 
                     <link linkend="securityandperformancetuning-cgisecurity">ici</link>. Ces mesures
                     peuvent aider à s'assurer que l'utilisateur/mot de passe que vous utilisez
@@ -213,7 +213,7 @@
                     Un bon exemple est la présence de la quote inverse (`) dans &macro-hostoutput;,
                     &macro-serviceoutput;, &macro-hostperfdata;, et/ou &macro-serviceperfdata; qui 
                     pourrait permettre à un attaquant d'exécuter un commande arbitraire comme 
-                    l'utilisateur nagios (une autre bonne raison pour ne pas exécuter Nagios comme l'utilisateur root). 
+                    l'utilisateur nagios (une autre bonne raison pour ne pas exécuter Nagios avec l'utilisateur root). 
                 </para>
             </listitem>
             <listitem>
@@ -243,9 +243,9 @@
                     Assurez-vous d'avoir chiffré les canaux de
                     communication entre vos différents serveurs Nagios et entre Nagios et les
                     agents de supervision quand cela est possible. Vous ne voulez pas que
-                    quelqu'un puisse sniffer les informations d'états lorsqu'elle transite sur
-                    le réseau. Cette information peut être utilisé par un attaquant pour
-                    déterminer une fenêtre de temps pour une attaque discrète.
+                    quelqu'un puisse sniffer les informations d'états lorsqu'elles transitent sur
+                    le réseau. Ces informations peuvent être utilisées par un attaquant pour
+                    déterminer un intervalle de temps pour une attaque discrète.
                     <informalfigure>
                         <mediaobject>
                             <imageobject>
