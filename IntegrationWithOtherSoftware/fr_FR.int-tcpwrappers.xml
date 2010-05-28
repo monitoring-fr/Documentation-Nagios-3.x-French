@@ -107,7 +107,7 @@ define service {
             <listitem>
                 <para>le service à l'option volatile activée. Cette option est activée parce que
                     nous voulons qu'une notification soit générée pour toutes les alertes
-                    survenant. .
+                    survenant.
                 </para>
             </listitem>
             
@@ -143,7 +143,7 @@ define service {
     </section>
     
     <section>
-        <title>Écriture du Script</title>
+        <title>Écriture du script</title>
         
         <para>La dernière chose à faire est d'écrire le script handle_tcp_wrapper sur
             firestorm qui enverra les alertes à l'hôte de supervision. Cela donnera
@@ -175,7 +175,7 @@ define service {
     <section>
         <title>Finition</title>
         
-        <para>Maintenant que vous avez configure tout ce dont vous avez besoin, vous devez
+        <para>Maintenant que vous avez configuré tout ce dont vous avez besoin, vous devez
             redémarrer le processus inetd sur firestorm et redémarrer Nagios sur votre
             serveur de supervision. C'est tout ! Quand le TCP wrapper sur firestorm
             refusera une connexion, vous devriez recevoir des alertes via Nagios. Cela
