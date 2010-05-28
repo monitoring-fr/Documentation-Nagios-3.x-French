@@ -67,7 +67,7 @@
                 <para>Contrôle de références circulaires</para>
             </listitem>
             <listitem>
-                <para>and more…</para>
+                <para>et bien plus…</para>
             </listitem>
         </itemizedlist>
         <para>Certaines de ces étapes peuvent se révéler consommatrices en temps quand
@@ -132,7 +132,7 @@ TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
         
         <para>Ok, voyons ce qui s'est passé. En regardant les totaux, il a fallu à peu
             près 11,6 secondes pour calculer les fichiers de configuration et encore 56
-            secondes pour vérifier cette configuration. Cela implique qu'à cahque fois
+            secondes pour vérifier cette configuration. Cela implique qu'à chaque fois
             que je vais démarrer ou redémarrer Nagios, il va se passer presque 68
             secondes avant que Nagios ne commence à superviser quoi que ce soit! C'est
             inacceptable si je dois redémarrer Nagios de façon assez régulière.
@@ -200,7 +200,7 @@ TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
                     </row>
                     <row>
                         <entry>
-                            <para>Une fois qu ele fichier de pré-cache a été créé, vous pouvez démarrer Nagios
+                            <para>Une fois que le fichier de pré-cache a été créé, vous pouvez démarrer Nagios
                                 et lui indiquer d'utiliser ce fichier plutôt que d'utiliser les fichiers
                                 d'objets de configuration en utilisant l'argument <option>-u</option> à la ligne de commande. 
                                 <screen>
@@ -296,7 +296,7 @@ TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
             </step>
             <step>
                 <para>À l'avenir, quand vous modifiez vos fichiers de configuration originaux et
-                    que vous avez besoin de redémarrer Nagios pour appluiquer ces modifications,
+                    que vous avez besoin de redémarrer Nagios pour appliquer ces modifications,
                     répétez l'étape 1 pour revérifier votre configuration et regénérer le
                     fichier de pré-cache. Une fois ceci fait, vous pouvez redémarrer Nagios à
                     partir de l'interface web ou en envoyant un signal SIGHUP. Si vous ne
