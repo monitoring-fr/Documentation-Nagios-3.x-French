@@ -24,14 +24,14 @@
   			</inlinemediaobject>
              Cette page est destinée à
             être une introduction pour l'implémentation d'un niveau d'authentification
-            et de sécurité de serveur plus ardue concentrée autour de l'interface web
+            et de sécurité de serveur plus ardue, concentrée autour de l'interface web
             &acronym-cgi;.
         </para>
         
         <para>Il y a de nombreuses façons de personnaliser la sécurité de son serveur de
             Supervision et l'environnement Nagios. Ce qui va venir ne doit pas être pris
             comme la finalité de toute approche à la sécurité. Au lieu de
-            cela,considérez ce qui suit comme une introduction à certaines des
+            cela, considérez ce qui suit comme une introduction à certaines des
             techniques que vous pouvez utiliser pour gérer la sécurité de votre
             système. Comme toujours, vous devrez faire vos recherches et utiliser les
             meilleures techniques disponibles. Traitez votre serveur de Supervision
@@ -41,7 +41,7 @@
     </section>
     
     <section>
-        <title>Techniques Supplémentaires</title>
+        <title>Techniques supplémentaires</title>
         
         <itemizedlist>
             <listitem>
@@ -49,15 +49,15 @@
                     <emphasis role="bold">Authentification plus ardue utilisant la technologie
                         Digest
                     </emphasis>
-                    .En suivant <link linkend="gettingstarted-quickstart">Le
+                    . En suivant <link linkend="gettingstarted-quickstart">Le
                         guide de démarrage rapide
                     </link>
-                    ,il y a de grandes chances pour que vous
+                    , il y a de grandes chances pour que vous
                     utilisiez les <ulink
 url="&url-apache-docs;2.2/mod/mod_auth_basic.html">fondamentaux
                         d'authentification Apache
                     </ulink>
-                    .L'authentification basique envoie en
+                    . L'authentification basique envoie en
                     <emphasis>texte clair</emphasis> le nom d'utilisateur et le mot de passe de connexion avec
                     chacune des requêtes http. Considérez que d'utiliser la <ulink
 url="&url-apache-docs;2.2/mod/mod_auth_digest.html">technologie
@@ -98,7 +98,7 @@ url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink>. &acronym-tls;/&acro
                     <ulink
 url="&url-apache-docs;2.2/programs/htdigest.html">htdigest</ulink>
                 </emphasis>
-                ,puis
+                , puis
                 modifiez la configuration apache pour Nagios (par défaut
                 <filename>/etc/httpd/conf.d/nagios.conf</filename>).
             </para>
@@ -150,7 +150,7 @@ Alias /nagios "/usr/local/nagios/share"
             </programlisting>
             
             <para>Ensuite, redémarrer le service apache pour que la nouvelle configuration
-                soit pris en compte.
+                soit prise en compte.
             </para>
             
             <screen>
@@ -223,7 +223,7 @@ ScriptAlias /nagios/cgi-bin "/usr/local/nagios/sbin"
                 <ulink url="&url-apache-docs;2.2/howto/access.html">contrôle des accès
                     Apache
                 </ulink>
-                .Modifiez le fichier de configuration apache pour Nagios (par
+                . Modifiez le fichier de configuration apache pour Nagios (par
                 défaut <filename>/etc/httpd/conf.d/nagios.conf</filename>) en utilisant les
                 paramètres <literal>Allow</literal>, <literal>Deny</literal>, et
                 <literal>Order</literal> en s'appuyant sur l'exemple ci-dessous.
@@ -287,12 +287,12 @@ Alias /nagios "/usr/local/nagios/share"
                         &acronym-tls;/&acronym-ssl; a le potentiel pour 
                         <emphasis>
                             <ulink
-url="&url-wikipedia;Man-in-the-middle_attack">man-in-the-middle
-                                attacks
+url="&url-wikipedia;Man-in-the-middle_attack">les attaques
+                                man-in-the-middle
                             </ulink>
                         </emphasis>
                     </emphasis>
-                    .Les attaques &acronym-mitm; sont vulnérables si l'attaquant est obligé de s'imisser entre le
+                    . Les attaques &acronym-mitm; sont vulnérables si l'attaquant est obligé de s'imisser entre le
                     serveur et le client tout comme une attaque par <emphasis>Phishing</emphasis>, l'&acronym-isp; monitoring
                     ou &acronym-lan; un certificat de pare-feu arrivant à expiration. Lire ci-dessus la
                     vérification des certificats !
@@ -304,7 +304,7 @@ url="&url-wikipedia;Man-in-the-middle_attack">man-in-the-middle
                     <emphasis role="bold">Le contrôle d'accès apache seulement le protocole
                         &protocol-http;/&protocol-https;
                     </emphasis>
-                    .Veuillez vous référer à <ulink
+                    . Veuillez vous référer à <ulink
 url="http://www.netfilter.org/projects/iptables/index.html">IPtables</ulink>
                     pour verrouiller votre système avec des règles de pare-feu.
                 </para>
@@ -314,9 +314,9 @@ url="http://www.netfilter.org/projects/iptables/index.html">IPtables</ulink>
                 <para>
                     <emphasis role="bold">Très important, la sécurité est un domaine en
                         perpétuel mouvement et demande de se réserver du temps pour la recherche et
-                        développement
+                        développement!
                     </emphasis>
-                    !Peut-être en vous inscrivant aux newsletters comme
+                    Peut-être en vous inscrivant aux newsletters comme
                     <emphasis>
                         <ulink url="http://www.grc.com/securitynow.htm">Security Now!</ulink>
                     </emphasis>
