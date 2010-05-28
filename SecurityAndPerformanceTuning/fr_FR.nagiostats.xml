@@ -18,7 +18,7 @@
             lors de <link linkend="securityandperformancetuning-tuning">l'optimisation
                 des performances
             </link>
-            .Vous pouvez obtenir les informations soit dans un
+            . Vous pouvez obtenir les informations soit dans un
             format compatible avec &acronym-mrtg; soit dans un format intelligible. 
         </para>
     </section>
@@ -32,7 +32,7 @@
     <section>
         <title>Affichage intelligible</title>
         <para>Pour une utilisation normale, lancez l'utilitaire
-            <command>nagiostats</command> avec l'argument <option>-c</option> pour sépcifier l'emplacement de votre fichier de configuration principal
+            <command>nagiostats</command> avec l'argument <option>-c</option> pour spécifier l'emplacement de votre fichier de configuration principal
             comme ceci:<userinput>[nagios@lanman ~]# /usr/local/nagios/bin/nagiostats -c
                 /usr/local/nagios/etc/nagios.cfg
             </userinput>
@@ -112,15 +112,15 @@
         <title>Intégration à MRTG</title>
         <para>Vous pouvez utiliser l'outil nagiostat pour afficher diverses mesures de
             Nagios avec &acronym-mrtg; (ou tout autre programme compatible). Pour cela, lancez
-            <command>nagiostats</command> en utilisant les arguments <option>--mrtg</option> et <option>et --data</option> L' <option>et --data</option> option --data est utilisée pour spécifier que les statistiques sont
-            destinées à être représentées graphiquement. Les valeurs possibles pour <option>et --data</option> l'option --data sont listées en lançant l'utilitaire
-            <command>nagiostats</command> avec l'option <option>--help</option> --help.
+            <command>nagiostats</command> en utilisant les arguments <option>--mrtg</option> et <option>--data</option>. L' option <option>--data</option> est utilisée pour spécifier que les statistiques sont
+            destinées à être représentées graphiquement. Les valeurs possibles pour l'option <option>--data</option> sont listées en lançant l'utilitaire
+            <command>nagiostats</command> avec l'option <option>--help</option>.
         </para>
         <note>
             <para>
                 Les informations pour utiliser l'utilitaire <command>nagiostats</command>
                 pour générer des graphiques &acronym-mrtg; des statistiques de performance de Nagios
-                peuvent être <link
+                peuvent être trouvées<link
 linkend="securityandperformancetuning-mrtggraphs">ici</link>.
             </para>
         </note>
