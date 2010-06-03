@@ -47,7 +47,7 @@
             <listitem>
                 <para>
                     <emphasis>Recalcul</emphasis> de vos objets (le terme employé par Ethan pour
-                    indiquer les différents opérations impliquées est
+                    indiquer les différentes opérations impliquées est
                     <emphasis>recombobulating</emphasis>)
                 </para>
             </listitem>
@@ -84,7 +84,7 @@
         </para>
         <para>Un exemple de la sortie (uniquement la partie intéressante) est montrée
             ci-dessous. Pour cet exemple, j'utilise une configuration Nagios qui a 25
-            hôtes et juste un plus de 10 000 services définis. 
+            hôtes et juste un peu plus de 10 000 services définis. 
             <screen>
 <prompt># </prompt><userinput>/usr/local/nagios/bin/nagios -s /usr/local/nagios/etc/nagios.cfg</userinput>
             </screen>
@@ -173,8 +173,8 @@ TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
                             </para>
                             <para>
                                 Vous devez utiliser l'option <option>-p, </option>
-                                en même que <option>-v</option> ou
-                                <option>-s</option> options, comme indiqué ci-dessous. Cela permet de s'assurer que votre
+                                en même temps que l'option <option>-v</option> ou
+                                <option>-s</option>, comme indiqué ci-dessous. Cela permet de s'assurer que votre
                                 configuration est vérifiée avant que la fichier de pré-cache ne soit créé.
                             </para>
                             <screen>
@@ -254,7 +254,7 @@ TOTAL:                56.084353 sec  * = 54.676622 sec (97.5%) estimated savings
             retour au code. :-) [Note du traducteur] : Cet algorithme a été revu et
             amélioré dans une version 3.x de Nagios.
         </para>
-        <para>Si vous souhaitez outrepasser la vérification des références circualires au
+        <para>Si vous souhaitez outrepasser la vérification des références circulaires au
             démarrage de Nagios, vous pouvez ajouter l'argument -x sur la ligne de
             commande comme suit : 
             <screen>

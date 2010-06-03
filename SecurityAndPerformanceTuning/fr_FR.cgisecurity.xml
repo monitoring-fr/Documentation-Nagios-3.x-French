@@ -63,7 +63,7 @@ url="&url-apache-docs;2.2/mod/mod_auth_basic.html">fondamentaux
 url="&url-apache-docs;2.2/mod/mod_auth_digest.html">technologie
                         Digest
                     </ulink>
-                    pour votre authentification s'avére plus sécurisé car elle
+                    pour votre authentification s'avère plus sécurisé car elle
                     s'appuie sur un principe de cryptage de clé MD5 lors du passage des
                     requêtes.
                 </para>
@@ -84,7 +84,7 @@ url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink>. &acronym-tls;/&acro
                     <emphasis role="bold">Brider le contrôle des accès apache</emphasis>. Pour
                     appliquer cette bride à l'accès Nagios à votre adresse IP, plage d'adresse
                     IP, ou sous-réseaux. Si vous avez besoin d'un accès extérieur à votre
-                    réseau, vous pouvez utilisez &acronym-vpn; ou des tunnels &protocol-ssh;
+                    réseau, vous pouvez utilisez un &acronym-vpn; ou des tunnels &protocol-ssh;
                 </para>
             </listitem>
         </itemizedlist>
@@ -166,7 +166,7 @@ Alias /nagios "/usr/local/nagios/share"
 url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink> doit être
                 supporté. Si vous rencontrez encore des problèmes, vous pouvez vous référer
                 à l'aide d'Apache <ulink url="&url-apache-docs;2.0/ssl">&acronym-tls;/&acronym-ssl;
-                    Documentation sur l'encryptation
+                    Documentation sur l'encryptage
                 </ulink>
                 .
             </para>
@@ -174,7 +174,7 @@ url="&url-apache-docs;2.2/mod/mod_ssl.html">mod_ssl</ulink> doit être
             <para>Ensuite, vérifiez que le support &acronym-tls;/&acronym-ssl; fonctionne en visitant l'interface nagios en utilisant le
                 &protocol-https; (https://your.domain/nagios). Si ça fonctionne, vous pouvez
                 passer à l'étape suivante qui consistera à forcer la connexion en
-                &protocol-https; et de bloquer toutes connexion via le &protocol-http; à
+                &protocol-https; et de bloquer toutes connexions via le &protocol-http; à
                 l'interface Web Nagios. Si vous rencontrez des problèmes, visitez les pages
                 d'apache sur la &acronym-tls;/&acronym-ssl; <ulink url="&url-apache-docs;2.0/ssl">Documentation de
                     Cryptage
