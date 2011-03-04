@@ -444,7 +444,7 @@ url="&url-nagios;development/changelog.php">&url-nagios;development/changelog.ph
                         (<literal>CHANGE_HOST_CHECK_TIMEPERIOD</literal> ou
                         <literal>CHANGE_SVC_CHECK_TIMEPERIOD</literal>). Vous pouvez consulter
                         cette <ulink url="&url-nagios;developerinfo/externalcommands/commandlist.php?category_id=13">page</ulink>
-                        pour les commandes adaptative de supervision.
+                        pour les commandes adaptatives de supervision.
                     </para>
                 </listitem>
             </itemizedlist>
@@ -515,7 +515,7 @@ linkend="advancedtopics-objecttricks-same_host_dependency">Plus
                         abondonnées. Toutes les valeurs des définitions étendues ont été intégrées 
                         dans les définitions d'hôte et de service. 
                         Nagios 3 continuera à lire et traiter les anciennes définitions étendues, mais
-                        FIXME !!! journalisera un warning. Les versions futures de Nagios (4.x et postérieures)
+                        journalisera un warning. Les versions futures de Nagios (4.x et postérieures)
                         ne supporteront plus des définitions étendues séparées.
                     </para>
                 </listitem>
@@ -536,8 +536,8 @@ linkend="advancedtopics-objecttricks-same_host_dependency">Plus
                         Les variables 
                         <emphasis>
                             <literal>notes</literal>
-                        </emphasis>
-                        ,<literal>notes_url</literal>, et
+                        </emphasis>, 
+			<literal>notes_url</literal>, et
                         <literal>action_url</literal> ont été ajoutées aux définitions de groupes
                         d'hôtes et de groupes de services.
                     </para>
@@ -872,7 +872,7 @@ linkend="securityandperformancetuning-largeinstalltweaks">ici</link>.
                         dans le dossier précisé par l'option 
                         <xref linkend="configuringnagios-configmain-check_result_path"
  endterm="configuringnagios-configmain-check_result_path-tech"/>
-                        Les fichiers plus vieux que l'option <xref linkend="configuringnagios-configmain-max_check_result_file_age"
+                        . Les fichiers plus vieux que l'option <xref linkend="configuringnagios-configmain-max_check_result_file_age"
  endterm="configuringnagios-configmain-max_check_result_file_age-tech"/>
                         seront détruits définitivement et sans aucun traitement supplémentaire.
                     </para>
@@ -911,7 +911,7 @@ linkend="configuringnagios-objectdefinitions-timeperiod">ici</link> et
                 </listitem>
                 
                 <listitem>
-                    <para>Modification du callback for adaptive program status data</para>
+                    <para>Modification du callback pour le statut adaptatif des données du programme</para>
                 </listitem>
                 
                 <listitem>
@@ -1129,8 +1129,7 @@ linkend="configuringnagios-configcgi-lock_author_names">
                         <literal>service_reaper_frequency</literal> a été renommée en 
                         <xref linkend="configuringnagios-configmain-check_result_reaper_frequency"
  endterm="configuringnagios-configmain-check_result_reaper_frequency-tech"/>
-                        puisqu'elle est désormais également utilisée pour traiter les résultats de contrôles.
-                        d'hôtes.
+                        puisqu'elle est désormais également utilisée pour traiter les résultats de contrôles d'hôtes.
                     </para>
                 </listitem>
                 
@@ -1215,7 +1214,7 @@ linkend="configuringnagios-configcgi-lock_author_names">
                         <emphasis role="bold">Décalage de fuseau horaire</emphasis> - Une nouvelle
                         option, <xref linkend="configuringnagios-configmain-use_timezone"
  endterm="configuringnagios-configmain-use_timezone-tech"/>
-                        ,a été ajoutée afin
+                        , a été ajoutée afin
                         de vous permettre de démarrer des instances de nagios situées dans des
                         fuseaux horaires autres que le fuseau local.
                     </para>
