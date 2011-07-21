@@ -1,0 +1,101 @@
+Documentation-Nagios-3.x-French
+-------------------------------
+
+La documentation officielle Nagios est un document écrit et maintenu par Ethan Galstad pour la version anglaise et par les différentes communautés à travers le monde. Cette documentation est écrite en HTML pour la version anglaise. La Communauté Francophone de la Supervision Libre (CFSL) a réalisé une conversion de cette documentation officielle au format Docbook. Depuis la version 3, la traduction de la version française est assurée par la Communauté Francophone de la supervision Libre.
+
+Ceci est le code source au format docbook xml qui permet de générer les différentes version (html, pdf) de la documentation officielle Nagios version 3.x.
+
+En dehors des fichiers source au format XML, plusieurs fichiers importants sont inclus dans la distribution et permettent de générer la documentation finale au format HTML et PDF.
+
+docbook2xhtml.sh
+----------------
+
+C'est le script utilisé pour générer la version HTML de la documentation. Ce script nécessite l'installation de htmltidy (http://tidy.sourceforge.net/) pour nettoyer le code HTML généré par les transformations XSLT. Nécessite pour la transformation xmllint et xsltproc
+
+PDF
+---
+
+Pour générer la documentation au format à partir des sources, une fois à la racine des sources est la commande suivante :
+
+dblatex fr_FR.nagios.xml -p dblatex.xsl -o pdf/fr_FR.nagios-db2latex.pdf -T db2latex
+
+Makefile
+--------
+
+Permet de générer la documentation dans divers formats.
+
+
+L’équipe de traduction française
+--------------------------------
+
+De nombreuses personnes se sont succédées depuis la première version française de la documentation, que ce soit comme traducteurs ou relecteurs. Le premier à avoir œuvrer sur la traduction est Xavier Dusart qui a traduit le manuel de ce qui ne s'appelait encore que NetSaint.
+
+Traducteurs Version 1
+---------------------
+
+Ils ont participé à la traduction de la version 1.x de la documentation Nagios.
+
+    Pierre-Antoine Angelini
+    Johan Moreau
+    Christian Vanguers
+
+Traducteurs Version 2
+---------------------
+
+Ils ont participé à la traduction de la version 2.x de la documentation Nagios.
+
+    Erwan Ben Souiden
+    Xavier Dusart
+    Hervé Nico
+    Patrick Proy
+
+Relecteurs Version 2
+--------------------
+
+Ils ont participé à la relecture de la version 2.x de la documentation Nagios.
+
+    Hervé Bouchind'homm
+    Erwan Ben Souiden
+    René Coule
+    Philippe Delsol
+    Johan Moreau
+
+Traducteurs Version 3
+---------------------
+
+Ils ont participé à la traduction de la version 3.x de la documentation Nagios.
+
+    Romuald Fronteau
+    Dimitri Druelle
+    David Guénault
+    Guillaume Halbitte
+    Olivier Jan
+
+Relecteurs Version 3
+--------------------
+
+En plus de l'équipe de traduction pour la version 3, ces personnes ont participé à la relecture de la version 3.x de la documentation Nagios.
+
+    Sylvain Faure
+    Pascal Martin
+
+Conversion au format Docbook
+----------------------------
+
+Ces deux personnes ont assuré la conversion de la documentation officielle Nagios 3.x anglaise vers le format docbook XML.
+
+    Sébastien Guilbaud
+    Olivier Jan
+
+Flux de traduction utilisé
+--------------------------
+
+La première version de la documentation officielle française a été produite de la façon suivante.
+
+    Extraction des lignes à traduire avec po4a pour en faire des fichiers au standard gettext
+    Traduction des fichiers .po
+    Génération du document Docbook en français à partir des fichiers .po grâce à po4a
+    Corrections des fichiers XML pour produire dues fichiers Docbook valides
+    Relecture et corrections des sources XML
+
+Merci à tous
