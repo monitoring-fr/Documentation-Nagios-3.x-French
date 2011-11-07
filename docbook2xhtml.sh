@@ -22,5 +22,9 @@ do
 /usr/bin/tidy -config ../tidy.cfg $file > tidy/$file
 done
 
+cd ../
+
 # cleaning
+mv $OUT_PATH/tidy/* $OUT_PATH/
+rmdir $OUT_PATH/tidy
 rm $IN_XML
